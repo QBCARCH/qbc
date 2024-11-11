@@ -4541,7 +4541,7 @@ figcaption {
 .qbclogo {
   background-color: var(--color--white);
   -webkit-text-fill-color: inherit;
-  background-image: url("../images/256x256.png");
+  background-image: url("https://cdn.prod.website-files.com/670916fce3b5f95fb3f11ddc/670be8a1cc12cc6191da2c46_256x256.png");
   background-position: 50%;
   background-size: cover;
   background-attachment: fixed;
@@ -6104,14 +6104,14 @@ figcaption {
 
 @font-face {
   font-family: 'Geist';
-  src: url('../images/geist-5bwght-5d.ttf') format('truetype');
+  src: url('https://cdn.prod.website-files.com/670916fce3b5f95fb3f11ddc/670916fde3b5f95fb3f11eb9_Geist%5Bwght%5D.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Geist Mono';
-  src: url('../images/geistmono-5bwght-5d.ttf') format('truetype');
+  src: url('https://cdn.prod.website-files.com/670916fce3b5f95fb3f11ddc/670916fde3b5f95fb3f11eba_GeistMono%5Bwght%5D.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;

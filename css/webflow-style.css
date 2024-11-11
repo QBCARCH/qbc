@@ -3120,6 +3120,7 @@ figcaption {
   border-radius: var(--radius--main);
   flex: none;
   width: 50%;
+  padding-top: 0;
   position: relative;
   overflow: hidden;
 }
@@ -3486,6 +3487,11 @@ figcaption {
 .works__item-link {
   position: absolute;
   inset: 0%;
+}
+
+.works__item-link.w--current {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .navbar__menu {

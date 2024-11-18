@@ -6653,6 +6653,11 @@
             size: parseInt(computedValue, 10)
           };
         }
+        if (destination.unit === "%" || destination.unit === "-") {
+          return {
+            size: parseFloat(computedValue)
+          };
+        }
         if (destination.red != null && destination.green != null && destination.blue != null) {
           return (0, _normalizeColor.normalizeColor)(computedValue);
         }
@@ -6663,20 +6668,35 @@
       var createPluginInstance3 = () => {
         return null;
       };
+      var variableHandlers = {
+        color: {
+          match: ({ red, green, blue, alpha }) => [
+            red,
+            green,
+            blue,
+            alpha
+          ].every((x) => x != null),
+          getValue: ({ red, green, blue, alpha }) => `rgba(${red}, ${green}, ${blue}, ${alpha})`
+        },
+        // Size, Percentage, and Unitless variables.
+        size: {
+          match: ({ size: size2 }) => size2 != null,
+          getValue: ({ size: size2 }, unit) => {
+            switch (unit) {
+              case "-":
+                return size2;
+              default:
+                return `${size2}${unit}`;
+            }
+          }
+        }
+      };
       var renderPlugin2 = (_, refState2, actionItem) => {
-        const objectId = actionItem.config.target.objectId;
-        const unit = actionItem.config.value.unit;
-        const { PLUGIN_VARIABLE: props } = refState2;
-        const { size: size2, red, green, blue, alpha } = props;
-        let value;
-        if (size2 != null) {
-          value = size2 + unit;
-        }
-        if (red != null && blue != null && green != null && alpha != null) {
-          value = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
-        }
-        if (value != null) {
-          document.documentElement.style.setProperty(objectId, value);
+        const { target: { objectId }, value: { unit } } = actionItem.config;
+        const props = refState2.PLUGIN_VARIABLE;
+        const handler = Object.values(variableHandlers).find((h) => h.match(props, unit));
+        if (handler) {
+          document.documentElement.style.setProperty(objectId, handler.getValue(props, unit));
         }
       };
       var clearPlugin2 = (ref, actionItem) => {

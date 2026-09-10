@@ -4617,6 +4617,10 @@ figcaption {
   display: grid;
 }
 
+.image-5 {
+  width: 100%;
+}
+
 @media screen and (max-width: 991px) {
   p {
     font-size: clamp(var(--font-size-mobile--main), var(--font-size-fluid--main), var(--font-size-fluid--main));

@@ -110,7 +110,7 @@ function pickImg(im, p, role, sizes) {
     `<noscript>${img(im, { root: '', sizes, alt: p.title, want: 2000 })}</noscript>`;
 }
 function heroCredit(p) {
-  return `<a class="hero__credit mono" data-credit href="work/${p.slug}.html" data-cursor="View">${esc(p.title)} / ${esc(p.year)} ↗</a>`;
+  return `<a class="hero__credit" data-credit href="work/${p.slug}.html">${esc(p.title)} / ${esc(p.year)} ↗</a>`;
 }
 
 // Izbor slika za pocetnu: sve horizontalne slike, uz datum dodavanja projekta (za promo novog projekta).
@@ -128,42 +128,29 @@ function pool(projects, def, promoDays) {
   return `<script type="application/json" id="qbc-pool">${json}</script>`;
 }
 
-function homeStack(projects, n) {
-  const list = projects.slice(0, n);
-  return list.map((p, i) =>
-    `<article class="card"><div class="card__inner">` +
-    `<div class="card__media frame" data-ip>${img(cover(p), { root: '', sizes: '100vw', alt: p.title, want: 2000 })}</div>` +
-    `<div class="card__top mono"><span>${num(i)} / ${String(list.length).padStart(2, '0')}</span><ul class="card__services">${li(p.services)}</ul></div>` +
-    `<div class="card__bottom"><h3 class="card__title">${esc(p.title)}</h3><span class="card__num">${esc(p.year)}</span></div>` +
-    `<a class="card__link" href="work/${p.slug}.html" aria-label="${esc(p.title)}" data-cursor="View"></a>` +
-    `</div></article>`).join('');
-}
-
 function worksGrid(projects) {
-  const speeds = ['0.05', '-0.05', '0.02'];
   return projects.map((p, i) =>
-    `<a class="wcard" href="work/${p.slug}.html" data-parallax="${speeds[i % 3]}" data-cursor="View">` +
-    `<div class="frame" data-ip data-curtain>${img(cover(p), { root: '', sizes: '(max-width: 900px) 100vw, 55vw', alt: p.title, want: 1080 })}</div>` +
-    `<span class="wcard__num mono">${num(i)}</span>` +
-    `<div class="wcard__meta"><h2 class="wcard__title">${esc(p.title)}</h2><span class="mono">${esc(p.year)}</span></div>` +
-    `<ul class="wcard__svc mono">${li(p.services)}</ul></a>`).join('');
+    `<a class="wcard" href="work/${p.slug}.html" data-q="${esc([p.title, p.year, ...(p.services || [])].join(' ').toLowerCase())}">` +
+    `<div class="frame" data-ip>${img(cover(p), { root: '', sizes: '(max-width: 900px) 100vw, 50vw', alt: p.title, want: 1600 })}</div>` +
+    `<div class="wcard__meta"><h2 class="wcard__title">${esc(p.title)}</h2><span class="label">${esc(p.year)}</span></div>` +
+    `<p class="label mute wcard__no">${num(i)} / ${String(projects.length).padStart(2, '0')}</p>` +
+    `<p class="wcard__svc">${esc((p.services || []).map(stripNum).slice(0, 2).join('  /  '))}</p></a>`).join('');
 }
 
 function worksIndex(projects) {
   return projects.map((p, i) => {
     const first = stripNum((p.services || [])[0] || '');
     const more = (p.services || []).length > 1 ? ` +${p.services.length - 1}` : '';
-    return `<a class="windex__row" href="work/${p.slug}.html" data-img="${imgUrl(cover(p), '', 800)}" data-cursor="View">` +
-      `<span class="mono">${num(i)}</span><span class="windex__title">${esc(p.title)}</span>` +
-      `<span class="windex__svc mono mute">${esc(first)}${more}</span><span class="windex__year mono">${esc(p.year)}</span></a>`;
+    return `<a class="windex__row" href="work/${p.slug}.html" data-q="${esc([p.title, p.year, ...(p.services || [])].join(' ').toLowerCase())}">` +
+      `<span class="label">${num(i)}</span><span class="windex__title">${esc(p.title)}</span>` +
+      `<span class="windex__svc label mute">${esc(first)}${more}</span><span class="windex__year label">${esc(p.year)}</span></a>`;
   }).join('');
 }
 
 function servicesList(sv) {
   return `<div class="svc">` + sv.phases.map((ph, i) =>
-    `<div class="svc__row"><button class="svc__head" type="button" aria-expanded="false">` +
-    `<span class="mono">${num(i)}</span><span class="svc__title">${esc(ph.title)}</span><span class="svc__plus" aria-hidden="true">+</span></button>` +
-    `<div class="svc__more"><div><ul class="svc__items">${ph.items.map((it) => `<li>${esc(it.title)}</li>`).join('')}</ul></div></div></div>`).join('') + `</div>`;
+    `<div class="svc__row" data-reveal><span class="label mute">${num(i)}</span><span class="svc__title">${esc(ph.title)}</span>` +
+    `<ul class="svc__items">${ph.items.map((it) => `<li>${esc(it.title)}</li>`).join('')}</ul></div>`).join('') + `</div>`;
 }
 
 function phases(sv) {
@@ -177,7 +164,7 @@ function phases(sv) {
 function gallery(p) {
   return (p.gallery || []).map((g, i) => {
     const ar = g.w && g.h ? ` style="--ar:${g.w} / ${g.h}"` : '';
-    return `<figure data-full="${imgUrl(g, '../', 2000)}"><div class="frame" data-ip data-curtain${ar}>` +
+    return `<figure data-full="${imgUrl(g, '../', 2000)}"><div class="frame" data-ip${ar}>` +
       img(g, { root: '../', sizes: '(max-width: 900px) 100vw, 60vw', alt: `${p.title}, image ${i + 1}`, want: 1600 }) + `</div></figure>`;
   }).join('');
 }
@@ -185,10 +172,16 @@ function gallery(p) {
 function nextProject(p, projects) {
   if (projects.length < 2) return '';
   const nx = projects[(projects.findIndex((x) => x.slug === p.slug) + 1) % projects.length];
-  return `<a class="pnext" href="${nx.slug}.html" data-cursor="Next"><div class="frame" data-ip>` +
-    img(cover(nx), { root: '../', sizes: '100vw', alt: '', want: 2000 }) + `</div>` +
-    `<div class="pnext__content"><span class="mono">Next project /</span><span class="pnext__title">${esc(nx.title)}</span>` +
-    `<span class="btn btn--round">View project <span class="btn__arrow" aria-hidden="true">↠</span></span></div></a>`;
+  return `<a class="pnext" data-next href="${nx.slug}.html"><div class="pnext__row"><div class="pnext__text">` +
+    `<span class="label mute">Next project</span><span class="pnext__title">${esc(nx.title)}</span>` +
+    `<span class="btn"><span>View project</span><span class="btn__arrow" aria-hidden="true">→</span></span></div>` +
+    `<div class="frame">${img(cover(nx), { root: '../', sizes: '(max-width: 900px) 100vw, 40vw', alt: '', want: 1080 })}</div></div></a>`;
+}
+
+function prevProject(p, projects) {
+  if (projects.length < 2) return '';
+  const pv = projects[(projects.findIndex((x) => x.slug === p.slug) - 1 + projects.length) % projects.length];
+  return `<a class="label mute pprev" data-prev href="${pv.slug}.html">Previous: ${esc(pv.title)}</a>`;
 }
 
 function metaDesc(p) {
@@ -246,8 +239,7 @@ export function buildSite(data, sources, { all = false } = {}) {
     TITLE: 'QBC Architects | Architecture & Interior Design Studio',
     DESC: 'QBC Architects specializes in high-end residential and commercial architecture. We deliver functional, aesthetically superior, and constructible spaces across Belgrade, Vienna, and New York.',
     HERO_IMG: pickImg(heroProject.hero, heroProject, 'hero', '100vw'), HERO_CREDIT: heroCredit(heroProject),
-    BIG_IMG: pickImg((projects[1] || heroProject).hero, projects[1] || heroProject, 'big', '100vw'),
-    POOL: pool(projects, heroProject, data.promo_days ?? 21), HOME_STACK: homeStack(projects, data.home_count ?? 4),
+    POOL: pool(projects, heroProject, data.promo_days ?? 21), HOME_WORKS: worksGrid(projects.slice(0, data.home_count ?? 4)),
   });
   out['our-work.html'] = render('our-work', sources, {
     ...base, key: 'works', PATH: 'our-work.html',
@@ -262,7 +254,7 @@ export function buildSite(data, sources, { all = false } = {}) {
       OG_IMAGE: 'https://www.qbc.rs/' + imgUrl(p.hero, '', 1600),
       TITLE_TEXT: esc(p.title), YEAR: esc(p.year), SERVICES: li(p.services),
       HERO_IMG: img(p.hero, { root: '../', sizes: '100vw', alt: p.title, eager: true, want: 2000 }),
-      DESCRIPTION: cleanRich(p.description), GALLERY: gallery(p), NEXT: nextProject(p, projects),
+      DESCRIPTION: cleanRich(p.description), GALLERY: gallery(p), NEXT: nextProject(p, projects), PREV: prevProject(p, projects),
     });
   }
   if (all) {

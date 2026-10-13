@@ -13,11 +13,12 @@
 <meta property="og:url" content="https://www.qbc.rs/">
 <meta property="og:image" content="https://www.qbc.rs/images/6aa293afab9b9e93867394a1_1%20-%201.jpeg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b0b0a">
+<meta name="theme-color" content="#f5f3ef">
 <link rel="icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/Geist.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="css/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Architect","name":"QBC Architects","url":"https://www.qbc.rs/","email":"office@qbc.rs","telephone":"+381634110066","foundingDate":"2010","address":{"@type":"PostalAddress","addressLocality":"Belgrade","addressCountry":"RS"},"sameAs":["https://www.instagram.com/qbcarchitects/","https://www.behance.net/qbcarchitects","https://www.pinterest.com/qbcarchitects","https://x.com/QBCArchitects"]}</script>
 <script>document.documentElement.classList.add('js')</script>
 <script src="js/site.js" defer></script>
 </head>
@@ -25,20 +26,24 @@
 <a class="skip" href="#main">Skip to content</a>
 <div class="progress" aria-hidden="true"></div>
 <div class="guides" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-<div class="curtain" aria-hidden="true"></div>
-<div class="cursor" aria-hidden="true"><div class="cursor__dot"><span class="cursor__label"></span></div><span class="cursor__xy"></span></div>
+<div class="fade" aria-hidden="true"></div>
 
 <header class="nav">
   <a class="nav__brand" href="index.html" aria-label="QBC Architects, home">
-    <img src="assets/logo.png" width="34" height="34" alt="">
+    <img src="assets/logo.png" width="26" height="26" alt="">
     <span class="nav__name nav__text">QBCARCHITECTS</span>
   </a>
-  <p class="nav__cities nav__text mono">Belgrade / Vienna / New York</p>
-  <button class="nav__menu nav__text mono" type="button" data-menu-open aria-expanded="false" aria-controls="menu"><i></i><span>Menu</span></button>
+  <nav class="nav__links nav__text label" aria-label="Primary">
+    <a href="our-work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav__menu nav__text label" type="button" data-menu-open aria-expanded="false" aria-controls="menu"><i></i><span>Menu</span></button>
 </header>
 
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
-  <button class="menu__close mono" type="button" data-menu-close><i></i><span>Close</span></button>
+  <button class="menu__close label" type="button" data-menu-close><i></i><span>Close</span></button>
   <nav class="menu__list" aria-label="Main">
     <div class="menu__item"><a class="menu__link" style="--i:0" href="index.html" aria-current="page"><span>01</span>Home</a></div>
     <div class="menu__item"><a class="menu__link" style="--i:1" href="about.html"><span>02</span>About</a></div>
@@ -48,7 +53,7 @@
   </nav>
   <div class="menu__side">
     <img src="assets/menu-900.jpg" srcset="assets/menu-900.jpg 900w, assets/menu.jpg 2000w" sizes="45vw" alt="" loading="lazy">
-    <div class="menu__foot mono">
+    <div class="menu__foot label">
       <a href="mailto:office@qbc.rs">office@qbc.rs</a>
       <a href="tel:+381634110066">+381 63 411 066</a>
       <a href="privacy-policy.html">Privacy policy</a>
@@ -56,86 +61,64 @@
   </div>
 </div>
 
-<div class="intro" aria-hidden="true">
-  <p class="intro__word mono"><span>●</span> <span>QBC Architects</span></p>
-  <p class="intro__count">000</p>
-</div>
-
 <main class="page" id="main">
 
   <section class="hero">
     <div class="hero__media"><img data-pick="hero" data-sizes="100vw" alt="VILLA DVE KORACICA / KOSMAJ" width="1368" height="768" fetchpriority="high"><noscript><img src="images/6aa293afab9b9e93867394a1_1%20-%201.jpeg" srcset="images/6aa293afab9b9e93867394a1_1%20-%201-p-500.jpeg 500w, images/6aa293afab9b9e93867394a1_1%20-%201-p-800.jpeg 800w, images/6aa293afab9b9e93867394a1_1%20-%201-p-1080.jpeg 1080w, images/6aa293afab9b9e93867394a1_1%20-%201.jpeg 1368w" sizes="100vw" width="1368" height="768" alt="VILLA DVE KORACICA / KOSMAJ" loading="lazy" decoding="async"></noscript></div>
     <div class="hero__content">
-      <h1 class="hero__title display" data-split data-vf>
-        <span class="ln">Architecture</span>
-        <span class="ln">&amp; Interior</span>
-        <span class="ln">Design Studio/</span>
-      </h1>
-      <div class="hero__bar">
-        <div class="hero__sub">
-          <p>Delivering precise architectural solutions.</p>
-          <a class="btn" href="#works" data-cursor="Scroll"><span>● View selected works</span><span class="btn__arrow" aria-hidden="true">↠</span></a>
-        </div>
-        <div class="hero__badge" aria-hidden="true">
-          <svg viewBox="0 0 120 120"><defs><path id="ring" d="M60,60 m-47,0 a47,47 0 1,1 94,0 a47,47 0 1,1 -94,0"/></defs><text><textPath href="#ring">Scroll · Explore · Scroll · Explore ·</textPath></text></svg>
-          <b>↓</b>
-        </div>
-        <ul class="clocks mono" aria-label="Local time">
-          <li><span>Belgrade</span><time data-tz="Europe/Belgrade">--:--:--</time></li>
-          <li><span>Vienna</span><time data-tz="Europe/Vienna">--:--:--</time></li>
-          <li><span>New York</span><time data-tz="America/New_York">--:--:--</time></li>
+      <h1 class="hero__title display">Architecture &amp; Interior<br>Design Studio</h1>
+      <div class="hero__side label">
+        <ul class="clocks" aria-label="Local time">
+          <li><span>Belgrade</span><time data-tz="Europe/Belgrade">--:--</time></li>
+          <li><span>Vienna</span><time data-tz="Europe/Vienna">--:--</time></li>
+          <li><span>New York</span><time data-tz="America/New_York">--:--</time></li>
         </ul>
+        <a class="hero__credit" data-credit href="work/villa-dve-koracica-kosmaj.html">VILLA DVE KORACICA / KOSMAJ / 2026 ↗</a>
       </div>
-      <a class="hero__credit mono" data-credit href="work/villa-dve-koracica-kosmaj.html" data-cursor="View">VILLA DVE KORACICA / KOSMAJ / 2026 ↗</a>
-    </div>
-  </section>
-
-  <section class="statement sec" id="studio">
-    <div class="wrap grid">
-      <p class="statement__text h2 scrub">Designing spaces that balance structural logic with modern architectural principles. We create aesthetically superior, highly functional, and meticulously detailed environments for living and working.</p>
-      <div class="statement__meta">
-        <p class="mono mute">We love what we do /</p>
-        <p class="statement__since" data-reveal><span class="mono mute" style="display:block;margin-bottom:1rem">Since /</span>2010</p>
-        <p class="body" data-reveal>Operating from Belgrade, Serbia, QBC Architects is a professional design studio led by principal architect Slavoljub Ljubic. We specialize in residential and commercial architecture, prioritizing structural integrity, spatial functionality, and precise detailing. We provide investors with technical certainty through advanced BIM modeling in Autodesk Revit, strict compliance with local zoning regulations, and highly efficient project management.</p>
-        <a class="btn" href="about.html" data-reveal><span>● About the studio</span><span class="btn__arrow" aria-hidden="true">↠</span></a>
+      <div class="hero__scroll label">
+        <p>Delivering precise architectural solutions.</p>
+        <a href="#works">Selected works ↓</a>
       </div>
     </div>
   </section>
 
-  <section class="expand" aria-label="Featured image">
-    <div class="expand__stage">
-      <figure class="expand__frame"><img data-pick="big" data-sizes="100vw" alt="VILLA DUO DIVCIBARE" width="3840" height="2160" loading="lazy"><noscript><img src="images/6aa2845f582915882762379c_Image73-p-2000.jpg" srcset="images/6aa2845f582915882762379c_Image73-p-500.jpg 500w, images/6aa2845f582915882762379c_Image73-p-800.jpg 800w, images/6aa2845f582915882762379c_Image73-p-1080.jpg 1080w, images/6aa2845f582915882762379c_Image73-p-1600.jpg 1600w, images/6aa2845f582915882762379c_Image73-p-2000.jpg 2000w, images/6aa2845f582915882762379c_Image73-p-2600.jpg 2600w, images/6aa2845f582915882762379c_Image73-p-3200.jpg 3200w, images/6aa2845f582915882762379c_Image73.jpg 3840w" sizes="100vw" width="3840" height="2160" alt="VILLA DUO DIVCIBARE" loading="lazy" decoding="async"></noscript></figure>
-      <p class="expand__title h1" aria-hidden="true">Spaces/<br>that last</p>
-      <p class="expand__cap mono"><span data-big-year></span><a data-big-link href="our-work.html" data-cursor="View"><span data-big-title>View project</span><span class="btn__arrow" aria-hidden="true">↠</span></a></p>
+  <section class="studio sec wrap grid" id="studio">
+    <p class="studio__label label mute" data-reveal>Studio</p>
+    <div class="studio__text">
+      <p class="lead" data-reveal>Designing spaces that balance structural logic with modern architectural principles. We create aesthetically superior, highly functional, and meticulously detailed environments for living and working.</p>
+      <div class="studio__meta" data-reveal>
+        <p class="studio__since">Since 2010</p>
+        <div>
+          <p class="body">Operating from Belgrade, Serbia, QBC Architects is a professional design studio led by principal architect Slavoljub Ljubic. We specialize in residential and commercial architecture, prioritizing structural integrity, spatial functionality, and precise detailing. We provide investors with technical certainty through advanced BIM modeling in Autodesk Revit, strict compliance with local zoning regulations, and highly efficient project management.</p>
+          <p style="margin-top:1.6rem"><a class="btn" href="about.html"><span>About the studio</span><span class="btn__arrow" aria-hidden="true">→</span></a></p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <div class="works-home__head" id="works">
-    <h2 class="h1" data-split>Selected<br>works/</h2>
-    <a class="btn" href="our-work.html" data-cursor="All"><span>● All projects</span><span class="btn__arrow" aria-hidden="true">↠</span></a>
-  </div>
-  <div class="stack"><article class="card"><div class="card__inner"><div class="card__media frame" data-ip><img src="images/6aa293afab9b9e93867394a1_1%20-%201.jpeg" srcset="images/6aa293afab9b9e93867394a1_1%20-%201-p-500.jpeg 500w, images/6aa293afab9b9e93867394a1_1%20-%201-p-800.jpeg 800w, images/6aa293afab9b9e93867394a1_1%20-%201-p-1080.jpeg 1080w, images/6aa293afab9b9e93867394a1_1%20-%201.jpeg 1368w" sizes="100vw" width="1368" height="768" alt="VILLA DVE KORACICA / KOSMAJ" loading="lazy" decoding="async"></div><div class="card__top mono"><span>01 / 04</span><ul class="card__services"><li>1. Conceptual &amp; Schematic Design</li><li>2. Design Development &amp; BIM Modeling</li><li>3. Construction Documents &amp; Engineering</li></ul></div><div class="card__bottom"><h3 class="card__title">VILLA DVE KORACICA / KOSMAJ</h3><span class="card__num">2026</span></div><a class="card__link" href="work/villa-dve-koracica-kosmaj.html" aria-label="VILLA DVE KORACICA / KOSMAJ" data-cursor="View"></a></div></article><article class="card"><div class="card__inner"><div class="card__media frame" data-ip><img src="images/6aa2845f582915882762379c_Image73-p-2000.jpg" srcset="images/6aa2845f582915882762379c_Image73-p-500.jpg 500w, images/6aa2845f582915882762379c_Image73-p-800.jpg 800w, images/6aa2845f582915882762379c_Image73-p-1080.jpg 1080w, images/6aa2845f582915882762379c_Image73-p-1600.jpg 1600w, images/6aa2845f582915882762379c_Image73-p-2000.jpg 2000w, images/6aa2845f582915882762379c_Image73-p-2600.jpg 2600w, images/6aa2845f582915882762379c_Image73-p-3200.jpg 3200w, images/6aa2845f582915882762379c_Image73.jpg 3840w" sizes="100vw" width="3840" height="2160" alt="VILLA DUO DIVCIBARE" loading="lazy" decoding="async"></div><div class="card__top mono"><span>02 / 04</span><ul class="card__services"><li>1. Conceptual &amp; Schematic Design</li><li>2. Design Development &amp; BIM Modeling</li><li>3. Construction Documents &amp; Engineering</li><li>4. Construction Administration &amp; Oversight</li><li>5. Interior Architecture &amp; Custom Detailing</li></ul></div><div class="card__bottom"><h3 class="card__title">VILLA DUO DIVCIBARE</h3><span class="card__num">2025</span></div><a class="card__link" href="work/villas-divcibare-srb.html" aria-label="VILLA DUO DIVCIBARE" data-cursor="View"></a></div></article><article class="card"><div class="card__inner"><div class="card__media frame" data-ip><img src="images/673bbefbe7256b1a41b06244_Image2_013.jpg" srcset="images/673bbefbe7256b1a41b06244_Image2_013-p-500.jpg 500w, images/673bbefbe7256b1a41b06244_Image2_013-p-800.jpg 800w, images/673bbefbe7256b1a41b06244_Image2_013-p-1080.jpg 1080w, images/673bbefbe7256b1a41b06244_Image2_013.jpg 1920w" sizes="100vw" width="1920" height="1080" alt="LIMAN 2 ULCINJ MNE" loading="lazy" decoding="async"></div><div class="card__top mono"><span>03 / 04</span><ul class="card__services"><li>4. Construction Administration &amp; Oversight</li><li>3. Construction Documents &amp; Engineering</li><li>2. Design Development &amp; BIM Modeling</li><li>1. Conceptual &amp; Schematic Design</li></ul></div><div class="card__bottom"><h3 class="card__title">LIMAN 2 ULCINJ MNE</h3><span class="card__num">2019</span></div><a class="card__link" href="work/liman-2-ulcinj-mne.html" aria-label="LIMAN 2 ULCINJ MNE" data-cursor="View"></a></div></article><article class="card"><div class="card__inner"><div class="card__media frame" data-ip><img src="images/6732094d9b97847ee720449e_IMG-20241110-WA0010.jpg" srcset="images/6732094d9b97847ee720449e_IMG-20241110-WA0010-p-500.jpg 500w, images/6732094d9b97847ee720449e_IMG-20241110-WA0010-p-800.jpg 800w, images/6732094d9b97847ee720449e_IMG-20241110-WA0010-p-1080.jpg 1080w, images/6732094d9b97847ee720449e_IMG-20241110-WA0010.jpg 1600w" sizes="100vw" width="1600" height="900" alt="APARTMENT PB/23 mb" loading="lazy" decoding="async"></div><div class="card__top mono"><span>04 / 04</span><ul class="card__services"><li>4. Construction Administration &amp; Oversight</li><li>3. Construction Documents &amp; Engineering</li><li>2. Design Development &amp; BIM Modeling</li><li>1. Conceptual &amp; Schematic Design</li></ul></div><div class="card__bottom"><h3 class="card__title">APARTMENT PB/23 mb</h3><span class="card__num">2024</span></div><a class="card__link" href="work/apartment-pb-23-mb.html" aria-label="APARTMENT PB/23 mb" data-cursor="View"></a></div></article></div>
-
-  <section class="sec sec--paper">
-    <div class="wrap">
-      <p class="mono mute" data-reveal>Services /</p>
-      <h2 class="h2" style="max-width:20ch;margin:1.2rem 0 clamp(40px,8vh,90px)" data-split>Professional architectural services engineered to optimize your residential or commercial investment.</h2>
+  <section id="works" class="wrap" style="padding-top:clamp(24px,4vh,48px)">
+    <div class="head">
+      <h2 class="h2" data-reveal>Selected works</h2>
+      <a class="btn" href="our-work.html"><span>All projects</span><span class="btn__arrow" aria-hidden="true">→</span></a>
     </div>
-    <div class="svc"><div class="svc__row"><button class="svc__head" type="button" aria-expanded="false"><span class="mono">01</span><span class="svc__title">Conceptual &amp; Schematic Design</span><span class="svc__plus" aria-hidden="true">+</span></button><div class="svc__more"><div><ul class="svc__items"><li>Site Context Analysis</li><li>Spatial Programming</li><li>Massing and Form Generation</li></ul></div></div></div><div class="svc__row"><button class="svc__head" type="button" aria-expanded="false"><span class="mono">02</span><span class="svc__title">Design Development &amp; BIM Modeling</span><span class="svc__plus" aria-hidden="true">+</span></button><div class="svc__more"><div><ul class="svc__items"><li>Advanced 3D Integration</li><li>Material Specification</li><li>Proactive Clash Detection</li></ul></div></div></div><div class="svc__row"><button class="svc__head" type="button" aria-expanded="false"><span class="mono">03</span><span class="svc__title">Construction Documents &amp; Engineering</span><span class="svc__plus" aria-hidden="true">+</span></button><div class="svc__more"><div><ul class="svc__items"><li>Detailed Arch. Drawings</li><li>Custom Construction Details</li><li>Code Compliance</li></ul></div></div></div><div class="svc__row"><button class="svc__head" type="button" aria-expanded="false"><span class="mono">04</span><span class="svc__title">Construction Administration &amp; Oversight</span><span class="svc__plus" aria-hidden="true">+</span></button><div class="svc__more"><div><ul class="svc__items"><li>On-Site Quality Control</li><li>Submittal and RFI Management</li><li>Investment Protection</li></ul></div></div></div><div class="svc__row"><button class="svc__head" type="button" aria-expanded="false"><span class="mono">05</span><span class="svc__title">Interior Architecture &amp; Custom Detailing</span><span class="svc__plus" aria-hidden="true">+</span></button><div class="svc__more"><div><ul class="svc__items"><li>Bespoke Millwork Design</li><li>Lighting and Acoustic Strategies</li><li>Material Curation</li></ul></div></div></div><div class="svc__row"><button class="svc__head" type="button" aria-expanded="false"><span class="mono">06</span><span class="svc__title">Feasibility Studies &amp; Master Planning</span><span class="svc__plus" aria-hidden="true">+</span></button><div class="svc__more"><div><ul class="svc__items"><li>Site Potential Evaluation</li><li>Yield and Density Analysis</li><li>Long-Term Phasing Strategies</li></ul></div></div></div></div>
-    <div class="wrap" style="margin-top:3rem"><a class="btn" href="services.html"><span>● Discover our services</span><span class="btn__arrow" aria-hidden="true">↠</span></a></div>
+  </section>
+  <div class="wgrid"><a class="wcard" href="work/villa-dve-koracica-kosmaj.html" data-q="villa dve koracica / kosmaj 2026 1. conceptual &amp; schematic design 2. design development &amp; bim modeling 3. construction documents &amp; engineering"><div class="frame" data-ip><img src="images/6aa293afab9b9e93867394a1_1%20-%201.jpeg" srcset="images/6aa293afab9b9e93867394a1_1%20-%201-p-500.jpeg 500w, images/6aa293afab9b9e93867394a1_1%20-%201-p-800.jpeg 800w, images/6aa293afab9b9e93867394a1_1%20-%201-p-1080.jpeg 1080w, images/6aa293afab9b9e93867394a1_1%20-%201.jpeg 1368w" sizes="(max-width: 900px) 100vw, 50vw" width="1368" height="768" alt="VILLA DVE KORACICA / KOSMAJ" loading="lazy" decoding="async"></div><div class="wcard__meta"><h2 class="wcard__title">VILLA DVE KORACICA / KOSMAJ</h2><span class="label">2026</span></div><p class="label mute wcard__no">01 / 04</p><p class="wcard__svc">Conceptual &amp; Schematic Design  /  Design Development &amp; BIM Modeling</p></a><a class="wcard" href="work/villas-divcibare-srb.html" data-q="villa duo divcibare 2025 1. conceptual &amp; schematic design 2. design development &amp; bim modeling 3. construction documents &amp; engineering 4. construction administration &amp; oversight 5. interior architecture &amp; custom detailing"><div class="frame" data-ip><img src="images/6aa2845f582915882762379c_Image73-p-1600.jpg" srcset="images/6aa2845f582915882762379c_Image73-p-500.jpg 500w, images/6aa2845f582915882762379c_Image73-p-800.jpg 800w, images/6aa2845f582915882762379c_Image73-p-1080.jpg 1080w, images/6aa2845f582915882762379c_Image73-p-1600.jpg 1600w, images/6aa2845f582915882762379c_Image73-p-2000.jpg 2000w, images/6aa2845f582915882762379c_Image73-p-2600.jpg 2600w, images/6aa2845f582915882762379c_Image73-p-3200.jpg 3200w, images/6aa2845f582915882762379c_Image73.jpg 3840w" sizes="(max-width: 900px) 100vw, 50vw" width="3840" height="2160" alt="VILLA DUO DIVCIBARE" loading="lazy" decoding="async"></div><div class="wcard__meta"><h2 class="wcard__title">VILLA DUO DIVCIBARE</h2><span class="label">2025</span></div><p class="label mute wcard__no">02 / 04</p><p class="wcard__svc">Conceptual &amp; Schematic Design  /  Design Development &amp; BIM Modeling</p></a><a class="wcard" href="work/liman-2-ulcinj-mne.html" data-q="liman 2 ulcinj mne 2019 4. construction administration &amp; oversight 3. construction documents &amp; engineering 2. design development &amp; bim modeling 1. conceptual &amp; schematic design"><div class="frame" data-ip><img src="images/673bbefbe7256b1a41b06244_Image2_013.jpg" srcset="images/673bbefbe7256b1a41b06244_Image2_013-p-500.jpg 500w, images/673bbefbe7256b1a41b06244_Image2_013-p-800.jpg 800w, images/673bbefbe7256b1a41b06244_Image2_013-p-1080.jpg 1080w, images/673bbefbe7256b1a41b06244_Image2_013.jpg 1920w" sizes="(max-width: 900px) 100vw, 50vw" width="1920" height="1080" alt="LIMAN 2 ULCINJ MNE" loading="lazy" decoding="async"></div><div class="wcard__meta"><h2 class="wcard__title">LIMAN 2 ULCINJ MNE</h2><span class="label">2019</span></div><p class="label mute wcard__no">03 / 04</p><p class="wcard__svc">Construction Administration &amp; Oversight  /  Construction Documents &amp; Engineering</p></a><a class="wcard" href="work/apartment-pb-23-mb.html" data-q="apartment pb/23 mb 2024 4. construction administration &amp; oversight 3. construction documents &amp; engineering 2. design development &amp; bim modeling 1. conceptual &amp; schematic design"><div class="frame" data-ip><img src="images/6732094d9b97847ee720449e_IMG-20241110-WA0010.jpg" srcset="images/6732094d9b97847ee720449e_IMG-20241110-WA0010-p-500.jpg 500w, images/6732094d9b97847ee720449e_IMG-20241110-WA0010-p-800.jpg 800w, images/6732094d9b97847ee720449e_IMG-20241110-WA0010-p-1080.jpg 1080w, images/6732094d9b97847ee720449e_IMG-20241110-WA0010.jpg 1600w" sizes="(max-width: 900px) 100vw, 50vw" width="1600" height="900" alt="APARTMENT PB/23 mb" loading="lazy" decoding="async"></div><div class="wcard__meta"><h2 class="wcard__title">APARTMENT PB/23 mb</h2><span class="label">2024</span></div><p class="label mute wcard__no">04 / 04</p><p class="wcard__svc">Construction Administration &amp; Oversight  /  Construction Documents &amp; Engineering</p></a></div>
+
+  <section class="sec wrap" style="padding-top:0">
+    <div class="head">
+      <h2 class="h2" data-reveal>Services</h2>
+      <a class="btn" href="services.html"><span>All services</span><span class="btn__arrow" aria-hidden="true">→</span></a>
+    </div>
+    <div class="svc"><div class="svc__row" data-reveal><span class="label mute">01</span><span class="svc__title">Conceptual &amp; Schematic Design</span><ul class="svc__items"><li>Site Context Analysis</li><li>Spatial Programming</li><li>Massing and Form Generation</li></ul></div><div class="svc__row" data-reveal><span class="label mute">02</span><span class="svc__title">Design Development &amp; BIM Modeling</span><ul class="svc__items"><li>Advanced 3D Integration</li><li>Material Specification</li><li>Proactive Clash Detection</li></ul></div><div class="svc__row" data-reveal><span class="label mute">03</span><span class="svc__title">Construction Documents &amp; Engineering</span><ul class="svc__items"><li>Detailed Arch. Drawings</li><li>Custom Construction Details</li><li>Code Compliance</li></ul></div><div class="svc__row" data-reveal><span class="label mute">04</span><span class="svc__title">Construction Administration &amp; Oversight</span><ul class="svc__items"><li>On-Site Quality Control</li><li>Submittal and RFI Management</li><li>Investment Protection</li></ul></div><div class="svc__row" data-reveal><span class="label mute">05</span><span class="svc__title">Interior Architecture &amp; Custom Detailing</span><ul class="svc__items"><li>Bespoke Millwork Design</li><li>Lighting and Acoustic Strategies</li><li>Material Curation</li></ul></div><div class="svc__row" data-reveal><span class="label mute">06</span><span class="svc__title">Feasibility Studies &amp; Master Planning</span><ul class="svc__items"><li>Site Potential Evaluation</li><li>Yield and Density Analysis</li><li>Long-Term Phasing Strategies</li></ul></div></div>
   </section>
 
-  <section class="beliefs sec">
-    <p class="mono mute wrap" style="margin-bottom:2rem" data-reveal>At QBCarchitects we believe in /</p>
-    <div aria-hidden="true">
-      <div class="marq" data-marq="1" data-speed="70"><div class="marq__item"><span>Technical excellence</span><i></i><span>Budget &amp; timeline</span><i></i><span>Transparency</span><i></i><span>Structural reality</span><i></i></div></div>
-      <div class="marq marq--line" data-marq="-1" data-speed="60"><div class="marq__item"><span>Architecture</span><i></i><span>Interior</span><i></i><span>BIM</span><i></i><span>Detail</span><i></i><span>Belgrade</span><i></i></div></div>
-    </div>
-    <ol class="beliefs__small wrap mono">
-      <li data-reveal>01<br>Technical excellence in project documentation.</li>
-      <li data-reveal data-d=".08">02<br>Strict adherence to project budgets and timelines.</li>
-      <li data-reveal data-d=".16">03<br>Transparent communication across all project phases.</li>
-      <li data-reveal data-d=".24">04<br>Functional design grounded in structural reality.</li>
+  <section class="sec wrap" style="padding-top:0">
+    <p class="label mute" style="margin-bottom:1.6rem" data-reveal>At QBCarchitects we believe in</p>
+    <ol class="beliefs">
+      <li data-reveal><span class="label">01</span>Technical excellence in project documentation.</li>
+      <li data-reveal data-d=".08"><span class="label">02</span>Strict adherence to project budgets and timelines.</li>
+      <li data-reveal data-d=".16"><span class="label">03</span>Transparent communication across all project phases.</li>
+      <li data-reveal data-d=".24"><span class="label">04</span>Functional design grounded in structural reality.</li>
     </ol>
   </section>
 
@@ -144,8 +127,8 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__top">
-      <a class="footer__cta" href="contact.html" data-cursor="Write" data-magnetic="0.06"><span>Let’s create something awesome</span><span class="btn__arrow" aria-hidden="true">↠</span></a>
-      <div class="footer__beliefs mono">
+      <a class="footer__cta" href="contact.html"><span>Let’s create something together</span></a>
+      <div class="footer__beliefs label">
         <p>At QBCarchitects we believe in /</p>
         <p>Technical excellence in project documentation.</p>
         <p>Strict adherence to project budgets and timelines.</p>
@@ -159,7 +142,6 @@
       <div class="footer__col"><h4>Socials</h4><a href="https://x.com/QBCArchitects" target="_blank" rel="noopener">X</a><a href="https://www.instagram.com/qbcarchitects/" target="_blank" rel="noopener">Instagram</a><a href="https://www.pinterest.com/qbcarchitects" target="_blank" rel="noopener">Pinterest</a><a href="https://www.behance.net/qbcarchitects" target="_blank" rel="noopener">Behance</a></div>
       <div class="footer__col"><h4>2026 - qbcarchitects</h4><a href="privacy-policy.html">Privacy policy</a></div>
     </div>
-    <div class="footer__word" aria-hidden="true">QBCARCHITECTS</div>
   </div>
 </footer>
 </body>

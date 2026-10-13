@@ -1,12 +1,10 @@
-// QBC site generator: cista funkcija bez zavisnosti, radi i u Node-u i u pregledacu (admin stranica).
-// Iz data/projects.json i sablona pravi: work/<slug>.html, listu na our-work.html i listu na index.html.
-
-export const IDS = {
-  works: 'caf3eb9d-c8e3-b91e-7486-4f835fad0b16', // our-work.html
-  home: '964807fa-5466-2dcd-d260-9bfb824755e6', // index.html
-  last: '33a458b3-2847-916d-f52a-cc4a9f49db9e', // "Check our last work" na stranici projekta
-  hero: '0adc6fd8-bd77-045f-dc28-71a09f2ac2de', // glavna slika projekta (Webflow animacija)
-};
+// QBC generator sajta: cista funkcija bez zavisnosti, radi u Node-u (tools/build.js) i u pregledacu (admin stranica).
+// Ulaz: data/projects.json + izvori iz src/ (sabloni, delovi, services.json). Izlaz: mapa { 'putanja.html': 'sadrzaj' }.
+//
+// Sabloni koriste tri vrste oznaka:
+//   {{> ime}}      ubacuje deo iz src/partials/ime.html
+//   {{CUR:kljuc}}  ' aria-current="page"' ako je to trenutna stranica
+//   {{IME}}        vrednost iz konteksta stranice (tekst, putanja, blokovi koje generise ovaj fajl)
 
 export const STANDARD_SERVICES = [
   '1. Conceptual & Schematic Design',
@@ -17,6 +15,36 @@ export const STANDARD_SERVICES = [
   '6. Feasibility Studies & Master Planning',
 ];
 
+// Izvori koji utiču na stranice koje zavise od projekata (admin ih cita sa GitHub-a).
+export const DYNAMIC_SOURCES = [
+  'src/partials/head.html',
+  'src/partials/nav.html',
+  'src/partials/footer.html',
+  'src/pages/index.html',
+  'src/pages/our-work.html',
+  'src/pages/work.html',
+  'src/services.json',
+];
+// Ostale stranice (o nama, usluge, kontakt, privatnost) se grade samo lokalno, sa opcijom all.
+export const STATIC_SOURCES = [
+  'src/pages/about.html',
+  'src/pages/services.html',
+  'src/pages/contact.html',
+  'src/pages/privacy-policy.html',
+];
+
+const STATIC_PAGES = [
+  { out: 'about.html', src: 'about', key: 'about', title: 'About Us | QBC Architects - Architectural & Urban Design',
+    desc: 'Founded in 2010, QBC Architects is a multidisciplinary studio focused on blending structural logic with modern aesthetic principles. Learn about our methodology and leadership team.' },
+  { out: 'services.html', src: 'services', key: 'services', title: 'Architectural Services | QBC Architects',
+    desc: 'We provide end-to-end architectural services, from schematic design and technical detailing to construction administration for residential and commercial projects.' },
+  { out: 'contact.html', src: 'contact', key: 'contact', title: 'Contact QBC Architects | Start Your Project',
+    desc: 'Discuss your next residential or commercial project with QBC Architects. Reach out to our studio to consult on functional and architecturally sound design solutions.' },
+  { out: 'privacy-policy.html', src: 'privacy-policy', key: 'privacy', title: 'Privacy Policy | QBC Architects',
+    desc: 'Read the privacy policy of QBC Architects. We are committed to protecting your personal information and ensuring transparency in our digital operations.' },
+];
+
+// ---------------------------------------------------------------- tekst
 export const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -28,52 +56,130 @@ export function slugify(title) {
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'projekat';
 }
 
-// "text\n\ntext" -> <p>text</p><p>text</p>
+// "tekst\n\ntekst" -> <p>tekst</p><p>tekst</p>
 export function textToRichtext(text) {
   return String(text).split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
     .map((p) => '<p>' + esc(p).replace(/\n/g, '<br/>') + '</p>').join('');
 }
 export function richtextToText(html) {
-  return String(html).replace(/<br\s*\/?>/gi, '\n').replace(/<\/p>\s*<p[^>]*>/gi, '\n\n')
+  return String(html).replace(/<!--[\s\S]*?-->/g, '').replace(/<br\s*\/?>/gi, '\n').replace(/<\/p>\s*<p[^>]*>/gi, '\n\n')
     .replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/‍/g, '').trim();
+    .replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/[​-‍﻿]/g, '').trim();
+}
+// ociscen opis: bez starih komentara, nevidljivih znakova i praznih pasusa
+const cleanRich = (html) => String(html || '')
+  .replace(/<!--[\s\S]*?-->/g, '').replace(/[​-‍﻿]/g, '').replace(/&nbsp;| /g, ' ')
+  .replace(/\s+<\/p>/g, '</p>').replace(/<p[^>]*>\s*<\/p>/g, '').trim();
+
+const num = (i) => String(i + 1).padStart(2, '0');
+const stripNum = (s) => String(s).replace(/^\d+\.\s*/, '');
+
+// ---------------------------------------------------------------- slike
+// ime fajla u adresi: zarez, razmak i slicno moraju biti kodirani (u srcset zarez razdvaja kandidate)
+const encFile = (f) => encodeURIComponent(f).replace(/%2F/g, '/');
+function variants(im) {
+  const file = im.file, dot = file.lastIndexOf('.');
+  return { base: file.slice(0, dot), ext: file.slice(dot + 1), widths: (im.widths || []).filter((w) => !im.w || w < im.w) };
+}
+// putanja slike u nekoj od sirina (prva dostupna koja je >= trazene, inace original)
+export function imgUrl(im, root, want = 1600) {
+  const { base, ext, widths } = variants(im);
+  const w = widths.find((x) => x >= want);
+  return w ? `${root}images/${encFile(`${base}-p-${w}.${ext}`)}` : `${root}images/${encFile(im.file)}`;
+}
+function img(im, { root, sizes = '100vw', alt = '', eager = false, want = 1600 } = {}) {
+  const { base, ext, widths } = variants(im);
+  const parts = widths.map((w) => `${root}images/${encFile(`${base}-p-${w}.${ext}`)} ${w}w`);
+  if (im.w) parts.push(`${root}images/${encFile(im.file)} ${im.w}w`);
+  const dims = im.w && im.h ? ` width="${im.w}" height="${im.h}"` : '';
+  const set = parts.length > 1 ? ` srcset="${parts.join(', ')}" sizes="${sizes}"` : '';
+  const load = eager ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"';
+  return `<img src="${imgUrl(im, root, want)}"${set}${dims} alt="${esc(alt)}"${load}>`;
 }
 
-function imgTag(im, cls, prefix, { dataWId = '', style = '' } = {}) {
-  const file = im.file;
-  const dot = file.lastIndexOf('.');
-  const base = file.slice(0, dot), ext = file.slice(dot + 1);
-  let srcset = '';
-  if (im.w && (im.widths || []).length >= 0 && (im.widths || []).length) {
-    const parts = im.widths.map((w) => `${prefix}images/${base}-p-${w}.${ext} ${w}w`);
-    parts.push(`${prefix}images/${file} ${im.w}w`);
-    srcset = ` srcset="${parts.join(', ')}"`;
-  }
-  return `<img alt="${esc(im.alt || '')}" class="${cls}"${dataWId ? ` data-w-id="${dataWId}"` : ''} loading="lazy" src="${prefix}images/${file}"${srcset}${style ? ` style="${style}"` : ''}/>`;
+// ---------------------------------------------------------------- blokovi
+const cover = (p) => p.cover || p.hero;
+const li = (list, cls = '') => (list || []).map((t) => `<li${cls ? ` class="${cls}"` : ''}>${esc(t)}</li>`).join('');
+
+function heroImg(p, root) {
+  return img(p.hero, { root, sizes: '100vw', alt: `${p.title}, QBC Architects`, eager: true, want: 2000 });
+}
+function heroCredit(p) {
+  return `<a class="hero__credit mono" href="work/${p.slug}.html" data-cursor="View">${esc(p.title)} / ${esc(p.year)} ↗</a>`;
 }
 
-function servicesItems(list, kind) {
-  return (list || []).map((t) => kind === 'hero'
-    ? `<div class="work-hero__services qbc-dyn-item" role="listitem"><div class="work-hero__services-text text-size-small">${esc(t)}</div></div>`
-    : `<div class="works__services-item qbc-dyn-item" role="listitem"><div class="works__services-text text-size-small">${esc(t)}</div></div>`).join('');
+function floats(projects) {
+  const pick = [1, 2, 3].map((k) => projects[k % projects.length]).filter(Boolean);
+  const cls = ['a', 'b', 'c'], speed = ['0.16', '-0.1', '0.3'];
+  return pick.map((p, i) => {
+    const im = (p.gallery && p.gallery[0]) || cover(p);
+    return `<figure class="float float--${cls[i]}" data-parallax="${speed[i]}"><div class="frame marks" data-ip>` +
+      img(im, { root: '', sizes: '(max-width: 900px) 40vw, 24vw', alt: p.title, want: 1080 }) +
+      `</div><figcaption class="mono mute">${esc(p.title)}</figcaption></figure>`;
+  }).join('');
 }
 
-export function listItem(p, { prefix, id, main }) {
-  const cover = p.cover || p.hero, thumb = p.thumb || p.cover || p.hero;
-  return `<div class="works__item${main ? ' main' : ''} qbc-dyn-item" data-w-id="${id}" role="listitem">` +
-    `<div class="works__item-visual">${imgTag(cover, 'works__item-img', prefix)}<div class="works__item-overlay"></div></div>` +
-    `<div class="works__item-content"><div class="works__content-visual">${imgTag(thumb, 'works__content-img', prefix)}</div>` +
-    `<div class="works__content-infos"><div class="works__item-text text-size-small">${esc(p.title)}</div>` +
-    `<div class="works__services-list"><div class="works__item-services qbc-dyn-list"><div class="works__services-list qbc-dyn-items" role="list">${servicesItems(p.services, 'list')}</div></div></div>` +
-    `<div class="works__item-date"><div class="works__item-text text-size-small">/</div><div class="works__item-text text-size-small">${esc(p.year)}</div></div></div></div>` +
-    `<a class="works__item-link qbc-inline-block" href="${prefix}work/${p.slug}.html"></a></div>`;
+function homeStack(projects, n) {
+  const list = projects.slice(0, n);
+  return list.map((p, i) =>
+    `<article class="card"><div class="card__inner">` +
+    `<div class="card__media frame" data-ip>${img(cover(p), { root: '', sizes: '100vw', alt: p.title, want: 2000 })}</div>` +
+    `<div class="card__top mono"><span>${num(i)} / ${String(list.length).padStart(2, '0')}</span><ul class="card__services">${li(p.services)}</ul></div>` +
+    `<div class="card__bottom"><h3 class="card__title">${esc(p.title)}</h3><span class="card__num">${esc(p.year)}</span></div>` +
+    `<a class="card__link" href="work/${p.slug}.html" aria-label="${esc(p.title)}" data-cursor="View"></a>` +
+    `</div></article>`).join('');
 }
 
-function replaceMarkers(html, name, inner) {
-  const a = `<!--QBC:${name}:START-->`, b = `<!--QBC:${name}:END-->`;
-  const i = html.indexOf(a), j = html.indexOf(b);
-  if (i < 0 || j < 0 || j < i) throw new Error(`Markeri QBC:${name} nisu nadjeni u stranici`);
-  return html.slice(0, i + a.length) + inner + html.slice(j);
+function worksGrid(projects) {
+  const speeds = ['0.05', '-0.05', '0.02'];
+  return projects.map((p, i) =>
+    `<a class="wcard" href="work/${p.slug}.html" data-parallax="${speeds[i % 3]}" data-cursor="View">` +
+    `<div class="frame" data-ip data-curtain>${img(cover(p), { root: '', sizes: '(max-width: 900px) 100vw, 55vw', alt: p.title, want: 1080 })}</div>` +
+    `<span class="wcard__num mono">${num(i)}</span>` +
+    `<div class="wcard__meta"><h2 class="wcard__title">${esc(p.title)}</h2><span class="mono">${esc(p.year)}</span></div>` +
+    `<ul class="wcard__svc mono">${li(p.services)}</ul></a>`).join('');
+}
+
+function worksIndex(projects) {
+  return projects.map((p, i) => {
+    const first = stripNum((p.services || [])[0] || '');
+    const more = (p.services || []).length > 1 ? ` +${p.services.length - 1}` : '';
+    return `<a class="windex__row" href="work/${p.slug}.html" data-img="${imgUrl(cover(p), '', 800)}" data-cursor="View">` +
+      `<span class="mono">${num(i)}</span><span class="windex__title">${esc(p.title)}</span>` +
+      `<span class="windex__svc mono mute">${esc(first)}${more}</span><span class="windex__year mono">${esc(p.year)}</span></a>`;
+  }).join('');
+}
+
+function servicesList(sv) {
+  return `<div class="svc">` + sv.phases.map((ph, i) =>
+    `<div class="svc__row"><button class="svc__head" type="button" aria-expanded="false">` +
+    `<span class="mono">${num(i)}</span><span class="svc__title">${esc(ph.title)}</span><span class="svc__plus" aria-hidden="true">+</span></button>` +
+    `<div class="svc__more"><div><ul class="svc__items">${ph.items.map((it) => `<li>${esc(it.title)}</li>`).join('')}</ul></div></div></div>`).join('') + `</div>`;
+}
+
+function phases(sv) {
+  return sv.phases.map((ph, i) =>
+    `<section class="phase"><div class="phase__num" data-reveal><b>${num(i)}</b><h2 class="h2">${esc(ph.title)}</h2></div>` +
+    `<div class="phase__body"><p class="lead" data-reveal>${esc(ph.text)}</p><div class="phase__items">` +
+    ph.items.map((it) => `<div class="phase__item" data-reveal><h3 class="h3">${esc(it.title)}</h3><p>${esc(it.text)}</p></div>`).join('') +
+    `</div></div></section>`).join('');
+}
+
+function gallery(p) {
+  return (p.gallery || []).map((g, i) => {
+    const ar = g.w && g.h ? ` style="--ar:${g.w} / ${g.h}"` : '';
+    return `<figure data-full="${imgUrl(g, '../', 2000)}"><div class="frame" data-ip data-curtain${ar}>` +
+      img(g, { root: '../', sizes: '(max-width: 900px) 100vw, 60vw', alt: `${p.title}, image ${i + 1}`, want: 1600 }) + `</div></figure>`;
+  }).join('');
+}
+
+function nextProject(p, projects) {
+  if (projects.length < 2) return '';
+  const nx = projects[(projects.findIndex((x) => x.slug === p.slug) + 1) % projects.length];
+  return `<a class="pnext" href="${nx.slug}.html" data-cursor="Next"><div class="frame" data-ip>` +
+    img(cover(nx), { root: '../', sizes: '100vw', alt: '', want: 2000 }) + `</div>` +
+    `<div class="pnext__content"><span class="mono">Next project /</span><span class="pnext__title">${esc(nx.title)}</span>` +
+    `<span class="btn btn--round">View project <span class="btn__arrow" aria-hidden="true">↠</span></span></div></a>`;
 }
 
 function metaDesc(p) {
@@ -82,30 +188,30 @@ function metaDesc(p) {
   return t.length > 158 ? t.slice(0, 155).replace(/\s+\S*$/, '') + '...' : t;
 }
 
-export function renderWork(p, projects, tpl, opts = {}) {
-  const n = opts.lastWorkCount ?? 3;
-  const last = projects.filter((x) => x.slug !== p.slug).slice(0, n);
-  const og = 'https://www.qbc.rs/images/' + encodeURIComponent(p.hero.file).replace(/%2F/g, '/');
-  const map = {
-    SLUG: p.slug,
-    OG_IMAGE: og,
-    TITLE_TEXT: esc(p.title),
-    TITLE_ATTR: esc(p.title),
-    DESC_ATTR: esc(metaDesc(p)),
-    HERO_SERVICES: servicesItems(p.services, 'hero'),
-    HERO_IMG: imgTag(p.hero, 'works-details__img', '../', { dataWId: IDS.hero, style: 'opacity:0' }),
-    DESCRIPTION: p.description || '',
-    GALLERY: (p.gallery || []).map((g) =>
-      `<div class="works-details__showcase-visual qbc-dyn-item qbc-dyn-repeater-item" role="listitem">${imgTag(g, 'works-details__showcase-img', '../')}</div>`).join(''),
-    LAST_WORK: last.map((x) => listItem(x, { prefix: '../', id: IDS.last, main: false })).join(''),
-  };
-  return tpl.replace(/\{\{([A-Z_]+)\}\}/g, (m, k) => (k in map ? map[k] : m));
+// ---------------------------------------------------------------- sabloni
+function render(name, src, ctx) {
+  let html = src[`src/pages/${name}.html`];
+  if (html === undefined) throw new Error(`Nedostaje izvor src/pages/${name}.html`);
+  for (let depth = 0; /\{\{>/.test(html); depth++) {
+    if (depth > 4) throw new Error('Previse ugnjezdenih delova');
+    html = html.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (m, part) => {
+      const t = src[`src/partials/${part}.html`];
+      if (t === undefined) throw new Error(`Nedostaje deo src/partials/${part}.html`);
+      return t.replace(/\n$/, '');
+    });
+  }
+  return html.replace(/\{\{\s*(CUR:)?([\w-]+)\s*\}\}/g, (m, cur, key) => {
+    if (cur) return ctx.key === key ? ' aria-current="page"' : '';
+    if (!(key in ctx)) throw new Error(`Nepoznata oznaka {{${key}}} u sablonu ${name}`);
+    return ctx[key];
+  });
 }
 
 export function validate(data) {
   const errs = [];
   const seen = new Set();
-  for (const p of data.projects) {
+  if (!Array.isArray(data.projects) || !data.projects.length) errs.push('Nema nijednog projekta');
+  for (const p of data.projects || []) {
     if (!p.slug || !/^[a-z0-9-]+$/.test(p.slug)) errs.push(`Neispravan slug: ${p.slug}`);
     if (seen.has(p.slug)) errs.push(`Duplirani slug: ${p.slug}`);
     seen.add(p.slug);
@@ -115,18 +221,49 @@ export function validate(data) {
   return errs;
 }
 
-// templates: { work, index, ourWork } (tekst), vraca { 'work/x.html': '...', 'index.html': '...', 'our-work.html': '...' }
-export function buildSite(data, templates) {
+// sources: { 'src/pages/index.html': '...', ... }. Opcija all gradi i staticke stranice (about, services, ...).
+export function buildSite(data, sources, { all = false } = {}) {
   const errs = validate(data);
   if (errs.length) throw new Error(errs.join('\n'));
   const projects = data.projects;
+  const heroProject = projects.find((p) => p.slug === data.hero_slug) || projects[0];
+  const services = JSON.parse(sources['src/services.json']);
+  const ogDefault = 'https://www.qbc.rs/' + imgUrl(heroProject.hero, '', 1600);
+  const base = { ROOT: '', OG_IMAGE: ogDefault, SERVICES_LIST: servicesList(services) };
   const out = {};
-  out['our-work.html'] = replaceMarkers(templates.ourWork, 'LIST',
-    projects.map((p) => listItem(p, { prefix: '', id: IDS.works, main: true })).join(''));
-  out['index.html'] = replaceMarkers(templates.index, 'LIST',
-    projects.slice(0, data.home_count ?? 4).map((p) => listItem(p, { prefix: '', id: IDS.home, main: false })).join(''));
+
+  out['index.html'] = render('index', sources, {
+    ...base, key: 'home', PATH: '',
+    TITLE: 'QBC Architects | Architecture & Interior Design Studio',
+    DESC: 'QBC Architects specializes in high-end residential and commercial architecture. We deliver functional, aesthetically superior, and constructible spaces across Belgrade, Vienna, and New York.',
+    HERO_IMG: heroImg(heroProject, ''), HERO_CREDIT: heroCredit(heroProject),
+    FLOATS: floats(projects), HOME_STACK: homeStack(projects, data.home_count ?? 4),
+  });
+  out['our-work.html'] = render('our-work', sources, {
+    ...base, key: 'works', PATH: 'our-work.html',
+    TITLE: 'Portfolio | Featured Projects by QBC Architects',
+    DESC: 'Explore our selected architectural and interior design portfolio. View our high-end residential villas, commercial clinics, and luxury apartments in Belgrade, Montenegro, and beyond.',
+    COUNT: String(projects.length).padStart(2, '0'), WORKS_GRID: worksGrid(projects), WORKS_INDEX: worksIndex(projects),
+  });
   for (const p of projects) {
-    out[`work/${p.slug}.html`] = renderWork(p, projects, templates.work, { lastWorkCount: data.last_work_count ?? 3 });
+    out[`work/${p.slug}.html`] = render('work', sources, {
+      ...base, ROOT: '../', key: 'works', PATH: `work/${p.slug}.html`,
+      TITLE: `${p.title} | QBC Architects`, DESC: esc(metaDesc(p)),
+      OG_IMAGE: 'https://www.qbc.rs/' + imgUrl(p.hero, '', 1600),
+      TITLE_TEXT: esc(p.title), YEAR: esc(p.year), SERVICES: li(p.services),
+      HERO_IMG: img(p.hero, { root: '../', sizes: '100vw', alt: p.title, eager: true, want: 2000 }),
+      DESCRIPTION: cleanRich(p.description), GALLERY: gallery(p), NEXT: nextProject(p, projects),
+    });
   }
+  if (all) {
+    for (const pg of STATIC_PAGES) {
+      out[pg.out] = render(pg.src, sources, {
+        ...base, key: pg.key, PATH: pg.out, TITLE: esc(pg.title), DESC: esc(pg.desc),
+        SERVICES_INTRO: esc(services.intro), PHASES: phases(services),
+      });
+    }
+  }
+  // TITLE/DESC za dinamicke stranice su vec bezbedni tekstovi bez navodnika; escape radi svejedno
+  for (const k of Object.keys(out)) out[k] = out[k].replace(/<title>([^<]*)<\/title>/, (m, t) => `<title>${t.includes('&amp;') ? t : esc(t)}</title>`);
   return out;
 }

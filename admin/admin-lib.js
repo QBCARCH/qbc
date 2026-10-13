@@ -1,5 +1,5 @@
 // Logika admin stranice: GitHub klijent, obrada slika, objava u jednom commit-u.
-import { buildSite, slugify } from '../tools/build-core.js';
+import { buildSite, slugify, DYNAMIC_SOURCES } from '../tools/build-core.js';
 
 export const WIDTHS = [500, 800, 1080, 1600, 2000, 2600, 3200];
 export const MAX_W = 3840;
@@ -150,7 +150,7 @@ export async function processImage(file) {
   const blobs = [{ path: 'images/' + name, blob: origBlob }];
   for (const w of widths) blobs.push({ path: `images/${base}-p-${w}.${ext}`, blob: await toBlob(draw(w), type, 0.85) });
   bmp.close && bmp.close();
-  return { entry: { file: name, widths, w: finalW }, blobs };
+  return { entry: { file: name, widths, w: finalW, h: Math.round((origH * finalW) / origW) }, blobs };
 }
 
 export async function blobToBase64(blob) {
@@ -165,10 +165,9 @@ export async function blobToBase64(blob) {
 // state: { data, pending: Map(path -> Blob|{base64}), removedProjects: [project] }
 export async function publish(gh, { data, pending, removed = [], message, onProgress = () => {} }) {
   onProgress('Učitavam šablone sa sajta');
-  const [work, index, ourWork] = await Promise.all([
-    gh.getText('tools/templates/work.html'), gh.getText('index.html'), gh.getText('our-work.html'),
-  ]);
-  const built = buildSite(data, { work, index, ourWork });
+  const texts = await Promise.all(DYNAMIC_SOURCES.map((p) => gh.getText(p)));
+  const sources = Object.fromEntries(DYNAMIC_SOURCES.map((p, i) => [p, texts[i]]));
+  const built = buildSite(data, sources);
   const files = Object.entries(built).map(([path, text]) => ({ path, text }));
   files.push({ path: 'data/projects.json', text: JSON.stringify(data, null, 1) + '\n' });
   onProgress('Pripremam slike');

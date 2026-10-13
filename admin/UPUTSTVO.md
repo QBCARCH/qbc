@@ -1,6 +1,6 @@
 # QBC admin: kako se dodaje projekat
 
-Admin stranica je na `https://www.qbc.rs/admin/` (nakon što se ova izmena objavi na glavnoj grani).
+Admin stranica je na `https://www.qbc.rs/admin/`.
 
 ## Prvo prijavljivanje (jednom)
 
@@ -14,10 +14,11 @@ Token je lozinka za admin. Ko nema token, ne može ništa da promeni na sajtu.
 
 1. Klikni **Novi projekat**.
 2. Upiši naslov i godinu, štikliraj usluge, upiši opis (prazan red razdvaja pasuse).
-3. Dodaj naslovnu sliku (obavezna), po želji glavnu i malu sliku, i galeriju (više slika odjednom, prevlačenjem menjaš redosled).
-4. Klikni **Objavi na sajt**. Za oko minut do dva sajt je ažuran.
+3. Dodaj naslovnu sliku (obavezna), po želji glavnu sliku (fullscreen na vrhu stranice projekta) i galeriju (više slika odjednom, prevlačenjem menjaš redosled).
+4. Ako želiš da ta slika bude fullscreen slika na početnoj stranici sajta, štikliraj odgovarajuću kvačicu.
+5. Klikni **Objavi na sajt**. Za oko minut do dva sajt je ažuran.
 
-Slike se automatski smanjuju u više veličina (500, 800, 1080, 1600, 2000, 2600, 3200 px), isto kao u Webflow-u, tako da sajt ostaje brz.
+Slike se automatski smanjuju u više veličina (500 do 3200 px), tako da sajt ostaje brz.
 
 ## Redosled i brisanje
 
@@ -25,8 +26,8 @@ Na listi projekata dugmad **Gore / Dole** menjaju redosled na sajtu (prva 4 su n
 
 ## Kako ovo radi
 
-- Svi projekti su u `data/projects.json`.
-- `tools/build-core.js` iz njih pravi `work/<projekat>.html`, listu na `our-work.html` i listu na `index.html`. Isti kod radi u admin stranici i lokalno (`node tools/build.js`).
-- Šablon stranice projekta je `tools/templates/work.html`. Liste na `index.html` i `our-work.html` su između oznaka `QBC:LIST:START` i `QBC:LIST:END`, ne briši ih.
-- Efekti (otkrivanje slika pri skrolu, parallax, lightbox za galeriju, indikator skrola) su u `css/qbc-fx.css` i `js/qbc-fx.js`.
+- Svi projekti su u `data/projects.json` (polje `hero_slug` je projekat čija je slika na početnoj).
+- `tools/build-core.js` iz projekata i šablona pravi `index.html`, `our-work.html` i `work/<projekat>.html`. Isti kod radi u admin stranici i lokalno (`node tools/build.js`, koji gradi i ostale stranice).
+- Šabloni su u `src/`: delovi koji se ponavljaju (zaglavlje, meni, podnožje) u `src/partials/`, stranice u `src/pages/`, usluge u `src/services.json`. Tekstove o nama, uslugama, kontaktu i privatnosti menjaš u `src/pages/`, pa pokreneš `node tools/build.js`.
+- Izgled je u `css/site.css`, ponašanje i animacije (parallax, otkrivanje, kursor, tranzicije, lightbox) u `js/site.js`. Nema spoljnih biblioteka.
 - Svaka objava je jedan commit na grani `main`, pa se svaka izmena može vratiti na GitHub-u.

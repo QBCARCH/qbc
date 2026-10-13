@@ -1,0 +1,55 @@
+/* QBC dodatni efekti: otkrivanje slika pri skrolu, parallax, lightbox, indikator skrola.
+   Sve se ukljucuje tek kada JS doda klasu html.qbc-fx, pa bez JS-a sajt ostaje potpuno vidljiv. */
+
+/* ---- galerija na stranici projekta ---- */
+html.qbc-fx .works-details__showcase-visual{
+  overflow:hidden;
+  clip-path:inset(14% 0 0 0);
+  opacity:0;
+  transition:clip-path 1.1s cubic-bezier(.2,.7,.1,1),opacity .9s ease;
+  transition-delay:var(--fx-delay,0s);
+  cursor:zoom-in;
+}
+html.qbc-fx .works-details__showcase-visual.qbc-in{clip-path:inset(0 0 0 0);opacity:1}
+html.qbc-fx .works-details__showcase-visual .works-details__showcase-img{
+  transform:translate3d(0,var(--fx-py,0px),0) scale(1.1);
+  transition:transform .12s linear;
+  will-change:transform;
+}
+html.qbc-fx .works-details__showcase-visual:hover .works-details__showcase-img{filter:brightness(.94)}
+
+/* ---- tekst opisa ---- */
+html.qbc-fx .works-details__title.qbc-richtext p{
+  opacity:0;transform:translateY(26px);
+  transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.1,1);
+}
+html.qbc-fx .works-details__title.qbc-richtext p.qbc-in{opacity:1;transform:none}
+
+/* ---- glavna slika projekta: klik otvara lightbox ---- */
+html.qbc-fx .works-details__img{cursor:zoom-in}
+
+/* ---- naslovi sekcija: linija koja se povlaci ---- */
+html.qbc-fx .works__title.text-size-display{position:relative}
+
+/* ---- indikator skrola ---- */
+.qbc-progress{position:fixed;left:0;top:0;height:2px;width:100%;background:#000;transform-origin:0 50%;transform:scaleX(0);z-index:9998;pointer-events:none;mix-blend-mode:difference}
+
+/* ---- lightbox ---- */
+.qbc-lb{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s;touch-action:pan-y}
+.qbc-lb.open{opacity:1;visibility:visible}
+.qbc-lb img{max-width:82vw;max-height:84vh;object-fit:contain;transform:scale(.97);transition:transform .5s cubic-bezier(.2,.7,.1,1),opacity .3s ease;opacity:0;display:block}
+.qbc-lb.open img.ready{transform:none;opacity:1}
+.qbc-lb button{position:absolute;background:none;border:0;color:#fff;z-index:2;font:400 13px "Geist Mono",ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;padding:18px 22px}
+.qbc-lb .lb-x{top:0;right:0}
+.qbc-lb .lb-p{left:0;top:50%;transform:translateY(-50%)}
+.qbc-lb .lb-n{right:0;top:50%;transform:translateY(-50%)}
+.qbc-lb .lb-c{color:#fff;left:0;top:0;font:400 12px "Geist Mono",ui-monospace,monospace;padding:20px 22px;letter-spacing:.1em}
+.qbc-lb button:hover{opacity:.55}
+body.qbc-lb-lock{overflow:hidden}
+body.qbc-lb-lock .navbar,body.qbc-lb-lock .cursor__wrapper,body.qbc-lb-lock .qbc-progress{visibility:hidden}
+
+@media (prefers-reduced-motion:reduce){
+  html.qbc-fx .works-details__showcase-visual,
+  html.qbc-fx .works-details__title.qbc-richtext p{clip-path:none;opacity:1;transform:none;transition:none}
+  html.qbc-fx .works-details__showcase-visual .works-details__showcase-img{transform:none}
+}

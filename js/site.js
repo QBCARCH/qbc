@@ -96,6 +96,26 @@
     }, { passive: true });
   };
 
+  const initProgress = () => {
+    const bar = $('.progress');
+    if (!bar) return;
+    const f = () => bar.style.setProperty('--p', clamp(scrollY / Math.max(1, root.scrollHeight - innerHeight)).toFixed(4));
+    addEventListener('scroll', f, { passive: true }); addEventListener('resize', f); f();
+  };
+
+  /* strelice na tastaturi: prethodni / sledeci projekat */
+  const initKeys = () => {
+    const nx = $('[data-next]'), pv = $('[data-prev]');
+    if (!nx && !pv) return;
+    D.addEventListener('keydown', (e) => {
+      if (e.metaKey || e.ctrlKey || e.altKey || D.body.classList.contains('is-locked')) return;
+      const t = e.target && e.target.tagName;
+      if (t === 'INPUT' || t === 'TEXTAREA') return;
+      const a = e.key === 'ArrowRight' ? nx : e.key === 'ArrowLeft' ? pv : null;
+      if (a) a.click();
+    });
+  };
+
   const initMenu = () => {
     const menu = $('#menu');
     if (!menu) return;
@@ -187,7 +207,7 @@
   };
 
   const boot = () => {
-    initPicks(); initReveal(); initParallax(); initNav(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox();
+    initPicks(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

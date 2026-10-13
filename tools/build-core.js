@@ -171,10 +171,16 @@ function gallery(p) {
 function nextProject(p, projects) {
   if (projects.length < 2) return '';
   const nx = projects[(projects.findIndex((x) => x.slug === p.slug) + 1) % projects.length];
-  return `<a class="pnext" href="${nx.slug}.html"><div class="pnext__row"><div class="pnext__text">` +
+  return `<a class="pnext" data-next href="${nx.slug}.html"><div class="pnext__row"><div class="pnext__text">` +
     `<span class="label mute">Next project</span><span class="pnext__title">${esc(nx.title)}</span>` +
     `<span class="btn"><span>View project</span><span class="btn__arrow" aria-hidden="true">→</span></span></div>` +
     `<div class="frame">${img(cover(nx), { root: '../', sizes: '(max-width: 900px) 100vw, 40vw', alt: '', want: 1080 })}</div></div></a>`;
+}
+
+function prevProject(p, projects) {
+  if (projects.length < 2) return '';
+  const pv = projects[(projects.findIndex((x) => x.slug === p.slug) - 1 + projects.length) % projects.length];
+  return `<a class="label mute pprev" data-prev href="${pv.slug}.html">Previous: ${esc(pv.title)}</a>`;
 }
 
 function metaDesc(p) {
@@ -247,7 +253,7 @@ export function buildSite(data, sources, { all = false } = {}) {
       OG_IMAGE: 'https://www.qbc.rs/' + imgUrl(p.hero, '', 1600),
       TITLE_TEXT: esc(p.title), YEAR: esc(p.year), SERVICES: li(p.services),
       HERO_IMG: img(p.hero, { root: '../', sizes: '100vw', alt: p.title, eager: true, want: 2000 }),
-      DESCRIPTION: cleanRich(p.description), GALLERY: gallery(p), NEXT: nextProject(p, projects),
+      DESCRIPTION: cleanRich(p.description), GALLERY: gallery(p), NEXT: nextProject(p, projects), PREV: prevProject(p, projects),
     });
   }
   if (all) {

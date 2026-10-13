@@ -85,7 +85,11 @@ ul, ol { list-style: none; }
 .nav__text { color: var(--fg); transition: color .4s; }
 .over-hero .nav__text { color: #fff; }
 .nav__name { font: 400 .72rem var(--mono); letter-spacing: .3em; text-transform: uppercase; white-space: nowrap; }
-.nav__cities { justify-self: center; }
+.nav__links { justify-self: center; display: flex; gap: clamp(1rem, 2.4vw, 2.4rem); }
+.nav__links a { padding-block: .3em; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .5s var(--ease); }
+.nav__links a:hover, .nav__links a[aria-current="page"] { background-size: 100% 1px; }
+.progress { position: fixed; left: 0; top: 0; height: 2px; width: 100%; z-index: 70; background: var(--accent); transform-origin: 0 50%; transform: scaleX(var(--p, 0)); pointer-events: none; }
+.pprev:hover { color: var(--fg); }
 .nav__menu { justify-self: end; display: inline-flex; align-items: center; gap: .7em; }
 .nav__menu i { display: block; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 
@@ -181,7 +185,7 @@ ul, ol { list-style: none; }
 .phero__media img { width: 100%; height: 100%; object-fit: cover; }
 .phero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0, 0, 0, .28), transparent 28%, transparent 60%, rgba(0, 0, 0, .5)); }
 .phero__content { position: absolute; z-index: 2; left: var(--pad); right: var(--pad); bottom: clamp(24px, 4.5vh, 48px); display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; }
-.phero__title { max-width: 16ch; }
+.phero__title { max-width: 18ch; font-size: clamp(2rem, 4.6vw, 4.6rem); }
 
 .pinfo { align-items: start; }
 .pinfo__side { grid-column: 1 / span 3; position: sticky; top: 100px; display: grid; gap: 1.8rem; align-self: start; }
@@ -267,7 +271,7 @@ ul, ol { list-style: none; }
 @media (max-width: 900px) {
   body { font-size: 1rem; }
   .nav { grid-template-columns: 1fr auto; }
-  .nav__cities { display: none; }
+  .nav__links { display: none; }
   .menu { grid-template-columns: 1fr; }
   .menu__side { display: none; }
   .hero__title, .hero__side { grid-column: 1 / -1; }

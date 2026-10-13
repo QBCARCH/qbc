@@ -1,0 +1,6 @@
+{
+  "name": "qbc-site",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node tools/build.js" }
+}

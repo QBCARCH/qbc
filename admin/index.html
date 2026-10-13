@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<title>QBC admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+:root{--ink:#0a0a0a;--mute:#767676;--line:#dcdcdc;--bg:#fff;--soft:#f5f5f4;--ok:#1d6b3a;--err:#b3261e}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Geist,system-ui,sans-serif;font-weight:300;font-size:16px;line-height:1.45}
+.mono,label,.tag,button,.small{font-family:"Geist Mono",ui-monospace,monospace}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+header.top b{font-weight:500;letter-spacing:.18em;font-size:13px}
+header.top a,header.top button,a.small{font-size:12px}
+main{max-width:1080px;margin:0 auto;padding:32px 24px 140px}
+h1{font-weight:300;font-size:34px;letter-spacing:-.02em;margin:0 0 6px}
+h2{font-weight:400;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:36px 0 12px;font-family:"Geist Mono",monospace}
+p.lead{color:var(--mute);margin:0 0 24px;max-width:60ch}
+button,.btn{appearance:none;border:1px solid var(--ink);background:var(--ink);color:#fff;padding:11px 18px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-block}
+button.ghost,.btn.ghost{background:transparent;color:var(--ink)}
+button.link{border:0;background:none;color:var(--ink);padding:4px 6px;text-decoration:underline;text-transform:none;letter-spacing:0}
+button:disabled{opacity:.4;cursor:default}
+button:not(:disabled):hover{opacity:.82}
+input[type=text],input[type=password],input[type=number],textarea{width:100%;border:1px solid var(--line);padding:11px 12px;font:inherit;background:#fff;color:var(--ink);border-radius:0}
+input:focus,textarea:focus{outline:2px solid var(--ink);outline-offset:-1px}
+textarea{min-height:220px;resize:vertical;line-height:1.55}
+label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:18px 0 6px}
+.row{display:grid;gap:16px;grid-template-columns:1fr 160px}
+.hint{font-size:13px;color:var(--mute);margin-top:6px}
+.err{color:var(--err);font-size:14px;margin-top:12px;white-space:pre-wrap}
+.ok{color:var(--ok)}
+.card{border:1px solid var(--line);padding:28px;max-width:560px}
+/* lista projekata */
+.plist{border-top:1px solid var(--ink)}
+.prow{display:grid;grid-template-columns:28px 96px 1fr auto;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.prow .n{font-family:"Geist Mono",monospace;font-size:12px;color:var(--mute)}
+.prow img{width:96px;height:64px;object-fit:cover;background:var(--soft);display:block}
+.prow .t{font-weight:400}
+.prow .m{font-size:13px;color:var(--mute)}
+.prow .act{display:flex;gap:2px;flex-wrap:wrap;justify-content:flex-end}
+.divider{font-family:"Geist Mono",monospace;font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.1em;padding:10px 0;border-bottom:1px dashed var(--line)}
+/* uredjivac */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+.svc label{margin:0;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink);font-family:Geist,sans-serif;font-weight:300;display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.svc input{margin-top:4px}
+.drop{border:1px dashed #999;background:var(--soft);min-height:150px;display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer;position:relative;overflow:hidden}
+.drop.over{background:#e9e9e7;border-color:var(--ink)}
+.drop img{width:100%;max-height:340px;object-fit:cover;display:block}
+.drop span{color:var(--mute);font-size:14px;padding:20px}
+.drop .x{position:absolute;top:8px;right:8px;background:#fff;color:var(--ink);border:1px solid var(--ink);padding:5px 9px}
+.imgs{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:12px}
+.tile{position:relative;background:var(--soft);aspect-ratio:4/3;cursor:grab}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.tile.drag{opacity:.35}
+.tile .no{position:absolute;left:6px;top:6px;background:#fff;font:11px "Geist Mono",monospace;padding:2px 6px}
+.tile .tb{position:absolute;right:4px;bottom:4px;display:flex;gap:3px}
+.tile .tb button{padding:3px 8px;font-size:12px;background:#fff;color:var(--ink);border:1px solid var(--ink)}
+.actions{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
+/* traka */
+#bar{position:fixed;left:0;right:0;bottom:0;background:var(--ink);color:#fff;padding:14px 24px;display:none;justify-content:space-between;align-items:center;gap:16px;z-index:8}
+#bar.on{display:flex}
+#bar button{background:#fff;color:var(--ink);border-color:#fff}
+#bar button.ghost{background:transparent;color:#fff}
+dialog{border:1px solid var(--ink);padding:28px;max-width:480px;width:calc(100% - 32px)}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+.step{font-family:"Geist Mono",monospace;font-size:13px;margin:12px 0}
+.bar{height:3px;background:var(--line);margin-top:16px}.bar i{display:block;height:100%;width:30%;background:var(--ink);animation:mv 1.2s ease-in-out infinite}
+@keyframes mv{0%{margin-left:0}50%{margin-left:70%}100%{margin-left:0}}
+@media(max-width:760px){.row{grid-template-columns:1fr}.imgs{grid-template-columns:1fr}.prow{grid-template-columns:24px 72px 1fr}.prow img{width:72px;height:52px}.prow .act{grid-column:1/-1;justify-content:flex-start}.svc{grid-template-columns:1fr}h1{font-size:28px}}
+</style>
+</head>
+<body>
+<header class="top"><b>QBC / ADMIN</b><span id="who" class="small"></span></header>
+<main id="app"></main>
+<div id="bar"><span id="barmsg" class="small"></span><span style="display:flex;gap:10px"><button class="ghost" id="barUndo">Poništi</button><button id="barPub">Objavi izmene</button></span></div>
+<dialog id="dlg"><div id="dlgBody"></div></dialog>
+
+<script type="module">
+import { GitHub, processImage, publish, uniqueSlug, allImages } from './admin-lib.js';
+import { STANDARD_SERVICES, textToRichtext, richtextToText } from '../tools/build-core.js';
+
+const $ = (s, r = document) => r.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const clone = (o) => JSON.parse(JSON.stringify(o));
+const app = $('#app');
+const KEY = 'qbc-admin-v1';
+
+const S = { gh: null, data: null, base: '', pending: new Map(), previews: new Map(), removed: [], dirty: false };
+let E = null; // projekat koji se uredjuje
+
+/* ---------------- slike ---------------- */
+function src(im, w) {
+  if (!im) return '';
+  if (S.previews.has(im.file)) return S.previews.get(im.file);
+  if (w && (im.widths || []).includes(w)) {
+    const d = im.file.lastIndexOf('.');
+    return `../images/${im.file.slice(0, d)}-p-${w}${im.file.slice(d)}`;
+  }
+  return '../images/' + im.file;
+}
+
+/* ---------------- prijava ---------------- */
+function loginView(msg = '') {
+  const saved = JSON.parse(localStorage.getItem(KEY) || 'null') || {};
+  $('#who').textContent = '';
+  app.innerHTML = `
+  <h1>Admin za projekte</h1>
+  <p class="lead">Dodaj novi projekat, ubaci slike i tekst, i klikni Objavi. Stranica projekta, lista na početnoj i na stranici Works se prave same.</p>
+  <div class="card">
+    <label for="tok">GitHub token (lozinka za admin)</label>
+    <input id="tok" type="password" autocomplete="off" value="${esc(saved.token || '')}" placeholder="github_pat_...">
+    <div class="hint">Token se pravi na GitHub-u: Settings, Developer settings, Fine-grained tokens. Repozitorijum QBCARCH/qbc, dozvola Contents: Read and write. Ne deli ga ni sa kim.</div>
+    <label for="repo">Repozitorijum</label>
+    <input id="repo" type="text" value="${esc(saved.repo || 'QBCARCH/qbc')}">
+    <label for="br">Grana</label>
+    <input id="br" type="text" value="${esc(saved.branch || 'main')}">
+    <label style="display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;font-size:13px"><input type="checkbox" id="rem" ${saved.token ? 'checked' : ''}> Zapamti na ovom uređaju</label>
+    <div class="actions"><button id="go">Prijavi se</button></div>
+    <div class="err" id="lerr">${esc(msg)}</div>
+  </div>`;
+  $('#go').onclick = async () => {
+    const token = $('#tok').value.trim(), repo = $('#repo').value.trim(), branch = $('#br').value.trim() || 'main';
+    if (!token) { $('#lerr').textContent = 'Unesi token.'; return; }
+    $('#go').disabled = true; $('#lerr').textContent = '';
+    try {
+      const gh = new GitHub({ token, repo, branch });
+      await gh.check();
+      const text = await gh.getText('data/projects.json');
+      S.gh = gh; S.data = JSON.parse(text); S.base = text;
+      S.pending.clear(); S.previews.clear(); S.removed = []; S.dirty = false;
+      if ($('#rem').checked) localStorage.setItem(KEY, JSON.stringify({ token, repo, branch }));
+      else localStorage.removeItem(KEY);
+      $('#who').innerHTML = `${esc(repo)} / ${esc(branch)} &nbsp; <button class="link" id="out">Odjava</button>`;
+      $('#out').onclick = () => { localStorage.removeItem(KEY); S.gh = null; loginView(); };
+      listView();
+    } catch (e) {
+      $('#lerr').textContent = e.message; $('#go').disabled = false;
+    }
+  };
+}
+
+/* ---------------- lista ---------------- */
+function listView(note = '') {
+  E = null;
+  const ps = S.data.projects, hc = S.data.home_count ?? 4;
+  app.innerHTML = `
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap">
+    <div><h1>Projekti</h1><p class="lead" style="margin:0">${ps.length} projekata. Redosled ovde je redosled na sajtu, najnoviji prvi.</p></div>
+    <button id="new">+ Novi projekat</button>
+  </div>
+  ${note ? `<p class="ok small" style="margin-top:16px">${note}</p>` : ''}
+  <div class="plist" style="margin-top:24px">
+  ${ps.map((p, i) => `
+    ${i === hc ? '<div class="divider">Ispod ove linije projekti nisu na početnoj stranici</div>' : ''}
+    <div class="prow">
+      <span class="n">${String(i + 1).padStart(2, '0')}</span>
+      <img src="${esc(src(p.cover || p.hero, 500))}" alt="">
+      <div><div class="t">${esc(p.title)}</div><div class="m">${esc(p.year)} &nbsp;/&nbsp; ${p.gallery.length} slika &nbsp;/&nbsp; ${esc(p.slug)}</div></div>
+      <div class="act">
+        <button class="link" data-up="${i}" ${i === 0 ? 'disabled' : ''}>Gore</button>
+        <button class="link" data-down="${i}" ${i === ps.length - 1 ? 'disabled' : ''}>Dole</button>
+        <button class="link" data-edit="${i}">Uredi</button>
+        <button class="link" data-del="${i}">Obriši</button>
+        <a class="small" style="padding:4px 6px;color:inherit" target="_blank" href="../work/${esc(p.slug)}.html">Pogledaj</a>
+      </div>
+    </div>`).join('')}
+  </div>`;
+  $('#new').onclick = () => editorView(null);
+  app.querySelectorAll('[data-edit]').forEach((b) => (b.onclick = () => editorView(+b.dataset.edit)));
+  app.querySelectorAll('[data-up]').forEach((b) => (b.onclick = () => move(+b.dataset.up, -1)));
+  app.querySelectorAll('[data-down]').forEach((b) => (b.onclick = () => move(+b.dataset.down, 1)));
+  app.querySelectorAll('[data-del]').forEach((b) => (b.onclick = () => del(+b.dataset.del)));
+  renderBar();
+}
+function move(i, d) {
+  const a = S.data.projects; [a[i], a[i + d]] = [a[i + d], a[i]];
+  S.dirty = true; listView();
+}
+function del(i) {
+  const p = S.data.projects[i];
+  if (!confirm(`Obrisati projekat "${p.title}"? Stranica i njegove slike biće uklonjene sa sajta kad objaviš izmene.`)) return;
+  S.data.projects.splice(i, 1); S.removed.push(p); S.dirty = true; listView();
+}
+function renderBar() {
+  $('#bar').classList.toggle('on', S.dirty);
+  $('#barmsg').textContent = 'Imaš izmene koje još nisu objavljene (redosled ili brisanje).';
+}
+$('#barUndo').onclick = () => {
+  if (!confirm('Poništiti neobjavljene izmene i ponovo učitati stanje sa sajta?')) return;
+  S.data = JSON.parse(S.base); S.removed = []; S.dirty = false; listView();
+};
+$('#barPub').onclick = () => doPublish({ message: 'Admin: izmena redosleda ili brisanje projekata', after: 'Izmene su objavljene.' });
+window.addEventListener('beforeunload', (e) => { if (S.dirty || E) { e.preventDefault(); e.returnValue = ''; } });
+
+/* ---------------- uredjivac ---------------- */
+function editorView(index) {
+  const isNew = index === null;
+  E = isNew
+    ? { slug: '', title: '', year: String(new Date().getFullYear()), services: [], description: '', cover: null, thumb: null, hero: null, gallery: [] }
+    : clone(S.data.projects[index]);
+  E._index = index; E._blobs = new Map(); E._previews = new Map();
+  E._descText = richtextToText(E.description || '');
+  E._descTextOriginal = E._descText;
+  const std = new Set(STANDARD_SERVICES);
+  const custom = (E.services || []).filter((s) => !std.has(s));
+
+  app.innerHTML = `
+  <button class="link" id="back" style="padding-left:0">&larr; Nazad na listu</button>
+  <h1>${isNew ? 'Novi projekat' : esc(E.title)}</h1>
+  <p class="lead">Popuni polja, dodaj slike i klikni Objavi na sajt.</p>
+
+  <div class="row">
+    <div><label for="f_title">Naslov projekta</label><input id="f_title" type="text" value="${esc(E.title)}" placeholder="npr. VILLA DUO DIVCIBARE"></div>
+    <div><label for="f_year">Godina</label><input id="f_year" type="text" value="${esc(E.year)}"></div>
+  </div>
+  <div class="hint" id="slugHint"></div>
+
+  <h2>Usluge na projektu</h2>
+  <div class="svc">${STANDARD_SERVICES.map((s) => `<label><input type="checkbox" data-svc value="${esc(s)}" ${E.services.includes(s) ? 'checked' : ''}> ${esc(s)}</label>`).join('')}</div>
+  <label for="f_custom">Dodatne usluge (jedna u svakom redu)</label>
+  <textarea id="f_custom" style="min-height:70px">${esc(custom.join('\n'))}</textarea>
+
+  <h2>Opis</h2>
+  <textarea id="f_desc" placeholder="Prvi pasus&#10;&#10;Drugi pasus (prazan red razdvaja pasuse)">${esc(E._descText)}</textarea>
+
+  <h2>Slike</h2>
+  <div class="imgs">
+    <div><label>Naslovna slika (obavezna)</label><div class="drop" data-slot="cover"></div><div class="hint">Velika slika u listama projekata.</div></div>
+    <div><label>Glavna slika projekta</label><div class="drop" data-slot="hero"></div><div class="hint">Prva slika na stranici projekta. Ako je prazno, koristi se naslovna.</div></div>
+    <div><label>Mala slika u kartici</label><div class="drop" data-slot="thumb"></div><div class="hint">Mala slika uz naziv. Ako je prazno, koristi se naslovna.</div></div>
+  </div>
+
+  <label style="margin-top:28px">Galerija (prevuci slike za redosled)</label>
+  <div class="drop" id="gdrop" style="min-height:90px"><span>Prevuci slike ovde ili klikni da ih izabereš (možeš više odjednom)</span></div>
+  <div class="grid" id="ggrid"></div>
+
+  <div class="actions"><button id="save">Objavi na sajt</button><button class="ghost" id="cancel">Otkaži</button></div>
+  <div class="err" id="eerr"></div>`;
+
+  const upd = () => {
+    const t = $('#f_title').value.trim();
+    $('#slugHint').textContent = t ? 'Adresa: /work/' + (isNew ? uniqueSlug(t, S.data.projects) : E.slug) + '.html' : '';
+  };
+  $('#f_title').oninput = upd; upd();
+  $('#back').onclick = $('#cancel').onclick = () => { if (confirm('Odbaciti unos?')) listView(); };
+  renderSlots(); renderGallery(); wireDrops();
+  $('#save').onclick = onSave;
+}
+
+function setPreview(file, blob) { const u = URL.createObjectURL(blob); S.previews.set(file, u); return u; }
+
+async function ingest(files, onEach) {
+  const list = [...files].filter((f) => f.type.startsWith('image/') || /\.(jpe?g|png|webp)$/i.test(f.name));
+  if (!list.length) { $('#eerr').textContent = 'Izaberi slike u formatu JPG, PNG ili WEBP.'; return; }
+  $('#eerr').textContent = '';
+  const btn = $('#save'); btn.disabled = true;
+  try {
+    for (let i = 0; i < list.length; i++) {
+      btn.textContent = `Obrađujem sliku ${i + 1} od ${list.length}`;
+      const { entry, blobs } = await processImage(list[i]);
+      for (const b of blobs) E._blobs.set(b.path, b.blob);
+      setPreview(entry.file, blobs[0].blob);
+      onEach(entry);
+    }
+  } catch (e) { $('#eerr').textContent = e.message; }
+  btn.disabled = false; btn.textContent = 'Objavi na sajt';
+}
+
+function renderSlots() {
+  app.querySelectorAll('.drop[data-slot]').forEach((d) => {
+    const k = d.dataset.slot, im = E[k];
+    d.innerHTML = im ? `<img src="${esc(src(im, 800))}" alt=""><button class="x" data-clear="${k}">Ukloni</button>` : '<span>Prevuci sliku ili klikni</span>';
+  });
+  app.querySelectorAll('[data-clear]').forEach((b) => (b.onclick = (ev) => { ev.stopPropagation(); E[b.dataset.clear] = null; renderSlots(); }));
+}
+function renderGallery() {
+  const g = $('#ggrid');
+  g.innerHTML = E.gallery.map((im, i) => `
+    <div class="tile" draggable="true" data-i="${i}"><img src="${esc(src(im, 500))}" alt=""><span class="no">${i + 1}</span>
+    <span class="tb"><button data-l="${i}">&larr;</button><button data-r="${i}">&rarr;</button><button data-x="${i}">&times;</button></span></div>`).join('');
+  g.querySelectorAll('[data-x]').forEach((b) => (b.onclick = () => { E.gallery.splice(+b.dataset.x, 1); renderGallery(); }));
+  g.querySelectorAll('[data-l]').forEach((b) => (b.onclick = () => { const i = +b.dataset.l; if (i > 0) { [E.gallery[i - 1], E.gallery[i]] = [E.gallery[i], E.gallery[i - 1]]; renderGallery(); } }));
+  g.querySelectorAll('[data-r]').forEach((b) => (b.onclick = () => { const i = +b.dataset.r; if (i < E.gallery.length - 1) { [E.gallery[i + 1], E.gallery[i]] = [E.gallery[i], E.gallery[i + 1]]; renderGallery(); } }));
+  let from = null;
+  g.querySelectorAll('.tile').forEach((t) => {
+    t.ondragstart = (e) => { from = +t.dataset.i; t.classList.add('drag'); e.dataTransfer.setData('text/plain', 'tile'); };
+    t.ondragend = () => t.classList.remove('drag');
+    t.ondragover = (e) => { if (from !== null) e.preventDefault(); };
+    t.ondrop = (e) => {
+      if (from === null) return; e.preventDefault(); e.stopPropagation();
+      const to = +t.dataset.i; const [m] = E.gallery.splice(from, 1); E.gallery.splice(to, 0, m); from = null; renderGallery();
+    };
+  });
+}
+function wireDrops() {
+  const pick = (multiple, cb) => {
+    const inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'image/*'; inp.multiple = multiple;
+    inp.onchange = () => cb(inp.files); inp.click();
+  };
+  const hook = (el, multiple, cb) => {
+    el.onclick = () => pick(multiple, cb);
+    el.ondragover = (e) => { if (e.dataTransfer.types.includes('Files')) { e.preventDefault(); el.classList.add('over'); } };
+    el.ondragleave = () => el.classList.remove('over');
+    el.ondrop = (e) => { el.classList.remove('over'); if (e.dataTransfer.files.length) { e.preventDefault(); cb(e.dataTransfer.files); } };
+  };
+  app.querySelectorAll('.drop[data-slot]').forEach((d) => hook(d, false, (files) => ingest([files[0]], (entry) => { E[d.dataset.slot] = entry; renderSlots(); })));
+  hook($('#gdrop'), true, (files) => ingest(files, (entry) => { E.gallery.push(entry); renderGallery(); }));
+}
+
+function onSave() {
+  const title = $('#f_title').value.trim();
+  const year = $('#f_year').value.trim();
+  const err = (m) => { $('#eerr').textContent = m; window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); };
+  if (!title) return err('Upiši naslov projekta.');
+  if (!year) return err('Upiši godinu.');
+  if (!E.cover && !E.hero) return err('Dodaj bar naslovnu sliku.');
+  const std = [...app.querySelectorAll('[data-svc]:checked')].map((c) => c.value);
+  const custom = $('#f_custom').value.split('\n').map((s) => s.trim()).filter(Boolean);
+  const text = $('#f_desc').value;
+  const p = {
+    slug: E._index === null ? uniqueSlug(title, S.data.projects) : E.slug,
+    title, year,
+    services: [...std, ...custom],
+    description: text.trim() === E._descTextOriginal.trim() && E._index !== null ? E.description : textToRichtext(text),
+    cover: E.cover || E.hero,
+    thumb: E.thumb || E.cover || E.hero,
+    hero: E.hero || E.cover,
+    gallery: E.gallery,
+  };
+  const before = clone(S.data);
+  if (E._index === null) S.data.projects.unshift(p); else S.data.projects[E._index] = p;
+  // samo slike koje se i koriste
+  const used = new Set(allImages(p).map((i) => i.file));
+  const pend = new Map(S.pending);
+  for (const [path, blob] of E._blobs) {
+    const name = path.replace(/^images\//, '');
+    if ([...used].some((u) => name === u || name.startsWith(u.slice(0, u.lastIndexOf('.')) + '-p-'))) pend.set(path, blob);
+  }
+  doPublish({
+    message: (E._index === null ? 'Admin: novi projekat ' : 'Admin: izmena projekta ') + title,
+    pending: pend, rollback: () => { S.data = before; },
+    after: E._index === null ? `Projekat "${title}" je objavljen.` : `Projekat "${title}" je sačuvan.`,
+    link: `../work/${p.slug}.html`,
+  });
+}
+
+/* ---------------- objava ---------------- */
+async function doPublish({ message, pending = S.pending, rollback = () => {}, after, link }) {
+  const dlg = $('#dlg'), body = $('#dlgBody');
+  body.innerHTML = '<h2 style="margin-top:0">Objavljujem</h2><div class="step" id="st">Počinjem</div><div class="bar"><i></i></div>';
+  dlg.showModal();
+  try {
+    await publish(S.gh, {
+      data: S.data, pending, removed: S.removed, message,
+      onProgress: (t) => { const el = $('#st'); if (el) el.textContent = t; },
+    });
+    S.base = JSON.stringify(S.data, null, 1) + '\n';
+    S.pending.clear(); S.removed = []; S.dirty = false; E = null;
+    body.innerHTML = `<h2 style="margin-top:0">Gotovo</h2><p>${esc(after)}</p><p class="hint">GitHub Pages obično treba oko minut do dva da sajt osveži. Do tada na sajtu možeš videti staru verziju.</p>
+      <div class="actions" style="margin-top:20px">${link ? `<a class="btn" target="_blank" href="${esc(link)}">Pogledaj stranicu</a>` : ''}<button class="ghost" id="dclose">Zatvori</button></div>`;
+    $('#dclose').onclick = () => { dlg.close(); listView(); };
+  } catch (e) {
+    rollback();
+    body.innerHTML = `<h2 style="margin-top:0">Nije uspelo</h2><p class="err">${esc(e.message)}</p><div class="actions" style="margin-top:20px"><button id="dclose">Zatvori</button></div>`;
+    $('#dclose').onclick = () => dlg.close();
+  }
+}
+
+/* ---------------- start ---------------- */
+loginView();
+</script>
+</body>
+</html>

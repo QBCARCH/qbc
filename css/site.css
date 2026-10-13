@@ -210,13 +210,13 @@ ul, ol { list-style: none; }
 /* 8. o nama ----------------------------------------------------------------- */
 .ahero { padding: clamp(140px, 22vh, 240px) var(--pad) clamp(36px, 6vh, 72px); }
 .ahero__sub { margin-top: clamp(24px, 4vh, 48px); display: flex; justify-content: space-between; gap: 2rem; align-items: flex-end; flex-wrap: wrap; }
-.wide { height: clamp(320px, 74vh, 860px); margin-inline: var(--pad); }
+.wide { height: clamp(220px, 44vh, 480px); margin-inline: var(--pad); }
 .aintro { align-items: start; }
 .aintro__text { grid-column: 4 / span 6; display: grid; gap: 1.6em; }
 .people__label { grid-column: 1 / -1; margin-bottom: clamp(32px, 6vh, 72px); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: baseline; }
-.person:nth-of-type(1) { grid-column: 4 / span 3; }
-.person:nth-of-type(2) { grid-column: 8 / span 3; }
-.person .frame { aspect-ratio: 5 / 7; }
+.person:nth-of-type(1) { grid-column: 4 / span 2; }
+.person:nth-of-type(2) { grid-column: 7 / span 2; }
+.person .frame { aspect-ratio: 4 / 5; }
 .person .frame img { filter: grayscale(1); transition: filter .8s var(--ease); }
 .person:hover .frame img { filter: none; }
 .person h3 { margin-top: 1rem; }
@@ -313,6 +313,6 @@ ul, ol { list-style: none; }
 }
 
 /* dodaci */
-.aintro__img { grid-column: 10 / span 3; aspect-ratio: 3 / 5; }
+.aintro__img { grid-column: 11 / span 2; aspect-ratio: 3 / 4; }
 .hero__credit { display: block; margin-top: .4rem; }
-@media (max-width: 900px) { .aintro__img { grid-column: 1 / -1; margin-top: 2rem; aspect-ratio: 4 / 5; } }
+@media (max-width: 900px) { .aintro__img { grid-column: 1 / span 6; margin-top: 2rem; } .person:nth-of-type(n) { grid-column: 1 / span 8; } .wide { height: clamp(200px, 36vh, 320px); } }

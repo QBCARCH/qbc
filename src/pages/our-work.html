@@ -1,0 +1,24 @@
+{{> head}}
+{{> nav}}
+<main class="page" id="main">
+  <div data-works>
+    <header class="phead">
+      <p class="mono mute" data-reveal>Portfolio / {{COUNT}} projects</p>
+      <div class="phead__row">
+        <h1 class="display" data-split>Featured<br>Architectural<br>Work/</h1>
+        <div class="switch" role="group" aria-label="View">
+          <button type="button" data-view="grid" aria-pressed="true">Grid</button>
+          <button type="button" data-view="index" aria-pressed="false">Index</button>
+        </div>
+      </div>
+      <p class="lead" style="max-width:46ch;margin-top:clamp(24px,5vh,60px)" data-reveal>Explore our portfolio of high-end residential, commercial, and interior design projects. Each space is the result of rigorous spatial planning, careful material selection, and a commitment to structural and aesthetic integrity.</p>
+    </header>
+    <div class="wgrid">{{WORKS_GRID}}</div>
+    <div class="windex">{{WORKS_INDEX}}</div>
+    <div class="peek" aria-hidden="true"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>
+  </div>
+  <section class="sec" style="text-align:center">
+    <a class="biglink" href="contact.html" data-text="● Start a project" data-cursor="Contact"><span>● Start a project</span></a>
+  </section>
+</main>
+{{> footer}}

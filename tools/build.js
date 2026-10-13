@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// Lokalni build: node tools/build.js  (isti kod koristi i admin stranica)
-// Opcije: --out <dir>  upisuje u drugi folder (za proveru), --check  samo prijavi razlike
+// Lokalni build: node tools/build.js [--out dir] [--check]
+// Isti generator (tools/build-core.js) koristi i admin stranica, ali ona gradi samo stranice koje zavise od projekata.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildSite } from './build-core.js';
+import { buildSite, DYNAMIC_SOURCES, STATIC_SOURCES } from './build-core.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -14,11 +14,8 @@ const check = args.includes('--check');
 
 const rd = (p) => fs.readFileSync(path.join(root, p), 'utf8');
 const data = JSON.parse(rd('data/projects.json'));
-const files = buildSite(data, {
-  work: rd('tools/templates/work.html'),
-  index: rd('index.html'),
-  ourWork: rd('our-work.html'),
-});
+const sources = Object.fromEntries([...DYNAMIC_SOURCES, ...STATIC_SOURCES].map((p) => [p, rd(p)]));
+const files = buildSite(data, sources, { all: true });
 
 let changed = 0;
 for (const [rel, content] of Object.entries(files)) {

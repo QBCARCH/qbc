@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="../favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Geist+Mono:wght@400;500&display=swap">
 <style>
+@font-face{font-family:"Geist";src:url("../fonts/Geist.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url("../fonts/GeistMono.ttf") format("truetype");font-weight:100 900;font-display:swap}
 :root{--ink:#0a0a0a;--mute:#767676;--line:#dcdcdc;--bg:#fff;--soft:#f5f5f4;--ok:#1d6b3a;--err:#b3261e}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Geist,system-ui,sans-serif;font-weight:300;font-size:16px;line-height:1.45}
@@ -230,10 +230,11 @@ function editorView(index) {
 
   <h2>Slike</h2>
   <div class="imgs">
-    <div><label>Naslovna slika (obavezna)</label><div class="drop" data-slot="cover"></div><div class="hint">Velika slika u listama projekata.</div></div>
-    <div><label>Glavna slika projekta</label><div class="drop" data-slot="hero"></div><div class="hint">Prva slika na stranici projekta. Ako je prazno, koristi se naslovna.</div></div>
-    <div><label>Mala slika u kartici</label><div class="drop" data-slot="thumb"></div><div class="hint">Mala slika uz naziv. Ako je prazno, koristi se naslovna.</div></div>
+    <div><label>Naslovna slika (obavezna)</label><div class="drop" data-slot="cover"></div><div class="hint">Slika u listama projekata i na početnoj.</div></div>
+    <div><label>Glavna slika projekta</label><div class="drop" data-slot="hero"></div><div class="hint">Fullscreen slika na vrhu stranice projekta. Ako je prazno, koristi se naslovna.</div></div>
   </div>
+
+  <label class="chk" style="margin-top:22px"><input type="checkbox" id="f_home" ${S.data.hero_slug && S.data.hero_slug === E.slug ? 'checked' : ''}> Koristi glavnu sliku ovog projekta kao fullscreen sliku na početnoj stranici sajta</label>
 
   <label style="margin-top:28px">Galerija (prevuci slike za redosled)</label>
   <div class="drop" id="gdrop" style="min-height:90px"><span>Prevuci slike ovde ili klikni da ih izabereš (možeš više odjednom)</span></div>
@@ -328,12 +329,14 @@ function onSave() {
     services: [...std, ...custom],
     description: text.trim() === E._descTextOriginal.trim() && E._index !== null ? E.description : textToRichtext(text),
     cover: E.cover || E.hero,
-    thumb: E.thumb || E.cover || E.hero,
+    thumb: E.cover || E.hero,
     hero: E.hero || E.cover,
     gallery: E.gallery,
   };
   const before = clone(S.data);
   if (E._index === null) S.data.projects.unshift(p); else S.data.projects[E._index] = p;
+  if ($('#f_home').checked) S.data.hero_slug = p.slug;
+  else if (S.data.hero_slug === p.slug) S.data.hero_slug = '';
   // samo slike koje se i koriste
   const used = new Set(allImages(p).map((i) => i.file));
   const pend = new Map(S.pending);

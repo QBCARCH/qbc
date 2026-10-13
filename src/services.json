@@ -1,0 +1,113 @@
+{
+ "intro": "We provide end-to-end architectural and interior design services, ensuring seamless execution from initial concept to final construction. Our methodology guarantees structural integrity, spatial optimization, and precise materialization.",
+ "phases": [
+  {
+   "title": "Conceptual & Schematic Design",
+   "text": "We translate your vision into a viable spatial strategy. This phase involves rigorous site analysis, zoning evaluations, and the development of preliminary architectural concepts. We focus on optimizing spatial planning, massing, and functional relationships to establish a solid foundation for the project's development.",
+   "items": [
+    {
+     "title": "Site Context Analysis",
+     "text": "Evaluating topography, environmental conditions, and zoning regulations to inform the optimal design strategy."
+    },
+    {
+     "title": "Spatial Programming",
+     "text": "Defining functional requirements and establishing highly efficient layouts for all project spaces."
+    },
+    {
+     "title": "Massing and Form Generation",
+     "text": "Developing early 3D models to explore volumetric relationships and establish the architectural identity."
+    }
+   ]
+  },
+  {
+   "title": "Design Development & BIM Modeling",
+   "text": "Transitioning from concept to reality, we refine the architectural design through advanced Building Information Modeling (BIM). We finalize material selections, integrate structural and MEP (Mechanical, Electrical, and Plumbing) systems, and conduct comprehensive clash detection to resolve potential conflicts before they reach the construction site.",
+   "items": [
+    {
+     "title": "Advanced 3D Integration",
+     "text": "Utilizing intelligent Building Information Modeling (BIM) to coordinate architecture, structure, and MEP systems."
+    },
+    {
+     "title": "Material Specification",
+     "text": "Selecting finishes and systems that meet aesthetic goals while satisfying structural and budgetary constraints."
+    },
+    {
+     "title": "Proactive Clash Detection",
+     "text": "Identifying and resolving spatial conflicts between engineering disciplines before construction begins."
+    }
+   ]
+  },
+  {
+   "title": "Construction Documents & Engineering",
+   "text": "We produce highly detailed and technically flawless construction documentation. Our precise drawings, specifications, and schedules serve as the definitive manual for contractors. This rigorous detailing ensures accurate bidding, minimizes construction variations, and guarantees compliance with all relevant building codes and standards.",
+   "items": [
+    {
+     "title": "Detailed Arch. Drawings",
+     "text": "Producing precise floor plans, sections, and elevations required for accurate contractor bidding."
+    },
+    {
+     "title": "Custom Construction Details",
+     "text": "Developing specialized technical drawings for complex structural junctions, thermal envelopes, and waterproofing."
+    },
+    {
+     "title": "Code Compliance",
+     "text": "Preparing all necessary documentation to meet rigorous international building codes and secure necessary permits."
+    }
+   ]
+  },
+  {
+   "title": "Construction Administration & Oversight",
+   "text": "Our involvement continues on the construction site to protect your investment. We act as your technical representatives, conducting regular site inspections, reviewing contractor submittals, and managing change orders. We ensure that the project is executed exactly to our specifications, maintaining quality, budget, and schedule.",
+   "items": [
+    {
+     "title": "On-Site Quality Control",
+     "text": "Conducting systematic site inspections to ensure contractors strictly follow the approved technical documentation."
+    },
+    {
+     "title": "Submittal and RFI Management",
+     "text": "Evaluating contractor shop drawings, material samples, and rapidly resolving technical requests for information."
+    },
+    {
+     "title": "Investment Protection",
+     "text": "Monitoring construction progress and reviewing change orders to prevent delays and protect the client's financial interests."
+    }
+   ]
+  },
+  {
+   "title": "Interior Architecture & Custom Detailing",
+   "text": "We extend our architectural vision into the interior environment. Our services include bespoke millwork design, material curation, and lighting design. We ensure a seamless transition between the exterior envelope and the interior spaces, creating cohesive and highly functional environments.",
+   "items": [
+    {
+     "title": "Bespoke Millwork Design",
+     "text": "Engineering custom cabinetry and built-in elements perfectly tailored to the specific spatial geometry."
+    },
+    {
+     "title": "Lighting and Acoustic Strategies",
+     "text": "Developing integrated lighting plans and specifying acoustic treatments to maximize environmental comfort."
+    },
+    {
+     "title": "Material Curation",
+     "text": "Sourcing high-quality interior finishes, fixtures, and hardware that seamlessly align with the exterior architectural vision."
+    }
+   ]
+  },
+  {
+   "title": "Feasibility Studies & Master Planning",
+   "text": "For large-scale developments, we provide strategic master planning and feasibility analysis. We evaluate site potential, assess regulatory constraints, and develop long-term spatial strategies that maximize land value and guide future phases of development.",
+   "items": [
+    {
+     "title": "Site Potential Evaluation",
+     "text": "Assessing physical constraints and regulatory frameworks to determine the maximum development capacity of a plot."
+    },
+    {
+     "title": "Yield and Density Analysis",
+     "text": "Calculating buildable areas and optimizing spatial distribution to ensure the project is financially viable."
+    },
+    {
+     "title": "Long-Term Phasing Strategies",
+     "text": "Structuring large-scale developments into logical stages to optimize capital investment and manage risk."
+    }
+   ]
+  }
+ ]
+}

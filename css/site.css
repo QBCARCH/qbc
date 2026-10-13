@@ -270,8 +270,6 @@ ul, ol { list-style: none; }
 /* 12. responsive i reduced motion -------------------------------------------- */
 @media (max-width: 900px) {
   body { font-size: 1rem; }
-  .nav { grid-template-columns: 1fr auto; }
-  .nav__links { display: none; }
   .menu { grid-template-columns: 1fr; }
   .menu__side { display: none; }
   .hero__title, .hero__side { grid-column: 1 / -1; }
@@ -307,6 +305,8 @@ ul, ol { list-style: none; }
   .windex__row { grid-template-columns: 2.4rem 1fr; }
   .windex__svc, .windex__year { display: none; }
 }
+@media (max-width: 640px) { .nav { grid-template-columns: 1fr auto; } .nav__links { display: none; } }
+@media (max-width: 900px) { .nav__links { gap: 1rem; } .nav__name { letter-spacing: .18em; } }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
   .js [data-reveal] { opacity: 1; transform: none; }

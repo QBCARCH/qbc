@@ -4,6 +4,167 @@
  "last_work_count": 3,
  "projects": [
   {
+   "slug": "trnava-25-51-1",
+   "title": "TRNAVA 25 51 1",
+   "year": "2026",
+   "services": [
+    "1. Conceptual & Schematic Design",
+    "2. Design Development & BIM Modeling",
+    "3. Construction Documents & Engineering",
+    "4. Construction Administration & Oversight",
+    "5. Interior Architecture & Custom Detailing"
+   ],
+   "description": "<p>Designed by QBC Architects, this event center and restaurant in Trnava, near Topola, balances contemporary hospitality architecture with the authentic character of the Šumadija landscape.</p><p>The concept is built on clean structural lines and an open spatial flow, free of unnecessary partitions. Large glazed surfaces dissolve the boundary between interior and surroundings, so nature becomes part of every occasion, from weddings and celebrations to business gatherings and family events.</p><p>The result is an elegant venue that relies on simplicity, light and a connection to place rather than on decoration.</p>",
+   "cover": {
+    "file": "1a137178ecc3c2c3c_Trnava-5.jpg",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1366,
+    "h": 768
+   },
+   "thumb": {
+    "file": "1a137178ecc3c2c3c_Trnava-5.jpg",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1366,
+    "h": 768
+   },
+   "hero": {
+    "file": "1a13717bb1e9d76f8_Trnava-4.jpg",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1366,
+    "h": 768
+   },
+   "gallery": [
+    {
+     "file": "1a13717eab7f3df89_Trnava-1.jpg",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768
+    },
+    {
+     "file": "1a13717f09ea7296c_Trnava-2.jpg",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768
+    },
+    {
+     "file": "1a13717f6640d0ef4_Trnava-3.jpg",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768
+    },
+    {
+     "file": "1a13717f690306a34_Trnava-4.jpg",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768
+    },
+    {
+     "file": "1a13717f6a78cb17a_Trnava-5.jpg",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768
+    },
+    {
+     "file": "1a13717f6ba246bc0_Trnava-6.jpg",
+     "widths": [
+      500
+     ],
+     "w": 686,
+     "h": 382
+    },
+    {
+     "file": "1a13717fbdbf0b304_Trnava-8.jpg",
+     "widths": [
+      500
+     ],
+     "w": 686,
+     "h": 382
+    },
+    {
+     "file": "1a137180158b9e6f3_Trnava-9.jpg",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 960,
+     "h": 1095
+    },
+    {
+     "file": "1a1371806dd243eed_Trnava-10.jpg",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1368,
+     "h": 768
+    },
+    {
+     "file": "1a137180c47b32c71_Trnava-11.jpg",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1368,
+     "h": 768
+    },
+    {
+     "file": "1a137180c5f35af69_Trnava-12.jpg",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1368,
+     "h": 768
+    },
+    {
+     "file": "1a13718134fc1c458_Trnava-14.jpg",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1368,
+     "h": 768
+    }
+   ],
+   "added": "2026-10-13"
+  },
+  {
    "slug": "villa-dve-koracica-kosmaj",
    "title": "VILLA DVE KORACICA / KOSMAJ",
    "services": [

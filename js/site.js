@@ -169,6 +169,17 @@
       safe(() => sessionStorage.setItem('qbc-view', v));
     };
     btns.forEach((b) => b.addEventListener('click', () => set(b.dataset.view)));
+    const input = $('[data-search]', host), empty = $('[data-empty]', host);
+    if (input) input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      let n = 0;
+      $$('[data-q]', host).forEach((el) => {
+        const ok = q.every((t) => el.dataset.q.includes(t));
+        el.classList.toggle('is-filtered', !ok);
+        if (ok && el.classList.contains('wcard')) n++;
+      });
+      if (empty) empty.hidden = n > 0;
+    });
     const saved = safe(() => sessionStorage.getItem('qbc-view'));
     if (saved === 'index') set('index');
   };

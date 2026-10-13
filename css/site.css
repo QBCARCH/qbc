@@ -316,3 +316,13 @@ ul, ol { list-style: none; }
 .aintro__img { grid-column: 11 / span 2; aspect-ratio: 3 / 4; }
 .hero__credit { display: block; margin-top: .4rem; }
 @media (max-width: 900px) { .aintro__img { grid-column: 1 / span 6; margin-top: 2rem; } .person:nth-of-type(n) { grid-column: 1 / span 8; } .wide { height: clamp(200px, 36vh, 320px); } }
+
+.tools { display: flex; align-items: flex-end; gap: clamp(1rem, 3vw, 2.4rem); flex-wrap: wrap; }
+.search { display: grid; gap: .2rem; }
+.search input { font: 300 1rem var(--sans); color: var(--fg); background: none; border: 0; border-bottom: 1px solid var(--line); padding: .3rem 0; width: 14rem; border-radius: 0; outline: none; transition: border-color .3s; }
+.search input:focus { border-color: var(--fg); }
+.search input::placeholder { color: var(--mute); }
+.wcard__no { margin-top: .5rem; }
+.empty { padding-bottom: 2rem; }
+.is-filtered { display: none !important; }
+@media (max-width: 900px) { .switch { display: none; } .search input { width: 100%; } .tools { width: 100%; } }

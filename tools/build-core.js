@@ -129,10 +129,11 @@ function pool(projects, def, promoDays) {
 }
 
 function worksGrid(projects) {
-  return projects.map((p) =>
-    `<a class="wcard" href="work/${p.slug}.html">` +
+  return projects.map((p, i) =>
+    `<a class="wcard" href="work/${p.slug}.html" data-q="${esc([p.title, p.year, ...(p.services || [])].join(' ').toLowerCase())}">` +
     `<div class="frame" data-ip>${img(cover(p), { root: '', sizes: '(max-width: 900px) 100vw, 50vw', alt: p.title, want: 1600 })}</div>` +
     `<div class="wcard__meta"><h2 class="wcard__title">${esc(p.title)}</h2><span class="label">${esc(p.year)}</span></div>` +
+    `<p class="label mute wcard__no">${num(i)} / ${String(projects.length).padStart(2, '0')}</p>` +
     `<p class="wcard__svc">${esc((p.services || []).map(stripNum).slice(0, 2).join('  /  '))}</p></a>`).join('');
 }
 
@@ -140,7 +141,7 @@ function worksIndex(projects) {
   return projects.map((p, i) => {
     const first = stripNum((p.services || [])[0] || '');
     const more = (p.services || []).length > 1 ? ` +${p.services.length - 1}` : '';
-    return `<a class="windex__row" href="work/${p.slug}.html">` +
+    return `<a class="windex__row" href="work/${p.slug}.html" data-q="${esc([p.title, p.year, ...(p.services || [])].join(' ').toLowerCase())}">` +
       `<span class="label">${num(i)}</span><span class="windex__title">${esc(p.title)}</span>` +
       `<span class="windex__svc label mute">${esc(first)}${more}</span><span class="windex__year label">${esc(p.year)}</span></a>`;
   }).join('');

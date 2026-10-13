@@ -6,13 +6,17 @@
       <p class="label mute" data-reveal>Portfolio / {{COUNT}} projects</p>
       <div class="phead__row">
         <h1 class="display" data-reveal>Selected work</h1>
-        <div class="switch" role="group" aria-label="View">
+        <div class="tools">
+          <label class="search"><span class="label mute">Search</span><input type="search" data-search placeholder="Villa, 2024, BIM..." autocomplete="off" aria-label="Search projects"></label>
+          <div class="switch" role="group" aria-label="View">
           <button type="button" data-view="grid" aria-pressed="true">Grid</button>
           <button type="button" data-view="index" aria-pressed="false">Index</button>
+          </div>
         </div>
       </div>
       <p class="lead" data-reveal>Explore our portfolio of high-end residential, commercial, and interior design projects. Each space is the result of rigorous spatial planning, careful material selection, and a commitment to structural and aesthetic integrity.</p>
     </header>
+    <p class="label mute wrap empty" data-empty hidden>No projects match your search.</p>
     <div class="wgrid">{{WORKS_GRID}}</div>
     <div class="windex">{{WORKS_INDEX}}</div>
   </div>

@@ -15,10 +15,13 @@ Token je lozinka za admin. Ko nema token, ne može ništa da promeni na sajtu.
 1. Klikni **Novi projekat**.
 2. Upiši naslov i godinu, štikliraj usluge, upiši opis (prazan red razdvaja pasuse).
 3. Dodaj naslovnu sliku (obavezna), po želji glavnu sliku (fullscreen na vrhu stranice projekta) i galeriju (više slika odjednom, prevlačenjem menjaš redosled).
-4. Ako želiš da ta slika bude fullscreen slika na početnoj stranici sajta, štikliraj odgovarajuću kvačicu.
-5. Klikni **Objavi na sajt**. Za oko minut do dva sajt je ažuran.
+4. Klikni **Objavi na sajt**. Za oko minut do dva sajt je ažuran.
 
 Slike se automatski smanjuju u više veličina (500 do 3200 px), tako da sajt ostaje brz.
+
+## Slike na početnoj
+
+Velika slika na vrhu i široka slika ispod teksta biraju se nasumično iz svih horizontalnih slika projekata. Prvih 21 dan posle objave, novi projekat ima prednost: njegove slike se najčešće pojavljuju. Posle toga svi projekti imaju jednaku šansu (a podrazumevana slika Villa Dve Koračice se češće vidi).
 
 ## Redosled i brisanje
 
@@ -26,7 +29,7 @@ Na listi projekata dugmad **Gore / Dole** menjaju redosled na sajtu (prva 4 su n
 
 ## Kako ovo radi
 
-- Svi projekti su u `data/projects.json` (polje `hero_slug` je projekat čija je slika na početnoj).
+- Svi projekti su u `data/projects.json` (`hero_slug` je podrazumevana slika na početnoj, `promo_days` koliko dana novi projekat ima prednost).
 - `tools/build-core.js` iz projekata i šablona pravi `index.html`, `our-work.html` i `work/<projekat>.html`. Isti kod radi u admin stranici i lokalno (`node tools/build.js`, koji gradi i ostale stranice).
 - Šabloni su u `src/`: delovi koji se ponavljaju (zaglavlje, meni, podnožje) u `src/partials/`, stranice u `src/pages/`, usluge u `src/services.json`. Tekstove o nama, uslugama, kontaktu i privatnosti menjaš u `src/pages/`, pa pokreneš `node tools/build.js`.
 - Izgled je u `css/site.css`, ponašanje i animacije (parallax, otkrivanje, kursor, tranzicije, lightbox) u `js/site.js`. Nema spoljnih biblioteka.

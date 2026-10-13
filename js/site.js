@@ -17,7 +17,7 @@
   };
 
   /* ---------- stanje i petlja ---------------------------------------------------------- */
-  const S = { cur: scrollY, y: scrollY, v: 0, vh: innerHeight, vw: innerWidth, mx: 0.5, my: 0.5, sx: 0.5, sy: 0.5, docH: 0 };
+  const S = { cur: scrollY, y: scrollY, v: 0, vh: innerHeight, vw: innerWidth, mx: 0.5, my: 0.5, sx: 0.5, sy: 0.5, moved: false, docH: 0 };
   const tasks = [];      // funkcije koje se pozivaju svaki frejm
   const relayouts = [];  // funkcije koje ponovo mere raspored
   const amp = () => (S.vw < 900 ? 0.55 : 1);
@@ -277,7 +277,7 @@
     const label = $('.cursor__label', c), xy = $('.cursor__xy', c);
     let x = -100, y = -100, tx = x, ty = y;
     D.addEventListener('pointermove', (e) => {
-      tx = e.clientX; ty = e.clientY; S.mx = tx / S.vw; S.my = ty / S.vh;
+      tx = e.clientX; ty = e.clientY; S.mx = tx / S.vw; S.my = ty / S.vh; S.moved = true;
       xy.textContent = `X ${String(Math.round(tx)).padStart(4, '0')}  Y ${String(Math.round(ty + S.y)).padStart(5, '0')}`;
     }, { passive: true });
     D.addEventListener('pointerover', (e) => {
@@ -459,13 +459,131 @@
     });
   };
 
+  /* ---------- pocetna: nasumicne slike, novi projekat ima prednost -------------------------------- */
+  const enc = (f) => encodeURIComponent(f);
+  const initPicks = () => {
+    const holder = $('#qbc-pool');
+    if (!holder) return;
+    let pool;
+    try { pool = JSON.parse(holder.textContent); } catch { return; }
+    const all = [];
+    pool.p.forEach((p) => p.i.forEach((i) => all.push({ p, i })));
+    if (!all.length) return;
+    const rnd = (a) => a[Math.floor(Math.random() * a.length)];
+    // promo: projekat dodat u poslednjih `d` dana (najnoviji) ima prednost dok traje
+    const now = Date.now();
+    const fresh = pool.p.filter((p) => p.a && Date.parse(p.a) <= now + 864e5 && (now - Date.parse(p.a)) / 864e5 <= pool.d)
+      .sort((a, b) => Date.parse(b.a) - Date.parse(a.a))[0];
+    const prim = all.find((x) => x.p.s === pool.h[0] && x.i[0] === pool.h[1]);
+    const fromFresh = () => ({ p: fresh, i: rnd(fresh.i) });
+    const hero = fresh && Math.random() < 0.7 ? fromFresh() : (prim && Math.random() < 0.35 ? prim : rnd(all));
+    let big = hero;
+    for (let k = 0; k < 30 && big.i[0] === hero.i[0]; k++) big = fresh && Math.random() < 0.85 ? fromFresh() : rnd(all);
+
+    const apply = (img, pick) => {
+      const [file, w, h, widths] = pick.i;
+      const dot = file.lastIndexOf('.'), base = file.slice(0, dot), ext = file.slice(dot + 1);
+      const parts = widths.map((x) => `images/${enc(`${base}-p-${x}.${ext}`)} ${x}w`);
+      parts.push(`images/${enc(file)} ${w}w`);
+      img.alt = pick.p.t; img.width = w; img.height = h;
+      img.sizes = img.dataset.sizes || '100vw';
+      img.srcset = parts.join(', ');
+      const mid = widths.find((x) => x >= 2000) || widths[widths.length - 1];
+      img.src = mid ? `images/${enc(`${base}-p-${mid}.${ext}`)}` : `images/${enc(file)}`;
+    };
+    const heroImg = $('img[data-pick="hero"]'), bigImg = $('img[data-pick="big"]');
+    heroImg && apply(heroImg, hero);
+    bigImg && apply(bigImg, big);
+    const credit = $('[data-credit]');
+    if (credit) { credit.href = `work/${hero.p.s}.html`; credit.textContent = `${hero.p.t} / ${hero.p.y} ↗`; }
+    const link = $('[data-big-link]');
+    if (link) { link.href = `work/${big.p.s}.html`; $('[data-big-title]', link).textContent = big.p.t; }
+    const yr = $('[data-big-year]');
+    if (yr) yr.textContent = `${big.p.y} /`;
+  };
+
+  /* siroka slika koja se otvara od malog pravougaonika do celog ekrana */
+  const initExpand = () => {
+    const sec = $('.expand');
+    if (!sec || reduce) return;
+    let top = 0, h = 0;
+    relayouts.push(() => { const m = measure(sec); top = m.top; h = m.h; });
+    let last = -1;
+    tasks.push(() => {
+      const p = clamp((S.cur - (top - S.vh * 0.15)) / (h - S.vh * 0.85));
+      const e = 1 - Math.pow(1 - clamp(p * 1.15), 3);
+      if (Math.abs(e - last) < 0.0005) return;
+      last = e;
+      sec.style.setProperty('--e', e.toFixed(4));
+    });
+  };
+
+  /* slova menjaju debljinu (promenljivi font) prema blizini kursora */
+  const initWeight = () => {
+    const host = $('[data-vf]');
+    if (!host || reduce || !fine) return;
+    const chars = $$('.ch', host).map((el) => ({ el, x: 0, y: 0, w: 300 }));
+    const lay = () => chars.forEach((c) => { const r = c.el.getBoundingClientRect(); c.x = r.left + r.width / 2; c.y = r.top + scrollY + r.height / 2; });
+    relayouts.push(lay);
+    D.fonts && D.fonts.ready && D.fonts.ready.then(() => setTimeout(lay, 1800));
+    tasks.push(() => {
+      if (S.cur > S.vh || !S.moved) return;
+      const mx = S.sx * S.vw, my = S.sy * S.vh + S.cur;
+      for (const c of chars) {
+        const d = Math.hypot(c.x - mx, c.y - my);
+        const target = 300 + 420 * Math.exp(-Math.pow(d / (S.vw * 0.11), 2));
+        c.w = lerp(c.w, target, 0.2);
+        c.el.style.setProperty('--wg', c.w.toFixed(0));
+      }
+    });
+  };
+
+  /* trag slika projekata za kursorom na stranici radova */
+  const initTrail = () => {
+    const zone = $('[data-trail]');
+    if (!zone || !fine || reduce) return;
+    const srcs = $$('.wcard img').map((i) => i.currentSrc || i.src).filter(Boolean);
+    if (!srcs.length) return;
+    let n = 0, lx = -999, ly = -999, live = 0;
+    zone.addEventListener('pointermove', (e) => {
+      if (Math.hypot(e.clientX - lx, e.clientY - ly) < 120 || live > 12) return;
+      lx = e.clientX; ly = e.clientY;
+      const im = D.createElement('img');
+      im.className = 'trail__img'; im.alt = ''; im.src = srcs[n++ % srcs.length];
+      const rot = (Math.random() - 0.5) * 16;
+      im.style.transform = `translate3d(${e.clientX - 90}px, ${e.clientY - 110}px, 0) rotate(${rot}deg)`;
+      live++;
+      im.addEventListener('animationend', () => { im.remove(); live--; });
+      D.body.appendChild(im);
+    }, { passive: true });
+  };
+
+  /* kartice radova se blago naginju prema kursoru */
+  const initTilt = () => {
+    if (!fine || reduce) return;
+    $$('.wcard').forEach((card) => {
+      const f = $('.frame', card);
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        f.style.transform = `perspective(1000px) rotateY(${(x * 9).toFixed(2)}deg) rotateX(${(-y * 9).toFixed(2)}deg) scale(1.015)`;
+      });
+      card.addEventListener('pointerleave', () => { f.style.transform = ''; });
+    });
+  };
+
   /* ---------- pokretanje --------------------------------------------------------------------------------- */
   const boot = () => {
+    initPicks();
     initIntro();
     initReveal();
     initParallax();
     initHero();
     initStack();
+    initExpand();
+    initWeight();
+    initTrail();
+    initTilt();
     initScrub();
     initMarquee();
     initFooter();

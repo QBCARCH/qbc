@@ -101,22 +101,31 @@ function img(im, { root, sizes = '100vw', alt = '', eager = false, want = 1600 }
 const cover = (p) => p.cover || p.hero;
 const li = (list, cls = '') => (list || []).map((t) => `<li${cls ? ` class="${cls}"` : ''}>${esc(t)}</li>`).join('');
 
-function heroImg(p, root) {
-  return img(p.hero, { root, sizes: '100vw', alt: `${p.title}, QBC Architects`, eager: true, want: 2000 });
+// Slike na pocetnoj biraju se nasumicno u pregledacu (js/site.js, initPicks), a ovde se samo pravi izbor.
+// Bez JS-a ostaje podrazumevana slika u <noscript>.
+function pickImg(im, p, role, sizes) {
+  const dims = im.w && im.h ? ` width="${im.w}" height="${im.h}"` : '';
+  const prio = role === 'hero' ? ' fetchpriority="high"' : ' loading="lazy"';
+  return `<img data-pick="${role}" data-sizes="${sizes}" alt="${esc(p.title)}"${dims}${prio}>` +
+    `<noscript>${img(im, { root: '', sizes, alt: p.title, want: 2000 })}</noscript>`;
 }
 function heroCredit(p) {
-  return `<a class="hero__credit mono" href="work/${p.slug}.html" data-cursor="View">${esc(p.title)} / ${esc(p.year)} ↗</a>`;
+  return `<a class="hero__credit mono" data-credit href="work/${p.slug}.html" data-cursor="View">${esc(p.title)} / ${esc(p.year)} ↗</a>`;
 }
 
-function floats(projects) {
-  const pick = [1, 2, 3].map((k) => projects[k % projects.length]).filter(Boolean);
-  const cls = ['a', 'b', 'c'], speed = ['0.16', '-0.1', '0.3'];
-  return pick.map((p, i) => {
-    const im = (p.gallery && p.gallery[0]) || cover(p);
-    return `<figure class="float float--${cls[i]}" data-parallax="${speed[i]}"><div class="frame marks" data-ip>` +
-      img(im, { root: '', sizes: '(max-width: 900px) 40vw, 24vw', alt: p.title, want: 1080 }) +
-      `</div><figcaption class="mono mute">${esc(p.title)}</figcaption></figure>`;
-  }).join('');
+// Izbor slika za pocetnu: sve horizontalne slike, uz datum dodavanja projekta (za promo novog projekta).
+function pool(projects, def, promoDays) {
+  const p = projects.map((pr) => {
+    const seen = new Set(), list = [];
+    for (const im of [pr.hero, pr.cover, ...(pr.gallery || [])]) {
+      if (!im || !im.file || seen.has(im.file)) continue;
+      seen.add(im.file);
+      if (im.w >= 1300 && im.h && im.w / im.h >= 1.35) list.push([im.file, im.w, im.h, (im.widths || []).filter((w) => w < im.w)]);
+    }
+    return { s: pr.slug, t: pr.title, y: pr.year, a: pr.added || '', i: list };
+  }).filter((x) => x.i.length);
+  const json = JSON.stringify({ d: promoDays, h: [def.slug, def.hero.file], p }).replace(/</g, '\\u003c');
+  return `<script type="application/json" id="qbc-pool">${json}</script>`;
 }
 
 function homeStack(projects, n) {
@@ -236,8 +245,9 @@ export function buildSite(data, sources, { all = false } = {}) {
     ...base, key: 'home', PATH: '',
     TITLE: 'QBC Architects | Architecture & Interior Design Studio',
     DESC: 'QBC Architects specializes in high-end residential and commercial architecture. We deliver functional, aesthetically superior, and constructible spaces across Belgrade, Vienna, and New York.',
-    HERO_IMG: heroImg(heroProject, ''), HERO_CREDIT: heroCredit(heroProject),
-    FLOATS: floats(projects), HOME_STACK: homeStack(projects, data.home_count ?? 4),
+    HERO_IMG: pickImg(heroProject.hero, heroProject, 'hero', '100vw'), HERO_CREDIT: heroCredit(heroProject),
+    BIG_IMG: pickImg((projects[1] || heroProject).hero, projects[1] || heroProject, 'big', '100vw'),
+    POOL: pool(projects, heroProject, data.promo_days ?? 21), HOME_STACK: homeStack(projects, data.home_count ?? 4),
   });
   out['our-work.html'] = render('our-work', sources, {
     ...base, key: 'works', PATH: 'our-work.html',

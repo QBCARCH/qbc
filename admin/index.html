@@ -230,11 +230,9 @@ function editorView(index) {
 
   <h2>Slike</h2>
   <div class="imgs">
-    <div><label>Naslovna slika (obavezna)</label><div class="drop" data-slot="cover"></div><div class="hint">Slika u listama projekata i na početnoj.</div></div>
+    <div><label>Naslovna slika (obavezna)</label><div class="drop" data-slot="cover"></div><div class="hint">Slika u listama projekata. Novi projekat se oko 3 nedelje češće pojavljuje na početnoj stranici.</div></div>
     <div><label>Glavna slika projekta</label><div class="drop" data-slot="hero"></div><div class="hint">Fullscreen slika na vrhu stranice projekta. Ako je prazno, koristi se naslovna.</div></div>
   </div>
-
-  <label class="chk" style="margin-top:22px"><input type="checkbox" id="f_home" ${S.data.hero_slug && S.data.hero_slug === E.slug ? 'checked' : ''}> Koristi glavnu sliku ovog projekta kao fullscreen sliku na početnoj stranici sajta</label>
 
   <label style="margin-top:28px">Galerija (prevuci slike za redosled)</label>
   <div class="drop" id="gdrop" style="min-height:90px"><span>Prevuci slike ovde ili klikni da ih izabereš (možeš više odjednom)</span></div>
@@ -333,10 +331,9 @@ function onSave() {
     hero: E.hero || E.cover,
     gallery: E.gallery,
   };
+  if (E._index === null) p.added = new Date().toISOString().slice(0, 10); else if (E.added) p.added = E.added;
   const before = clone(S.data);
   if (E._index === null) S.data.projects.unshift(p); else S.data.projects[E._index] = p;
-  if ($('#f_home').checked) S.data.hero_slug = p.slug;
-  else if (S.data.hero_slug === p.slug) S.data.hero_slug = '';
   // samo slike koje se i koriste
   const used = new Set(allImages(p).map((i) => i.file));
   const pend = new Map(S.pending);

@@ -10,7 +10,7 @@
   <section class="hero">
     <div class="hero__media">{{HERO_IMG}}</div>
     <div class="hero__content">
-      <h1 class="hero__title display" data-split>
+      <h1 class="hero__title display" data-split data-vf>
         <span class="ln">Architecture</span>
         <span class="ln">&amp; Interior</span>
         <span class="ln">Design Studio/</span>
@@ -35,7 +35,6 @@
   </section>
 
   <section class="statement sec" id="studio">
-    {{FLOATS}}
     <div class="wrap grid">
       <p class="statement__text h2 scrub">Designing spaces that balance structural logic with modern architectural principles. We create aesthetically superior, highly functional, and meticulously detailed environments for living and working.</p>
       <div class="statement__meta">
@@ -44,6 +43,14 @@
         <p class="body" data-reveal>Operating from Belgrade, Serbia, QBC Architects is a professional design studio led by principal architect Slavoljub Ljubic. We specialize in residential and commercial architecture, prioritizing structural integrity, spatial functionality, and precise detailing. We provide investors with technical certainty through advanced BIM modeling in Autodesk Revit, strict compliance with local zoning regulations, and highly efficient project management.</p>
         <a class="btn" href="about.html" data-reveal><span>● About the studio</span><span class="btn__arrow" aria-hidden="true">↠</span></a>
       </div>
+    </div>
+  </section>
+
+  <section class="expand" aria-label="Featured image">
+    <div class="expand__stage">
+      <figure class="expand__frame">{{BIG_IMG}}</figure>
+      <p class="expand__title h1" aria-hidden="true">Spaces/<br>that last</p>
+      <p class="expand__cap mono"><span data-big-year></span><a data-big-link href="our-work.html" data-cursor="View"><span data-big-title>View project</span><span class="btn__arrow" aria-hidden="true">↠</span></a></p>
     </div>
   </section>
 
@@ -77,4 +84,5 @@
   </section>
 
 </main>
+{{POOL}}
 {{> footer}}

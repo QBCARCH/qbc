@@ -6,37 +6,56 @@
   const $ = (s, c = D) => c.querySelector(s);
   const $$ = (s, c = D) => [...c.querySelectorAll(s)];
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
-  const enc = (f) => encodeURIComponent(f).replace(/%2F/g, '/');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const safe = (fn) => { try { return fn(); } catch { return null; } };
 
-  /* nasumicna slika na pocetnoj (novi projekat ima prednost dok traje promo) */
+  /* potpis naslovne slike: izbor je napravila mala skripta odmah posle slike */
   const initPicks = () => {
-    const holder = $('#qbc-pool');
-    const img = $('img[data-pick="hero"]');
-    if (!holder || !img) return;
-    let pool;
-    try { pool = JSON.parse(holder.textContent); } catch { return; }
-    const all = [];
-    pool.p.forEach((p) => p.i.forEach((i) => all.push({ p, i })));
-    if (!all.length) return;
-    const rnd = (a) => a[Math.floor(Math.random() * a.length)];
-    const now = Date.now();
-    const fresh = pool.p.filter((p) => p.a && Date.parse(p.a) <= now + 864e5 && (now - Date.parse(p.a)) / 864e5 <= pool.d)
-      .sort((a, b) => Date.parse(b.a) - Date.parse(a.a))[0];
-    const prim = all.find((x) => x.p.s === pool.h[0] && x.i[0] === pool.h[1]);
-    const pick = fresh && Math.random() < 0.7 ? { p: fresh, i: rnd(fresh.i) } : (prim && Math.random() < 0.35 ? prim : rnd(all));
-    const [file, w, h, widths] = pick.i;
-    const dot = file.lastIndexOf('.'), base = file.slice(0, dot), ext = file.slice(dot + 1);
-    const parts = widths.map((x) => `images/${enc(`${base}-p-${x}.${ext}`)} ${x}w`);
-    parts.push(`images/${enc(file)} ${w}w`);
-    img.alt = pick.p.t; img.width = w; img.height = h;
-    img.sizes = img.dataset.sizes || '100vw';
-    img.srcset = parts.join(', ');
-    const mid = widths.find((x) => x >= 2000) || widths[widths.length - 1];
-    img.src = mid ? `images/${enc(`${base}-p-${mid}.${ext}`)}` : `images/${enc(file)}`;
-    const credit = $('[data-credit]');
-    if (credit) { credit.href = `work/${pick.p.s}.html`; credit.textContent = `${pick.p.t} / ${pick.p.y} ↗`; }
+    const img = $('img[data-pick="hero"]'), credit = $('[data-credit]');
+    if (!img || !credit || !img.dataset.s) return;
+    credit.href = `work/${img.dataset.s}.html`;
+    credit.textContent = `${img.dataset.t} / ${img.dataset.y} ↗`;
+  };
+
+  /* naslov: slova se jednom slegnu pri ucitavanju (CSS), a na racunaru blago podebljaju uz kursor */
+  const initWeight = () => {
+    const h = $('[data-vf]');
+    if (!h) return;
+    $$('.ln', h).forEach((ln) => {
+      const frag = D.createDocumentFragment();
+      [...ln.childNodes].forEach((n) => {
+        if (n.nodeType !== 3) { frag.appendChild(n); return; }
+        [...n.textContent].forEach((c) => {
+          if (c === ' ') { frag.appendChild(D.createTextNode(' ')); return; }
+          const s = D.createElement('span'); s.className = 'ch'; s.textContent = c; frag.appendChild(s);
+        });
+      });
+      ln.textContent = ''; ln.appendChild(frag);
+    });
+    if (reduce || !matchMedia('(pointer: fine)').matches) return;
+    const chars = $$('.ch', h).map((el) => ({ el, x: 0, y: 0, v: 0, t: 0 }));
+    const host = h.closest('section') || h;
+    const measure = () => chars.forEach((c) => { const r = c.el.getBoundingClientRect(); c.x = r.left + r.width / 2; c.y = r.top + scrollY + r.height / 2; });
+    let mx = -9999, my = -9999, raf = 0;
+    const R = 260, MAX = 140;
+    const step = () => {
+      raf = 0;
+      let moving = false;
+      chars.forEach((c) => {
+        const d = Math.hypot(c.x - mx, c.y - (my + scrollY));
+        c.t = MAX * Math.max(0, 1 - d / R) ** 2;
+        c.v += (c.t - c.v) * 0.12;
+        if (Math.abs(c.t - c.v) > 0.5) moving = true;
+        c.el.style.setProperty('--dw', c.v.toFixed(0));
+      });
+      if (moving) raf = requestAnimationFrame(step);
+    };
+    const kick = () => { if (!raf) raf = requestAnimationFrame(step); };
+    host.addEventListener('pointermove', (e) => { mx = e.clientX; my = e.clientY; kick(); });
+    host.addEventListener('pointerleave', () => { mx = my = -9999; kick(); });
+    addEventListener('resize', measure);
+    h.addEventListener('animationend', measure);
+    measure();
   };
 
   /* tiho pojavljivanje */
@@ -130,7 +149,16 @@
     };
     open && open.addEventListener('click', () => set(true));
     close && close.addEventListener('click', () => set(false));
-    D.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menu.classList.contains('is-open')) set(false); });
+    D.addEventListener('keydown', (e) => {
+      if (!menu.classList.contains('is-open')) return;
+      if (e.key === 'Escape') { set(false); return; }
+      if (e.key !== 'Tab') return;
+      const f = $$('a[href], button', menu).filter((el) => el.offsetParent !== null);
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && D.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && D.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
   };
 
   /* mekan prelaz izmedju stranica */
@@ -218,7 +246,7 @@
   };
 
   const boot = () => {
-    initPicks(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox();
+    initPicks(); initWeight(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

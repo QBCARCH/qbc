@@ -13,15 +13,17 @@ Token je lozinka za admin. Ko nema token, ne može ništa da promeni na sajtu.
 ## Novi projekat
 
 1. Klikni **Novi projekat**.
-2. Upiši naslov i godinu, štikliraj usluge, upiši opis (prazan red razdvaja pasuse).
+2. Upiši naslov i godinu (format naslova: "Villa Duo, Divcibare", naziv pa lokacija posle zareza). Po želji upiši lokaciju, površinu, status i autora slika ili rendera; prazna polja se ne prikazuju. Štikliraj usluge i upiši opis (prazan red razdvaja pasuse).
 3. Dodaj naslovnu sliku (obavezna), po želji glavnu sliku (fullscreen na vrhu stranice projekta) i galeriju (više slika odjednom, prevlačenjem menjaš redosled).
 4. Klikni **Objavi na sajt**. Za oko minut do dva sajt je ažuran.
 
-Slike se automatski smanjuju u više veličina (500 do 3200 px), tako da sajt ostaje brz.
+Slike se automatski pretvaraju u WebP i smanjuju u više veličina (500 do 3200 px), tako da sajt ostaje brz. Za deljenje na mrežama (LinkedIn, Facebook, WhatsApp) pravi se i jedna JPEG kopija.
+
+Ako je slika uža od 2400 px, admin te upozori: preko celog ekrana takva slika deluje mekano. Ako istu sliku dodaš dvaput, admin je preskoči.
 
 ## Slike na početnoj
 
-Velika slika na vrhu i široka slika ispod teksta biraju se nasumično iz svih horizontalnih slika projekata. Prvih 21 dan posle objave, novi projekat ima prednost: njegove slike se najčešće pojavljuju. Posle toga svi projekti imaju jednaku šansu (a podrazumevana slika Villa Dve Koračice se češće vidi).
+Velika slika na vrhu bira se nasumično iz svih horizontalnih slika projekata. Prvih 21 dan posle objave, novi projekat ima prednost: njegove slike se najčešće pojavljuju. Posle toga svi projekti imaju jednaku šansu (a podrazumevana slika Villa Dve Koračice se češće vidi).
 
 ## Redosled i brisanje
 

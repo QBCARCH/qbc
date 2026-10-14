@@ -5,17 +5,15 @@
   <section class="hero">
     <div class="hero__media">{{HERO_IMG}}</div>
     <div class="hero__content">
-      <h1 class="hero__title display">Architecture &amp; Interior<br>Design Studio</h1>
-      <div class="hero__side label">
-        <ul class="clocks" aria-label="Local time">
-          <li><span>Belgrade</span><time data-tz="Europe/Belgrade">--:--</time></li>
-          <li><span>Vienna</span><time data-tz="Europe/Vienna">--:--</time></li>
-          <li><span>New York</span><time data-tz="America/New_York">--:--</time></li>
-        </ul>
-        {{HERO_CREDIT}}
-      </div>
+      <h1 class="hero__title" data-vf aria-label="Architecture and Interior Design Studio">
+        <span class="ln" aria-hidden="true">Architecture</span>
+        <span class="ln" aria-hidden="true">&amp; Interior</span>
+        <span class="ln" aria-hidden="true">Design Studio<i>/</i></span>
+      </h1>
       <div class="hero__scroll label">
         <p>Delivering precise architectural solutions.</p>
+        {{HERO_CREDIT}}
+        <p class="hero__time">Belgrade <time data-tz="Europe/Belgrade">--:--</time></p>
         <a href="#works">Selected works ↓</a>
       </div>
     </div>
@@ -28,7 +26,7 @@
       <div class="studio__meta" data-reveal>
         <p class="studio__since">Since 2010</p>
         <div>
-          <p class="body">Operating from Belgrade, Serbia, QBC Architects is a professional design studio led by principal architect Slavoljub Ljubic. We specialize in residential and commercial architecture, prioritizing structural integrity, spatial functionality, and precise detailing. We provide investors with technical certainty through advanced BIM modeling in Autodesk Revit, strict compliance with local zoning regulations, and highly efficient project management.</p>
+          <p class="body">A Belgrade design studio led by architects Slavoljub and Vladica Ljubic. We work on residential, commercial and interior projects, from first concept to precise BIM models in Autodesk Revit, for clients at home and abroad.</p>
           <p style="margin-top:1.6rem"><a class="btn" href="about.html"><span>About the studio</span><span class="btn__arrow" aria-hidden="true">→</span></a></p>
         </div>
       </div>
@@ -62,5 +60,4 @@
   </section>
 
 </main>
-{{POOL}}
 {{> footer}}

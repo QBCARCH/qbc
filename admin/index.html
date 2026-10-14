@@ -7,8 +7,8 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="../favicon.ico">
 <style>
-@font-face{font-family:"Geist";src:url("../fonts/Geist.ttf") format("truetype");font-weight:100 900;font-display:swap}
-@font-face{font-family:"Geist Mono";src:url("../fonts/GeistMono.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist";src:url("../fonts/Geist.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url("../fonts/GeistMono.woff2") format("woff2");font-weight:100 900;font-display:swap}
 :root{--ink:#0a0a0a;--mute:#767676;--line:#dcdcdc;--bg:#fff;--soft:#f5f5f4;--ok:#1d6b3a;--err:#b3261e}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Geist,system-ui,sans-serif;font-weight:300;font-size:16px;line-height:1.45}
@@ -32,6 +32,7 @@ label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
 .row{display:grid;gap:16px;grid-template-columns:1fr 160px}
 .hint{font-size:13px;color:var(--mute);margin-top:6px}
 .err{color:var(--err);font-size:14px;margin-top:12px;white-space:pre-wrap}
+.warn{font-size:13px;color:#8a5a00;margin-top:12px}.warn p{margin:4px 0}
 .ok{color:var(--ok)}
 .card{border:1px solid var(--line);padding:28px;max-width:560px}
 /* lista projekata */
@@ -81,7 +82,7 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
 <dialog id="dlg"><div id="dlgBody"></div></dialog>
 
 <script type="module">
-import { GitHub, processImage, publish, uniqueSlug, allImages } from './admin-lib.js';
+import { GitHub, processImage, publish, uniqueSlug, allImages, SMALL_W } from './admin-lib.js';
 import { STANDARD_SERVICES, textToRichtext, richtextToText } from '../tools/build-core.js';
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -215,10 +216,20 @@ function editorView(index) {
   <p class="lead">Popuni polja, dodaj slike i klikni Objavi na sajt.</p>
 
   <div class="row">
-    <div><label for="f_title">Naslov projekta</label><input id="f_title" type="text" value="${esc(E.title)}" placeholder="npr. VILLA DUO DIVCIBARE"></div>
+    <div><label for="f_title">Naslov projekta</label><input id="f_title" type="text" value="${esc(E.title)}" placeholder="npr. Villa Duo, Divcibare"></div>
     <div><label for="f_year">Godina</label><input id="f_year" type="text" value="${esc(E.year)}"></div>
   </div>
   <div class="hint" id="slugHint"></div>
+  <div class="row">
+    <div><label for="f_loc">Lokacija</label><input id="f_loc" type="text" value="${esc(E.location || '')}" placeholder="npr. Kosmaj, Serbia"></div>
+    <div><label for="f_area">Površina</label><input id="f_area" type="text" value="${esc(E.area || '')}" placeholder="npr. 240 m²"></div>
+  </div>
+  <div class="row">
+    <div><label for="f_status">Status</label><input id="f_status" type="text" value="${esc(E.status || '')}" placeholder="npr. Concept, Built, In construction" list="statusList">
+      <datalist id="statusList"><option value="Concept"><option value="Design development"><option value="In construction"><option value="Built"></datalist></div>
+    <div><label for="f_credit">Autor slika / rendera</label><input id="f_credit" type="text" value="${esc(E.credit || '')}" placeholder="npr. Render by QBC Architects"></div>
+  </div>
+  <div class="hint">Polja iznad nisu obavezna. Prazna se ne prikazuju na sajtu. Piši ih na engleskom, kao i ostatak sajta.</div>
 
   <h2>Usluge na projektu</h2>
   <div class="svc">${STANDARD_SERVICES.map((s) => `<label><input type="checkbox" data-svc value="${esc(s)}" ${E.services.includes(s) ? 'checked' : ''}> ${esc(s)}</label>`).join('')}</div>
@@ -238,6 +249,7 @@ function editorView(index) {
   <div class="drop" id="gdrop" style="min-height:90px"><span>Prevuci slike ovde ili klikni da ih izabereš (možeš više odjednom)</span></div>
   <div class="grid" id="ggrid"></div>
 
+  <div class="warn" id="iwarn"></div>
   <div class="actions"><button id="save">Objavi na sajt</button><button class="ghost" id="cancel">Otkaži</button></div>
   <div class="err" id="eerr"></div>`;
 
@@ -257,16 +269,22 @@ async function ingest(files, onEach) {
   const list = [...files].filter((f) => f.type.startsWith('image/') || /\.(jpe?g|png|webp)$/i.test(f.name));
   if (!list.length) { $('#eerr').textContent = 'Izaberi slike u formatu JPG, PNG ili WEBP.'; return; }
   $('#eerr').textContent = '';
+  const warns = [];
   const btn = $('#save'); btn.disabled = true;
   try {
     for (let i = 0; i < list.length; i++) {
       btn.textContent = `Obrađujem sliku ${i + 1} od ${list.length}`;
-      const { entry, blobs } = await processImage(list[i]);
+      const stemOf = (f) => f.replace(/^[0-9a-f]+_/, '').replace(/(-og)?\.[^.]+$/, '').toLowerCase();
+      const have = new Set([E.cover, E.hero, ...E.gallery].filter(Boolean).map((im) => stemOf(im.file)));
+      const { entry, blobs, origW, safe } = await processImage(list[i]);
+      if (have.has(safe.toLowerCase())) { warns.push(`"${list[i].name}" je već dodata, preskočena je.`); continue; }
+      if (origW < SMALL_W) warns.push(`"${list[i].name}" je široka samo ${origW} px. Preko celog ekrana može delovati mekano; najbolje je ${SMALL_W} px ili više.`);
       for (const b of blobs) E._blobs.set(b.path, b.blob);
       setPreview(entry.file, blobs[0].blob);
       onEach(entry);
     }
   } catch (e) { $('#eerr').textContent = e.message; }
+  const w = $('#iwarn'); if (w) w.innerHTML += warns.map((m) => `<p>${esc(m)}</p>`).join('');
   btn.disabled = false; btn.textContent = 'Objavi na sajt';
 }
 
@@ -331,6 +349,9 @@ function onSave() {
     hero: E.hero || E.cover,
     gallery: E.gallery,
   };
+  for (const [k, id] of [['location', 'f_loc'], ['area', 'f_area'], ['status', 'f_status'], ['credit', 'f_credit']]) {
+    const v = $('#' + id).value.trim(); if (v) p[k] = v;
+  }
   if (E._index === null) p.added = new Date().toISOString().slice(0, 10); else if (E.added) p.added = E.added;
   const before = clone(S.data);
   if (E._index === null) S.data.projects.unshift(p); else S.data.projects[E._index] = p;
@@ -339,7 +360,7 @@ function onSave() {
   const pend = new Map(S.pending);
   for (const [path, blob] of E._blobs) {
     const name = path.replace(/^images\//, '');
-    if ([...used].some((u) => name === u || name.startsWith(u.slice(0, u.lastIndexOf('.')) + '-p-'))) pend.set(path, blob);
+    if ([...used].some((u) => name === u || (name.startsWith(u.slice(0, u.lastIndexOf('.')) + '-p-') || name === u.slice(0, u.lastIndexOf('.')) + '-og.jpg'))) pend.set(path, blob);
   }
   doPublish({
     message: (E._index === null ? 'Admin: novi projekat ' : 'Admin: izmena projekta ') + title,

@@ -97,7 +97,7 @@ export function allImages(p) {
 export function imagePaths(im) {
   const dot = im.file.lastIndexOf('.');
   const base = im.file.slice(0, dot), ext = im.file.slice(dot + 1);
-  return ['images/' + im.file, ...(im.widths || []).map((w) => `images/${base}-p-${w}.${ext}`)];
+  return ['images/' + im.file, ...(im.widths || []).map((w) => `images/${base}-p-${w}.${ext}`), ...(im.og ? ['images/' + im.og] : [])];
 }
 export function orphanImagePaths(removed, remaining) {
   const used = new Set(remaining.flatMap((p) => allImages(p).map((i) => i.file)));
@@ -113,44 +113,50 @@ export function uniqueSlug(title, projects, ignore) {
 }
 
 // ---------------------------------------------------------------- slike (samo u pregledacu)
-const MIME = { jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' };
+// Sve slike se cuvaju kao WebP (manje i brze), uz jednu JPEG kopiju od 1200 px za deljenje na mrezama.
+// Ako pregledac ne ume da pravi WebP (stariji Safari), koristi se JPEG.
+export const SMALL_W = 2400;
 
 function toBlob(canvas, type, q) {
   return new Promise((res, rej) => canvas.toBlob((b) => (b ? res(b) : rej(new Error('Ne mogu da obradim sliku'))), type, q));
+}
+let webpOk = null;
+async function canWebp() {
+  if (webpOk === null) {
+    const c = document.createElement('canvas'); c.width = c.height = 2;
+    try { webpOk = (await toBlob(c, 'image/webp', 0.8)).type === 'image/webp'; } catch { webpOk = false; }
+  }
+  return webpOk;
 }
 
 export async function processImage(file) {
   let bmp;
   try { bmp = await createImageBitmap(file); } catch { throw new Error(`Slika "${file.name}" nije podržan format (koristi JPG, PNG ili WEBP).`); }
   const origW = bmp.width, origH = bmp.height;
-  let ext = (file.name.split('.').pop() || '').toLowerCase();
-  if (!MIME[ext]) ext = 'jpg';
-  if (ext === 'jpeg') ext = 'jpg';
-  const type = MIME[ext];
-  const draw = (w) => {
+  const webp = await canWebp();
+  const ext = webp ? 'webp' : 'jpg', type = webp ? 'image/webp' : 'image/jpeg';
+  const draw = (w, flat) => {
     const h = Math.round((origH * w) / origW);
     const c = document.createElement('canvas'); c.width = w; c.height = h;
     const ctx = c.getContext('2d');
+    if (flat || !webp) { ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, w, h); }
     ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(bmp, 0, 0, w, h);
     return c;
   };
-  // original: zadrzi izvorni fajl ako je razuman, inace smanji
-  let origBlob = file, finalW = origW;
-  if (origW > MAX_W || file.size > 9 * 1024 * 1024 || !MIME[(file.name.split('.').pop() || '').toLowerCase()]) {
-    finalW = Math.min(origW, MAX_W);
-    origBlob = await toBlob(draw(finalW), type, 0.9);
-  }
+  const finalW = Math.min(origW, MAX_W);
   const rand = Math.random().toString(16).slice(2, 8);
   const stem = (file.name.replace(/\.[^.]+$/, '') || 'slika');
-  const safe = stem.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^A-Za-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'slika';
-  const name = `${Date.now().toString(16)}${rand}_${safe}.${ext}`;
-  const base = name.slice(0, name.lastIndexOf('.'));
+  const safe = stem.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^A-Za-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'slika';
+  const base = `${Date.now().toString(16)}${rand}_${safe}`;
+  const name = `${base}.${ext}`;
   const widths = WIDTHS.filter((w) => w < finalW);
-  const blobs = [{ path: 'images/' + name, blob: origBlob }];
-  for (const w of widths) blobs.push({ path: `images/${base}-p-${w}.${ext}`, blob: await toBlob(draw(w), type, 0.85) });
+  const blobs = [{ path: 'images/' + name, blob: await toBlob(draw(finalW), type, 0.86) }];
+  for (const w of widths) blobs.push({ path: `images/${base}-p-${w}.${ext}`, blob: await toBlob(draw(w), type, 0.82) });
+  const og = `${base}-og.jpg`;
+  blobs.push({ path: 'images/' + og, blob: await toBlob(draw(Math.min(1200, finalW), true), 'image/jpeg', 0.8) });
   bmp.close && bmp.close();
-  return { entry: { file: name, widths, w: finalW, h: Math.round((origH * finalW) / origW) }, blobs };
+  return { entry: { file: name, widths, w: finalW, h: Math.round((origH * finalW) / origW), og }, blobs, origW, safe };
 }
 
 export async function blobToBase64(blob) {

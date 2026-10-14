@@ -5,8 +5,8 @@
    ========================================================================== */
 
 /* 1. tokeni ---------------------------------------------------------------- */
-@font-face { font-family: "Geist"; src: url("../fonts/Geist.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Geist Mono"; src: url("../fonts/GeistMono.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Geist"; src: url("../fonts/Geist.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Geist Mono"; src: url("../fonts/GeistMono.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 
 :root {
   --bg: #f5f3ef;
@@ -111,7 +111,8 @@ ul, ol { list-style: none; }
 
 .footer { border-top: 1px solid var(--line); padding: clamp(64px, 10vh, 120px) var(--pad) 28px; }
 .footer__top { display: grid; grid-template-columns: 7fr 5fr; gap: var(--gap); align-items: end; margin-bottom: clamp(48px, 8vh, 96px); }
-.footer__cta { display: inline-flex; align-items: baseline; gap: .4em; font-weight: 300; font-size: clamp(2rem, 4.4vw, 4.4rem); line-height: 1.04; letter-spacing: -.035em; width: max-content; max-width: 100%; transition: color .4s; }
+.footer__top > * { min-width: 0; }
+.footer__cta { display: block; font-weight: 300; font-size: clamp(2rem, 4.4vw, 4.4rem); line-height: 1.04; letter-spacing: -.035em; max-width: 100%; transition: color .4s; }
 .footer__cta:hover { color: var(--accent); }
 .footer__beliefs { display: grid; gap: .3rem; color: var(--mute); }
 .footer__cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: var(--gap); padding-top: 22px; border-top: 1px solid var(--line); }
@@ -125,13 +126,16 @@ ul, ol { list-style: none; }
 .hero__media img { width: 100%; height: 100%; object-fit: cover; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0, 0, 0, .28), transparent 28%, transparent 55%, rgba(0, 0, 0, .5)); pointer-events: none; }
 .hero__content { position: absolute; inset: auto 0 0 0; z-index: 2; padding: 0 var(--pad) clamp(24px, 4.5vh, 48px); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); align-items: end; }
-.hero__title { grid-column: 1 / span 8; }
-.hero__side { grid-column: 10 / span 3; display: grid; gap: .3rem; justify-items: end; text-align: right; }
+@property --base { syntax: '<number>'; inherits: true; initial-value: 200; }
+.hero__title { grid-column: 1 / -1; --base: 200; font-weight: var(--base); font-size: clamp(2.6rem, 10.2vw, 12rem); line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
+.hero__title .ln { display: block; white-space: nowrap; }
+.hero__title i { font-style: normal; opacity: .55; }
+.hero__title .ch { font-weight: calc(var(--base) + var(--dw, 0)); }
+.js .hero__title { animation: settle 1.8s var(--ease) .15s both; }
+@keyframes settle { from { --base: 100; letter-spacing: .015em; opacity: 0; } to { --base: 200; letter-spacing: -.035em; opacity: 1; } }
+.hero__time time { font-variant-numeric: tabular-nums; }
 .hero__credit:hover { text-decoration: underline; text-underline-offset: 4px; }
-.clocks { display: grid; gap: .1rem; }
-.clocks li { display: flex; justify-content: flex-end; gap: 1.2rem; }
-.clocks time { font-variant-numeric: tabular-nums; }
-.hero__scroll { grid-column: 1 / -1; margin-top: clamp(18px, 3vh, 32px); padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .4); display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+.hero__scroll { grid-column: 1 / -1; margin-top: clamp(22px, 3.6vh, 40px); padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .4); display: grid; grid-template-columns: 1.2fr 1fr .7fr auto; align-items: start; gap: 2rem; }
 .hero__scroll p { max-width: 36ch; }
 
 .studio { align-items: start; }
@@ -272,9 +276,8 @@ ul, ol { list-style: none; }
   body { font-size: 1rem; }
   .menu { grid-template-columns: 1fr; }
   .menu__side { display: none; }
-  .hero__title, .hero__side { grid-column: 1 / -1; }
-  .hero__side { justify-items: start; text-align: left; margin-top: 1.2rem; }
-  .clocks li { justify-content: flex-start; }
+  .hero__scroll { grid-template-columns: 1fr auto; row-gap: .6rem; }
+  .hero__scroll p:first-child, .hero__time { display: none; }
   .studio__label, .studio__text { grid-column: 1 / -1; }
   .studio__label { margin-bottom: 1.4rem; }
   .studio__meta { grid-template-columns: 1fr; }

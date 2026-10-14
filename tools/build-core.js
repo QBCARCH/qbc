@@ -31,6 +31,7 @@ export const STATIC_SOURCES = [
   'src/pages/services.html',
   'src/pages/contact.html',
   'src/pages/privacy-policy.html',
+  'src/pages/404.html',
 ];
 
 const STATIC_PAGES = [
@@ -42,6 +43,7 @@ const STATIC_PAGES = [
     desc: 'Discuss your next residential or commercial project with QBC Architects. Reach out to our studio to consult on functional and architecturally sound design solutions.' },
   { out: 'privacy-policy.html', src: 'privacy-policy', key: 'privacy', title: 'Privacy Policy | QBC Architects',
     desc: 'Read the privacy policy of QBC Architects. We are committed to protecting your personal information and ensuring transparency in our digital operations.' },
+  { out: '404.html', src: '404', key: 'none', root: '/', title: 'Page not found | QBC Architects', desc: 'The page you are looking for does not exist.' },
 ];
 
 // ---------------------------------------------------------------- tekst
@@ -103,11 +105,23 @@ const li = (list, cls = '') => (list || []).map((t) => `<li${cls ? ` class="${cl
 
 // Slike na pocetnoj biraju se nasumicno u pregledacu (js/site.js, initPicks), a ovde se samo pravi izbor.
 // Bez JS-a ostaje podrazumevana slika u <noscript>.
-function pickImg(im, p, role, sizes) {
+// Naslovna slika: izbor se pravi odmah pri citanju HTML-a (mala skripta odmah posle slike), bez cekanja na site.js.
+// Bez JS-a ostaje podrazumevana slika u <noscript>.
+const PICK_JS = "(function(P){var im=document.currentScript.previousElementSibling,all=[],n=Date.now(),r=function(a){return a[Math.floor(Math.random()*a.length)]};" +
+  "P.p.forEach(function(p){p.i.forEach(function(i){all.push({p:p,i:i})})});if(!all.length)return;" +
+  "var f=P.p.filter(function(p){var t=Date.parse(p.a);return p.a&&t<=n+864e5&&(n-t)/864e5<=P.d}).sort(function(a,b){return Date.parse(b.a)-Date.parse(a.a)})[0];" +
+  "var d=all.filter(function(x){return x.p.s===P.h[0]&&x.i[0]===P.h[1]})[0];" +
+  "var k=f&&Math.random()<.7?{p:f,i:r(f.i)}:(d&&Math.random()<.35?d:r(all));" +
+  "var e=function(s){return encodeURIComponent(s).replace(/%2F/g,'/')},F=k.i[0],x=F.lastIndexOf('.'),B=F.slice(0,x),X=F.slice(x+1);" +
+  "var s=k.i[3].map(function(w){return 'images/'+e(B+'-p-'+w+'.'+X)+' '+w+'w'});s.push('images/'+e(F)+' '+k.i[1]+'w');" +
+  "im.width=k.i[1];im.height=k.i[2];im.alt=k.p.t;im.sizes='100vw';im.srcset=s.join(', ');" +
+  "var m=k.i[3].filter(function(w){return w>=2000})[0]||k.i[3][k.i[3].length-1];im.src=m?'images/'+e(B+'-p-'+m+'.'+X):'images/'+e(F);" +
+  "im.setAttribute('data-s',k.p.s);im.setAttribute('data-t',k.p.t);im.setAttribute('data-y',k.p.y)})";
+function pickImg(im, p, poolJson) {
   const dims = im.w && im.h ? ` width="${im.w}" height="${im.h}"` : '';
-  const prio = role === 'hero' ? ' fetchpriority="high"' : ' loading="lazy"';
-  return `<img data-pick="${role}" data-sizes="${sizes}" alt="${esc(p.title)}"${dims}${prio}>` +
-    `<noscript>${img(im, { root: '', sizes, alt: p.title, want: 2000 })}</noscript>`;
+  return `<img data-pick="hero" alt="${esc(p.title)}"${dims} fetchpriority="high">` +
+    `<script>${PICK_JS}(${poolJson})</script>` +
+    `<noscript>${img(im, { root: '', sizes: '100vw', alt: p.title, want: 2000 })}</noscript>`;
 }
 function heroCredit(p) {
   return `<a class="hero__credit" data-credit href="work/${p.slug}.html">${esc(p.title)} / ${esc(p.year)} ↗</a>`;
@@ -124,8 +138,17 @@ function pool(projects, def, promoDays) {
     }
     return { s: pr.slug, t: pr.title, y: pr.year, a: pr.added || '', i: list };
   }).filter((x) => x.i.length);
-  const json = JSON.stringify({ d: promoDays, h: [def.slug, def.hero.file], p }).replace(/</g, '\\u003c');
-  return `<script type="application/json" id="qbc-pool">${json}</script>`;
+  return JSON.stringify({ d: promoDays, h: [def.slug, def.hero.file], p }).replace(/</g, '\\u003c');
+}
+
+// slika za deljenje na mrezama: JPEG ako postoji (WebP ne prikazuju svi)
+const ogUrl = (im) => 'https://www.qbc.rs/' + (im.og ? `images/${encFile(im.og)}` : imgUrl(im, '', 1080));
+
+function sitemap(projects) {
+  const day = new Date().toISOString().slice(0, 10);
+  const urls = ['', 'our-work.html', 'about.html', 'services.html', 'contact.html', ...projects.map((p) => `work/${p.slug}.html`)];
+  return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+    urls.map((u) => `  <url><loc>https://www.qbc.rs/${u}</loc><lastmod>${day}</lastmod></url>`).join('\n') + '\n</urlset>\n';
 }
 
 function worksGrid(projects) {
@@ -176,6 +199,12 @@ function nextProject(p, projects) {
     `<span class="label mute">Next project</span><span class="pnext__title">${esc(nx.title)}</span>` +
     `<span class="btn"><span>View project</span><span class="btn__arrow" aria-hidden="true">→</span></span></div>` +
     `<div class="frame">${img(cover(nx), { root: '../', sizes: '(max-width: 900px) 100vw, 40vw', alt: '', want: 1080 })}</div></div></a>`;
+}
+
+function facts(p) {
+  const row = (k, v) => (v ? `<div><p class="label mute">${k}</p><p>${esc(v)}</p></div>` : '');
+  return row('Year', p.year) + row('Location', p.location) + row('Area', p.area) + row('Status', p.status) +
+    `<div><p class="label mute">Services</p><ul>${li((p.services || []).map(stripNum))}</ul></div>` + row('Images', p.credit);
 }
 
 function prevProject(p, projects) {
@@ -230,16 +259,16 @@ export function buildSite(data, sources, { all = false } = {}) {
   const projects = data.projects;
   const heroProject = projects.find((p) => p.slug === data.hero_slug) || projects[0];
   const services = JSON.parse(sources['src/services.json']);
-  const ogDefault = 'https://www.qbc.rs/' + imgUrl(heroProject.hero, '', 1600);
+  const ogDefault = ogUrl(heroProject.hero);
   const base = { ROOT: '', OG_IMAGE: ogDefault, SERVICES_LIST: servicesList(services) };
   const out = {};
 
   out['index.html'] = render('index', sources, {
     ...base, key: 'home', PATH: '',
     TITLE: 'QBC Architects | Architecture & Interior Design Studio',
-    DESC: 'QBC Architects specializes in high-end residential and commercial architecture. We deliver functional, aesthetically superior, and constructible spaces across Belgrade, Vienna, and New York.',
-    HERO_IMG: pickImg(heroProject.hero, heroProject, 'hero', '100vw'), HERO_CREDIT: heroCredit(heroProject),
-    POOL: pool(projects, heroProject, data.promo_days ?? 21), HOME_WORKS: worksGrid(projects.slice(0, data.home_count ?? 4)),
+    DESC: 'QBC Architects specializes in high-end residential and commercial architecture. We deliver functional, aesthetically superior, and constructible spaces. Based in Belgrade, working internationally.',
+    HERO_IMG: pickImg(heroProject.hero, heroProject, pool(projects, heroProject, data.promo_days ?? 21)), HERO_CREDIT: heroCredit(heroProject),
+    HOME_WORKS: worksGrid(projects.slice(0, data.home_count ?? 4)),
   });
   out['our-work.html'] = render('our-work', sources, {
     ...base, key: 'works', PATH: 'our-work.html',
@@ -251,8 +280,8 @@ export function buildSite(data, sources, { all = false } = {}) {
     out[`work/${p.slug}.html`] = render('work', sources, {
       ...base, ROOT: '../', key: 'works', PATH: `work/${p.slug}.html`,
       TITLE: `${p.title} | QBC Architects`, DESC: esc(metaDesc(p)),
-      OG_IMAGE: 'https://www.qbc.rs/' + imgUrl(p.hero, '', 1600),
-      TITLE_TEXT: esc(p.title), YEAR: esc(p.year), SERVICES: li(p.services),
+      OG_IMAGE: ogUrl(p.hero),
+      TITLE_TEXT: esc(p.title), YEAR: esc(p.year), FACTS: facts(p), LOC_YEAR: esc([p.location, p.year].filter(Boolean).join(', ')),
       HERO_IMG: img(p.hero, { root: '../', sizes: '100vw', alt: p.title, eager: true, want: 2000 }),
       DESCRIPTION: cleanRich(p.description), GALLERY: gallery(p), NEXT: nextProject(p, projects), PREV: prevProject(p, projects),
     });
@@ -260,11 +289,13 @@ export function buildSite(data, sources, { all = false } = {}) {
   if (all) {
     for (const pg of STATIC_PAGES) {
       out[pg.out] = render(pg.src, sources, {
-        ...base, key: pg.key, PATH: pg.out, TITLE: esc(pg.title), DESC: esc(pg.desc),
+        ...base, ROOT: pg.root ?? '', key: pg.key, PATH: pg.out, TITLE: esc(pg.title), DESC: esc(pg.desc),
         SERVICES_INTRO: esc(services.intro), PHASES: phases(services),
       });
     }
   }
+  out['sitemap.xml'] = sitemap(projects);
+  out['robots.txt'] = 'User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: https://www.qbc.rs/sitemap.xml\n';
   // TITLE/DESC za dinamicke stranice su vec bezbedni tekstovi bez navodnika; escape radi svejedno
   for (const k of Object.keys(out)) out[k] = out[k].replace(/<title>([^<]*)<\/title>/, (m, t) => `<title>${t.includes('&amp;') ? t : esc(t)}</title>`);
   return out;

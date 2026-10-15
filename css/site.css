@@ -432,3 +432,66 @@ body:has(.nav:not(.is-hidden)) .psub { top: var(--navh); }
 .frame:not([data-ip]) > img { margin: -2px; width: calc(100% + 4px); height: calc(100% + 4px); max-width: none; }
 .pgal--dark .frame { background: #121110; }
 .lb img { clip-path: inset(2px); }
+
+/* ---- nav: puno dugme za poziv, Home u traci ---- */
+.nav__links a.nav__cta { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.nav__links a.nav__cta:hover, .nav__links a.nav__cta[aria-current="page"] { background: transparent; color: var(--fg); border-color: var(--fg); }
+.over-hero .nav__links a.nav__cta { background: #fff; color: #1c1b19; border-color: #fff; }
+.over-hero .nav__links a.nav__cta:hover { background: transparent; color: #fff; border-color: #fff; }
+.menu__item--cta { margin-top: clamp(14px, 2.4vh, 26px); padding-top: clamp(14px, 2.4vh, 26px); border-top: 1px solid var(--line); }
+.menu__cta { color: var(--accent); }
+@media (max-width: 900px) { .nav__links { gap: .8rem; } }
+
+/* ---- usluge kao harmonika ---- */
+.acc { border-bottom: 1px solid var(--line); }
+.acc__item { border-top: 1px solid var(--line); }
+.acc__item summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 4rem 4fr 6fr 1.4rem; gap: var(--gap); align-items: baseline; padding-block: clamp(20px, 3.2vh, 34px); }
+.acc__item summary::-webkit-details-marker { display: none; }
+.acc__t { font-size: clamp(1.25rem, 2vw, 1.9rem); letter-spacing: -.02em; line-height: 1.2; font-weight: 300; transition: color .4s; }
+.acc__item summary:hover .acc__t { color: var(--accent); }
+.acc__chips { color: var(--mute); font-size: .92rem; line-height: 1.5; }
+.acc__item summary i { position: relative; width: 14px; height: 14px; justify-self: end; align-self: center; }
+.acc__item summary i::before, .acc__item summary i::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: currentColor; transition: transform .4s var(--ease); }
+.acc__item summary i::after { transform: rotate(90deg); }
+.acc__item[open] summary i::after { transform: rotate(0); }
+.acc__item[open] .acc__chips { opacity: 0; }
+.acc__b { display: grid; grid-template-columns: 4rem 4fr 6fr 1.4rem; gap: var(--gap); padding-bottom: clamp(28px, 5vh, 56px); }
+.acc__b > .body { grid-column: 2 / span 1; font-size: 1.05rem; }
+.acc__items { grid-column: 3 / span 1; display: grid; gap: 1.4rem; }
+.acc__items .h3 { margin-bottom: .2rem; }
+.acc__items p { color: var(--mute); font-size: .95rem; }
+.acc__item summary:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
+@media (max-width: 760px) {
+  .acc__item summary { grid-template-columns: 2.4rem 1fr 1.4rem; }
+  .acc__chips { grid-column: 2 / 3; grid-row: 2; }
+  .acc__b { grid-template-columns: 2.4rem 1fr; }
+  .acc__b > .body, .acc__items { grid-column: 2 / 3; }
+}
+
+/* ---- upit na dnu svake stranice ---- */
+.inq { background: #121110; color: #f1eee8; scroll-margin-top: 80px; }
+.inq__in { display: grid; grid-template-columns: 5fr 6fr; gap: clamp(30px, 6vw, 110px); padding-block: clamp(80px, 14vh, 170px); align-items: start; }
+.inq__h { font-weight: 300; font-size: clamp(2.2rem, 4.6vw, 4.6rem); line-height: 1.04; letter-spacing: -.035em; margin: 1.2rem 0 1.4rem; max-width: 14ch; }
+.inq__p { color: rgba(241, 238, 232, .62); max-width: 36ch; }
+.inq__head .label { color: rgba(241, 238, 232, .55); }
+.inq .cform { grid-column: auto; }
+.inq .cform input, .inq .cform textarea { color: #f1eee8; border-bottom-color: rgba(255, 255, 255, .28); }
+.inq .cform input:focus, .inq .cform textarea:focus { border-bottom-color: #fff; }
+.inq .cform .label { color: rgba(241, 238, 232, .55); }
+.inq .btn--solid { background: #f1eee8; color: #121110; border-color: #f1eee8; }
+.inq .btn--solid:hover { background: transparent; color: #f1eee8; }
+.inq__alt { text-transform: none; letter-spacing: .02em; line-height: 1.7; }
+.inq__alt a { color: #f1eee8; text-decoration: underline; text-underline-offset: 3px; }
+.inq .cform__status.is-error { color: #e9b9a4; }
+@media (max-width: 900px) { .inq__in { grid-template-columns: 1fr; } .inq .cform { margin-top: 0; grid-template-columns: 1fr; } }
+
+/* ---- poravnat tekst (justify) ---- */
+.body, .lead, .legal__body p, .legal__body li, .pinfo__text p, .acc__b p, .acc__items p, .faq__a p, .approach__text p, .studio__text p, .aintro__text p, .cform__intro p, .inq__p, .shero__intro p, .phead .lead, .chero__lead {
+  text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto;
+}
+.acc__item[open] .acc__chips { display: none; }
+@media (max-width: 640px) {
+  .psub__cta { display: none; }
+  .psub__l { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .body, .lead, .legal__body p, .legal__body li, .pinfo__text p, .acc__b p, .acc__items p, .faq__a p, .approach__text p, .studio__text p, .aintro__text p, .cform__intro p, .inq__p, .shero__intro p, .phead .lead, .chero__lead { text-align: left; }
+}

@@ -10,7 +10,42 @@
     </div>
   </header>
   <div class="wide frame" data-ip data-ip><img src="assets/services-900.jpg" srcset="assets/services-900.jpg 900w, assets/services.jpg 1368w" sizes="100vw" width="1368" height="570" alt="Villa Dve Koraćica, Kosmaj" fetchpriority="high"></div>
-  <section class="sec">
+  <nav class="psub label" aria-label="Services">
+    <div class="psub__in"><span class="psub__t">Services</span><span class="psub__l"><a href="#services">Services</a><a href="#approach">Approach</a><a href="#process">Process</a><a href="#faq">Questions</a><a class="psub__cta" href="#inquiry">Start a project</a></span></div>
+  </nav>
+  <section class="sec" id="services" style="padding-bottom:0">
+    <div class="wrap">
+      <p class="label mute" data-reveal>Services /</p>
+      <h2 class="h2" style="margin:1.2rem 0 clamp(30px,6vh,70px)">Services</h2>
+      {{PHASES}}
+    </div>
+  </section>
+  <section class="sec" id="approach">
+    <div class="wrap">
+      <h2 class="h2" style="margin-bottom:clamp(30px,6vh,70px)">Our approach</h2>
+      <div class="approach__item" data-reveal>
+        <span class="approach__num label">01</span>
+        <h3 class="approach__title h3">Designed to be built</h3>
+        <div class="approach__text"><p class="body">Every concept is tested against structure, materials and construction method from the first sketch, so the design survives contact with the site.</p></div>
+      </div>
+      <div class="approach__item" data-reveal>
+        <span class="approach__num label">02</span>
+        <h3 class="approach__title h3">BIM from day one</h3>
+        <div class="approach__text"><p class="body">One Revit model drives plans, sections, schedules and renders. Clashes with structure and building services are found on screen, not on site.</p></div>
+      </div>
+      <div class="approach__item" data-reveal>
+        <span class="approach__num label">03</span>
+        <h3 class="approach__title h3">Cost awareness</h3>
+        <div class="approach__text"><p class="body">We specify materials and layouts with the budget in view, and say early when a decision will cost more.</p></div>
+      </div>
+      <div class="approach__item" data-reveal>
+        <span class="approach__num label">04</span>
+        <h3 class="approach__title h3">Context first</h3>
+        <div class="approach__text"><p class="body">Climate, topography and local building culture shape each design. No two projects start from the same template.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec" id="process">
     <div class="wrap">
       <p class="label mute" data-reveal>Process /</p>
       <h2 class="h2" style="margin:1.2rem 0 clamp(30px,6vh,70px)">How we work</h2>
@@ -46,8 +81,7 @@
       </div>
     </div>
   </section>
-  <div style="margin-top:clamp(60px,12vh,150px)">{{PHASES}}</div>
-  <section class="sec">
+  <section class="sec" id="faq">
     <div class="wrap">
       <p class="label mute" data-reveal>Questions /</p>
       <h2 class="h2" style="margin:1.2rem 0 clamp(30px,6vh,70px)">Frequently asked questions</h2>

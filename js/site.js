@@ -232,8 +232,22 @@
     });
   };
 
+  // brojaci: broj raste od nule kada udje u vidno polje; bez JS-a ili uz smanjeno kretanje ostaje krajnji broj
+  const initCount = () => {
+    const els = $$('[data-count]');
+    if (!els.length || !('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const run = (el) => {
+      const to = +el.dataset.count, t0 = performance.now(), dur = 1800;
+      const step = (t) => { const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 4))); if (k < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    };
+    els.forEach((e) => { e.textContent = '0'; });
+    const io = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { io.unobserve(x.target); run(x.target); } }), { threshold: .6 });
+    els.forEach((e) => io.observe(e));
+  };
+
   const boot = () => {
-    initPicks(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox(); initForm();
+    initPicks(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox(); initForm(); initCount();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

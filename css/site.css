@@ -372,11 +372,12 @@ ul, ol { list-style: none; }
 .nav__links a.nav__lang { opacity: .7; }
 .nav__links a.nav__lang:hover { opacity: 1; }
 
-/* brojke na pocetnoj */
-.proof { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); padding-block: clamp(10px, 3vh, 36px) clamp(40px, 8vh, 90px); }
-.proof__item { display: grid; gap: .8rem; padding-top: clamp(16px, 2.4vh, 26px); border-top: 1px solid var(--line); align-content: start; }
-.proof__item b { font-weight: 400; font-size: clamp(2.2rem, 4vw, 4rem); line-height: 1; letter-spacing: -.04em; }
-@media (max-width: 760px) { .proof { grid-template-columns: repeat(2, 1fr); row-gap: 28px; } }
+/* brojke na pocetnoj: dva velika broja, malo teksta */
+.proof { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap); padding-block: clamp(40px, 9vh, 110px) clamp(50px, 11vh, 130px); }
+.proof__item { display: grid; gap: clamp(10px, 1.6vh, 18px); padding-top: clamp(18px, 3vh, 34px); border-top: 1px solid var(--line); align-content: start; }
+.proof__item b { font-weight: 300; font-size: clamp(4.4rem, 13vw, 12.5rem); line-height: .95; letter-spacing: -.055em; font-variant-numeric: tabular-nums; }
+.proof__item b i { font-style: normal; color: var(--mute); margin-left: .02em; }
+@media (max-width: 640px) { .proof { grid-template-columns: 1fr; row-gap: 36px; } }
 
 /* cesta pitanja */
 .faq { border-bottom: 1px solid var(--line); }

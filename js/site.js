@@ -13,7 +13,7 @@
   const initPicks = () => {
     const img = $('img[data-pick="hero"]'), credit = $('[data-credit]');
     if (!img || !credit || !img.dataset.s) return;
-    credit.href = `work/${img.dataset.s}.html`;
+    credit.href = (credit.getAttribute('href') || '').replace(/work\/[^/]*$/, 'work/' + img.dataset.s + '.html');
     credit.textContent = `${img.dataset.t} / ${img.dataset.y} ↗`;
   };
 
@@ -211,20 +211,23 @@
     if (!f) return;
     const st = $('[data-form-status]', f), btn = $('button[type="submit"]', f);
     const say = (t, err) => { st.textContent = t; st.classList.toggle('is-error', !!err); };
-    if (/[?&]sent=1/.test(location.search)) say('Thank you. Your message has been sent, we will reply soon.');
+    const sr = D.documentElement.lang === 'sr';
+    const M = sr ? { ok: 'Hvala. Vaša poruka je poslata, javićemo se uskoro.', sending: 'Šaljem...', fail: 'Poruka nije poslata. Pišite nam na office@qbc.rs ili nas pozovite na +381 63 411 066.' }
+      : { ok: 'Thank you. Your message has been sent, we will reply soon.', sending: 'Sending...', fail: 'The message could not be sent. Please write to office@qbc.rs or call +381 63 411 066.' };
+    if (/[?&]sent=1/.test(location.search)) say(M.ok);
     f.addEventListener('submit', async (e) => {
       if (!window.fetch) return;
       e.preventDefault();
       if (f._honey && f._honey.value) return;
-      btn.disabled = true; say('Sending...');
+      btn.disabled = true; say(M.sending);
       try {
         const r = await fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
           method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(f) });
         const j = await r.json().catch(() => ({}));
         if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status);
-        f.reset(); say('Thank you. Your message has been sent, we will reply soon.');
+        f.reset(); say(M.ok);
       } catch {
-        say('The message could not be sent. Please write to office@qbc.rs or call +381 63 411 066.', true);
+        say(M.fail, true);
       } finally { btn.disabled = false; }
     });
   };

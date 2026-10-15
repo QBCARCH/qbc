@@ -363,3 +363,31 @@ ul, ol { list-style: none; }
 .wide--full { height: auto; aspect-ratio: 1366 / 768; }
 /* MENI dugme samo na telefonu, kada nema linkova gore */
 @media (min-width: 641px) { .nav__menu { display: none; } }
+
+/* CTA u navigaciji, prekidac jezika */
+.nav__links { align-items: center; }
+.nav__links a.nav__cta { padding: .55em 1.2em; border: 1px solid currentColor; border-radius: 999px; background: none; transition: background-color .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease); }
+.nav__links a.nav__cta:hover, .nav__links a.nav__cta[aria-current="page"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.over-hero .nav__links a.nav__cta:hover { background: var(--bg); color: var(--fg); border-color: var(--bg); }
+.nav__links a.nav__lang { opacity: .7; }
+.nav__links a.nav__lang:hover { opacity: 1; }
+
+/* brojke na pocetnoj */
+.proof { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); padding-block: clamp(10px, 3vh, 36px) clamp(40px, 8vh, 90px); }
+.proof__item { display: grid; gap: .8rem; padding-top: clamp(16px, 2.4vh, 26px); border-top: 1px solid var(--line); align-content: start; }
+.proof__item b { font-weight: 400; font-size: clamp(2.2rem, 4vw, 4rem); line-height: 1; letter-spacing: -.04em; }
+@media (max-width: 760px) { .proof { grid-template-columns: repeat(2, 1fr); row-gap: 28px; } }
+
+/* cesta pitanja */
+.faq { border-bottom: 1px solid var(--line); }
+.faq__item { border-top: 1px solid var(--line); }
+.faq__item summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 4rem 1fr 1.4rem; align-items: baseline; gap: var(--gap); padding-block: clamp(18px, 3vh, 30px); }
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__q { font-size: clamp(1.15rem, 1.8vw, 1.6rem); letter-spacing: -.02em; line-height: 1.25; }
+.faq__item summary i { position: relative; width: 14px; height: 14px; justify-self: end; align-self: center; }
+.faq__item summary i::before, .faq__item summary i::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: currentColor; transition: transform .4s var(--ease); }
+.faq__item summary i::after { transform: rotate(90deg); }
+.faq__item[open] summary i::after { transform: rotate(0); }
+.faq__a { padding: 0 calc(1.4rem + var(--gap)) clamp(20px, 3.4vh, 34px) calc(4rem + var(--gap)); max-width: 70ch; }
+.faq__item summary:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
+@media (max-width: 640px) { .faq__item summary { grid-template-columns: 2.4rem 1fr 1.4rem; } .faq__a { padding-left: calc(2.4rem + var(--gap)); padding-right: 0; } }

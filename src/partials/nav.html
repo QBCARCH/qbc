@@ -2,15 +2,16 @@
 <div class="fade" aria-hidden="true"></div>
 
 <header class="nav">
-  <a class="nav__brand" href="{{ROOT}}index.html" aria-label="QBC Architects, home">
+  <a class="nav__brand" href="{{BASE}}index.html" aria-label="QBC Architects, home">
     <img src="{{ROOT}}assets/logo.png" width="26" height="26" alt="">
     <span class="nav__name nav__text">QBCARCHITECTS</span>
   </a>
   <nav class="nav__links nav__text label" aria-label="Primary">
-    <a href="{{ROOT}}our-work.html"{{CUR:works}}>Work</a>
-    <a href="{{ROOT}}about.html"{{CUR:about}}>About</a>
-    <a href="{{ROOT}}services.html"{{CUR:services}}>Services</a>
-    <a href="{{ROOT}}contact.html"{{CUR:contact}}>Contact</a>
+    <a href="{{BASE}}our-work.html"{{CUR:works}}>Work</a>
+    <a href="{{BASE}}about.html"{{CUR:about}}>About</a>
+    <a href="{{BASE}}services.html"{{CUR:services}}>Services</a>
+    <a class="nav__cta" href="{{BASE}}contact.html"{{CUR:contact}}>{{CTA}}</a>
+    <a class="nav__lang" href="{{LANG_URL}}" hreflang="sr" lang="sr" title="Srpski">SR</a>
   </nav>
   <button class="nav__menu nav__text label" type="button" data-menu-open aria-expanded="false" aria-controls="menu"><i></i><span>Menu</span></button>
 </header>
@@ -18,18 +19,19 @@
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
   <button class="menu__close label" type="button" data-menu-close><i></i><span>Close</span></button>
   <nav class="menu__list" aria-label="Main">
-    <div class="menu__item"><a class="menu__link" style="--i:0" href="{{ROOT}}index.html"{{CUR:home}}><span>01</span>Home</a></div>
-    <div class="menu__item"><a class="menu__link" style="--i:1" href="{{ROOT}}about.html"{{CUR:about}}><span>02</span>About</a></div>
-    <div class="menu__item"><a class="menu__link" style="--i:2" href="{{ROOT}}services.html"{{CUR:services}}><span>03</span>Services</a></div>
-    <div class="menu__item"><a class="menu__link" style="--i:3" href="{{ROOT}}our-work.html"{{CUR:works}}><span>04</span>Works</a></div>
-    <div class="menu__item"><a class="menu__link" style="--i:4" href="{{ROOT}}contact.html"{{CUR:contact}}><span>05</span>Contact</a></div>
+    <div class="menu__item"><a class="menu__link" style="--i:0" href="{{BASE}}index.html"{{CUR:home}}><span>01</span>Home</a></div>
+    <div class="menu__item"><a class="menu__link" style="--i:1" href="{{BASE}}about.html"{{CUR:about}}><span>02</span>About</a></div>
+    <div class="menu__item"><a class="menu__link" style="--i:2" href="{{BASE}}services.html"{{CUR:services}}><span>03</span>Services</a></div>
+    <div class="menu__item"><a class="menu__link" style="--i:3" href="{{BASE}}our-work.html"{{CUR:works}}><span>04</span>Works</a></div>
+    <div class="menu__item"><a class="menu__link" style="--i:4" href="{{BASE}}contact.html"{{CUR:contact}}><span>05</span>Contact</a></div>
   </nav>
   <div class="menu__side">
     <img src="{{ROOT}}assets/menu-900.jpg" srcset="{{ROOT}}assets/menu-900.jpg 900w, {{ROOT}}assets/menu.jpg 2000w" sizes="45vw" alt="" loading="lazy">
     <div class="menu__foot label">
       <a href="mailto:office@qbc.rs">office@qbc.rs</a>
       <a href="tel:+381634110066">+381 63 411 066</a>
-      <a href="{{ROOT}}privacy-policy.html">Privacy policy</a>
+      <a href="{{BASE}}privacy-policy.html">Privacy policy</a>
+      <a href="{{LANG_URL}}" hreflang="sr" lang="sr">Srpski</a>
     </div>
   </div>
 </div>

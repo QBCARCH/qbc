@@ -1,24 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{LANG}}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{TITLE}}</title>
 <meta name="description" content="{{DESC}}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://www.qbc.rs/{{PATH}}">
+{{HREFLANG}}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="QBC Architects">
+<meta property="og:locale" content="{{LOCALE}}">
 <meta property="og:title" content="{{TITLE}}">
 <meta property="og:description" content="{{DESC}}">
 <meta property="og:url" content="https://www.qbc.rs/{{PATH}}">
 <meta property="og:image" content="{{OG_IMAGE}}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}}">
+<meta name="twitter:description" content="{{DESC}}">
+<meta name="twitter:image" content="{{OG_IMAGE}}">
 <meta name="theme-color" content="#f5f3ef">
 <link rel="icon" href="{{ROOT}}favicon.ico">
 <link rel="apple-touch-icon" href="{{ROOT}}apple-touch-icon.png">
 <link rel="preload" href="{{ROOT}}fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ROOT}}css/site.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Architect","@id":"https://www.qbc.rs/#studio","name":"QBC Architects","alternateName":"QBCarchitects","url":"https://www.qbc.rs/","logo":"https://www.qbc.rs/assets/logo.png","image":"{{OG_IMAGE}}","email":"office@qbc.rs","telephone":"+381634110066","foundingDate":"2010","founder":[{"@type":"Person","name":"Slavoljub Ljubić","jobTitle":"Architect"},{"@type":"Person","name":"Vladica Ljubić","jobTitle":"Architect"}],"address":{"@type":"PostalAddress","addressLocality":"Belgrade","addressCountry":"RS"},"knowsAbout":["Architecture","Interior design","BIM","Autodesk Revit","Building permits in Serbia"],"sameAs":["https://www.instagram.com/qbcarchitects/","https://www.behance.net/qbcarchitects","https://www.pinterest.com/qbcarchitects","https://x.com/QBCArchitects"]}</script>{{LD}}
+{{ORG_LD}}{{LD}}
 <script>document.documentElement.classList.add('js')</script>
 <script src="{{ROOT}}js/site.js" defer></script>
 </head>

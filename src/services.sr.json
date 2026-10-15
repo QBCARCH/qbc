@@ -1,0 +1,131 @@
+{
+ "intro": "Pružamo usluge arhitekture, dizajna enterijera i vizualizacije, od prve ideje do završenog objekta. Jedan studio vodi projekat kroz dizajn, BIM koordinaciju, dozvole i nadzor, pa se ništa ne gubi između faza. Van Srbije radimo zajedno sa vašim lokalnim arhitektom.",
+ "phases": [
+  {
+   "title": "Idejno rešenje i koncept",
+   "text": "Vaš zadatak pretvaramo u jasnu prostornu strategiju. Ova faza obuhvata analizu lokacije, pregled urbanističkih uslova i prva arhitektonska rešenja, sa fokusom na raspored, volumen i odnose među prostorima.",
+   "items": [
+    {
+     "title": "Analiza lokacije",
+     "text": "Procena topografije, uslova okoline i urbanističkih propisa, kao osnova za najbolju strategiju projekta."
+    },
+    {
+     "title": "Prostorni program",
+     "text": "Definisanje funkcionalnih zahteva i efikasnih rasporeda za sve prostore projekta."
+    },
+    {
+     "title": "Volumen i oblik",
+     "text": "Rani 3D modeli kojima istražujemo odnose volumena i utvrđujemo arhitektonski identitet."
+    }
+   ]
+  },
+  {
+   "title": "Razrada projekta i BIM modelovanje",
+   "text": "Projekat razrađujemo u informacionom modelu zgrade. Biraju se materijali, konstrukcija i instalacije se usklađuju u modelu, a kolizije se rešavaju na ekranu, pre nego što stignu na gradilište.",
+   "items": [
+    {
+     "title": "Napredna 3D integracija",
+     "text": "Pametan BIM model usklađuje arhitekturu, konstrukciju i instalacije."
+    },
+    {
+     "title": "Specifikacija materijala",
+     "text": "Izbor završnih obrada i sistema koji ispunjavaju estetske ciljeve, a poštuju konstruktivna i budžetska ograničenja."
+    },
+    {
+     "title": "Rano otkrivanje kolizija",
+     "text": "Prepoznavanje i rešavanje sukoba između struka pre početka izgradnje."
+    }
+   ]
+  },
+  {
+   "title": "Arhitektonska vizualizacija",
+   "text": "Fotorealistične slike, od prvih studija volumena do konačnog izbora materijala. Vizualizacije se prave iz istog BIM modela kao i crteži, pa je ono što odobrite upravo ono što se dokumentuje.",
+   "items": [
+    {
+     "title": "Idejne vizualizacije",
+     "text": "Rane slike kojima proveravamo volumen, svetlost i atmosferu pre nego što se rešenje utvrdi."
+    },
+    {
+     "title": "Studije materijala i enterijera",
+     "text": "Detaljni prikazi obrada, nameštaja i osvetljenja, da se odluke donose sa sigurnošću."
+    },
+    {
+     "title": "Prezentacione slike",
+     "text": "Slike visoke rezolucije za investitore, prijave i prodaju."
+    }
+   ]
+  },
+  {
+   "title": "Tehnička dokumentacija i inženjering",
+   "text": "Izrađujemo detaljnu tehničku dokumentaciju: crteže, specifikacije i tabele po kojima izvođači mogu da daju cenu i grade. Pažljiva razrada znači tačnije ponude, manje izmena na gradilištu i dokumentaciju koja ispunjava važeće propise.",
+   "items": [
+    {
+     "title": "Detaljni arhitektonski crteži",
+     "text": "Precizne osnove, preseci i izgledi potrebni za tačne ponude izvođača."
+    },
+    {
+     "title": "Detalji po meri",
+     "text": "Specijalni tehnički crteži za složene konstruktivne spojeve, termički omotač i hidroizolaciju."
+    },
+    {
+     "title": "Dokumentacija za dozvole",
+     "text": "Priprema dokumentacije koja ispunjava važeće propise i podržava postupak izdavanja dozvola, u Srbiji preko sistema CEOP."
+    }
+   ]
+  },
+  {
+   "title": "Arhitektonski nadzor",
+   "text": "Nakon izdavanja građevinske dozvole klijenti nas mogu angažovati za nadzor nad izgradnjom naših projekata. Obilazimo gradilište, pregledamo dokumentaciju izvođača i odgovaramo na tehnička pitanja, da se objekat izgradi onako kako je projektovan.",
+   "items": [
+    {
+     "title": "Obilasci gradilišta",
+     "text": "Redovni obilasci radi provere da li se radovi izvode prema odobrenom projektu i dokumentaciji."
+    },
+    {
+     "title": "Pregled dokumentacije izvođača",
+     "text": "Provera radioničkih crteža i uzoraka materijala u odnosu na specifikaciju."
+    },
+    {
+     "title": "Tehnička pitanja i izmene",
+     "text": "Odgovori na pitanja izvođača i procena predloženih izmena u odnosu na odobreni projekat."
+    }
+   ]
+  },
+  {
+   "title": "Enterijer i detalji po meri",
+   "text": "Arhitektonsku ideju prenosimo u enterijer: stolarija po meri, osvetljenje i izbor materijala, da zgrada i njen enterijer deluju kao jedna celina.",
+   "items": [
+    {
+     "title": "Stolarija po meri",
+     "text": "Projektovanje ormara i ugradnih elemenata prilagođenih geometriji svakog prostora."
+    },
+    {
+     "title": "Dizajn osvetljenja",
+     "text": "Integrisani planovi osvetljenja koji podržavaju način korišćenja svakog prostora."
+    },
+    {
+     "title": "Izbor materijala",
+     "text": "Biranje završnih obrada, opreme i okova koji slede arhitektonsku ideju."
+    }
+   ]
+  },
+  {
+   "title": "Studije izvodljivosti i master planiranje",
+   "text": "Za razvojne projekte velikih razmera pružamo strateško master planiranje i analizu izvodljivosti. Procenjujemo potencijal lokacije, razmatramo regulatorna ograničenja i razvijamo dugoročne prostorne strategije koje povećavaju vrednost zemljišta i vode buduće faze razvoja.",
+   "items": [
+    {
+     "title": "Procena potencijala lokacije",
+     "text": "Procena fizičkih ograničenja i regulatornog okvira radi utvrđivanja maksimalnog kapaciteta parcele."
+    },
+    {
+     "title": "Analiza iskorišćenosti i gustine",
+     "text": "Obračun površina za gradnju i optimizacija prostorne raspodele, da projekat bude finansijski održiv."
+    },
+    {
+     "title": "Dugoročno fazno planiranje",
+     "text": "Raspodela velikih razvoja na logične etape radi optimizacije ulaganja i upravljanja rizikom."
+    }
+   ]
+  }
+ ]
+}

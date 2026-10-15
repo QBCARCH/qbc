@@ -10,7 +10,42 @@
     </div>
   </header>
   <div class="wide frame" data-ip data-ip><img src="{{ROOT}}assets/services-900.jpg" srcset="{{ROOT}}assets/services-900.jpg 900w, {{ROOT}}assets/services.jpg 1368w" sizes="100vw" width="1368" height="570" alt="Vila Dve Koraćice, Kosmaj" fetchpriority="high"></div>
-  <section class="sec">
+  <nav class="psub label" aria-label="Usluge">
+    <div class="psub__in"><span class="psub__t">Usluge</span><span class="psub__l"><a href="#services">Usluge</a><a href="#approach">Pristup</a><a href="#process">Proces</a><a href="#faq">Pitanja</a><a class="psub__cta" href="#inquiry">Započnite projekat</a></span></div>
+  </nav>
+  <section class="sec" id="services" style="padding-bottom:0">
+    <div class="wrap">
+      <p class="label mute" data-reveal>Usluge /</p>
+      <h2 class="h2" style="margin:1.2rem 0 clamp(30px,6vh,70px)">Usluge</h2>
+      {{PHASES}}
+    </div>
+  </section>
+  <section class="sec" id="approach">
+    <div class="wrap">
+      <h2 class="h2" style="margin-bottom:clamp(30px,6vh,70px)">Naš pristup</h2>
+      <div class="approach__item" data-reveal>
+        <span class="approach__num label">01</span>
+        <h3 class="approach__title h3">Projektovano da bude izgrađeno</h3>
+        <div class="approach__text"><p class="body">Svaki koncept se od prve skice proverava u odnosu na konstrukciju, materijale i način građenja, da projekat preživi susret sa gradilištem.</p></div>
+      </div>
+      <div class="approach__item" data-reveal>
+        <span class="approach__num label">02</span>
+        <h3 class="approach__title h3">BIM od prvog dana</h3>
+        <div class="approach__text"><p class="body">Jedan Revit model daje osnove, preseke, specifikacije i vizualizacije. Kolizije sa konstrukcijom i instalacijama otkrivaju se na ekranu, a ne na gradilištu.</p></div>
+      </div>
+      <div class="approach__item" data-reveal>
+        <span class="approach__num label">03</span>
+        <h3 class="approach__title h3">Svest o troškovima</h3>
+        <div class="approach__text"><p class="body">Materijale i rasporede biramo imajući budžet u vidu i rano kažemo kada će neka odluka koštati više.</p></div>
+      </div>
+      <div class="approach__item" data-reveal>
+        <span class="approach__num label">04</span>
+        <h3 class="approach__title h3">Prvo kontekst</h3>
+        <div class="approach__text"><p class="body">Klima, topografija i lokalna graditeljska kultura oblikuju svaki projekat. Nijedan ne počinje od istog šablona.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="sec" id="process">
     <div class="wrap">
       <p class="label mute" data-reveal>Proces /</p>
       <h2 class="h2" style="margin:1.2rem 0 clamp(30px,6vh,70px)">Kako radimo</h2>
@@ -46,8 +81,7 @@
       </div>
     </div>
   </section>
-  <div style="margin-top:clamp(60px,12vh,150px)">{{PHASES}}</div>
-  <section class="sec">
+  <section class="sec" id="faq">
     <div class="wrap">
       <p class="label mute" data-reveal>Pitanja /</p>
       <h2 class="h2" style="margin:1.2rem 0 clamp(30px,6vh,70px)">Najčešća pitanja</h2>

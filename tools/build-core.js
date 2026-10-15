@@ -254,12 +254,35 @@ function servicesList(sv) {
     `<ul class="svc__items">${ph.items.map((it) => `<li>${esc(it.title)}</li>`).join('')}</ul></div>`).join('') + `</div>`;
 }
 
+// usluge kao pregledna harmonika: u zatvorenom redu naslov i stavke, a otvoreno opis i detalji
 function phases(sv) {
-  return sv.phases.map((ph, i) =>
-    `<section class="phase"><div class="phase__num" data-reveal><b>${num(i)}</b><h2 class="h2">${esc(ph.title)}</h2></div>` +
-    `<div class="phase__body"><p class="lead" data-reveal>${esc(ph.text)}</p><div class="phase__items">` +
-    ph.items.map((it) => `<div class="phase__item" data-reveal><h3 class="h3">${esc(it.title)}</h3><p>${esc(it.text)}</p></div>`).join('') +
-    `</div></div></section>`).join('');
+  return `<div class="acc">` + sv.phases.map((ph, i) =>
+    `<details class="acc__item" id="s${i + 1}" data-reveal><summary><span class="label mute">${num(i)}</span><span class="acc__t">${esc(ph.title)}</span>` +
+    `<span class="acc__chips">${ph.items.map((it) => esc(it.title)).join(' / ')}</span><i aria-hidden="true"></i></summary>` +
+    `<div class="acc__b"><p class="body">${esc(ph.text)}</p><div class="acc__items">` +
+    ph.items.map((it) => `<div><h3 class="h3">${esc(it.title)}</h3><p>${esc(it.text)}</p></div>`).join('') +
+    `</div></div></details>`).join('') + `</div>`;
+}
+
+// kratak upit na dnu svake stranice (osim kontakta): vidljiv poziv, isti FormSubmit kao glavna forma
+const INQ = {
+  en: { k: 'Start a project', h: 'Tell us about your project.', p: 'Share a few lines about your site and what you need. We reply personally.', name: 'Name *', email: 'Email *', msg: 'Your project *', send: 'Send inquiry',
+    alt: 'Or write to <a href="mailto:office@qbc.rs">office@qbc.rs</a>, call <a href="tel:+381634110066">+381 63 411 066</a>, or use the <a href="{BASE}contact.html">full inquiry form</a>.', subj: 'New inquiry from qbc.rs (short form)' },
+  sr: { k: 'Započnite projekat', h: 'Recite nam o vašem projektu.', p: 'Napišite nekoliko redova o parceli i onome što vam treba. Lično odgovaramo.', name: 'Ime *', email: 'E-pošta *', msg: 'Vaš projekat *', send: 'Pošalji upit',
+    alt: 'Ili pišite na <a href="mailto:office@qbc.rs">office@qbc.rs</a>, pozovite <a href="tel:+381634110066">+381 63 411 066</a>, ili koristite <a href="{BASE}contact.html">kompletan obrazac</a>.', subj: 'Novi upit sa qbc.rs (kratki obrazac, srpski)' },
+};
+function inquiryHtml(lang, path, base) {
+  const t = INQ[lang];
+  return `<section class="inq" id="inquiry"><div class="wrap inq__in"><div class="inq__head"><p class="label">${t.k}</p><h2 class="inq__h">${t.h}</h2><p class="inq__p">${t.p}</p></div>` +
+    `<form class="cform inq__form" action="https://formsubmit.co/office@qbc.rs" method="POST" data-form>` +
+    `<input type="hidden" name="_subject" value="${t.subj}"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">` +
+    `<input type="hidden" name="_next" value="https://www.qbc.rs/${path}?sent=1#inquiry">` +
+    `<p class="cform__hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>` +
+    `<label class="cform__f"><span class="label">${t.name}</span><input name="name" type="text" required autocomplete="name"></label>` +
+    `<label class="cform__f"><span class="label">${t.email}</span><input name="email" type="email" required autocomplete="email"></label>` +
+    `<label class="cform__f cform__f--full"><span class="label">${t.msg}</span><textarea name="message" rows="3" required></textarea></label>` +
+    `<div class="cform__f--full cform__actions"><button class="btn btn--round btn--solid" type="submit">${t.send}</button><p class="cform__status" data-form-status role="status" aria-live="polite"></p></div>` +
+    `<p class="inq__alt label cform__f--full">${t.alt.replace('{BASE}', base)}</p></form></div></section>`;
 }
 
 // najcesca pitanja: isti izvor pravi vidljiv tekst i FAQPage strukturisane podatke
@@ -389,7 +412,7 @@ export function buildSite(data, sources, { all = false } = {}) {
         PATH: file === 'index.html' ? pre : own, LANG_URL: rel(own, other),
         HREFLANG: `<link rel="alternate" hreflang="en" href="${u('en')}"><link rel="alternate" hreflang="sr" href="${u('sr')}"><link rel="alternate" hreflang="x-default" href="${u('en')}">`,
         SERVICES_LIST: servicesList(services), SERVICES_INTRO: esc(services.intro), PHASES: phases(services),
-        FAQ_LIST: faqHtml(faq[lang]), COUNT: String(projects.length).padStart(2, '0'),
+        FAQ_LIST: faqHtml(faq[lang]), INQUIRY: ['contact.html', 'privacy-policy.html'].includes(file) ? '' : inquiryHtml(lang, file === 'index.html' ? pre : own, BASE), COUNT: String(projects.length).padStart(2, '0'),
       };
     };
 
@@ -434,7 +457,7 @@ export function buildSite(data, sources, { all = false } = {}) {
   if (all) {
     out[NOT_FOUND.out] = render(NOT_FOUND.src, sources, {
       LANG: 'en', LOCALE: 'en_US', ROOT: '/', BASE: '/', OG_IMAGE: ogDefault, LD: '', ORG_LD: orgLd('en', JSON.parse(sources['src/services.json'])), CTA: L.en.cta,
-      PATH: '404.html', LANG_URL: '/sr/', HREFLANG: '', key: 'none', TITLE: esc(NOT_FOUND.title), DESC: esc(NOT_FOUND.desc),
+      INQUIRY: '', PATH: '404.html', LANG_URL: '/sr/', HREFLANG: '', key: 'none', TITLE: esc(NOT_FOUND.title), DESC: esc(NOT_FOUND.desc),
     });
   }
   out['sitemap.xml'] = sitemap(projects);

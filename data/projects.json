@@ -177,7 +177,9 @@
           "og": "1a13718134fc1c458_Trnava-14-og.jpg"
         }
       ],
-      "added": "2026-10-13"
+      "added": "2026-10-13",
+      "location": "Trnava, Topola, Serbia",
+      "status": "Under construction"
     },
     {
       "slug": "villa-dve-koracica-kosmaj",
@@ -326,7 +328,9 @@
           "h": 2186,
           "og": "6aa28fe53a611c20e8568f6d_2 - 5-og.jpg"
         }
-      ]
+      ],
+      "location": "Koraćica, Kosmaj, Serbia",
+      "status": "Under construction"
     },
     {
       "slug": "villas-divcibare-srb",
@@ -701,7 +705,9 @@
           "h": 2160,
           "og": "6aa2849ed42b40dc0a892a6e_Image76-og.jpg"
         }
-      ]
+      ],
+      "location": "Divčibare, Serbia",
+      "status": "Under construction"
     },
     {
       "slug": "liman-2-ulcinj-mne",
@@ -1167,7 +1173,7 @@
         "h": 1080,
         "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
       },
-      "description": "<p>An interior for a private clinic, designed as a calm, hotel-like space rather than a clinical one. The reception and waiting lounge combine soft upholstered seating, walnut tables and plants with a large botanical wall finish behind glass, so the first impression is warmth instead of corridors and white tiles.</p><p>The treatment rooms continue the same palette of warm stone-coloured surfaces, timber and brass. Built-in counters with brass basins, concealed storage and soft pendant lighting keep the rooms practical for daily work, while the washrooms get a stronger character with dark marble and patterned wallpaper.</p>",
+      "description": "<p>An interior for a private clinic on Zlatibor, designed as a calm, hotel-like space rather than a clinical one. The reception and waiting lounge combine soft upholstered seating, walnut tables and plants with a large botanical wall finish behind glass, so the first impression is warmth instead of corridors and white tiles.</p><p>The treatment rooms continue the same palette of warm stone-coloured surfaces, timber and brass. Built-in counters with brass basins, concealed storage and soft pendant lighting keep the rooms practical for daily work, while the washrooms get a stronger character with dark marble and patterned wallpaper.</p>",
       "gallery": [
         {
           "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
@@ -1451,7 +1457,8 @@
           "h": 1080,
           "og": "672a2ab176f5562ed0c62668_r12_20(6)-enhanced-og.jpg"
         }
-      ]
+      ],
+      "location": "Zlatibor, Serbia"
     },
     {
       "slug": "caffe-spass-belgrade",

@@ -144,11 +144,28 @@ function pool(projects, def, promoDays) {
 // slika za deljenje na mrezama: JPEG ako postoji (WebP ne prikazuju svi)
 const ogUrl = (im) => 'https://www.qbc.rs/' + (im.og ? `images/${encFile(im.og)}` : imgUrl(im, '', 1080));
 
+// lastmod samo kada je datum stvarno poznat (datum dodavanja projekta); inace ga izostavljamo
 function sitemap(projects) {
-  const day = new Date().toISOString().slice(0, 10);
-  const urls = ['', 'our-work.html', 'about.html', 'services.html', 'contact.html', ...projects.map((p) => `work/${p.slug}.html`)];
+  const urls = ['', 'our-work.html', 'about.html', 'services.html', 'contact.html'].map((u) => [u, ''])
+    .concat(projects.map((p) => [`work/${p.slug}.html`, /^\d{4}-\d{2}-\d{2}$/.test(p.added || '') ? p.added : '']));
   return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-    urls.map((u) => `  <url><loc>https://www.qbc.rs/${u}</loc><lastmod>${day}</lastmod></url>`).join('\n') + '\n</urlset>\n';
+    urls.map(([u, d]) => `  <url><loc>https://www.qbc.rs/${u}</loc>${d ? `<lastmod>${d}</lastmod>` : ''}</url>`).join('\n') + '\n</urlset>\n';
+}
+
+// strukturisani podaci za stranicu projekta: putanja (breadcrumb) i sam projekat
+function projectLd(p) {
+  const url = `https://www.qbc.rs/work/${p.slug}.html`;
+  const ld = [
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.qbc.rs/' },
+      { '@type': 'ListItem', position: 2, name: 'Work', item: 'https://www.qbc.rs/our-work.html' },
+      { '@type': 'ListItem', position: 3, name: p.title, item: url }] },
+    { '@context': 'https://schema.org', '@type': 'CreativeWork', name: p.title, url, image: ogUrl(p.hero),
+      dateCreated: p.year || undefined, description: metaDesc(p),
+      ...(p.location ? { locationCreated: { '@type': 'Place', name: p.location } } : {}),
+      creator: { '@id': 'https://www.qbc.rs/#studio' } },
+  ];
+  return `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`;
 }
 
 function worksGrid(projects) {
@@ -188,7 +205,7 @@ function gallery(p) {
   return (p.gallery || []).map((g, i) => {
     const ar = g.w && g.h ? ` style="--ar:${g.w} / ${g.h}"` : '';
     return `<figure data-full="${imgUrl(g, '../', 2000)}"><div class="frame" data-ip${ar}>` +
-      img(g, { root: '../', sizes: '(max-width: 900px) 100vw, 60vw', alt: `${p.title}, image ${i + 1}`, want: 1600 }) + `</div></figure>`;
+      img(g, { root: '../', sizes: '(max-width: 900px) 100vw, 60vw', alt: g.alt || `${p.title}, image ${i + 1}`, want: 1600 }) + `</div></figure>`;
   }).join('');
 }
 
@@ -260,7 +277,7 @@ export function buildSite(data, sources, { all = false } = {}) {
   const heroProject = projects.find((p) => p.slug === data.hero_slug) || projects[0];
   const services = JSON.parse(sources['src/services.json']);
   const ogDefault = ogUrl(heroProject.hero);
-  const base = { ROOT: '', OG_IMAGE: ogDefault, SERVICES_LIST: servicesList(services) };
+  const base = { ROOT: '', OG_IMAGE: ogDefault, SERVICES_LIST: servicesList(services), LD: '' };
   const out = {};
 
   out['index.html'] = render('index', sources, {
@@ -281,6 +298,7 @@ export function buildSite(data, sources, { all = false } = {}) {
       ...base, ROOT: '../', key: 'works', PATH: `work/${p.slug}.html`,
       TITLE: `${p.title} | QBC Architects`, DESC: esc(metaDesc(p)),
       OG_IMAGE: ogUrl(p.hero),
+      LD: projectLd(p),
       TITLE_TEXT: esc(p.title), YEAR: esc(p.year), FACTS: facts(p), LOC_YEAR: esc([p.location, p.year].filter(Boolean).join(', ')),
       HERO_IMG: img(p.hero, { root: '../', sizes: '100vw', alt: p.title, eager: true, want: 2000 }),
       DESCRIPTION: cleanRich(p.description), GALLERY: gallery(p), NEXT: nextProject(p, projects), PREV: prevProject(p, projects),

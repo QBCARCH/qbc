@@ -1,9 +1,9 @@
 {
- "intro": "We provide architectural and interior design services from the first concept to the finished building. One studio carries the project through design, BIM coordination, permits and construction, so nothing gets lost between phases.",
+ "intro": "We provide architectural, interior design and visualisation services, from the first concept to the finished building. One studio carries the project through design, BIM coordination, permits and supervision, so nothing gets lost between phases. Outside Serbia we work together with your local architect of record.",
  "phases": [
   {
    "title": "Conceptual & Schematic Design",
-   "text": "We translate your vision into a viable spatial strategy. This phase involves rigorous site analysis, zoning evaluations, and the development of preliminary architectural concepts. We focus on optimizing spatial planning, massing, and functional relationships to establish a solid foundation for the project's development.",
+   "text": "We turn your brief into a clear spatial strategy. This phase covers site analysis, a review of planning conditions and the first architectural concepts, with a focus on layout, massing and the relationships between spaces.",
    "items": [
     {
      "title": "Site Context Analysis",
@@ -21,7 +21,7 @@
   },
   {
    "title": "Design Development & BIM Modeling",
-   "text": "Transitioning from concept to reality, we refine the architectural design through advanced Building Information Modeling (BIM). We finalize material selections, integrate structural and MEP (Mechanical, Electrical, and Plumbing) systems, and conduct comprehensive clash detection to resolve potential conflicts before they reach the construction site.",
+   "text": "We refine the design in a Building Information Model. Materials are selected, structure and building services are coordinated in the model, and clashes are resolved on screen before they can reach the construction site.",
    "items": [
     {
      "title": "Advanced 3D Integration",
@@ -34,6 +34,24 @@
     {
      "title": "Proactive Clash Detection",
      "text": "Identifying and resolving spatial conflicts between engineering disciplines before construction begins."
+    }
+   ]
+  },
+  {
+   "title": "Architectural Visualisation",
+   "text": "Photorealistic images, from first massing studies to final material choices. Renders are built from the same BIM model as the drawings, so what you approve is what gets documented.",
+   "items": [
+    {
+     "title": "Concept Visuals",
+     "text": "Early images that test massing, light and atmosphere before the design is fixed."
+    },
+    {
+     "title": "Material and Interior Studies",
+     "text": "Close views of finishes, furniture and lighting, so decisions can be made with confidence."
+    },
+    {
+     "title": "Presentation Imagery",
+     "text": "High-resolution images for investors, planning submissions and sales."
     }
    ]
   },
@@ -57,37 +75,37 @@
   },
   {
    "title": "Construction Administration & Oversight",
-   "text": "Our involvement continues on the construction site to protect your investment. We act as your technical representatives, conducting regular site inspections, reviewing contractor submittals, and managing change orders. We ensure that the project is executed exactly to our specifications, maintaining quality, budget, and schedule.",
+   "text": "After the building permit is issued, clients can engage us to supervise the construction of our own projects. We visit the site, review contractor submittals and answer technical questions, so the building is built as it was designed.",
    "items": [
     {
-     "title": "On-Site Quality Control",
-     "text": "Conducting systematic site inspections to ensure contractors strictly follow the approved technical documentation."
+     "title": "Site Visits",
+     "text": "Regular visits to check that the work follows the approved design and documentation."
     },
     {
-     "title": "Submittal and RFI Management",
-     "text": "Evaluating contractor shop drawings, material samples, and rapidly resolving technical requests for information."
+     "title": "Submittal Review",
+     "text": "Reviewing shop drawings and material samples against the specification."
     },
     {
-     "title": "Cost and Change Control",
-     "text": "Tracking construction progress and reviewing change orders, so delays and extra costs are caught before they grow."
+     "title": "Design Queries and Changes",
+     "text": "Answering contractors' technical questions and assessing proposed changes against the approved design."
     }
    ]
   },
   {
    "title": "Interior Architecture & Custom Detailing",
-   "text": "We extend our architectural vision into the interior environment. Our services include bespoke millwork design, material curation, and lighting design. We ensure a seamless transition between the exterior envelope and the interior spaces, creating cohesive and highly functional environments.",
+   "text": "We carry the architectural idea into the interior: custom joinery, lighting and the selection of materials, so that the building and its interior read as one.",
    "items": [
     {
      "title": "Bespoke Millwork Design",
-     "text": "Engineering custom cabinetry and built-in elements perfectly tailored to the specific spatial geometry."
+     "text": "Designing custom cabinetry and built-in elements tailored to the geometry of each space."
     },
     {
-     "title": "Lighting and Acoustic Strategies",
-     "text": "Developing integrated lighting plans and specifying acoustic treatments to maximize environmental comfort."
+     "title": "Lighting Design",
+     "text": "Integrated lighting plans that support how each space is used."
     },
     {
      "title": "Material Curation",
-     "text": "Sourcing high-quality interior finishes, fixtures, and hardware that seamlessly align with the exterior architectural vision."
+     "text": "Selecting interior finishes, fixtures and hardware that follow the architectural idea."
     }
    ]
   },

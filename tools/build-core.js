@@ -13,6 +13,7 @@ export const STANDARD_SERVICES = [
   '4. Construction Administration & Oversight',
   '5. Interior Architecture & Custom Detailing',
   '6. Feasibility Studies & Master Planning',
+  '7. Architectural Visualisation',
 ];
 
 // Izvori koji utiču na stranice koje zavise od projekata (admin ih cita sa GitHub-a).
@@ -38,9 +39,9 @@ const STATIC_PAGES = [
   { out: 'about.html', src: 'about', key: 'about', title: 'About Us | QBC Architects - Architectural & Urban Design',
     desc: 'Founded in 2010 by architects Slavoljub and Vladica Ljubić. A Belgrade studio with BIM workflows and first-hand knowledge of the Serbian permitting system.' },
   { out: 'services.html', src: 'services', key: 'services', title: 'Architectural Services | QBC Architects',
-    desc: 'We provide end-to-end architectural services, from schematic design and technical detailing to construction administration for residential and commercial projects.' },
+    desc: 'Architecture, interior design and visualisation by QBC Architects, Belgrade: concept and BIM design, permit documentation and architectural supervision.' },
   { out: 'contact.html', src: 'contact', key: 'contact', title: 'Contact QBC Architects | Start Your Project',
-    desc: 'Discuss your next residential or commercial project with QBC Architects. Reach out to our studio to consult on functional and architecturally sound design solutions.' },
+    desc: 'Tell us about your site, brief and timeline. QBC Architects, Belgrade, replies personally to every inquiry.' },
   { out: 'privacy-policy.html', src: 'privacy-policy', key: 'privacy', title: 'Privacy Policy | QBC Architects',
     desc: 'Read the privacy policy of QBC Architects. We are committed to protecting your personal information and ensuring transparency in our digital operations.' },
   { out: '404.html', src: '404', key: 'none', root: '/', title: 'Page not found | QBC Architects', desc: 'The page you are looking for does not exist.' },
@@ -293,7 +294,7 @@ export function buildSite(data, sources, { all = false } = {}) {
   out['our-work.html'] = render('our-work', sources, {
     ...base, key: 'works', PATH: 'our-work.html',
     TITLE: 'Portfolio | Featured Projects by QBC Architects',
-    DESC: 'Explore our selected architectural and interior design portfolio. View our high-end residential villas, commercial clinics, and luxury apartments in Belgrade, Montenegro, and beyond.',
+    DESC: 'Selected houses, apartments, hospitality and healthcare interiors by QBC Architects, Belgrade, in Serbia and Montenegro.',
     COUNT: String(projects.length).padStart(2, '0'), WORKS_GRID: worksGrid(projects), WORKS_INDEX: worksIndex(projects),
   });
   for (const p of projects) {

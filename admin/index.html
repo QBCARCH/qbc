@@ -356,6 +356,7 @@ function onSave() {
   // polja koja admin ne prikazuje (tip projekta i srpski tekstovi) ostaju netaknuta
   if (E.type) p.type = E.type;
   if (E.sr) p.sr = E.sr;
+  if (E.dark) p.dark = E.dark;
   const before = clone(S.data);
   if (E._index === null) S.data.projects.unshift(p); else S.data.projects[E._index] = p;
   // samo slike koje se i koriste

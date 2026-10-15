@@ -392,3 +392,37 @@ ul, ol { list-style: none; }
 .faq__a { padding: 0 calc(1.4rem + var(--gap)) clamp(20px, 3.4vh, 34px) calc(4rem + var(--gap)); max-width: 70ch; }
 .faq__item summary:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
 @media (max-width: 640px) { .faq__item summary { grid-template-columns: 2.4rem 1fr 1.4rem; } .faq__a { padding-left: calc(2.4rem + var(--gap)); padding-right: 0; } }
+
+/* nav sa blagom pozadinom kada nije preko slike (kao traka na Apple sajtu) */
+:root { --navh: 70px; }
+html:not(.over-hero) .nav { background: rgba(245, 243, 239, .86); -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); }
+
+/* tamna traka na pocetnoj: recenica i brojke */
+.band { background: #121110; color: #f1eee8; padding-block: clamp(96px, 18vh, 230px) clamp(56px, 10vh, 120px); }
+.band__stmt { font-weight: 300; font-size: clamp(2rem, 5.4vw, 5.6rem); line-height: 1.08; letter-spacing: -.035em; max-width: 20ch; margin-bottom: clamp(70px, 14vh, 170px); }
+.band__stmt .w { opacity: .22; transition: opacity .5s var(--ease); }
+.band__stmt .w.is-lit { opacity: 1; }
+.band .proof { padding-block: 0; }
+.band .proof__item { border-top-color: rgba(255, 255, 255, .18); }
+.band .proof__item b i, .band .proof .label { color: rgba(241, 238, 232, .55); }
+
+/* pocetna: pun ekran, par, pun ekran */
+.wgrid--home { row-gap: clamp(36px, 6vh, 72px); }
+.wgrid--home .wcard:first-child, .wgrid--home .wcard:last-child:nth-child(even) { grid-column: 1 / -1; }
+.wgrid--home .wcard:first-child .frame, .wgrid--home .wcard:last-child:nth-child(even) .frame { aspect-ratio: 21 / 9; }
+.wgrid--home .wcard:first-child .wcard__title, .wgrid--home .wcard:last-child:nth-child(even) .wcard__title { font-size: clamp(1.4rem, 2.2vw, 2.2rem); }
+
+/* stranica projekta: lepljiva traka sa podnavigacijom */
+.psub { position: sticky; top: 0; z-index: 45; background: rgba(245, 243, 239, .88); -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); border-bottom: 1px solid var(--line); transition: top .6s var(--ease); }
+body:has(.nav:not(.is-hidden)) .psub { top: var(--navh); }
+.psub__in { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding: 14px var(--pad); }
+.psub__t { font-weight: 400; }
+.psub__l { display: flex; gap: clamp(1rem, 2.4vw, 2.4rem); align-items: center; }
+.psub__l a { padding-block: .3em; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .5s var(--ease); }
+.psub__l a:hover { background-size: 100% 1px; }
+.psub__cta { padding: .45em 1.1em !important; border: 1px solid currentColor; border-radius: 999px; background: none !important; }
+.pinfo, .pgal { scroll-margin-top: 130px; }
+@media (max-width: 640px) { .psub__t { display: none; } .psub__in { justify-content: center; } }
+
+/* tamna galerija za projekte sa tamnim ili toplim vizualizacijama */
+.pgal--dark { background: #121110; padding-top: clamp(56px, 9vh, 110px); margin-top: clamp(40px, 8vh, 100px); }

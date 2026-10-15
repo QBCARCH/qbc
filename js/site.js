@@ -246,8 +246,28 @@
     els.forEach((e) => io.observe(e));
   };
 
+  // recenica se otkriva rec po rec kako se skroluje; bez JS-a ili uz smanjeno kretanje vidi se cela
+  const initWords = () => {
+    const el = $('[data-words]');
+    if (!el || reduce) return;
+    const words = el.textContent.trim().split(/\s+/);
+    el.setAttribute('aria-label', words.join(' '));
+    el.innerHTML = words.map((w) => `<span class="w" aria-hidden="true">${w}</span>`).join(' ');
+    const spans = $$('.w', el);
+    let raf = 0;
+    const paint = () => {
+      raf = 0;
+      const r = el.getBoundingClientRect(), vh = innerHeight;
+      const p = clamp((vh * .82 - r.top) / (vh * .5));
+      const n = Math.round(p * spans.length);
+      spans.forEach((x, i) => x.classList.toggle('is-lit', i < n));
+    };
+    addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(paint); }, { passive: true });
+    paint();
+  };
+
   const boot = () => {
-    initPicks(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox(); initForm(); initCount();
+    initPicks(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

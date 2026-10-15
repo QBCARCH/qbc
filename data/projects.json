@@ -1159,7 +1159,8 @@
       "sr": {
         "type": "Enterijer stana",
         "description": "<p>Kompaktan stan oblikovan toplom, suzdržanom paletom hrasta, peska i tamnoplave boje. Dnevna soba, trpezarija i kuhinja dele jedan otvoren prostor, dok ugrađena stolarija, radna niša i spavaća soba sa skrivenim ormarima čuvaju efikasnost osnove.</p><p>Mekana dnevna svetlost, slojevito osvetljenje i nekoliko skulpturalnih predmeta daju enterijeru mir i karakter.</p>"
-      }
+      },
+      "dark": true
     },
     {
       "slug": "clinic-ztb",
@@ -1677,7 +1678,8 @@
         "type": "Ugostiteljski enterijer",
         "description": "<p>Caffe Spass zauzima prostor dvostruke visine u Ulici kralja Petra u Beogradu. Zadržali smo sirovu konstrukciju od čeličnih stubova, golog betona i kasetiranog plafona, a naspram nje postavili smelu paletu crvene, crne i bele, sa mezaninom koji se nadvija nad glavnom salom.</p><p>Šarene pločice, grafički šank, skulpturalne figure i linijsko osvetljenje čine živahan prostor snažnog identiteta.</p>",
         "location": "Beograd, Srbija"
-      }
+      },
+      "dark": true
     },
     {
       "slug": "apartment-sakura-2-24",

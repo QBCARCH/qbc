@@ -418,7 +418,7 @@ export function buildSite(data, sources, { all = false } = {}) {
         TITLE_TEXT: esc(p.title), YEAR: esc(p.year), FACTS: facts(p, lang),
         LOC_YEAR: esc([tr(p, 'location', lang), p.year].filter(Boolean).join(', ')),
         HERO_IMG: img(p.hero, { root: depth, sizes: '100vw', alt: altOf(p, lang), eager: true, want: 2000 }),
-        DESCRIPTION: cleanRich(tr(p, 'description', lang)), GALLERY: gallery(p, lang, depth),
+        GAL_CLASS: p.dark ? ' pgal--dark' : '', DESCRIPTION: cleanRich(tr(p, 'description', lang)), GALLERY: gallery(p, lang, depth),
         NEXT: nextProject(p, projects, lang, depth), PREV: prevProject(p, projects, lang),
       });
     }

@@ -245,8 +245,33 @@
     lb.addEventListener('touchend', (e) => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1)); x0 = null; });
   };
 
+
+  /* kontakt forma: salje preko FormSubmit (AJAX); bez JS-a radi obican POST sa povratkom na ?sent=1 */
+  const initForm = () => {
+    const f = $('[data-form]');
+    if (!f) return;
+    const st = $('[data-form-status]', f), btn = $('button[type="submit"]', f);
+    const say = (t, err) => { st.textContent = t; st.classList.toggle('is-error', !!err); };
+    if (/[?&]sent=1/.test(location.search)) say('Thank you. Your message has been sent, we will reply soon.');
+    f.addEventListener('submit', async (e) => {
+      if (!window.fetch) return;
+      e.preventDefault();
+      if (f._honey && f._honey.value) return;
+      btn.disabled = true; say('Sending...');
+      try {
+        const r = await fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+          method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(f) });
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status);
+        f.reset(); say('Thank you. Your message has been sent, we will reply soon.');
+      } catch {
+        say('The message could not be sent. Please write to office@qbc.rs or call +381 63 411 066.', true);
+      } finally { btn.disabled = false; }
+    });
+  };
+
   const boot = () => {
-    initPicks(); initWeight(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox();
+    initPicks(); initWeight(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox(); initForm();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

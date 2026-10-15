@@ -78,6 +78,50 @@
     </div>
   </header>
 
+  <section class="sec wrap grid cform-wrap" id="form">
+    <div class="cform__intro">
+      <p class="label mute" data-reveal>Project inquiry /</p>
+      <h2 class="h2" data-reveal>Tell us about your project</h2>
+      <p class="body" data-reveal>A few details help us reply with something useful.</p>
+    </div>
+    <form class="cform" action="https://formsubmit.co/office@qbc.rs" method="POST" data-form>
+      <input type="hidden" name="_subject" value="New inquiry from qbc.rs">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.qbc.rs/contact.html?sent=1#form">
+      <p class="cform__hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
+      <label class="cform__f"><span class="label mute">Name *</span><input name="name" type="text" required autocomplete="name"></label>
+      <label class="cform__f"><span class="label mute">Email *</span><input name="email" type="email" required autocomplete="email"></label>
+      <label class="cform__f"><span class="label mute">Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
+      <label class="cform__f"><span class="label mute">Project location</span><input name="location" type="text" placeholder="City, country"></label>
+      <label class="cform__f"><span class="label mute">Project type</span>
+        <select name="project_type">
+          <option value="">Select</option>
+          <option>House or villa</option>
+          <option>Apartment or interior</option>
+          <option>Residential building</option>
+          <option>Hospitality or commercial</option>
+          <option>Feasibility study</option>
+          <option>Other</option>
+        </select></label>
+      <label class="cform__f"><span class="label mute">Project stage</span>
+        <select name="stage">
+          <option value="">Select</option>
+          <option>Just an idea</option>
+          <option>Plot or property secured</option>
+          <option>Design in progress</option>
+          <option>Permit stage</option>
+          <option>Construction</option>
+        </select></label>
+      <label class="cform__f cform__f--full"><span class="label mute">Message *</span><textarea name="message" rows="5" required></textarea></label>
+      <p class="cform__note label mute cform__f--full">By sending this form you agree that we use your details to reply to your inquiry. See the <a href="privacy-policy.html">privacy policy</a>.</p>
+      <div class="cform__f--full cform__actions">
+        <button class="btn btn--round" type="submit">Send inquiry</button>
+        <p class="cform__status" data-form-status role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </section>
+
   <section class="sec cmain">
     <div class="wrap grid">
       <figure class="cmain__img"><div class="frame" data-ip><img src="assets/contact.jpg" width="865" height="518" loading="lazy" alt="QBC Architects"></div></figure>

@@ -1,0 +1,70 @@
+{
+ "en": [
+  {
+   "q": "Do you work with clients outside Serbia?",
+   "a": "Yes. Concept design, interior design and architectural visualisation can be done fully remotely, with video meetings in English. For a building outside Serbia we work together with your local architect of record, who handles the permit in that country. For projects in Serbia we handle the whole process."
+  },
+  {
+   "q": "What do you need to start a project?",
+   "a": "The location of the plot or the property, any documents you already have for it, a short description of what you need, a rough budget and your target timeline. If you do not have all of it yet, send what you have and we will help you complete the brief."
+  },
+  {
+   "q": "How are fees agreed?",
+   "a": "You receive a written proposal before work begins. It lists the scope of services, the phases and the fee for each phase, so you know what you get and what it costs at every stage."
+  },
+  {
+   "q": "How long does a project take?",
+   "a": "It depends on the size and complexity of the project and on the permit procedure. A concept usually takes several weeks, and a full set of documents takes a few months. We give a schedule in the proposal and update it as the project moves forward."
+  },
+  {
+   "q": "What is CEOP and how does it affect my project?",
+   "a": "CEOP is the Serbian national e-permit system, through which building permits are applied for electronically. Slavoljub Ljubić worked at the Serbian Ministry of Construction and knows the regulations and the procedure well, so we plan the permit path from the first sketch and prepare documentation that meets the requirements."
+  },
+  {
+   "q": "Do you supervise construction?",
+   "a": "Yes, on our own projects. After the building permit is issued, clients can engage us to supervise the construction: site visits, review of contractor submittals and answers to technical questions. We are architects, not a contractor, so we do not build."
+  },
+  {
+   "q": "Do you design interiors on their own?",
+   "a": "Yes. Apartments, restaurants, cafes and clinics are a regular part of our work. We design the layout, custom joinery, lighting and materials, and prepare drawings and renders that a contractor can use."
+  },
+  {
+   "q": "Which software and workflow do you use?",
+   "a": "We work in Autodesk Revit. One BIM model drives the plans, sections, schedules and renders, and it is coordinated with structure and building services so that clashes are found on screen, before construction."
+  }
+ ],
+ "sr": [
+  {
+   "q": "Da li radite sa klijentima van Srbije?",
+   "a": "Da. Idejno rešenje, dizajn enterijera i arhitektonska vizualizacija mogu se raditi potpuno na daljinu, uz video sastanke na engleskom jeziku. Za objekat van Srbije sarađujemo sa vašim lokalnim arhitektom koji vodi dozvolu u toj državi. Za projekte u Srbiji vodimo ceo postupak."
+  },
+  {
+   "q": "Šta vam je potrebno da biste počeli projekat?",
+   "a": "Lokacija parcele ili nekretnine, dokumenta koja već imate, kratak opis onoga što vam treba, okvirni budžet i željeni rok. Ako nemate sve, pošaljite ono što imate, pa ćemo zajedno dopuniti zadatak."
+  },
+  {
+   "q": "Kako se dogovara cena?",
+   "a": "Pre početka rada dobijate pisanu ponudu sa obimom usluga, fazama i cenom svake faze, tako da u svakom trenutku znate šta dobijate i koliko košta."
+  },
+  {
+   "q": "Koliko traje izrada projekta?",
+   "a": "Zavisi od veličine i složenosti projekta i od postupka izdavanja dozvola. Koncept obično traje nekoliko nedelja, a kompletna dokumentacija nekoliko meseci. Dinamiku dajemo u ponudi i ažuriramo je kako projekat odmiče."
+  },
+  {
+   "q": "Šta je CEOP i kako utiče na moj projekat?",
+   "a": "CEOP je centralni sistem za elektronsko podnošenje zahteva za građevinske dozvole u Srbiji. Slavoljub Ljubić radio je u Ministarstvu građevinarstva i dobro poznaje propise i postupak, pa put do dozvole planiramo od prve skice i pripremamo dokumentaciju koja ispunjava uslove."
+  },
+  {
+   "q": "Da li vršite nadzor nad izgradnjom?",
+   "a": "Da, na našim projektima. Nakon dobijanja građevinske dozvole klijenti nas mogu angažovati za arhitektonski nadzor: obilaske gradilišta, pregled dokumentacije izvođača i odgovore na tehnička pitanja. Mi smo arhitekte, a ne izvođač, pa ne gradimo."
+  },
+  {
+   "q": "Da li radite samo enterijere?",
+   "a": "Da, i to. Stanovi, restorani, kafei i klinike redovan su deo našeg rada. Projektujemo raspored, stolariju po meri, osvetljenje i materijale, a pripremamo crteže i vizualizacije koje izvođač može da koristi."
+  },
+  {
+   "q": "Koje softvere i način rada koristite?",
+   "a": "Radimo u programu Autodesk Revit. Jedan BIM model daje osnove, preseke, specifikacije i vizualizacije, a usklađen je sa konstrukcijom i instalacijama, pa se kolizije otkrivaju na ekranu, pre izgradnje."
+  }
+ ]
+}

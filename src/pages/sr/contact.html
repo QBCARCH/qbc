@@ -1,0 +1,74 @@
+{{> head}}
+{{> nav}}
+<main class="page" id="main">
+  <header class="chero">
+    <p class="label mute" data-reveal>Kontakt /</p>
+    <h1 class="display">Razgovarajmo o vašem projektu</h1>
+    <p class="chero__lead lead" data-reveal>Recite nam o parceli, zadatku i rokovima. Čitamo svaki upit i lično odgovaramo.</p>
+    <div class="chat label">
+      <a class="btn btn--round" href="tel:+381634110066">Pozovite</a>
+      <a class="btn btn--round" href="https://wa.me/381634110066" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn--round" href="viber://chat?number=%2B381634110066">Viber</a>
+      <a class="btn btn--round" href="sms:+381634110066">SMS</a>
+    </div>
+  </header>
+
+  <section class="sec wrap grid cform-wrap" id="form">
+    <div class="cform__intro">
+      <p class="label mute" data-reveal>Upit za projekat /</p>
+      <h2 class="h2" data-reveal>Recite nam o vašem projektu</h2>
+      <p class="body" data-reveal>Nekoliko podataka pomaže nam da odgovorimo smisleno.</p>
+    </div>
+    <form class="cform" action="https://formsubmit.co/office@qbc.rs" method="POST" data-form>
+      <input type="hidden" name="_subject" value="Novi upit sa qbc.rs (srpski)">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.qbc.rs/sr/contact.html?sent=1#form">
+      <p class="cform__hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
+      <label class="cform__f"><span class="label mute">Ime *</span><input name="name" type="text" required autocomplete="name"></label>
+      <label class="cform__f"><span class="label mute">E-pošta *</span><input name="email" type="email" required autocomplete="email"></label>
+      <label class="cform__f"><span class="label mute">Telefon</span><input name="phone" type="tel" autocomplete="tel"></label>
+      <label class="cform__f"><span class="label mute">Lokacija projekta</span><input name="location" type="text" placeholder="Grad, država"></label>
+      <label class="cform__f"><span class="label mute">Vrsta projekta</span>
+        <select name="project_type">
+          <option value="">Izaberite</option>
+          <option value="House or villa">Kuća ili vila</option>
+          <option value="Apartment or interior">Stan ili enterijer</option>
+          <option value="Residential building">Stambena zgrada</option>
+          <option value="Hospitality or commercial">Ugostiteljstvo ili poslovni prostor</option>
+          <option value="Feasibility study">Studija izvodljivosti</option>
+          <option value="Other">Drugo</option>
+        </select></label>
+      <label class="cform__f"><span class="label mute">Faza projekta</span>
+        <select name="stage">
+          <option value="">Izaberite</option>
+          <option value="Just an idea">Tek ideja</option>
+          <option value="Plot or property secured">Parcela ili nekretnina obezbeđena</option>
+          <option value="Design in progress">Projekat u izradi</option>
+          <option value="Permit stage">Faza dozvola</option>
+          <option value="Construction">Izgradnja</option>
+        </select></label>
+      <label class="cform__f cform__f--full"><span class="label mute">Poruka *</span><textarea name="message" rows="5" required></textarea></label>
+      <p class="cform__note label mute cform__f--full">Slanjem ovog obrasca saglasni ste da vaše podatke koristimo da odgovorimo na upit. Pogledajte <a href="privacy-policy.html">politiku privatnosti</a>.</p>
+      <div class="cform__f--full cform__actions">
+        <button class="btn btn--round" type="submit">Pošalji upit</button>
+        <p class="cform__status" data-form-status role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </section>
+
+  <div class="wide wide--full frame"><img src="{{ROOT}}assets/contact-900.jpg" srcset="{{ROOT}}assets/contact-900.jpg 900w, {{ROOT}}assets/contact.jpg 1366w" sizes="100vw" width="1366" height="768" loading="lazy" alt="Centar za događaje, Trnava"></div>
+
+  <section class="sec cmain">
+    <div class="wrap grid">
+      <p class="label mute cmain__label">Pratite QBCarchitects</p>
+      <div class="cmain__soc">
+        <a href="https://x.com/QBCArchitects" target="_blank" rel="noopener"><span>X</span><span class="label">↗</span></a>
+        <a href="https://www.instagram.com/qbcarchitects/" target="_blank" rel="noopener"><span>Instagram</span><span class="label">↗</span></a>
+        <a href="https://www.pinterest.com/qbcarchitects" target="_blank" rel="noopener"><span>Pinterest</span><span class="label">↗</span></a>
+        <a href="https://www.behance.net/qbcarchitects" target="_blank" rel="noopener"><span>Behance</span><span class="label">↗</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+{{> footer}}

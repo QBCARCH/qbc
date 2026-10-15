@@ -5,7 +5,7 @@
   "projects": [
     {
       "slug": "trnava-25-51-1",
-      "title": "Trnava 25 51 1",
+      "title": "Event Center, Trnava",
       "year": "2026",
       "services": [
         "1. Conceptual & Schematic Design",
@@ -14,7 +14,7 @@
         "4. Construction Administration & Oversight",
         "5. Interior Architecture & Custom Detailing"
       ],
-      "description": "<p>Designed by QBC Architects, this event center and restaurant in Trnava, near Topola, balances contemporary hospitality architecture with the authentic character of the Šumadija landscape.</p><p>The concept is built on clean structural lines and an open spatial flow, free of unnecessary partitions. Large glazed surfaces dissolve the boundary between interior and surroundings, so nature becomes part of every occasion, from weddings and celebrations to business gatherings and family events.</p><p>The result is an elegant venue that relies on simplicity, light and a connection to place rather than on decoration.</p>",
+      "description": "<p>Designed by QBC Architects, this event center stands in the middle of an orchard near Trnava, close to Topola, with two small guest houses for overnight stays beside it. When no event is taking place, it works as a restaurant. The architecture balances contemporary hospitality design with the authentic character of the Šumadija landscape.</p><p>The concept is built on clean structural lines and an open spatial flow, free of unnecessary partitions. Large glazed surfaces dissolve the boundary between interior and surroundings, so nature becomes part of every occasion, from weddings and celebrations to business gatherings and family events.</p><p>The result is an elegant venue that relies on simplicity, light and a connection to place rather than on decoration.</p>",
       "cover": {
         "file": "1a137178ecc3c2c3c_Trnava-5.webp",
         "widths": [
@@ -177,7 +177,16 @@
           "og": "1a13718134fc1c458_Trnava-14-og.jpg"
         }
       ],
-      "added": "2026-10-13"
+      "added": "2026-10-13",
+      "location": "Trnava, Topola, Serbia",
+      "status": "Under construction",
+      "type": "Event venue and restaurant",
+      "sr": {
+        "type": "Centar za događaje i restoran",
+        "description": "<p>Centar za događaje, delo QBC Architects, nalazi se usred voćnjaka u Trnavi kod Topole, a pored njega su dve male kuće za noćenje. Kada nema događaja, radi kao restoran. Arhitektura spaja savremeno ugostiteljsko projektovanje sa autentičnim karakterom šumadijskog pejzaža.</p><p>Koncept počiva na čistim konstruktivnim linijama i otvorenom toku prostora, bez nepotrebnih pregrada. Velike staklene površine brišu granicu između enterijera i okoline, pa priroda postaje deo svake prilike, od venčanja i proslava do poslovnih skupova i porodičnih okupljanja.</p><p>Rezultat je elegantan prostor koji se oslanja na jednostavnost, svetlost i vezu sa mestom, a ne na dekoraciju.</p>",
+        "location": "Trnava, Topola, Srbija",
+        "status": "U izgradnji"
+      }
     },
     {
       "slug": "villa-dve-koracica-kosmaj",
@@ -222,7 +231,7 @@
         "h": 768,
         "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg"
       },
-      "description": "<p>Nestled in the tranquil landscape of Koraćica, right at the foothills of Mount Kosmaj, this residential project represents a perfect fusion of modern architecture and natural serenity. The estate features two independently designed, single-story villas, thoughtfully positioned to maximize both the gently sloping terrain and the sweeping views of the surrounding woodland. With a footprint that occupies just over 20% of the land, the design ensures that lush green spaces remain the true protagonist of the property.  </p><p>Both residences are defined by clean lines, flat roofs, and a warm material palette. The façades feature a sophisticated combination of decorative silicate render and ventilated Siberian larch cladding, creating an aesthetic that is both contemporary and deeply rooted in its environment. Inside, the layouts are open and light-filled, featuring expansive living zones with three-meter-high ceilings that seamlessly transition into large outdoor terraces and private swimming pools.  </p><p>Beyond their striking appearance, these homes are engineered for the future. Built using an advanced prefabricated timber-frame system, they offer exceptional thermal performance and acoustic insulation, placing them at the highest standards of energy efficiency. From the underfloor heating to the smartly integrated basement utility spaces, every detail has been crafted to provide an effortless, luxurious, and highly sustainable living experience. </p><p>‍</p>",
+      "description": "<p>Two independently designed single-storey villas stand in the quiet landscape of Koraćica, at the foot of Mount Kosmaj. They are placed to follow the gently sloping terrain and to open towards the views of the surrounding woodland. The buildings cover just over 20% of the plot, so green space stays the main character of the property.</p><p>Both houses have clean lines, flat roofs and a warm material palette: decorative silicate render combined with ventilated Siberian larch cladding. Inside, the layouts are open and bright, with living areas under three-metre ceilings that open onto large terraces and private swimming pools.</p><p>The houses are built as a prefabricated timber-frame system with good thermal and acoustic performance, with underfloor heating and utility spaces integrated in the basement.</p>",
       "gallery": [
         {
           "file": "6aa293afab9b9e93867394a1_1 - 1.webp",
@@ -326,7 +335,16 @@
           "h": 2186,
           "og": "6aa28fe53a611c20e8568f6d_2 - 5-og.jpg"
         }
-      ]
+      ],
+      "location": "Koraćica, Kosmaj, Serbia",
+      "status": "Under construction",
+      "type": "Residential, villas",
+      "sr": {
+        "type": "Stanovanje, vile",
+        "description": "<p>Dve samostalno projektovane prizemne vile stoje u mirnom pejzažu Koraćice, u podnožju Kosmaja. Postavljene su tako da prate blago nagnut teren i otvaraju se ka pogledu na okolnu šumu. Objekti zauzimaju nešto više od 20% parcele, pa zelenilo ostaje glavna odlika imanja.</p><p>Obe kuće imaju čiste linije, ravne krovove i toplu paletu materijala: dekorativni silikatni malter u kombinaciji sa ventilisanom fasadom od sibirskog ariša. Unutra su rasporedi otvoreni i svetli, sa dnevnim zonama pod tri metra visokim plafonima koje se otvaraju ka velikim terasama i privatnim bazenima.</p><p>Kuće su građene kao montažni sistem od drvene konstrukcije, sa dobrim toplotnim i zvučnim performansama, podnim grejanjem i instalacionim prostorima u suterenu.</p>",
+        "location": "Koraćica, Kosmaj, Srbija",
+        "status": "U izgradnji"
+      }
     },
     {
       "slug": "villas-divcibare-srb",
@@ -384,7 +402,7 @@
         "h": 2160,
         "og": "6aa2845f582915882762379c_Image73-og.jpg"
       },
-      "description": "<p>Nestled in the serene mountain landscape of Divčibare, this contemporary residential estate redefines alpine living<!-- -->. The project consists of a spacious family home and a thoughtfully designed guest house, both crafted to harmonize flawlessly with their natural surroundings<!-- -->. Combining the warmth of Siberian larch with the sleekness of anthracite steel, the architecture offers a modern interpretation of the traditional mountain retreat<!-- -->.  </p><p>The main residence is designed around natural light and open space, featuring impressive three-meter-high ceilings and a grand living area anchored by a central fireplace<!-- -->. It serves as a true private sanctuary, complete with a dedicated lower-level SPA and wellness zone that flows seamlessly onto an outdoor terrace<!-- -->. The accompanying guest house mirrors this sophisticated comfort, offering an open-plan layout, its own sauna, and a charming sleeping gallery<!-- -->.  </p><p>Beyond its striking aesthetics, the estate is built for ultimate comfort and sustainability<!-- -->. With advanced thermal insulation, underfloor heating powered by heat pumps, and integrated smart home technology, it provides a highly energy-efficient haven<!-- -->. This project is not just a house; it is a meticulously engineered retreat where modern luxury meets the untamed beauty of nature<!-- -->. </p><p>‍</p>",
+      "description": "<p>On a mountain site in Divčibare, a family house and a guest house offer a contemporary interpretation of the traditional mountain retreat. Siberian larch and anthracite steel give the buildings warmth and a sharp modern outline, and place them calmly among the surrounding trees.</p><p>The main house is organised around daylight and open space: three-metre ceilings, a living area centred on a fireplace, and a lower-level SPA and wellness zone that opens onto an outdoor terrace. The guest house follows the same approach, with an open-plan layout, its own sauna and a sleeping gallery.</p><p>Both buildings are well insulated, with underfloor heating powered by heat pumps and an integrated smart home system.</p>",
       "gallery": [
         {
           "file": "6aa2849bbd2b340604672c09_Image69.webp",
@@ -701,7 +719,16 @@
           "h": 2160,
           "og": "6aa2849ed42b40dc0a892a6e_Image76-og.jpg"
         }
-      ]
+      ],
+      "location": "Divčibare, Serbia",
+      "status": "Under construction",
+      "type": "Residential, villas",
+      "sr": {
+        "type": "Stanovanje, vile",
+        "description": "<p>Na planinskoj parceli na Divčibarama, porodična kuća i kuća za goste nude savremeno tumačenje tradicionalnog planinskog utočišta. Sibirski ariš i antracit čelik daju objektima toplinu i oštru savremenu siluetu, i mirno ih smeštaju među okolna stabla.</p><p>Glavna kuća je organizovana oko dnevne svetlosti i otvorenog prostora: plafoni visine tri metra, dnevna zona u središtu sa kaminom i SPA i vellness zona na nižem nivou koja se otvara ka spoljnoj terasi. Kuća za goste sledi isti pristup, sa otvorenom osnovom, sopstvenom saunom i galerijom za spavanje.</p><p>Oba objekta su dobro izolovana, sa podnim grejanjem na toplotne pumpe i integrisanim sistemom pametne kuće.</p>",
+        "location": "Divčibare, Srbija",
+        "status": "U izgradnji"
+      }
     },
     {
       "slug": "liman-2-ulcinj-mne",
@@ -746,7 +773,7 @@
         "h": 1080,
         "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
       },
-      "description": "<p>Located on the beautiful coast of the Adriatic Sea, at Liman 2 Beach in the charming town of Ulcinj, this modern residential-commercial project is designed to blend seamlessly with its unique terrain. The building adopts a cascading form to adapt to the complex topography, making it a standout feature in its environment.</p>",
+      "description": "<p>Located above Liman 2 beach in Ulcinj, on the Montenegrin coast, this residential and commercial building follows the steep, wooded slope instead of fighting it. The volume is broken into cascading terraces, so the apartments step down the hill and each one gets its own open terrace with planting and a view of the sea.</p><p>The material palette comes from the Adriatic tradition: local stone walls, white rendered volumes, timber shutters and planted parapets. Seen from the beach, the building reads as part of the hillside rather than as a single block.</p>",
       "gallery": [
         {
           "file": "673bbf0a0fe95df33293962b_Image1_000.webp",
@@ -894,7 +921,14 @@
           "h": 1080,
           "og": "673bbf068bcb205827a5fe75_Image2_023-og.jpg"
         }
-      ]
+      ],
+      "location": "Ulcinj, Montenegro",
+      "type": "Residential and commercial building",
+      "sr": {
+        "type": "Stambeno-poslovni objekat",
+        "description": "<p>Ovaj stambeno-poslovni objekat, iznad plaže Liman 2 u Ulcinju na crnogorskom primorju, prati strmu, šumovitu padinu umesto da se s njom bori. Zapremina je razlomljena u kaskadne terase, pa se stanovi spuštaju niz brdo i svaki dobija sopstvenu otvorenu terasu sa zelenilom i pogledom na more.</p><p>Paleta materijala potiče iz jadranske tradicije: zidovi od lokalnog kamena, beli malterisani volumeni, drvene grilje i ozelenjeni parapeti. Gledan sa plaže, objekat se čita kao deo padine, a ne kao jedinstven blok.</p>",
+        "location": "Ulcinj, Crna Gora"
+      }
     },
     {
       "slug": "apartment-pb-23-mb",
@@ -939,7 +973,7 @@
         "h": 900,
         "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
       },
-      "description": "<p>This apartment is designed with the principles of contemporary architectural minimalism in mind, focusing on functionality and maximizing space. The open-plan living area, which integrates the living room and kitchen, creates a sense of spaciousness and fluidity. This concept is ideal for modern lifestyles, allowing different functional zones to flow seamlessly into one another.</p><p>‍</p>",
+      "description": "<p>A compact apartment shaped by a warm, restrained palette of oak, sand and deep navy. The living room, dining area and kitchen share one open space, while built-in joinery, a study niche and a bedroom with concealed storage keep the plan efficient.</p><p>Soft daylight, layered lighting and a few sculptural pieces give the interior calm and character.</p>",
       "gallery": [
         {
           "file": "67320986257506d26ea3aba9_IMG-20241110-WA0007.webp",
@@ -1120,7 +1154,13 @@
           "h": 1600,
           "og": "673209820ebf7cf7dfd8953f_IMG-20241110-WA0001-og.jpg"
         }
-      ]
+      ],
+      "type": "Residential interior",
+      "sr": {
+        "type": "Enterijer stana",
+        "description": "<p>Kompaktan stan oblikovan toplom, suzdržanom paletom hrasta, peska i tamnoplave boje. Dnevna soba, trpezarija i kuhinja dele jedan otvoren prostor, dok ugrađena stolarija, radna niša i spavaća soba sa skrivenim ormarima čuvaju efikasnost osnove.</p><p>Mekana dnevna svetlost, slojevito osvetljenje i nekoliko skulpturalnih predmeta daju enterijeru mir i karakter.</p>"
+      },
+      "dark": true
     },
     {
       "slug": "clinic-ztb",
@@ -1167,7 +1207,7 @@
         "h": 1080,
         "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
       },
-      "description": "<p>‍<!-- -->Nestled in the serene surroundings of a picturesque mountain landscape, this clinic offers a unique blend of modern design and natural materials to create a healing sanctuary. The interior design project focuses on incorporating the natural beauty of the environment into the clinical spaces, ensuring a calming and restorative atmosphere for all visitors.</p><p>‍</p>",
+      "description": "<p>An interior for a private clinic on Zlatibor, designed as a calm, hotel-like space rather than a clinical one. The reception and waiting lounge combine soft upholstered seating, walnut tables and plants with a large botanical wall finish behind glass, so the first impression is warmth instead of corridors and white tiles.</p><p>The treatment rooms continue the same palette of warm stone-coloured surfaces, timber and brass. Built-in counters with brass basins, concealed storage and soft pendant lighting keep the rooms practical for daily work, while the washrooms get a stronger character with dark marble and patterned wallpaper.</p>",
       "gallery": [
         {
           "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
@@ -1451,7 +1491,14 @@
           "h": 1080,
           "og": "672a2ab176f5562ed0c62668_r12_20(6)-enhanced-og.jpg"
         }
-      ]
+      ],
+      "location": "Zlatibor, Serbia",
+      "type": "Healthcare interior",
+      "sr": {
+        "type": "Enterijer zdravstvene ustanove",
+        "description": "<p>Enterijer privatne klinike na Zlatiboru, osmišljen kao miran prostor nalik hotelskom, a ne kao klinički. Recepcija i čekaonica kombinuju mekano tapacirano sedenje, orahove stolove i biljke sa velikom botaničkom zidnom obradom iza stakla, tako da je prvi utisak toplina, a ne hodnici i bele pločice.</p><p>Ordinacije nastavljaju istu paletu toplih kamenih površina, drveta i mesinga. Ugrađeni pultovi sa mesinganim lavaboima, skriveni ormari i meko privesno osvetljenje čine prostorije praktičnim za svakodnevni rad, dok sanitarni čvorovi dobijaju snažniji karakter tamnim mermerom i šarenom tapetom.</p>",
+        "location": "Zlatibor, Srbija"
+      }
     },
     {
       "slug": "caffe-spass-belgrade",
@@ -1499,7 +1546,7 @@
         "h": 1080,
         "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
       },
-      "description": "<p>Cafe Spass in Belgrade, located on Kralja Petra Street, showcases a modern chic design that captivates visitors with its unique and eclectic elements. The interior features a harmonious blend of bold colors, including orange, blue, and gray, which create a vibrant and dynamic atmosphere.           </p><p>                        </p><p>‍</p>",
+      "description": "<p>Caffe Spass occupies a double-height space on Kralja Petra Street in Belgrade. We kept the raw structure of steel columns, exposed concrete and coffered ceiling, and set against it a bold palette of red, black and white, with a mezzanine overlooking the main floor.</p><p>Patterned tiles, a graphic bar counter, sculptural figures and line lighting make a lively room with a strong identity.</p>",
       "gallery": [
         {
           "file": "672a2910745565a8de07f66e_Image1_005-enhanced.webp",
@@ -1624,7 +1671,15 @@
           "h": 1080,
           "og": "672a290e6fd8345c3412c8f4_Image1-enhanced 5-og.jpg"
         }
-      ]
+      ],
+      "location": "Belgrade, Serbia",
+      "type": "Hospitality interior",
+      "sr": {
+        "type": "Ugostiteljski enterijer",
+        "description": "<p>Caffe Spass zauzima prostor dvostruke visine u Ulici kralja Petra u Beogradu. Zadržali smo sirovu konstrukciju od čeličnih stubova, golog betona i kasetiranog plafona, a naspram nje postavili smelu paletu crvene, crne i bele, sa mezaninom koji se nadvija nad glavnom salom.</p><p>Šarene pločice, grafički šank, skulpturalne figure i linijsko osvetljenje čine živahan prostor snažnog identiteta.</p>",
+        "location": "Beograd, Srbija"
+      },
+      "dark": true
     },
     {
       "slug": "apartment-sakura-2-24",
@@ -1668,7 +1723,7 @@
         "h": 1080,
         "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
       },
-      "description": "<p>This beautifully designed apartment Sakura 2/24 in Belgrade masterfully combines minimalism with natural materials, providing a harmonious and serene living environment.</p><p>‍</p>",
+      "description": "<p>This Belgrade apartment takes a light, warm direction. Textured plaster walls, light oak and a long marble bench define the living room, where a fluted timber sliding panel hides the TV and turns the media wall into a bookcase when the screen is off.</p><p>The kitchen with its island sits in a softly lit niche, and the bedroom repeats the plaster and timber palette with a full-height headboard wall. The aim was a quiet, natural interior that is easy to live with every day.</p>",
       "gallery": [
         {
           "file": "672a2123e35c53ec87556c9d_Dnevna_201_001-enhanced.webp",
@@ -1747,7 +1802,14 @@
           "h": 1080,
           "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
         }
-      ]
+      ],
+      "location": "Belgrade, Serbia",
+      "type": "Residential interior",
+      "sr": {
+        "type": "Enterijer stana",
+        "description": "<p>Ovaj beogradski stan ide u svetlom, toplom pravcu. Teksturisani malterisani zidovi, svetli hrast i duga mermerna klupa određuju dnevnu sobu, u kojoj žljebljeni drveni klizni panel skriva televizor i pretvara zid sa medijima u biblioteku kada je ekran isključen.</p><p>Kuhinja sa ostrvom smeštena je u blago osvetljenoj niši, a spavaća soba ponavlja paletu maltera i drveta uz zid uzglavlja do plafona. Cilj je bio miran, prirodan enterijer u kome se lako živi svakog dana.</p>",
+        "location": "Beograd, Srbija"
+      }
     },
     {
       "slug": "apartment-sakura-1-24",
@@ -1788,7 +1850,7 @@
         "h": 1080,
         "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
       },
-      "description": "<p>Apartment Sakura 1/24 in Belgrade is a haven of modern design with crisp lines and a soothing palette of soft colors.</p>",
+      "description": "<p>A compact Belgrade apartment designed around one open living space. The living room, kitchen and dining bar are tied together by continuous oak surfaces and a dark graphite palette, with a slim metal shelving unit that separates the zones without closing them off.</p><p>Storage is built into wall-to-wall joinery, the kitchen sits in a timber niche with a breakfast bar, and the bedroom keeps the same calm tones with an upholstered headboard wall. The apartment feels larger than its footprint because every piece of storage has its place in the joinery.</p>",
       "gallery": [
         {
           "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
@@ -1894,7 +1956,14 @@
           "h": 1080,
           "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
         }
-      ]
+      ],
+      "location": "Belgrade, Serbia",
+      "type": "Residential interior",
+      "sr": {
+        "type": "Enterijer stana",
+        "description": "<p>Kompaktan beogradski stan osmišljen oko jednog otvorenog dnevnog prostora. Dnevnu sobu, kuhinju i barski deo za doručak povezuju neprekidne hrastove površine i tamna grafitna paleta, uz tanku metalnu policu koja razdvaja zone, a ne zatvara ih.</p><p>Odlaganje je ugrađeno u stolariju od zida do zida, kuhinja je u drvenoj niši sa barom za doručak, a spavaća soba zadržava iste mirne tonove sa tapaciranim zidom uzglavlja. Stan deluje većim od svoje površine jer svaki element za odlaganje ima svoje mesto u stolariji.</p>",
+        "location": "Beograd, Srbija"
+      }
     },
     {
       "slug": "private-villa-bc-3721",
@@ -1942,7 +2011,7 @@
         "h": 1240,
         "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg"
       },
-      "description": "<p>Private Villa BC/3721 exemplifies modern architecture in a rural setting. Designed with a clear separation between the daytime and nighttime zones, it ensures functionality and comfort for everyday living.</p>",
+      "description": "<p>A single-storey family house in a rural setting, made of two volumes in the shape of the traditional gabled house. The white rendered wing holds the private rooms, while the dark timber-clad wing holds the living area and opens to a large covered terrace under a deep gable frame lined with wood.</p><p>The two wings meet at a stone-clad entrance, which separates the day and night zones and frames a small courtyard. Simple forms and natural materials make the house feel at home in the landscape while giving it a clearly contemporary character.</p>",
       "gallery": [
         {
           "file": "672a1b66c51068306917e55c_Image5-enhanced (Large).webp",
@@ -2044,7 +2113,12 @@
           "h": 1080,
           "og": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-og.jpg"
         }
-      ]
+      ],
+      "type": "Residential, house",
+      "sr": {
+        "type": "Stanovanje, kuća",
+        "description": "<p>Prizemna porodična kuća u ruralnom okruženju, sastavljena od dva volumena u obliku tradicionalne kuće sa dvovodnim krovom. Bela malterisana ala sadrži privatne prostorije, a tamna ala obložena drvetom dnevnu zonu i otvara se ka velikoj natkrivenoj terasi pod dubokim drvenim zabatom.</p><p>Dve ale se susreću na ulazu obloženom kamenom, koji razdvaja dnevnu i noćnu zonu i uokviruje malo dvorište. Jednostavne forme i prirodni materijali čine da kuća pripada pejzažu, a opet ima jasno savremen karakter.</p>"
+      }
     },
     {
       "slug": "belgrade-waterfront-apartment-2-b-64",
@@ -2100,7 +2174,7 @@
         "h": 2160,
         "og": "67129d698887efb8c3299ca2_Image1-og.jpg"
       },
-      "description": "<p>The interior design of Belgrade Waterfront Apartment 2/B/64 is a stunning example of modern aesthetics. The open-plan layout seamlessly connects the living room, kitchen, and dining area, creating a spacious and inviting atmosphere.             </p><p>                        </p><p>‍</p>",
+      "description": "<p>A refined apartment in Belgrade Waterfront, designed in a quiet palette of dark walnut, white and stone. Living, dining and kitchen are one open space, anchored by a marble-topped island and a soft modular sofa.</p><p>Fluted and arched cabinetry, recessed lighting and carefully chosen objects add depth and a sense of calm.</p>",
       "gallery": [
         {
           "file": "672a1e426cf8b188f2e1fe27_Image1_000-enhanced.webp",
@@ -2331,7 +2405,14 @@
           "h": 1080,
           "og": "672a1e42fc59aa701de3e8c9_Image1_024-enhanced-og.jpg"
         }
-      ]
+      ],
+      "location": "Belgrade, Serbia",
+      "type": "Residential interior",
+      "sr": {
+        "type": "Enterijer stana",
+        "description": "<p>Prefinjen stan u Beogradu na vodi, projektovan u mirnoj paleti tamnog oraha, bele i kamena. Dnevni boravak, trpezarija i kuhinja čine jedan otvoren prostor, oko koga se grupišu ostrvo sa mermernom pločom i mekana modularna sofa.</p><p>Žljebljena i lučna stolarija, ugradno osvetljenje i pažljivo odabrani predmeti daju dubinu i osećaj mira.</p>",
+        "location": "Beograd, Srbija"
+      }
     },
     {
       "slug": "apartment-km-4-18",
@@ -2377,7 +2458,7 @@
         "h": 1080,
         "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
       },
-      "description": "<p>Apartment KM 4/18 in Belgrade is the perfect blend of classic style with modern design touches. Clear lines and soft colors contribute to the elegance and comfort of the space, while the apartment is skillfully divided into two functional areas: the daytime and nighttime zones.</p>",
+      "description": "<p>A family apartment in Belgrade that keeps the character of a classic city interior, with herringbone parquet and ceiling rosettes, and pairs it with clean contemporary joinery. The day zone is one generous room: a living area with a piano and a full-height bookcase, a large dining table and a kitchen island in light stone.</p><p>In the night zone, glass partitions in slim black frames separate the bedroom, the dressing area and a small study without losing daylight. The bathrooms add warmth with terracotta joinery, stone-look tiles and black fittings.</p>",
       "gallery": [
         {
           "file": "6720c3acfb99d123c735eab2_Image1_047.webp",
@@ -2676,7 +2757,14 @@
           "h": 2160,
           "og": "6720c3b074fde631ef1036e3_Image36_026-og.jpg"
         }
-      ]
+      ],
+      "location": "Belgrade, Serbia",
+      "type": "Residential interior",
+      "sr": {
+        "type": "Enterijer stana",
+        "description": "<p>Porodični stan u Beogradu koji čuva karakter klasičnog gradskog enterijera, sa parketom u riblju kost i plafonskim rozetama, i uparuje ga sa čistom savremenom stolarijom. Dnevna zona je jedna velika prostorija: dnevni boravak sa klavirom i bibliotekom do plafona, veliki trpezarijski sto i kuhinjsko ostrvo od svetlog kamena.</p><p>U noćnoj zoni staklene pregrade u tankim crnim ramovima razdvajaju spavaću sobu, garderober i malu radnu sobu bez gubitka dnevnog svetla. Kupatila dodaju toplinu stolarijom boje terakote, pločicama sličnim kamenu i crnim armaturama.</p>",
+        "location": "Beograd, Srbija"
+      }
     }
   ],
   "hero_slug": "villa-dve-koracica-kosmaj",

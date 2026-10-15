@@ -182,7 +182,7 @@ export async function publish(gh, { data, pending, removed = [], message, onProg
   }
   const deletes = [];
   for (const p of removed) {
-    deletes.push(`work/${p.slug}.html`);
+    deletes.push(`work/${p.slug}.html`, `sr/work/${p.slug}.html`);
     deletes.push(...orphanImagePaths(p, data.projects));
   }
   return gh.commit({ message, files, deletes, onProgress });

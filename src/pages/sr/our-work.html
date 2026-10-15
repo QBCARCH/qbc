@@ -1,0 +1,24 @@
+{{> head}}
+{{> nav}}
+<main class="page" id="main">
+  <div data-works>
+    <header class="phead">
+      <p class="label mute" data-reveal>Izbor od 150+ završenih projekata / prikazano {{COUNT}}</p>
+      <div class="phead__row">
+        <h1 class="display" data-reveal>Izabrani radovi</h1>
+        <div class="tools">
+          <label class="search"><span class="label mute">Pretraga</span><input type="search" data-search placeholder="Vila, 2024, BIM..." autocomplete="off" aria-label="Pretraga projekata"></label>
+          <div class="switch" role="group" aria-label="Prikaz">
+          <button type="button" data-view="grid" aria-pressed="true">Mreža</button>
+          <button type="button" data-view="index" aria-pressed="false">Lista</button>
+          </div>
+        </div>
+      </div>
+      <p class="lead" data-reveal>Kuće, stanovi i ugostiteljski prostori u Srbiji i Crnoj Gori. Svaki projekat je rezultat pažljivog prostornog planiranja, odabranih materijala i rešenja razrađenog do detalja.</p>
+    </header>
+    <p class="label mute wrap empty" data-empty hidden>Nijedan projekat ne odgovara pretrazi.</p>
+    <div class="wgrid">{{WORKS_GRID}}</div>
+    <div class="windex">{{WORKS_INDEX}}</div>
+  </div>
+</main>
+{{> footer}}

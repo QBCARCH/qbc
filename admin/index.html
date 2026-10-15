@@ -353,6 +353,10 @@ function onSave() {
     const v = $('#' + id).value.trim(); if (v) p[k] = v;
   }
   if (E._index === null) p.added = new Date().toISOString().slice(0, 10); else if (E.added) p.added = E.added;
+  // polja koja admin ne prikazuje (tip projekta i srpski tekstovi) ostaju netaknuta
+  if (E.type) p.type = E.type;
+  if (E.sr) p.sr = E.sr;
+  if (E.dark) p.dark = E.dark;
   const before = clone(S.data);
   if (E._index === null) S.data.projects.unshift(p); else S.data.projects[E._index] = p;
   // samo slike koje se i koriste

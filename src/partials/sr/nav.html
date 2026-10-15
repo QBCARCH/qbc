@@ -1,0 +1,38 @@
+<a class="skip" href="#main">Preskoči na sadržaj</a>
+<div class="fade" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="nav__brand" href="{{BASE}}index.html" aria-label="QBC Architects, početna">
+    <img src="{{ROOT}}assets/logo.png" width="26" height="26" alt="">
+    <span class="nav__name nav__text">QBCARCHITECTS</span>
+  </a>
+  <nav class="nav__links nav__text label" aria-label="Glavna navigacija">
+    <a href="{{BASE}}our-work.html"{{CUR:works}}>Radovi</a>
+    <a href="{{BASE}}about.html"{{CUR:about}}>O nama</a>
+    <a href="{{BASE}}services.html"{{CUR:services}}>Usluge</a>
+    <a class="nav__cta" href="{{BASE}}contact.html"{{CUR:contact}}>{{CTA}}</a>
+    <a class="nav__lang" href="{{LANG_URL}}" hreflang="en" lang="en" title="English">EN</a>
+  </nav>
+  <button class="nav__menu nav__text label" type="button" data-menu-open aria-expanded="false" aria-controls="menu"><i></i><span>Meni</span></button>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Meni" aria-hidden="true">
+  <button class="menu__close label" type="button" data-menu-close><i></i><span>Zatvori</span></button>
+  <nav class="menu__list" aria-label="Glavni meni">
+    <div class="menu__item"><a class="menu__link" style="--i:0" href="{{BASE}}index.html"{{CUR:home}}><span>01</span>Početna</a></div>
+    <div class="menu__item"><a class="menu__link" style="--i:1" href="{{BASE}}about.html"{{CUR:about}}><span>02</span>O nama</a></div>
+    <div class="menu__item"><a class="menu__link" style="--i:2" href="{{BASE}}services.html"{{CUR:services}}><span>03</span>Usluge</a></div>
+    <div class="menu__item"><a class="menu__link" style="--i:3" href="{{BASE}}our-work.html"{{CUR:works}}><span>04</span>Radovi</a></div>
+    <div class="menu__item"><a class="menu__link" style="--i:4" href="{{BASE}}contact.html"{{CUR:contact}}><span>05</span>Kontakt</a></div>
+  </nav>
+  <div class="menu__side">
+    <img src="{{ROOT}}assets/menu-900.jpg" srcset="{{ROOT}}assets/menu-900.jpg 900w, {{ROOT}}assets/menu.jpg 2000w" sizes="45vw" alt="" loading="lazy">
+    <div class="menu__foot label">
+      <a href="mailto:office@qbc.rs">office@qbc.rs</a>
+      <a href="tel:+381634110066">+381 63 411 066</a>
+      <a href="{{BASE}}privacy-policy.html">Politika privatnosti</a>
+      <a href="{{LANG_URL}}" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+</div>
+

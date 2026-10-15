@@ -13,49 +13,8 @@
   const initPicks = () => {
     const img = $('img[data-pick="hero"]'), credit = $('[data-credit]');
     if (!img || !credit || !img.dataset.s) return;
-    credit.href = `work/${img.dataset.s}.html`;
+    credit.href = (credit.getAttribute('href') || '').replace(/work\/[^/]*$/, 'work/' + img.dataset.s + '.html');
     credit.textContent = `${img.dataset.t} / ${img.dataset.y} ↗`;
-  };
-
-  /* naslov: slova se jednom slegnu pri ucitavanju (CSS), a na racunaru blago podebljaju uz kursor */
-  const initWeight = () => {
-    const h = $('[data-vf]');
-    if (!h) return;
-    $$('.ln', h).forEach((ln) => {
-      const frag = D.createDocumentFragment();
-      [...ln.childNodes].forEach((n) => {
-        if (n.nodeType !== 3) { frag.appendChild(n); return; }
-        [...n.textContent].forEach((c) => {
-          if (c === ' ') { frag.appendChild(D.createTextNode(' ')); return; }
-          const s = D.createElement('span'); s.className = 'ch'; s.textContent = c; frag.appendChild(s);
-        });
-      });
-      ln.textContent = ''; ln.appendChild(frag);
-    });
-    if (reduce || !matchMedia('(pointer: fine)').matches) return;
-    const chars = $$('.ch', h).map((el) => ({ el, x: 0, y: 0, v: 0, t: 0 }));
-    const host = h.closest('section') || h;
-    const measure = () => chars.forEach((c) => { const r = c.el.getBoundingClientRect(); c.x = r.left + r.width / 2; c.y = r.top + scrollY + r.height / 2; });
-    let mx = -9999, my = -9999, raf = 0;
-    const R = 260, MAX = 140;
-    const step = () => {
-      raf = 0;
-      let moving = false;
-      chars.forEach((c) => {
-        const d = Math.hypot(c.x - mx, c.y - (my + scrollY));
-        c.t = MAX * Math.max(0, 1 - d / R) ** 2;
-        c.v += (c.t - c.v) * 0.12;
-        if (Math.abs(c.t - c.v) > 0.5) moving = true;
-        c.el.style.setProperty('--dw', c.v.toFixed(0));
-      });
-      if (moving) raf = requestAnimationFrame(step);
-    };
-    const kick = () => { if (!raf) raf = requestAnimationFrame(step); };
-    host.addEventListener('pointermove', (e) => { mx = e.clientX; my = e.clientY; kick(); });
-    host.addEventListener('pointerleave', () => { mx = my = -9999; kick(); });
-    addEventListener('resize', measure);
-    h.addEventListener('animationend', measure);
-    measure();
   };
 
   /* tiho pojavljivanje */
@@ -82,13 +41,13 @@
     };
     const paint = () => {
       raf = 0;
-      y += (target - y) * 0.14;
-      if (hero) hero.style.setProperty('--ty', (y * 0.22).toFixed(1) + 'px');
+      y += (target - y) * 0.08;
+      if (hero) hero.style.setProperty('--ty', (y * 0.12).toFixed(1) + 'px');
       frames.forEach((f) => {
         const m = tops.get(f);
         if (!m || m.top - y > vh * 1.2 || m.top + m.h - y < -vh * 0.2) return;
         const off = (m.top + m.h / 2 - y - vh / 2) / vh;
-        f.im.style.setProperty('--ty', (clamp(-off * m.h * 0.16, -m.h * 0.07, m.h * 0.07)).toFixed(1) + 'px');
+        f.im.style.setProperty('--ty', (clamp(-off * m.h * 0.08, -m.h * 0.035, m.h * 0.035)).toFixed(1) + 'px');
       });
       if (Math.abs(target - y) > 0.3) raf = requestAnimationFrame(paint);
     };
@@ -174,7 +133,7 @@
       if (u.origin !== location.origin || (u.pathname === location.pathname && u.search === location.search)) return;
       e.preventDefault();
       fade.classList.add('is-on');
-      setTimeout(() => { location.href = a.href; }, 340);
+      setTimeout(() => { location.href = a.href; }, 560);
     });
   };
 
@@ -245,8 +204,70 @@
     lb.addEventListener('touchend', (e) => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1)); x0 = null; });
   };
 
+
+  /* kontakt forma: salje preko FormSubmit (AJAX); bez JS-a radi obican POST sa povratkom na ?sent=1 */
+  const initForm = () => {
+    const f = $('[data-form]');
+    if (!f) return;
+    const st = $('[data-form-status]', f), btn = $('button[type="submit"]', f);
+    const say = (t, err) => { st.textContent = t; st.classList.toggle('is-error', !!err); };
+    const sr = D.documentElement.lang === 'sr';
+    const M = sr ? { ok: 'Hvala. Vaša poruka je poslata, javićemo se uskoro.', sending: 'Šaljem...', fail: 'Poruka nije poslata. Pišite nam na office@qbc.rs ili nas pozovite na +381 63 411 066.' }
+      : { ok: 'Thank you. Your message has been sent, we will reply soon.', sending: 'Sending...', fail: 'The message could not be sent. Please write to office@qbc.rs or call +381 63 411 066.' };
+    if (/[?&]sent=1/.test(location.search)) say(M.ok);
+    f.addEventListener('submit', async (e) => {
+      if (!window.fetch) return;
+      e.preventDefault();
+      if (f._honey && f._honey.value) return;
+      btn.disabled = true; say(M.sending);
+      try {
+        const r = await fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+          method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(f) });
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok || String(j.success) === 'false') throw new Error(j.message || r.status);
+        f.reset(); say(M.ok);
+      } catch {
+        say(M.fail, true);
+      } finally { btn.disabled = false; }
+    });
+  };
+
+  // brojaci: broj raste od nule kada udje u vidno polje; bez JS-a ili uz smanjeno kretanje ostaje krajnji broj
+  const initCount = () => {
+    const els = $$('[data-count]');
+    if (!els.length || !('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const run = (el) => {
+      const to = +el.dataset.count, t0 = performance.now(), dur = 1800;
+      const step = (t) => { const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 4))); if (k < 1) requestAnimationFrame(step); };
+      requestAnimationFrame(step);
+    };
+    els.forEach((e) => { e.textContent = '0'; });
+    const io = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { io.unobserve(x.target); run(x.target); } }), { threshold: .6 });
+    els.forEach((e) => io.observe(e));
+  };
+
+  // recenica se otkriva rec po rec kako se skroluje; bez JS-a ili uz smanjeno kretanje vidi se cela
+  const initWords = () => {
+    const el = $('[data-words]');
+    if (!el || reduce) return;
+    const words = el.textContent.trim().split(/\s+/);
+    el.setAttribute('aria-label', words.join(' '));
+    el.innerHTML = words.map((w) => `<span class="w" aria-hidden="true">${w}</span>`).join(' ');
+    const spans = $$('.w', el);
+    let raf = 0;
+    const paint = () => {
+      raf = 0;
+      const r = el.getBoundingClientRect(), vh = innerHeight;
+      const p = clamp((vh * .82 - r.top) / (vh * .5));
+      const n = Math.round(p * spans.length);
+      spans.forEach((x, i) => x.classList.toggle('is-lit', i < n));
+    };
+    addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(paint); }, { passive: true });
+    paint();
+  };
+
   const boot = () => {
-    initPicks(); initWeight(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox();
+    initPicks(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

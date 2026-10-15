@@ -1,2772 +1,2774 @@
 {
-  "version": 1,
-  "home_count": 4,
-  "last_work_count": 3,
-  "projects": [
+ "version": 1,
+ "home_count": 4,
+ "last_work_count": 3,
+ "projects": [
+  {
+   "slug": "trnava-25-51-1",
+   "title": "Event Center, Trnava",
+   "year": "2026",
+   "services": [
+    "1. Conceptual & Schematic Design",
+    "2. Design Development & BIM Modeling",
+    "3. Construction Documents & Engineering",
+    "4. Construction Administration & Oversight",
+    "5. Interior Architecture & Custom Detailing"
+   ],
+   "description": "<p>Designed by QBC Architects, this event center stands in the middle of an orchard near Trnava, close to Topola, with two small guest houses for overnight stays beside it. When no event is taking place, it works as a restaurant. The architecture balances contemporary hospitality design with the authentic character of the Šumadija landscape.</p><p>The concept is built on clean structural lines and an open spatial flow, free of unnecessary partitions. Large glazed surfaces dissolve the boundary between interior and surroundings, so nature becomes part of every occasion, from weddings and celebrations to business gatherings and family events.</p><p>The result is an elegant venue that relies on simplicity, light and a connection to place rather than on decoration.</p>",
+   "cover": {
+    "file": "1a137178ecc3c2c3c_Trnava-5.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1366,
+    "h": 768,
+    "og": "1a137178ecc3c2c3c_Trnava-5-og.jpg"
+   },
+   "thumb": {
+    "file": "1a137178ecc3c2c3c_Trnava-5.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1366,
+    "h": 768,
+    "og": "1a137178ecc3c2c3c_Trnava-5-og.jpg"
+   },
+   "hero": {
+    "file": "1a13717bb1e9d76f8_Trnava-4.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1366,
+    "h": 768,
+    "og": "1a13717bb1e9d76f8_Trnava-4-og.jpg"
+   },
+   "gallery": [
     {
-      "slug": "trnava-25-51-1",
-      "title": "Event Center, Trnava",
-      "year": "2026",
-      "services": [
-        "1. Conceptual & Schematic Design",
-        "2. Design Development & BIM Modeling",
-        "3. Construction Documents & Engineering",
-        "4. Construction Administration & Oversight",
-        "5. Interior Architecture & Custom Detailing"
-      ],
-      "description": "<p>Designed by QBC Architects, this event center stands in the middle of an orchard near Trnava, close to Topola, with two small guest houses for overnight stays beside it. When no event is taking place, it works as a restaurant. The architecture balances contemporary hospitality design with the authentic character of the Šumadija landscape.</p><p>The concept is built on clean structural lines and an open spatial flow, free of unnecessary partitions. Large glazed surfaces dissolve the boundary between interior and surroundings, so nature becomes part of every occasion, from weddings and celebrations to business gatherings and family events.</p><p>The result is an elegant venue that relies on simplicity, light and a connection to place rather than on decoration.</p>",
-      "cover": {
-        "file": "1a137178ecc3c2c3c_Trnava-5.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1366,
-        "h": 768,
-        "og": "1a137178ecc3c2c3c_Trnava-5-og.jpg"
-      },
-      "thumb": {
-        "file": "1a137178ecc3c2c3c_Trnava-5.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1366,
-        "h": 768,
-        "og": "1a137178ecc3c2c3c_Trnava-5-og.jpg"
-      },
-      "hero": {
-        "file": "1a13717bb1e9d76f8_Trnava-4.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1366,
-        "h": 768,
-        "og": "1a13717bb1e9d76f8_Trnava-4-og.jpg"
-      },
-      "gallery": [
-        {
-          "file": "1a13717eab7f3df89_Trnava-1.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1366,
-          "h": 768,
-          "og": "1a13717eab7f3df89_Trnava-1-og.jpg"
-        },
-        {
-          "file": "1a13717f09ea7296c_Trnava-2.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1366,
-          "h": 768,
-          "og": "1a13717f09ea7296c_Trnava-2-og.jpg"
-        },
-        {
-          "file": "1a13717f6640d0ef4_Trnava-3.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1366,
-          "h": 768,
-          "og": "1a13717f6640d0ef4_Trnava-3-og.jpg"
-        },
-        {
-          "file": "1a13717f690306a34_Trnava-4.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1366,
-          "h": 768,
-          "og": "1a13717f690306a34_Trnava-4-og.jpg"
-        },
-        {
-          "file": "1a13717f6a78cb17a_Trnava-5.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1366,
-          "h": 768,
-          "og": "1a13717f6a78cb17a_Trnava-5-og.jpg"
-        },
-        {
-          "file": "1a13717f6ba246bc0_Trnava-6.webp",
-          "widths": [
-            500
-          ],
-          "w": 686,
-          "h": 382,
-          "og": "1a13717f6ba246bc0_Trnava-6-og.jpg"
-        },
-        {
-          "file": "1a13717fbdbf0b304_Trnava-8.webp",
-          "widths": [
-            500
-          ],
-          "w": 686,
-          "h": 382,
-          "og": "1a13717fbdbf0b304_Trnava-8-og.jpg"
-        },
-        {
-          "file": "1a137180158b9e6f3_Trnava-9.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 960,
-          "h": 1095,
-          "og": "1a137180158b9e6f3_Trnava-9-og.jpg"
-        },
-        {
-          "file": "1a1371806dd243eed_Trnava-10.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1368,
-          "h": 768,
-          "og": "1a1371806dd243eed_Trnava-10-og.jpg"
-        },
-        {
-          "file": "1a137180c47b32c71_Trnava-11.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1368,
-          "h": 768,
-          "og": "1a137180c47b32c71_Trnava-11-og.jpg"
-        },
-        {
-          "file": "1a137180c5f35af69_Trnava-12.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1368,
-          "h": 768,
-          "og": "1a137180c5f35af69_Trnava-12-og.jpg"
-        },
-        {
-          "file": "1a13718134fc1c458_Trnava-14.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1368,
-          "h": 768,
-          "og": "1a13718134fc1c458_Trnava-14-og.jpg"
-        }
-      ],
-      "added": "2026-10-13",
-      "location": "Trnava, Topola, Serbia",
-      "status": "Under construction",
-      "type": "Event venue and restaurant",
-      "sr": {
-        "type": "Centar za događaje i restoran",
-        "description": "<p>Centar za događaje, delo QBC Architects, nalazi se usred voćnjaka u Trnavi kod Topole, a pored njega su dve male kuće za noćenje. Kada nema događaja, radi kao restoran. Arhitektura spaja savremeno ugostiteljsko projektovanje sa autentičnim karakterom šumadijskog pejzaža.</p><p>Koncept počiva na čistim konstruktivnim linijama i otvorenom toku prostora, bez nepotrebnih pregrada. Velike staklene površine brišu granicu između enterijera i okoline, pa priroda postaje deo svake prilike, od venčanja i proslava do poslovnih skupova i porodičnih okupljanja.</p><p>Rezultat je elegantan prostor koji se oslanja na jednostavnost, svetlost i vezu sa mestom, a ne na dekoraciju.</p>",
-        "location": "Trnava, Topola, Srbija",
-        "status": "U izgradnji"
-      }
+     "file": "1a13717eab7f3df89_Trnava-1.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768,
+     "og": "1a13717eab7f3df89_Trnava-1-og.jpg"
     },
     {
-      "slug": "villa-dve-koracica-kosmaj",
-      "title": "Villa Dve Koracica, Kosmaj",
-      "services": [
-        "1. Conceptual & Schematic Design",
-        "2. Design Development & BIM Modeling",
-        "3. Construction Documents & Engineering"
-      ],
-      "year": "2026",
-      "cover": {
-        "file": "6aa293afab9b9e93867394a1_1 - 1.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1368,
-        "h": 768,
-        "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg"
-      },
-      "thumb": {
-        "file": "6aa28effe20b7166f2dc046f_2 - 3.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 2000,
-        "h": 962,
-        "og": "6aa28effe20b7166f2dc046f_2 - 3-og.jpg"
-      },
-      "hero": {
-        "file": "6aa293afab9b9e93867394a1_1 - 1.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1368,
-        "h": 768,
-        "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg"
-      },
-      "description": "<p>Two independently designed single-storey villas stand in the quiet landscape of Koraćica, at the foot of Mount Kosmaj. They are placed to follow the gently sloping terrain and to open towards the views of the surrounding woodland. The buildings cover just over 20% of the plot, so green space stays the main character of the property.</p><p>Both houses have clean lines, flat roofs and a warm material palette: decorative silicate render combined with ventilated Siberian larch cladding. Inside, the layouts are open and bright, with living areas under three-metre ceilings that open onto large terraces and private swimming pools.</p><p>The houses are built as a prefabricated timber-frame system with good thermal and acoustic performance, with underfloor heating and utility spaces integrated in the basement.</p>",
-      "gallery": [
-        {
-          "file": "6aa293afab9b9e93867394a1_1 - 1.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1368,
-          "h": 768,
-          "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg"
-        },
-        {
-          "file": "6aa293c23696e0bf733acb88_1 - 2.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1024,
-          "h": 575,
-          "og": "6aa293c23696e0bf733acb88_1 - 2-og.jpg"
-        },
-        {
-          "file": "6aa28f06defe2717325b426c_1 - 3.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1475,
-          "h": 711,
-          "og": "6aa28f06defe2717325b426c_1 - 3-og.jpg"
-        },
-        {
-          "file": "6aa28ef657107ef3884e9da8_2 - 1.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 2000,
-          "h": 961,
-          "og": "6aa28ef657107ef3884e9da8_2 - 1-og.jpg"
-        },
-        {
-          "file": "6aa28f052c30d80d8e512281_2 - 2.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 2000,
-          "h": 976,
-          "og": "6aa28f052c30d80d8e512281_2 - 2-og.jpg"
-        },
-        {
-          "file": "6aa293f4ab9b9e938673c7d6_2 - 3.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1024,
-          "h": 575,
-          "og": "6aa293f4ab9b9e938673c7d6_2 - 3-og.jpg"
-        },
-        {
-          "file": "6aa28fe555b3ce2838f6222f_2 - 6.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 2000,
-          "h": 2178,
-          "og": "6aa28fe555b3ce2838f6222f_2 - 6-og.jpg"
-        },
-        {
-          "file": "6aa28f05856feb3e17e473e7_2 - 4.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 2000,
-          "h": 975,
-          "og": "6aa28f05856feb3e17e473e7_2 - 4-og.jpg"
-        },
-        {
-          "file": "6aa28fe53a611c20e8568f6d_2 - 5.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 2000,
-          "h": 2186,
-          "og": "6aa28fe53a611c20e8568f6d_2 - 5-og.jpg"
-        }
-      ],
-      "location": "Koraćica, Kosmaj, Serbia",
-      "status": "Under construction",
-      "type": "Residential, villas",
-      "sr": {
-        "type": "Stanovanje, vile",
-        "description": "<p>Dve samostalno projektovane prizemne vile stoje u mirnom pejzažu Koraćice, u podnožju Kosmaja. Postavljene su tako da prate blago nagnut teren i otvaraju se ka pogledu na okolnu šumu. Objekti zauzimaju nešto više od 20% parcele, pa zelenilo ostaje glavna odlika imanja.</p><p>Obe kuće imaju čiste linije, ravne krovove i toplu paletu materijala: dekorativni silikatni malter u kombinaciji sa ventilisanom fasadom od sibirskog ariša. Unutra su rasporedi otvoreni i svetli, sa dnevnim zonama pod tri metra visokim plafonima koje se otvaraju ka velikim terasama i privatnim bazenima.</p><p>Kuće su građene kao montažni sistem od drvene konstrukcije, sa dobrim toplotnim i zvučnim performansama, podnim grejanjem i instalacionim prostorima u suterenu.</p>",
-        "location": "Koraćica, Kosmaj, Srbija",
-        "status": "U izgradnji"
-      }
+     "file": "1a13717f09ea7296c_Trnava-2.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768,
+     "og": "1a13717f09ea7296c_Trnava-2-og.jpg"
     },
     {
-      "slug": "villas-divcibare-srb",
-      "title": "Villa Duo, Divcibare",
-      "services": [
-        "1. Conceptual & Schematic Design",
-        "2. Design Development & BIM Modeling",
-        "3. Construction Documents & Engineering",
-        "4. Construction Administration & Oversight",
-        "5. Interior Architecture & Custom Detailing"
-      ],
-      "year": "2025",
-      "cover": {
-        "file": "6aa2845f582915882762379c_Image73.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600,
-          2000,
-          2600,
-          3200
-        ],
-        "w": 3840,
-        "h": 2160,
-        "og": "6aa2845f582915882762379c_Image73-og.jpg"
-      },
-      "thumb": {
-        "file": "6aa2845f582915882762379c_Image73.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600,
-          2000,
-          2600,
-          3200
-        ],
-        "w": 3840,
-        "h": 2160,
-        "og": "6aa2845f582915882762379c_Image73-og.jpg"
-      },
-      "hero": {
-        "file": "6aa2845f582915882762379c_Image73.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600,
-          2000,
-          2600,
-          3200
-        ],
-        "w": 3840,
-        "h": 2160,
-        "og": "6aa2845f582915882762379c_Image73-og.jpg"
-      },
-      "description": "<p>On a mountain site in Divčibare, a family house and a guest house offer a contemporary interpretation of the traditional mountain retreat. Siberian larch and anthracite steel give the buildings warmth and a sharp modern outline, and place them calmly among the surrounding trees.</p><p>The main house is organised around daylight and open space: three-metre ceilings, a living area centred on a fireplace, and a lower-level SPA and wellness zone that opens onto an outdoor terrace. The guest house follows the same approach, with an open-plan layout, its own sauna and a sleeping gallery.</p><p>Both buildings are well insulated, with underfloor heating powered by heat pumps and an integrated smart home system.</p>",
-      "gallery": [
-        {
-          "file": "6aa2849bbd2b340604672c09_Image69.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849bbd2b340604672c09_Image69-og.jpg"
-        },
-        {
-          "file": "6aa2849bf09a69f4dcc80c30_Image70.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849bf09a69f4dcc80c30_Image70-og.jpg"
-        },
-        {
-          "file": "6aa2849e93cb646794f4d35a_Image71.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849e93cb646794f4d35a_Image71-og.jpg"
-        },
-        {
-          "file": "6aa2845f582915882762379c_Image73.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2845f582915882762379c_Image73-og.jpg"
-        },
-        {
-          "file": "6aa2849c0cfb37f0ee439bb7_Image72.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849c0cfb37f0ee439bb7_Image72-og.jpg"
-        },
-        {
-          "file": "6aa2852a6100db41fc677e3c_Image89.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2852a6100db41fc677e3c_Image89-og.jpg"
-        },
-        {
-          "file": "6aa2849c2672b1868d16331a_Image21.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849c2672b1868d16331a_Image21-og.jpg"
-        },
-        {
-          "file": "6aa2849d5eee4c05ba3e547d_Image85_000.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849d5eee4c05ba3e547d_Image85_000-og.jpg"
-        },
-        {
-          "file": "6aa2849d0487e53474bfbe83_Image25.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849d0487e53474bfbe83_Image25-og.jpg"
-        },
-        {
-          "file": "6aa2849d5eee4c05ba3e5482_Image82.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849d5eee4c05ba3e5482_Image82-og.jpg"
-        },
-        {
-          "file": "6aa2849c5c8798acaa9f90fa_Image28.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849c5c8798acaa9f90fa_Image28-og.jpg"
-        },
-        {
-          "file": "6aa2849d6100db41fc671a38_Image27_000.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849d6100db41fc671a38_Image27_000-og.jpg"
-        },
-        {
-          "file": "6aa2849d220840992be694d1_Image18.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849d220840992be694d1_Image18-og.jpg"
-        },
-        {
-          "file": "6aa2849e7b983d21eae27803_Image19.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849e7b983d21eae27803_Image19-og.jpg"
-        },
-        {
-          "file": "6aa2849e091ae5d0a7712d1c_Image74.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849e091ae5d0a7712d1c_Image74-og.jpg"
-        },
-        {
-          "file": "6aa2849c5bad1f633cb71c67_Image80.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849c5bad1f633cb71c67_Image80-og.jpg"
-        },
-        {
-          "file": "6aa2849bf09a69f4dcc80c17_Image16.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849bf09a69f4dcc80c17_Image16-og.jpg"
-        },
-        {
-          "file": "6aa2849ef09a69f4dcc80d8e_Image27.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849ef09a69f4dcc80d8e_Image27-og.jpg"
-        },
-        {
-          "file": "6aa2849def8e3ac275e76443_Image79.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849def8e3ac275e76443_Image79-og.jpg"
-        },
-        {
-          "file": "6aa2849d5bad1f633cb71d29_Image77.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849d5bad1f633cb71d29_Image77-og.jpg"
-        },
-        {
-          "file": "6aa2849ed42b40dc0a892a6e_Image76.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6aa2849ed42b40dc0a892a6e_Image76-og.jpg"
-        }
-      ],
-      "location": "Divčibare, Serbia",
-      "status": "Under construction",
-      "type": "Residential, villas",
-      "sr": {
-        "type": "Stanovanje, vile",
-        "description": "<p>Na planinskoj parceli na Divčibarama, porodična kuća i kuća za goste nude savremeno tumačenje tradicionalnog planinskog utočišta. Sibirski ariš i antracit čelik daju objektima toplinu i oštru savremenu siluetu, i mirno ih smeštaju među okolna stabla.</p><p>Glavna kuća je organizovana oko dnevne svetlosti i otvorenog prostora: plafoni visine tri metra, dnevna zona u središtu sa kaminom i SPA i vellness zona na nižem nivou koja se otvara ka spoljnoj terasi. Kuća za goste sledi isti pristup, sa otvorenom osnovom, sopstvenom saunom i galerijom za spavanje.</p><p>Oba objekta su dobro izolovana, sa podnim grejanjem na toplotne pumpe i integrisanim sistemom pametne kuće.</p>",
-        "location": "Divčibare, Srbija",
-        "status": "U izgradnji"
-      }
+     "file": "1a13717f6640d0ef4_Trnava-3.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768,
+     "og": "1a13717f6640d0ef4_Trnava-3-og.jpg"
     },
     {
-      "slug": "liman-2-ulcinj-mne",
-      "title": "Liman 2, Ulcinj",
-      "services": [
-        "4. Construction Administration & Oversight",
-        "3. Construction Documents & Engineering",
-        "2. Design Development & BIM Modeling",
-        "1. Conceptual & Schematic Design"
-      ],
-      "year": "2019",
-      "cover": {
-        "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
-      },
-      "thumb": {
-        "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
-      },
-      "hero": {
-        "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
-      },
-      "description": "<p>Located above Liman 2 beach in Ulcinj, on the Montenegrin coast, this residential and commercial building follows the steep, wooded slope instead of fighting it. The volume is broken into cascading terraces, so the apartments step down the hill and each one gets its own open terrace with planting and a view of the sea.</p><p>The material palette comes from the Adriatic tradition: local stone walls, white rendered volumes, timber shutters and planted parapets. Seen from the beach, the building reads as part of the hillside rather than as a single block.</p>",
-      "gallery": [
-        {
-          "file": "673bbf0a0fe95df33293962b_Image1_000.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf0a0fe95df33293962b_Image1_000-og.jpg"
-        },
-        {
-          "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
-        },
-        {
-          "file": "673bbf06d092c27300025bbf_Image2_014.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf06d092c27300025bbf_Image2_014-og.jpg"
-        },
-        {
-          "file": "673bbf0627d2a1529df6e7eb_Image2_015.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf0627d2a1529df6e7eb_Image2_015-og.jpg"
-        },
-        {
-          "file": "673bbf06cb0313130f59801c_Image2_016.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf06cb0313130f59801c_Image2_016-og.jpg"
-        },
-        {
-          "file": "673bbf06878268e7b7d335ba_Image2_017.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf06878268e7b7d335ba_Image2_017-og.jpg"
-        },
-        {
-          "file": "673bbf0ab78adccbd83b2838_Image2_018.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf0ab78adccbd83b2838_Image2_018-og.jpg"
-        },
-        {
-          "file": "673bbf06eeaca39b59efd1f0_Image2_019.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf06eeaca39b59efd1f0_Image2_019-og.jpg"
-        },
-        {
-          "file": "673bbf05d092c27300025afb_Image2.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf05d092c27300025afb_Image2-og.jpg"
-        },
-        {
-          "file": "673bbf05d15c21428d2e6706_Image2_020.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf05d15c21428d2e6706_Image2_020-og.jpg"
-        },
-        {
-          "file": "673bbf0a7d7d92d0f12f6af2_Image2_022.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf0a7d7d92d0f12f6af2_Image2_022-og.jpg"
-        },
-        {
-          "file": "673bbf066685a101ebb6908c_Image2_024.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf066685a101ebb6908c_Image2_024-og.jpg"
-        },
-        {
-          "file": "673bbf068bcb205827a5fe75_Image2_023.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "673bbf068bcb205827a5fe75_Image2_023-og.jpg"
-        }
-      ],
-      "location": "Ulcinj, Montenegro",
-      "type": "Residential and commercial building",
-      "sr": {
-        "type": "Stambeno-poslovni objekat",
-        "description": "<p>Ovaj stambeno-poslovni objekat, iznad plaže Liman 2 u Ulcinju na crnogorskom primorju, prati strmu, šumovitu padinu umesto da se s njom bori. Zapremina je razlomljena u kaskadne terase, pa se stanovi spuštaju niz brdo i svaki dobija sopstvenu otvorenu terasu sa zelenilom i pogledom na more.</p><p>Paleta materijala potiče iz jadranske tradicije: zidovi od lokalnog kamena, beli malterisani volumeni, drvene grilje i ozelenjeni parapeti. Gledan sa plaže, objekat se čita kao deo padine, a ne kao jedinstven blok.</p>",
-        "location": "Ulcinj, Crna Gora"
-      }
+     "file": "1a13717f690306a34_Trnava-4.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768,
+     "og": "1a13717f690306a34_Trnava-4-og.jpg"
     },
     {
-      "slug": "apartment-pb-23-mb",
-      "title": "Apartment PB/23 MB",
-      "services": [
-        "4. Construction Administration & Oversight",
-        "3. Construction Documents & Engineering",
-        "2. Design Development & BIM Modeling",
-        "1. Conceptual & Schematic Design"
-      ],
-      "year": "2024",
-      "cover": {
-        "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1600,
-        "h": 900,
-        "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
-      },
-      "thumb": {
-        "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1600,
-        "h": 900,
-        "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
-      },
-      "hero": {
-        "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1600,
-        "h": 900,
-        "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
-      },
-      "description": "<p>A compact apartment shaped by a warm, restrained palette of oak, sand and deep navy. The living room, dining area and kitchen share one open space, while built-in joinery, a study niche and a bedroom with concealed storage keep the plan efficient.</p><p>Soft daylight, layered lighting and a few sculptural pieces give the interior calm and character.</p>",
-      "gallery": [
-        {
-          "file": "67320986257506d26ea3aba9_IMG-20241110-WA0007.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1600,
-          "h": 900,
-          "og": "67320986257506d26ea3aba9_IMG-20241110-WA0007-og.jpg"
-        },
-        {
-          "file": "673209826072b2caae86bc95_IMG-20241110-WA0017.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1600,
-          "h": 900,
-          "og": "673209826072b2caae86bc95_IMG-20241110-WA0017-og.jpg"
-        },
-        {
-          "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1600,
-          "h": 900,
-          "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
-        },
-        {
-          "file": "6732098379a22c13b8f576b6_IMG-20241110-WA0013.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1600,
-          "h": 900,
-          "og": "6732098379a22c13b8f576b6_IMG-20241110-WA0013-og.jpg"
-        },
-        {
-          "file": "673209889b97847ee7209619_IMG-20241110-WA0003.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1278,
-          "h": 1600,
-          "og": "673209889b97847ee7209619_IMG-20241110-WA0003-og.jpg"
-        },
-        {
-          "file": "673209839d61b7074e98f4b9_IMG-20241110-WA0012.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1278,
-          "h": 1600,
-          "og": "673209839d61b7074e98f4b9_IMG-20241110-WA0012-og.jpg"
-        },
-        {
-          "file": "673209875ed161e1fce2f8f8_IMG-20241110-WA0005.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1278,
-          "h": 1600,
-          "og": "673209875ed161e1fce2f8f8_IMG-20241110-WA0005-og.jpg"
-        },
-        {
-          "file": "67320982827b528552dc1f6b_IMG-20241110-WA0002.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1600,
-          "h": 900,
-          "og": "67320982827b528552dc1f6b_IMG-20241110-WA0002-og.jpg"
-        },
-        {
-          "file": "67320988691c6ea66829eadf_IMG-20241110-WA0004.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1278,
-          "h": 1600,
-          "og": "67320988691c6ea66829eadf_IMG-20241110-WA0004-og.jpg"
-        },
-        {
-          "file": "67320987efccb47c02afc71b_IMG-20241110-WA0006.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1600,
-          "h": 900,
-          "og": "67320987efccb47c02afc71b_IMG-20241110-WA0006-og.jpg"
-        },
-        {
-          "file": "6731d9abba0150026c36c7a3_IMG-20241110-WA0008.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1278,
-          "h": 1600,
-          "og": "6731d9abba0150026c36c7a3_IMG-20241110-WA0008-og.jpg"
-        },
-        {
-          "file": "67320986366c9a47970f135d_IMG-20241110-WA0009.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1600,
-          "h": 900,
-          "og": "67320986366c9a47970f135d_IMG-20241110-WA0009-og.jpg"
-        },
-        {
-          "file": "67320984f7afe0c08ebb51c8_IMG-20241110-WA0011.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1278,
-          "h": 1600,
-          "og": "67320984f7afe0c08ebb51c8_IMG-20241110-WA0011-og.jpg"
-        },
-        {
-          "file": "67320982691c6ea66829e65a_IMG-20241110-WA0014.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1278,
-          "h": 1600,
-          "og": "67320982691c6ea66829e65a_IMG-20241110-WA0014-og.jpg"
-        },
-        {
-          "file": "673209820c9f19a0311498ce_IMG-20241110-WA0015.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1600,
-          "h": 900,
-          "og": "673209820c9f19a0311498ce_IMG-20241110-WA0015-og.jpg"
-        },
-        {
-          "file": "673209829b97847ee7209141_IMG-20241110-WA0016.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1278,
-          "h": 1600,
-          "og": "673209829b97847ee7209141_IMG-20241110-WA0016-og.jpg"
-        },
-        {
-          "file": "673209820ebf7cf7dfd8953f_IMG-20241110-WA0001.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1278,
-          "h": 1600,
-          "og": "673209820ebf7cf7dfd8953f_IMG-20241110-WA0001-og.jpg"
-        }
-      ],
-      "type": "Residential interior",
-      "sr": {
-        "type": "Enterijer stana",
-        "description": "<p>Kompaktan stan oblikovan toplom, suzdržanom paletom hrasta, peska i tamnoplave boje. Dnevna soba, trpezarija i kuhinja dele jedan otvoren prostor, dok ugrađena stolarija, radna niša i spavaća soba sa skrivenim ormarima čuvaju efikasnost osnove.</p><p>Mekana dnevna svetlost, slojevito osvetljenje i nekoliko skulpturalnih predmeta daju enterijeru mir i karakter.</p>"
-      },
-      "dark": true
+     "file": "1a13717f6a78cb17a_Trnava-5.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768,
+     "og": "1a13717f6a78cb17a_Trnava-5-og.jpg"
     },
     {
-      "slug": "clinic-ztb",
-      "title": "Clinic ZTB",
-      "services": [
-        "4. Construction Administration & Oversight",
-        "3. Construction Documents & Engineering",
-        "2. Design Development & BIM Modeling"
-      ],
-      "year": "2024",
-      "cover": {
-        "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
-      },
-      "thumb": {
-        "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
-      },
-      "hero": {
-        "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
-      },
-      "description": "<p>An interior for a private clinic on Zlatibor, designed as a calm, hotel-like space rather than a clinical one. The reception and waiting lounge combine soft upholstered seating, walnut tables and plants with a large botanical wall finish behind glass, so the first impression is warmth instead of corridors and white tiles.</p><p>The treatment rooms continue the same palette of warm stone-coloured surfaces, timber and brass. Built-in counters with brass basins, concealed storage and soft pendant lighting keep the rooms practical for daily work, while the washrooms get a stronger character with dark marble and patterned wallpaper.</p>",
-      "gallery": [
-        {
-          "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aadc30557cce8af0372_Image1_010-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2aadc30557cce8af0372_Image1_010-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aae14c5b939c3fea0e7_Image1_011-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2aae14c5b939c3fea0e7_Image1_011-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2ab28cae43227dd31df7_Image1_012-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2ab28cae43227dd31df7_Image1_012-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2ab1b2eeeaa52ca98aa9_Image1_013-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2ab1b2eeeaa52ca98aa9_Image1_013-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aa6d622e1402e61d574_Image1_018-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1080,
-          "h": 1313,
-          "og": "672a2aa6d622e1402e61d574_Image1_018-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2ab1bb9a1e7d0b4afae5_Image1_019-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2ab1bb9a1e7d0b4afae5_Image1_019-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aa4ec2eaccd6c381a1c_Image1_020-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1080,
-          "h": 1313,
-          "og": "672a2aa4ec2eaccd6c381a1c_Image1_020-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aac54dc53a27425be32_Image1_021-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2aac54dc53a27425be32_Image1_021-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aabc29d775ce6bbc206_Image1_023-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2aabc29d775ce6bbc206_Image1_023-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aa31ae37cfc3662fbc9_Image1_024-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2aa31ae37cfc3662fbc9_Image1_024-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aa58961df28a32303e6_Image1_030-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1080,
-          "h": 1313,
-          "og": "672a2aa58961df28a32303e6_Image1_030-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aadbb6094c177ee07f7_Image1_032-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2aadbb6094c177ee07f7_Image1_032-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aad4eedee8e7d375681_Image1_050-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2aad4eedee8e7d375681_Image1_050-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aaa740563b5bec77923_Image1_055-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1080,
-          "h": 1313,
-          "og": "672a2aaa740563b5bec77923_Image1_055-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aa988c83c21cb1cb036_Image1_058-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1080,
-          "h": 1313,
-          "og": "672a2aa988c83c21cb1cb036_Image1_058-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aa7b26999ac92d92c6f_Image1_064-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1080,
-          "h": 1313,
-          "og": "672a2aa7b26999ac92d92c6f_Image1_064-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aa3f02c076b063ce677_Image1_067-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1080,
-          "h": 1313,
-          "og": "672a2aa3f02c076b063ce677_Image1_067-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aa75bfa27b804689e8f_Image1_075-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1080,
-          "h": 1313,
-          "og": "672a2aa75bfa27b804689e8f_Image1_075-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aa5b26999ac92d9281a_r12_20(1)-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1080,
-          "h": 1313,
-          "og": "672a2aa5b26999ac92d9281a_r12_20(1)-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2ab1fd23da6cc6f19f04_r12_20(2)-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2ab1fd23da6cc6f19f04_r12_20(2)-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aae7296ccb6990dc2b0_r12_20(3)-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2aae7296ccb6990dc2b0_r12_20(3)-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2aa45bfa27b804689c64_r12_20(4)-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2aa45bfa27b804689c64_r12_20(4)-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2ab314c5b939c3fea775_r12_20(5)-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2ab314c5b939c3fea775_r12_20(5)-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2ab176f5562ed0c62668_r12_20(6)-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2ab176f5562ed0c62668_r12_20(6)-enhanced-og.jpg"
-        }
-      ],
-      "location": "Zlatibor, Serbia",
-      "type": "Healthcare interior",
-      "sr": {
-        "type": "Enterijer zdravstvene ustanove",
-        "description": "<p>Enterijer privatne klinike na Zlatiboru, osmišljen kao miran prostor nalik hotelskom, a ne kao klinički. Recepcija i čekaonica kombinuju mekano tapacirano sedenje, orahove stolove i biljke sa velikom botaničkom zidnom obradom iza stakla, tako da je prvi utisak toplina, a ne hodnici i bele pločice.</p><p>Ordinacije nastavljaju istu paletu toplih kamenih površina, drveta i mesinga. Ugrađeni pultovi sa mesinganim lavaboima, skriveni ormari i meko privesno osvetljenje čine prostorije praktičnim za svakodnevni rad, dok sanitarni čvorovi dobijaju snažniji karakter tamnim mermerom i šarenom tapetom.</p>",
-        "location": "Zlatibor, Srbija"
-      }
+     "file": "1a13717f6ba246bc0_Trnava-6.webp",
+     "widths": [
+      500
+     ],
+     "w": 686,
+     "h": 382,
+     "og": "1a13717f6ba246bc0_Trnava-6-og.jpg"
     },
     {
-      "slug": "caffe-spass-belgrade",
-      "title": "Caffe Spass, Belgrade",
-      "services": [
-        "1. Conceptual & Schematic Design",
-        "2. Design Development & BIM Modeling",
-        "3. Construction Documents & Engineering",
-        "4. Construction Administration & Oversight"
-      ],
-      "year": "2024",
-      "cover": {
-        "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
-      },
-      "thumb": {
-        "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
-      },
-      "hero": {
-        "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
-      },
-      "description": "<p>Caffe Spass occupies a double-height space on Kralja Petra Street in Belgrade. We kept the raw structure of steel columns, exposed concrete and coffered ceiling, and set against it a bold palette of red, black and white, with a mezzanine overlooking the main floor.</p><p>Patterned tiles, a graphic bar counter, sculptural figures and line lighting make a lively room with a strong identity.</p>",
-      "gallery": [
-        {
-          "file": "672a2910745565a8de07f66e_Image1_005-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2910745565a8de07f66e_Image1_005-enhanced-og.jpg"
-        },
-        {
-          "file": "672a290f76f5562ed0c4b09a_Image1_004-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a290f76f5562ed0c4b09a_Image1_004-enhanced-og.jpg"
-        },
-        {
-          "file": "672a290fe695b53e94f87631_Image1_007-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a290fe695b53e94f87631_Image1_007-enhanced-og.jpg"
-        },
-        {
-          "file": "672a290e42eae8e361c7966e_Image1-enhanced 4.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a290e42eae8e361c7966e_Image1-enhanced 4-og.jpg"
-        },
-        {
-          "file": "672a290f9c515a3863cfa437_Image1_002-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a290f9c515a3863cfa437_Image1_002-enhanced-og.jpg"
-        },
-        {
-          "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
-        },
-        {
-          "file": "672a290f31e6ff5448dba86b_Image1_012-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a290f31e6ff5448dba86b_Image1_012-enhanced-og.jpg"
-        },
-        {
-          "file": "672a290fc8170599c0545ed5_Image1-enhanced 2.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a290fc8170599c0545ed5_Image1-enhanced 2-og.jpg"
-        },
-        {
-          "file": "672a29121d2e3e498a0ceeab_Image1-enhanced 3.webp",
-          "widths": [],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a29121d2e3e498a0ceeab_Image1-enhanced 3-og.jpg"
-        },
-        {
-          "file": "672a290ea57dee135c3252d8_Image1-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a290ea57dee135c3252d8_Image1-enhanced-og.jpg"
-        },
-        {
-          "file": "672a290e6fd8345c3412c8f4_Image1-enhanced 5.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a290e6fd8345c3412c8f4_Image1-enhanced 5-og.jpg"
-        }
-      ],
-      "location": "Belgrade, Serbia",
-      "type": "Hospitality interior",
-      "sr": {
-        "type": "Ugostiteljski enterijer",
-        "description": "<p>Caffe Spass zauzima prostor dvostruke visine u Ulici kralja Petra u Beogradu. Zadržali smo sirovu konstrukciju od čeličnih stubova, golog betona i kasetiranog plafona, a naspram nje postavili smelu paletu crvene, crne i bele, sa mezaninom koji se nadvija nad glavnom salom.</p><p>Šarene pločice, grafički šank, skulpturalne figure i linijsko osvetljenje čine živahan prostor snažnog identiteta.</p>",
-        "location": "Beograd, Srbija"
-      },
-      "dark": true
+     "file": "1a13717fbdbf0b304_Trnava-8.webp",
+     "widths": [
+      500
+     ],
+     "w": 686,
+     "h": 382,
+     "og": "1a13717fbdbf0b304_Trnava-8-og.jpg"
     },
     {
-      "slug": "apartment-sakura-2-24",
-      "title": "Apartment Sakura 2/24",
-      "services": [
-        "4. Construction Administration & Oversight",
-        "3. Construction Documents & Engineering",
-        "2. Design Development & BIM Modeling"
-      ],
-      "year": "2023",
-      "cover": {
-        "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
-      },
-      "thumb": {
-        "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
-      },
-      "hero": {
-        "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
-        "widths": [
-          500,
-          800,
-          1080
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
-      },
-      "description": "<p>This Belgrade apartment takes a light, warm direction. Textured plaster walls, light oak and a long marble bench define the living room, where a fluted timber sliding panel hides the TV and turns the media wall into a bookcase when the screen is off.</p><p>The kitchen with its island sits in a softly lit niche, and the bedroom repeats the plaster and timber palette with a full-height headboard wall. The aim was a quiet, natural interior that is easy to live with every day.</p>",
-      "gallery": [
-        {
-          "file": "672a2123e35c53ec87556c9d_Dnevna_201_001-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2123e35c53ec87556c9d_Dnevna_201_001-enhanced-og.jpg"
-        },
-        {
-          "file": "672a21222d1728cc8c7eb1c3_Dnevna_201_002-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a21222d1728cc8c7eb1c3_Dnevna_201_002-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2123e35c53ec87556cb7_Dnevna_201_003-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2123e35c53ec87556cb7_Dnevna_201_003-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2123b74c6e7c5868569d_Dnevna_201-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2123b74c6e7c5868569d_Dnevna_201-enhanced-og.jpg"
-        },
-        {
-          "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
-        },
-        {
-          "file": "672a21adce051a8748e0c353_Image1_003-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a21adce051a8748e0c353_Image1_003-enhanced-og.jpg"
-        },
-        {
-          "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
-        }
-      ],
-      "location": "Belgrade, Serbia",
-      "type": "Residential interior",
-      "sr": {
-        "type": "Enterijer stana",
-        "description": "<p>Ovaj beogradski stan ide u svetlom, toplom pravcu. Teksturisani malterisani zidovi, svetli hrast i duga mermerna klupa određuju dnevnu sobu, u kojoj žljebljeni drveni klizni panel skriva televizor i pretvara zid sa medijima u biblioteku kada je ekran isključen.</p><p>Kuhinja sa ostrvom smeštena je u blago osvetljenoj niši, a spavaća soba ponavlja paletu maltera i drveta uz zid uzglavlja do plafona. Cilj je bio miran, prirodan enterijer u kome se lako živi svakog dana.</p>",
-        "location": "Beograd, Srbija"
-      }
+     "file": "1a137180158b9e6f3_Trnava-9.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 960,
+     "h": 1095,
+     "og": "1a137180158b9e6f3_Trnava-9-og.jpg"
     },
     {
-      "slug": "apartment-sakura-1-24",
-      "title": "Apartment Sakura 1/24",
-      "services": [
-        "4. Construction Administration & Oversight",
-        "3. Construction Documents & Engineering",
-        "2. Design Development & BIM Modeling"
-      ],
-      "year": "2023",
-      "cover": {
-        "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
-        "widths": [
-          500,
-          800
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
-      },
-      "thumb": {
-        "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
-        "widths": [
-          500,
-          800
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
-      },
-      "hero": {
-        "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
-        "widths": [
-          500,
-          800
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
-      },
-      "description": "<p>A compact Belgrade apartment designed around one open living space. The living room, kitchen and dining bar are tied together by continuous oak surfaces and a dark graphite palette, with a slim metal shelving unit that separates the zones without closing them off.</p><p>Storage is built into wall-to-wall joinery, the kitchen sits in a timber niche with a breakfast bar, and the bedroom keeps the same calm tones with an upholstered headboard wall. The apartment feels larger than its footprint because every piece of storage has its place in the joinery.</p>",
-      "gallery": [
-        {
-          "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2006e19eca958f820a5f_Image1_010-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 919,
-          "og": "672a2006e19eca958f820a5f_Image1_010-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2005ce051a8748df6603_Image1-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2005ce051a8748df6603_Image1-enhanced-og.jpg"
-        },
-        {
-          "file": "672a200627ff3cb16ca917bc_Image1_000-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1251,
-          "h": 1080,
-          "og": "672a200627ff3cb16ca917bc_Image1_000-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2009dd600f5a3dfd4a00_Image1_003-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a2009dd600f5a3dfd4a00_Image1_003-enhanced-og.jpg"
-        },
-        {
-          "file": "672a20062d1728cc8c7d7618_Image1_006-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a20062d1728cc8c7d7618_Image1_006-enhanced-og.jpg"
-        },
-        {
-          "file": "672a200940553a7859c8ab30_Image1_008-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a200940553a7859c8ab30_Image1_008-enhanced-og.jpg"
-        },
-        {
-          "file": "672a200912e179e675eac275_Image1_013-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a200912e179e675eac275_Image1_013-enhanced-og.jpg"
-        },
-        {
-          "file": "672a2005f7eb8d2c561c5642_Image1_014-enhanced.webp",
-          "widths": [
-            500
-          ],
-          "w": 1251,
-          "h": 1080,
-          "og": "672a2005f7eb8d2c561c5642_Image1_014-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
-          "widths": [
-            500,
-            800
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
-        }
-      ],
-      "location": "Belgrade, Serbia",
-      "type": "Residential interior",
-      "sr": {
-        "type": "Enterijer stana",
-        "description": "<p>Kompaktan beogradski stan osmišljen oko jednog otvorenog dnevnog prostora. Dnevnu sobu, kuhinju i barski deo za doručak povezuju neprekidne hrastove površine i tamna grafitna paleta, uz tanku metalnu policu koja razdvaja zone, a ne zatvara ih.</p><p>Odlaganje je ugrađeno u stolariju od zida do zida, kuhinja je u drvenoj niši sa barom za doručak, a spavaća soba zadržava iste mirne tonove sa tapaciranim zidom uzglavlja. Stan deluje većim od svoje površine jer svaki element za odlaganje ima svoje mesto u stolariji.</p>",
-        "location": "Beograd, Srbija"
-      }
+     "file": "1a1371806dd243eed_Trnava-10.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1368,
+     "h": 768,
+     "og": "1a1371806dd243eed_Trnava-10-og.jpg"
     },
     {
-      "slug": "private-villa-bc-3721",
-      "title": "Private Villa BC 3721",
-      "services": [
-        "4. Construction Administration & Oversight",
-        "3. Construction Documents & Engineering",
-        "2. Design Development & BIM Modeling",
-        "1. Conceptual & Schematic Design"
-      ],
-      "year": "2024",
-      "cover": {
-        "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1754,
-        "h": 1240,
-        "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg"
-      },
-      "thumb": {
-        "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1754,
-        "h": 1240,
-        "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg"
-      },
-      "hero": {
-        "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1754,
-        "h": 1240,
-        "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg"
-      },
-      "description": "<p>A single-storey family house in a rural setting, made of two volumes in the shape of the traditional gabled house. The white rendered wing holds the private rooms, while the dark timber-clad wing holds the living area and opens to a large covered terrace under a deep gable frame lined with wood.</p><p>The two wings meet at a stone-clad entrance, which separates the day and night zones and frames a small courtyard. Simple forms and natural materials make the house feel at home in the landscape while giving it a clearly contemporary character.</p>",
-      "gallery": [
-        {
-          "file": "672a1b66c51068306917e55c_Image5-enhanced (Large).webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1b66c51068306917e55c_Image5-enhanced (Large)-og.jpg"
-        },
-        {
-          "file": "672a1b668cbb8379eb716617_Image9-enhanced (Large).webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-og.jpg"
-        },
-        {
-          "file": "672a1b6651adb46944e044a7_Image24-enhanced (Large).webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-og.jpg"
-        },
-        {
-          "file": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large).webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-og.jpg"
-        },
-        {
-          "file": "672a1b66d346501810784814_Image6-enhanced (Large).webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1b66d346501810784814_Image6-enhanced (Large)-og.jpg"
-        },
-        {
-          "file": "672a1b67de171f51707390db_Image7-enhanced (Large).webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1b67de171f51707390db_Image7-enhanced (Large)-og.jpg"
-        },
-        {
-          "file": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large).webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-og.jpg"
-        },
-        {
-          "file": "672a1b6709da67d01caf7827_Image11-enhanced (Large).webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-og.jpg"
-        },
-        {
-          "file": "672a1b663f1d66fa04335876_Image13-enhanced (Large).webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-og.jpg"
-        }
-      ],
-      "type": "Residential, house",
-      "sr": {
-        "type": "Stanovanje, kuća",
-        "description": "<p>Prizemna porodična kuća u ruralnom okruženju, sastavljena od dva volumena u obliku tradicionalne kuće sa dvovodnim krovom. Bela malterisana ala sadrži privatne prostorije, a tamna ala obložena drvetom dnevnu zonu i otvara se ka velikoj natkrivenoj terasi pod dubokim drvenim zabatom.</p><p>Dve ale se susreću na ulazu obloženom kamenom, koji razdvaja dnevnu i noćnu zonu i uokviruje malo dvorište. Jednostavne forme i prirodni materijali čine da kuća pripada pejzažu, a opet ima jasno savremen karakter.</p>"
-      }
+     "file": "1a137180c47b32c71_Trnava-11.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1368,
+     "h": 768,
+     "og": "1a137180c47b32c71_Trnava-11-og.jpg"
     },
     {
-      "slug": "belgrade-waterfront-apartment-2-b-64",
-      "title": "Belgrade Waterfront Apartment 2/B/64",
-      "services": [
-        "1. Conceptual & Schematic Design",
-        "2. Design Development & BIM Modeling",
-        "3. Construction Documents & Engineering"
-      ],
-      "year": "2024",
-      "cover": {
-        "file": "67129d698887efb8c3299ca2_Image1.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600,
-          2000,
-          2600,
-          3200
-        ],
-        "w": 3840,
-        "h": 2160,
-        "og": "67129d698887efb8c3299ca2_Image1-og.jpg"
-      },
-      "thumb": {
-        "file": "67129d698887efb8c3299ca2_Image1.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600,
-          2000,
-          2600,
-          3200
-        ],
-        "w": 3840,
-        "h": 2160,
-        "og": "67129d698887efb8c3299ca2_Image1-og.jpg"
-      },
-      "hero": {
-        "file": "67129d698887efb8c3299ca2_Image1.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600,
-          2000,
-          2600,
-          3200
-        ],
-        "w": 3840,
-        "h": 2160,
-        "og": "67129d698887efb8c3299ca2_Image1-og.jpg"
-      },
-      "description": "<p>A refined apartment in Belgrade Waterfront, designed in a quiet palette of dark walnut, white and stone. Living, dining and kitchen are one open space, anchored by a marble-topped island and a soft modular sofa.</p><p>Fluted and arched cabinetry, recessed lighting and carefully chosen objects add depth and a sense of calm.</p>",
-      "gallery": [
-        {
-          "file": "672a1e426cf8b188f2e1fe27_Image1_000-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e426cf8b188f2e1fe27_Image1_000-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e409a80317fd64d731a_Image1_004-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e409a80317fd64d731a_Image1_004-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e3ec29b0c642b1c4bf2_Image1_005-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e3ec29b0c642b1c4bf2_Image1_005-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e406cf8b188f2e1eb0a_Image1_006-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e406cf8b188f2e1eb0a_Image1_006-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e42c3b26f9f1c6f4412_Image1_002-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e42c3b26f9f1c6f4412_Image1_002-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e44d6bf7b4c22296681_Image1_019-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e44d6bf7b4c22296681_Image1_019-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e42c29b0c642b1c601f_Image1_001-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e42c29b0c642b1c601f_Image1_001-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e40ca6dc409901887af_Image1_003-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e40ca6dc409901887af_Image1_003-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e448f20309ec67ade6e_Image1_007-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e448f20309ec67ade6e_Image1_007-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e4392488c2e4f3f7169_Image1_009-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e4392488c2e4f3f7169_Image1_009-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e4317cc39503d6cedf6_Image1_010-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e4317cc39503d6cedf6_Image1_010-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e44abbe01352978e387_Image1_012-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e44abbe01352978e387_Image1_012-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e42a82c1c4d6d744126_Image1_013-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e42a82c1c4d6d744126_Image1_013-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e3e417513f24ae604a3_Image1_014-enhanced.webp",
-          "widths": [
-            500
-          ],
-          "w": 1080,
-          "h": 1080,
-          "og": "672a1e3e417513f24ae604a3_Image1_014-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e3f31e6ff5448d138ec_Image1_015-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e3f31e6ff5448d138ec_Image1_015-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e3f838797df10254bfa_Image1_018-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e3f838797df10254bfa_Image1_018-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e3e12363155412aec49_Image1_020-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e3e12363155412aec49_Image1_020-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e3fb3cd4bc813ce2fd1_Image1_021-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e3fb3cd4bc813ce2fd1_Image1_021-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e437cd01a39d798af5b_Image1_022-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e437cd01a39d798af5b_Image1_022-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e3f3f1d66fa0435e3f4_Image1_025-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e3f3f1d66fa0435e3f4_Image1_025-enhanced-og.jpg"
-        },
-        {
-          "file": "672a1e42fc59aa701de3e8c9_Image1_024-enhanced.webp",
-          "widths": [
-            500,
-            800,
-            1080
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "672a1e42fc59aa701de3e8c9_Image1_024-enhanced-og.jpg"
-        }
-      ],
-      "location": "Belgrade, Serbia",
-      "type": "Residential interior",
-      "sr": {
-        "type": "Enterijer stana",
-        "description": "<p>Prefinjen stan u Beogradu na vodi, projektovan u mirnoj paleti tamnog oraha, bele i kamena. Dnevni boravak, trpezarija i kuhinja čine jedan otvoren prostor, oko koga se grupišu ostrvo sa mermernom pločom i mekana modularna sofa.</p><p>Žljebljena i lučna stolarija, ugradno osvetljenje i pažljivo odabrani predmeti daju dubinu i osećaj mira.</p>",
-        "location": "Beograd, Srbija"
-      }
+     "file": "1a137180c5f35af69_Trnava-12.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1368,
+     "h": 768,
+     "og": "1a137180c5f35af69_Trnava-12-og.jpg"
     },
     {
-      "slug": "apartment-km-4-18",
-      "title": "Apartment KM 4/18",
-      "services": [
-        "4. Construction Administration & Oversight",
-        "3. Construction Documents & Engineering"
-      ],
-      "year": "2024",
-      "cover": {
-        "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
-      },
-      "thumb": {
-        "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
-      },
-      "hero": {
-        "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
-        "widths": [
-          500,
-          800,
-          1080,
-          1600
-        ],
-        "w": 1920,
-        "h": 1080,
-        "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
-      },
-      "description": "<p>A family apartment in Belgrade that keeps the character of a classic city interior, with herringbone parquet and ceiling rosettes, and pairs it with clean contemporary joinery. The day zone is one generous room: a living area with a piano and a full-height bookcase, a large dining table and a kitchen island in light stone.</p><p>In the night zone, glass partitions in slim black frames separate the bedroom, the dressing area and a small study without losing daylight. The bathrooms add warmth with terracotta joinery, stone-look tiles and black fittings.</p>",
-      "gallery": [
-        {
-          "file": "6720c3acfb99d123c735eab2_Image1_047.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "6720c3acfb99d123c735eab2_Image1_047-og.jpg"
-        },
-        {
-          "file": "6720c3abc712d878f3963091_Image1_048.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "6720c3abc712d878f3963091_Image1_048-og.jpg"
-        },
-        {
-          "file": "6720c3ab4294be08dfe21383_Image1_049.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "6720c3ab4294be08dfe21383_Image1_049-og.jpg"
-        },
-        {
-          "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
-        },
-        {
-          "file": "6720c3ac69c9186180e5c0ae_Image1_051.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1920,
-          "h": 1080,
-          "og": "6720c3ac69c9186180e5c0ae_Image1_051-og.jpg"
-        },
-        {
-          "file": "6720c3ae11b64af0231302b0_Image36_008.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6720c3ae11b64af0231302b0_Image36_008-og.jpg"
-        },
-        {
-          "file": "6720c3ac171350f92f948c01_Image36_006.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3ac171350f92f948c01_Image36_006-og.jpg"
-        },
-        {
-          "file": "6720c3ad11b64af023130211_Image36_010.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6720c3ad11b64af023130211_Image36_010-og.jpg"
-        },
-        {
-          "file": "6720c3ae4a89faac47a2ef9a_Image36_007.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6720c3ae4a89faac47a2ef9a_Image36_007-og.jpg"
-        },
-        {
-          "file": "6720c3ade14c2bdee59ae5f2_Image36_009.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6720c3ade14c2bdee59ae5f2_Image36_009-og.jpg"
-        },
-        {
-          "file": "6720c3ac059b2a783c9437b5_Image36_003.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3ac059b2a783c9437b5_Image36_003-og.jpg"
-        },
-        {
-          "file": "6720c3ac126f34d76f569513_Image36_004.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3ac126f34d76f569513_Image36_004-og.jpg"
-        },
-        {
-          "file": "6720c3acce5f0c2e7d5b3391_Image36_014.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3acce5f0c2e7d5b3391_Image36_014-og.jpg"
-        },
-        {
-          "file": "6720c3ad059b2a783c9438d9_Image36_015.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6720c3ad059b2a783c9438d9_Image36_015-og.jpg"
-        },
-        {
-          "file": "6720c3acd5a192a69d5429c1_Image36_018.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3acd5a192a69d5429c1_Image36_018-og.jpg"
-        },
-        {
-          "file": "6720c3ae512a0eb8f2ed2280_Image36_016.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6720c3ae512a0eb8f2ed2280_Image36_016-og.jpg"
-        },
-        {
-          "file": "6720c3ae28c5658a7f71f826_Image36_017.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600,
-            2000,
-            2600,
-            3200
-          ],
-          "w": 3840,
-          "h": 2160,
-          "og": "6720c3ae28c5658a7f71f826_Image36_017-og.jpg"
-        },
-        {
-          "file": "6720c3ad672e82b6e3ddf6af_Image36_019.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3ad672e82b6e3ddf6af_Image36_019-og.jpg"
-        },
-        {
-          "file": "6720c3acb066ac2cc6176719_Image36_020.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3acb066ac2cc6176719_Image36_020-og.jpg"
-        },
-        {
-          "file": "6720c3ac6f1f5059b3a246d8_Image36_021.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3ac6f1f5059b3a246d8_Image36_021-og.jpg"
-        },
-        {
-          "file": "6720c3ac69c9186180e5c0e9_Image36_022.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3ac69c9186180e5c0e9_Image36_022-og.jpg"
-        },
-        {
-          "file": "6720c3ab999b401b573be37b_Image36_023.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3ab999b401b573be37b_Image36_023-og.jpg"
-        },
-        {
-          "file": "6720c3b074fde631ef1036e3_Image36_026.webp",
-          "widths": [
-            500,
-            800,
-            1080,
-            1600
-          ],
-          "w": 1728,
-          "h": 2160,
-          "og": "6720c3b074fde631ef1036e3_Image36_026-og.jpg"
-        }
-      ],
-      "location": "Belgrade, Serbia",
-      "type": "Residential interior",
-      "sr": {
-        "type": "Enterijer stana",
-        "description": "<p>Porodični stan u Beogradu koji čuva karakter klasičnog gradskog enterijera, sa parketom u riblju kost i plafonskim rozetama, i uparuje ga sa čistom savremenom stolarijom. Dnevna zona je jedna velika prostorija: dnevni boravak sa klavirom i bibliotekom do plafona, veliki trpezarijski sto i kuhinjsko ostrvo od svetlog kamena.</p><p>U noćnoj zoni staklene pregrade u tankim crnim ramovima razdvajaju spavaću sobu, garderober i malu radnu sobu bez gubitka dnevnog svetla. Kupatila dodaju toplinu stolarijom boje terakote, pločicama sličnim kamenu i crnim armaturama.</p>",
-        "location": "Beograd, Srbija"
-      }
+     "file": "1a13718134fc1c458_Trnava-14.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1368,
+     "h": 768,
+     "og": "1a13718134fc1c458_Trnava-14-og.jpg"
     }
-  ],
-  "hero_slug": "villa-dve-koracica-kosmaj",
-  "promo_days": 21
+   ],
+   "location": "Trnava, Topola, Serbia",
+   "area": "450m2",
+   "status": "Under construction",
+   "credit": "Rendered by QBCARCHITECTS",
+   "added": "2026-10-13",
+   "type": "Event venue and restaurant",
+   "sr": {
+    "type": "Centar za događaje i restoran",
+    "description": "<p>Centar za događaje, delo QBC Architects, nalazi se usred voćnjaka u Trnavi kod Topole, a pored njega su dve male kuće za noćenje. Kada nema događaja, radi kao restoran. Arhitektura spaja savremeno ugostiteljsko projektovanje sa autentičnim karakterom šumadijskog pejzaža.</p><p>Koncept počiva na čistim konstruktivnim linijama i otvorenom toku prostora, bez nepotrebnih pregrada. Velike staklene površine brišu granicu između enterijera i okoline, pa priroda postaje deo svake prilike, od venčanja i proslava do poslovnih skupova i porodičnih okupljanja.</p><p>Rezultat je elegantan prostor koji se oslanja na jednostavnost, svetlost i vezu sa mestom, a ne na dekoraciju.</p>",
+    "location": "Trnava, Topola, Srbija",
+    "status": "U izgradnji"
+   }
+  },
+  {
+   "slug": "villa-dve-koracica-kosmaj",
+   "title": "Villa Dve Koracica, Kosmaj",
+   "services": [
+    "1. Conceptual & Schematic Design",
+    "2. Design Development & BIM Modeling",
+    "3. Construction Documents & Engineering"
+   ],
+   "year": "2026",
+   "cover": {
+    "file": "6aa293afab9b9e93867394a1_1 - 1.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1368,
+    "h": 768,
+    "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg"
+   },
+   "thumb": {
+    "file": "6aa28effe20b7166f2dc046f_2 - 3.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 2000,
+    "h": 962,
+    "og": "6aa28effe20b7166f2dc046f_2 - 3-og.jpg"
+   },
+   "hero": {
+    "file": "6aa293afab9b9e93867394a1_1 - 1.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1368,
+    "h": 768,
+    "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg"
+   },
+   "description": "<p>Two independently designed single-storey villas stand in the quiet landscape of Koraćica, at the foot of Mount Kosmaj. They are placed to follow the gently sloping terrain and to open towards the views of the surrounding woodland. The buildings cover just over 20% of the plot, so green space stays the main character of the property.</p><p>Both houses have clean lines, flat roofs and a warm material palette: decorative silicate render combined with ventilated Siberian larch cladding. Inside, the layouts are open and bright, with living areas under three-metre ceilings that open onto large terraces and private swimming pools.</p><p>The houses are built as a prefabricated timber-frame system with good thermal and acoustic performance, with underfloor heating and utility spaces integrated in the basement.</p>",
+   "gallery": [
+    {
+     "file": "6aa293afab9b9e93867394a1_1 - 1.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1368,
+     "h": 768,
+     "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg"
+    },
+    {
+     "file": "6aa293c23696e0bf733acb88_1 - 2.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1024,
+     "h": 575,
+     "og": "6aa293c23696e0bf733acb88_1 - 2-og.jpg"
+    },
+    {
+     "file": "6aa28f06defe2717325b426c_1 - 3.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1475,
+     "h": 711,
+     "og": "6aa28f06defe2717325b426c_1 - 3-og.jpg"
+    },
+    {
+     "file": "6aa28ef657107ef3884e9da8_2 - 1.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 961,
+     "og": "6aa28ef657107ef3884e9da8_2 - 1-og.jpg"
+    },
+    {
+     "file": "6aa28f052c30d80d8e512281_2 - 2.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 976,
+     "og": "6aa28f052c30d80d8e512281_2 - 2-og.jpg"
+    },
+    {
+     "file": "6aa293f4ab9b9e938673c7d6_2 - 3.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1024,
+     "h": 575,
+     "og": "6aa293f4ab9b9e938673c7d6_2 - 3-og.jpg"
+    },
+    {
+     "file": "6aa28fe555b3ce2838f6222f_2 - 6.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 2178,
+     "og": "6aa28fe555b3ce2838f6222f_2 - 6-og.jpg"
+    },
+    {
+     "file": "6aa28f05856feb3e17e473e7_2 - 4.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 975,
+     "og": "6aa28f05856feb3e17e473e7_2 - 4-og.jpg"
+    },
+    {
+     "file": "6aa28fe53a611c20e8568f6d_2 - 5.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 2186,
+     "og": "6aa28fe53a611c20e8568f6d_2 - 5-og.jpg"
+    }
+   ],
+   "location": "Koraćica, Kosmaj, Serbia",
+   "status": "Under construction",
+   "type": "Residential, villas",
+   "sr": {
+    "type": "Stanovanje, vile",
+    "description": "<p>Dve samostalno projektovane prizemne vile stoje u mirnom pejzažu Koraćice, u podnožju Kosmaja. Postavljene su tako da prate blago nagnut teren i otvaraju se ka pogledu na okolnu šumu. Objekti zauzimaju nešto više od 20% parcele, pa zelenilo ostaje glavna odlika imanja.</p><p>Obe kuće imaju čiste linije, ravne krovove i toplu paletu materijala: dekorativni silikatni malter u kombinaciji sa ventilisanom fasadom od sibirskog ariša. Unutra su rasporedi otvoreni i svetli, sa dnevnim zonama pod tri metra visokim plafonima koje se otvaraju ka velikim terasama i privatnim bazenima.</p><p>Kuće su građene kao montažni sistem od drvene konstrukcije, sa dobrim toplotnim i zvučnim performansama, podnim grejanjem i instalacionim prostorima u suterenu.</p>",
+    "location": "Koraćica, Kosmaj, Srbija",
+    "status": "U izgradnji"
+   }
+  },
+  {
+   "slug": "villas-divcibare-srb",
+   "title": "Villa Duo, Divcibare",
+   "services": [
+    "1. Conceptual & Schematic Design",
+    "2. Design Development & BIM Modeling",
+    "3. Construction Documents & Engineering",
+    "4. Construction Administration & Oversight",
+    "5. Interior Architecture & Custom Detailing"
+   ],
+   "year": "2025",
+   "cover": {
+    "file": "6aa2845f582915882762379c_Image73.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600,
+     2000,
+     2600,
+     3200
+    ],
+    "w": 3840,
+    "h": 2160,
+    "og": "6aa2845f582915882762379c_Image73-og.jpg"
+   },
+   "thumb": {
+    "file": "6aa2845f582915882762379c_Image73.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600,
+     2000,
+     2600,
+     3200
+    ],
+    "w": 3840,
+    "h": 2160,
+    "og": "6aa2845f582915882762379c_Image73-og.jpg"
+   },
+   "hero": {
+    "file": "6aa2845f582915882762379c_Image73.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600,
+     2000,
+     2600,
+     3200
+    ],
+    "w": 3840,
+    "h": 2160,
+    "og": "6aa2845f582915882762379c_Image73-og.jpg"
+   },
+   "description": "<p>On a mountain site in Divčibare, a family house and a guest house offer a contemporary interpretation of the traditional mountain retreat. Siberian larch and anthracite steel give the buildings warmth and a sharp modern outline, and place them calmly among the surrounding trees.</p><p>The main house is organised around daylight and open space: three-metre ceilings, a living area centred on a fireplace, and a lower-level SPA and wellness zone that opens onto an outdoor terrace. The guest house follows the same approach, with an open-plan layout, its own sauna and a sleeping gallery.</p><p>Both buildings are well insulated, with underfloor heating powered by heat pumps and an integrated smart home system.</p>",
+   "gallery": [
+    {
+     "file": "6aa2849bbd2b340604672c09_Image69.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849bbd2b340604672c09_Image69-og.jpg"
+    },
+    {
+     "file": "6aa2849bf09a69f4dcc80c30_Image70.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849bf09a69f4dcc80c30_Image70-og.jpg"
+    },
+    {
+     "file": "6aa2849e93cb646794f4d35a_Image71.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849e93cb646794f4d35a_Image71-og.jpg"
+    },
+    {
+     "file": "6aa2845f582915882762379c_Image73.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2845f582915882762379c_Image73-og.jpg"
+    },
+    {
+     "file": "6aa2849c0cfb37f0ee439bb7_Image72.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849c0cfb37f0ee439bb7_Image72-og.jpg"
+    },
+    {
+     "file": "6aa2852a6100db41fc677e3c_Image89.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2852a6100db41fc677e3c_Image89-og.jpg"
+    },
+    {
+     "file": "6aa2849c2672b1868d16331a_Image21.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849c2672b1868d16331a_Image21-og.jpg"
+    },
+    {
+     "file": "6aa2849d5eee4c05ba3e547d_Image85_000.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849d5eee4c05ba3e547d_Image85_000-og.jpg"
+    },
+    {
+     "file": "6aa2849d0487e53474bfbe83_Image25.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849d0487e53474bfbe83_Image25-og.jpg"
+    },
+    {
+     "file": "6aa2849d5eee4c05ba3e5482_Image82.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849d5eee4c05ba3e5482_Image82-og.jpg"
+    },
+    {
+     "file": "6aa2849c5c8798acaa9f90fa_Image28.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849c5c8798acaa9f90fa_Image28-og.jpg"
+    },
+    {
+     "file": "6aa2849d6100db41fc671a38_Image27_000.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849d6100db41fc671a38_Image27_000-og.jpg"
+    },
+    {
+     "file": "6aa2849d220840992be694d1_Image18.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849d220840992be694d1_Image18-og.jpg"
+    },
+    {
+     "file": "6aa2849e7b983d21eae27803_Image19.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849e7b983d21eae27803_Image19-og.jpg"
+    },
+    {
+     "file": "6aa2849e091ae5d0a7712d1c_Image74.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849e091ae5d0a7712d1c_Image74-og.jpg"
+    },
+    {
+     "file": "6aa2849c5bad1f633cb71c67_Image80.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849c5bad1f633cb71c67_Image80-og.jpg"
+    },
+    {
+     "file": "6aa2849bf09a69f4dcc80c17_Image16.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849bf09a69f4dcc80c17_Image16-og.jpg"
+    },
+    {
+     "file": "6aa2849ef09a69f4dcc80d8e_Image27.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849ef09a69f4dcc80d8e_Image27-og.jpg"
+    },
+    {
+     "file": "6aa2849def8e3ac275e76443_Image79.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849def8e3ac275e76443_Image79-og.jpg"
+    },
+    {
+     "file": "6aa2849d5bad1f633cb71d29_Image77.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849d5bad1f633cb71d29_Image77-og.jpg"
+    },
+    {
+     "file": "6aa2849ed42b40dc0a892a6e_Image76.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6aa2849ed42b40dc0a892a6e_Image76-og.jpg"
+    }
+   ],
+   "location": "Divčibare, Serbia",
+   "status": "Under construction",
+   "type": "Residential, villas",
+   "sr": {
+    "type": "Stanovanje, vile",
+    "description": "<p>Na planinskoj parceli na Divčibarama, porodična kuća i kuća za goste nude savremeno tumačenje tradicionalnog planinskog utočišta. Sibirski ariš i antracit čelik daju objektima toplinu i oštru savremenu siluetu, i mirno ih smeštaju među okolna stabla.</p><p>Glavna kuća je organizovana oko dnevne svetlosti i otvorenog prostora: plafoni visine tri metra, dnevna zona u središtu sa kaminom i SPA i vellness zona na nižem nivou koja se otvara ka spoljnoj terasi. Kuća za goste sledi isti pristup, sa otvorenom osnovom, sopstvenom saunom i galerijom za spavanje.</p><p>Oba objekta su dobro izolovana, sa podnim grejanjem na toplotne pumpe i integrisanim sistemom pametne kuće.</p>",
+    "location": "Divčibare, Srbija",
+    "status": "U izgradnji"
+   }
+  },
+  {
+   "slug": "liman-2-ulcinj-mne",
+   "title": "Liman 2, Ulcinj",
+   "services": [
+    "4. Construction Administration & Oversight",
+    "3. Construction Documents & Engineering",
+    "2. Design Development & BIM Modeling",
+    "1. Conceptual & Schematic Design"
+   ],
+   "year": "2019",
+   "cover": {
+    "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
+   },
+   "thumb": {
+    "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
+   },
+   "hero": {
+    "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
+   },
+   "description": "<p>Located above Liman 2 beach in Ulcinj, on the Montenegrin coast, this residential and commercial building follows the steep, wooded slope instead of fighting it. The volume is broken into cascading terraces, so the apartments step down the hill and each one gets its own open terrace with planting and a view of the sea.</p><p>The material palette comes from the Adriatic tradition: local stone walls, white rendered volumes, timber shutters and planted parapets. Seen from the beach, the building reads as part of the hillside rather than as a single block.</p>",
+   "gallery": [
+    {
+     "file": "673bbf0a0fe95df33293962b_Image1_000.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf0a0fe95df33293962b_Image1_000-og.jpg"
+    },
+    {
+     "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
+    },
+    {
+     "file": "673bbf06d092c27300025bbf_Image2_014.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf06d092c27300025bbf_Image2_014-og.jpg"
+    },
+    {
+     "file": "673bbf0627d2a1529df6e7eb_Image2_015.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf0627d2a1529df6e7eb_Image2_015-og.jpg"
+    },
+    {
+     "file": "673bbf06cb0313130f59801c_Image2_016.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf06cb0313130f59801c_Image2_016-og.jpg"
+    },
+    {
+     "file": "673bbf06878268e7b7d335ba_Image2_017.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf06878268e7b7d335ba_Image2_017-og.jpg"
+    },
+    {
+     "file": "673bbf0ab78adccbd83b2838_Image2_018.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf0ab78adccbd83b2838_Image2_018-og.jpg"
+    },
+    {
+     "file": "673bbf06eeaca39b59efd1f0_Image2_019.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf06eeaca39b59efd1f0_Image2_019-og.jpg"
+    },
+    {
+     "file": "673bbf05d092c27300025afb_Image2.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf05d092c27300025afb_Image2-og.jpg"
+    },
+    {
+     "file": "673bbf05d15c21428d2e6706_Image2_020.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf05d15c21428d2e6706_Image2_020-og.jpg"
+    },
+    {
+     "file": "673bbf0a7d7d92d0f12f6af2_Image2_022.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf0a7d7d92d0f12f6af2_Image2_022-og.jpg"
+    },
+    {
+     "file": "673bbf066685a101ebb6908c_Image2_024.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf066685a101ebb6908c_Image2_024-og.jpg"
+    },
+    {
+     "file": "673bbf068bcb205827a5fe75_Image2_023.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "673bbf068bcb205827a5fe75_Image2_023-og.jpg"
+    }
+   ],
+   "location": "Ulcinj, Montenegro",
+   "type": "Residential and commercial building",
+   "sr": {
+    "type": "Stambeno-poslovni objekat",
+    "description": "<p>Ovaj stambeno-poslovni objekat, iznad plaže Liman 2 u Ulcinju na crnogorskom primorju, prati strmu, šumovitu padinu umesto da se s njom bori. Zapremina je razlomljena u kaskadne terase, pa se stanovi spuštaju niz brdo i svaki dobija sopstvenu otvorenu terasu sa zelenilom i pogledom na more.</p><p>Paleta materijala potiče iz jadranske tradicije: zidovi od lokalnog kamena, beli malterisani volumeni, drvene grilje i ozelenjeni parapeti. Gledan sa plaže, objekat se čita kao deo padine, a ne kao jedinstven blok.</p>",
+    "location": "Ulcinj, Crna Gora"
+   }
+  },
+  {
+   "slug": "apartment-pb-23-mb",
+   "title": "Apartment PB/23 MB",
+   "services": [
+    "4. Construction Administration & Oversight",
+    "3. Construction Documents & Engineering",
+    "2. Design Development & BIM Modeling",
+    "1. Conceptual & Schematic Design"
+   ],
+   "year": "2024",
+   "cover": {
+    "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1600,
+    "h": 900,
+    "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
+   },
+   "thumb": {
+    "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1600,
+    "h": 900,
+    "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
+   },
+   "hero": {
+    "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1600,
+    "h": 900,
+    "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
+   },
+   "description": "<p>A compact apartment shaped by a warm, restrained palette of oak, sand and deep navy. The living room, dining area and kitchen share one open space, while built-in joinery, a study niche and a bedroom with concealed storage keep the plan efficient.</p><p>Soft daylight, layered lighting and a few sculptural pieces give the interior calm and character.</p>",
+   "gallery": [
+    {
+     "file": "67320986257506d26ea3aba9_IMG-20241110-WA0007.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1600,
+     "h": 900,
+     "og": "67320986257506d26ea3aba9_IMG-20241110-WA0007-og.jpg"
+    },
+    {
+     "file": "673209826072b2caae86bc95_IMG-20241110-WA0017.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1600,
+     "h": 900,
+     "og": "673209826072b2caae86bc95_IMG-20241110-WA0017-og.jpg"
+    },
+    {
+     "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1600,
+     "h": 900,
+     "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
+    },
+    {
+     "file": "6732098379a22c13b8f576b6_IMG-20241110-WA0013.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1600,
+     "h": 900,
+     "og": "6732098379a22c13b8f576b6_IMG-20241110-WA0013-og.jpg"
+    },
+    {
+     "file": "673209889b97847ee7209619_IMG-20241110-WA0003.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1278,
+     "h": 1600,
+     "og": "673209889b97847ee7209619_IMG-20241110-WA0003-og.jpg"
+    },
+    {
+     "file": "673209839d61b7074e98f4b9_IMG-20241110-WA0012.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1278,
+     "h": 1600,
+     "og": "673209839d61b7074e98f4b9_IMG-20241110-WA0012-og.jpg"
+    },
+    {
+     "file": "673209875ed161e1fce2f8f8_IMG-20241110-WA0005.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1278,
+     "h": 1600,
+     "og": "673209875ed161e1fce2f8f8_IMG-20241110-WA0005-og.jpg"
+    },
+    {
+     "file": "67320982827b528552dc1f6b_IMG-20241110-WA0002.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1600,
+     "h": 900,
+     "og": "67320982827b528552dc1f6b_IMG-20241110-WA0002-og.jpg"
+    },
+    {
+     "file": "67320988691c6ea66829eadf_IMG-20241110-WA0004.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1278,
+     "h": 1600,
+     "og": "67320988691c6ea66829eadf_IMG-20241110-WA0004-og.jpg"
+    },
+    {
+     "file": "67320987efccb47c02afc71b_IMG-20241110-WA0006.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1600,
+     "h": 900,
+     "og": "67320987efccb47c02afc71b_IMG-20241110-WA0006-og.jpg"
+    },
+    {
+     "file": "6731d9abba0150026c36c7a3_IMG-20241110-WA0008.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1278,
+     "h": 1600,
+     "og": "6731d9abba0150026c36c7a3_IMG-20241110-WA0008-og.jpg"
+    },
+    {
+     "file": "67320986366c9a47970f135d_IMG-20241110-WA0009.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1600,
+     "h": 900,
+     "og": "67320986366c9a47970f135d_IMG-20241110-WA0009-og.jpg"
+    },
+    {
+     "file": "67320984f7afe0c08ebb51c8_IMG-20241110-WA0011.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1278,
+     "h": 1600,
+     "og": "67320984f7afe0c08ebb51c8_IMG-20241110-WA0011-og.jpg"
+    },
+    {
+     "file": "67320982691c6ea66829e65a_IMG-20241110-WA0014.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1278,
+     "h": 1600,
+     "og": "67320982691c6ea66829e65a_IMG-20241110-WA0014-og.jpg"
+    },
+    {
+     "file": "673209820c9f19a0311498ce_IMG-20241110-WA0015.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1600,
+     "h": 900,
+     "og": "673209820c9f19a0311498ce_IMG-20241110-WA0015-og.jpg"
+    },
+    {
+     "file": "673209829b97847ee7209141_IMG-20241110-WA0016.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1278,
+     "h": 1600,
+     "og": "673209829b97847ee7209141_IMG-20241110-WA0016-og.jpg"
+    },
+    {
+     "file": "673209820ebf7cf7dfd8953f_IMG-20241110-WA0001.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1278,
+     "h": 1600,
+     "og": "673209820ebf7cf7dfd8953f_IMG-20241110-WA0001-og.jpg"
+    }
+   ],
+   "type": "Residential interior",
+   "sr": {
+    "type": "Enterijer stana",
+    "description": "<p>Kompaktan stan oblikovan toplom, suzdržanom paletom hrasta, peska i tamnoplave boje. Dnevna soba, trpezarija i kuhinja dele jedan otvoren prostor, dok ugrađena stolarija, radna niša i spavaća soba sa skrivenim ormarima čuvaju efikasnost osnove.</p><p>Mekana dnevna svetlost, slojevito osvetljenje i nekoliko skulpturalnih predmeta daju enterijeru mir i karakter.</p>"
+   },
+   "dark": true
+  },
+  {
+   "slug": "clinic-ztb",
+   "title": "Clinic ZTB",
+   "services": [
+    "4. Construction Administration & Oversight",
+    "3. Construction Documents & Engineering",
+    "2. Design Development & BIM Modeling"
+   ],
+   "year": "2024",
+   "cover": {
+    "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
+   },
+   "thumb": {
+    "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
+   },
+   "hero": {
+    "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
+   },
+   "description": "<p>An interior for a private clinic on Zlatibor, designed as a calm, hotel-like space rather than a clinical one. The reception and waiting lounge combine soft upholstered seating, walnut tables and plants with a large botanical wall finish behind glass, so the first impression is warmth instead of corridors and white tiles.</p><p>The treatment rooms continue the same palette of warm stone-coloured surfaces, timber and brass. Built-in counters with brass basins, concealed storage and soft pendant lighting keep the rooms practical for daily work, while the washrooms get a stronger character with dark marble and patterned wallpaper.</p>",
+   "gallery": [
+    {
+     "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aadc30557cce8af0372_Image1_010-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2aadc30557cce8af0372_Image1_010-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aae14c5b939c3fea0e7_Image1_011-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2aae14c5b939c3fea0e7_Image1_011-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2ab28cae43227dd31df7_Image1_012-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2ab28cae43227dd31df7_Image1_012-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2ab1b2eeeaa52ca98aa9_Image1_013-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2ab1b2eeeaa52ca98aa9_Image1_013-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aa6d622e1402e61d574_Image1_018-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1080,
+     "h": 1313,
+     "og": "672a2aa6d622e1402e61d574_Image1_018-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2ab1bb9a1e7d0b4afae5_Image1_019-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2ab1bb9a1e7d0b4afae5_Image1_019-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aa4ec2eaccd6c381a1c_Image1_020-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1080,
+     "h": 1313,
+     "og": "672a2aa4ec2eaccd6c381a1c_Image1_020-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aac54dc53a27425be32_Image1_021-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2aac54dc53a27425be32_Image1_021-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aabc29d775ce6bbc206_Image1_023-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2aabc29d775ce6bbc206_Image1_023-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aa31ae37cfc3662fbc9_Image1_024-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2aa31ae37cfc3662fbc9_Image1_024-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aa58961df28a32303e6_Image1_030-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1080,
+     "h": 1313,
+     "og": "672a2aa58961df28a32303e6_Image1_030-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aadbb6094c177ee07f7_Image1_032-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2aadbb6094c177ee07f7_Image1_032-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aad4eedee8e7d375681_Image1_050-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2aad4eedee8e7d375681_Image1_050-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aaa740563b5bec77923_Image1_055-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1080,
+     "h": 1313,
+     "og": "672a2aaa740563b5bec77923_Image1_055-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aa988c83c21cb1cb036_Image1_058-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1080,
+     "h": 1313,
+     "og": "672a2aa988c83c21cb1cb036_Image1_058-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aa7b26999ac92d92c6f_Image1_064-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1080,
+     "h": 1313,
+     "og": "672a2aa7b26999ac92d92c6f_Image1_064-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aa3f02c076b063ce677_Image1_067-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1080,
+     "h": 1313,
+     "og": "672a2aa3f02c076b063ce677_Image1_067-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aa75bfa27b804689e8f_Image1_075-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1080,
+     "h": 1313,
+     "og": "672a2aa75bfa27b804689e8f_Image1_075-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aa5b26999ac92d9281a_r12_20(1)-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1080,
+     "h": 1313,
+     "og": "672a2aa5b26999ac92d9281a_r12_20(1)-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2ab1fd23da6cc6f19f04_r12_20(2)-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2ab1fd23da6cc6f19f04_r12_20(2)-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aae7296ccb6990dc2b0_r12_20(3)-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2aae7296ccb6990dc2b0_r12_20(3)-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2aa45bfa27b804689c64_r12_20(4)-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2aa45bfa27b804689c64_r12_20(4)-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2ab314c5b939c3fea775_r12_20(5)-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2ab314c5b939c3fea775_r12_20(5)-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2ab176f5562ed0c62668_r12_20(6)-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2ab176f5562ed0c62668_r12_20(6)-enhanced-og.jpg"
+    }
+   ],
+   "location": "Zlatibor, Serbia",
+   "type": "Healthcare interior",
+   "sr": {
+    "type": "Enterijer zdravstvene ustanove",
+    "description": "<p>Enterijer privatne klinike na Zlatiboru, osmišljen kao miran prostor nalik hotelskom, a ne kao klinički. Recepcija i čekaonica kombinuju mekano tapacirano sedenje, orahove stolove i biljke sa velikom botaničkom zidnom obradom iza stakla, tako da je prvi utisak toplina, a ne hodnici i bele pločice.</p><p>Ordinacije nastavljaju istu paletu toplih kamenih površina, drveta i mesinga. Ugrađeni pultovi sa mesinganim lavaboima, skriveni ormari i meko privesno osvetljenje čine prostorije praktičnim za svakodnevni rad, dok sanitarni čvorovi dobijaju snažniji karakter tamnim mermerom i šarenom tapetom.</p>",
+    "location": "Zlatibor, Srbija"
+   }
+  },
+  {
+   "slug": "caffe-spass-belgrade",
+   "title": "Caffe Spass, Belgrade",
+   "services": [
+    "1. Conceptual & Schematic Design",
+    "2. Design Development & BIM Modeling",
+    "3. Construction Documents & Engineering",
+    "4. Construction Administration & Oversight"
+   ],
+   "year": "2024",
+   "cover": {
+    "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
+   },
+   "thumb": {
+    "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
+   },
+   "hero": {
+    "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
+   },
+   "description": "<p>Caffe Spass occupies a double-height space on Kralja Petra Street in Belgrade. We kept the raw structure of steel columns, exposed concrete and coffered ceiling, and set against it a bold palette of red, black and white, with a mezzanine overlooking the main floor.</p><p>Patterned tiles, a graphic bar counter, sculptural figures and line lighting make a lively room with a strong identity.</p>",
+   "gallery": [
+    {
+     "file": "672a2910745565a8de07f66e_Image1_005-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2910745565a8de07f66e_Image1_005-enhanced-og.jpg"
+    },
+    {
+     "file": "672a290f76f5562ed0c4b09a_Image1_004-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a290f76f5562ed0c4b09a_Image1_004-enhanced-og.jpg"
+    },
+    {
+     "file": "672a290fe695b53e94f87631_Image1_007-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a290fe695b53e94f87631_Image1_007-enhanced-og.jpg"
+    },
+    {
+     "file": "672a290e42eae8e361c7966e_Image1-enhanced 4.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a290e42eae8e361c7966e_Image1-enhanced 4-og.jpg"
+    },
+    {
+     "file": "672a290f9c515a3863cfa437_Image1_002-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a290f9c515a3863cfa437_Image1_002-enhanced-og.jpg"
+    },
+    {
+     "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
+    },
+    {
+     "file": "672a290f31e6ff5448dba86b_Image1_012-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a290f31e6ff5448dba86b_Image1_012-enhanced-og.jpg"
+    },
+    {
+     "file": "672a290fc8170599c0545ed5_Image1-enhanced 2.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a290fc8170599c0545ed5_Image1-enhanced 2-og.jpg"
+    },
+    {
+     "file": "672a29121d2e3e498a0ceeab_Image1-enhanced 3.webp",
+     "widths": [],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a29121d2e3e498a0ceeab_Image1-enhanced 3-og.jpg"
+    },
+    {
+     "file": "672a290ea57dee135c3252d8_Image1-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a290ea57dee135c3252d8_Image1-enhanced-og.jpg"
+    },
+    {
+     "file": "672a290e6fd8345c3412c8f4_Image1-enhanced 5.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a290e6fd8345c3412c8f4_Image1-enhanced 5-og.jpg"
+    }
+   ],
+   "location": "Belgrade, Serbia",
+   "type": "Hospitality interior",
+   "sr": {
+    "type": "Ugostiteljski enterijer",
+    "description": "<p>Caffe Spass zauzima prostor dvostruke visine u Ulici kralja Petra u Beogradu. Zadržali smo sirovu konstrukciju od čeličnih stubova, golog betona i kasetiranog plafona, a naspram nje postavili smelu paletu crvene, crne i bele, sa mezaninom koji se nadvija nad glavnom salom.</p><p>Šarene pločice, grafički šank, skulpturalne figure i linijsko osvetljenje čine živahan prostor snažnog identiteta.</p>",
+    "location": "Beograd, Srbija"
+   },
+   "dark": true
+  },
+  {
+   "slug": "apartment-sakura-2-24",
+   "title": "Apartment Sakura 2/24",
+   "services": [
+    "4. Construction Administration & Oversight",
+    "3. Construction Documents & Engineering",
+    "2. Design Development & BIM Modeling"
+   ],
+   "year": "2023",
+   "cover": {
+    "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
+   },
+   "thumb": {
+    "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
+   },
+   "hero": {
+    "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
+   },
+   "description": "<p>This Belgrade apartment takes a light, warm direction. Textured plaster walls, light oak and a long marble bench define the living room, where a fluted timber sliding panel hides the TV and turns the media wall into a bookcase when the screen is off.</p><p>The kitchen with its island sits in a softly lit niche, and the bedroom repeats the plaster and timber palette with a full-height headboard wall. The aim was a quiet, natural interior that is easy to live with every day.</p>",
+   "gallery": [
+    {
+     "file": "672a2123e35c53ec87556c9d_Dnevna_201_001-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2123e35c53ec87556c9d_Dnevna_201_001-enhanced-og.jpg"
+    },
+    {
+     "file": "672a21222d1728cc8c7eb1c3_Dnevna_201_002-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a21222d1728cc8c7eb1c3_Dnevna_201_002-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2123e35c53ec87556cb7_Dnevna_201_003-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2123e35c53ec87556cb7_Dnevna_201_003-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2123b74c6e7c5868569d_Dnevna_201-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2123b74c6e7c5868569d_Dnevna_201-enhanced-og.jpg"
+    },
+    {
+     "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
+    },
+    {
+     "file": "672a21adce051a8748e0c353_Image1_003-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a21adce051a8748e0c353_Image1_003-enhanced-og.jpg"
+    },
+    {
+     "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
+    }
+   ],
+   "location": "Belgrade, Serbia",
+   "type": "Residential interior",
+   "sr": {
+    "type": "Enterijer stana",
+    "description": "<p>Ovaj beogradski stan ide u svetlom, toplom pravcu. Teksturisani malterisani zidovi, svetli hrast i duga mermerna klupa određuju dnevnu sobu, u kojoj žljebljeni drveni klizni panel skriva televizor i pretvara zid sa medijima u biblioteku kada je ekran isključen.</p><p>Kuhinja sa ostrvom smeštena je u blago osvetljenoj niši, a spavaća soba ponavlja paletu maltera i drveta uz zid uzglavlja do plafona. Cilj je bio miran, prirodan enterijer u kome se lako živi svakog dana.</p>",
+    "location": "Beograd, Srbija"
+   }
+  },
+  {
+   "slug": "apartment-sakura-1-24",
+   "title": "Apartment Sakura 1/24",
+   "services": [
+    "4. Construction Administration & Oversight",
+    "3. Construction Documents & Engineering",
+    "2. Design Development & BIM Modeling"
+   ],
+   "year": "2023",
+   "cover": {
+    "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
+    "widths": [
+     500,
+     800
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
+   },
+   "thumb": {
+    "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
+    "widths": [
+     500,
+     800
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
+   },
+   "hero": {
+    "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
+    "widths": [
+     500,
+     800
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
+   },
+   "description": "<p>A compact Belgrade apartment designed around one open living space. The living room, kitchen and dining bar are tied together by continuous oak surfaces and a dark graphite palette, with a slim metal shelving unit that separates the zones without closing them off.</p><p>Storage is built into wall-to-wall joinery, the kitchen sits in a timber niche with a breakfast bar, and the bedroom keeps the same calm tones with an upholstered headboard wall. The apartment feels larger than its footprint because every piece of storage has its place in the joinery.</p>",
+   "gallery": [
+    {
+     "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2006e19eca958f820a5f_Image1_010-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 919,
+     "og": "672a2006e19eca958f820a5f_Image1_010-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2005ce051a8748df6603_Image1-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2005ce051a8748df6603_Image1-enhanced-og.jpg"
+    },
+    {
+     "file": "672a200627ff3cb16ca917bc_Image1_000-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1251,
+     "h": 1080,
+     "og": "672a200627ff3cb16ca917bc_Image1_000-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2009dd600f5a3dfd4a00_Image1_003-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a2009dd600f5a3dfd4a00_Image1_003-enhanced-og.jpg"
+    },
+    {
+     "file": "672a20062d1728cc8c7d7618_Image1_006-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a20062d1728cc8c7d7618_Image1_006-enhanced-og.jpg"
+    },
+    {
+     "file": "672a200940553a7859c8ab30_Image1_008-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a200940553a7859c8ab30_Image1_008-enhanced-og.jpg"
+    },
+    {
+     "file": "672a200912e179e675eac275_Image1_013-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a200912e179e675eac275_Image1_013-enhanced-og.jpg"
+    },
+    {
+     "file": "672a2005f7eb8d2c561c5642_Image1_014-enhanced.webp",
+     "widths": [
+      500
+     ],
+     "w": 1251,
+     "h": 1080,
+     "og": "672a2005f7eb8d2c561c5642_Image1_014-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
+    }
+   ],
+   "location": "Belgrade, Serbia",
+   "type": "Residential interior",
+   "sr": {
+    "type": "Enterijer stana",
+    "description": "<p>Kompaktan beogradski stan osmišljen oko jednog otvorenog dnevnog prostora. Dnevnu sobu, kuhinju i barski deo za doručak povezuju neprekidne hrastove površine i tamna grafitna paleta, uz tanku metalnu policu koja razdvaja zone, a ne zatvara ih.</p><p>Odlaganje je ugrađeno u stolariju od zida do zida, kuhinja je u drvenoj niši sa barom za doručak, a spavaća soba zadržava iste mirne tonove sa tapaciranim zidom uzglavlja. Stan deluje većim od svoje površine jer svaki element za odlaganje ima svoje mesto u stolariji.</p>",
+    "location": "Beograd, Srbija"
+   }
+  },
+  {
+   "slug": "private-villa-bc-3721",
+   "title": "Private Villa BC 3721",
+   "services": [
+    "4. Construction Administration & Oversight",
+    "3. Construction Documents & Engineering",
+    "2. Design Development & BIM Modeling",
+    "1. Conceptual & Schematic Design"
+   ],
+   "year": "2024",
+   "cover": {
+    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1754,
+    "h": 1240,
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg"
+   },
+   "thumb": {
+    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1754,
+    "h": 1240,
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg"
+   },
+   "hero": {
+    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1754,
+    "h": 1240,
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg"
+   },
+   "description": "<p>A single-storey family house in a rural setting, made of two volumes in the shape of the traditional gabled house. The white rendered wing holds the private rooms, while the dark timber-clad wing holds the living area and opens to a large covered terrace under a deep gable frame lined with wood.</p><p>The two wings meet at a stone-clad entrance, which separates the day and night zones and frames a small courtyard. Simple forms and natural materials make the house feel at home in the landscape while giving it a clearly contemporary character.</p>",
+   "gallery": [
+    {
+     "file": "672a1b66c51068306917e55c_Image5-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66c51068306917e55c_Image5-enhanced (Large)-og.jpg"
+    },
+    {
+     "file": "672a1b668cbb8379eb716617_Image9-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-og.jpg"
+    },
+    {
+     "file": "672a1b6651adb46944e044a7_Image24-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-og.jpg"
+    },
+    {
+     "file": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-og.jpg"
+    },
+    {
+     "file": "672a1b66d346501810784814_Image6-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66d346501810784814_Image6-enhanced (Large)-og.jpg"
+    },
+    {
+     "file": "672a1b67de171f51707390db_Image7-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b67de171f51707390db_Image7-enhanced (Large)-og.jpg"
+    },
+    {
+     "file": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-og.jpg"
+    },
+    {
+     "file": "672a1b6709da67d01caf7827_Image11-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-og.jpg"
+    },
+    {
+     "file": "672a1b663f1d66fa04335876_Image13-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-og.jpg"
+    }
+   ],
+   "type": "Residential, house",
+   "sr": {
+    "type": "Stanovanje, kuća",
+    "description": "<p>Prizemna porodična kuća u ruralnom okruženju, sastavljena od dva volumena u obliku tradicionalne kuće sa dvovodnim krovom. Bela malterisana ala sadrži privatne prostorije, a tamna ala obložena drvetom dnevnu zonu i otvara se ka velikoj natkrivenoj terasi pod dubokim drvenim zabatom.</p><p>Dve ale se susreću na ulazu obloženom kamenom, koji razdvaja dnevnu i noćnu zonu i uokviruje malo dvorište. Jednostavne forme i prirodni materijali čine da kuća pripada pejzažu, a opet ima jasno savremen karakter.</p>"
+   }
+  },
+  {
+   "slug": "belgrade-waterfront-apartment-2-b-64",
+   "title": "Belgrade Waterfront Apartment 2/B/64",
+   "services": [
+    "1. Conceptual & Schematic Design",
+    "2. Design Development & BIM Modeling",
+    "3. Construction Documents & Engineering"
+   ],
+   "year": "2024",
+   "cover": {
+    "file": "67129d698887efb8c3299ca2_Image1.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600,
+     2000,
+     2600,
+     3200
+    ],
+    "w": 3840,
+    "h": 2160,
+    "og": "67129d698887efb8c3299ca2_Image1-og.jpg"
+   },
+   "thumb": {
+    "file": "67129d698887efb8c3299ca2_Image1.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600,
+     2000,
+     2600,
+     3200
+    ],
+    "w": 3840,
+    "h": 2160,
+    "og": "67129d698887efb8c3299ca2_Image1-og.jpg"
+   },
+   "hero": {
+    "file": "67129d698887efb8c3299ca2_Image1.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600,
+     2000,
+     2600,
+     3200
+    ],
+    "w": 3840,
+    "h": 2160,
+    "og": "67129d698887efb8c3299ca2_Image1-og.jpg"
+   },
+   "description": "<p>A refined apartment in Belgrade Waterfront, designed in a quiet palette of dark walnut, white and stone. Living, dining and kitchen are one open space, anchored by a marble-topped island and a soft modular sofa.</p><p>Fluted and arched cabinetry, recessed lighting and carefully chosen objects add depth and a sense of calm.</p>",
+   "gallery": [
+    {
+     "file": "672a1e426cf8b188f2e1fe27_Image1_000-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e426cf8b188f2e1fe27_Image1_000-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e409a80317fd64d731a_Image1_004-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e409a80317fd64d731a_Image1_004-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e3ec29b0c642b1c4bf2_Image1_005-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e3ec29b0c642b1c4bf2_Image1_005-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e406cf8b188f2e1eb0a_Image1_006-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e406cf8b188f2e1eb0a_Image1_006-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e42c3b26f9f1c6f4412_Image1_002-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e42c3b26f9f1c6f4412_Image1_002-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e44d6bf7b4c22296681_Image1_019-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e44d6bf7b4c22296681_Image1_019-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e42c29b0c642b1c601f_Image1_001-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e42c29b0c642b1c601f_Image1_001-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e40ca6dc409901887af_Image1_003-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e40ca6dc409901887af_Image1_003-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e448f20309ec67ade6e_Image1_007-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e448f20309ec67ade6e_Image1_007-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e4392488c2e4f3f7169_Image1_009-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e4392488c2e4f3f7169_Image1_009-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e4317cc39503d6cedf6_Image1_010-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e4317cc39503d6cedf6_Image1_010-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e44abbe01352978e387_Image1_012-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e44abbe01352978e387_Image1_012-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e42a82c1c4d6d744126_Image1_013-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e42a82c1c4d6d744126_Image1_013-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e3e417513f24ae604a3_Image1_014-enhanced.webp",
+     "widths": [
+      500
+     ],
+     "w": 1080,
+     "h": 1080,
+     "og": "672a1e3e417513f24ae604a3_Image1_014-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e3f31e6ff5448d138ec_Image1_015-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e3f31e6ff5448d138ec_Image1_015-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e3f838797df10254bfa_Image1_018-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e3f838797df10254bfa_Image1_018-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e3e12363155412aec49_Image1_020-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e3e12363155412aec49_Image1_020-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e3fb3cd4bc813ce2fd1_Image1_021-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e3fb3cd4bc813ce2fd1_Image1_021-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e437cd01a39d798af5b_Image1_022-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e437cd01a39d798af5b_Image1_022-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e3f3f1d66fa0435e3f4_Image1_025-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e3f3f1d66fa0435e3f4_Image1_025-enhanced-og.jpg"
+    },
+    {
+     "file": "672a1e42fc59aa701de3e8c9_Image1_024-enhanced.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1e42fc59aa701de3e8c9_Image1_024-enhanced-og.jpg"
+    }
+   ],
+   "location": "Belgrade, Serbia",
+   "type": "Residential interior",
+   "sr": {
+    "type": "Enterijer stana",
+    "description": "<p>Prefinjen stan u Beogradu na vodi, projektovan u mirnoj paleti tamnog oraha, bele i kamena. Dnevni boravak, trpezarija i kuhinja čine jedan otvoren prostor, oko koga se grupišu ostrvo sa mermernom pločom i mekana modularna sofa.</p><p>Žljebljena i lučna stolarija, ugradno osvetljenje i pažljivo odabrani predmeti daju dubinu i osećaj mira.</p>",
+    "location": "Beograd, Srbija"
+   }
+  },
+  {
+   "slug": "apartment-km-4-18",
+   "title": "Apartment KM 4/18",
+   "services": [
+    "4. Construction Administration & Oversight",
+    "3. Construction Documents & Engineering"
+   ],
+   "year": "2024",
+   "cover": {
+    "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
+   },
+   "thumb": {
+    "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
+   },
+   "hero": {
+    "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1920,
+    "h": 1080,
+    "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
+   },
+   "description": "<p>A family apartment in Belgrade that keeps the character of a classic city interior, with herringbone parquet and ceiling rosettes, and pairs it with clean contemporary joinery. The day zone is one generous room: a living area with a piano and a full-height bookcase, a large dining table and a kitchen island in light stone.</p><p>In the night zone, glass partitions in slim black frames separate the bedroom, the dressing area and a small study without losing daylight. The bathrooms add warmth with terracotta joinery, stone-look tiles and black fittings.</p>",
+   "gallery": [
+    {
+     "file": "6720c3acfb99d123c735eab2_Image1_047.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "6720c3acfb99d123c735eab2_Image1_047-og.jpg"
+    },
+    {
+     "file": "6720c3abc712d878f3963091_Image1_048.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "6720c3abc712d878f3963091_Image1_048-og.jpg"
+    },
+    {
+     "file": "6720c3ab4294be08dfe21383_Image1_049.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "6720c3ab4294be08dfe21383_Image1_049-og.jpg"
+    },
+    {
+     "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
+    },
+    {
+     "file": "6720c3ac69c9186180e5c0ae_Image1_051.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "6720c3ac69c9186180e5c0ae_Image1_051-og.jpg"
+    },
+    {
+     "file": "6720c3ae11b64af0231302b0_Image36_008.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6720c3ae11b64af0231302b0_Image36_008-og.jpg"
+    },
+    {
+     "file": "6720c3ac171350f92f948c01_Image36_006.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3ac171350f92f948c01_Image36_006-og.jpg"
+    },
+    {
+     "file": "6720c3ad11b64af023130211_Image36_010.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6720c3ad11b64af023130211_Image36_010-og.jpg"
+    },
+    {
+     "file": "6720c3ae4a89faac47a2ef9a_Image36_007.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6720c3ae4a89faac47a2ef9a_Image36_007-og.jpg"
+    },
+    {
+     "file": "6720c3ade14c2bdee59ae5f2_Image36_009.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6720c3ade14c2bdee59ae5f2_Image36_009-og.jpg"
+    },
+    {
+     "file": "6720c3ac059b2a783c9437b5_Image36_003.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3ac059b2a783c9437b5_Image36_003-og.jpg"
+    },
+    {
+     "file": "6720c3ac126f34d76f569513_Image36_004.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3ac126f34d76f569513_Image36_004-og.jpg"
+    },
+    {
+     "file": "6720c3acce5f0c2e7d5b3391_Image36_014.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3acce5f0c2e7d5b3391_Image36_014-og.jpg"
+    },
+    {
+     "file": "6720c3ad059b2a783c9438d9_Image36_015.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6720c3ad059b2a783c9438d9_Image36_015-og.jpg"
+    },
+    {
+     "file": "6720c3acd5a192a69d5429c1_Image36_018.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3acd5a192a69d5429c1_Image36_018-og.jpg"
+    },
+    {
+     "file": "6720c3ae512a0eb8f2ed2280_Image36_016.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6720c3ae512a0eb8f2ed2280_Image36_016-og.jpg"
+    },
+    {
+     "file": "6720c3ae28c5658a7f71f826_Image36_017.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600,
+      2000,
+      2600,
+      3200
+     ],
+     "w": 3840,
+     "h": 2160,
+     "og": "6720c3ae28c5658a7f71f826_Image36_017-og.jpg"
+    },
+    {
+     "file": "6720c3ad672e82b6e3ddf6af_Image36_019.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3ad672e82b6e3ddf6af_Image36_019-og.jpg"
+    },
+    {
+     "file": "6720c3acb066ac2cc6176719_Image36_020.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3acb066ac2cc6176719_Image36_020-og.jpg"
+    },
+    {
+     "file": "6720c3ac6f1f5059b3a246d8_Image36_021.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3ac6f1f5059b3a246d8_Image36_021-og.jpg"
+    },
+    {
+     "file": "6720c3ac69c9186180e5c0e9_Image36_022.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3ac69c9186180e5c0e9_Image36_022-og.jpg"
+    },
+    {
+     "file": "6720c3ab999b401b573be37b_Image36_023.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3ab999b401b573be37b_Image36_023-og.jpg"
+    },
+    {
+     "file": "6720c3b074fde631ef1036e3_Image36_026.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1728,
+     "h": 2160,
+     "og": "6720c3b074fde631ef1036e3_Image36_026-og.jpg"
+    }
+   ],
+   "location": "Belgrade, Serbia",
+   "type": "Residential interior",
+   "sr": {
+    "type": "Enterijer stana",
+    "description": "<p>Porodični stan u Beogradu koji čuva karakter klasičnog gradskog enterijera, sa parketom u riblju kost i plafonskim rozetama, i uparuje ga sa čistom savremenom stolarijom. Dnevna zona je jedna velika prostorija: dnevni boravak sa klavirom i bibliotekom do plafona, veliki trpezarijski sto i kuhinjsko ostrvo od svetlog kamena.</p><p>U noćnoj zoni staklene pregrade u tankim crnim ramovima razdvajaju spavaću sobu, garderober i malu radnu sobu bez gubitka dnevnog svetla. Kupatila dodaju toplinu stolarijom boje terakote, pločicama sličnim kamenu i crnim armaturama.</p>",
+    "location": "Beograd, Srbija"
+   }
+  }
+ ],
+ "hero_slug": "villa-dve-koracica-kosmaj",
+ "promo_days": 21
 }

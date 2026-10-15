@@ -41,13 +41,13 @@
     };
     const paint = () => {
       raf = 0;
-      y += (target - y) * 0.14;
-      if (hero) hero.style.setProperty('--ty', (y * 0.22).toFixed(1) + 'px');
+      y += (target - y) * 0.08;
+      if (hero) hero.style.setProperty('--ty', (y * 0.12).toFixed(1) + 'px');
       frames.forEach((f) => {
         const m = tops.get(f);
         if (!m || m.top - y > vh * 1.2 || m.top + m.h - y < -vh * 0.2) return;
         const off = (m.top + m.h / 2 - y - vh / 2) / vh;
-        f.im.style.setProperty('--ty', (clamp(-off * m.h * 0.16, -m.h * 0.07, m.h * 0.07)).toFixed(1) + 'px');
+        f.im.style.setProperty('--ty', (clamp(-off * m.h * 0.08, -m.h * 0.035, m.h * 0.035)).toFixed(1) + 'px');
       });
       if (Math.abs(target - y) > 0.3) raf = requestAnimationFrame(paint);
     };
@@ -133,7 +133,7 @@
       if (u.origin !== location.origin || (u.pathname === location.pathname && u.search === location.search)) return;
       e.preventDefault();
       fade.classList.add('is-on');
-      setTimeout(() => { location.href = a.href; }, 340);
+      setTimeout(() => { location.href = a.href; }, 560);
     });
   };
 

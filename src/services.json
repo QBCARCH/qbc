@@ -1,5 +1,5 @@
 {
- "intro": "We provide end-to-end architectural and interior design services, ensuring seamless execution from initial concept to final construction. Our methodology guarantees structural integrity, spatial optimization, and precise materialization.",
+ "intro": "We provide architectural and interior design services from the first concept to the finished building. One studio carries the project through design, BIM coordination, permits and construction, so nothing gets lost between phases.",
  "phases": [
   {
    "title": "Conceptual & Schematic Design",
@@ -39,7 +39,7 @@
   },
   {
    "title": "Construction Documents & Engineering",
-   "text": "We produce highly detailed and technically flawless construction documentation. Our precise drawings, specifications, and schedules serve as the definitive manual for contractors. This rigorous detailing ensures accurate bidding, minimizes construction variations, and guarantees compliance with all relevant building codes and standards.",
+   "text": "We produce detailed construction documentation: drawings, specifications and schedules that contractors can price and build from. Careful detailing means more accurate bids, fewer variations on site and documents that meet the applicable building codes.",
    "items": [
     {
      "title": "Detailed Arch. Drawings",
@@ -50,8 +50,8 @@
      "text": "Developing specialized technical drawings for complex structural junctions, thermal envelopes, and waterproofing."
     },
     {
-     "title": "Code Compliance",
-     "text": "Preparing all necessary documentation to meet rigorous international building codes and secure necessary permits."
+     "title": "Permit Documentation",
+     "text": "Preparing documentation that meets the applicable building codes and supports the permit process, in Serbia through the CEOP e-permit system."
     }
    ]
   },
@@ -68,8 +68,8 @@
      "text": "Evaluating contractor shop drawings, material samples, and rapidly resolving technical requests for information."
     },
     {
-     "title": "Investment Protection",
-     "text": "Monitoring construction progress and reviewing change orders to prevent delays and protect the client's financial interests."
+     "title": "Cost and Change Control",
+     "text": "Tracking construction progress and reviewing change orders, so delays and extra costs are caught before they grow."
     }
    ]
   },

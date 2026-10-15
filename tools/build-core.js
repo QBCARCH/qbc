@@ -36,7 +36,7 @@ export const STATIC_SOURCES = [
 
 const STATIC_PAGES = [
   { out: 'about.html', src: 'about', key: 'about', title: 'About Us | QBC Architects - Architectural & Urban Design',
-    desc: 'Founded in 2010, QBC Architects is a multidisciplinary studio focused on blending structural logic with modern aesthetic principles. Learn about our methodology and leadership team.' },
+    desc: 'Founded in 2010 by architects Slavoljub and Vladica Ljubić. A Belgrade studio with BIM workflows and first-hand knowledge of the Serbian permitting system.' },
   { out: 'services.html', src: 'services', key: 'services', title: 'Architectural Services | QBC Architects',
     desc: 'We provide end-to-end architectural services, from schematic design and technical detailing to construction administration for residential and commercial projects.' },
   { out: 'contact.html', src: 'contact', key: 'contact', title: 'Contact QBC Architects | Start Your Project',
@@ -283,7 +283,7 @@ export function buildSite(data, sources, { all = false } = {}) {
   out['index.html'] = render('index', sources, {
     ...base, key: 'home', PATH: '',
     TITLE: 'QBC Architects | Architecture & Interior Design Studio',
-    DESC: 'QBC Architects specializes in high-end residential and commercial architecture. We deliver functional, aesthetically superior, and constructible spaces. Based in Belgrade, working internationally.',
+    DESC: 'Belgrade architecture and interior design studio since 2010. Houses, apartments, hospitality and commercial projects, from concept and BIM to permits and site.',
     HERO_IMG: pickImg(heroProject.hero, heroProject, pool(projects, heroProject, data.promo_days ?? 21)), HERO_CREDIT: heroCredit(heroProject),
     HOME_WORKS: worksGrid(projects.slice(0, data.home_count ?? 4)),
   });

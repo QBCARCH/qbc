@@ -168,9 +168,12 @@ function projectLd(p) {
   return `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`;
 }
 
+// odnos sirine i visine naslovne slike: kartice imaju istu visinu, a sirinu po formatu slike
+const ratio = (im) => (im && im.w && im.h ? Math.min(2.4, Math.max(0.6, im.w / im.h)) : 1.5).toFixed(3);
+
 function worksGrid(projects) {
   return projects.map((p, i) =>
-    `<a class="wcard" href="work/${p.slug}.html" data-q="${esc([p.title, p.year, ...(p.services || [])].join(' ').toLowerCase())}">` +
+    `<a class="wcard" style="--ar:${ratio(cover(p))}" href="work/${p.slug}.html" data-q="${esc([p.title, p.year, ...(p.services || [])].join(' ').toLowerCase())}">` +
     `<div class="frame" data-ip>${img(cover(p), { root: '', sizes: '(max-width: 900px) 100vw, 50vw', alt: p.title, want: 1600 })}</div>` +
     `<div class="wcard__meta"><h2 class="wcard__title">${esc(p.title)}</h2><span class="label">${esc(p.year)}</span></div>` +
     `<p class="label mute wcard__no">${num(i)} / ${String(projects.length).padStart(2, '0')}</p>` +

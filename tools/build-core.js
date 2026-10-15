@@ -267,9 +267,9 @@ function phases(sv) {
 // kratak upit na dnu svake stranice (osim kontakta): vidljiv poziv, isti FormSubmit kao glavna forma
 const INQ = {
   en: { k: 'Start a project', h: 'Tell us about your project.', p: 'Share a few lines about your site and what you need. We reply personally.', name: 'Name *', email: 'Email *', msg: 'Your project *', send: 'Send inquiry',
-    alt: 'Or write to <a href="mailto:office@qbc.rs">office@qbc.rs</a>, call <a href="tel:+381634110066">+381 63 411 066</a>, or use the <a href="{BASE}contact.html">full inquiry form</a>.', subj: 'New inquiry from qbc.rs (short form)' },
+    alt: 'Or write to <a href="mailto:office@qbc.rs">office@qbc.rs</a>, call <a href="tel:+38163411066">+381 63 411 066</a>, or use the <a href="{BASE}contact.html">full inquiry form</a>.', subj: 'New inquiry from qbc.rs (short form)' },
   sr: { k: 'Započnite projekat', h: 'Recite nam o vašem projektu.', p: 'Napišite nekoliko redova o parceli i onome što vam treba. Lično odgovaramo.', name: 'Ime *', email: 'E-pošta *', msg: 'Vaš projekat *', send: 'Pošalji upit',
-    alt: 'Ili pišite na <a href="mailto:office@qbc.rs">office@qbc.rs</a>, pozovite <a href="tel:+381634110066">+381 63 411 066</a>, ili koristite <a href="{BASE}contact.html">kompletan obrazac</a>.', subj: 'Novi upit sa qbc.rs (kratki obrazac, srpski)' },
+    alt: 'Ili pišite na <a href="mailto:office@qbc.rs">office@qbc.rs</a>, pozovite <a href="tel:+38163411066">+381 63 411 066</a>, ili koristite <a href="{BASE}contact.html">kompletan obrazac</a>.', subj: 'Novi upit sa qbc.rs (kratki obrazac, srpski)' },
 };
 function inquiryHtml(lang, path, base) {
   const t = INQ[lang];
@@ -344,7 +344,7 @@ function orgLd(lang, services) {
   const catalog = services.phases.map((ph) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: ph.title, description: ph.text } }));
   return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': ['Architect', 'ProfessionalService'], '@id': 'https://www.qbc.rs/#studio',
     name: 'QBC Architects', alternateName: 'QBCarchitects', url: 'https://www.qbc.rs/', logo: 'https://www.qbc.rs/assets/logo.png',
-    email: 'office@qbc.rs', telephone: '+381634110066', foundingDate: '2010', slogan: 'Architecture, interiors and visualisation',
+    email: 'office@qbc.rs', telephone: '+38163411066', foundingDate: '2010', slogan: 'Architecture, interiors and visualisation',
     founder: [{ '@type': 'Person', name: 'Slavoljub Ljubić', jobTitle: 'Architect' }, { '@type': 'Person', name: 'Vladica Ljubić', jobTitle: 'Architect' }],
     address: { '@type': 'PostalAddress', addressLocality: 'Belgrade', addressCountry: 'RS' },
     areaServed: [{ '@type': 'Country', name: 'Serbia' }, { '@type': 'Country', name: 'Montenegro' }, { '@type': 'Place', name: 'Europe' }],

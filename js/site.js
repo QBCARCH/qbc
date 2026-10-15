@@ -98,7 +98,12 @@
     const menu = $('#menu');
     if (!menu) return;
     const open = $('[data-menu-open]'), close = $('[data-menu-close]');
+    // slika u meniju se ucitava tek kad korisnik krene ka meniju (inace je skrivena, a ipak se preuzima na svakoj stranici)
+    const art = $('img[data-srcset]', menu);
+    const loadArt = () => { if (art && !art.srcset) art.srcset = art.dataset.srcset; };
+    open && ['pointerenter', 'focus', 'touchstart'].forEach((ev) => open.addEventListener(ev, loadArt, { passive: true, once: true }));
     const set = (on) => {
+      on && loadArt();
       menu.classList.toggle('is-open', on);
       menu.setAttribute('aria-hidden', String(!on));
       open && open.setAttribute('aria-expanded', String(on));

@@ -360,6 +360,6 @@ ul, ol { list-style: none; }
 @media (max-width: 900px) { .wgrid { grid-template-columns: 1fr; } .hero__title { grid-column: 1 / -1; } }
 
 /* slika celom sirinom u svom formatu (kontakt) */
-.wide--full { height: auto; aspect-ratio: 2.2 / 1; }
+.wide--full { height: auto; aspect-ratio: 1366 / 768; }
 /* MENI dugme samo na telefonu, kada nema linkova gore */
 @media (min-width: 641px) { .nav__menu { display: none; } }

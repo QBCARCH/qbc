@@ -426,3 +426,9 @@ body:has(.nav:not(.is-hidden)) .psub { top: var(--navh); }
 
 /* tamna galerija za projekte sa tamnim ili toplim vizualizacijama */
 .pgal--dark { background: #121110; padding-top: clamp(56px, 9vh, 110px); margin-top: clamp(40px, 8vh, 100px); }
+
+/* mali crop (2px) sa svake strane svake slike: nema svetlih tracica na ivicama, posebno na tamnoj pozadini */
+[data-ip] > img { left: -2px; width: calc(100% + 4px); max-width: none; }
+.frame:not([data-ip]) > img { margin: -2px; width: calc(100% + 4px); height: calc(100% + 4px); max-width: none; }
+.pgal--dark .frame { background: #121110; }
+.lb img { clip-path: inset(2px); }

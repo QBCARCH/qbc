@@ -130,9 +130,11 @@ ul, ol { list-style: none; }
 .hero__title { grid-column: 1 / -1; --base: 200; font-weight: var(--base); font-size: clamp(2.6rem, 10.2vw, 12rem); line-height: .9; letter-spacing: -.035em; text-transform: uppercase; }
 .hero__title .ln { display: block; white-space: nowrap; }
 .hero__title i { font-style: normal; opacity: .55; }
-.hero__title .ch { font-weight: calc(var(--base) + var(--dw, 0)); }
-.js .hero__title { animation: settle 1.8s var(--ease) .15s both; }
-@keyframes settle { from { --base: 100; letter-spacing: .015em; opacity: 0; } to { --base: 200; letter-spacing: -.035em; opacity: 1; } }
+/* naslov: mirno pojavljivanje red po red, bez promene debljine i razmaka (slova se ne pomeraju) */
+.js .hero__title .ln { clip-path: inset(0 0 100% 0); transform: translateY(.18em); animation: rise 1.6s cubic-bezier(.2, .7, .1, 1) both; }
+.js .hero__title .ln:nth-child(2) { animation-delay: .14s; }
+.js .hero__title .ln:nth-child(3) { animation-delay: .28s; }
+@keyframes rise { to { clip-path: inset(-10% 0 -10% 0); transform: none; } }
 .hero__time time { font-variant-numeric: tabular-nums; }
 .hero__credit:hover { text-decoration: underline; text-underline-offset: 4px; }
 .hero__scroll { grid-column: 1 / -1; margin-top: clamp(22px, 3.6vh, 40px); padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .4); display: grid; grid-template-columns: 1.2fr 1fr .7fr auto; align-items: start; gap: 2rem; }
@@ -313,6 +315,7 @@ ul, ol { list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
   .js [data-reveal] { opacity: 1; transform: none; }
+  .js .hero__title .ln { clip-path: none; transform: none; }
 }
 
 /* dodaci */

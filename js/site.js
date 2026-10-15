@@ -17,47 +17,6 @@
     credit.textContent = `${img.dataset.t} / ${img.dataset.y} ↗`;
   };
 
-  /* naslov: slova se jednom slegnu pri ucitavanju (CSS), a na racunaru blago podebljaju uz kursor */
-  const initWeight = () => {
-    const h = $('[data-vf]');
-    if (!h) return;
-    $$('.ln', h).forEach((ln) => {
-      const frag = D.createDocumentFragment();
-      [...ln.childNodes].forEach((n) => {
-        if (n.nodeType !== 3) { frag.appendChild(n); return; }
-        [...n.textContent].forEach((c) => {
-          if (c === ' ') { frag.appendChild(D.createTextNode(' ')); return; }
-          const s = D.createElement('span'); s.className = 'ch'; s.textContent = c; frag.appendChild(s);
-        });
-      });
-      ln.textContent = ''; ln.appendChild(frag);
-    });
-    if (reduce || !matchMedia('(pointer: fine)').matches) return;
-    const chars = $$('.ch', h).map((el) => ({ el, x: 0, y: 0, v: 0, t: 0 }));
-    const host = h.closest('section') || h;
-    const measure = () => chars.forEach((c) => { const r = c.el.getBoundingClientRect(); c.x = r.left + r.width / 2; c.y = r.top + scrollY + r.height / 2; });
-    let mx = -9999, my = -9999, raf = 0;
-    const R = 260, MAX = 140;
-    const step = () => {
-      raf = 0;
-      let moving = false;
-      chars.forEach((c) => {
-        const d = Math.hypot(c.x - mx, c.y - (my + scrollY));
-        c.t = MAX * Math.max(0, 1 - d / R) ** 2;
-        c.v += (c.t - c.v) * 0.12;
-        if (Math.abs(c.t - c.v) > 0.5) moving = true;
-        c.el.style.setProperty('--dw', c.v.toFixed(0));
-      });
-      if (moving) raf = requestAnimationFrame(step);
-    };
-    const kick = () => { if (!raf) raf = requestAnimationFrame(step); };
-    host.addEventListener('pointermove', (e) => { mx = e.clientX; my = e.clientY; kick(); });
-    host.addEventListener('pointerleave', () => { mx = my = -9999; kick(); });
-    addEventListener('resize', measure);
-    h.addEventListener('animationend', measure);
-    measure();
-  };
-
   /* tiho pojavljivanje */
   const initReveal = () => {
     const els = $$('[data-reveal]');
@@ -271,7 +230,7 @@
   };
 
   const boot = () => {
-    initPicks(); initWeight(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox(); initForm();
+    initPicks(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox(); initForm();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

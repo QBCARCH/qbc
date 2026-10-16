@@ -188,15 +188,11 @@ ul, ol { list-style: none; }
 .svc__title { font-weight: 300; font-size: clamp(1.25rem, 2.2vw, 2.2rem); letter-spacing: -.025em; line-height: 1.1; transition: color .4s; }
 .svc__items { display: flex; flex-wrap: wrap; gap: .1rem 1.4rem; color: var(--mute); }
 
+/* uverenja: natpisi i tekst krupniji od ostalih natpisa na sajtu, jer je ovo bitan sadrzaj */
+.beliefs__label { margin-bottom: 2rem; font-size: .9rem; }
 .beliefs { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
-.beliefs li { padding-top: 1rem; border-top: 1px solid var(--line); }
-.beliefs li span { display: block; color: var(--mute); margin-bottom: .6rem; }
-/* uverenja i osnivaci: isti raspored i boje, sav tekst u grupi ravnomerno krupniji (oko 1,25 puta) */
-.beliefs__label, .beliefs li .label, .people__label .label, .person .label { font-size: .9rem; }
-.beliefs__label { margin-bottom: 2rem; }
-.beliefs li { font-size: 1.33rem; line-height: 1.5; }
-.people__label .btn { font-size: .92rem; }
-.person h3 { font-size: clamp(1.55rem, 2.25vw, 2.1rem); }
+.beliefs li { padding-top: 1rem; border-top: 1px solid var(--line); font-size: 1.33rem; line-height: 1.5; }
+.beliefs li span { display: block; color: var(--mute); margin-bottom: .6rem; font-size: .9rem; }
 
 /* 7. projekti ----------------------------------------------------------------- */
 .phead { padding: clamp(140px, 22vh, 240px) var(--pad) clamp(36px, 6vh, 72px); }
@@ -287,14 +283,17 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 .wide--full { height: auto; aspect-ratio: 1366 / 768; }
 .aintro { align-items: start; }
 .aintro__text { grid-column: 4 / span 6; display: grid; gap: 1.6em; }
+/* osnivaci: natpisi i imena krupniji od ostalih natpisa na sajtu */
 .people__label { grid-column: 1 / -1; margin-bottom: clamp(32px, 6vh, 72px); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: baseline; }
+.people__label .label { font-size: .9rem; }
+.people__label .btn { font-size: .92rem; }
 .person:nth-of-type(1) { grid-column: 4 / span 3; }
 .person:nth-of-type(2) { grid-column: 8 / span 3; }
 .person .frame { aspect-ratio: 4 / 5; }
 .person .frame img { filter: grayscale(1); transition: filter .8s var(--ease); }
 .person:hover .frame img { filter: none; }
-.person h3 { margin-top: 1rem; white-space: nowrap; }
-.person .label { margin-top: .3rem; }
+.person h3 { margin-top: 1rem; white-space: nowrap; font-size: clamp(1.55rem, 2.25vw, 2.1rem); }
+.person .label { margin-top: .3rem; font-size: .9rem; }
 .approach__item { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); padding-block: clamp(22px, 4vh, 40px); border-top: 1px solid var(--line); }
 .approach__num { grid-column: 1 / span 1; }
 .approach__title { grid-column: 4 / span 3; }

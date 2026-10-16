@@ -210,8 +210,7 @@ function worksGrid(projects, lang, base, root) {
     `<a class="wcard" style="--ar:${ratio(cover(p))}" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}">` +
     `<div class="frame" data-ip>${img(cover(p), { root, sizes: '(max-width: 900px) 100vw, 50vw', alt: altOf(p, lang), want: 1600 })}</div>` +
     `<div class="wcard__meta"><h2 class="wcard__title">${esc(p.title)}</h2><span class="label">${esc(p.year)}</span></div>` +
-    `<p class="label mute wcard__no">${num(i)} / ${String(projects.length).padStart(2, '0')}</p>` +
-    `<p class="wcard__svc">${esc((p.services || []).map((x) => svcName(x, lang)).slice(0, 2).join('  /  '))}</p></a>`).join('');
+    (tr(p, 'type', lang) ? `<p class="wcard__type">${esc(tr(p, 'type', lang))}</p>` : '') + `</a>`).join('');
 }
 
 function worksIndex(projects, lang, base) {
@@ -330,7 +329,7 @@ function orgLd(lang, services) {
     areaServed: [{ '@type': 'Country', name: 'Serbia' }, { '@type': 'Country', name: 'Montenegro' }, { '@type': 'Place', name: 'Europe' }],
     availableLanguage: ['en', 'sr'], knowsAbout: ['Architecture', 'Interior design', 'Architectural visualisation', 'BIM', 'Autodesk Revit', 'Building permits in Serbia'],
     hasOfferCatalog: { '@type': 'OfferCatalog', name: lang === 'sr' ? 'Usluge' : 'Services', itemListElement: catalog },
-    sameAs: ['https://www.instagram.com/qbcarchitects/', 'https://www.behance.net/qbcarchitects', 'https://www.pinterest.com/qbcarchitects', 'https://x.com/QBCArchitects'] })}</script>`;
+    sameAs: ['https://www.instagram.com/qbcarchitects/', 'https://www.behance.net/qbcarchitects', 'https://www.pinterest.com/qbcarchitects'] })}</script>`;
 }
 
 // ---------------------------------------------------------------- sabloni

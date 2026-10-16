@@ -352,8 +352,16 @@
     }).catch(finish);
   };
 
+  /* potpis naslovne slike: sliku je izabrala mala skripta na mestu slike (tools/build-core.js, HERO_JS) */
+  const initCredit = () => {
+    const hero = $('.hero[data-s]'), credit = $('.hero__credit');
+    if (!hero || !credit) return;
+    credit.href = (credit.getAttribute('href') || '').replace(/work\/[^/]*$/, 'work/' + hero.dataset.s + '.html');
+    credit.textContent = `${hero.dataset.t} / ${hero.dataset.y} ↗`;
+  };
+
   const boot = () => {
-    initSketch(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
+    initCredit(); initSketch(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

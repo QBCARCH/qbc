@@ -25,7 +25,7 @@ Ako je slika uža od 2400 px, admin te upozori: preko celog ekrana takva slika d
 
 ## Slike na početnoj
 
-Velika slika na vrhu bira se pri objavi, ne u pregledaču, pa se stranica otvara brže. Prvih 21 dan posle dodavanja, na vrhu je naslovna slika novog projekta. Posle toga je na vrhu podrazumevani projekat (`hero_slug`, sada Villa Dve Koračice). Promena važi od sledeće objave: ako 21 dan istekne, a ništa novo nije objavljeno, klikni **Objavi na sajt** bez izmena.
+Velika slika na vrhu bira se pri svakom otvaranju stranice, među glavnim slikama projekata, i nikad nije ista kao prošli put. Prvih 21 dan posle dodavanja novi projekat se pojavljuje češće. Izbor pravi mala skripta na samom mestu slike, pa se stranica i dalje brzo otvara.
 
 Za oštru sliku preko celog ekrana naslovna slika treba da bude široka bar 2400 px.
 

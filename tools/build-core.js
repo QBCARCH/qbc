@@ -159,9 +159,8 @@ function img(im, { root, sizes = '100vw', alt = '', eager = false, want = 1600 }
 const cover = (p) => p.cover || p.hero;
 const li = (list, cls = '') => (list || []).map((t) => `<li${cls ? ` class="${cls}"` : ''}>${esc(t)}</li>`).join('');
 
-// Naslovna slika na pocetnoj bira se pri gradjenju sajta, ne u pregledacu: obican <img> u HTML-u pregledac
-// pronalazi odmah i preuzima prvi (brzi prvi prikaz, LCP). Novi projekat je na vrhu promo_days dana od
-// datuma dodavanja (vazi od sledece objave), a inace podrazumevani projekat (hero_slug).
+// Podrazumevana naslovna slika (za pregledace bez JS-a i za deljenje): novi projekat promo_days dana od
+// datuma dodavanja, a inace podrazumevani projekat (hero_slug).
 function pickHero(projects, def, promoDays, now = Date.now()) {
   const fresh = projects.filter((p) => {
     const t = Date.parse(p.added || '');
@@ -171,6 +170,30 @@ function pickHero(projects, def, promoDays, now = Date.now()) {
 }
 function heroCredit(p, base) {
   return `<a class="hero__credit" href="${base}work/${p.slug}.html">${esc(p.title)} / ${esc(p.year)} ↗</a>`;
+}
+
+// Naslovna slika se bira pri svakom otvaranju: mala skripta na mestu slike odmah (dok se HTML cita) napravi <img>,
+// pa pregledac ne ceka site.js. Bira se medju glavnim slikama projekata, nikad ista kao prosli put; novi projekat
+// (promo_days dana) dolazi cesce. Uz sliku idu njena skica (is-sketch, data-sketch) i potpis (data-s, -t, -y za site.js).
+const HERO_JS = "(function(P){var s=document.currentScript,m=s.parentNode,h=m.parentNode,n=Date.now(),L,r=Math.random;" +
+  "try{L=localStorage.getItem('qbc-hero')}catch(e){}" +
+  "var f=P.p.filter(function(p){var t=Date.parse(p.a);return p.a&&t<=n+864e5&&(n-t)/864e5<=P.d&&p.s!==L})[0];" +
+  "var o=P.p.filter(function(p){return p.s!==L});if(!o.length)o=P.p;" +
+  "var k=f&&r()<.6?f:o[Math.floor(r()*o.length)];try{localStorage.setItem('qbc-hero',k.s)}catch(e){}" +
+  "var e=function(x){return P.r+'images/'+encodeURIComponent(x).replace(/%2F/g,'/')},d=k.f.lastIndexOf('.'),B=k.f.slice(0,d),X=k.f.slice(d);" +
+  "var ss=k.w.map(function(w){return e(B+'-p-'+w+X)+' '+w+'w'});ss.push(e(k.f)+' '+k.W+'w');" +
+  "var big=k.w.filter(function(w){return w>=2000})[0],i=document.createElement('img');" +
+  "i.src=big?e(B+'-p-'+big+X):e(k.f);i.srcset=ss.join(', ');i.sizes='100vw';i.width=k.W;i.height=k.H;i.alt=k.t;i.setAttribute('fetchpriority','high');" +
+  "m.insertBefore(i,s);h.setAttribute('data-s',k.s);h.setAttribute('data-t',k.c);h.setAttribute('data-y',k.y);" +
+  "try{if(k.k&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!sessionStorage.getItem('qbc-sketch')){h.setAttribute('data-sketch',e(k.k));h.classList.add('is-sketch')}}catch(e){}})";
+function heroPicker(projects, def, promoDays, root, lang) {
+  const p = projects.filter((pr) => pr.hero && pr.hero.file && pr.hero.w && pr.hero.h && pr.hero.w / pr.hero.h >= 1.3).map((pr) => ({
+    s: pr.slug, c: pr.title, t: altOf(pr, lang), y: pr.year, a: pr.added || '', f: pr.hero.file, W: pr.hero.w, H: pr.hero.h,
+    w: (pr.hero.widths || []).filter((w) => w < pr.hero.w), ...(pr.hero.sketch ? { k: pr.hero.sketch } : {}),
+  }));
+  const pool = JSON.stringify({ r: root, d: promoDays, p }).replace(/</g, '\\u003c');
+  return `<script>${HERO_JS}(${pool})</script>` +
+    `<noscript>${img(def.hero, { root, sizes: '100vw', alt: altOf(def, lang), eager: true, want: 2000 })}</noscript>`;
 }
 
 // slika za deljenje na mrezama: JPEG ako postoji (WebP ne prikazuju svi)
@@ -414,10 +437,8 @@ export function buildSite(data, sources, { all = false } = {}) {
       : ['QBC Architects | Arhitektonski studio i dizajn enterijera, Beograd', 'Arhitektonski studio iz Beograda od 2010. Kuće, stanovi i ugostiteljski prostori, od koncepta i BIM modela do dozvola i arhitektonskog nadzora.'];
     out[`${pre}index.html`] = render('index', sources, {
       ...site('index.html'), key: 'home', TITLE: home[0], DESC: home[1],
-      HERO_IMG: img(homeHero.hero, { root: lang === 'en' ? '' : '../', sizes: '100vw', alt: altOf(homeHero, lang), eager: true, want: 2000 }),
+      HERO_IMG: heroPicker(projects, homeHero, data.promo_days ?? 21, lang === 'en' ? '' : '../', lang),
       HERO_CREDIT: heroCredit(homeHero, ''),
-      // skica koju sajt iscrtava pre naslovne slike (js/site.js, initSketch), ako je slika ima
-      HERO_SKETCH: homeHero.hero.sketch ? ` data-sketch="${lang === 'en' ? '' : '../'}images/${encFile(homeHero.hero.sketch)}"` : '',
       HOME_WORKS: worksGrid(projects.slice(0, data.home_count ?? 4), lang, '', lang === 'en' ? '' : '../'),
     });
     const ow = lang === 'en'

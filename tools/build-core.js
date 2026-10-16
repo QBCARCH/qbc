@@ -241,7 +241,7 @@ function phases(sv) {
 
 // Adresa na koju forme salju upite (FormSubmit). Posle prve potvrde FormSubmit u mejlu daje nasumicni alias
 // (https://formsubmit.co/<alias>): kada ga upises ovde, e-adresa vise nije vidljiva u kodu sajta i botovi je ne nalaze.
-export const FORM_ACTION = 'https://formsubmit.co/office@qbc.rs';
+export const FORM_ACTION = 'https://formsubmit.co/b8a2bca0a5a296cd40c7a49d50602721';
 
 // kratak upit na dnu svake stranice (osim kontakta): vidljiv poziv, isti FormSubmit kao glavna forma
 const INQ = {

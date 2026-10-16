@@ -12,7 +12,8 @@ const outIdx = args.indexOf('--out');
 const outDir = outIdx >= 0 ? path.resolve(args[outIdx + 1]) : root;
 const check = args.includes('--check');
 
-const rd = (p) => fs.readFileSync(path.join(root, p), 'utf8');
+// na Windows-u git cuva fajlove sa CRLF; generator radi sa LF, kao admin na GitHub-u
+const rd = (p) => fs.readFileSync(path.join(root, p), 'utf8').replace(/\r\n/g, '\n');
 const data = JSON.parse(rd('data/projects.json'));
 const sources = Object.fromEntries([...DYNAMIC_SOURCES, ...STATIC_SOURCES].map((p) => [p, rd(p)]));
 const files = buildSite(data, sources, { all: true });

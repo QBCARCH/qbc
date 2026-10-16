@@ -149,42 +149,18 @@ function img(im, { root, sizes = '100vw', alt = '', eager = false, want = 1600 }
 const cover = (p) => p.cover || p.hero;
 const li = (list, cls = '') => (list || []).map((t) => `<li${cls ? ` class="${cls}"` : ''}>${esc(t)}</li>`).join('');
 
-// Slike na pocetnoj biraju se nasumicno u pregledacu (js/site.js, initPicks), a ovde se samo pravi izbor.
-// Bez JS-a ostaje podrazumevana slika u <noscript>.
-// Naslovna slika: izbor se pravi odmah pri citanju HTML-a (mala skripta odmah posle slike), bez cekanja na site.js.
-// Bez JS-a ostaje podrazumevana slika u <noscript>.
-const PICK_JS = "(function(P){var im=document.currentScript.previousElementSibling,all=[],n=Date.now(),r=function(a){return a[Math.floor(Math.random()*a.length)]};" +
-  "P.p.forEach(function(p){p.i.forEach(function(i){all.push({p:p,i:i})})});if(!all.length)return;" +
-  "var f=P.p.filter(function(p){var t=Date.parse(p.a);return p.a&&t<=n+864e5&&(n-t)/864e5<=P.d}).sort(function(a,b){return Date.parse(b.a)-Date.parse(a.a)})[0];" +
-  "var d=all.filter(function(x){return x.p.s===P.h[0]&&x.i[0]===P.h[1]})[0];" +
-  "var k=f&&Math.random()<.7?{p:f,i:r(f.i)}:(d&&Math.random()<.35?d:r(all));" +
-  "var e=function(s){return encodeURIComponent(s).replace(/%2F/g,'/')},F=k.i[0],x=F.lastIndexOf('.'),B=F.slice(0,x),X=F.slice(x+1);" +
-  "var s=k.i[3].map(function(w){return P.r+'images/'+e(B+'-p-'+w+'.'+X)+' '+w+'w'});s.push(P.r+'images/'+e(F)+' '+k.i[1]+'w');" +
-  "im.width=k.i[1];im.height=k.i[2];im.alt=k.p.t;im.sizes='100vw';im.srcset=s.join(', ');" +
-  "var m=k.i[3].filter(function(w){return w>=2000})[0]||k.i[3][k.i[3].length-1];im.src=m?P.r+'images/'+e(B+'-p-'+m+'.'+X):P.r+'images/'+e(F);" +
-  "im.setAttribute('data-s',k.p.s);im.setAttribute('data-t',k.p.t);im.setAttribute('data-y',k.p.y)})";
-function pickImg(im, p, poolJson, root) {
-  const dims = im.w && im.h ? ` width="${im.w}" height="${im.h}"` : '';
-  return `<img data-pick="hero" alt="${esc(p.title)}"${dims} fetchpriority="high">` +
-    `<script>${PICK_JS}(${poolJson})</script>` +
-    `<noscript>${img(im, { root, sizes: '100vw', alt: p.title, want: 2000 })}</noscript>`;
+// Naslovna slika na pocetnoj bira se pri gradjenju sajta, ne u pregledacu: obican <img> u HTML-u pregledac
+// pronalazi odmah i preuzima prvi (brzi prvi prikaz, LCP). Novi projekat je na vrhu promo_days dana od
+// datuma dodavanja (vazi od sledece objave), a inace podrazumevani projekat (hero_slug).
+function pickHero(projects, def, promoDays, now = Date.now()) {
+  const fresh = projects.filter((p) => {
+    const t = Date.parse(p.added || '');
+    return t && t <= now + 864e5 && (now - t) / 864e5 <= promoDays;
+  }).sort((a, b) => Date.parse(b.added) - Date.parse(a.added))[0];
+  return fresh || def;
 }
 function heroCredit(p, base) {
-  return `<a class="hero__credit" data-credit href="${base}work/${p.slug}.html">${esc(p.title)} / ${esc(p.year)} ↗</a>`;
-}
-
-// Izbor slika za pocetnu: sve horizontalne slike, uz datum dodavanja projekta (za promo novog projekta).
-function pool(projects, def, promoDays, root) {
-  const p = projects.map((pr) => {
-    const seen = new Set(), list = [];
-    for (const im of [pr.hero, pr.cover, ...(pr.gallery || [])]) {
-      if (!im || !im.file || seen.has(im.file)) continue;
-      seen.add(im.file);
-      if (im.w >= 1300 && im.h && im.w / im.h >= 1.35) list.push([im.file, im.w, im.h, (im.widths || []).filter((w) => w < im.w)]);
-    }
-    return { s: pr.slug, t: pr.title, y: pr.year, a: pr.added || '', i: list };
-  }).filter((x) => x.i.length);
-  return JSON.stringify({ r: root, d: promoDays, h: [def.slug, def.hero.file], p }).replace(/</g, '\\u003c');
+  return `<a class="hero__credit" href="${base}work/${p.slug}.html">${esc(p.title)} / ${esc(p.year)} ↗</a>`;
 }
 
 // slika za deljenje na mrezama: JPEG ako postoji (WebP ne prikazuju svi)
@@ -264,6 +240,10 @@ function phases(sv) {
     `</div></div></details>`).join('') + `</div>`;
 }
 
+// Adresa na koju forme salju upite (FormSubmit). Posle prve potvrde FormSubmit u mejlu daje nasumicni alias
+// (https://formsubmit.co/<alias>): kada ga upises ovde, e-adresa vise nije vidljiva u kodu sajta i botovi je ne nalaze.
+export const FORM_ACTION = 'https://formsubmit.co/office@qbc.rs';
+
 // kratak upit na dnu svake stranice (osim kontakta): vidljiv poziv, isti FormSubmit kao glavna forma
 const INQ = {
   en: { k: 'Start a project', h: 'Tell us about your project.', p: 'Share a few lines about your site and what you need. We reply personally.', name: 'Name *', email: 'Email *', msg: 'Your project *', send: 'Send inquiry',
@@ -274,7 +254,7 @@ const INQ = {
 function inquiryHtml(lang, path, base) {
   const t = INQ[lang];
   return `<section class="inq" id="inquiry"><div class="wrap inq__in"><div class="inq__head"><p class="label">${t.k}</p><h2 class="inq__h">${t.h}</h2><p class="inq__p">${t.p}</p></div>` +
-    `<form class="cform inq__form" action="https://formsubmit.co/office@qbc.rs" method="POST" data-form>` +
+    `<form class="cform inq__form" action="${FORM_ACTION}" method="POST" data-form>` +
     `<input type="hidden" name="_subject" value="${t.subj}"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">` +
     `<input type="hidden" name="_next" value="https://www.qbc.rs/${path}?sent=1#inquiry">` +
     `<p class="cform__hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>` +
@@ -396,6 +376,7 @@ export function buildSite(data, sources, { all = false } = {}) {
   const projects = data.projects;
   const heroProject = projects.find((p) => p.slug === data.hero_slug) || projects[0];
   const ogDefault = ogUrl(heroProject.hero);
+  const homeHero = pickHero(projects, heroProject, data.promo_days ?? 21);
   const out = {};
   const faq = JSON.parse(sources['src/faq.json']);
 
@@ -408,7 +389,7 @@ export function buildSite(data, sources, { all = false } = {}) {
       const ROOT = '../'.repeat(depth + (lang === 'en' ? 0 : 1)), BASE = '../'.repeat(depth);
       const u = (l) => 'https://www.qbc.rs/' + (file === 'index.html' ? PRE[l] : PRE[l] + file);
       return {
-        LANG: lang, LOCALE: t.locale, ROOT, BASE, OG_IMAGE: ogDefault, LD: '', ORG_LD: orgLd(lang, services), CTA: t.cta,
+        LANG: lang, LOCALE: t.locale, ROOT, BASE, OG_IMAGE: ogDefault, LD: '', ORG_LD: orgLd(lang, services), CTA: t.cta, FORM_ACTION,
         PATH: file === 'index.html' ? pre : own, LANG_URL: rel(own, other),
         HREFLANG: `<link rel="alternate" hreflang="en" href="${u('en')}"><link rel="alternate" hreflang="sr" href="${u('sr')}"><link rel="alternate" hreflang="x-default" href="${u('en')}">`,
         SERVICES_LIST: servicesList(services), SERVICES_INTRO: esc(services.intro), PHASES: phases(services),
@@ -421,8 +402,8 @@ export function buildSite(data, sources, { all = false } = {}) {
       : ['QBC Architects | Arhitektonski studio i dizajn enterijera, Beograd', 'Arhitektonski studio iz Beograda od 2010. Kuće, stanovi i ugostiteljski prostori, od koncepta i BIM modela do dozvola i arhitektonskog nadzora.'];
     out[`${pre}index.html`] = render('index', sources, {
       ...site('index.html'), key: 'home', TITLE: home[0], DESC: home[1],
-      HERO_IMG: pickImg(heroProject.hero, heroProject, pool(projects, heroProject, data.promo_days ?? 21, lang === 'en' ? '' : '../'), lang === 'en' ? '' : '../'),
-      HERO_CREDIT: heroCredit(heroProject, ''),
+      HERO_IMG: img(homeHero.hero, { root: lang === 'en' ? '' : '../', sizes: '100vw', alt: altOf(homeHero, lang), eager: true, want: 2000 }),
+      HERO_CREDIT: heroCredit(homeHero, ''),
       HOME_WORKS: worksGrid(projects.slice(0, data.home_count ?? 4), lang, '', lang === 'en' ? '' : '../'),
     });
     const ow = lang === 'en'

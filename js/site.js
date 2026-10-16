@@ -9,14 +9,6 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const safe = (fn) => { try { return fn(); } catch { return null; } };
 
-  /* potpis naslovne slike: izbor je napravila mala skripta odmah posle slike */
-  const initPicks = () => {
-    const img = $('img[data-pick="hero"]'), credit = $('[data-credit]');
-    if (!img || !credit || !img.dataset.s) return;
-    credit.href = (credit.getAttribute('href') || '').replace(/work\/[^/]*$/, 'work/' + img.dataset.s + '.html');
-    credit.textContent = `${img.dataset.t} / ${img.dataset.y} ↗`;
-  };
-
   /* tiho pojavljivanje */
   const initReveal = () => {
     const els = $$('[data-reveal]');
@@ -58,20 +50,28 @@
     measure(); y = target = scrollY; paint();
   };
 
-  /* navigacija: sakrij pri spustanju, vrati pri podizanju */
+  /* navigacija: pri spustanju se sklanjaju traka i linkovi, a znak i naziv ostaju;
+     preko tamnih delova (slika na vrhu, tamne trake) tekst je beo, inace crn */
   const initNav = () => {
-    const nav = $('.nav');
-    if (!nav) return;
-    let last = scrollY;
-    const hero = $('.hero, .phero');
-    const tone = () => root.classList.toggle('over-hero', !!hero && scrollY < hero.offsetHeight - 70);
+    const nav = $('.nav'), brand = $('.nav__brand');
+    if (!nav || !brand) return;
+    const darks = $$('.hero, .phero, .band, .inq, .pgal--dark');
+    let last = scrollY, raf = 0;
+    const tone = () => {
+      raf = 0;
+      const b = brand.getBoundingClientRect(), y = b.top + b.height / 2;
+      root.classList.toggle('on-dark', darks.some((el) => { const r = el.getBoundingClientRect(); return r.top <= y && r.bottom >= y; }));
+    };
     tone();
     addEventListener('scroll', () => {
       const y = scrollY;
-      tone();
       nav.classList.toggle('is-hidden', y > last && y > 120 && !root.classList.contains('menu-open'));
       last = y;
+      if (!raf) raf = requestAnimationFrame(tone);
     }, { passive: true });
+    addEventListener('resize', tone);
+    // znak se pomera kada se traka skupi, pa se ton proverava i posle prelaza
+    nav.addEventListener('transitionend', tone);
   };
 
   const initProgress = () => {
@@ -122,23 +122,6 @@
       const first = f[0], last = f[f.length - 1];
       if (e.shiftKey && D.activeElement === first) { e.preventDefault(); last.focus(); }
       else if (!e.shiftKey && D.activeElement === last) { e.preventDefault(); first.focus(); }
-    });
-  };
-
-  /* mekan prelaz izmedju stranica */
-  const initTransitions = () => {
-    const fade = $('.fade');
-    if (!fade || reduce) return;
-    addEventListener('pageshow', (e) => { if (e.persisted) fade.classList.remove('is-on'); });
-    D.addEventListener('click', (e) => {
-      const a = e.target.closest && e.target.closest('a[href]');
-      if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
-      if (a.target || a.hasAttribute('download')) return;
-      const u = new URL(a.href, location.href);
-      if (u.origin !== location.origin || (u.pathname === location.pathname && u.search === location.search)) return;
-      e.preventDefault();
-      fade.classList.add('is-on');
-      setTimeout(() => { location.href = a.href; }, 560);
     });
   };
 
@@ -220,10 +203,13 @@
     const M = sr ? { ok: 'Hvala. Vaša poruka je poslata, javićemo se uskoro.', sending: 'Šaljem...', fail: 'Poruka nije poslata. Pišite nam na office@qbc.rs ili nas pozovite na +381 63 411 066.' }
       : { ok: 'Thank you. Your message has been sent, we will reply soon.', sending: 'Sending...', fail: 'The message could not be sent. Please write to office@qbc.rs or call +381 63 411 066.' };
     if (/[?&]sent=1/.test(location.search)) say(M.ok);
+    const t0 = Date.now();
     f.addEventListener('submit', async (e) => {
       if (!window.fetch) return;
       e.preventDefault();
       if (f._honey && f._honey.value) return;
+      // zamka za botove: covek ne popuni formu za manje od 3 sekunde; botu se prikaze uspeh, a nista se ne salje
+      if (Date.now() - t0 < 3000) { f.reset(); say(M.ok); return; }
       btn.disabled = true; say(M.sending);
       try {
         const r = await fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
@@ -272,7 +258,7 @@
   };
 
   const boot = () => {
-    initPicks(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initTransitions(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
+    initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

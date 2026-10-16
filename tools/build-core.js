@@ -324,7 +324,7 @@ function orgLd(lang, services) {
   return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': ['Architect', 'ProfessionalService'], '@id': 'https://www.qbc.rs/#studio',
     name: 'QBC Architects', alternateName: 'QBCarchitects', url: 'https://www.qbc.rs/', logo: 'https://www.qbc.rs/assets/logo.png',
     email: 'office@qbc.rs', telephone: '+38163411066', foundingDate: '2010', slogan: 'Architecture, interiors and visualisation',
-    founder: [{ '@type': 'Person', name: 'Slavoljub Ljubić', jobTitle: 'Architect' }, { '@type': 'Person', name: 'Vladica Ljubić', jobTitle: 'Architect' }],
+    founder: [{ '@type': 'Person', name: 'Slavoljub Ljubić', jobTitle: 'Architect', sameAs: ['https://www.linkedin.com/in/slavoljubic/'] }, { '@type': 'Person', name: 'Vladica Ljubić', jobTitle: 'Architect' }],
     address: { '@type': 'PostalAddress', addressLocality: 'Belgrade', addressCountry: 'RS' },
     areaServed: [{ '@type': 'Country', name: 'Serbia' }, { '@type': 'Country', name: 'Montenegro' }, { '@type': 'Place', name: 'Europe' }],
     availableLanguage: ['en', 'sr'], knowsAbout: ['Architecture', 'Interior design', 'Architectural visualisation', 'BIM', 'Autodesk Revit', 'Building permits in Serbia'],

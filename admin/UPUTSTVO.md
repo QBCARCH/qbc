@@ -40,3 +40,4 @@ Na listi projekata dugmad **Gore / Dole** menjaju redosled na sajtu (prva 4 su n
 - Šabloni su u `src/`: delovi koji se ponavljaju (zaglavlje, meni, podnožje) u `src/partials/`, stranice u `src/pages/`, usluge u `src/services.json`. Tekstove o nama, uslugama, kontaktu i privatnosti menjaš u `src/pages/`, pa pokreneš `node tools/build.js`.
 - Izgled je u `css/site.css`, ponašanje i animacije (parallax, otkrivanje, kursor, tranzicije, lightbox) u `js/site.js`. Nema spoljnih biblioteka.
 - Svaka objava je jedan commit na grani `main`, pa se svaka izmena može vratiti na GitHub-u.
+- Stranice traže `css/site.css?v=...` i `js/site.js?v=...`, gde je `v` otisak sadržaja tih fajlova. Posle izmene CSS-a ili JS-a pokreni `node tools/build.js`, da se verzija promeni i da pregledači odmah uzmu nov fajl umesto zapamćenog.

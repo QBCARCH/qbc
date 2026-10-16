@@ -32,7 +32,17 @@ export const DYNAMIC_SOURCES = [
   'src/pages/sr/work.html',
   'src/partials/sr/nav.html',
   'src/partials/sr/footer.html',
+  // CSS i JS se citaju samo zbog verzije u adresi (?v=...), da pregledaci posle izmene odmah uzmu nov fajl
+  'css/site.css',
+  'js/site.js',
 ];
+
+// kratak otisak sadrzaja (FNV-1a): ista sadrzina daje istu verziju, pa build bez izmena ne menja stranice
+const fingerprint = (...texts) => {
+  let h = 0x811c9dc5;
+  for (const t of texts) for (const ch of String(t || '').replace(/\r\n/g, '\n')) { h ^= ch.codePointAt(0); h = Math.imul(h, 0x01000193) >>> 0; }
+  return h.toString(16).padStart(8, '0');
+};
 // Ostale stranice (o nama, usluge, kontakt, privatnost) se grade samo lokalno, sa opcijom all.
 export const STATIC_SOURCES = [
   'src/pages/about.html',
@@ -378,6 +388,7 @@ export function buildSite(data, sources, { all = false } = {}) {
   const heroProject = projects.find((p) => p.slug === data.hero_slug) || projects[0];
   const ogDefault = ogUrl(heroProject.hero);
   const homeHero = pickHero(projects, heroProject, data.promo_days ?? 21);
+  const ASSET_V = fingerprint(sources['css/site.css'], sources['js/site.js']);
   const out = {};
   const faq = JSON.parse(sources['src/faq.json']);
 
@@ -390,7 +401,7 @@ export function buildSite(data, sources, { all = false } = {}) {
       const ROOT = '../'.repeat(depth + (lang === 'en' ? 0 : 1)), BASE = '../'.repeat(depth);
       const u = (l) => 'https://www.qbc.rs/' + (file === 'index.html' ? PRE[l] : PRE[l] + file);
       return {
-        LANG: lang, LOCALE: t.locale, ROOT, BASE, OG_IMAGE: ogDefault, LD: '', ORG_LD: orgLd(lang, services), CTA: t.cta, FORM_ACTION,
+        LANG: lang, LOCALE: t.locale, ROOT, BASE, OG_IMAGE: ogDefault, LD: '', ORG_LD: orgLd(lang, services), CTA: t.cta, FORM_ACTION, ASSET_V,
         PATH: file === 'index.html' ? pre : own, LANG_URL: rel(own, other),
         HREFLANG: `<link rel="alternate" hreflang="en" href="${u('en')}"><link rel="alternate" hreflang="sr" href="${u('sr')}"><link rel="alternate" hreflang="x-default" href="${u('en')}">`,
         SERVICES_LIST: servicesList(services), SERVICES_INTRO: esc(services.intro), PHASES: phases(services),
@@ -438,7 +449,7 @@ export function buildSite(data, sources, { all = false } = {}) {
   }
   if (all) {
     out[NOT_FOUND.out] = render(NOT_FOUND.src, sources, {
-      LANG: 'en', LOCALE: 'en_US', ROOT: '/', BASE: '/', OG_IMAGE: ogDefault, LD: '', ORG_LD: orgLd('en', JSON.parse(sources['src/services.json'])), CTA: L.en.cta,
+      LANG: 'en', LOCALE: 'en_US', ROOT: '/', BASE: '/', OG_IMAGE: ogDefault, ASSET_V, LD: '', ORG_LD: orgLd('en', JSON.parse(sources['src/services.json'])), CTA: L.en.cta,
       INQUIRY: '', PATH: '404.html', LANG_URL: '/sr/', HREFLANG: '', key: 'none', TITLE: esc(NOT_FOUND.title), DESC: esc(NOT_FOUND.desc),
     });
   }

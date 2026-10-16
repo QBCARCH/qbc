@@ -17,6 +17,8 @@ Token je lozinka za admin. Ko nema token, ne može ništa da promeni na sajtu.
 3. Dodaj naslovnu sliku (obavezna), po želji glavnu sliku (fullscreen na vrhu stranice projekta) i galeriju (više slika odjednom, prevlačenjem menjaš redosled).
 4. Klikni **Objavi na sajt**. Za oko minut do dva sajt je ažuran.
 
+Na velikim verzijama slika (od 2000 px) i na kopiji za pregled preko celog ekrana admin automatski dodaje znak QBCARCHITECTS u donjem desnom uglu; manje verzije na sajtu ostaju čiste. Za stare slike to je jednom urađeno alatom `tools/watermark.html` (pokreće se sa `node tools/watermark-server.js`); slika sa znakom ima oznaku `wm: true` i ne obrađuje se ponovo.
+
 Slike se automatski pretvaraju u WebP i smanjuju u više veličina (500 do 3200 px), tako da sajt ostaje brz. Za deljenje na mrežama (LinkedIn, Facebook, WhatsApp) pravi se i jedna JPEG kopija.
 
 Ako je slika uža od 2400 px, admin te upozori: preko celog ekrana takva slika deluje mekano. Ako istu sliku dodaš dvaput, admin je preskoči.

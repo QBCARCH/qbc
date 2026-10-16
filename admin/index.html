@@ -364,7 +364,7 @@ function onSave() {
   const pend = new Map(S.pending);
   for (const [path, blob] of E._blobs) {
     const name = path.replace(/^images\//, '');
-    if ([...used].some((u) => name === u || (name.startsWith(u.slice(0, u.lastIndexOf('.')) + '-p-') || name === u.slice(0, u.lastIndexOf('.')) + '-og.jpg'))) pend.set(path, blob);
+    if ([...used].some((u) => { const b = u.slice(0, u.lastIndexOf('.')); return name === u || name.startsWith(b + '-p-') || name === b + '-og.jpg' || name.startsWith(b + '-full.'); })) pend.set(path, blob);
   }
   doPublish({
     message: (E._index === null ? 'Admin: novi projekat ' : 'Admin: izmena projekta ') + title,

@@ -189,6 +189,12 @@ ul, ol { list-style: none; }
 .beliefs { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
 .beliefs li { padding-top: 1rem; border-top: 1px solid var(--line); }
 .beliefs li span { display: block; color: var(--mute); margin-bottom: .6rem; }
+/* uverenja i osnivaci: isti raspored i boje, sav tekst u grupi ravnomerno krupniji (oko 1,25 puta) */
+.beliefs__label, .beliefs li .label, .people__label .label, .person .label { font-size: .9rem; }
+.beliefs__label { margin-bottom: 2rem; }
+.beliefs li { font-size: 1.33rem; line-height: 1.5; }
+.people__label .btn { font-size: .92rem; }
+.person h3 { font-size: clamp(1.55rem, 2.25vw, 2.1rem); }
 
 /* 7. projekti ----------------------------------------------------------------- */
 .phead { padding: clamp(140px, 22vh, 240px) var(--pad) clamp(36px, 6vh, 72px); }
@@ -446,6 +452,7 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   .nav__links { display: none; }
   .nav__menu { display: inline-flex; }
   .proof { grid-template-columns: 1fr; row-gap: 36px; }
+  .beliefs { grid-template-columns: 1fr; }
   .faq__item summary { grid-template-columns: 2.4rem 1fr 1.4rem; }
   .faq__a { padding-left: calc(2.4rem + var(--gap)); padding-right: 0; }
   .psub__t, .psub__l a.psub__cta { display: none; }

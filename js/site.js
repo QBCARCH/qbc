@@ -50,20 +50,28 @@
     measure(); y = target = scrollY; paint();
   };
 
-  /* navigacija: sakrij pri spustanju, vrati pri podizanju */
+  /* navigacija: pri spustanju se sklanjaju traka i linkovi, a znak i naziv ostaju;
+     preko tamnih delova (slika na vrhu, tamne trake) tekst je beo, inace crn */
   const initNav = () => {
-    const nav = $('.nav');
-    if (!nav) return;
-    let last = scrollY;
-    const hero = $('.hero, .phero');
-    const tone = () => root.classList.toggle('over-hero', !!hero && scrollY < hero.offsetHeight - 70);
+    const nav = $('.nav'), brand = $('.nav__brand');
+    if (!nav || !brand) return;
+    const darks = $$('.hero, .phero, .band, .inq, .pgal--dark');
+    let last = scrollY, raf = 0;
+    const tone = () => {
+      raf = 0;
+      const b = brand.getBoundingClientRect(), y = b.top + b.height / 2;
+      root.classList.toggle('on-dark', darks.some((el) => { const r = el.getBoundingClientRect(); return r.top <= y && r.bottom >= y; }));
+    };
     tone();
     addEventListener('scroll', () => {
       const y = scrollY;
-      tone();
       nav.classList.toggle('is-hidden', y > last && y > 120 && !root.classList.contains('menu-open'));
       last = y;
+      if (!raf) raf = requestAnimationFrame(tone);
     }, { passive: true });
+    addEventListener('resize', tone);
+    // znak se pomera kada se traka skupi, pa se ton proverava i posle prelaza
+    nav.addEventListener('transitionend', tone);
   };
 
   const initProgress = () => {

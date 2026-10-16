@@ -86,16 +86,21 @@ ul, ol { list-style: none; }
 @view-transition { navigation: auto; }
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .45s; animation-timing-function: var(--ease); }
 
-.nav { position: fixed; inset: 0 0 auto 0; z-index: 50; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 22px var(--pad); transition: transform .6s var(--ease); pointer-events: none; }
-/* traka sa blagom pozadinom kada nije preko slike */
-html:not(.over-hero) .nav { background: rgba(245, 243, 239, .86); -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); }
+/* Navigacija: znak i naziv su uvek vidljivi. Pri spustanju se traka (pozadina) i linkovi sklone, a traka se skupi.
+   Ton prati pozadinu ispod znaka (js: on-dark): preko slike i tamnih traka belo, preko svetlih delova crno. */
+.nav { position: fixed; inset: 0 0 auto 0; z-index: 50; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 22px var(--pad); transition: padding .6s var(--ease); pointer-events: none; }
+.nav::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(245, 243, 239, .86); -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); transition: opacity .5s var(--ease), transform .6s var(--ease); }
+.on-dark .nav::before { opacity: 0; }
+.nav.is-hidden { padding-block: 10px; }
+.nav.is-hidden::before { transform: translateY(-100%); }
 .nav > * { pointer-events: auto; }
-.nav.is-hidden { transform: translateY(-120%); }
+.nav__links, .nav__menu { transition: opacity .4s var(--ease), transform .6s var(--ease); }
+.nav.is-hidden .nav__links, .nav.is-hidden .nav__menu { opacity: 0; transform: translateY(-14px); pointer-events: none; visibility: hidden; transition: opacity .4s var(--ease), transform .6s var(--ease), visibility 0s .4s; }
 .nav__brand { display: inline-flex; align-items: center; gap: 12px; justify-self: start; }
-.nav__brand img { width: 26px; height: 26px; }
+.nav__brand img { width: 26px; height: 26px; transition: filter .4s; }
 .nav__text { color: var(--fg); transition: color .4s; }
-.over-hero .nav__text { color: #fff; }
-.over-hero .nav__brand img { filter: invert(1); }
+.on-dark .nav__text { color: #fff; }
+.on-dark .nav__brand img { filter: invert(1); }
 .nav__name { font: 400 .72rem var(--mono); letter-spacing: .3em; text-transform: uppercase; white-space: nowrap; }
 .nav__links { justify-self: center; display: flex; align-items: center; gap: clamp(1rem, 2.4vw, 2.4rem); }
 .nav__links a { padding-block: .3em; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .5s var(--ease); }
@@ -103,8 +108,8 @@ html:not(.over-hero) .nav { background: rgba(245, 243, 239, .86); -webkit-backdr
 /* poziv u navigaciji: puno dugme */
 .nav__links a.nav__cta { padding: .55em 1.2em; border: 1px solid var(--fg); border-radius: 999px; background: var(--fg); color: var(--bg); transition: background-color .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease); }
 .nav__links a.nav__cta:hover, .nav__links a.nav__cta[aria-current="page"] { background: transparent; color: var(--fg); border-color: var(--fg); }
-.over-hero .nav__links a.nav__cta { background: #fff; color: #1c1b19; border-color: #fff; }
-.over-hero .nav__links a.nav__cta:hover { background: transparent; color: #fff; border-color: #fff; }
+.on-dark .nav__links a.nav__cta { background: #fff; color: #1c1b19; border-color: #fff; }
+.on-dark .nav__links a.nav__cta:hover { background: transparent; color: #fff; border-color: #fff; }
 .nav__links a.nav__lang { opacity: .7; }
 .nav__links a.nav__lang:hover { opacity: 1; }
 .nav__menu { justify-self: end; display: none; align-items: center; gap: .7em; }
@@ -235,7 +240,9 @@ html:not(.over-hero) .nav { background: rgba(245, 243, 239, .86); -webkit-backdr
 /* lepljiva traka sa podnavigacijom projekta */
 .psub { position: sticky; top: 0; z-index: 45; background: rgba(245, 243, 239, .88); -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); border-bottom: 1px solid var(--line); transition: top .6s var(--ease); }
 body:has(.nav:not(.is-hidden)) .psub { top: var(--navh); }
-.psub__in { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding: 14px var(--pad); }
+.psub__in { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding: 14px var(--pad); transition: padding .6s var(--ease); }
+/* kada je traka sklonjena, znak sedi u ovoj traci, pa naslov projekta ide desno od njega */
+body:has(.nav.is-hidden) .psub__in { padding-left: calc(var(--pad) + 13rem); }
 .psub__t { font-weight: 400; }
 .psub__l { display: flex; gap: clamp(1rem, 2.4vw, 2.4rem); align-items: center; }
 .psub__l a { padding-block: .3em; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .5s var(--ease); }
@@ -443,6 +450,7 @@ body:has(.nav:not(.is-hidden)) .psub { top: var(--navh); }
   .psub__t, .psub__l a.psub__cta { display: none; }
   .psub__in { justify-content: center; }
   .psub__l { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  body:has(.nav.is-hidden) .psub__in { padding-left: var(--pad); justify-content: flex-end; }
 }
 
 /* 14. smanjeno kretanje -------------------------------------------------------- */

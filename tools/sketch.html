@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<title>QBC skice naslovnih slika</title>
+<meta name="robots" content="noindex, nofollow">
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:32px;max-width:760px}button{font:inherit;padding:.6em 1.2em}pre{background:#f4f4f2;padding:12px;max-height:60vh;overflow:auto}</style>
+</head>
+<body>
+<h1>Skice naslovnih slika</h1>
+<p>Za glavnu sliku svakog projekta u <code>data/projects.json</code> koja još nema skicu pravi <code>images/&lt;slika&gt;-sketch.json</code> i upisuje <code>sketch</code> u podatke. Pokreće se sa <code>node tools/watermark-server.js</code>.</p>
+<p><button id="go" type="button">Pokreni</button></p>
+<pre id="log"></pre>
+<script type="module">
+import { makeSketch } from '../admin/sketch-lib.js';
+
+const log = (t) => { document.getElementById('log').textContent += t + '\n'; };
+const put = async (rel, body) => { const r = await fetch('/' + rel, { method: 'PUT', body }); if (!r.ok) throw new Error(`${rel}: ${r.status}`); };
+
+document.getElementById('go').addEventListener('click', async (e) => {
+  e.target.disabled = true;
+  try {
+    const data = await (await fetch('/data/projects.json', { cache: 'no-store' })).json();
+    let n = 0;
+    for (const p of data.projects) {
+      const im = p.hero;
+      if (!im || !im.file || im.sketch) continue;
+      // izvor je cista verzija bez znaka: najveca sirina ispod 2000 px, inace original (koji je tada manji od 2000)
+      const dot = im.file.lastIndexOf('.'), w = Math.max(0, ...(im.widths || []).filter((x) => x < 2000));
+      const src = w && im.w >= 2000 ? `${im.file.slice(0, dot)}-p-${w}${im.file.slice(dot)}` : im.file;
+      const bmp = await createImageBitmap(await (await fetch('/images/' + encodeURIComponent(src), { cache: 'no-store' })).blob());
+      const json = makeSketch(bmp); bmp.close();
+      const name = im.file.slice(0, im.file.lastIndexOf('.')) + '-sketch.json';
+      await put('images/' + name, json);
+      // ista slika moze biti upisana i na drugim mestima (naslovna, galerija)
+      for (const q of data.projects) for (const x of [q.cover, q.thumb, q.hero, ...(q.gallery || [])]) if (x && x.file === im.file) x.sketch = name;
+      await put('data/projects.json', JSON.stringify(data, null, 1) + '\n');
+      n++; log(`${n}. ${p.title}: ${(json.length / 1024).toFixed(1)} KB`);
+    }
+    log(n ? `Gotovo: ${n} skica.` : 'Sve glavne slike već imaju skicu.');
+  } catch (err) { log('Greška: ' + err.message); }
+  e.target.disabled = false;
+});
+</script>
+</body>
+</html>

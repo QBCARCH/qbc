@@ -29,6 +29,8 @@ Velika slika na vrhu bira se pri objavi, ne u pregledaču, pa se stranica otvara
 
 Za oštru sliku preko celog ekrana naslovna slika treba da bude široka bar 2400 px.
 
+Pri prvom otvaranju sajta u poseti preko naslovne slike se olovkom iscrta skica zgrade, pa se pretopi u sliku (oko 7 s; skrol, klik ili taster odmah prikazuju sliku). Admin skicu pravi sam za svaku novu horizontalnu sliku široku bar 1200 px (`<slika>-sketch.json`, polje `sketch`). Za stare slike to je jednom urađeno alatom `tools/sketch.html` (uz `node tools/watermark-server.js`). Slika bez skice prikazuje se odmah, bez efekta.
+
 ## Redosled i brisanje
 
 Na listi projekata dugmad **Gore / Dole** menjaju redosled na sajtu (prva 4 su na početnoj), **Obriši** uklanja projekat i njegove slike. Izmene se objavljuju dugmetom na dnu ekrana.

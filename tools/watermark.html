@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<title>QBC znak na slikama</title>
+<meta name="robots" content="noindex, nofollow">
+<style>body{font:14px/1.6 system-ui,sans-serif;margin:32px;max-width:760px}button{font:inherit;padding:.6em 1.2em}pre{background:#f4f4f2;padding:12px;max-height:60vh;overflow:auto}</style>
+</head>
+<body>
+<h1>Znak na postojećim slikama</h1>
+<p>Za svaku sliku u <code>data/projects.json</code> koja još nema znak: velike verzije (od 2000 px) dobijaju znak, pravi se kopija sa znakom za pregled preko celog ekrana (<code>-full</code>), a slika se označi sa <code>wm: true</code>. Manje verzije se ne diraju. Obrađena slika se drugi put preskače.</p>
+<p><button id="go" type="button">Pokreni</button> <button id="one" type="button">Probaj jednu sliku</button></p>
+<pre id="log"></pre>
+<script type="module">
+import { drawMark, MARK_FROM, FULL_W } from '../admin/admin-lib.js';
+
+const log = (t) => { document.getElementById('log').textContent += t + '\n'; };
+const put = async (rel, body) => { const r = await fetch('/' + rel, { method: 'PUT', body }); if (!r.ok) throw new Error(`${rel}: ${r.status}`); };
+const toBlob = (c, type, q) => new Promise((res, rej) => c.toBlob((b) => (b ? res(b) : rej(new Error('toBlob'))), type, q));
+const enc = (f) => encodeURIComponent(f);
+
+async function run(limit) {
+  const data = await (await fetch('/data/projects.json', { cache: 'no-store' })).json();
+  // ista slika moze biti i naslovna i u galeriji: obradjuje se jednom, a oznaka ide na sve zapise
+  const byFile = new Map();
+  for (const p of data.projects) for (const im of [p.cover, p.thumb, p.hero, ...(p.gallery || [])]) {
+    if (!im || !im.file) continue;
+    if (!byFile.has(im.file)) byFile.set(im.file, []);
+    byFile.get(im.file).push(im);
+  }
+  let n = 0;
+  for (const [file, entries] of byFile) {
+    const im = entries[0];
+    if (im.wm) continue;
+    if (limit && n >= limit) break;
+    const dot = file.lastIndexOf('.'), base = file.slice(0, dot), ext = file.slice(dot + 1);
+    const type = ext === 'webp' ? 'image/webp' : 'image/jpeg';
+    const bmp = await createImageBitmap(await (await fetch('/images/' + enc(file), { cache: 'no-store' })).blob());
+    const W = bmp.width, H = bmp.height;
+    const draw = (w) => { const c = document.createElement('canvas'); c.width = w; c.height = Math.round((H * w) / W); const x = c.getContext('2d'); x.imageSmoothingQuality = 'high'; x.drawImage(bmp, 0, 0, c.width, c.height); return c; };
+    // sve se racuna iz originala pre upisa, da se original ne obradi dvaput
+    const out = [];
+    for (const w of (im.widths || []).filter((w) => w >= MARK_FROM && w < W)) out.push([`images/${base}-p-${w}.${ext}`, await toBlob(await drawMark(draw(w)), type, 0.82)]);
+    const full = `${base}-full.${ext}`;
+    out.push([`images/${full}`, await toBlob(await drawMark(draw(Math.min(FULL_W, W))), type, 0.86)]);
+    if (W >= MARK_FROM) out.push([`images/${file}`, await toBlob(await drawMark(draw(W)), type, 0.86)]);
+    bmp.close();
+    for (const [rel, blob] of out) await put(rel, blob);
+    for (const e of entries) { e.full = full; e.wm = true; }
+    await put('data/projects.json', JSON.stringify(data, null, 1) + '\n');
+    n++;
+    log(`${n}. ${file} (${W} px): ${out.length} fajl(a)`);
+  }
+  log(n ? `Gotovo: ${n} slika.` : 'Sve slike već imaju znak.');
+}
+const guard = (fn) => async () => { document.querySelectorAll('button').forEach((b) => (b.disabled = true)); try { await fn(); } catch (e) { log('Greška: ' + e.message); } document.querySelectorAll('button').forEach((b) => (b.disabled = false)); };
+document.getElementById('go').addEventListener('click', guard(() => run(0)));
+document.getElementById('one').addEventListener('click', guard(() => run(1)));
+</script>
+</body>
+</html>

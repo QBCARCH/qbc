@@ -24,7 +24,9 @@
     ],
     "w": 1366,
     "h": 768,
-    "og": "1a137178ecc3c2c3c_Trnava-5-og.jpg"
+    "og": "1a137178ecc3c2c3c_Trnava-5-og.jpg",
+    "full": "1a137178ecc3c2c3c_Trnava-5-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "1a137178ecc3c2c3c_Trnava-5.webp",
@@ -35,7 +37,9 @@
     ],
     "w": 1366,
     "h": 768,
-    "og": "1a137178ecc3c2c3c_Trnava-5-og.jpg"
+    "og": "1a137178ecc3c2c3c_Trnava-5-og.jpg",
+    "full": "1a137178ecc3c2c3c_Trnava-5-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "1a13717bb1e9d76f8_Trnava-4.webp",
@@ -46,7 +50,9 @@
     ],
     "w": 1366,
     "h": 768,
-    "og": "1a13717bb1e9d76f8_Trnava-4-og.jpg"
+    "og": "1a13717bb1e9d76f8_Trnava-4-og.jpg",
+    "full": "1a13717bb1e9d76f8_Trnava-4-full.webp",
+    "wm": true
    },
    "gallery": [
     {
@@ -58,7 +64,9 @@
      ],
      "w": 1366,
      "h": 768,
-     "og": "1a13717eab7f3df89_Trnava-1-og.jpg"
+     "og": "1a13717eab7f3df89_Trnava-1-og.jpg",
+     "full": "1a13717eab7f3df89_Trnava-1-full.webp",
+     "wm": true
     },
     {
      "file": "1a13717f09ea7296c_Trnava-2.webp",
@@ -69,7 +77,9 @@
      ],
      "w": 1366,
      "h": 768,
-     "og": "1a13717f09ea7296c_Trnava-2-og.jpg"
+     "og": "1a13717f09ea7296c_Trnava-2-og.jpg",
+     "full": "1a13717f09ea7296c_Trnava-2-full.webp",
+     "wm": true
     },
     {
      "file": "1a13717f6640d0ef4_Trnava-3.webp",
@@ -80,7 +90,9 @@
      ],
      "w": 1366,
      "h": 768,
-     "og": "1a13717f6640d0ef4_Trnava-3-og.jpg"
+     "og": "1a13717f6640d0ef4_Trnava-3-og.jpg",
+     "full": "1a13717f6640d0ef4_Trnava-3-full.webp",
+     "wm": true
     },
     {
      "file": "1a13717f690306a34_Trnava-4.webp",
@@ -91,7 +103,9 @@
      ],
      "w": 1366,
      "h": 768,
-     "og": "1a13717f690306a34_Trnava-4-og.jpg"
+     "og": "1a13717f690306a34_Trnava-4-og.jpg",
+     "full": "1a13717f690306a34_Trnava-4-full.webp",
+     "wm": true
     },
     {
      "file": "1a13717f6a78cb17a_Trnava-5.webp",
@@ -102,7 +116,9 @@
      ],
      "w": 1366,
      "h": 768,
-     "og": "1a13717f6a78cb17a_Trnava-5-og.jpg"
+     "og": "1a13717f6a78cb17a_Trnava-5-og.jpg",
+     "full": "1a13717f6a78cb17a_Trnava-5-full.webp",
+     "wm": true
     },
     {
      "file": "1a13717f6ba246bc0_Trnava-6.webp",
@@ -111,7 +127,9 @@
      ],
      "w": 686,
      "h": 382,
-     "og": "1a13717f6ba246bc0_Trnava-6-og.jpg"
+     "og": "1a13717f6ba246bc0_Trnava-6-og.jpg",
+     "full": "1a13717f6ba246bc0_Trnava-6-full.webp",
+     "wm": true
     },
     {
      "file": "1a13717fbdbf0b304_Trnava-8.webp",
@@ -120,7 +138,9 @@
      ],
      "w": 686,
      "h": 382,
-     "og": "1a13717fbdbf0b304_Trnava-8-og.jpg"
+     "og": "1a13717fbdbf0b304_Trnava-8-og.jpg",
+     "full": "1a13717fbdbf0b304_Trnava-8-full.webp",
+     "wm": true
     },
     {
      "file": "1a137180158b9e6f3_Trnava-9.webp",
@@ -130,7 +150,9 @@
      ],
      "w": 960,
      "h": 1095,
-     "og": "1a137180158b9e6f3_Trnava-9-og.jpg"
+     "og": "1a137180158b9e6f3_Trnava-9-og.jpg",
+     "full": "1a137180158b9e6f3_Trnava-9-full.webp",
+     "wm": true
     },
     {
      "file": "1a1371806dd243eed_Trnava-10.webp",
@@ -141,7 +163,9 @@
      ],
      "w": 1368,
      "h": 768,
-     "og": "1a1371806dd243eed_Trnava-10-og.jpg"
+     "og": "1a1371806dd243eed_Trnava-10-og.jpg",
+     "full": "1a1371806dd243eed_Trnava-10-full.webp",
+     "wm": true
     },
     {
      "file": "1a137180c47b32c71_Trnava-11.webp",
@@ -152,7 +176,9 @@
      ],
      "w": 1368,
      "h": 768,
-     "og": "1a137180c47b32c71_Trnava-11-og.jpg"
+     "og": "1a137180c47b32c71_Trnava-11-og.jpg",
+     "full": "1a137180c47b32c71_Trnava-11-full.webp",
+     "wm": true
     },
     {
      "file": "1a137180c5f35af69_Trnava-12.webp",
@@ -163,7 +189,9 @@
      ],
      "w": 1368,
      "h": 768,
-     "og": "1a137180c5f35af69_Trnava-12-og.jpg"
+     "og": "1a137180c5f35af69_Trnava-12-og.jpg",
+     "full": "1a137180c5f35af69_Trnava-12-full.webp",
+     "wm": true
     },
     {
      "file": "1a13718134fc1c458_Trnava-14.webp",
@@ -174,7 +202,9 @@
      ],
      "w": 1368,
      "h": 768,
-     "og": "1a13718134fc1c458_Trnava-14-og.jpg"
+     "og": "1a13718134fc1c458_Trnava-14-og.jpg",
+     "full": "1a13718134fc1c458_Trnava-14-full.webp",
+     "wm": true
     }
    ],
    "location": "Trnava, Topola, Serbia",
@@ -208,7 +238,9 @@
     ],
     "w": 1368,
     "h": 768,
-    "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg"
+    "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg",
+    "full": "6aa293afab9b9e93867394a1_1 - 1-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "6aa28effe20b7166f2dc046f_2 - 3.webp",
@@ -220,7 +252,9 @@
     ],
     "w": 2000,
     "h": 962,
-    "og": "6aa28effe20b7166f2dc046f_2 - 3-og.jpg"
+    "og": "6aa28effe20b7166f2dc046f_2 - 3-og.jpg",
+    "full": "6aa28effe20b7166f2dc046f_2 - 3-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "6aa293afab9b9e93867394a1_1 - 1.webp",
@@ -231,7 +265,9 @@
     ],
     "w": 1368,
     "h": 768,
-    "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg"
+    "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg",
+    "full": "6aa293afab9b9e93867394a1_1 - 1-full.webp",
+    "wm": true
    },
    "description": "<p>Two independently designed single-storey villas stand in the quiet landscape of Koraćica, at the foot of Mount Kosmaj. They are placed to follow the gently sloping terrain and to open towards the views of the surrounding woodland. The buildings cover just over 20% of the plot, so green space stays the main character of the property.</p><p>Both houses have clean lines, flat roofs and a warm material palette: decorative silicate render combined with ventilated Siberian larch cladding. Inside, the layouts are open and bright, with living areas under three-metre ceilings that open onto large terraces and private swimming pools.</p><p>The houses are built as a prefabricated timber-frame system with good thermal and acoustic performance, with underfloor heating and utility spaces integrated in the basement.</p>",
    "gallery": [
@@ -244,7 +280,9 @@
      ],
      "w": 1368,
      "h": 768,
-     "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg"
+     "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg",
+     "full": "6aa293afab9b9e93867394a1_1 - 1-full.webp",
+     "wm": true
     },
     {
      "file": "6aa293c23696e0bf733acb88_1 - 2.webp",
@@ -254,7 +292,9 @@
      ],
      "w": 1024,
      "h": 575,
-     "og": "6aa293c23696e0bf733acb88_1 - 2-og.jpg"
+     "og": "6aa293c23696e0bf733acb88_1 - 2-og.jpg",
+     "full": "6aa293c23696e0bf733acb88_1 - 2-full.webp",
+     "wm": true
     },
     {
      "file": "6aa28f06defe2717325b426c_1 - 3.webp",
@@ -265,7 +305,9 @@
      ],
      "w": 1475,
      "h": 711,
-     "og": "6aa28f06defe2717325b426c_1 - 3-og.jpg"
+     "og": "6aa28f06defe2717325b426c_1 - 3-og.jpg",
+     "full": "6aa28f06defe2717325b426c_1 - 3-full.webp",
+     "wm": true
     },
     {
      "file": "6aa28ef657107ef3884e9da8_2 - 1.webp",
@@ -277,7 +319,9 @@
      ],
      "w": 2000,
      "h": 961,
-     "og": "6aa28ef657107ef3884e9da8_2 - 1-og.jpg"
+     "og": "6aa28ef657107ef3884e9da8_2 - 1-og.jpg",
+     "full": "6aa28ef657107ef3884e9da8_2 - 1-full.webp",
+     "wm": true
     },
     {
      "file": "6aa28f052c30d80d8e512281_2 - 2.webp",
@@ -289,7 +333,9 @@
      ],
      "w": 2000,
      "h": 976,
-     "og": "6aa28f052c30d80d8e512281_2 - 2-og.jpg"
+     "og": "6aa28f052c30d80d8e512281_2 - 2-og.jpg",
+     "full": "6aa28f052c30d80d8e512281_2 - 2-full.webp",
+     "wm": true
     },
     {
      "file": "6aa293f4ab9b9e938673c7d6_2 - 3.webp",
@@ -299,7 +345,9 @@
      ],
      "w": 1024,
      "h": 575,
-     "og": "6aa293f4ab9b9e938673c7d6_2 - 3-og.jpg"
+     "og": "6aa293f4ab9b9e938673c7d6_2 - 3-og.jpg",
+     "full": "6aa293f4ab9b9e938673c7d6_2 - 3-full.webp",
+     "wm": true
     },
     {
      "file": "6aa28fe555b3ce2838f6222f_2 - 6.webp",
@@ -311,7 +359,9 @@
      ],
      "w": 2000,
      "h": 2178,
-     "og": "6aa28fe555b3ce2838f6222f_2 - 6-og.jpg"
+     "og": "6aa28fe555b3ce2838f6222f_2 - 6-og.jpg",
+     "full": "6aa28fe555b3ce2838f6222f_2 - 6-full.webp",
+     "wm": true
     },
     {
      "file": "6aa28f05856feb3e17e473e7_2 - 4.webp",
@@ -323,7 +373,9 @@
      ],
      "w": 2000,
      "h": 975,
-     "og": "6aa28f05856feb3e17e473e7_2 - 4-og.jpg"
+     "og": "6aa28f05856feb3e17e473e7_2 - 4-og.jpg",
+     "full": "6aa28f05856feb3e17e473e7_2 - 4-full.webp",
+     "wm": true
     },
     {
      "file": "6aa28fe53a611c20e8568f6d_2 - 5.webp",
@@ -335,7 +387,9 @@
      ],
      "w": 2000,
      "h": 2186,
-     "og": "6aa28fe53a611c20e8568f6d_2 - 5-og.jpg"
+     "og": "6aa28fe53a611c20e8568f6d_2 - 5-og.jpg",
+     "full": "6aa28fe53a611c20e8568f6d_2 - 5-full.webp",
+     "wm": true
     }
    ],
    "location": "Koraćica, Kosmaj, Serbia",
@@ -372,7 +426,9 @@
     ],
     "w": 3840,
     "h": 2160,
-    "og": "6aa2845f582915882762379c_Image73-og.jpg"
+    "og": "6aa2845f582915882762379c_Image73-og.jpg",
+    "full": "6aa2845f582915882762379c_Image73-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "6aa2845f582915882762379c_Image73.webp",
@@ -387,7 +443,9 @@
     ],
     "w": 3840,
     "h": 2160,
-    "og": "6aa2845f582915882762379c_Image73-og.jpg"
+    "og": "6aa2845f582915882762379c_Image73-og.jpg",
+    "full": "6aa2845f582915882762379c_Image73-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "6aa2845f582915882762379c_Image73.webp",
@@ -402,7 +460,9 @@
     ],
     "w": 3840,
     "h": 2160,
-    "og": "6aa2845f582915882762379c_Image73-og.jpg"
+    "og": "6aa2845f582915882762379c_Image73-og.jpg",
+    "full": "6aa2845f582915882762379c_Image73-full.webp",
+    "wm": true
    },
    "description": "<p>On a mountain site in Divčibare, a family house and a guest house offer a contemporary interpretation of the traditional mountain retreat. Siberian larch and anthracite steel give the buildings warmth and a sharp modern outline, and place them calmly among the surrounding trees.</p><p>The main house is organised around daylight and open space: three-metre ceilings, a living area centred on a fireplace, and a lower-level SPA and wellness zone that opens onto an outdoor terrace. The guest house follows the same approach, with an open-plan layout, its own sauna and a sleeping gallery.</p><p>Both buildings are well insulated, with underfloor heating powered by heat pumps and an integrated smart home system.</p>",
    "gallery": [
@@ -419,7 +479,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849bbd2b340604672c09_Image69-og.jpg"
+     "og": "6aa2849bbd2b340604672c09_Image69-og.jpg",
+     "full": "6aa2849bbd2b340604672c09_Image69-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849bf09a69f4dcc80c30_Image70.webp",
@@ -434,7 +496,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849bf09a69f4dcc80c30_Image70-og.jpg"
+     "og": "6aa2849bf09a69f4dcc80c30_Image70-og.jpg",
+     "full": "6aa2849bf09a69f4dcc80c30_Image70-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849e93cb646794f4d35a_Image71.webp",
@@ -449,7 +513,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849e93cb646794f4d35a_Image71-og.jpg"
+     "og": "6aa2849e93cb646794f4d35a_Image71-og.jpg",
+     "full": "6aa2849e93cb646794f4d35a_Image71-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2845f582915882762379c_Image73.webp",
@@ -464,7 +530,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2845f582915882762379c_Image73-og.jpg"
+     "og": "6aa2845f582915882762379c_Image73-og.jpg",
+     "full": "6aa2845f582915882762379c_Image73-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849c0cfb37f0ee439bb7_Image72.webp",
@@ -479,7 +547,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849c0cfb37f0ee439bb7_Image72-og.jpg"
+     "og": "6aa2849c0cfb37f0ee439bb7_Image72-og.jpg",
+     "full": "6aa2849c0cfb37f0ee439bb7_Image72-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2852a6100db41fc677e3c_Image89.webp",
@@ -494,7 +564,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2852a6100db41fc677e3c_Image89-og.jpg"
+     "og": "6aa2852a6100db41fc677e3c_Image89-og.jpg",
+     "full": "6aa2852a6100db41fc677e3c_Image89-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849c2672b1868d16331a_Image21.webp",
@@ -509,7 +581,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849c2672b1868d16331a_Image21-og.jpg"
+     "og": "6aa2849c2672b1868d16331a_Image21-og.jpg",
+     "full": "6aa2849c2672b1868d16331a_Image21-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849d5eee4c05ba3e547d_Image85_000.webp",
@@ -524,7 +598,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849d5eee4c05ba3e547d_Image85_000-og.jpg"
+     "og": "6aa2849d5eee4c05ba3e547d_Image85_000-og.jpg",
+     "full": "6aa2849d5eee4c05ba3e547d_Image85_000-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849d0487e53474bfbe83_Image25.webp",
@@ -539,7 +615,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849d0487e53474bfbe83_Image25-og.jpg"
+     "og": "6aa2849d0487e53474bfbe83_Image25-og.jpg",
+     "full": "6aa2849d0487e53474bfbe83_Image25-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849d5eee4c05ba3e5482_Image82.webp",
@@ -554,7 +632,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849d5eee4c05ba3e5482_Image82-og.jpg"
+     "og": "6aa2849d5eee4c05ba3e5482_Image82-og.jpg",
+     "full": "6aa2849d5eee4c05ba3e5482_Image82-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849c5c8798acaa9f90fa_Image28.webp",
@@ -569,7 +649,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849c5c8798acaa9f90fa_Image28-og.jpg"
+     "og": "6aa2849c5c8798acaa9f90fa_Image28-og.jpg",
+     "full": "6aa2849c5c8798acaa9f90fa_Image28-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849d6100db41fc671a38_Image27_000.webp",
@@ -584,7 +666,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849d6100db41fc671a38_Image27_000-og.jpg"
+     "og": "6aa2849d6100db41fc671a38_Image27_000-og.jpg",
+     "full": "6aa2849d6100db41fc671a38_Image27_000-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849d220840992be694d1_Image18.webp",
@@ -599,7 +683,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849d220840992be694d1_Image18-og.jpg"
+     "og": "6aa2849d220840992be694d1_Image18-og.jpg",
+     "full": "6aa2849d220840992be694d1_Image18-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849e7b983d21eae27803_Image19.webp",
@@ -614,7 +700,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849e7b983d21eae27803_Image19-og.jpg"
+     "og": "6aa2849e7b983d21eae27803_Image19-og.jpg",
+     "full": "6aa2849e7b983d21eae27803_Image19-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849e091ae5d0a7712d1c_Image74.webp",
@@ -629,7 +717,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849e091ae5d0a7712d1c_Image74-og.jpg"
+     "og": "6aa2849e091ae5d0a7712d1c_Image74-og.jpg",
+     "full": "6aa2849e091ae5d0a7712d1c_Image74-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849c5bad1f633cb71c67_Image80.webp",
@@ -644,7 +734,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849c5bad1f633cb71c67_Image80-og.jpg"
+     "og": "6aa2849c5bad1f633cb71c67_Image80-og.jpg",
+     "full": "6aa2849c5bad1f633cb71c67_Image80-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849bf09a69f4dcc80c17_Image16.webp",
@@ -659,7 +751,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849bf09a69f4dcc80c17_Image16-og.jpg"
+     "og": "6aa2849bf09a69f4dcc80c17_Image16-og.jpg",
+     "full": "6aa2849bf09a69f4dcc80c17_Image16-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849ef09a69f4dcc80d8e_Image27.webp",
@@ -674,7 +768,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849ef09a69f4dcc80d8e_Image27-og.jpg"
+     "og": "6aa2849ef09a69f4dcc80d8e_Image27-og.jpg",
+     "full": "6aa2849ef09a69f4dcc80d8e_Image27-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849def8e3ac275e76443_Image79.webp",
@@ -689,7 +785,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849def8e3ac275e76443_Image79-og.jpg"
+     "og": "6aa2849def8e3ac275e76443_Image79-og.jpg",
+     "full": "6aa2849def8e3ac275e76443_Image79-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849d5bad1f633cb71d29_Image77.webp",
@@ -704,7 +802,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849d5bad1f633cb71d29_Image77-og.jpg"
+     "og": "6aa2849d5bad1f633cb71d29_Image77-og.jpg",
+     "full": "6aa2849d5bad1f633cb71d29_Image77-full.webp",
+     "wm": true
     },
     {
      "file": "6aa2849ed42b40dc0a892a6e_Image76.webp",
@@ -719,7 +819,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6aa2849ed42b40dc0a892a6e_Image76-og.jpg"
+     "og": "6aa2849ed42b40dc0a892a6e_Image76-og.jpg",
+     "full": "6aa2849ed42b40dc0a892a6e_Image76-full.webp",
+     "wm": true
     }
    ],
    "location": "Divčibare, Serbia",
@@ -751,7 +853,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
+    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg",
+    "full": "673bbefbe7256b1a41b06244_Image2_013-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
@@ -762,7 +866,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
+    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg",
+    "full": "673bbefbe7256b1a41b06244_Image2_013-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
@@ -773,7 +879,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
+    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg",
+    "full": "673bbefbe7256b1a41b06244_Image2_013-full.webp",
+    "wm": true
    },
    "description": "<p>Located above Liman 2 beach in Ulcinj, on the Montenegrin coast, this residential and commercial building follows the steep, wooded slope instead of fighting it. The volume is broken into cascading terraces, so the apartments step down the hill and each one gets its own open terrace with planting and a view of the sea.</p><p>The material palette comes from the Adriatic tradition: local stone walls, white rendered volumes, timber shutters and planted parapets. Seen from the beach, the building reads as part of the hillside rather than as a single block.</p>",
    "gallery": [
@@ -786,7 +894,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf0a0fe95df33293962b_Image1_000-og.jpg"
+     "og": "673bbf0a0fe95df33293962b_Image1_000-og.jpg",
+     "full": "673bbf0a0fe95df33293962b_Image1_000-full.webp",
+     "wm": true
     },
     {
      "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
@@ -797,7 +907,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg"
+     "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg",
+     "full": "673bbefbe7256b1a41b06244_Image2_013-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf06d092c27300025bbf_Image2_014.webp",
@@ -808,7 +920,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf06d092c27300025bbf_Image2_014-og.jpg"
+     "og": "673bbf06d092c27300025bbf_Image2_014-og.jpg",
+     "full": "673bbf06d092c27300025bbf_Image2_014-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf0627d2a1529df6e7eb_Image2_015.webp",
@@ -819,7 +933,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf0627d2a1529df6e7eb_Image2_015-og.jpg"
+     "og": "673bbf0627d2a1529df6e7eb_Image2_015-og.jpg",
+     "full": "673bbf0627d2a1529df6e7eb_Image2_015-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf06cb0313130f59801c_Image2_016.webp",
@@ -830,7 +946,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf06cb0313130f59801c_Image2_016-og.jpg"
+     "og": "673bbf06cb0313130f59801c_Image2_016-og.jpg",
+     "full": "673bbf06cb0313130f59801c_Image2_016-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf06878268e7b7d335ba_Image2_017.webp",
@@ -841,7 +959,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf06878268e7b7d335ba_Image2_017-og.jpg"
+     "og": "673bbf06878268e7b7d335ba_Image2_017-og.jpg",
+     "full": "673bbf06878268e7b7d335ba_Image2_017-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf0ab78adccbd83b2838_Image2_018.webp",
@@ -852,7 +972,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf0ab78adccbd83b2838_Image2_018-og.jpg"
+     "og": "673bbf0ab78adccbd83b2838_Image2_018-og.jpg",
+     "full": "673bbf0ab78adccbd83b2838_Image2_018-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf06eeaca39b59efd1f0_Image2_019.webp",
@@ -863,7 +985,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf06eeaca39b59efd1f0_Image2_019-og.jpg"
+     "og": "673bbf06eeaca39b59efd1f0_Image2_019-og.jpg",
+     "full": "673bbf06eeaca39b59efd1f0_Image2_019-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf05d092c27300025afb_Image2.webp",
@@ -874,7 +998,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf05d092c27300025afb_Image2-og.jpg"
+     "og": "673bbf05d092c27300025afb_Image2-og.jpg",
+     "full": "673bbf05d092c27300025afb_Image2-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf05d15c21428d2e6706_Image2_020.webp",
@@ -885,7 +1011,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf05d15c21428d2e6706_Image2_020-og.jpg"
+     "og": "673bbf05d15c21428d2e6706_Image2_020-og.jpg",
+     "full": "673bbf05d15c21428d2e6706_Image2_020-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf0a7d7d92d0f12f6af2_Image2_022.webp",
@@ -897,7 +1025,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf0a7d7d92d0f12f6af2_Image2_022-og.jpg"
+     "og": "673bbf0a7d7d92d0f12f6af2_Image2_022-og.jpg",
+     "full": "673bbf0a7d7d92d0f12f6af2_Image2_022-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf066685a101ebb6908c_Image2_024.webp",
@@ -909,7 +1039,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf066685a101ebb6908c_Image2_024-og.jpg"
+     "og": "673bbf066685a101ebb6908c_Image2_024-og.jpg",
+     "full": "673bbf066685a101ebb6908c_Image2_024-full.webp",
+     "wm": true
     },
     {
      "file": "673bbf068bcb205827a5fe75_Image2_023.webp",
@@ -921,7 +1053,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf068bcb205827a5fe75_Image2_023-og.jpg"
+     "og": "673bbf068bcb205827a5fe75_Image2_023-og.jpg",
+     "full": "673bbf068bcb205827a5fe75_Image2_023-full.webp",
+     "wm": true
     }
    ],
    "location": "Ulcinj, Montenegro",
@@ -951,7 +1085,9 @@
     ],
     "w": 1600,
     "h": 900,
-    "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
+    "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg",
+    "full": "6732094d9b97847ee720449e_IMG-20241110-WA0010-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
@@ -962,7 +1098,9 @@
     ],
     "w": 1600,
     "h": 900,
-    "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
+    "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg",
+    "full": "6732094d9b97847ee720449e_IMG-20241110-WA0010-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
@@ -973,7 +1111,9 @@
     ],
     "w": 1600,
     "h": 900,
-    "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
+    "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg",
+    "full": "6732094d9b97847ee720449e_IMG-20241110-WA0010-full.webp",
+    "wm": true
    },
    "description": "<p>A compact apartment shaped by a warm, restrained palette of oak, sand and deep navy. The living room, dining area and kitchen share one open space, while built-in joinery, a study niche and a bedroom with concealed storage keep the plan efficient.</p><p>Soft daylight, layered lighting and a few sculptural pieces give the interior calm and character.</p>",
    "gallery": [
@@ -986,7 +1126,9 @@
      ],
      "w": 1600,
      "h": 900,
-     "og": "67320986257506d26ea3aba9_IMG-20241110-WA0007-og.jpg"
+     "og": "67320986257506d26ea3aba9_IMG-20241110-WA0007-og.jpg",
+     "full": "67320986257506d26ea3aba9_IMG-20241110-WA0007-full.webp",
+     "wm": true
     },
     {
      "file": "673209826072b2caae86bc95_IMG-20241110-WA0017.webp",
@@ -997,7 +1139,9 @@
      ],
      "w": 1600,
      "h": 900,
-     "og": "673209826072b2caae86bc95_IMG-20241110-WA0017-og.jpg"
+     "og": "673209826072b2caae86bc95_IMG-20241110-WA0017-og.jpg",
+     "full": "673209826072b2caae86bc95_IMG-20241110-WA0017-full.webp",
+     "wm": true
     },
     {
      "file": "6732094d9b97847ee720449e_IMG-20241110-WA0010.webp",
@@ -1008,7 +1152,9 @@
      ],
      "w": 1600,
      "h": 900,
-     "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg"
+     "og": "6732094d9b97847ee720449e_IMG-20241110-WA0010-og.jpg",
+     "full": "6732094d9b97847ee720449e_IMG-20241110-WA0010-full.webp",
+     "wm": true
     },
     {
      "file": "6732098379a22c13b8f576b6_IMG-20241110-WA0013.webp",
@@ -1019,7 +1165,9 @@
      ],
      "w": 1600,
      "h": 900,
-     "og": "6732098379a22c13b8f576b6_IMG-20241110-WA0013-og.jpg"
+     "og": "6732098379a22c13b8f576b6_IMG-20241110-WA0013-og.jpg",
+     "full": "6732098379a22c13b8f576b6_IMG-20241110-WA0013-full.webp",
+     "wm": true
     },
     {
      "file": "673209889b97847ee7209619_IMG-20241110-WA0003.webp",
@@ -1029,7 +1177,9 @@
      ],
      "w": 1278,
      "h": 1600,
-     "og": "673209889b97847ee7209619_IMG-20241110-WA0003-og.jpg"
+     "og": "673209889b97847ee7209619_IMG-20241110-WA0003-og.jpg",
+     "full": "673209889b97847ee7209619_IMG-20241110-WA0003-full.webp",
+     "wm": true
     },
     {
      "file": "673209839d61b7074e98f4b9_IMG-20241110-WA0012.webp",
@@ -1039,7 +1189,9 @@
      ],
      "w": 1278,
      "h": 1600,
-     "og": "673209839d61b7074e98f4b9_IMG-20241110-WA0012-og.jpg"
+     "og": "673209839d61b7074e98f4b9_IMG-20241110-WA0012-og.jpg",
+     "full": "673209839d61b7074e98f4b9_IMG-20241110-WA0012-full.webp",
+     "wm": true
     },
     {
      "file": "673209875ed161e1fce2f8f8_IMG-20241110-WA0005.webp",
@@ -1049,7 +1201,9 @@
      ],
      "w": 1278,
      "h": 1600,
-     "og": "673209875ed161e1fce2f8f8_IMG-20241110-WA0005-og.jpg"
+     "og": "673209875ed161e1fce2f8f8_IMG-20241110-WA0005-og.jpg",
+     "full": "673209875ed161e1fce2f8f8_IMG-20241110-WA0005-full.webp",
+     "wm": true
     },
     {
      "file": "67320982827b528552dc1f6b_IMG-20241110-WA0002.webp",
@@ -1060,7 +1214,9 @@
      ],
      "w": 1600,
      "h": 900,
-     "og": "67320982827b528552dc1f6b_IMG-20241110-WA0002-og.jpg"
+     "og": "67320982827b528552dc1f6b_IMG-20241110-WA0002-og.jpg",
+     "full": "67320982827b528552dc1f6b_IMG-20241110-WA0002-full.webp",
+     "wm": true
     },
     {
      "file": "67320988691c6ea66829eadf_IMG-20241110-WA0004.webp",
@@ -1070,7 +1226,9 @@
      ],
      "w": 1278,
      "h": 1600,
-     "og": "67320988691c6ea66829eadf_IMG-20241110-WA0004-og.jpg"
+     "og": "67320988691c6ea66829eadf_IMG-20241110-WA0004-og.jpg",
+     "full": "67320988691c6ea66829eadf_IMG-20241110-WA0004-full.webp",
+     "wm": true
     },
     {
      "file": "67320987efccb47c02afc71b_IMG-20241110-WA0006.webp",
@@ -1081,7 +1239,9 @@
      ],
      "w": 1600,
      "h": 900,
-     "og": "67320987efccb47c02afc71b_IMG-20241110-WA0006-og.jpg"
+     "og": "67320987efccb47c02afc71b_IMG-20241110-WA0006-og.jpg",
+     "full": "67320987efccb47c02afc71b_IMG-20241110-WA0006-full.webp",
+     "wm": true
     },
     {
      "file": "6731d9abba0150026c36c7a3_IMG-20241110-WA0008.webp",
@@ -1092,7 +1252,9 @@
      ],
      "w": 1278,
      "h": 1600,
-     "og": "6731d9abba0150026c36c7a3_IMG-20241110-WA0008-og.jpg"
+     "og": "6731d9abba0150026c36c7a3_IMG-20241110-WA0008-og.jpg",
+     "full": "6731d9abba0150026c36c7a3_IMG-20241110-WA0008-full.webp",
+     "wm": true
     },
     {
      "file": "67320986366c9a47970f135d_IMG-20241110-WA0009.webp",
@@ -1103,7 +1265,9 @@
      ],
      "w": 1600,
      "h": 900,
-     "og": "67320986366c9a47970f135d_IMG-20241110-WA0009-og.jpg"
+     "og": "67320986366c9a47970f135d_IMG-20241110-WA0009-og.jpg",
+     "full": "67320986366c9a47970f135d_IMG-20241110-WA0009-full.webp",
+     "wm": true
     },
     {
      "file": "67320984f7afe0c08ebb51c8_IMG-20241110-WA0011.webp",
@@ -1113,7 +1277,9 @@
      ],
      "w": 1278,
      "h": 1600,
-     "og": "67320984f7afe0c08ebb51c8_IMG-20241110-WA0011-og.jpg"
+     "og": "67320984f7afe0c08ebb51c8_IMG-20241110-WA0011-og.jpg",
+     "full": "67320984f7afe0c08ebb51c8_IMG-20241110-WA0011-full.webp",
+     "wm": true
     },
     {
      "file": "67320982691c6ea66829e65a_IMG-20241110-WA0014.webp",
@@ -1123,7 +1289,9 @@
      ],
      "w": 1278,
      "h": 1600,
-     "og": "67320982691c6ea66829e65a_IMG-20241110-WA0014-og.jpg"
+     "og": "67320982691c6ea66829e65a_IMG-20241110-WA0014-og.jpg",
+     "full": "67320982691c6ea66829e65a_IMG-20241110-WA0014-full.webp",
+     "wm": true
     },
     {
      "file": "673209820c9f19a0311498ce_IMG-20241110-WA0015.webp",
@@ -1134,7 +1302,9 @@
      ],
      "w": 1600,
      "h": 900,
-     "og": "673209820c9f19a0311498ce_IMG-20241110-WA0015-og.jpg"
+     "og": "673209820c9f19a0311498ce_IMG-20241110-WA0015-og.jpg",
+     "full": "673209820c9f19a0311498ce_IMG-20241110-WA0015-full.webp",
+     "wm": true
     },
     {
      "file": "673209829b97847ee7209141_IMG-20241110-WA0016.webp",
@@ -1144,7 +1314,9 @@
      ],
      "w": 1278,
      "h": 1600,
-     "og": "673209829b97847ee7209141_IMG-20241110-WA0016-og.jpg"
+     "og": "673209829b97847ee7209141_IMG-20241110-WA0016-og.jpg",
+     "full": "673209829b97847ee7209141_IMG-20241110-WA0016-full.webp",
+     "wm": true
     },
     {
      "file": "673209820ebf7cf7dfd8953f_IMG-20241110-WA0001.webp",
@@ -1154,7 +1326,9 @@
      ],
      "w": 1278,
      "h": 1600,
-     "og": "673209820ebf7cf7dfd8953f_IMG-20241110-WA0001-og.jpg"
+     "og": "673209820ebf7cf7dfd8953f_IMG-20241110-WA0001-og.jpg",
+     "full": "673209820ebf7cf7dfd8953f_IMG-20241110-WA0001-full.webp",
+     "wm": true
     }
    ],
    "type": "Residential interior",
@@ -1183,7 +1357,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
+    "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg",
+    "full": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
@@ -1195,7 +1371,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
+    "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg",
+    "full": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced.webp",
@@ -1207,7 +1385,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
+    "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg",
+    "full": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-full.webp",
+    "wm": true
    },
    "description": "<p>An interior for a private clinic on Zlatibor, designed as a calm, hotel-like space rather than a clinical one. The reception and waiting lounge combine soft upholstered seating, walnut tables and plants with a large botanical wall finish behind glass, so the first impression is warmth instead of corridors and white tiles.</p><p>The treatment rooms continue the same palette of warm stone-coloured surfaces, timber and brass. Built-in counters with brass basins, concealed storage and soft pendant lighting keep the rooms practical for daily work, while the washrooms get a stronger character with dark marble and patterned wallpaper.</p>",
    "gallery": [
@@ -1221,7 +1401,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg"
+     "og": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-og.jpg",
+     "full": "672a2aa7ca9c7b61514738e5_Image1_008-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aadc30557cce8af0372_Image1_010-enhanced.webp",
@@ -1233,7 +1415,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2aadc30557cce8af0372_Image1_010-enhanced-og.jpg"
+     "og": "672a2aadc30557cce8af0372_Image1_010-enhanced-og.jpg",
+     "full": "672a2aadc30557cce8af0372_Image1_010-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aae14c5b939c3fea0e7_Image1_011-enhanced.webp",
@@ -1245,7 +1429,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2aae14c5b939c3fea0e7_Image1_011-enhanced-og.jpg"
+     "og": "672a2aae14c5b939c3fea0e7_Image1_011-enhanced-og.jpg",
+     "full": "672a2aae14c5b939c3fea0e7_Image1_011-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2ab28cae43227dd31df7_Image1_012-enhanced.webp",
@@ -1257,7 +1443,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2ab28cae43227dd31df7_Image1_012-enhanced-og.jpg"
+     "og": "672a2ab28cae43227dd31df7_Image1_012-enhanced-og.jpg",
+     "full": "672a2ab28cae43227dd31df7_Image1_012-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2ab1b2eeeaa52ca98aa9_Image1_013-enhanced.webp",
@@ -1269,7 +1457,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2ab1b2eeeaa52ca98aa9_Image1_013-enhanced-og.jpg"
+     "og": "672a2ab1b2eeeaa52ca98aa9_Image1_013-enhanced-og.jpg",
+     "full": "672a2ab1b2eeeaa52ca98aa9_Image1_013-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aa6d622e1402e61d574_Image1_018-enhanced.webp",
@@ -1279,7 +1469,9 @@
      ],
      "w": 1080,
      "h": 1313,
-     "og": "672a2aa6d622e1402e61d574_Image1_018-enhanced-og.jpg"
+     "og": "672a2aa6d622e1402e61d574_Image1_018-enhanced-og.jpg",
+     "full": "672a2aa6d622e1402e61d574_Image1_018-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2ab1bb9a1e7d0b4afae5_Image1_019-enhanced.webp",
@@ -1291,7 +1483,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2ab1bb9a1e7d0b4afae5_Image1_019-enhanced-og.jpg"
+     "og": "672a2ab1bb9a1e7d0b4afae5_Image1_019-enhanced-og.jpg",
+     "full": "672a2ab1bb9a1e7d0b4afae5_Image1_019-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aa4ec2eaccd6c381a1c_Image1_020-enhanced.webp",
@@ -1301,7 +1495,9 @@
      ],
      "w": 1080,
      "h": 1313,
-     "og": "672a2aa4ec2eaccd6c381a1c_Image1_020-enhanced-og.jpg"
+     "og": "672a2aa4ec2eaccd6c381a1c_Image1_020-enhanced-og.jpg",
+     "full": "672a2aa4ec2eaccd6c381a1c_Image1_020-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aac54dc53a27425be32_Image1_021-enhanced.webp",
@@ -1313,7 +1509,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2aac54dc53a27425be32_Image1_021-enhanced-og.jpg"
+     "og": "672a2aac54dc53a27425be32_Image1_021-enhanced-og.jpg",
+     "full": "672a2aac54dc53a27425be32_Image1_021-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aabc29d775ce6bbc206_Image1_023-enhanced.webp",
@@ -1325,7 +1523,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2aabc29d775ce6bbc206_Image1_023-enhanced-og.jpg"
+     "og": "672a2aabc29d775ce6bbc206_Image1_023-enhanced-og.jpg",
+     "full": "672a2aabc29d775ce6bbc206_Image1_023-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aa31ae37cfc3662fbc9_Image1_024-enhanced.webp",
@@ -1337,7 +1537,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2aa31ae37cfc3662fbc9_Image1_024-enhanced-og.jpg"
+     "og": "672a2aa31ae37cfc3662fbc9_Image1_024-enhanced-og.jpg",
+     "full": "672a2aa31ae37cfc3662fbc9_Image1_024-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aa58961df28a32303e6_Image1_030-enhanced.webp",
@@ -1347,7 +1549,9 @@
      ],
      "w": 1080,
      "h": 1313,
-     "og": "672a2aa58961df28a32303e6_Image1_030-enhanced-og.jpg"
+     "og": "672a2aa58961df28a32303e6_Image1_030-enhanced-og.jpg",
+     "full": "672a2aa58961df28a32303e6_Image1_030-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aadbb6094c177ee07f7_Image1_032-enhanced.webp",
@@ -1359,7 +1563,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2aadbb6094c177ee07f7_Image1_032-enhanced-og.jpg"
+     "og": "672a2aadbb6094c177ee07f7_Image1_032-enhanced-og.jpg",
+     "full": "672a2aadbb6094c177ee07f7_Image1_032-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aad4eedee8e7d375681_Image1_050-enhanced.webp",
@@ -1371,7 +1577,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2aad4eedee8e7d375681_Image1_050-enhanced-og.jpg"
+     "og": "672a2aad4eedee8e7d375681_Image1_050-enhanced-og.jpg",
+     "full": "672a2aad4eedee8e7d375681_Image1_050-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aaa740563b5bec77923_Image1_055-enhanced.webp",
@@ -1381,7 +1589,9 @@
      ],
      "w": 1080,
      "h": 1313,
-     "og": "672a2aaa740563b5bec77923_Image1_055-enhanced-og.jpg"
+     "og": "672a2aaa740563b5bec77923_Image1_055-enhanced-og.jpg",
+     "full": "672a2aaa740563b5bec77923_Image1_055-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aa988c83c21cb1cb036_Image1_058-enhanced.webp",
@@ -1391,7 +1601,9 @@
      ],
      "w": 1080,
      "h": 1313,
-     "og": "672a2aa988c83c21cb1cb036_Image1_058-enhanced-og.jpg"
+     "og": "672a2aa988c83c21cb1cb036_Image1_058-enhanced-og.jpg",
+     "full": "672a2aa988c83c21cb1cb036_Image1_058-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aa7b26999ac92d92c6f_Image1_064-enhanced.webp",
@@ -1401,7 +1613,9 @@
      ],
      "w": 1080,
      "h": 1313,
-     "og": "672a2aa7b26999ac92d92c6f_Image1_064-enhanced-og.jpg"
+     "og": "672a2aa7b26999ac92d92c6f_Image1_064-enhanced-og.jpg",
+     "full": "672a2aa7b26999ac92d92c6f_Image1_064-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aa3f02c076b063ce677_Image1_067-enhanced.webp",
@@ -1411,7 +1625,9 @@
      ],
      "w": 1080,
      "h": 1313,
-     "og": "672a2aa3f02c076b063ce677_Image1_067-enhanced-og.jpg"
+     "og": "672a2aa3f02c076b063ce677_Image1_067-enhanced-og.jpg",
+     "full": "672a2aa3f02c076b063ce677_Image1_067-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aa75bfa27b804689e8f_Image1_075-enhanced.webp",
@@ -1421,7 +1637,9 @@
      ],
      "w": 1080,
      "h": 1313,
-     "og": "672a2aa75bfa27b804689e8f_Image1_075-enhanced-og.jpg"
+     "og": "672a2aa75bfa27b804689e8f_Image1_075-enhanced-og.jpg",
+     "full": "672a2aa75bfa27b804689e8f_Image1_075-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aa5b26999ac92d9281a_r12_20(1)-enhanced.webp",
@@ -1431,7 +1649,9 @@
      ],
      "w": 1080,
      "h": 1313,
-     "og": "672a2aa5b26999ac92d9281a_r12_20(1)-enhanced-og.jpg"
+     "og": "672a2aa5b26999ac92d9281a_r12_20(1)-enhanced-og.jpg",
+     "full": "672a2aa5b26999ac92d9281a_r12_20(1)-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2ab1fd23da6cc6f19f04_r12_20(2)-enhanced.webp",
@@ -1443,7 +1663,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2ab1fd23da6cc6f19f04_r12_20(2)-enhanced-og.jpg"
+     "og": "672a2ab1fd23da6cc6f19f04_r12_20(2)-enhanced-og.jpg",
+     "full": "672a2ab1fd23da6cc6f19f04_r12_20(2)-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aae7296ccb6990dc2b0_r12_20(3)-enhanced.webp",
@@ -1455,7 +1677,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2aae7296ccb6990dc2b0_r12_20(3)-enhanced-og.jpg"
+     "og": "672a2aae7296ccb6990dc2b0_r12_20(3)-enhanced-og.jpg",
+     "full": "672a2aae7296ccb6990dc2b0_r12_20(3)-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2aa45bfa27b804689c64_r12_20(4)-enhanced.webp",
@@ -1467,7 +1691,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2aa45bfa27b804689c64_r12_20(4)-enhanced-og.jpg"
+     "og": "672a2aa45bfa27b804689c64_r12_20(4)-enhanced-og.jpg",
+     "full": "672a2aa45bfa27b804689c64_r12_20(4)-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2ab314c5b939c3fea775_r12_20(5)-enhanced.webp",
@@ -1479,7 +1705,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2ab314c5b939c3fea775_r12_20(5)-enhanced-og.jpg"
+     "og": "672a2ab314c5b939c3fea775_r12_20(5)-enhanced-og.jpg",
+     "full": "672a2ab314c5b939c3fea775_r12_20(5)-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2ab176f5562ed0c62668_r12_20(6)-enhanced.webp",
@@ -1491,7 +1719,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2ab176f5562ed0c62668_r12_20(6)-enhanced-og.jpg"
+     "og": "672a2ab176f5562ed0c62668_r12_20(6)-enhanced-og.jpg",
+     "full": "672a2ab176f5562ed0c62668_r12_20(6)-enhanced-full.webp",
+     "wm": true
     }
    ],
    "location": "Zlatibor, Serbia",
@@ -1522,7 +1752,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
+    "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg",
+    "full": "672a28def17174516d9a7dcb_Image1_001-enhanced-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
@@ -1534,7 +1766,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
+    "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg",
+    "full": "672a28def17174516d9a7dcb_Image1_001-enhanced-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
@@ -1546,7 +1780,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
+    "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg",
+    "full": "672a28def17174516d9a7dcb_Image1_001-enhanced-full.webp",
+    "wm": true
    },
    "description": "<p>Caffe Spass occupies a double-height space on Kralja Petra Street in Belgrade. We kept the raw structure of steel columns, exposed concrete and coffered ceiling, and set against it a bold palette of red, black and white, with a mezzanine overlooking the main floor.</p><p>Patterned tiles, a graphic bar counter, sculptural figures and line lighting make a lively room with a strong identity.</p>",
    "gallery": [
@@ -1559,7 +1795,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2910745565a8de07f66e_Image1_005-enhanced-og.jpg"
+     "og": "672a2910745565a8de07f66e_Image1_005-enhanced-og.jpg",
+     "full": "672a2910745565a8de07f66e_Image1_005-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a290f76f5562ed0c4b09a_Image1_004-enhanced.webp",
@@ -1570,7 +1808,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a290f76f5562ed0c4b09a_Image1_004-enhanced-og.jpg"
+     "og": "672a290f76f5562ed0c4b09a_Image1_004-enhanced-og.jpg",
+     "full": "672a290f76f5562ed0c4b09a_Image1_004-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a290fe695b53e94f87631_Image1_007-enhanced.webp",
@@ -1581,7 +1821,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a290fe695b53e94f87631_Image1_007-enhanced-og.jpg"
+     "og": "672a290fe695b53e94f87631_Image1_007-enhanced-og.jpg",
+     "full": "672a290fe695b53e94f87631_Image1_007-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a290e42eae8e361c7966e_Image1-enhanced 4.webp",
@@ -1593,7 +1835,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a290e42eae8e361c7966e_Image1-enhanced 4-og.jpg"
+     "og": "672a290e42eae8e361c7966e_Image1-enhanced 4-og.jpg",
+     "full": "672a290e42eae8e361c7966e_Image1-enhanced 4-full.webp",
+     "wm": true
     },
     {
      "file": "672a290f9c515a3863cfa437_Image1_002-enhanced.webp",
@@ -1604,7 +1848,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a290f9c515a3863cfa437_Image1_002-enhanced-og.jpg"
+     "og": "672a290f9c515a3863cfa437_Image1_002-enhanced-og.jpg",
+     "full": "672a290f9c515a3863cfa437_Image1_002-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a28def17174516d9a7dcb_Image1_001-enhanced.webp",
@@ -1616,7 +1862,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg"
+     "og": "672a28def17174516d9a7dcb_Image1_001-enhanced-og.jpg",
+     "full": "672a28def17174516d9a7dcb_Image1_001-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a290f31e6ff5448dba86b_Image1_012-enhanced.webp",
@@ -1628,7 +1876,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a290f31e6ff5448dba86b_Image1_012-enhanced-og.jpg"
+     "og": "672a290f31e6ff5448dba86b_Image1_012-enhanced-og.jpg",
+     "full": "672a290f31e6ff5448dba86b_Image1_012-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a290fc8170599c0545ed5_Image1-enhanced 2.webp",
@@ -1640,14 +1890,18 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a290fc8170599c0545ed5_Image1-enhanced 2-og.jpg"
+     "og": "672a290fc8170599c0545ed5_Image1-enhanced 2-og.jpg",
+     "full": "672a290fc8170599c0545ed5_Image1-enhanced 2-full.webp",
+     "wm": true
     },
     {
      "file": "672a29121d2e3e498a0ceeab_Image1-enhanced 3.webp",
      "widths": [],
      "w": 1920,
      "h": 1080,
-     "og": "672a29121d2e3e498a0ceeab_Image1-enhanced 3-og.jpg"
+     "og": "672a29121d2e3e498a0ceeab_Image1-enhanced 3-og.jpg",
+     "full": "672a29121d2e3e498a0ceeab_Image1-enhanced 3-full.webp",
+     "wm": true
     },
     {
      "file": "672a290ea57dee135c3252d8_Image1-enhanced.webp",
@@ -1659,7 +1913,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a290ea57dee135c3252d8_Image1-enhanced-og.jpg"
+     "og": "672a290ea57dee135c3252d8_Image1-enhanced-og.jpg",
+     "full": "672a290ea57dee135c3252d8_Image1-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a290e6fd8345c3412c8f4_Image1-enhanced 5.webp",
@@ -1671,7 +1927,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a290e6fd8345c3412c8f4_Image1-enhanced 5-og.jpg"
+     "og": "672a290e6fd8345c3412c8f4_Image1-enhanced 5-og.jpg",
+     "full": "672a290e6fd8345c3412c8f4_Image1-enhanced 5-full.webp",
+     "wm": true
     }
    ],
    "location": "Belgrade, Serbia",
@@ -1701,7 +1959,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
+    "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg",
+    "full": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
@@ -1712,7 +1972,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
+    "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg",
+    "full": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
@@ -1723,7 +1985,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
+    "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg",
+    "full": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-full.webp",
+    "wm": true
    },
    "description": "<p>This Belgrade apartment takes a light, warm direction. Textured plaster walls, light oak and a long marble bench define the living room, where a fluted timber sliding panel hides the TV and turns the media wall into a bookcase when the screen is off.</p><p>The kitchen with its island sits in a softly lit niche, and the bedroom repeats the plaster and timber palette with a full-height headboard wall. The aim was a quiet, natural interior that is easy to live with every day.</p>",
    "gallery": [
@@ -1736,7 +2000,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2123e35c53ec87556c9d_Dnevna_201_001-enhanced-og.jpg"
+     "og": "672a2123e35c53ec87556c9d_Dnevna_201_001-enhanced-og.jpg",
+     "full": "672a2123e35c53ec87556c9d_Dnevna_201_001-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a21222d1728cc8c7eb1c3_Dnevna_201_002-enhanced.webp",
@@ -1747,7 +2013,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a21222d1728cc8c7eb1c3_Dnevna_201_002-enhanced-og.jpg"
+     "og": "672a21222d1728cc8c7eb1c3_Dnevna_201_002-enhanced-og.jpg",
+     "full": "672a21222d1728cc8c7eb1c3_Dnevna_201_002-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2123e35c53ec87556cb7_Dnevna_201_003-enhanced.webp",
@@ -1758,7 +2026,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2123e35c53ec87556cb7_Dnevna_201_003-enhanced-og.jpg"
+     "og": "672a2123e35c53ec87556cb7_Dnevna_201_003-enhanced-og.jpg",
+     "full": "672a2123e35c53ec87556cb7_Dnevna_201_003-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2123b74c6e7c5868569d_Dnevna_201-enhanced.webp",
@@ -1769,7 +2039,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2123b74c6e7c5868569d_Dnevna_201-enhanced-og.jpg"
+     "og": "672a2123b74c6e7c5868569d_Dnevna_201-enhanced-og.jpg",
+     "full": "672a2123b74c6e7c5868569d_Dnevna_201-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
@@ -1780,7 +2052,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
+     "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg",
+     "full": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a21adce051a8748e0c353_Image1_003-enhanced.webp",
@@ -1791,7 +2065,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a21adce051a8748e0c353_Image1_003-enhanced-og.jpg"
+     "og": "672a21adce051a8748e0c353_Image1_003-enhanced-og.jpg",
+     "full": "672a21adce051a8748e0c353_Image1_003-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced.webp",
@@ -1802,7 +2078,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg"
+     "og": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-og.jpg",
+     "full": "672a210a68a6ee3508aad2bc_Dnevna_201_000-enhanced-full.webp",
+     "wm": true
     }
    ],
    "location": "Belgrade, Serbia",
@@ -1830,7 +2108,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
+    "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg",
+    "full": "672a1fe139bee918ee073bf8_Image1_001-enhanced-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
@@ -1840,7 +2120,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
+    "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg",
+    "full": "672a1fe139bee918ee073bf8_Image1_001-enhanced-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
@@ -1850,7 +2132,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
+    "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg",
+    "full": "672a1fe139bee918ee073bf8_Image1_001-enhanced-full.webp",
+    "wm": true
    },
    "description": "<p>A compact Belgrade apartment designed around one open living space. The living room, kitchen and dining bar are tied together by continuous oak surfaces and a dark graphite palette, with a slim metal shelving unit that separates the zones without closing them off.</p><p>Storage is built into wall-to-wall joinery, the kitchen sits in a timber niche with a breakfast bar, and the bedroom keeps the same calm tones with an upholstered headboard wall. The apartment feels larger than its footprint because every piece of storage has its place in the joinery.</p>",
    "gallery": [
@@ -1862,7 +2146,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
+     "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg",
+     "full": "672a1fe139bee918ee073bf8_Image1_001-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2006e19eca958f820a5f_Image1_010-enhanced.webp",
@@ -1873,7 +2159,9 @@
      ],
      "w": 1920,
      "h": 919,
-     "og": "672a2006e19eca958f820a5f_Image1_010-enhanced-og.jpg"
+     "og": "672a2006e19eca958f820a5f_Image1_010-enhanced-og.jpg",
+     "full": "672a2006e19eca958f820a5f_Image1_010-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2005ce051a8748df6603_Image1-enhanced.webp",
@@ -1883,7 +2171,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2005ce051a8748df6603_Image1-enhanced-og.jpg"
+     "og": "672a2005ce051a8748df6603_Image1-enhanced-og.jpg",
+     "full": "672a2005ce051a8748df6603_Image1-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a200627ff3cb16ca917bc_Image1_000-enhanced.webp",
@@ -1893,7 +2183,9 @@
      ],
      "w": 1251,
      "h": 1080,
-     "og": "672a200627ff3cb16ca917bc_Image1_000-enhanced-og.jpg"
+     "og": "672a200627ff3cb16ca917bc_Image1_000-enhanced-og.jpg",
+     "full": "672a200627ff3cb16ca917bc_Image1_000-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2009dd600f5a3dfd4a00_Image1_003-enhanced.webp",
@@ -1904,7 +2196,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a2009dd600f5a3dfd4a00_Image1_003-enhanced-og.jpg"
+     "og": "672a2009dd600f5a3dfd4a00_Image1_003-enhanced-og.jpg",
+     "full": "672a2009dd600f5a3dfd4a00_Image1_003-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a20062d1728cc8c7d7618_Image1_006-enhanced.webp",
@@ -1915,7 +2209,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a20062d1728cc8c7d7618_Image1_006-enhanced-og.jpg"
+     "og": "672a20062d1728cc8c7d7618_Image1_006-enhanced-og.jpg",
+     "full": "672a20062d1728cc8c7d7618_Image1_006-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a200940553a7859c8ab30_Image1_008-enhanced.webp",
@@ -1926,7 +2222,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a200940553a7859c8ab30_Image1_008-enhanced-og.jpg"
+     "og": "672a200940553a7859c8ab30_Image1_008-enhanced-og.jpg",
+     "full": "672a200940553a7859c8ab30_Image1_008-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a200912e179e675eac275_Image1_013-enhanced.webp",
@@ -1937,7 +2235,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a200912e179e675eac275_Image1_013-enhanced-og.jpg"
+     "og": "672a200912e179e675eac275_Image1_013-enhanced-og.jpg",
+     "full": "672a200912e179e675eac275_Image1_013-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a2005f7eb8d2c561c5642_Image1_014-enhanced.webp",
@@ -1946,7 +2246,9 @@
      ],
      "w": 1251,
      "h": 1080,
-     "og": "672a2005f7eb8d2c561c5642_Image1_014-enhanced-og.jpg"
+     "og": "672a2005f7eb8d2c561c5642_Image1_014-enhanced-og.jpg",
+     "full": "672a2005f7eb8d2c561c5642_Image1_014-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1fe139bee918ee073bf8_Image1_001-enhanced.webp",
@@ -1956,7 +2258,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg"
+     "og": "672a1fe139bee918ee073bf8_Image1_001-enhanced-og.jpg",
+     "full": "672a1fe139bee918ee073bf8_Image1_001-enhanced-full.webp",
+     "wm": true
     }
    ],
    "location": "Belgrade, Serbia",
@@ -1987,7 +2291,9 @@
     ],
     "w": 1754,
     "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg"
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
+    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
@@ -1999,7 +2305,9 @@
     ],
     "w": 1754,
     "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg"
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
+    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
@@ -2011,7 +2319,9 @@
     ],
     "w": 1754,
     "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg"
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
+    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
+    "wm": true
    },
    "description": "<p>A single-storey family house in a rural setting, made of two volumes in the shape of the traditional gabled house. The white rendered wing holds the private rooms, while the dark timber-clad wing holds the living area and opens to a large covered terrace under a deep gable frame lined with wood.</p><p>The two wings meet at a stone-clad entrance, which separates the day and night zones and frames a small courtyard. Simple forms and natural materials make the house feel at home in the landscape while giving it a clearly contemporary character.</p>",
    "gallery": [
@@ -2024,7 +2334,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1b66c51068306917e55c_Image5-enhanced (Large)-og.jpg"
+     "og": "672a1b66c51068306917e55c_Image5-enhanced (Large)-og.jpg",
+     "full": "672a1b66c51068306917e55c_Image5-enhanced (Large)-full.webp",
+     "wm": true
     },
     {
      "file": "672a1b668cbb8379eb716617_Image9-enhanced (Large).webp",
@@ -2035,7 +2347,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-og.jpg"
+     "og": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-og.jpg",
+     "full": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-full.webp",
+     "wm": true
     },
     {
      "file": "672a1b6651adb46944e044a7_Image24-enhanced (Large).webp",
@@ -2046,7 +2360,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-og.jpg"
+     "og": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-og.jpg",
+     "full": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-full.webp",
+     "wm": true
     },
     {
      "file": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large).webp",
@@ -2057,7 +2373,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-og.jpg"
+     "og": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-og.jpg",
+     "full": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-full.webp",
+     "wm": true
     },
     {
      "file": "672a1b66d346501810784814_Image6-enhanced (Large).webp",
@@ -2068,7 +2386,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1b66d346501810784814_Image6-enhanced (Large)-og.jpg"
+     "og": "672a1b66d346501810784814_Image6-enhanced (Large)-og.jpg",
+     "full": "672a1b66d346501810784814_Image6-enhanced (Large)-full.webp",
+     "wm": true
     },
     {
      "file": "672a1b67de171f51707390db_Image7-enhanced (Large).webp",
@@ -2080,7 +2400,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1b67de171f51707390db_Image7-enhanced (Large)-og.jpg"
+     "og": "672a1b67de171f51707390db_Image7-enhanced (Large)-og.jpg",
+     "full": "672a1b67de171f51707390db_Image7-enhanced (Large)-full.webp",
+     "wm": true
     },
     {
      "file": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large).webp",
@@ -2091,7 +2413,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-og.jpg"
+     "og": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-og.jpg",
+     "full": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-full.webp",
+     "wm": true
     },
     {
      "file": "672a1b6709da67d01caf7827_Image11-enhanced (Large).webp",
@@ -2102,7 +2426,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-og.jpg"
+     "og": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-og.jpg",
+     "full": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-full.webp",
+     "wm": true
     },
     {
      "file": "672a1b663f1d66fa04335876_Image13-enhanced (Large).webp",
@@ -2113,7 +2439,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-og.jpg"
+     "og": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-og.jpg",
+     "full": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-full.webp",
+     "wm": true
     }
    ],
    "type": "Residential, house",
@@ -2144,7 +2472,9 @@
     ],
     "w": 3840,
     "h": 2160,
-    "og": "67129d698887efb8c3299ca2_Image1-og.jpg"
+    "og": "67129d698887efb8c3299ca2_Image1-og.jpg",
+    "full": "67129d698887efb8c3299ca2_Image1-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "67129d698887efb8c3299ca2_Image1.webp",
@@ -2159,7 +2489,9 @@
     ],
     "w": 3840,
     "h": 2160,
-    "og": "67129d698887efb8c3299ca2_Image1-og.jpg"
+    "og": "67129d698887efb8c3299ca2_Image1-og.jpg",
+    "full": "67129d698887efb8c3299ca2_Image1-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "67129d698887efb8c3299ca2_Image1.webp",
@@ -2174,7 +2506,9 @@
     ],
     "w": 3840,
     "h": 2160,
-    "og": "67129d698887efb8c3299ca2_Image1-og.jpg"
+    "og": "67129d698887efb8c3299ca2_Image1-og.jpg",
+    "full": "67129d698887efb8c3299ca2_Image1-full.webp",
+    "wm": true
    },
    "description": "<p>A refined apartment in Belgrade Waterfront, designed in a quiet palette of dark walnut, white and stone. Living, dining and kitchen are one open space, anchored by a marble-topped island and a soft modular sofa.</p><p>Fluted and arched cabinetry, recessed lighting and carefully chosen objects add depth and a sense of calm.</p>",
    "gallery": [
@@ -2187,7 +2521,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e426cf8b188f2e1fe27_Image1_000-enhanced-og.jpg"
+     "og": "672a1e426cf8b188f2e1fe27_Image1_000-enhanced-og.jpg",
+     "full": "672a1e426cf8b188f2e1fe27_Image1_000-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e409a80317fd64d731a_Image1_004-enhanced.webp",
@@ -2198,7 +2534,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e409a80317fd64d731a_Image1_004-enhanced-og.jpg"
+     "og": "672a1e409a80317fd64d731a_Image1_004-enhanced-og.jpg",
+     "full": "672a1e409a80317fd64d731a_Image1_004-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e3ec29b0c642b1c4bf2_Image1_005-enhanced.webp",
@@ -2209,7 +2547,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e3ec29b0c642b1c4bf2_Image1_005-enhanced-og.jpg"
+     "og": "672a1e3ec29b0c642b1c4bf2_Image1_005-enhanced-og.jpg",
+     "full": "672a1e3ec29b0c642b1c4bf2_Image1_005-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e406cf8b188f2e1eb0a_Image1_006-enhanced.webp",
@@ -2220,7 +2560,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e406cf8b188f2e1eb0a_Image1_006-enhanced-og.jpg"
+     "og": "672a1e406cf8b188f2e1eb0a_Image1_006-enhanced-og.jpg",
+     "full": "672a1e406cf8b188f2e1eb0a_Image1_006-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e42c3b26f9f1c6f4412_Image1_002-enhanced.webp",
@@ -2231,7 +2573,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e42c3b26f9f1c6f4412_Image1_002-enhanced-og.jpg"
+     "og": "672a1e42c3b26f9f1c6f4412_Image1_002-enhanced-og.jpg",
+     "full": "672a1e42c3b26f9f1c6f4412_Image1_002-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e44d6bf7b4c22296681_Image1_019-enhanced.webp",
@@ -2242,7 +2586,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e44d6bf7b4c22296681_Image1_019-enhanced-og.jpg"
+     "og": "672a1e44d6bf7b4c22296681_Image1_019-enhanced-og.jpg",
+     "full": "672a1e44d6bf7b4c22296681_Image1_019-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e42c29b0c642b1c601f_Image1_001-enhanced.webp",
@@ -2253,7 +2599,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e42c29b0c642b1c601f_Image1_001-enhanced-og.jpg"
+     "og": "672a1e42c29b0c642b1c601f_Image1_001-enhanced-og.jpg",
+     "full": "672a1e42c29b0c642b1c601f_Image1_001-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e40ca6dc409901887af_Image1_003-enhanced.webp",
@@ -2264,7 +2612,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e40ca6dc409901887af_Image1_003-enhanced-og.jpg"
+     "og": "672a1e40ca6dc409901887af_Image1_003-enhanced-og.jpg",
+     "full": "672a1e40ca6dc409901887af_Image1_003-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e448f20309ec67ade6e_Image1_007-enhanced.webp",
@@ -2275,7 +2625,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e448f20309ec67ade6e_Image1_007-enhanced-og.jpg"
+     "og": "672a1e448f20309ec67ade6e_Image1_007-enhanced-og.jpg",
+     "full": "672a1e448f20309ec67ade6e_Image1_007-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e4392488c2e4f3f7169_Image1_009-enhanced.webp",
@@ -2286,7 +2638,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e4392488c2e4f3f7169_Image1_009-enhanced-og.jpg"
+     "og": "672a1e4392488c2e4f3f7169_Image1_009-enhanced-og.jpg",
+     "full": "672a1e4392488c2e4f3f7169_Image1_009-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e4317cc39503d6cedf6_Image1_010-enhanced.webp",
@@ -2297,7 +2651,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e4317cc39503d6cedf6_Image1_010-enhanced-og.jpg"
+     "og": "672a1e4317cc39503d6cedf6_Image1_010-enhanced-og.jpg",
+     "full": "672a1e4317cc39503d6cedf6_Image1_010-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e44abbe01352978e387_Image1_012-enhanced.webp",
@@ -2308,7 +2664,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e44abbe01352978e387_Image1_012-enhanced-og.jpg"
+     "og": "672a1e44abbe01352978e387_Image1_012-enhanced-og.jpg",
+     "full": "672a1e44abbe01352978e387_Image1_012-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e42a82c1c4d6d744126_Image1_013-enhanced.webp",
@@ -2319,7 +2677,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e42a82c1c4d6d744126_Image1_013-enhanced-og.jpg"
+     "og": "672a1e42a82c1c4d6d744126_Image1_013-enhanced-og.jpg",
+     "full": "672a1e42a82c1c4d6d744126_Image1_013-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e3e417513f24ae604a3_Image1_014-enhanced.webp",
@@ -2328,7 +2688,9 @@
      ],
      "w": 1080,
      "h": 1080,
-     "og": "672a1e3e417513f24ae604a3_Image1_014-enhanced-og.jpg"
+     "og": "672a1e3e417513f24ae604a3_Image1_014-enhanced-og.jpg",
+     "full": "672a1e3e417513f24ae604a3_Image1_014-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e3f31e6ff5448d138ec_Image1_015-enhanced.webp",
@@ -2339,7 +2701,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e3f31e6ff5448d138ec_Image1_015-enhanced-og.jpg"
+     "og": "672a1e3f31e6ff5448d138ec_Image1_015-enhanced-og.jpg",
+     "full": "672a1e3f31e6ff5448d138ec_Image1_015-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e3f838797df10254bfa_Image1_018-enhanced.webp",
@@ -2350,7 +2714,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e3f838797df10254bfa_Image1_018-enhanced-og.jpg"
+     "og": "672a1e3f838797df10254bfa_Image1_018-enhanced-og.jpg",
+     "full": "672a1e3f838797df10254bfa_Image1_018-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e3e12363155412aec49_Image1_020-enhanced.webp",
@@ -2361,7 +2727,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e3e12363155412aec49_Image1_020-enhanced-og.jpg"
+     "og": "672a1e3e12363155412aec49_Image1_020-enhanced-og.jpg",
+     "full": "672a1e3e12363155412aec49_Image1_020-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e3fb3cd4bc813ce2fd1_Image1_021-enhanced.webp",
@@ -2372,7 +2740,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e3fb3cd4bc813ce2fd1_Image1_021-enhanced-og.jpg"
+     "og": "672a1e3fb3cd4bc813ce2fd1_Image1_021-enhanced-og.jpg",
+     "full": "672a1e3fb3cd4bc813ce2fd1_Image1_021-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e437cd01a39d798af5b_Image1_022-enhanced.webp",
@@ -2383,7 +2753,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e437cd01a39d798af5b_Image1_022-enhanced-og.jpg"
+     "og": "672a1e437cd01a39d798af5b_Image1_022-enhanced-og.jpg",
+     "full": "672a1e437cd01a39d798af5b_Image1_022-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e3f3f1d66fa0435e3f4_Image1_025-enhanced.webp",
@@ -2394,7 +2766,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e3f3f1d66fa0435e3f4_Image1_025-enhanced-og.jpg"
+     "og": "672a1e3f3f1d66fa0435e3f4_Image1_025-enhanced-og.jpg",
+     "full": "672a1e3f3f1d66fa0435e3f4_Image1_025-enhanced-full.webp",
+     "wm": true
     },
     {
      "file": "672a1e42fc59aa701de3e8c9_Image1_024-enhanced.webp",
@@ -2405,7 +2779,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "672a1e42fc59aa701de3e8c9_Image1_024-enhanced-og.jpg"
+     "og": "672a1e42fc59aa701de3e8c9_Image1_024-enhanced-og.jpg",
+     "full": "672a1e42fc59aa701de3e8c9_Image1_024-enhanced-full.webp",
+     "wm": true
     }
    ],
    "location": "Belgrade, Serbia",
@@ -2434,7 +2810,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
+    "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg",
+    "full": "6720c375d5cf9e8b0e34621c_Image1_050-full.webp",
+    "wm": true
    },
    "thumb": {
     "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
@@ -2446,7 +2824,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
+    "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg",
+    "full": "6720c375d5cf9e8b0e34621c_Image1_050-full.webp",
+    "wm": true
    },
    "hero": {
     "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
@@ -2458,7 +2838,9 @@
     ],
     "w": 1920,
     "h": 1080,
-    "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
+    "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg",
+    "full": "6720c375d5cf9e8b0e34621c_Image1_050-full.webp",
+    "wm": true
    },
    "description": "<p>A family apartment in Belgrade that keeps the character of a classic city interior, with herringbone parquet and ceiling rosettes, and pairs it with clean contemporary joinery. The day zone is one generous room: a living area with a piano and a full-height bookcase, a large dining table and a kitchen island in light stone.</p><p>In the night zone, glass partitions in slim black frames separate the bedroom, the dressing area and a small study without losing daylight. The bathrooms add warmth with terracotta joinery, stone-look tiles and black fittings.</p>",
    "gallery": [
@@ -2472,7 +2854,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "6720c3acfb99d123c735eab2_Image1_047-og.jpg"
+     "og": "6720c3acfb99d123c735eab2_Image1_047-og.jpg",
+     "full": "6720c3acfb99d123c735eab2_Image1_047-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3abc712d878f3963091_Image1_048.webp",
@@ -2484,7 +2868,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "6720c3abc712d878f3963091_Image1_048-og.jpg"
+     "og": "6720c3abc712d878f3963091_Image1_048-og.jpg",
+     "full": "6720c3abc712d878f3963091_Image1_048-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ab4294be08dfe21383_Image1_049.webp",
@@ -2496,7 +2882,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "6720c3ab4294be08dfe21383_Image1_049-og.jpg"
+     "og": "6720c3ab4294be08dfe21383_Image1_049-og.jpg",
+     "full": "6720c3ab4294be08dfe21383_Image1_049-full.webp",
+     "wm": true
     },
     {
      "file": "6720c375d5cf9e8b0e34621c_Image1_050.webp",
@@ -2508,7 +2896,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg"
+     "og": "6720c375d5cf9e8b0e34621c_Image1_050-og.jpg",
+     "full": "6720c375d5cf9e8b0e34621c_Image1_050-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ac69c9186180e5c0ae_Image1_051.webp",
@@ -2520,7 +2910,9 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "6720c3ac69c9186180e5c0ae_Image1_051-og.jpg"
+     "og": "6720c3ac69c9186180e5c0ae_Image1_051-og.jpg",
+     "full": "6720c3ac69c9186180e5c0ae_Image1_051-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ae11b64af0231302b0_Image36_008.webp",
@@ -2535,7 +2927,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6720c3ae11b64af0231302b0_Image36_008-og.jpg"
+     "og": "6720c3ae11b64af0231302b0_Image36_008-og.jpg",
+     "full": "6720c3ae11b64af0231302b0_Image36_008-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ac171350f92f948c01_Image36_006.webp",
@@ -2547,7 +2941,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3ac171350f92f948c01_Image36_006-og.jpg"
+     "og": "6720c3ac171350f92f948c01_Image36_006-og.jpg",
+     "full": "6720c3ac171350f92f948c01_Image36_006-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ad11b64af023130211_Image36_010.webp",
@@ -2562,7 +2958,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6720c3ad11b64af023130211_Image36_010-og.jpg"
+     "og": "6720c3ad11b64af023130211_Image36_010-og.jpg",
+     "full": "6720c3ad11b64af023130211_Image36_010-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ae4a89faac47a2ef9a_Image36_007.webp",
@@ -2577,7 +2975,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6720c3ae4a89faac47a2ef9a_Image36_007-og.jpg"
+     "og": "6720c3ae4a89faac47a2ef9a_Image36_007-og.jpg",
+     "full": "6720c3ae4a89faac47a2ef9a_Image36_007-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ade14c2bdee59ae5f2_Image36_009.webp",
@@ -2592,7 +2992,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6720c3ade14c2bdee59ae5f2_Image36_009-og.jpg"
+     "og": "6720c3ade14c2bdee59ae5f2_Image36_009-og.jpg",
+     "full": "6720c3ade14c2bdee59ae5f2_Image36_009-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ac059b2a783c9437b5_Image36_003.webp",
@@ -2604,7 +3006,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3ac059b2a783c9437b5_Image36_003-og.jpg"
+     "og": "6720c3ac059b2a783c9437b5_Image36_003-og.jpg",
+     "full": "6720c3ac059b2a783c9437b5_Image36_003-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ac126f34d76f569513_Image36_004.webp",
@@ -2616,7 +3020,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3ac126f34d76f569513_Image36_004-og.jpg"
+     "og": "6720c3ac126f34d76f569513_Image36_004-og.jpg",
+     "full": "6720c3ac126f34d76f569513_Image36_004-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3acce5f0c2e7d5b3391_Image36_014.webp",
@@ -2628,7 +3034,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3acce5f0c2e7d5b3391_Image36_014-og.jpg"
+     "og": "6720c3acce5f0c2e7d5b3391_Image36_014-og.jpg",
+     "full": "6720c3acce5f0c2e7d5b3391_Image36_014-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ad059b2a783c9438d9_Image36_015.webp",
@@ -2643,7 +3051,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6720c3ad059b2a783c9438d9_Image36_015-og.jpg"
+     "og": "6720c3ad059b2a783c9438d9_Image36_015-og.jpg",
+     "full": "6720c3ad059b2a783c9438d9_Image36_015-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3acd5a192a69d5429c1_Image36_018.webp",
@@ -2655,7 +3065,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3acd5a192a69d5429c1_Image36_018-og.jpg"
+     "og": "6720c3acd5a192a69d5429c1_Image36_018-og.jpg",
+     "full": "6720c3acd5a192a69d5429c1_Image36_018-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ae512a0eb8f2ed2280_Image36_016.webp",
@@ -2670,7 +3082,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6720c3ae512a0eb8f2ed2280_Image36_016-og.jpg"
+     "og": "6720c3ae512a0eb8f2ed2280_Image36_016-og.jpg",
+     "full": "6720c3ae512a0eb8f2ed2280_Image36_016-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ae28c5658a7f71f826_Image36_017.webp",
@@ -2685,7 +3099,9 @@
      ],
      "w": 3840,
      "h": 2160,
-     "og": "6720c3ae28c5658a7f71f826_Image36_017-og.jpg"
+     "og": "6720c3ae28c5658a7f71f826_Image36_017-og.jpg",
+     "full": "6720c3ae28c5658a7f71f826_Image36_017-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ad672e82b6e3ddf6af_Image36_019.webp",
@@ -2697,7 +3113,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3ad672e82b6e3ddf6af_Image36_019-og.jpg"
+     "og": "6720c3ad672e82b6e3ddf6af_Image36_019-og.jpg",
+     "full": "6720c3ad672e82b6e3ddf6af_Image36_019-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3acb066ac2cc6176719_Image36_020.webp",
@@ -2709,7 +3127,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3acb066ac2cc6176719_Image36_020-og.jpg"
+     "og": "6720c3acb066ac2cc6176719_Image36_020-og.jpg",
+     "full": "6720c3acb066ac2cc6176719_Image36_020-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ac6f1f5059b3a246d8_Image36_021.webp",
@@ -2721,7 +3141,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3ac6f1f5059b3a246d8_Image36_021-og.jpg"
+     "og": "6720c3ac6f1f5059b3a246d8_Image36_021-og.jpg",
+     "full": "6720c3ac6f1f5059b3a246d8_Image36_021-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ac69c9186180e5c0e9_Image36_022.webp",
@@ -2733,7 +3155,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3ac69c9186180e5c0e9_Image36_022-og.jpg"
+     "og": "6720c3ac69c9186180e5c0e9_Image36_022-og.jpg",
+     "full": "6720c3ac69c9186180e5c0e9_Image36_022-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3ab999b401b573be37b_Image36_023.webp",
@@ -2745,7 +3169,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3ab999b401b573be37b_Image36_023-og.jpg"
+     "og": "6720c3ab999b401b573be37b_Image36_023-og.jpg",
+     "full": "6720c3ab999b401b573be37b_Image36_023-full.webp",
+     "wm": true
     },
     {
      "file": "6720c3b074fde631ef1036e3_Image36_026.webp",
@@ -2757,7 +3183,9 @@
      ],
      "w": 1728,
      "h": 2160,
-     "og": "6720c3b074fde631ef1036e3_Image36_026-og.jpg"
+     "og": "6720c3b074fde631ef1036e3_Image36_026-og.jpg",
+     "full": "6720c3b074fde631ef1036e3_Image36_026-full.webp",
+     "wm": true
     }
    ],
    "location": "Belgrade, Serbia",

@@ -279,7 +279,9 @@ function gallery(p, lang, depth) {
   return (p.gallery || []).map((g, i) => {
     const ar = g.w && g.h ? ` style="--ar:${g.w} / ${g.h}"` : '';
     const alt = g.alt || (lang === 'sr' ? `${altOf(p, lang)}, QBC Architects, prikaz ${i + 1} od ${n}` : `${altOf(p, lang)}, by QBC Architects, view ${i + 1} of ${n}`);
-    return `<figure data-full="${imgUrl(g, depth, 2000)}"><div class="frame" data-ip${ar}>` +
+    // pregled preko celog ekrana: kopija sa znakom (-full), a za stare slike bez nje najveca verzija
+    const full = g.full ? `${depth}images/${encFile(g.full)}` : imgUrl(g, depth, 2000);
+    return `<figure data-full="${full}"><div class="frame" data-ip${ar}>` +
       img(g, { root: depth, sizes: '(max-width: 900px) 100vw, 60vw', alt, want: 1600 }) + `</div></figure>`;
   }).join('');
 }

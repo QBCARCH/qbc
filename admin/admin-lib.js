@@ -97,7 +97,7 @@ export function allImages(p) {
 export function imagePaths(im) {
   const dot = im.file.lastIndexOf('.');
   const base = im.file.slice(0, dot), ext = im.file.slice(dot + 1);
-  return ['images/' + im.file, ...(im.widths || []).map((w) => `images/${base}-p-${w}.${ext}`), ...(im.og ? ['images/' + im.og] : [])];
+  return ['images/' + im.file, ...(im.widths || []).map((w) => `images/${base}-p-${w}.${ext}`), ...(im.og ? ['images/' + im.og] : []), ...(im.full ? ['images/' + im.full] : [])];
 }
 export function orphanImagePaths(removed, remaining) {
   const used = new Set(remaining.flatMap((p) => allImages(p).map((i) => i.file)));
@@ -129,6 +129,43 @@ async function canWebp() {
   return webpOk;
 }
 
+// ---------------------------------------------------------------- znak (vodeni zig)
+// Na velikim verzijama slika (od MARK_FROM px, i na kopiji za pregled preko celog ekrana) u donjem desnom uglu
+// stoji znak kao u zaglavlju sajta: logo i QBCARCHITECTS, belo, blago providno. Manje verzije ostaju ciste.
+export const MARK_FROM = 2000;
+export const FULL_W = 2400;
+let markAssets = null;
+async function loadMark() {
+  if (!markAssets) markAssets = (async () => {
+    const font = new FontFace('QBC Mark', 'url(/fonts/GeistMono.woff2)', { weight: '400' });
+    document.fonts.add(await font.load());
+    const logo = new Image(); logo.src = '/assets/logo.png'; await logo.decode();
+    // logo je crn na providnoj podlozi: pravimo belu kopiju
+    const c = document.createElement('canvas'); c.width = logo.naturalWidth; c.height = logo.naturalHeight;
+    const x = c.getContext('2d'); x.drawImage(logo, 0, 0); x.globalCompositeOperation = 'source-in'; x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height);
+    return { logo: c };
+  })();
+  return markAssets;
+}
+export async function drawMark(canvas) {
+  const { logo } = await loadMark();
+  const ctx = canvas.getContext('2d'), w = canvas.width, h = canvas.height;
+  // srazmere kao u zaglavlju: logo 26 px, tekst .72rem (11.5 px), razmak slova .3em, razmak 12 px
+  const s = Math.max(18, Math.round(w * 0.014)), fs = s * 0.44, gap = s * 0.46, m = Math.round(w * 0.022);
+  ctx.save();
+  ctx.font = `400 ${fs}px "QBC Mark"`;
+  ctx.letterSpacing = `${fs * 0.3}px`;
+  const text = 'QBCARCHITECTS', tw = ctx.measureText(text).width;
+  const x0 = w - m - tw - gap - s, y0 = h - m - s;
+  ctx.globalAlpha = 0.82;
+  ctx.shadowColor = 'rgba(0, 0, 0, .35)'; ctx.shadowBlur = s * 0.5;
+  ctx.drawImage(logo, x0, y0, s, s);
+  ctx.fillStyle = '#fff'; ctx.textBaseline = 'middle';
+  ctx.fillText(text, x0 + s + gap, y0 + s / 2);
+  ctx.restore();
+  return canvas;
+}
+
 export async function processImage(file) {
   let bmp;
   try { bmp = await createImageBitmap(file); } catch { throw new Error(`Slika "${file.name}" nije podržan format (koristi JPG, PNG ili WEBP).`); }
@@ -144,6 +181,8 @@ export async function processImage(file) {
     ctx.drawImage(bmp, 0, 0, w, h);
     return c;
   };
+  // velike verzije dobijaju znak
+  const drawM = async (w) => (w >= MARK_FROM ? drawMark(draw(w)) : draw(w));
   const finalW = Math.min(origW, MAX_W);
   const rand = Math.random().toString(16).slice(2, 8);
   const stem = (file.name.replace(/\.[^.]+$/, '') || 'slika');
@@ -151,12 +190,15 @@ export async function processImage(file) {
   const base = `${Date.now().toString(16)}${rand}_${safe}`;
   const name = `${base}.${ext}`;
   const widths = WIDTHS.filter((w) => w < finalW);
-  const blobs = [{ path: 'images/' + name, blob: await toBlob(draw(finalW), type, 0.86) }];
-  for (const w of widths) blobs.push({ path: `images/${base}-p-${w}.${ext}`, blob: await toBlob(draw(w), type, 0.82) });
+  const blobs = [{ path: 'images/' + name, blob: await toBlob(await drawM(finalW), type, 0.86) }];
+  for (const w of widths) blobs.push({ path: `images/${base}-p-${w}.${ext}`, blob: await toBlob(await drawM(w), type, 0.82) });
   const og = `${base}-og.jpg`;
   blobs.push({ path: 'images/' + og, blob: await toBlob(draw(Math.min(1200, finalW), true), 'image/jpeg', 0.8) });
+  // kopija sa znakom za pregled preko celog ekrana (lightbox)
+  const full = `${base}-full.${ext}`;
+  blobs.push({ path: 'images/' + full, blob: await toBlob(await drawMark(draw(Math.min(FULL_W, finalW))), type, 0.86) });
   bmp.close && bmp.close();
-  return { entry: { file: name, widths, w: finalW, h: Math.round((origH * finalW) / origW), og }, blobs, origW, safe };
+  return { entry: { file: name, widths, w: finalW, h: Math.round((origH * finalW) / origW), og, full, wm: true }, blobs, origW, safe };
 }
 
 export async function blobToBase64(blob) {

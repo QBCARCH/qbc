@@ -158,6 +158,16 @@ ul, ol { list-style: none; }
 .hero__scroll { grid-column: 1 / -1; margin-top: clamp(22px, 3.6vh, 40px); padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .4); display: grid; grid-template-columns: 1.2fr 1fr .7fr auto; align-items: start; gap: 2rem; }
 .hero__scroll p { max-width: 36ch; }
 .hero__credit { display: block; margin-top: .4rem; }
+/* skica na naslovnoj (js: initSketch): papir sa olovkom preko slike, pa se papir pretopi, a linije za njim;
+   tekst i senka slike se vrate kad se pojavi slika. Slika se sve vreme ucitava ispod, pa se ne usporava. */
+.hero__sketch { position: absolute; inset: 0; background-color: transparent; visibility: hidden; }
+.hero__sketch svg { display: block; width: 100%; height: 100%; transition: opacity 1.4s var(--ease) .7s; }
+.hero__sketch path { fill: none; stroke: #34322e; stroke-linecap: round; stroke-linejoin: round; }
+.hero.is-sketch .hero__sketch { visibility: visible; background-color: var(--bg); }
+.hero.sketch-done .hero__sketch { background-color: rgba(245, 243, 239, 0); transition: background-color 1.4s var(--ease); }
+.hero.sketch-done .hero__sketch svg { opacity: 0; }
+.hero__content, .hero::after { transition: opacity 1.4s var(--ease); }
+.hero.is-sketch:not(.sketch-done) .hero__content, .hero.is-sketch:not(.sketch-done)::after { opacity: 0; }
 .hero__credit:hover { text-decoration: underline; text-underline-offset: 4px; }
 .hero__time time { font-variant-numeric: tabular-nums; }
 

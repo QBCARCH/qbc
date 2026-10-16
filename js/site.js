@@ -57,10 +57,11 @@
     if (!nav || !brand) return;
     const darks = $$('.hero, .phero, .band, .inq, .pgal--dark');
     let last = scrollY, raf = 0;
+    // dok se na naslovnoj crta skica (svetao papir), zaglavlje je tamno
     const tone = () => {
       raf = 0;
       const b = brand.getBoundingClientRect(), y = b.top + b.height / 2;
-      root.classList.toggle('on-dark', darks.some((el) => { const r = el.getBoundingClientRect(); return r.top <= y && r.bottom >= y; }));
+      root.classList.toggle('on-dark', darks.some((el) => { if (el.classList.contains('is-sketch') && !el.classList.contains('sketch-done')) return false; const r = el.getBoundingClientRect(); return r.top <= y && r.bottom >= y; }));
     };
     tone();
     addEventListener('scroll', () => {
@@ -257,8 +258,102 @@
     paint();
   };
 
+  /* skica na naslovnoj: pri prvom otvaranju u poseti olovka iscrta konture zgrade, pa se crtez pretopi u sliku.
+     Potezi su napravljeni unapred (admin/sketch-lib.js); ovde se samo crtaju, ljudskim ritmom: kratak zastoj
+     pre poteza, brze na pravim delovima, sporije i sa zastojem na uglovima, mirno prenosenje ruke izmedju poteza.
+     Skrol, klik ili taster odmah prikazuju sliku. */
+  const initSketch = () => {
+    const hero = $('.hero.is-sketch[data-sketch]'), host = hero && $('.hero__sketch', hero);
+    if (!hero || !host) return;
+    safe(() => sessionStorage.setItem('qbc-sketch', '1'));
+    const DRAW_MS = 7000, ANG = .45, DWELL = 30, TURN = 55, AIR = 1.4, ease = 'cubic-bezier(.45, 0, .5, 1)';
+    let done = false, anims = [], timer = 0;
+    const finish = () => {
+      if (done) return; done = true; clearTimeout(timer);
+      ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach((ev) => removeEventListener(ev, finish));
+      hero.classList.add('sketch-done');
+      setTimeout(() => { anims.forEach((a) => a.cancel()); hero.classList.remove('is-sketch', 'sketch-done'); host.textContent = ''; dispatchEvent(new Event('resize')); }, 2600);
+      dispatchEvent(new Event('resize'));
+    };
+    ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach((ev) => addEventListener(ev, finish, { passive: true }));
+    timer = setTimeout(finish, 2500); // ako skica ne stigne na vreme, odmah slika
+    let seed = 7;
+    const rnd = () => ((seed = Math.imul(seed ^ (seed >>> 15), 2246822507) + 0x9e3779b9 >>> 0) / 4294967296);
+    // drhtava olovka: tacke na ~6 px, blagi talas popreko, zaobljeno (Catmull-Rom), mali produzetak na krajevima
+    const pencil = (pts) => {
+      const res = [];
+      for (let i = 0; i < pts.length - 1; i++) {
+        const [x1, y1] = pts[i], [x2, y2] = pts[i + 1], n = Math.max(1, Math.round(Math.hypot(x2 - x1, y2 - y1) / 6));
+        for (let k = 0; k < n; k++) res.push([x1 + (x2 - x1) * k / n, y1 + (y2 - y1) * k / n]);
+      }
+      res.push(pts[pts.length - 1]);
+      const ext = (a, b, d) => { const L = Math.hypot(a[0] - b[0], a[1] - b[1]) || 1; return [a[0] + (a[0] - b[0]) / L * d, a[1] + (a[1] - b[1]) / L * d]; };
+      res.unshift(ext(res[0], res[1], 2 + rnd() * 4));
+      res.push(ext(res[res.length - 1], res[res.length - 2], 2 + rnd() * 4));
+      const amp = .5 + rnd() * .5, f1 = 1 / (50 + rnd() * 60), f2 = 1 / (11 + rnd() * 8), p1 = rnd() * 6.3, p2 = rnd() * 6.3;
+      let dist = 0;
+      const q = res.map((p, i) => {
+        if (i) dist += Math.hypot(p[0] - res[i - 1][0], p[1] - res[i - 1][1]);
+        const a = res[Math.max(0, i - 1)], b = res[Math.min(res.length - 1, i + 1)], L = Math.hypot(b[0] - a[0], b[1] - a[1]) || 1;
+        const w = amp * Math.sin(dist * f1 * 6.28 + p1) + amp * .35 * Math.sin(dist * f2 * 6.28 + p2);
+        return [p[0] - (b[1] - a[1]) / L * w, p[1] + (b[0] - a[0]) / L * w];
+      });
+      let d = `M${q[0][0].toFixed(1)} ${q[0][1].toFixed(1)}`;
+      for (let i = 0; i < q.length - 1; i++) {
+        const a = q[Math.max(0, i - 1)], b = q[i], c = q[i + 1], e = q[Math.min(q.length - 1, i + 2)];
+        d += `C${(b[0] + (c[0] - a[0]) / 6).toFixed(1)} ${(b[1] + (c[1] - a[1]) / 6).toFixed(1)} ${(c[0] - (e[0] - b[0]) / 6).toFixed(1)} ${(c[1] - (e[1] - b[1]) / 6).toFixed(1)} ${c[0].toFixed(1)} ${c[1].toFixed(1)}`;
+      }
+      return d;
+    };
+    // plan poteza u "pikselima puta": zastoj na pocetku, ubrzanje i usporenje izmedju uglova, zastoj na uglu
+    const plan = (s, prev) => {
+      const kf = [{ t: 0, f: 0 }, { t: DWELL, f: 0 }], segL = [];
+      for (let j = 0; j < s.length - 1; j++) segL.push(Math.hypot(s[j + 1][0] - s[j][0], s[j + 1][1] - s[j][1]));
+      const L = segL.reduce((a, b) => a + b, 0) || 1;
+      let t = DWELL, run = 0, sum = 0;
+      for (let j = 0; j < segL.length; j++) {
+        run += segL[j]; sum += segL[j];
+        let turn = 0;
+        if (j < segL.length - 1) {
+          const a = Math.atan2(s[j + 1][1] - s[j][1], s[j + 1][0] - s[j][0]), b = Math.atan2(s[j + 2][1] - s[j + 1][1], s[j + 2][0] - s[j + 1][0]);
+          turn = Math.abs(((b - a + Math.PI * 3) % (Math.PI * 2)) - Math.PI);
+        }
+        if (turn > ANG || j === segL.length - 1) {
+          t += run; kf.push({ t, f: sum / L }); run = 0;
+          if (turn > ANG) { t += TURN * (turn / Math.PI); kf.push({ t, f: sum / L }); }
+        }
+      }
+      const air = prev ? Math.hypot(s[0][0] - prev[prev.length - 1][0], s[0][1] - prev[prev.length - 1][1]) / AIR + 40 : 0;
+      return { kf, dur: t, air };
+    };
+    fetch(hero.dataset.sketch).then((r) => r.json()).then(({ w, h, s }) => {
+      if (done) return;
+      clearTimeout(timer);
+      const NS = 'http://www.w3.org/2000/svg', svg = D.createElementNS(NS, 'svg');
+      svg.setAttribute('viewBox', `0 0 ${w} ${h}`); svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+      const st = s.map((f) => { const p = []; for (let i = 0; i < f.length; i += 2) p.push([f[i], f[i + 1]]); return p; }).filter((p) => p.length > 1);
+      const paths = st.map((p) => {
+        const el = D.createElementNS(NS, 'path');
+        el.setAttribute('d', pencil(p)); el.setAttribute('stroke-width', (.85 + rnd() * .4).toFixed(2)); el.style.opacity = (.62 + rnd() * .3).toFixed(2);
+        svg.appendChild(el); return el;
+      });
+      host.appendChild(svg);
+      const plans = st.map((p, i) => plan(p, st[i - 1]));
+      const k = DRAW_MS / (plans.reduce((a, p) => a + p.dur + p.air, 0) || 1);
+      let at = 0;
+      paths.forEach((el, i) => {
+        const len = el.getTotalLength(), { kf, dur, air } = plans[i];
+        at += air * k;
+        el.style.strokeDasharray = len; el.style.strokeDashoffset = len;
+        anims.push(el.animate(kf.map((x) => ({ offset: x.t / dur, strokeDashoffset: len * (1 - x.f), easing: ease })), { duration: Math.max(80, dur * k), delay: at, fill: 'forwards' }));
+        at += dur * k;
+      });
+      timer = setTimeout(finish, at + 400);
+    }).catch(finish);
+  };
+
   const boot = () => {
-    initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
+    initSketch(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

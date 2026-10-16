@@ -416,6 +416,8 @@ export function buildSite(data, sources, { all = false } = {}) {
       ...site('index.html'), key: 'home', TITLE: home[0], DESC: home[1],
       HERO_IMG: img(homeHero.hero, { root: lang === 'en' ? '' : '../', sizes: '100vw', alt: altOf(homeHero, lang), eager: true, want: 2000 }),
       HERO_CREDIT: heroCredit(homeHero, ''),
+      // skica koju sajt iscrtava pre naslovne slike (js/site.js, initSketch), ako je slika ima
+      HERO_SKETCH: homeHero.hero.sketch ? ` data-sketch="${lang === 'en' ? '' : '../'}images/${encFile(homeHero.hero.sketch)}"` : '',
       HOME_WORKS: worksGrid(projects.slice(0, data.home_count ?? 4), lang, '', lang === 'en' ? '' : '../'),
     });
     const ow = lang === 'en'

@@ -1,5 +1,6 @@
 // Logika admin stranice: GitHub klijent, obrada slika, objava u jednom commit-u.
 import { buildSite, slugify, DYNAMIC_SOURCES } from '../tools/build-core.js';
+import { makeSketch } from './sketch-lib.js';
 
 export const WIDTHS = [500, 800, 1080, 1600, 2000, 2600, 3200];
 export const MAX_W = 3840;
@@ -97,7 +98,7 @@ export function allImages(p) {
 export function imagePaths(im) {
   const dot = im.file.lastIndexOf('.');
   const base = im.file.slice(0, dot), ext = im.file.slice(dot + 1);
-  return ['images/' + im.file, ...(im.widths || []).map((w) => `images/${base}-p-${w}.${ext}`), ...(im.og ? ['images/' + im.og] : []), ...(im.full ? ['images/' + im.full] : [])];
+  return ['images/' + im.file, ...(im.widths || []).map((w) => `images/${base}-p-${w}.${ext}`), ...(im.og ? ['images/' + im.og] : []), ...(im.full ? ['images/' + im.full] : []), ...(im.sketch ? ['images/' + im.sketch] : [])];
 }
 export function orphanImagePaths(removed, remaining) {
   const used = new Set(remaining.flatMap((p) => allImages(p).map((i) => i.file)));
@@ -197,8 +198,14 @@ export async function processImage(file) {
   // kopija sa znakom za pregled preko celog ekrana (lightbox)
   const full = `${base}-full.${ext}`;
   blobs.push({ path: 'images/' + full, blob: await toBlob(await drawMark(draw(Math.min(FULL_W, finalW))), type, 0.86) });
+  // horizontalna slika moze biti naslovna na pocetnoj: pravi se i skica koju sajt iscrtava pre slike
+  let sketch;
+  if (origW >= 1200 && origW / origH >= 1.3) {
+    sketch = `${base}-sketch.json`;
+    blobs.push({ path: 'images/' + sketch, blob: new Blob([makeSketch(bmp)], { type: 'application/json' }) });
+  }
   bmp.close && bmp.close();
-  return { entry: { file: name, widths, w: finalW, h: Math.round((origH * finalW) / origW), og, full, wm: true }, blobs, origW, safe };
+  return { entry: { file: name, widths, w: finalW, h: Math.round((origH * finalW) / origW), og, full, wm: true, ...(sketch ? { sketch } : {}) }, blobs, origW, safe };
 }
 
 export async function blobToBase64(blob) {

@@ -510,33 +510,102 @@ def build_crew_doors():
         add(box(1.14, 1.16, sg * (a - 0.01), sg * (a + 0.008), 0.06, 0.98, 0.0), "B429_Oplata_tamna")
 
 
+# Oblici prozora kliznih vrata (x duz vrata, z visina) - prema fotografijama:
+# zadnji prozor ima veliki kosi donji spoljni ugao, prednji je blago trapezast.
+WIN_AFT = [(-0.74, 1.14), (-0.74, 0.78), (-0.53, 0.575), (-0.06, 0.50), (-0.06, 1.14)]
+WIN_FWD = [(0.04, 1.14), (0.04, 0.50), (0.745, 0.50), (0.725, 1.14)]
+WIN_R = 0.075
+
+
+def poly_ccw(pts):
+    area = 0.0
+    for i in range(len(pts)):
+        x0, z0 = pts[i]
+        x1, z1 = pts[(i + 1) % len(pts)]
+        area += x0 * z1 - x1 * z0
+    return list(pts) if area > 0 else list(reversed(pts))
+
+
+def offset_poly(pts, d):
+    """Pomeri konveksni poligon (x,z) ka spolja za d."""
+    p = poly_ccw(pts)
+    n = len(p)
+    lines = []
+    for i in range(n):
+        x0, z0 = p[i]
+        x1, z1 = p[(i + 1) % n]
+        dx, dz = x1 - x0, z1 - z0
+        L = math.hypot(dx, dz)
+        nx, nz = dz / L, -dx / L
+        lines.append(((x0 + nx * d, z0 + nz * d), (dx, dz)))
+    out = []
+    for i in range(n):
+        (pa, da), (pb, db) = lines[i - 1], lines[i]
+        den = da[0] * db[1] - da[1] * db[0]
+        if abs(den) < 1e-12:
+            out.append(pb)
+            continue
+        t = ((pb[0] - pa[0]) * db[1] - (pb[1] - pa[1]) * db[0]) / den
+        out.append((pa[0] + da[0] * t, pa[1] + da[1] * t))
+    return out
+
+
+def win_curve(poly, y, r):
+    pts = [P(x, y, z) for (x, z) in poly_ccw(poly)]
+    pl = rg.PolylineCurve(pts + [pts[0]])
+    try:
+        c = rg.Curve.CreateFilletCornersCurve(pl, r, TOLM, 0.01)
+        if c:
+            return c
+    except Exception:
+        pass
+    return pl
+
+
 def door_parts(sg):
     """Klizna vrata u ZATVORENOM polozaju: lista (geometrija, sloj)."""
     parts = []
     y_in, y_out = sg * 0.80, sg * (SKIN_A + 0.006)
-    wins = [(-0.74, -0.06), (0.04, 0.74)]
-    wz0, wz1 = 0.50, 1.14
     slab = box(-AP_X + 0.005, AP_X - 0.005, min(y_in, y_out), max(y_in, y_out), AP_Z0, AP_Z1, 0.14)
-    cutters = [box(wa, wb, sg * 0.70, sg * 0.95, wz0, wz1, 0.07) for (wa, wb) in wins]
+    cutters = [prism(win_curve(w, sg * 0.70, WIN_R), V(0, sg * 0.25, 0)) for w in (WIN_AFT, WIN_FWD)]
+    cutters = [c for c in cutters if c is not None]
     for g in diff(slab, cutters):
         parts.append((g, "B429_Oplata_siva"))
     ymid = sg * (SKIN_A - 0.04)
-    for (wa, wb) in wins:
-        parts.append((box(wa - 0.01, wb + 0.01, ymid - 0.004, ymid + 0.004, wz0 - 0.01, wz1 + 0.01),
-                      "B429_Staklo_tamno"))
-        o = P((wa + wb) / 2.0, sg * 0.80, (wz0 + wz1) / 2.0)
-        outer = rrect(o, XA, ZA, (wb - wa) + 0.05, (wz1 - wz0) + 0.05, 0.08)
-        inner = rrect(o, XA, ZA, (wb - wa), (wz1 - wz0), 0.07)
-        for g in ring(outer, inner, V(0, -sg * 0.012, 0)):
+    for w in (WIN_AFT, WIN_FWD):
+        gl = prism(win_curve(offset_poly(w, 0.012), ymid - sg * 0.004, WIN_R + 0.01), V(0, sg * 0.008, 0))
+        parts.append((gl, "B429_Staklo_tamno"))
+        # dubok svetli okvir (reveal) kao na fotografijama
+        outer = win_curve(offset_poly(w, 0.045), sg * 0.80, WIN_R + 0.04)
+        inner = win_curve(w, sg * 0.80, WIN_R)
+        for g in ring(outer, inner, V(0, -sg * 0.016, 0)):
             parts.append((g, "B429_Okviri_prozora"))
-    # unutrasnja obloga vrata
-    parts.append((box(-0.80, 0.80, sg * 0.775, sg * 0.80, 0.08, 0.49, 0.03), "B429_Paneli_tamni"))
-    parts.append((box(-0.06, 0.04, sg * 0.775, sg * 0.80, 0.49, 1.20, 0.01), "B429_Zidovi_plafon"))
-    parts.append((box(-0.80, 0.80, sg * 0.775, sg * 0.80, 1.14, 1.23, 0.02), "B429_Zidovi_plafon"))
-    parts.append((box(-0.30, -0.14, sg * 0.766, sg * 0.778, 0.515, 0.545, 0.006), "B429_Zidovi_plafon"))
-    parts.append((box(-0.36, -0.24, sg * 0.770, sg * 0.776, 0.40, 0.44, 0.0), "B429_Oznake"))
+    # svetla unutrasnja obloga sa izrezima prozora
+    trim = box(-0.80, 0.80, sg * 0.784, sg * 0.80, 0.08, 1.23, 0.10)
+    tcut = [prism(win_curve(offset_poly(w, 0.045), sg * 0.70, WIN_R + 0.04), V(0, sg * 0.25, 0))
+            for w in (WIN_AFT, WIN_FWD)]
+    for g in diff(trim, [c for c in tcut if c is not None]):
+        parts.append((g, "B429_Zidovi_plafon"))
+    # tamna donja obloga - gornja ivica prati donje ivice prozora (i kosi ugao)
+    lin = [(-0.79, 0.09), (0.79, 0.09), (0.79, 0.44), (0.02, 0.44),
+           (-0.08, 0.45), (-0.53, 0.525), (-0.79, 0.78)]
+    lp = [P(x, sg * 0.784, z) for (x, z) in poly_ccw(lin)]
+    try:
+        lcrv = rg.Curve.CreateFilletCornersCurve(rg.PolylineCurve(lp + [lp[0]]), 0.04, TOLM, 0.01)
+    except Exception:
+        lcrv = None
+    if not lcrv:
+        lcrv = rg.PolylineCurve(lp + [lp[0]])
+    parts.append((prism(lcrv, V(0, -sg * 0.012, 0)), "B429_Paneli_tamni"))
+    # sav na tamnoj oblozi
+    parts.append((rg.LineCurve(P(-0.75, sg * 0.771, 0.13), P(0.75, sg * 0.771, 0.13)), "B429_Savovi"))
+    # rucica za otvaranje (svetla, uvucena) i EXIT 1
+    parts.append((box(-0.36, -0.20, sg * 0.766, sg * 0.778, 0.445, 0.468, 0.008), "B429_Zidovi_plafon"))
+    parts.append((box(-0.38, -0.26, sg * 0.768, sg * 0.772, 0.37, 0.41, 0.006), "B429_Oznake"))
+    parts.append((box(-0.37, -0.27, sg * 0.766, sg * 0.768, 0.378, 0.402, 0.0), "B429_Zidovi_plafon"))
+    # hrom rukohvati na stubu izmedju prozora
     for x in (-0.075, 0.055):
-        pts = [P(x, sg * 0.775, 0.62), P(x, sg * 0.745, 0.70), P(x, sg * 0.745, 0.95), P(x, sg * 0.775, 1.02)]
+        pts = [P(x, sg * 0.784, 0.62), P(x, sg * 0.752, 0.70), P(x, sg * 0.752, 0.95), P(x, sg * 0.784, 1.02)]
         try:
             crv = rg.Curve.CreateInterpolatedCurve(pts, 3)
             res = rg.Brep.CreatePipe(crv, 0.009, False, rg.PipeCapMode.Round, True, TOLM, 0.01)
@@ -629,6 +698,10 @@ def build_cabin_shell():
     for sx in (-1, 1):
         add(box(sx * XB, sx * (XB + 0.04), -0.80, 0.80, 0.0, 0.98, 0.0), "B429_Paneli_tamni")
         add(box(sx * XB, sx * (XB + 0.04), -0.80, 0.80, 0.98, ZW + 0.02, 0.0), "B429_Zidovi_plafon")
+    # nalepnice (placards) iznad sedista
+    for sx in (-1, 1):
+        for yy in (-0.28, 0.28):
+            add(box(sx * (XB - 0.004), sx * XB, yy - 0.06, yy + 0.06, 1.04, 1.10), "B429_Svetla")
     # Bell logo ploca
     add(box(XB - 0.014, XB, -0.64, -0.56, 1.18, 1.24, 0.01), "B429_Plafon_detalji")
     # stubovi izmedju vrata i pregrada
@@ -668,7 +741,64 @@ def build_cabin_ceiling():
             on_ceiling(hand, xh, sy)
 
 
-# ----- sedista -----
+# ----- sedista (skulptorski oblici, loft po presecima) -----
+# profil jastuka (v = dubina od pregrade, z) - zadnji svetli deo i prednji "waterfall" deo
+CUSH_REAR = [(0.17, 0.35), (0.17, 0.44), (0.30, 0.447), (0.42, 0.452), (0.52, 0.465), (0.53, 0.36), (0.35, 0.34)]
+CUSH_FRONT = [(0.48, 0.36), (0.48, 0.468), (0.56, 0.50), (0.645, 0.472), (0.65, 0.385), (0.60, 0.35)]
+# poprecne stanice preko sirine sedista: (pomak od ivice ili sredine, skala, podizanje bocnog jastuka)
+CUSH_ST = [(-1.000, 0.84, 0.000), (-0.940, 0.96, 0.008), (-0.760, 1.00, 0.014), (0.0, 1.00, 0.0),
+           (0.760, 1.00, 0.014), (0.940, 0.96, 0.008), (1.000, 0.84, 0.000)]
+# naslon: (z, sirina, pomak napred) - siroka ledja, kosa ramena, uzi integrisani naslon za glavu
+BACK_ST = [(0.36, 0.46, 0.000), (0.50, 0.47, 0.012), (0.66, 0.47, 0.008), (0.78, 0.465, 0.0),
+           (0.845, 0.40, 0.0), (0.895, 0.33, 0.008), (1.00, 0.32, 0.014), (1.08, 0.295, 0.014),
+           (1.125, 0.21, 0.012)]
+
+
+def capped_loft(curves):
+    g = loft(curves)
+    if g is None:
+        return None
+    c = g.CapPlanarHoles(TOLM)
+    return c if c else g
+
+
+def hsec(Xw, yc, z, w, d, v0, n, N=24):
+    """Horizontalni zaobljeni presek (za naslon) na visini z."""
+    e = 2.0 / n
+    pts = []
+    for i in range(N):
+        t = 2.0 * math.pi * i / N
+        u = yc + (w / 2.0) * sgn_pow(math.cos(t), e)
+        v = v0 + d / 2.0 + (d / 2.0) * sgn_pow(math.sin(t), e)
+        pts.append(P(Xw(v), u, z))
+    return closed_curve(pts)
+
+
+def vz_curve(Xw, u, prof, scale=1.0, raise_top=0.0):
+    vc = sum(p[0] for p in prof) / len(prof)
+    zc = sum(p[1] for p in prof) / len(prof)
+    pts = []
+    for (v, z) in prof:
+        vv = vc + (v - vc) * scale
+        zz = zc + (z - zc) * scale
+        if z > 0.42:
+            zz += raise_top
+        pts.append(P(Xw(vv), u, zz))
+    return closed_curve(pts)
+
+
+def fillet_poly_vz(Xw, u, poly, r):
+    pts = [P(Xw(v), u, z) for (v, z) in poly]
+    pl = rg.PolylineCurve(pts + [pts[0]])
+    try:
+        c = rg.Curve.CreateFilletCornersCurve(pl, r, TOLM, 0.01)
+        if c:
+            return c
+    except Exception:
+        pass
+    return pl
+
+
 def build_seat(wx, s, yc, outer_side):
     """wx = x pregrade, s=+1 sedi uz zadnju pregradu (gleda napred), s=-1 uz prednju (gleda nazad)."""
     hw = SEAT_W / 2.0
@@ -676,63 +806,86 @@ def build_seat(wx, s, yc, outer_side):
     def Xw(v):
         return wx + s * v
 
-    def lb(u0, u1, v0, v1, z0, z1, r=0.0):
-        return box(Xw(v0), Xw(v1), u0, u1, z0, z1, r)
-
-    # postolje, kuciste i resetke
-    add(lb(yc - 0.15, yc + 0.15, 0.20, 0.46, 0.0, 0.09, 0.01), "B429_Sedista_konstrukcija")
-    add(lb(yc - hw + 0.01, yc + hw - 0.01, 0.10, 0.54, 0.09, 0.34, 0.035), "B429_Koza_tamna")
-    add(lb(yc - 0.14, yc + 0.14, 0.53, 0.545, 0.14, 0.26, 0.004), "B429_Pod_prostirka")
-    for k in range(9):
-        us = yc - 0.12 + k * 0.03
-        add(lb(us - 0.003, us + 0.003, 0.545, 0.549, 0.15, 0.25), "B429_Sedista_konstrukcija")
+    # --- postolje: tamna kada ispod jastuka + kosi stub sa mrezom
+    pan = [(0.12, 0.28), (0.58, 0.28), (0.655, 0.33), (0.655, 0.375), (0.12, 0.375)]
+    add(prism(fillet_poly_vz(Xw, yc - hw + 0.006, pan, 0.03), V(0, SEAT_W - 0.012, 0)), "B429_Koza_tamna")
+    ped = [(0.15, 0.025), (0.47, 0.025), (0.57, 0.28), (0.13, 0.28)]
+    pw = SEAT_W - 0.05
+    add(prism(fillet_poly_vz(Xw, yc - pw / 2.0, ped, 0.025), V(0, pw, 0)), "B429_Koza_tamna")
+    # mreza na kosom celu stuba
+    fv0, fz0, fv1, fz1 = 0.47, 0.025, 0.57, 0.28
+    L = math.hypot(fv1 - fv0, fz1 - fz0)
+    nv, nz = (fz1 - fz0) / L, -(fv1 - fv0) / L
+    q = []
+    for (tt, uu) in ((0.12, -1), (0.12, 1), (0.86, 1), (0.86, -1)):
+        vv = fv0 + (fv1 - fv0) * tt + nv * 0.002
+        zz = fz0 + (fz1 - fz0) * tt + nz * 0.002
+        q.append(P(Xw(vv), yc + uu * (pw / 2.0 - 0.04), zz))
+    mesh = poly_prism(q, V(s * nv * 0.004, 0, nz * 0.004))
+    add(mesh, "B429_Pod_prostirka")
+    add(rg.PolylineCurve([q[0], q[1], q[2], q[3], q[0]]), "B429_Savovi")
+    # mreza na bocnoj strani (spoljna sedista)
     if outer_side != 0:
-        uu = yc + outer_side * (hw - 0.01)
-        add(lb(uu, uu + outer_side * 0.006, 0.16, 0.46, 0.13, 0.28, 0.0), "B429_Pod_prostirka")
+        uu = yc + outer_side * (pw / 2.0)
+        side = [(0.19, 0.06), (0.45, 0.06), (0.52, 0.25), (0.18, 0.25)]
+        add(prism(fillet_poly_vz(Xw, uu, side, 0.015), V(0, outer_side * 0.004, 0)), "B429_Pod_prostirka")
 
-    # jastuk
-    add(lb(yc - hw + 0.055, yc + hw - 0.055, 0.16, 0.40, 0.34, 0.46, 0.03), "B429_Koza_svetla")
-    add(lb(yc - hw + 0.055, yc + hw - 0.055, 0.40, 0.58, 0.34, 0.455, 0.04), "B429_Koza_srednja")
+    # --- jastuk: loft profila preko sirine (bocni jastuci malo uzdignuti, ivice zaobljene)
+    for prof, lay in ((CUSH_REAR, "B429_Koza_svetla"), (CUSH_FRONT, "B429_Koza_srednja")):
+        crvs = []
+        for (f, sc_, rz) in CUSH_ST:
+            crvs.append(vz_curve(Xw, yc + f * (hw - 0.008), prof, sc_, rz))
+        add(capped_loft(crvs), lay)
+    # savovi jastuka
     for sx in (-1, 1):
-        cx = yc + sx * (hw - 0.0275)
-        add(lb(cx - 0.0275, cx + 0.0275, 0.16, 0.58, 0.34, 0.50, 0.02), "B429_Koza_tamna")
-    add(rg.LineCurve(P(Xw(0.40), yc - hw + 0.06, 0.4615), P(Xw(0.40), yc + hw - 0.06, 0.4615)), "B429_Savovi")
-    for sx in (-1, 1):
-        uu = yc + sx * (hw - 0.07)
-        add(rg.LineCurve(P(Xw(0.17), uu, 0.4615), P(Xw(0.40), uu, 0.4615)), "B429_Savovi")
+        uu = yc + sx * (hw - 0.065)
+        add(rg.LineCurve(P(Xw(0.19), uu, 0.462), P(Xw(0.50), uu, 0.476)), "B429_Savovi")
+    add(rg.LineCurve(P(Xw(0.50), yc - hw + 0.03, 0.478), P(Xw(0.50), yc + hw - 0.03, 0.478)), "B429_Savovi")
 
-    # naslon (uspravno, pa se naginje prema pregradi)
+    # --- naslon (gradi se uspravno, pa se naginje prema pregradi)
     back = []
-
-    def bb(u0, u1, v0, v1, z0, z1, r, layer):
-        back.append((lb(u0, u1, BV + v0, BV + v1, z0, z1, r), layer))
-
-    bb(yc - hw, yc + hw, 0.0, 0.09, 0.34, 0.84, 0.03, "B429_Koza_tamna")
-    bb(yc - hw + 0.06, yc + hw - 0.06, 0.07, 0.12, 0.40, 0.60, 0.02, "B429_Koza_srednja")
-    bb(yc - hw + 0.06, yc + hw - 0.06, 0.07, 0.12, 0.60, 0.82, 0.02, "B429_Koza_svetla")
+    shell = [hsec(Xw, yc, z, w, 0.10, BV + vo, 5.0) for (z, w, vo) in BACK_ST]
+    back.append((capped_loft(shell), "B429_Koza_tamna"))
+    pad = []
+    for i, (z, w, vo) in enumerate(BACK_ST):
+        zz = 0.38 if i == 0 else (1.115 if i == len(BACK_ST) - 1 else z)
+        pad.append(hsec(Xw, yc, zz, w - 0.035, 0.055, BV + 0.065 + vo, 4.0))
+    back.append((capped_loft(pad), "B429_Koza_svetla"))
+    # gornji izdignuti jastuk (sa znakom) i donji lumbalni panel
+    pil = [hsec(Xw, yc, z, w, 0.03, BV + 0.105, 4.0)
+           for (z, w) in ((0.60, 0.25), (0.615, 0.28), (0.805, 0.28), (0.825, 0.24))]
+    back.append((capped_loft(pil), "B429_Koza_svetla"))
+    lum = [hsec(Xw, yc, z, w, 0.02, BV + 0.112, 4.0)
+           for (z, w) in ((0.42, 0.28), (0.43, 0.30), (0.585, 0.30), (0.595, 0.28))]
+    back.append((capped_loft(lum), "B429_Koza_srednja"))
+    # savovi naslona
+    vfp = BV + 0.121
     for sx in (-1, 1):
-        cx = yc + sx * (hw - 0.0275)
-        bb(cx - 0.0275, cx + 0.0275, 0.04, 0.13, 0.38, 0.84, 0.02, "B429_Koza_svetla")
-    bb(yc - 0.17, yc + 0.17, 0.01, 0.10, 0.84, 1.10, 0.04, "B429_Koza_tamna")
-    bb(yc - 0.13, yc + 0.13, 0.09, 0.13, 0.86, 1.07, 0.025, "B429_Koza_svetla")
-    # Bell stit
-    vf = BV + 0.12
-    sw, sh, zt = 0.07, 0.085, 0.76
+        back.append((rg.LineCurve(P(Xw(vfp), yc + sx * 0.152, 0.40), P(Xw(vfp), yc + sx * 0.152, 0.83)),
+                     "B429_Savovi"))
+    back.append((rg.LineCurve(P(Xw(vfp), yc - 0.15, 0.598), P(Xw(vfp), yc + 0.15, 0.598)), "B429_Savovi"))
+    # Bell stit na gornjem jastuku
+    vf = BV + 0.135
+    sw, sh, zt = 0.065, 0.08, 0.765
     pts = [P(Xw(vf), yc - sw / 2, zt), P(Xw(vf), yc + sw / 2, zt),
            P(Xw(vf), yc + sw / 2, zt - sh * 0.55), P(Xw(vf), yc, zt - sh),
-           P(Xw(vf), yc - sw / 2, zt - sh * 0.55), P(Xw(vf), yc - sw / 2, zt)]
-    shield = prism(rg.PolylineCurve(pts), V(s * 0.0035, 0, 0))
+           P(Xw(vf), yc - sw / 2, zt - sh * 0.55)]
+    shield = poly_prism(pts, V(s * 0.003, 0, 0))
     if shield:
         back.append((shield, "B429_Koza_tamna"))
-    # dijagonalni pojas
-    q = [P(Xw(BV + 0.125), yc + 0.06, 1.09), P(Xw(BV + 0.125), yc + 0.11, 1.09),
-         P(Xw(BV + 0.125), yc - 0.19, 0.44), P(Xw(BV + 0.125), yc - 0.24, 0.44),
-         P(Xw(BV + 0.125), yc + 0.06, 1.09)]
-    strap = prism(rg.PolylineCurve(q), V(s * 0.004, 0, 0))
+    back.append((box(Xw(vf), Xw(vf + 0.0035), yc - 0.0015, yc + 0.0015, zt - 0.072, zt - 0.012),
+                 "B429_Koza_srednja"))
+    back.append((box(Xw(vf), Xw(vf + 0.0035), yc - 0.020, yc + 0.020, zt - 0.040, zt - 0.037),
+                 "B429_Koza_srednja"))
+    # pojas: cvor preko vrha naslona za glavu + dijagonalni deo
+    back.append((cyl(P(Xw(BV + 0.06), yc - 0.12, 1.122), P(Xw(BV + 0.06), yc + 0.12, 1.122), 0.022),
+                 "B429_Pojasevi"))
+    back.append((box(Xw(BV + 0.01), Xw(BV + 0.13), yc - 0.03, yc + 0.03, 1.08, 1.14, 0.015), "B429_Pojasevi"))
+    q = [P(Xw(BV + 0.142), yc + 0.07, 1.06), P(Xw(BV + 0.142), yc + 0.12, 1.06),
+         P(Xw(BV + 0.142), yc - 0.19, 0.46), P(Xw(BV + 0.142), yc - 0.24, 0.46)]
+    strap = poly_prism(q, V(s * 0.004, 0, 0))
     if strap:
         back.append((strap, "B429_Pojasevi"))
-    back.append((cyl(P(Xw(BV + 0.065), yc - 0.13, 1.115), P(Xw(BV + 0.065), yc + 0.13, 1.115), 0.02),
-                 "B429_Pojasevi"))
 
     tilt = rg.Transform.Rotation(-s * math.radians(RECLINE), YA, P(Xw(BV), yc, 0.34))
     for g, lay in back:
@@ -741,26 +894,28 @@ def build_seat(wx, s, yc, outer_side):
         g.Transform(tilt)
         add(g, lay)
 
-    # pojas oko struka sa kopcom
-    add(lb(yc - 0.22, yc - 0.035, 0.27, 0.315, 0.460, 0.464), "B429_Pojasevi")
-    add(lb(yc + 0.035, yc + 0.22, 0.27, 0.315, 0.460, 0.464), "B429_Pojasevi")
-    add(lb(yc - 0.040, yc + 0.040, 0.255, 0.330, 0.462, 0.476, 0.006), "B429_Hrom_metal")
-    add(lb(yc - 0.012, yc + 0.012, 0.270, 0.315, 0.476, 0.481, 0.002), "B429_Oznake")
-
-
-def build_armrests(wx, s):
-    for yg in (-0.75, -0.25, 0.25, 0.75):
-        w = 0.035 if abs(yg) < 0.5 else 0.03
-        add(box(wx + s * 0.20, wx + s * 0.52, yg - w, yg + w, 0.34, 0.60, 0.02), "B429_Koza_tamna")
+    # --- pojas oko struka sa kopcom
+    add(box(Xw(0.27), Xw(0.315), yc - 0.22, yc - 0.035, 0.444, 0.448), "B429_Pojasevi")
+    add(box(Xw(0.27), Xw(0.315), yc + 0.035, yc + 0.22, 0.444, 0.448), "B429_Pojasevi")
+    add(box(Xw(0.255), Xw(0.330), yc - 0.040, yc + 0.040, 0.446, 0.460, 0.006), "B429_Hrom_metal")
+    add(box(Xw(0.270), Xw(0.315), yc - 0.012, yc + 0.012, 0.460, 0.465, 0.002), "B429_Oznake")
 
 
 def build_table(wx, s, yg):
     def Xw(v):
         return wx + s * v
-    add(box(Xw(0.34), Xw(0.54), yg - 0.018, yg + 0.018, 0.60, 0.64, 0.01), "B429_Koza_tamna")
-    add(box(Xw(0.40), Xw(0.66), yg - 0.15, yg + 0.15, 0.64, 0.662, 0.011), "B429_Sto")
+    # nosac izlazi iz procepa izmedju sedista
+    add(box(Xw(0.30), Xw(0.52), yg - 0.018, yg + 0.018, 0.42, 0.64, 0.012), "B429_Koza_tamna")
+    tp = [(0.40, -0.13), (0.62, -0.15), (0.68, -0.10), (0.68, 0.10), (0.62, 0.15), (0.40, 0.13)]
+    pts = [P(Xw(v), yg + u, 0.64) for (v, u) in tp]
+    pl = rg.PolylineCurve(pts + [pts[0]])
+    try:
+        c = rg.Curve.CreateFilletCornersCurve(pl, 0.03, TOLM, 0.01)
+    except Exception:
+        c = None
+    add(prism(c if c else pl, V(0, 0, 0.022)), "B429_Sto")
     for dy in (-0.065, 0.065):
-        c0 = P(Xw(0.53), yg + dy, 0.662)
+        c0 = P(Xw(0.57), yg + dy, 0.662)
         add(cyl(c0, P(c0.X, c0.Y, 0.666), 0.040), "B429_Hrom_metal")
         add(cyl(P(c0.X, c0.Y, 0.664), P(c0.X, c0.Y, 0.6675), 0.033), "B429_Pod_prostirka")
 
@@ -773,7 +928,6 @@ def build_cabin():
         for yc in SEAT_Y:
             outer = 0 if abs(yc) < 0.1 else (1 if yc > 0 else -1)
             build_seat(wx, s, yc, outer)
-        build_armrests(wx, s)
         if s == -1:
             build_table(wx, s, TABLE_GAP_Y)
 

@@ -49,6 +49,7 @@ AFT_WIN_Z = (0.55, 1.08)
 K = Rhino.RhinoMath.UnitScale(Rhino.UnitSystem.Meters, sc.doc.ModelUnitSystem)
 TOLM = max(sc.doc.ModelAbsoluteTolerance / K, 1e-4)
 COUNT = [0]
+SKIPPED = [0]
 LAYER_IDX = {}
 
 LAYERS = [
@@ -116,6 +117,17 @@ def add(g, layer):
         for item in g:
             add(item, layer)
         return
+    try:
+        bb = g.GetBoundingBox(True)
+        if (bb.Min.X < -0.15 or bb.Max.X > L + 0.15 or
+                bb.Min.Y < -W / 2.0 - 0.20 or bb.Max.Y > W / 2.0 + 0.20 or
+                bb.Min.Z < -0.15 or bb.Max.Z > H + 0.25):
+            print("PRESKOCENO (van kabine) sloj %s: %.2f x %.2f x %.2f m" % (
+                layer, bb.Max.X - bb.Min.X, bb.Max.Y - bb.Min.Y, bb.Max.Z - bb.Min.Z))
+            SKIPPED[0] += 1
+            return
+    except Exception:
+        pass
     if K != 1.0:
         g.Transform(rg.Transform.Scale(rg.Point3d.Origin, K))
     attr = rdo.ObjectAttributes()
@@ -127,15 +139,36 @@ def add(g, layer):
     COUNT[0] += 1
 
 
+USE_FILLET_EDGES = False   # True = pokusaj Rhino fillet svih ivica (nestabilno na nekim verzijama)
+
+
 def box(x0, x1, y0, y1, z0, z1, r=0.0):
-    """Kutija sa opcionim zaobljenjem svih ivica radijusom r."""
+    """Kutija; r>0 zaobljava cetiri ivice oko najtanje dimenzije (stabilno, bez fillet-a)."""
     xa, xb = min(x0, x1), max(x0, x1)
     ya, yb = min(y0, y1), max(y0, y1)
     za, zb = min(z0, z1), max(z0, z1)
     b = rg.Box(rg.BoundingBox(P(xa, ya, za), P(xb, yb, zb))).ToBrep()
-    if r > 0:
-        m = min(xb - xa, yb - ya, zb - za)
-        rr = min(r, m * 0.45)
+    if r <= 0:
+        return b
+    dx, dy, dz = xb - xa, yb - ya, zb - za
+    dims = [dx, dy, dz]
+    k = dims.index(min(dims))
+    cx, cy, cz = (xa + xb) / 2.0, (ya + yb) / 2.0, (za + zb) / 2.0
+    if k == 2:
+        o, u, v, w, h, vec = P(cx, cy, za), XA, YA, dx, dy, V(0, 0, dz)
+    elif k == 1:
+        o, u, v, w, h, vec = P(cx, ya, cz), XA, ZA, dx, dz, V(0, dy, 0)
+    else:
+        o, u, v, w, h, vec = P(xa, cy, cz), YA, ZA, dy, dz, V(dx, 0, 0)
+    rr = min(r, min(w, h) * 0.45)
+    if rr > 1e-4:
+        try:
+            pr = prism(rrect(o, u, v, w, h, rr), vec)
+            if pr is not None:
+                return pr
+        except Exception:
+            pass
+    if USE_FILLET_EDGES:
         try:
             idx = list(range(b.Edges.Count))
             res = rg.Brep.CreateFilletEdges(
@@ -150,8 +183,10 @@ def box(x0, x1, y0, y1, z0, z1, r=0.0):
 
 def cyl(p0, p1, r):
     axis = p1 - p0
+    h = axis.Length
+    axis.Unitize()
     c = rg.Circle(rg.Plane(p0, axis), r)
-    return rg.Cylinder(c, axis.Length).ToBrep(True, True)
+    return rg.Cylinder(c, h).ToBrep(True, True)
 
 
 def prism(curve, vec):
@@ -547,7 +582,7 @@ def main():
         Rhino.RhinoApp.RunScript("_-Zoom _All _Extents", False)
     except Exception:
         pass
-    print("Gotovo: %d objekata. Slojevi: B429_*" % COUNT[0])
+    print("Gotovo: %d objekata (preskoceno van kabine: %d). Slojevi: B429_*" % (COUNT[0], SKIPPED[0]))
 
 
 main()

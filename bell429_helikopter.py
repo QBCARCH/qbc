@@ -585,6 +585,11 @@ def door_parts(sg):
         inner = win_curve(w, sg * 0.80, WIN_R)
         for g in ring(outer, inner, V(0, -sg * 0.016, 0)):
             parts.append((g, "B429_Okviri_prozora"))
+    # tanka hrom lajsna u unutrasnjoj ivici prozora
+    for w in (WIN_AFT, WIN_FWD):
+        for g in ring(win_curve(offset_poly(w, 0.004), sg * 0.784, WIN_R + 0.004),
+                      win_curve(w, sg * 0.784, WIN_R), V(0, -sg * 0.004, 0)):
+            parts.append((g, "B429_Hrom_metal"))
     # svetla unutrasnja obloga sa izrezima prozora
     trim = box(-0.80, 0.80, sg * 0.784, sg * 0.80, 0.08, 1.23, 0.10)
     tcut = [prism(win_curve(offset_poly(w, 0.045), sg * 0.70, WIN_R + 0.04), V(0, sg * 0.25, 0))
@@ -681,6 +686,8 @@ def build_cabin_shell():
     # pod
     add(box(-XB - 0.04, XB + 0.04, -0.82, 0.82, -0.05, 0.0), "B429_Pod_prostirka")
     aw = 0.32
+    for sx in (-1, 1):
+        add(box(sx * aw - 0.006, sx * aw + 0.006, -0.78, 0.78, 0.0, 0.012, 0.002), "B429_Alu_prag")
     add(box(-aw, aw, -0.78, 0.78, 0.0, 0.008, 0.002), "B429_Pod_tepih")
     xr = -aw + 0.01
     while xr < aw - 0.005:
@@ -751,8 +758,18 @@ def build_cabin_ceiling():
     for sx in (-1, 1):
         add(box(sx * 0.13, sx * 0.136, -0.66, 0.66, H - 0.05, H - 0.01), "B429_LED")
     for y in (-0.52, -0.18, 0.18, 0.52):
-        add(cyl(P(0, y, H - 0.06), P(0, y, H - 0.064), 0.028), "B429_Hrom_metal")
-        add(cyl(P(0, y, H - 0.064), P(0, y, H - 0.066), 0.018), "B429_Svetla")
+        add(cyl(P(-0.06, y, H - 0.06), P(-0.06, y, H - 0.064), 0.026), "B429_Hrom_metal")
+        add(cyl(P(-0.06, y, H - 0.064), P(-0.06, y, H - 0.066), 0.017), "B429_Svetla")
+        # mlaznica za vazduh (hrom "oko")
+        add(cyl(P(0.06, y, H - 0.06), P(0.06, y, H - 0.066), 0.024), "B429_Hrom_metal")
+        add(sphere(P(0.06, y, H - 0.066), 0.016), "B429_Hrom_metal")
+    # osvetljeni znak (pojasevi) u sredini konzole
+    add(box(-0.05, 0.05, -0.035, 0.035, H - 0.063, H - 0.06, 0.008), "B429_LED")
+    # zvucnici u ravnom plafonu
+    for sx in (-1, 1):
+        for y in (-0.30, 0.30):
+            add(cyl(P(sx * 0.855, y, H), P(sx * 0.855, y, H - 0.004), 0.034), "B429_Hrom_metal")
+            add(cyl(P(sx * 0.855, y, H - 0.004), P(sx * 0.855, y, H - 0.006), 0.030), "B429_Plafon_detalji")
     # rukohvati - JEDAN set, uz ivicu ravnog plafona iznad vrata
     for sg in (1, -1):
         for xh in (-0.45, 0.45):
@@ -799,12 +816,125 @@ def hsec(Xw, yc, z, w, d, v0, n, N=24):
     return closed_curve(pts)
 
 
+def bsec_cp(w, d, b):
+    h = w / 2.0
+    return [(-h + 0.03, 0.0), (h - 0.03, 0.0), (h, 0.025), (h, d + b), (h - 0.055, d + b + 0.004),
+            (h - 0.11, d), (-h + 0.11, d), (-h + 0.055, d + b + 0.004), (-h, d + b), (-h, 0.025)]
+
+
+def bspline_closed(cp, n=24):
+    """Tacke uniformne periodicne kubne B-spline krive (isto sto Rhino pravi iz kontrolnih tacaka)."""
+    N = len(cp)
+    out = []
+    for i in range(N):
+        p0, p1, p2, p3 = cp[i - 1], cp[i], cp[(i + 1) % N], cp[(i + 2) % N]
+        for k in range(n):
+            t = k / float(n)
+            t2, t3 = t * t, t * t * t
+            b0 = (1 - t) ** 3 / 6.0
+            b1 = (3 * t3 - 6 * t2 + 4) / 6.0
+            b2 = (-3 * t3 + 3 * t2 + 3 * t + 1) / 6.0
+            b3 = t3 / 6.0
+            out.append((b0 * p0[0] + b1 * p1[0] + b2 * p2[0] + b3 * p3[0],
+                        b0 * p0[1] + b1 * p1[1] + b2 * p2[1] + b3 * p3[1]))
+    return out
+
+
+def upper_side(pts):
+    """Gornja (prednja) strana zatvorene krive kao sortirana lista (a, b)."""
+    bmax = max(p[1] for p in pts)
+    bmin = min(p[1] for p in pts)
+    mid = (bmax + bmin) / 2.0
+    sel = sorted([p for p in pts if p[1] > mid])
+    return sel
+
+
+def interp(sel, a):
+    if a <= sel[0][0]:
+        return sel[0][1]
+    for i in range(len(sel) - 1):
+        a0, a1 = sel[i][0], sel[i + 1][0]
+        if a0 <= a <= a1:
+            if a1 - a0 < 1e-9:
+                return sel[i][1]
+            t = (a - a0) / (a1 - a0)
+            return sel[i][1] + (sel[i + 1][1] - sel[i][1]) * t
+    return sel[-1][1]
+
+
+_BACK_FRONT = None
+_CUSH_TOP = None
+
+
+def back_front(z, u):
+    """Prednja povrsina naslona (v od pregrade, bez nagiba) na visini z i bocnom pomaku u."""
+    global _BACK_FRONT
+    if _BACK_FRONT is None:
+        _BACK_FRONT = [(st[0], st[4], upper_side(bspline_closed(bsec_cp(st[1], st[2], st[3]))))
+                       for st in BACK_ST]
+    S = _BACK_FRONT
+    if z <= S[0][0]:
+        return BV + S[0][1] + interp(S[0][2], u)
+    for i in range(len(S) - 1):
+        if S[i][0] <= z <= S[i + 1][0]:
+            t = (z - S[i][0]) / (S[i + 1][0] - S[i][0])
+            va = BV + S[i][1] + interp(S[i][2], u)
+            vb = BV + S[i + 1][1] + interp(S[i + 1][2], u)
+            return va + (vb - va) * t
+    return BV + S[-1][1] + interp(S[-1][2], u)
+
+
+def cush_top(v):
+    """Gornja povrsina jastuka (z) na dubini v, u srednjem delu sedista."""
+    global _CUSH_TOP
+    if _CUSH_TOP is None:
+        _CUSH_TOP = upper_side(bspline_closed(CUSH_PROF))
+    return interp(_CUSH_TOP, v)
+
+
+def join_closed(fr, bk):
+    try:
+        c1 = rg.Curve.CreateInterpolatedCurve(fr, 3)
+        c2 = rg.Curve.CreateInterpolatedCurve(bk, 3)
+        parts = [c1, rg.LineCurve(fr[-1], bk[0]), c2, rg.LineCurve(bk[-1], fr[0])]
+        j = rg.Curve.JoinCurves(parts, TOLM)
+        if j and len(j) == 1:
+            return j[0]
+    except Exception:
+        pass
+    pts = list(fr) + list(bk)
+    return rg.PolylineCurve(pts + [pts[0]])
+
+
+def conform_panel(stations, a0, a1, pfun, t_front, t_back, shrink=0.01, na=12):
+    """Tanak panel koji nalegne na povrsinu: pfun(stanica, a, odmak) -> Point3d."""
+    curves = []
+    for j, st in enumerate(stations):
+        b0, b1, tf = a0, a1, t_front
+        if j == 0 or j == len(stations) - 1:
+            b0 += shrink
+            b1 -= shrink
+            tf -= 0.003
+        aa = [b0 + (b1 - b0) * k / float(na) for k in range(na + 1)]
+        fr = [pfun(st, a, tf) for a in aa]
+        bk = [pfun(st, a, t_back) for a in reversed(aa)]
+        curves.append(join_closed(fr, bk))
+    return capped_loft(curves)
+
+
+def conform_curve(p0, p1, fn, n=8):
+    """Kriva izmedju dve tacke u parametrima (a,b) koja prati povrsinu fn(a,b)."""
+    pts = [fn(p0[0] + (p1[0] - p0[0]) * k / float(n), p0[1] + (p1[1] - p0[1]) * k / float(n))
+           for k in range(n + 1)]
+    try:
+        return rg.Curve.CreateInterpolatedCurve(pts, 3)
+    except Exception:
+        return rg.PolylineCurve(pts)
+
+
 def bsec(Xw, yc, z, w, d, b, v0):
     """Presek naslona sa isturenim bocnim jastucima (ergonomski U oblik)."""
-    h = w / 2.0
-    cp = [(-h + 0.03, 0.0), (h - 0.03, 0.0), (h, 0.025), (h, d + b), (h - 0.055, d + b + 0.004),
-          (h - 0.11, d), (-h + 0.11, d), (-h + 0.055, d + b + 0.004), (-h, d + b), (-h, 0.025)]
-    return closed_curve([P(Xw(v0 + v), yc + u, z) for (u, v) in cp])
+    return closed_curve([P(Xw(v0 + v), yc + u, z) for (u, v) in bsec_cp(w, d, b)])
 
 
 def vz_curve(Xw, u, prof, scale=1.0, raise_top=0.0):
@@ -849,27 +979,32 @@ def build_seat(wx, s, yc, outer_side):
     add(capped_loft(secs), "B429_Postolje_sedista")
     add(capped_loft([hsec(Xw, yc, 0.0, SEAT_W - 0.15, 0.27, 0.165, 6.0),
                      hsec(Xw, yc, 0.036, SEAT_W - 0.15, 0.27, 0.165, 6.0)]), "B429_Pod_prostirka")
+    # LED traka ispod cela postolja (osvetljenje poda)
+    add(box(Xw(0.432), Xw(0.44), yc - hw + 0.09, yc + hw - 0.09, 0.006, 0.014), "B429_LED")
     # sav i hrom lajsna na gornjoj ivici postolja
     add(box(Xw(0.575), Xw(0.582), yc - hw + 0.03, yc + hw - 0.03, 0.27, 0.278), "B429_Hrom_metal")
 
     # --- jastuk (loft profila preko sirine)
     crvs = [vz_curve(Xw, yc + f * (hw - 0.006), CUSH_PROF, k, rz) for (f, k, rz) in CUSH_ST]
     add(capped_loft(crvs), "B429_Koza_svetla")
-    # centralni stepovani umetak jastuka (prati nagib)
-    slope = math.atan2(0.452 - 0.438, 0.48 - 0.30)
-    cush = []
-    cush.append((box(Xw(0.20), Xw(0.55), yc - 0.135, yc + 0.135, 0.436, 0.452, 0.012), "B429_Koza_srednja"))
-    zq = 0.4525
-    if SEAT_QUILT:
-        for (a_, b_) in diamond_segments(-0.125, 0.125, 0.21, 0.54, 0.055):
-            cush.append((rg.LineCurve(P(Xw(a_[1]), yc + a_[0], zq), P(Xw(b_[1]), yc + b_[0], zq)), "B429_Savovi"))
+    # centralni umetak jastuka koji tacno nalegne na povrsinu, trake i stepovanje
+    def cp_(u, v, t):
+        return P(Xw(v), yc + u, cush_top(v) + t)
+    CU0, CU1, CV0, CV1 = -0.13, 0.13, 0.20, 0.555
+    add(conform_panel([CU0, CU0 + 0.01, 0.0, CU1 - 0.01, CU1], CV0, CV1, cp_, 0.007, -0.012),
+        "B429_Koza_srednja")
     if SEAT_STRIPES:
         for su in (-0.105, 0.105):
-            cush.append((box(Xw(0.13), Xw(0.62), yc + su - 0.012, yc + su + 0.012, 0.448, 0.455), "B429_Koza_tamna"))
-    rot = rg.Transform.Rotation(-s * slope, YA, P(Xw(0.375), yc, 0.445))
-    for g, lay in cush:
-        g.Transform(rot)
-        add(g, lay)
+            add(conform_panel([su - 0.012, su - 0.008, su + 0.008, su + 0.012], CV0 + 0.005, CV1 - 0.005,
+                              cp_, 0.0105, 0.005, shrink=0.004), "B429_Koza_tamna")
+    if SEAT_QUILT:
+        for (p0, p1) in diamond_segments(CU0 + 0.006, CU1 - 0.006, CV0 + 0.006, CV1 - 0.006, 0.055):
+            add(conform_curve(p0, p1, lambda u, v: cp_(u, v, 0.0075)), "B429_Savovi")
+    # dvostruki savovi oko umetka i na bocnim jastucima
+    for off in (0.008, 0.014):
+        for uu in (CU0 - off, CU1 + off):
+            add(conform_curve((uu, CV0), (uu, CV1), lambda u, v: cp_(u, v, 0.0005)), "B429_Savovi")
+        add(conform_curve((CU0, CV1 + off), (CU1, CV1 + off), lambda u, v: cp_(u, v, 0.0005)), "B429_Savovi")
 
     # --- naslon (gradi se uspravno, pa se naginje prema pregradi)
     back = []
@@ -881,27 +1016,36 @@ def build_seat(wx, s, yc, outer_side):
         zz = z - 0.004 if i == len(BACK_ST) - 1 else z
         shell.append(hsec(Xw, yc, zz, w + 0.008, 0.035, BV + vo - 0.01, 5.0))
     back.append((capped_loft(shell), "B429_Koza_tamna"))
-    # centralni umetak ledja i umetak naslona za glavu
-    vfr = BV + 0.008 + 0.085
-    back.append((box(Xw(vfr - 0.03), Xw(vfr + 0.008), yc - 0.13, yc + 0.13, 0.42, 0.86, 0.02), "B429_Koza_srednja"))
-    back.append((box(Xw(BV + 0.09), Xw(BV + 0.128), yc - 0.10, yc + 0.10, 0.96, 1.10, 0.02), "B429_Koza_srednja"))
-    vq = vfr + 0.0085
-    if SEAT_QUILT:
-        for (a_, b_) in diamond_segments(-0.12, 0.12, 0.43, 0.85, 0.06):
-            back.append((rg.LineCurve(P(Xw(vq), yc + a_[0], a_[1]), P(Xw(vq), yc + b_[0], b_[1])), "B429_Savovi"))
+    # umetci ledja i naslona za glavu koji tacno nalegnu na zakrivljenu prednju povrsinu
+    def bp_(z, u, t):
+        return P(Xw(back_front(z, u) + t), yc + u, z)
+    zl_back = [0.42, 0.43, 0.50, 0.58, 0.66, 0.74, 0.80, 0.85, 0.86]
+    zl_head = [0.96, 0.97, 1.00, 1.04, 1.08, 1.095, 1.10]
+    back.append((conform_panel(zl_back, -0.13, 0.13, bp_, 0.007, -0.02), "B429_Koza_srednja"))
+    back.append((conform_panel(zl_head, -0.10, 0.10, bp_, 0.007, -0.02), "B429_Koza_srednja"))
     if SEAT_STRIPES:
         for su in (-0.105, 0.105):
-            back.append((box(Xw(vq), Xw(vq + 0.004), yc + su - 0.012, yc + su + 0.012, 0.40, 0.88), "B429_Koza_tamna"))
-            back.append((box(Xw(BV + 0.128), Xw(BV + 0.132), yc + su * 0.8 - 0.012, yc + su * 0.8 + 0.012,
-                             0.95, 1.11), "B429_Koza_tamna"))
+            back.append((conform_panel([0.425, 0.43, 0.60, 0.80, 0.85, 0.855], su - 0.012, su + 0.012,
+                                       bp_, 0.0105, 0.005, shrink=0.004), "B429_Koza_tamna"))
+        for su in (-0.075, 0.075):
+            back.append((conform_panel([0.965, 0.97, 1.03, 1.09, 1.095], su - 0.010, su + 0.010,
+                                       bp_, 0.0105, 0.005, shrink=0.004), "B429_Koza_tamna"))
+    if SEAT_QUILT:
+        for (p0, p1) in diamond_segments(-0.124, 0.124, 0.43, 0.85, 0.06):
+            back.append((conform_curve((p0[1], p0[0]), (p1[1], p1[0]),
+                                       lambda z, u: bp_(z, u, 0.0075)), "B429_Savovi"))
+    # dvostruki savovi na granici bocnih jastuka
+    for off in (0.008, 0.014):
+        for uu in (-0.13 - off, 0.13 + off):
+            back.append((conform_curve((0.40, uu), (0.86, uu), lambda z, u: bp_(z, u, 0.0005)), "B429_Savovi"))
     # Bell stit na naslonu za glavu
-    vf = BV + 0.129
+    vf = back_front(1.075, 0.0) + 0.0095
     sw, sh, zt = 0.05, 0.06, 1.075
     pts = [P(Xw(vf), yc - sw / 2, zt), P(Xw(vf), yc + sw / 2, zt), P(Xw(vf), yc + sw / 2, zt - sh * 0.55),
            P(Xw(vf), yc, zt - sh), P(Xw(vf), yc - sw / 2, zt - sh * 0.55)]
-    shield = poly_prism(pts, V(s * 0.003, 0, 0))
+    shield = poly_prism(pts, V(s * 0.0025, 0, 0))
     if shield:
-        back.append((shield, "B429_Koza_tamna"))
+        back.append((shield, "B429_Hrom_metal"))
     tilt = rg.Transform.Rotation(-s * math.radians(RECLINE), YA, P(Xw(BV), yc, 0.34))
     for g, lay in back:
         if g is None:

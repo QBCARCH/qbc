@@ -29,14 +29,30 @@ DOOR_OPEN_STBD = 1.0        # desna klizna vrata: 0 = zatvorena ... 1 = potpuno 
 DOOR_OPEN_PORT = 0.0        # leva klizna vrata
 DOOR_TRAVEL = 1.40          # hod kliznih vrata unazad
 
-XB = 0.90                   # polozaj pregrada kabine (+-XB)
-YW = 0.775                  # unutrasnja polovina sirine kabine (obloga vrata)
-H = 1.36                    # visina plafona u sredini
-ZW = 1.15                   # visina na kojoj obloga prelazi u luk plafona
-SKIN_A = 0.88               # polusirina trupa u zoni kabine
+# --- MERE PO BELL SPECIFIKACIJI (Bell 429 Product Specifications / EASA) ---
+#   unutrasnja kabina 79 x 60 x 49 in = 2.00 x 1.52 x 1.24 m
+#   cist otvor kliznih vrata 61.9 x 44.25 in = 1.587 x 1.123 m
+#   sirina trupa 1.63 m, duzina trupa 11.68 m, glavni rotor 10.97 m (4 kraka),
+#   repni rotor 1.65 m (4 kraka, "stacked"), ukupna visina 4.04 m (uzeto do vrha repnog rotora)
+#   Procena (nije nadjeno u izvorima): visina poda od tla, razmak skija, mere sedista.
+XB = 1.00                   # pregrade kabine na +-XB  -> duzina 2.00 m
+YW = 0.76                   # unutrasnja polusirina    -> sirina 1.52 m
+H = 1.24                    # visina plafona (ravan deo) -> 1.24 m
+ZW = 1.17                   # visina gde obloga prelazi u zakrivljeni deo plafona
+SKIN_A = 0.815              # polusirina trupa          -> 1.63 m
+Y_DIN = 0.775               # unutrasnja povrsina kliznih vrata
 
-AP_X = 0.82                 # polovina duzine otvora kliznih vrata
-AP_Z0, AP_Z1 = 0.04, 1.25   # visina otvora
+AP_X = 0.7935               # polovina cistog otvora vrata -> 1.587 m
+AP_Z0 = 0.04
+AP_Z1 = AP_Z0 + 1.123       # cist otvor vrata visine 1.123 m
+
+GROUND_Z = -0.72            # tlo (donja ivica skija) u odnosu na pod kabine - PROCENA
+OVERALL_H = 4.04            # ukupna visina (do vrha repnog rotora)
+NOSE_X = 3.55               # vrh nosa
+FUSE_LEN = 11.68            # duzina trupa
+TAIL_DX = -1.13             # pomeranje repa unazad (da duzina trupa bude 11.68 m)
+TR_R = 0.825                # poluprecnik repnog rotora (1.65 m)
+BACK_ZSCALE = 0.91          # visina naslona prilagodjena kabini od 1.24 m
 
 SEAT_W = 0.48
 SEAT_PITCH = 0.50
@@ -58,7 +74,8 @@ TOLM = max(sc.doc.ModelAbsoluteTolerance / K, 1e-4)
 COUNT = [0]
 SKIPPED = [0]
 LAYER_IDX = {}
-ENV = [-8.0, 6.5, -7.0, 7.0, -1.3, 4.2]   # dozvoljena zapremina (xmin,xmax,ymin,ymax,zmin,zmax)
+ENV = [-9.0, 6.6, -7.0, 7.0, -1.3, 4.2]
+SHIFT = [0.0]                 # privremeno pomeranje po X (kokpit, rep)   # dozvoljena zapremina (xmin,xmax,ymin,ymax,zmin,zmax)
 
 LAYERS = [
     ("B429_Oplata_siva",          (168, 172, 178), 0.70),
@@ -140,6 +157,8 @@ def add(g, layer):
         for item in g:
             add(item, layer)
         return
+    if SHIFT[0] != 0.0:
+        g.Transform(rg.Transform.Translation(SHIFT[0], 0, 0))
     try:
         bb = g.GetBoundingBox(True)
         if (bb.Min.X < ENV[0] or bb.Max.X > ENV[1] or bb.Min.Y < ENV[2] or
@@ -298,24 +317,24 @@ def poly_prism(pts, vec):
 # ============================ TRUP ============================
 # x, polusirina a, donja z, gornja z, eksponent oblika n (veci n = kvadratniji presek)
 STA = [
-    (3.45, 0.05, 0.10, 0.26, 2.0),
-    (3.30, 0.22, 0.02, 0.52, 2.2),
-    (3.05, 0.42, -0.10, 0.86, 2.4),
-    (2.70, 0.60, -0.20, 1.12, 2.8),
-    (2.30, 0.74, -0.25, 1.32, 3.4),
-    (1.85, 0.83, -0.26, 1.45, 5.0),
-    (1.35, 0.88, -0.26, 1.50, 7.0),
-    (1.05, 0.88, -0.26, 1.52, 8.0),
-    (-0.50, 0.88, -0.26, 1.52, 8.0),
-    (-1.60, 0.88, -0.26, 1.50, 8.0),
-    (-2.05, 0.87, -0.24, 1.44, 6.0),
-    (-2.55, 0.74, -0.14, 1.30, 4.0),
-    (-3.05, 0.52, 0.12, 1.20, 3.0),
-    (-3.60, 0.34, 0.52, 1.18, 2.4),
-    (-4.50, 0.25, 0.62, 1.12, 2.2),
-    (-5.50, 0.19, 0.66, 1.08, 2.1),
-    (-6.20, 0.13, 0.70, 1.02, 2.0),
-    (-6.55, 0.06, 0.76, 0.98, 2.0),
+    (3.55, 0.05, 0.10, 0.26, 2.0),
+    (3.40, 0.21, 0.02, 0.52, 2.2),
+    (3.15, 0.39, -0.10, 0.86, 2.4),
+    (2.80, 0.56, -0.20, 1.12, 2.8),
+    (2.40, 0.69, -0.25, 1.32, 3.4),
+    (1.95, 0.77, -0.26, 1.45, 5.0),
+    (1.45, 0.815, -0.26, 1.48, 7.0),
+    (1.15, 0.815, -0.26, 1.50, 8.0),
+    (-0.55, 0.815, -0.26, 1.50, 8.0),
+    (-1.70, 0.815, -0.26, 1.48, 8.0),
+    (-2.15, 0.81, -0.24, 1.42, 6.0),
+    (-2.65, 0.69, -0.14, 1.28, 4.0),
+    (-3.15, 0.48, 0.12, 1.18, 3.0),
+    (-3.75, 0.32, 0.52, 1.16, 2.4),
+    (-4.90, 0.24, 0.62, 1.11, 2.2),
+    (-6.20, 0.18, 0.66, 1.07, 2.1),
+    (-7.20, 0.12, 0.70, 1.02, 2.0),
+    (-7.65, 0.06, 0.76, 0.98, 2.0),
 ]
 
 
@@ -392,7 +411,7 @@ def build_hull():
 
 
 def build_cockpit_glass():
-    xs = [3.0, 2.8, 2.55, 2.3, 2.05, 1.8, 1.55, 1.3, 1.12]
+    xs = [3.1, 2.9, 2.65, 2.4, 2.15, 1.9, 1.65, 1.4, 1.22]
     for (t0, t1) in ((4, 72), (108, 176)):
         crvs = []
         for x in xs:
@@ -411,7 +430,7 @@ def build_cockpit_glass():
         if g is not None:
             add(g, "B429_Staklo_tamno")
     # ram vetrobrana (tamna sipka u sredini)
-    add(box(2.55, 2.68, -0.02, 0.02, 1.00, 1.30, 0.01), "B429_Oplata_tamna")
+    add(box(2.65, 2.78, -0.02, 0.02, 1.00, 1.30, 0.01), "B429_Oplata_tamna")
 
 
 def build_engine_cowling():
@@ -430,36 +449,43 @@ def build_engine_cowling():
 
 
 def build_tail():
-    # vertikalni stabilizator (rep)
-    fin = [P(-5.2, -0.04, 1.08), P(-6.5, -0.04, 2.02), P(-6.98, -0.04, 2.02),
-           P(-7.0, -0.04, 0.85), P(-6.4, -0.04, 0.85), P(-5.2, -0.04, 1.00)]
-    add(poly_prism(fin, V(0, 0.08, 0)), "B429_Oplata_siva")
-    vent = [P(-6.0, -0.035, 0.80), P(-6.55, -0.035, 0.30), P(-6.98, -0.035, 0.30),
-            P(-6.98, -0.035, 0.85)]
-    add(poly_prism(vent, V(0, 0.07, 0)), "B429_Oplata_siva")
-    # horizontalni stabilizator sa krajnjim pločama
-    add(box(-5.30, -4.85, -0.95, 0.95, 0.86, 0.90, 0.01), "B429_Oplata_siva")
-    for sy in (-0.95, 0.95):
-        add(box(-5.35, -4.82, sy - 0.0125, sy + 0.0125, 0.45, 1.35, 0.03), "B429_Oplata_siva")
-    # repni rotor (bocno na levoj strani repa)
-    hub = P(-6.80, 0.12, 1.62)
-    add(cyl(P(hub.X, 0.04, hub.Z), P(hub.X, 0.20, hub.Z), 0.08), "B429_Oplata_tamna")
-    for ang in (12.0, 192.0):
-        a = math.radians(ang)
-        ux, uz = math.sin(a), math.cos(a)
-        px, pz = -uz, ux
-        pts = [P(hub.X + ux * 0.10 + px * 0.075, 0.18, hub.Z + uz * 0.10 + pz * 0.075),
-               P(hub.X + ux * 0.95 + px * 0.045, 0.18, hub.Z + uz * 0.95 + pz * 0.045),
-               P(hub.X + ux * 0.95 - px * 0.045, 0.18, hub.Z + uz * 0.95 - pz * 0.045),
-               P(hub.X + ux * 0.10 - px * 0.075, 0.18, hub.Z + uz * 0.10 - pz * 0.075)]
-        add(poly_prism(pts, V(0, 0.015, 0)), "B429_Rotor_crni")
-    # svetla
-    add(sphere(P(-4.95, 0.97, 1.40), 0.03), "B429_Svetlo_crveno")
-    add(sphere(P(-4.95, -0.97, 1.40), 0.03), "B429_Svetlo_zeleno")
-    add(sphere(P(-6.98, 0.0, 2.05), 0.035), "B429_Svetla")
-    # antene i pitot
+    tr_z = OVERALL_H + GROUND_Z - TR_R          # centar repnog rotora (vrh = ukupna visina)
+    fin_top = tr_z + 0.05
+    SHIFT[0] = TAIL_DX
+    try:
+        # vertikalni stabilizator
+        fin = [P(-5.2, -0.04, 1.08), P(-6.5, -0.04, fin_top), P(-6.98, -0.04, fin_top),
+               P(-7.0, -0.04, 0.85), P(-6.4, -0.04, 0.85), P(-5.2, -0.04, 1.00)]
+        add(poly_prism(fin, V(0, 0.08, 0)), "B429_Oplata_siva")
+        vent = [P(-6.0, -0.035, 0.80), P(-6.55, -0.035, 0.30), P(-6.98, -0.035, 0.30),
+                P(-6.98, -0.035, 0.85)]
+        add(poly_prism(vent, V(0, 0.07, 0)), "B429_Oplata_siva")
+        # horizontalni stabilizator sa krajnjim plocama
+        add(box(-5.30, -4.85, -0.95, 0.95, 0.86, 0.90, 0.01), "B429_Oplata_siva")
+        for sy in (-0.95, 0.95):
+            add(box(-5.35, -4.82, sy - 0.0125, sy + 0.0125, 0.45, 1.35, 0.03), "B429_Oplata_siva")
+        # repni rotor: 4 kraka u dva para ("stacked"), precnik 1.65 m, na levoj strani
+        hx = -6.80
+        add(cyl(P(hx, 0.04, tr_z), P(hx, 0.24, tr_z), 0.08), "B429_Oplata_tamna")
+        for (yb, a0) in ((0.18, 12.0), (0.21, 72.0)):
+            for ang in (a0, a0 + 180.0):
+                a = math.radians(ang)
+                ux, uz = math.sin(a), math.cos(a)
+                px, pz = -uz, ux
+                pts = [P(hx + ux * 0.10 + px * 0.065, yb, tr_z + uz * 0.10 + pz * 0.065),
+                       P(hx + ux * TR_R + px * 0.040, yb, tr_z + uz * TR_R + pz * 0.040),
+                       P(hx + ux * TR_R - px * 0.040, yb, tr_z + uz * TR_R - pz * 0.040),
+                       P(hx + ux * 0.10 - px * 0.065, yb, tr_z + uz * 0.10 - pz * 0.065)]
+                add(poly_prism(pts, V(0, 0.015, 0)), "B429_Rotor_crni")
+        # svetla
+        add(sphere(P(-4.95, 0.97, 1.40), 0.03), "B429_Svetlo_crveno")
+        add(sphere(P(-4.95, -0.97, 1.40), 0.03), "B429_Svetlo_zeleno")
+        add(sphere(P(-6.98, 0.0, fin_top + 0.03), 0.035), "B429_Svetla")
+    finally:
+        SHIFT[0] = 0.0
+    # antena i pitot
     add(cyl(P(-2.2, 0.0, 1.42), P(-2.2, 0.0, 1.85), 0.007), "B429_Rotor_crni")
-    add(cyl(P(3.3, 0.0, 0.10), P(3.75, 0.0, 0.09), 0.012), "B429_Hrom_metal")
+    add(cyl(P(3.40, 0.0, 0.10), P(3.85, 0.0, 0.09), 0.012), "B429_Hrom_metal")
 
 
 def build_main_rotor():
@@ -509,16 +535,16 @@ def side_panel(sg, x0, x1, z0, z1, thick, r, layer, off=0.006):
 
 def build_crew_doors():
     for sg in (1, -1):
-        side_panel(sg, 1.14, 2.00, 0.06, 0.98, 0.04, 0.12, "B429_Oplata_siva")
-        a = side_y(1.20)
-        add(box(1.20, 1.36, sg * (a + 0.006), sg * (a + 0.022), 0.64, 0.68, 0.01), "B429_Hrom_metal")
-        add(box(1.14, 1.16, sg * (a - 0.01), sg * (a + 0.008), 0.06, 0.98, 0.0), "B429_Oplata_tamna")
+        side_panel(sg, 1.24, 2.10, 0.06, 0.98, 0.04, 0.12, "B429_Oplata_siva")
+        a = side_y(1.30)
+        add(box(1.30, 1.46, sg * (a + 0.006), sg * (a + 0.022), 0.64, 0.68, 0.01), "B429_Hrom_metal")
+        add(box(1.24, 1.26, sg * (a - 0.01), sg * (a + 0.008), 0.06, 0.98, 0.0), "B429_Oplata_tamna")
 
 
 # Oblici prozora kliznih vrata (x duz vrata, z visina) - prema fotografijama:
 # zadnji prozor ima veliki kosi donji spoljni ugao, prednji je blago trapezast.
-WIN_AFT = [(-0.74, 1.14), (-0.74, 0.78), (-0.53, 0.575), (-0.06, 0.50), (-0.06, 1.14)]
-WIN_FWD = [(0.04, 1.14), (0.04, 0.50), (0.745, 0.50), (0.725, 1.14)]
+WIN_AFT = [(-0.72, 1.06), (-0.72, 0.74), (-0.52, 0.55), (-0.06, 0.48), (-0.06, 1.06)]
+WIN_FWD = [(0.04, 1.06), (0.04, 0.48), (0.72, 0.48), (0.70, 1.06)]
 WIN_R = 0.075
 
 
@@ -570,36 +596,36 @@ def win_curve(poly, y, r):
 def door_parts(sg):
     """Klizna vrata u ZATVORENOM polozaju: lista (geometrija, sloj)."""
     parts = []
-    y_in, y_out = sg * 0.80, sg * (SKIN_A + 0.006)
+    y_in, y_out = sg * Y_DIN, sg * (SKIN_A + 0.006)
     slab = box(-AP_X + 0.005, AP_X - 0.005, min(y_in, y_out), max(y_in, y_out), AP_Z0, AP_Z1, 0.14)
     cutters = [prism(win_curve(w, sg * 0.70, WIN_R), V(0, sg * 0.25, 0)) for w in (WIN_AFT, WIN_FWD)]
     cutters = [c for c in cutters if c is not None]
     for g in diff(slab, cutters):
         parts.append((g, "B429_Oplata_siva"))
-    ymid = sg * (SKIN_A - 0.04)
+    ymid = sg * (SKIN_A - 0.02)
     for w in (WIN_AFT, WIN_FWD):
         gl = prism(win_curve(offset_poly(w, 0.012), ymid - sg * 0.004, WIN_R + 0.01), V(0, sg * 0.008, 0))
         parts.append((gl, "B429_Staklo_tamno"))
         # dubok svetli okvir (reveal) kao na fotografijama
-        outer = win_curve(offset_poly(w, 0.045), sg * 0.80, WIN_R + 0.04)
-        inner = win_curve(w, sg * 0.80, WIN_R)
+        outer = win_curve(offset_poly(w, 0.045), sg * Y_DIN, WIN_R + 0.04)
+        inner = win_curve(w, sg * Y_DIN, WIN_R)
         for g in ring(outer, inner, V(0, -sg * 0.016, 0)):
             parts.append((g, "B429_Okviri_prozora"))
     # tanka hrom lajsna u unutrasnjoj ivici prozora
     for w in (WIN_AFT, WIN_FWD):
-        for g in ring(win_curve(offset_poly(w, 0.004), sg * 0.784, WIN_R + 0.004),
-                      win_curve(w, sg * 0.784, WIN_R), V(0, -sg * 0.004, 0)):
+        for g in ring(win_curve(offset_poly(w, 0.004), sg * (Y_DIN - 0.010), WIN_R + 0.004),
+                      win_curve(w, sg * (Y_DIN - 0.010), WIN_R), V(0, -sg * 0.004, 0)):
             parts.append((g, "B429_Hrom_metal"))
     # svetla unutrasnja obloga sa izrezima prozora
-    trim = box(-0.80, 0.80, sg * 0.784, sg * 0.80, 0.08, 1.23, 0.10)
+    trim = box(-0.78, 0.78, sg * (Y_DIN - 0.010), sg * Y_DIN, 0.08, AP_Z1 - 0.01, 0.10)
     tcut = [prism(win_curve(offset_poly(w, 0.045), sg * 0.70, WIN_R + 0.04), V(0, sg * 0.25, 0))
             for w in (WIN_AFT, WIN_FWD)]
     for g in diff(trim, [c for c in tcut if c is not None]):
         parts.append((g, "B429_Zidovi_plafon"))
     # tamna donja obloga - gornja ivica prati donje ivice prozora (i kosi ugao)
-    lin = [(-0.79, 0.09), (0.79, 0.09), (0.79, 0.44), (0.02, 0.44),
-           (-0.08, 0.45), (-0.53, 0.525), (-0.79, 0.78)]
-    lp = [P(x, sg * 0.784, z) for (x, z) in poly_ccw(lin)]
+    lin = [(-0.77, 0.09), (0.77, 0.09), (0.77, 0.42), (0.02, 0.42),
+           (-0.08, 0.43), (-0.52, 0.505), (-0.77, 0.72)]
+    lp = [P(x, sg * (Y_DIN - 0.010), z) for (x, z) in poly_ccw(lin)]
     try:
         lcrv = rg.Curve.CreateFilletCornersCurve(rg.PolylineCurve(lp + [lp[0]]), 0.04, TOLM, 0.01)
     except Exception:
@@ -608,14 +634,15 @@ def door_parts(sg):
         lcrv = rg.PolylineCurve(lp + [lp[0]])
     parts.append((prism(lcrv, V(0, -sg * 0.012, 0)), "B429_Paneli_tamni"))
     # sav na tamnoj oblozi
-    parts.append((rg.LineCurve(P(-0.75, sg * 0.771, 0.13), P(0.75, sg * 0.771, 0.13)), "B429_Savovi"))
+    parts.append((rg.LineCurve(P(-0.73, sg * (Y_DIN - 0.0225), 0.13), P(0.73, sg * (Y_DIN - 0.0225), 0.13)), "B429_Savovi"))
     # rucica za otvaranje (svetla, uvucena) i EXIT 1
-    parts.append((box(-0.36, -0.20, sg * 0.766, sg * 0.778, 0.445, 0.468, 0.008), "B429_Zidovi_plafon"))
-    parts.append((box(-0.38, -0.26, sg * 0.768, sg * 0.772, 0.37, 0.41, 0.006), "B429_Oznake"))
-    parts.append((box(-0.37, -0.27, sg * 0.766, sg * 0.768, 0.378, 0.402, 0.0), "B429_Zidovi_plafon"))
+    yl = Y_DIN - 0.022                       # unutrasnja povrsina tamne obloge
+    parts.append((box(-0.36, -0.20, sg * (yl - 0.012), sg * yl, 0.425, 0.448, 0.008), "B429_Zidovi_plafon"))
+    parts.append((box(-0.38, -0.26, sg * (yl - 0.004), sg * yl, 0.35, 0.39, 0.006), "B429_Oznake"))
+    parts.append((box(-0.37, -0.27, sg * (yl - 0.005), sg * (yl - 0.004), 0.358, 0.382, 0.0), "B429_Zidovi_plafon"))
     # hrom rukohvati na stubu izmedju prozora
     for x in (-0.075, 0.055):
-        pts = [P(x, sg * 0.784, 0.62), P(x, sg * 0.752, 0.70), P(x, sg * 0.752, 0.95), P(x, sg * 0.784, 1.02)]
+        pts = [P(x, sg * (Y_DIN - 0.010), 0.60), P(x, sg * (Y_DIN - 0.040), 0.67), P(x, sg * (Y_DIN - 0.040), 0.91), P(x, sg * (Y_DIN - 0.010), 0.98)]
         try:
             crv = rg.Curve.CreateInterpolatedCurve(pts, 3)
             res = rg.Brep.CreatePipe(crv, 0.009, False, rg.PipeCapMode.Round, True, TOLM, 0.01)
@@ -637,24 +664,24 @@ def build_sliding_doors():
             g.Transform(T)
             add(g, lay)
         # fiksni okvir otvora, prag i sine
-        o = P(0, sg * 0.76, (AP_Z0 + AP_Z1) / 2.0)
+        o = P(0, sg * (Y_DIN - 0.03), (AP_Z0 + AP_Z1) / 2.0)
         outer = rrect(o, XA, ZA, 2 * AP_X + 0.07, (AP_Z1 - AP_Z0) + 0.07, 0.18)
         inner = rrect(o, XA, ZA, 2 * AP_X, (AP_Z1 - AP_Z0), 0.16)
-        add(ring(outer, inner, V(0, sg * 0.124, 0)), "B429_Okviri_prozora")
-        add(box(-AP_X, AP_X, sg * 0.74, sg * 0.88, 0.0, 0.035, 0.004), "B429_Alu_prag")
-        add(box(-AP_X + 0.05, AP_X - 0.05, sg * 0.80 - 0.006, sg * 0.80 + 0.006, 0.035, 0.037), "B429_Pod_prostirka")
-        for yy in (0.77, 0.84):
+        add(ring(outer, inner, V(0, sg * (SKIN_A + 0.034 - Y_DIN), 0)), "B429_Okviri_prozora")
+        add(box(-AP_X, AP_X, sg * 0.73, sg * SKIN_A, 0.0, 0.035, 0.004), "B429_Alu_prag")
+        add(box(-AP_X + 0.05, AP_X - 0.05, sg * Y_DIN - 0.006, sg * Y_DIN + 0.006, 0.035, 0.037), "B429_Pod_prostirka")
+        for yy in (0.752, 0.797):
             x = -AP_X + 0.04
             while x < AP_X - 0.03:
                 add(cyl(P(x, sg * yy, 0.035), P(x, sg * yy, 0.0375), 0.0045), "B429_Hrom_metal")
                 x += 0.045
         # gornja sina (unutra) i kolica
-        add(box(-0.86, 0.86, sg * 0.745, sg * 0.80, 1.12, 1.16, 0.01), "B429_Alu_prag")
+        add(box(-0.84, 0.84, sg * 0.735, sg * Y_DIN, AP_Z1 + 0.003, AP_Z1 + 0.033, 0.01), "B429_Alu_prag")
         for xr in (-0.35, 0.35):
-            add(box(xr - 0.07, xr + 0.07, sg * 0.75, sg * 0.79, 1.16, 1.18, 0.008), "B429_Hrom_metal")
+            add(box(xr - 0.07, xr + 0.07, sg * 0.74, sg * 0.77, AP_Z1 - 0.012, AP_Z1 + 0.003, 0.006), "B429_Hrom_metal")
         # spoljne sine duz trupa (po kojima klize vrata)
         a = SKIN_A
-        add(box(-2.10, 0.85, sg * a, sg * (a + 0.014), 1.255, 1.285), "B429_Oplata_tamna")
+        add(box(-2.10, 0.85, sg * a, sg * (a + 0.014), AP_Z1 + 0.01, AP_Z1 + 0.04), "B429_Oplata_tamna")
         add(box(-2.10, 0.85, sg * a, sg * (a + 0.014), 0.0, 0.03), "B429_Oplata_tamna")
 
 
@@ -684,38 +711,38 @@ def on_ceiling(parts, x, y):
 
 def build_cabin_shell():
     # pod
-    add(box(-XB - 0.04, XB + 0.04, -0.82, 0.82, -0.05, 0.0), "B429_Pod_prostirka")
-    aw = 0.32
+    add(box(-XB - 0.04, XB + 0.04, -0.80, 0.80, -0.05, 0.0), "B429_Pod_prostirka")
+    aw = XB - 0.58
     for sx in (-1, 1):
-        add(box(sx * aw - 0.006, sx * aw + 0.006, -0.78, 0.78, 0.0, 0.012, 0.002), "B429_Alu_prag")
-    add(box(-aw, aw, -0.78, 0.78, 0.0, 0.008, 0.002), "B429_Pod_tepih")
+        add(box(sx * aw - 0.006, sx * aw + 0.006, -0.75, 0.75, 0.0, 0.012, 0.002), "B429_Alu_prag")
+    add(box(-aw, aw, -0.75, 0.75, 0.0, 0.008, 0.002), "B429_Pod_tepih")
     xr = -aw + 0.01
     while xr < aw - 0.005:
-        add(box(xr - 0.003, xr + 0.003, -0.76, 0.76, 0.008, 0.0105), "B429_Pod_tepih")
+        add(box(xr - 0.003, xr + 0.003, -0.74, 0.74, 0.008, 0.0105), "B429_Pod_tepih")
         xr += 0.02
     for sx in (-1, 1):
-        add(box(sx * aw, sx * XB, -0.78, 0.78, 0.0, 0.006, 0.002), "B429_Pod_prostirka")
+        add(box(sx * aw, sx * XB, -0.75, 0.75, 0.0, 0.006, 0.002), "B429_Pod_prostirka")
         for vv in (0.20, 0.48):
             xx = sx * (XB - vv)
-            add(box(xx - 0.015, xx + 0.015, -0.78, 0.78, 0.006, 0.018, 0.004), "B429_Alu_prag")
+            add(box(xx - 0.015, xx + 0.015, -0.75, 0.75, 0.006, 0.018, 0.004), "B429_Alu_prag")
     # pregrade (iza sedista)
     for sx in (-1, 1):
-        add(box(sx * XB, sx * (XB + 0.04), -0.80, 0.80, 0.0, 0.98, 0.0), "B429_Paneli_tamni")
-        add(box(sx * XB, sx * (XB + 0.04), -0.80, 0.80, 0.98, ZW + 0.02, 0.0), "B429_Zidovi_plafon")
+        add(box(sx * XB, sx * (XB + 0.04), -0.79, 0.79, 0.0, 0.95, 0.0), "B429_Paneli_tamni")
+        add(box(sx * XB, sx * (XB + 0.04), -0.79, 0.79, 0.95, H, 0.0), "B429_Zidovi_plafon")
     # nalepnice (placards) iznad sedista
     for sx in (-1, 1):
         for yy in (-0.28, 0.28):
-            add(box(sx * (XB - 0.004), sx * XB, yy - 0.06, yy + 0.06, 1.04, 1.10), "B429_Svetla")
+            add(box(sx * (XB - 0.004), sx * XB, yy - 0.06, yy + 0.06, H - 0.20, H - 0.14), "B429_Svetla")
     # Bell logo ploca
-    add(box(XB - 0.014, XB, -0.64, -0.56, 1.18, 1.24, 0.01), "B429_Plafon_detalji")
+    add(box(XB - 0.014, XB, -0.64, -0.56, H - 0.10, H - 0.04, 0.01), "B429_Plafon_detalji")
     # stubovi izmedju vrata i pregrada
     for sx in (-1, 1):
         for sg in (-1, 1):
-            add(box(sx * (XB - 0.07), sx * XB, sg * 0.70, sg * 0.80, 0.0, ZW, 0.01), "B429_Zidovi_plafon")
+            add(box(sx * (XB - 0.07), sx * XB, sg * (YW - 0.06), sg * Y_DIN, 0.0, ZW, 0.01), "B429_Zidovi_plafon")
 
 
 CEIL_FLAT_Y = 0.62          # ravan deo plafona +-Y
-COFFERS = [(0.20, 0.80), (-0.80, -0.20)]   # kasete iznad klupa (x od, x do)
+COFFERS = [(0.22, 0.88), (-0.88, -0.22)]   # kasete iznad klupa (x od, x do)
 COFFER_Y = 0.48
 
 
@@ -725,8 +752,9 @@ def build_cabin_ceiling():
     # zakrivljeni prelazi ka zidovima (oba boka)
     for sg in (1, -1):
         x0 = -XB
-        p0, pm, p1 = P(x0, sg * 0.80, ZW), P(x0, sg * 0.76, 1.31), P(x0, sg * CEIL_FLAT_Y, H)
-        q0, qm, q1 = P(x0, sg * 0.80, ZW + 0.03), P(x0, sg * 0.76, 1.34), P(x0, sg * CEIL_FLAT_Y, H + 0.03)
+        p0, pm, p1 = P(x0, sg * (Y_DIN + 0.01), ZW), P(x0, sg * 0.74, H - 0.012), P(x0, sg * CEIL_FLAT_Y, H)
+        q0, qm, q1 = (P(x0, sg * (Y_DIN + 0.01), ZW + 0.03), P(x0, sg * 0.74, H + 0.018),
+                      P(x0, sg * CEIL_FLAT_Y, H + 0.03))
         pc = rg.PolyCurve()
         pc.Append(rg.ArcCurve(rg.Arc(p0, pm, p1)))
         pc.Append(rg.Line(p1, q1))
@@ -768,8 +796,8 @@ def build_cabin_ceiling():
     # zvucnici u ravnom plafonu
     for sx in (-1, 1):
         for y in (-0.30, 0.30):
-            add(cyl(P(sx * 0.855, y, H), P(sx * 0.855, y, H - 0.004), 0.034), "B429_Hrom_metal")
-            add(cyl(P(sx * 0.855, y, H - 0.004), P(sx * 0.855, y, H - 0.006), 0.030), "B429_Plafon_detalji")
+            add(cyl(P(sx * 0.95, y, H), P(sx * 0.95, y, H - 0.004), 0.030), "B429_Hrom_metal")
+            add(cyl(P(sx * 0.95, y, H - 0.004), P(sx * 0.95, y, H - 0.006), 0.026), "B429_Plafon_detalji")
     # rukohvati - JEDAN set, uz ivicu ravnog plafona iznad vrata
     for sg in (1, -1):
         for xh in (-0.45, 0.45):
@@ -1046,7 +1074,8 @@ def build_seat(wx, s, yc, outer_side):
     shield = poly_prism(pts, V(s * 0.0025, 0, 0))
     if shield:
         back.append((shield, "B429_Hrom_metal"))
-    tilt = rg.Transform.Rotation(-s * math.radians(RECLINE), YA, P(Xw(BV), yc, 0.34))
+    tilt = rg.Transform.Rotation(-s * math.radians(RECLINE), YA, P(Xw(BV), yc, 0.34)) * \
+        rg.Transform.Scale(rg.Plane(P(0, 0, 0.34), ZA), 1.0, 1.0, BACK_ZSCALE)
     for g, lay in back:
         if g is None:
             continue
@@ -1079,7 +1108,7 @@ def build_table(wx, s, yg):
 
 
 def build_cabin():
-    set_env(-1.2, 1.2, -1.0, 1.0, -0.12, 1.6)
+    set_env(-1.3, 1.3, -0.9, 0.9, -0.12, 1.5)
     build_cabin_shell()
     build_cabin_ceiling()
     for wx, s in ((-XB, 1), (XB, -1)):
@@ -1108,7 +1137,15 @@ def crew_seat(xc, yc):
 
 
 def build_cockpit():
-    set_env(0.85, 3.6, -1.0, 1.0, -0.12, 2.0)
+    set_env(0.95, 3.7, -1.0, 1.0, -0.12, 2.0)
+    SHIFT[0] = 0.10
+    try:
+        _cockpit_parts()
+    finally:
+        SHIFT[0] = 0.0
+
+
+def _cockpit_parts():
     add(box(0.98, 2.55, -0.62, 0.62, -0.04, 0.0), "B429_Pod_prostirka")
     add(box(1.02, 2.40, -0.55, 0.55, 0.0, 0.006, 0.002), "B429_Pod_tepih")
     for yc in (-0.38, 0.38):
@@ -1159,7 +1196,7 @@ def main():
     undo = sc.doc.BeginUndoRecord("Bell 429 helikopter")
     try:
         if BUILD_EXTERIOR:
-            set_env(-8.0, 6.5, -7.0, 7.0, -1.3, 4.2)
+            set_env(-9.0, 6.6, -7.0, 7.0, -1.3, 4.2)
             safe(build_hull, "trup")
             safe(build_cockpit_glass, "staklo kokpita")
             safe(build_engine_cowling, "motorski poklopac")
@@ -1175,7 +1212,7 @@ def main():
     finally:
         sc.doc.EndUndoRecord(undo)
     add_view("Bell429_enterijer_foto", (0.10, -1.55, 0.78), (0.0, 0.9, 0.62), 20.0)
-    add_view("Bell429_kokpit", (1.20, 0.0, 0.85), (3.0, 0.0, 0.60), 24.0)
+    add_view("Bell429_kokpit", (1.30, 0.0, 0.85), (3.1, 0.0, 0.60), 24.0)
     add_view("Bell429_spolja", (10.5, -9.0, 3.2), (-0.5, 0.0, 0.9), 35.0)
     sc.doc.Views.Redraw()
     try:

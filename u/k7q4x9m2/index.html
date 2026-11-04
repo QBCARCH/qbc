@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Upitnik | QBC Architects</title>
+<link rel="icon" href="../../favicon.ico">
+<link rel="preload" href="../../fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Geist";src:url("../../fonts/Geist.woff2") format("woff2");font-weight:100 900;font-display:swap}
+:root{--bg:#f5f3ef;--fg:#1c1b19;--mute:#6f6c65;--line:rgba(28,27,25,.14);--accent:#5b4d40;--field:#fbfaf7;--pad:clamp(20px,4vw,64px)}
+@media (prefers-color-scheme:dark){:root{--bg:#121110;--fg:#f1eee8;--mute:rgba(241,238,232,.65);--line:rgba(241,238,232,.16);--accent:#c9b8a6;--field:#1a1918}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;font-size:17px}
+header{padding:28px var(--pad);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+header img{width:26px;height:26px}
+header span{letter-spacing:.18em;font-size:13px;font-weight:500}
+main{max-width:760px;margin:0 auto;padding:48px var(--pad) 96px}
+h1{font-size:clamp(28px,5vw,40px);font-weight:400;line-height:1.15;margin:0 0 20px;letter-spacing:-.01em}
+h2{font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:56px 0 8px}
+p.lead{color:var(--mute);margin:0 0 12px}
+.q{padding:22px 0;border-top:1px solid var(--line)}
+.q label{display:block;margin-bottom:10px}
+.q .n{color:var(--mute);font-variant-numeric:tabular-nums;margin-right:8px}
+textarea{width:100%;min-height:84px;resize:vertical;font:inherit;font-size:16px;color:var(--fg);background:var(--field);border:1px solid var(--line);border-radius:2px;padding:12px 14px}
+textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:15px}
+td,th{text-align:left;vertical-align:top;padding:10px 12px;border-top:1px solid var(--line)}
+th{font-weight:500;width:34%}
+.actions{margin-top:48px;border-top:1px solid var(--line);padding-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+button,a.btn{font:inherit;font-size:15px;cursor:pointer;border:1px solid var(--fg);background:var(--fg);color:var(--bg);padding:13px 22px;border-radius:2px;text-decoration:none}
+button.alt{background:transparent;color:var(--fg)}
+.note{color:var(--mute);font-size:14px;margin:14px 0 0}
+#st{color:var(--mute);font-size:14px}
+</style>
+</head>
+<body>
+<header><img src="../../assets/logo.png" alt=""><span>QBCARCHITECTS</span></header>
+<main>
+<h1>Upitnik: završetak Objekta 1 i Objekta 2, Divčibare</h1>
+<p class="lead">Ovih 18 pitanja traje oko 10 minuta. Na osnovu vaših odgovora pripremam konačnu ponudu za vođenje završetka obe kuće, sa obimom i cenom koji odgovaraju onome što stvarno želite.</p>
+<p class="lead">Ako nešto još niste odlučili, napišite „nije odlučeno“: i to je koristan odgovor, jer znam šta treba rešiti u prvom mesecu. Odgovori se čuvaju u vašem pregledaču dok popunjavate, pa možete da se vratite kasnije.</p>
+<form id="f" autocomplete="off"></form>
+<div class="actions">
+<button type="button" id="send">Pošalji e-mailom</button>
+<button type="button" id="copy" class="alt">Kopiraj odgovore</button>
+<span id="st" role="status" aria-live="polite"></span>
+</div>
+<p class="note">Dugme „Pošalji e-mailom“ otvara vaš program za e-poštu sa popunjenim odgovorima, koje samo treba da pošaljete. Ako se ne otvori, kopirajte odgovore i pošaljite ih na office@qbc.rs.</p>
+</main>
+<script>
+(function(){
+var S=[
+["Obim radova",[
+"Da li želite da se obe kuće završe u celosti i budu useljive?",
+"Bazen (oko 8 x 3 m, grejan, nenatkriven): da li se gradi u ovoj fazi ili kasnije? Betonski ili montažni?",
+"Spa i sauna na niskom prizemlju: da li se odmah radi opremanje?",
+"Uređenje dvorišta: samo osnovno (staze, zatravljivanje, pristupno stepenište) ili i pejzažno uređenje, ograda i osvetljenje?",
+"Projekat enterijera velike kuće ne postoji. Da li to radimo?",
+"Nameštaj: kupuje li se komplet za obe kuće?",
+"Toplotna pumpa (vazduh-voda) i rekuperacija: da li je odluka već doneta?"]],
+["Rokovi i budžet",[
+"Kada želite da se useli? Realan plan je oko 14 meseci, do kraja 2027.",
+"Koliki je ukupni budžet za završetak obe kuće, bez onoga što je već plaćeno? Dovoljan je okviran raspon.",
+"Postoji li gornja granica koju ne želite da pređete, i koliku rezervu za nepredviđeno želite (npr. 10%)?",
+"Ako budžet ne dozvoljava sve, šta se prvo odlaže: bazen i spa, nameštaj, dvorište ili nešto drugo?"]],
+["Oprema i izbor materijala",[
+"Koji nivo opreme želite po grupama (završni materijali, sanitarija, nameštaj, spa): osnovni, srednji ili viši?",
+"Želite li da za svaku grupu pripremim tri varijante sa cenom i uzorkom gde je potrebno?"]],
+["Odluke, plaćanje i ugovori",[
+"Imate li pravnika koji pregleda ugovore sa izvođačima i aneks sa Premium Houseom?",
+"Prihvatate li da se avans izvođačima daje samo uz bankarsku garanciju ili u manjem iznosu vezanom za fazu, i da se zadrži 5 do 10% do otklanjanja nedostataka?",
+"Prihvatate li aneks sa Premium Houseom koji ograničava njihov obim na konstrukciju velike kuće i pozicije male kuće koje su već plaćene?"]],
+["Kako želite da radimo",[
+"Koja varijanta vam više odgovara?",
+"Postoji li nešto što nijedna varijanta ne pokriva, a želite da ja vodim?"]]
+];
+var KEY="qbc-upitnik-k7q4";
+var f=document.getElementById("f"),n=0,saved={};
+try{saved=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+S.forEach(function(sec,si){
+ var h=document.createElement("h2");h.textContent=sec[0];f.appendChild(h);
+ if(si===4){
+  var p=document.createElement("p");p.className="lead";
+  p.textContent="Pripremam dve varijante saradnje, sa fiksnom cenom i do 30 izlazaka na gradilište u svakoj. Obe uključuju arhitektonski nadzor i praćenje dokumentacije prema državi.";
+  f.appendChild(p);
+  var t=document.createElement("table");
+  t.innerHTML="<tr><th>A, osnovna</th><td>Obe kuće: konstrukcija velike kuće, završetak male, instalacije, fasada, završni radovi, septička jama i bunar. Bez bazena, spa, uređenja dvorišta i nameštaja.</td></tr><tr><th>B, kompletna</th><td>Sve iz varijante A, plus bazen, spa i zidanje oko bazena, uređenje dvorišta sa pristupnim stepeništem i nabavka nameštaja i opreme.</td></tr>";
+  f.appendChild(t);
+ }
+ sec[1].forEach(function(q){
+  n++;var id="q"+n;
+  var d=document.createElement("div");d.className="q";
+  var l=document.createElement("label");l.htmlFor=id;
+  var s=document.createElement("span");s.className="n";s.textContent=n+".";
+  l.appendChild(s);l.appendChild(document.createTextNode(q));
+  var a=document.createElement("textarea");a.id=id;a.name=id;a.value=saved[id]||"";
+  a.addEventListener("input",function(){
+   saved[id]=a.value;try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){}
+  });
+  d.appendChild(l);d.appendChild(a);f.appendChild(d);
+ });
+});
+function text(){
+ var out="Odgovori na upitnik: završetak Objekta 1 i Objekta 2, Divčibare\n\n",i=0;
+ S.forEach(function(sec){
+  out+=sec[0].toUpperCase()+"\n";
+  sec[1].forEach(function(q){
+   i++;var v=document.getElementById("q"+i).value.trim();
+   out+=i+". "+q+"\nOdgovor: "+(v||"(bez odgovora)")+"\n\n";
+  });
+ });
+ return out;
+}
+var st=document.getElementById("st");
+document.getElementById("send").onclick=function(){
+ var b=text();
+ if(b.length>1800){
+  copy(b,function(){st.textContent="Odgovori su kopirani. Nalepite ih u e-poruku koja se otvara.";
+   location.href="mailto:office@qbc.rs?subject="+encodeURIComponent("Odgovori na upitnik: Divčibare")+"&body="+encodeURIComponent("Nalepite odgovore ovde (Ctrl+V ili Cmd+V).")});
+ }else{
+  location.href="mailto:office@qbc.rs?subject="+encodeURIComponent("Odgovori na upitnik: Divčibare")+"&body="+encodeURIComponent(b);
+ }
+};
+document.getElementById("copy").onclick=function(){copy(text(),function(){st.textContent="Odgovori su kopirani."})};
+function copy(t,ok){
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,fb)}else fb();
+ function fb(){var x=document.createElement("textarea");x.value=t;document.body.appendChild(x);x.select();try{document.execCommand("copy");ok()}catch(e){st.textContent="Kopiranje nije uspelo."}document.body.removeChild(x)}
+}
+})();
+</script>
+</body>
+</html>

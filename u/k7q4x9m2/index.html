@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="sr">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<title>Upitnik | QBC Architects</title>
+<title>Опросник | QBC Architects</title>
 <link rel="icon" href="../../favicon.ico">
 <link rel="preload" href="../../fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -30,7 +30,7 @@ table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:15px}
 td,th{text-align:left;vertical-align:top;padding:10px 12px;border-top:1px solid var(--line)}
 th{font-weight:500;width:34%}
 .actions{margin-top:48px;border-top:1px solid var(--line);padding-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-button,a.btn{font:inherit;font-size:15px;cursor:pointer;border:1px solid var(--fg);background:var(--fg);color:var(--bg);padding:13px 22px;border-radius:2px;text-decoration:none}
+button{font:inherit;font-size:15px;cursor:pointer;border:1px solid var(--fg);background:var(--fg);color:var(--bg);padding:13px 22px;border-radius:2px}
 button.alt{background:transparent;color:var(--fg)}
 .note{color:var(--mute);font-size:14px;margin:14px 0 0}
 #st{color:var(--mute);font-size:14px}
@@ -39,43 +39,43 @@ button.alt{background:transparent;color:var(--fg)}
 <body>
 <header><img src="../../assets/logo.png" alt=""><span>QBCARCHITECTS</span></header>
 <main>
-<h1>Upitnik: završetak Objekta 1 i Objekta 2, Divčibare</h1>
-<p class="lead">Ovih 18 pitanja traje oko 10 minuta. Na osnovu vaših odgovora pripremam konačnu ponudu za vođenje završetka obe kuće, sa obimom i cenom koji odgovaraju onome što stvarno želite.</p>
-<p class="lead">Ako nešto još niste odlučili, napišite „nije odlučeno“: i to je koristan odgovor, jer znam šta treba rešiti u prvom mesecu. Odgovori se čuvaju u vašem pregledaču dok popunjavate, pa možete da se vratite kasnije.</p>
+<h1>Опросник: завершение Объекта 1 и Объекта 2, Дивчибаре</h1>
+<p class="lead">Эти 18 вопросов займут около 10 минут. На основе ваших ответов я подготовлю окончательное предложение по ведению завершения обоих домов, с объёмом и ценой, которые соответствуют тому, что вам действительно нужно.</p>
+<p class="lead">Если вы ещё не решили что-то, напишите «ещё не решено»: это тоже полезный ответ, так как именно это нужно решить в первый месяц. Ответы сохраняются в вашем браузере во время заполнения, так что можно вернуться позже.</p>
 <form id="f" autocomplete="off"></form>
 <div class="actions">
-<button type="button" id="send">Pošalji e-mailom</button>
-<button type="button" id="copy" class="alt">Kopiraj odgovore</button>
+<button type="button" id="send">Отправить по e-mail</button>
+<button type="button" id="copy" class="alt">Скопировать ответы</button>
 <span id="st" role="status" aria-live="polite"></span>
 </div>
-<p class="note">Dugme „Pošalji e-mailom“ otvara vaš program za e-poštu sa popunjenim odgovorima, koje samo treba da pošaljete. Ako se ne otvori, kopirajte odgovore i pošaljite ih na office@qbc.rs.</p>
+<p class="note">Кнопка «Отправить по e-mail» открывает вашу почтовую программу с заполненными ответами, их нужно только отправить. Если письмо не открылось, скопируйте ответы и отправьте их на office@qbc.rs.</p>
 </main>
 <script>
 (function(){
 var S=[
-["Obim radova",[
-"Da li želite da se obe kuće završe u celosti i budu useljive?",
-"Bazen (oko 8 x 3 m, grejan, nenatkriven): da li se gradi u ovoj fazi ili kasnije? Betonski ili montažni?",
-"Spa i sauna na niskom prizemlju: da li se odmah radi opremanje?",
-"Uređenje dvorišta: samo osnovno (staze, zatravljivanje, pristupno stepenište) ili i pejzažno uređenje, ograda i osvetljenje?",
-"Projekat enterijera velike kuće ne postoji. Da li to radimo?",
-"Nameštaj: kupuje li se komplet za obe kuće?",
-"Toplotna pumpa (vazduh-voda) i rekuperacija: da li je odluka već doneta?"]],
-["Rokovi i budžet",[
-"Kada želite da se useli? Realan plan je oko 14 meseci, do kraja 2027.",
-"Koliki je ukupni budžet za završetak obe kuće, bez onoga što je već plaćeno? Dovoljan je okviran raspon.",
-"Postoji li gornja granica koju ne želite da pređete, i koliku rezervu za nepredviđeno želite (npr. 10%)?",
-"Ako budžet ne dozvoljava sve, šta se prvo odlaže: bazen i spa, nameštaj, dvorište ili nešto drugo?"]],
-["Oprema i izbor materijala",[
-"Koji nivo opreme želite po grupama (završni materijali, sanitarija, nameštaj, spa): osnovni, srednji ili viši?",
-"Želite li da za svaku grupu pripremim tri varijante sa cenom i uzorkom gde je potrebno?"]],
-["Odluke, plaćanje i ugovori",[
-"Imate li pravnika koji pregleda ugovore sa izvođačima i aneks sa Premium Houseom?",
-"Prihvatate li da se avans izvođačima daje samo uz bankarsku garanciju ili u manjem iznosu vezanom za fazu, i da se zadrži 5 do 10% do otklanjanja nedostataka?",
-"Prihvatate li aneks sa Premium Houseom koji ograničava njihov obim na konstrukciju velike kuće i pozicije male kuće koje su već plaćene?"]],
-["Kako želite da radimo",[
-"Koja varijanta vam više odgovara?",
-"Postoji li nešto što nijedna varijanta ne pokriva, a želite da ja vodim?"]]
+["Объём работ",[
+"Вы хотите, чтобы оба дома были полностью завершены и пригодны для проживания?",
+"Бассейн (примерно 8 x 3 м, с подогревом, без крыши): строится ли он на этом этапе или позже? Бетонный или сборный?",
+"Спа и сауна на нижнем этаже: нужно ли сразу заниматься оснащением?",
+"Благоустройство двора: только базовое (дорожки, газон, лестница к входу) или также ландшафтный дизайн, ограда и освещение?",
+"Проекта интерьера большого дома не существует. Будем ли мы его делать?",
+"Мебель: закупается ли комплект для обоих домов?",
+"Тепловой насос (воздух-вода) и рекуперация: решение уже принято?"]],
+["Сроки и бюджет",[
+"Когда вы хотите въехать? Реалистичный план около 14 месяцев, до конца 2027 года.",
+"Каков общий бюджет на завершение обоих домов без уже оплаченного? Достаточен примерный диапазон.",
+"Есть ли верхняя граница, которую вы не хотите превышать, и какой резерв на непредвиденные расходы вы хотите (например, 10%)?",
+"Если бюджета не хватает на всё, что откладывается в первую очередь: бассейн и спа, мебель, двор или что-то другое?"]],
+["Оборудование и выбор материалов",[
+"Какой уровень оборудования вы хотите по группам (отделочные материалы, сантехника, мебель, спа): базовый, средний или высокий?",
+"Хотите ли вы, чтобы для каждой группы я подготовил три варианта с ценой и образцом, где это нужно?"]],
+["Решения, платежи и договоры",[
+"Есть ли у вас юрист, который проверяет договоры с подрядчиками и дополнение с Premium House?",
+"Принимаете ли вы, что авансы подрядчикам выплачиваются только под банковскую гарантию или в меньшем размере, привязанном к этапу, с удержанием 5 до 10% до устранения недостатков?",
+"Принимаете ли вы дополнение с Premium House, которое ограничивает их объём конструкцией большого дома и позициями малого дома, которые уже оплачены?"]],
+["Как вы хотите работать",[
+"Какой вариант вам больше подходит?",
+"Есть ли что-то, что ни один вариант не покрывает, а вы хотите, чтобы это вёл я?"]]
 ];
 var KEY="qbc-upitnik-k7q4";
 var f=document.getElementById("f"),n=0,saved={};
@@ -84,10 +84,10 @@ S.forEach(function(sec,si){
  var h=document.createElement("h2");h.textContent=sec[0];f.appendChild(h);
  if(si===4){
   var p=document.createElement("p");p.className="lead";
-  p.textContent="Pripremam dve varijante saradnje, sa fiksnom cenom i do 30 izlazaka na gradilište u svakoj. Obe uključuju arhitektonski nadzor i praćenje dokumentacije prema državi.";
+  p.textContent="Я готовлю два варианта сотрудничества: с фиксированной ценой и до 30 выездов на стройплощадку в каждом. Оба включают архитектурный надзор и сопровождение документации перед государством.";
   f.appendChild(p);
   var t=document.createElement("table");
-  t.innerHTML="<tr><th>A, osnovna</th><td>Obe kuće: konstrukcija velike kuće, završetak male, instalacije, fasada, završni radovi, septička jama i bunar. Bez bazena, spa, uređenja dvorišta i nameštaja.</td></tr><tr><th>B, kompletna</th><td>Sve iz varijante A, plus bazen, spa i zidanje oko bazena, uređenje dvorišta sa pristupnim stepeništem i nabavka nameštaja i opreme.</td></tr>";
+  t.innerHTML="<tr><th>Вариант A, базовый</th><td>Оба дома: конструкция большого дома, завершение малого, инженерные системы, фасад, отделочные работы, септик и колодец. Без бассейна, спа, благоустройства двора и мебели.</td></tr><tr><th>Вариант B, полный</th><td>Всё из варианта A, плюс бассейн, спа и кладка вокруг бассейна, благоустройство двора с лестницей к входу и закупка мебели и оборудования.</td></tr>";
   f.appendChild(t);
  }
  sec[1].forEach(function(q){
@@ -104,30 +104,31 @@ S.forEach(function(sec,si){
  });
 });
 function text(){
- var out="Odgovori na upitnik: završetak Objekta 1 i Objekta 2, Divčibare\n\n",i=0;
+ var out="Ответы на опросник: завершение Объекта 1 и Объекта 2, Дивчибаре\n\n",i=0;
  S.forEach(function(sec){
   out+=sec[0].toUpperCase()+"\n";
   sec[1].forEach(function(q){
    i++;var v=document.getElementById("q"+i).value.trim();
-   out+=i+". "+q+"\nOdgovor: "+(v||"(bez odgovora)")+"\n\n";
+   out+=i+". "+q+"\nОтвет: "+(v||"(без ответа)")+"\n\n";
   });
  });
  return out;
 }
 var st=document.getElementById("st");
+var SUBJ="Ответы на опросник: Дивчибаре";
 document.getElementById("send").onclick=function(){
  var b=text();
  if(b.length>1800){
-  copy(b,function(){st.textContent="Odgovori su kopirani. Nalepite ih u e-poruku koja se otvara.";
-   location.href="mailto:office@qbc.rs?subject="+encodeURIComponent("Odgovori na upitnik: Divčibare")+"&body="+encodeURIComponent("Nalepite odgovore ovde (Ctrl+V ili Cmd+V).")});
+  copy(b,function(){st.textContent="Ответы скопированы. Вставьте их в письмо, которое откроется.";
+   location.href="mailto:office@qbc.rs?subject="+encodeURIComponent(SUBJ)+"&body="+encodeURIComponent("Вставьте ответы сюда (Ctrl+V или Cmd+V).")});
  }else{
-  location.href="mailto:office@qbc.rs?subject="+encodeURIComponent("Odgovori na upitnik: Divčibare")+"&body="+encodeURIComponent(b);
+  location.href="mailto:office@qbc.rs?subject="+encodeURIComponent(SUBJ)+"&body="+encodeURIComponent(b);
  }
 };
-document.getElementById("copy").onclick=function(){copy(text(),function(){st.textContent="Odgovori su kopirani."})};
+document.getElementById("copy").onclick=function(){copy(text(),function(){st.textContent="Ответы скопированы."})};
 function copy(t,ok){
  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,fb)}else fb();
- function fb(){var x=document.createElement("textarea");x.value=t;document.body.appendChild(x);x.select();try{document.execCommand("copy");ok()}catch(e){st.textContent="Kopiranje nije uspelo."}document.body.removeChild(x)}
+ function fb(){var x=document.createElement("textarea");x.value=t;document.body.appendChild(x);x.select();try{document.execCommand("copy");ok()}catch(e){st.textContent="Не удалось скопировать."}document.body.removeChild(x)}
 }
 })();
 </script>

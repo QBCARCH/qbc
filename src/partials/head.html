@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="{{ROOT}}css/site.css?v={{ASSET_V}}">
 {{ORG_LD}}{{LD}}
 <script>document.documentElement.classList.add('js')</script>
+<script>if('onpagereveal' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches)addEventListener('pagereveal',function(e){try{var f=navigation.activation&&navigation.activation.from,m=f&&f.url.match(/\/work\/[^\/?#]+\.html/);if(!e.viewTransition||!m||document.querySelector('.phero'))return;var i=document.querySelector('a[href$="'+m[0].slice(1)+'"] img');if(!i)return;i.style.viewTransitionName='hero';e.viewTransition.finished.finally(function(){i.style.viewTransitionName=''})}catch(x){}})</script>
 <script src="{{ROOT}}js/site.js?v={{ASSET_V}}" defer></script>
 </head>
 <body>

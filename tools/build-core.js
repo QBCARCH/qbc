@@ -260,11 +260,12 @@ function worksReel(projects, lang, base, root) {
     `<div class="card__meta"><span class="card__n label">${num(i)}</span><h3 class="card__t">${accentTitle(p.title)}</h3><span class="card__y label">${esc(p.year)}</span></div></a>`).join('');
 }
 
-function worksIndex(projects, lang, base) {
+// data-img: mala slika projekta koja prati pokazivac nad redom (js: initPointer)
+function worksIndex(projects, lang, base, root) {
   return projects.map((p, i) => {
     const first = svcName((p.services || [])[0] || '', lang);
     const more = (p.services || []).length > 1 ? ` +${p.services.length - 1}` : '';
-    return `<a class="windex__row" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}">` +
+    return `<a class="windex__row" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}" data-img="${imgUrl(cover(p), root, 800)}">` +
       `<span class="label">${num(i)}</span><span class="windex__title">${esc(p.title)}</span>` +
       `<span class="windex__svc label mute">${esc(first)}${more}</span><span class="windex__year label">${esc(p.year)}</span></a>`;
   }).join('');
@@ -474,7 +475,7 @@ export function buildSite(data, sources, { all = false } = {}) {
       : ['Portfolio | Projekti arhitekture i enterijera, QBC Architects', 'Izbor kuća, vila, stanova, ugostiteljskih i zdravstvenih enterijera studija QBC Architects iz Beograda, u Srbiji i Crnoj Gori.'];
     out[`${pre}our-work.html`] = render('our-work', sources, {
       ...site('our-work.html'), key: 'works', TITLE: ow[0], DESC: ow[1],
-      WORKS_GRID: worksGrid(projects, lang, '', lang === 'en' ? '' : '../'), WORKS_INDEX: worksIndex(projects, lang, ''),
+      WORKS_GRID: worksGrid(projects, lang, '', lang === 'en' ? '' : '../'), WORKS_INDEX: worksIndex(projects, lang, '', lang === 'en' ? '' : '../'),
     });
     for (const p of projects) {
       const depth = lang === 'en' ? '../' : '../../';

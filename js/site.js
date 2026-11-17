@@ -160,6 +160,57 @@
     if (saved === 'index') set('index');
   };
 
+  /* klik na projekat sa liste: kliknuta slika dobija ime "hero", pa je pregledac prenese u veliku sliku
+     na vrhu stranice projekta (css ::view-transition-group(hero)). Na stranici projekta velika slika vec nosi
+     to ime, pa se tu nista ne dodaje (dva ista imena bi prekinula prelaz). */
+  const initHeroLink = () => {
+    if (reduce || $('.phero')) return;
+    const clear = () => $$('img').forEach((im) => { if (im.style.viewTransitionName) im.style.viewTransitionName = ''; });
+    D.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href*="work/"]');
+      if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      clear();
+      const im = $('.frame img', a) || (a.classList.contains('windex__row') && $('.peek.is-on img'));
+      if (im) im.style.viewTransitionName = 'hero';
+    });
+    // povratak iz istorije (bfcache): stranica je zamrznuta sa imenom, pa se ono brise
+    addEventListener('pageshow', clear);
+  };
+
+  /* kursor "Pogledaj" nad karticama i slika projekta uz pokazivac u Index prikazu; samo za mis */
+  const initPointer = () => {
+    if (reduce || !matchMedia('(pointer: fine)').matches) return;
+    const CARDS = '.wcard, .reel .card:not(.card--end)', ROWS = '.windex__row[data-img]';
+    if (!$(CARDS) && !$(ROWS)) return;
+    const cur = D.createElement('div'), peek = D.createElement('div');
+    cur.className = 'cur'; cur.setAttribute('aria-hidden', 'true'); cur.textContent = root.lang === 'sr' ? 'Pogledaj' : 'View';
+    peek.className = 'peek'; peek.setAttribute('aria-hidden', 'true'); peek.innerHTML = '<img alt="">';
+    D.body.append(cur, peek); root.classList.add('has-cur');
+    const pim = $('img', peek);
+    let x = -200, y = -200, raf = 0;
+    const paint = () => {
+      raf = 0;
+      cur.style.transform = `translate3d(${x}px,${y}px,0)`;
+      const w = peek.offsetWidth, h = peek.offsetHeight;
+      const px = x + 28 + w > innerWidth ? x - 28 - w : x + 28;
+      peek.style.transform = `translate3d(${px}px,${clamp(y - h / 2, 8, innerHeight - h - 8)}px,0)`;
+    };
+    const update = (t) => {
+      const card = t && t.closest && t.closest(CARDS), row = t && t.closest && t.closest(ROWS);
+      cur.classList.toggle('is-on', !!card);
+      cur.classList.toggle('cur--ink', !!(card && card.closest('.reel')));
+      if (row && pim.getAttribute('src') !== row.dataset.img) pim.src = row.dataset.img;
+      peek.classList.toggle('is-on', !!row);
+      if (!raf) raf = requestAnimationFrame(paint);
+    };
+    addEventListener('pointermove', (e) => { if (e.pointerType !== 'mouse') return; x = e.clientX; y = e.clientY; update(e.target); }, { passive: true });
+    // pri skrolu se ispod mirnog pokazivaca smenjuju kartice
+    addEventListener('scroll', () => { if (x > 0) update(D.elementFromPoint(x, y)); }, { passive: true });
+    // i posle klika (npr. Grid / Index), kada se ispod pokazivaca promeni sadrzaj
+    D.addEventListener('click', () => requestAnimationFrame(() => { if (x > 0) update(D.elementFromPoint(x, y)); }));
+    D.addEventListener('mouseleave', () => { cur.classList.remove('is-on'); peek.classList.remove('is-on'); });
+  };
+
   /* galerija projekta: pregled preko celog ekrana i, gde postoji, osnova iza rendera.
      Pokazivac (mis) otkriva crtez kao brisanje; dodir prebacuje render/osnova; dugmad rade svuda.
      U pregledu preko celog ekrana osnova je svoj kadar odmah posle svog rendera. */
@@ -398,7 +449,7 @@
   };
 
   const boot = () => {
-    initCredit(); initSketch(); initReel(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initGallery(); initForm(); initCount(); initWords();
+    initCredit(); initSketch(); initReel(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initHeroLink(); initPointer(); initGallery(); initForm(); initCount(); initWords();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

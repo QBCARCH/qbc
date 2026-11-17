@@ -2,5 +2,8 @@
   "name": "qbc-site",
   "private": true,
   "type": "module",
-  "scripts": { "build": "node tools/build.js" }
+  "scripts": {
+    "build": "node tools/build.js",
+    "check": "node tools/build.js --check && node --check js/site.js && node --check admin/admin-lib.js && node --check admin/sketch-lib.js && node -e \"JSON.parse(require('fs').readFileSync('data/projects.json','utf8'));console.log('projects.json ok')\""
+  }
 }

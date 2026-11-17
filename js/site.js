@@ -16,7 +16,7 @@
     if (!('IntersectionObserver' in window) || reduce) { els.forEach((e) => e.classList.add('is-in')); return; }
     const io = new IntersectionObserver((es) => es.forEach((e) => {
       if (e.isIntersecting || e.boundingClientRect.top < 0) { e.target.style.setProperty('--d', (e.target.dataset.d || 0) + 's'); e.target.classList.add('is-in'); io.unobserve(e.target); }
-    }), { rootMargin: '0px 0px -8% 0px' });
+    }), { rootMargin: '0px' });
     els.forEach((e) => io.observe(e));
   };
 

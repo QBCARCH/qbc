@@ -77,9 +77,9 @@ ul, ol { list-style: none; }
 .frame > img { width: 100%; height: 100%; object-fit: cover; }
 .frame:not([data-ip]) > img { margin: -2px; width: calc(100% + 4px); height: calc(100% + 4px); max-width: none; }
 [data-ip] > img { position: absolute; left: -2px; top: -4%; width: calc(100% + 4px); max-width: none; height: 108%; transform: translate3d(0, var(--ty, 0px), 0); will-change: transform; }
-.frame > img, .hero__media img, .phero__media img, .menu__side img { filter: saturate(.86) sepia(.06) contrast(.96); }
 
-.js [data-reveal] { opacity: 0; transform: translateY(10px); transition: opacity 1.6s var(--ease), transform 1.6s var(--ease); transition-delay: var(--d, 0s); }
+/* pojavljivanje je kratko (.7s), da tekst ne stoji bled dok citalac vec gleda u njega */
+.js [data-reveal] { opacity: 0; transform: translateY(10px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: var(--d, 0s); }
 .js [data-reveal].is-in { opacity: 1; transform: none; }
 
 /* 5. okvir stranice ---------------------------------------------------------- */

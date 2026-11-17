@@ -66,7 +66,8 @@ Poznato bezopasno: konzola javlja `InvalidStateError: Transition was aborted ...
 ## Šta je dogovoreno, a nije urađeno (predlog „2027“, novembar 2026)
 
 - B3 radi, ali ima samo jedan primer (Villa BC 3721, prizemlje isečeno iz kompozicije). Vlasnik treba da izveze osnove iz Revita (PNG/PDF kao slika, bela podloga, bez zaglavlja, ≥2000 px) i doda ih u adminu, bar po jednu za prvu sliku svakog projekta.
-- B5: tamni režim po sistemu (`prefers-color-scheme`) sa postojećom `--ink` paletom, plus fina zrnasta tekstura.
+- B5 je urađen (tamni režim po sistemu, zrnasta tekstura `body::after`); nema prekidača na sajtu, prati samo sistem.
+- Naziv osnove (`plan_label`) je jedno polje, isti tekst na EN i SR; ako zatreba prevod, dodati `plan_label_sr` u admin i `gallery()`.
 - B6: prelaz slike projekta u hero sledeće stranice (`view-transition-name` po slici), kursor „View“ nad karticama, pregled slike u Index prikazu.
 - Sadržaj od vlasnika: fotografije sa gradilišta i kratak film po projektu; admin za to još nema polja.
 - Pre svake nove faze: napravi mockup kao Artifact, pa tek posle odobrenja menjaj sajt. Vlasnik tako radi.

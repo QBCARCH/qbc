@@ -2373,7 +2373,18 @@
      "h": 1080,
      "og": "672a1b66c51068306917e55c_Image5-enhanced (Large)-og.jpg",
      "full": "672a1b66c51068306917e55c_Image5-enhanced (Large)-full.webp",
-     "wm": true
+     "wm": true,
+     "plan": {
+      "file": "6afbb104a1b2c3_osnova-bc-3721.jpg",
+      "widths": [
+       500
+      ],
+      "w": 700,
+      "h": 630,
+      "full": "6afbb104a1b2c3_osnova-bc-3721.jpg",
+      "wm": false
+     },
+     "plan_label": "Ground floor"
     },
     {
      "file": "672a1b668cbb8379eb716617_Image9-enhanced (Large).webp",

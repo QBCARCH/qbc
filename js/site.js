@@ -160,9 +160,18 @@
     if (saved === 'index') set('index');
   };
 
-  const initLightbox = () => {
+  /* galerija projekta: pregled preko celog ekrana i, gde postoji, osnova iza rendera.
+     Pokazivac (mis) otkriva crtez kao brisanje; dodir prebacuje render/osnova; dugmad rade svuda.
+     U pregledu preko celog ekrana osnova je svoj kadar odmah posle svog rendera. */
+  const initGallery = () => {
     const figs = $$('.pgal figure[data-full]');
     if (!figs.length) return;
+    const slides = [], at = new Map();
+    figs.forEach((f) => {
+      at.set(f, slides.length);
+      slides.push({ src: f.dataset.full, alt: $('img', f).alt });
+      if (f.dataset.planFull) slides.push({ src: f.dataset.planFull, alt: f.dataset.planAlt || '' });
+    });
     const lb = D.createElement('div');
     lb.className = 'lb'; lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-modal', 'true'); lb.setAttribute('aria-label', 'Image viewer');
     lb.innerHTML = '<span class="lb__c"></span><img alt=""><button class="lb__p" type="button" aria-label="Previous">←</button><button class="lb__n" type="button" aria-label="Next">→</button><button class="lb__x" type="button">Close</button>';
@@ -170,16 +179,46 @@
     const im = $('img', lb), cnt = $('.lb__c', lb);
     let i = 0;
     const show = (n) => {
-      i = (n + figs.length) % figs.length;
+      i = (n + slides.length) % slides.length;
       im.classList.remove('is-ready');
       im.onload = () => im.classList.add('is-ready');
-      im.src = figs[i].dataset.full;
-      im.alt = $('img', figs[i]).alt;
-      cnt.textContent = `${String(i + 1).padStart(2, '0')} / ${String(figs.length).padStart(2, '0')}`;
+      im.src = slides[i].src;
+      im.alt = slides[i].alt;
+      cnt.textContent = `${String(i + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
     };
     const open = (n) => { show(n); lb.classList.add('is-open'); D.body.classList.add('is-locked'); };
     const close = () => { lb.classList.remove('is-open'); D.body.classList.remove('is-locked'); };
-    figs.forEach((f, n) => f.addEventListener('click', () => open(n)));
+    const fine = matchMedia('(pointer: fine)').matches && !reduce;
+    figs.forEach((f) => {
+      if (!f.classList.contains('pfig')) { f.addEventListener('click', () => open(at.get(f))); return; }
+      const btns = $$('[data-show]', f);
+      let mode = 'render';
+      const set = (m) => {
+        mode = m;
+        f.classList.remove('is-live');
+        f.style.setProperty('--x', m === 'plan' ? '0%' : '100%');
+        f.classList.toggle('is-plan', m === 'plan');
+        btns.forEach((b) => { if (b.dataset.show !== 'zoom') b.setAttribute('aria-pressed', String(b.dataset.show === m)); });
+      };
+      btns.forEach((b) => b.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (b.dataset.show === 'zoom') open(at.get(f) + (f.classList.contains('is-plan') ? 1 : 0)); else set(b.dataset.show);
+      }));
+      if (fine) {
+        f.addEventListener('pointermove', (e) => {
+          if (e.pointerType !== 'mouse' || e.target.closest('.pfig__tag')) return;
+          const r = f.getBoundingClientRect(), x = clamp((e.clientX - r.left) / r.width);
+          f.classList.add('is-live');
+          f.style.setProperty('--x', (x * 100).toFixed(2) + '%');
+          f.classList.toggle('is-plan', x < .5);
+        });
+        f.addEventListener('pointerleave', () => set(mode));
+        // klik misem otvara ono sto je pod pokazivacem: render ili osnovu
+        f.addEventListener('click', (e) => { if (!e.target.closest('.pfig__tag')) open(at.get(f) + (f.classList.contains('is-plan') ? 1 : 0)); });
+      } else {
+        f.addEventListener('click', (e) => { if (!e.target.closest('.pfig__tag')) set(mode === 'plan' ? 'render' : 'plan'); });
+      }
+    });
     $('.lb__x', lb).addEventListener('click', close);
     $('.lb__p', lb).addEventListener('click', () => show(i - 1));
     $('.lb__n', lb).addEventListener('click', () => show(i + 1));
@@ -359,7 +398,7 @@
   };
 
   const boot = () => {
-    initCredit(); initSketch(); initReel(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
+    initCredit(); initSketch(); initReel(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initGallery(); initForm(); initCount(); initWords();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

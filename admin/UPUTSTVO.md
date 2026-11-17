@@ -21,6 +21,8 @@ Na velikim verzijama slika (od 2000 px) i na kopiji za pregled preko celog ekran
 
 Slike se automatski pretvaraju u WebP i smanjuju u više veličina (500 do 3200 px), tako da sajt ostaje brz. Za deljenje na mrežama (LinkedIn, Facebook, WhatsApp) pravi se i jedna JPEG kopija.
 
+**Osnova iza rendera.** Na svakoj slici u galeriji je dugme **+ osnova**: dodaš crtež (osnovu ili presek, PNG ili PDF izvezen kao slika, bela podloga, bez zaglavlja, 2000 px ili šire). Na sajtu se crtež otkriva prelaskom miša preko rendera, a na telefonu dodirom; u pregledu preko celog ekrana je svoj kadar. U polje pored upišeš naziv (npr. "Prizemlje"); prazno znači "Osnova". Crtež se ne označava znakom i ne pravi mu se skica.
+
 Ako je slika uža od 2400 px, admin te upozori: preko celog ekrana takva slika deluje mekano. Ako istu sliku dodaš dvaput, admin je preskoči.
 
 ## Slike na početnoj

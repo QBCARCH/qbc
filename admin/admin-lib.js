@@ -93,7 +93,8 @@ function explainError(status, msg) {
 
 // ---------------------------------------------------------------- pomocne funkcije za podatke
 export function allImages(p) {
-  return [p.cover, p.thumb, p.hero, ...(p.gallery || [])].filter(Boolean);
+  const g = p.gallery || [];
+  return [p.cover, p.thumb, p.hero, ...g, ...g.map((im) => im && im.plan)].filter(Boolean);
 }
 export function imagePaths(im) {
   const dot = im.file.lastIndexOf('.');
@@ -167,7 +168,8 @@ export async function drawMark(canvas) {
   return canvas;
 }
 
-export async function processImage(file) {
+// plain: crtez (osnova, presek), bez znaka, bez skice, na beloj podlozi
+export async function processImage(file, { plain = false } = {}) {
   let bmp;
   try { bmp = await createImageBitmap(file); } catch { throw new Error(`Slika "${file.name}" nije podržan format (koristi JPG, PNG ili WEBP).`); }
   const origW = bmp.width, origH = bmp.height;
@@ -183,7 +185,7 @@ export async function processImage(file) {
     return c;
   };
   // velike verzije dobijaju znak
-  const drawM = async (w) => (w >= MARK_FROM ? drawMark(draw(w)) : draw(w));
+  const drawM = async (w) => (!plain && w >= MARK_FROM ? drawMark(draw(w, plain)) : draw(w, plain));
   const finalW = Math.min(origW, MAX_W);
   const rand = Math.random().toString(16).slice(2, 8);
   const stem = (file.name.replace(/\.[^.]+$/, '') || 'slika');
@@ -197,15 +199,15 @@ export async function processImage(file) {
   blobs.push({ path: 'images/' + og, blob: await toBlob(draw(Math.min(1200, finalW), true), 'image/jpeg', 0.8) });
   // kopija sa znakom za pregled preko celog ekrana (lightbox)
   const full = `${base}-full.${ext}`;
-  blobs.push({ path: 'images/' + full, blob: await toBlob(await drawMark(draw(Math.min(FULL_W, finalW))), type, 0.86) });
+  blobs.push({ path: 'images/' + full, blob: await toBlob(plain ? draw(Math.min(FULL_W, finalW), true) : await drawMark(draw(Math.min(FULL_W, finalW))), type, 0.86) });
   // horizontalna slika moze biti naslovna na pocetnoj: pravi se i skica koju sajt iscrtava pre slike
   let sketch;
-  if (origW >= 1200 && origW / origH >= 1.3) {
+  if (!plain && origW >= 1200 && origW / origH >= 1.3) {
     sketch = `${base}-sketch.json`;
     blobs.push({ path: 'images/' + sketch, blob: new Blob([makeSketch(bmp)], { type: 'application/json' }) });
   }
   bmp.close && bmp.close();
-  return { entry: { file: name, widths, w: finalW, h: Math.round((origH * finalW) / origW), og, full, wm: true, ...(sketch ? { sketch } : {}) }, blobs, origW, safe };
+  return { entry: { file: name, widths, w: finalW, h: Math.round((origH * finalW) / origW), og, full, wm: !plain, ...(sketch ? { sketch } : {}) }, blobs, origW, safe };
 }
 
 export async function blobToBase64(blob) {

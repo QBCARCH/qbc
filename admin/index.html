@@ -60,7 +60,10 @@ label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
 .tile.drag{opacity:.35}
 .tile .no{position:absolute;left:6px;top:6px;background:#fff;font:11px "Geist Mono",monospace;padding:2px 6px}
 .tile .tb{position:absolute;right:4px;bottom:4px;display:flex;gap:3px}
-.tile .tb button{padding:3px 8px;font-size:12px;background:#fff;color:var(--ink);border:1px solid var(--ink)}
+.tile .pl{position:absolute;left:4px;bottom:4px;display:flex;gap:3px;max-width:60%}
+.tile .pl input{width:7em;min-width:0;font:11px "Geist Mono",monospace;padding:2px 4px;border:1px solid #ccc;background:#fff}
+.tile .pl button{font:11px "Geist Mono",monospace}
+.tile .tb button,.tile .pl button{padding:3px 8px;font-size:12px;background:#fff;color:var(--ink);border:1px solid var(--ink)}
 .actions{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
 /* traka */
 #bar{position:fixed;left:0;right:0;bottom:0;background:var(--ink);color:#fff;padding:14px 24px;display:none;justify-content:space-between;align-items:center;gap:16px;z-index:8}
@@ -265,7 +268,7 @@ function editorView(index) {
 
 function setPreview(file, blob) { const u = URL.createObjectURL(blob); S.previews.set(file, u); return u; }
 
-async function ingest(files, onEach) {
+async function ingest(files, onEach, opts = {}) {
   const list = [...files].filter((f) => f.type.startsWith('image/') || /\.(jpe?g|png|webp)$/i.test(f.name));
   if (!list.length) { $('#eerr').textContent = 'Izaberi slike u formatu JPG, PNG ili WEBP.'; return; }
   $('#eerr').textContent = '';
@@ -276,9 +279,9 @@ async function ingest(files, onEach) {
       btn.textContent = `Obrađujem sliku ${i + 1} od ${list.length}`;
       const stemOf = (f) => f.replace(/^[0-9a-f]+_/, '').replace(/(-og)?\.[^.]+$/, '').toLowerCase();
       const have = new Set([E.cover, E.hero, ...E.gallery].filter(Boolean).map((im) => stemOf(im.file)));
-      const { entry, blobs, origW, safe } = await processImage(list[i]);
-      if (have.has(safe.toLowerCase())) { warns.push(`"${list[i].name}" je već dodata, preskočena je.`); continue; }
-      if (origW < SMALL_W) warns.push(`"${list[i].name}" je široka samo ${origW} px. Preko celog ekrana može delovati mekano; najbolje je ${SMALL_W} px ili više.`);
+      const { entry, blobs, origW, safe } = await processImage(list[i], opts);
+      if (!opts.plain && have.has(safe.toLowerCase())) { warns.push(`"${list[i].name}" je već dodata, preskočena je.`); continue; }
+      if (!opts.plain && origW < SMALL_W) warns.push(`"${list[i].name}" je široka samo ${origW} px. Preko celog ekrana može delovati mekano; najbolje je ${SMALL_W} px ili više.`);
       for (const b of blobs) E._blobs.set(b.path, b.blob);
       setPreview(entry.file, blobs[0].blob);
       onEach(entry);
@@ -299,7 +302,22 @@ function renderGallery() {
   const g = $('#ggrid');
   g.innerHTML = E.gallery.map((im, i) => `
     <div class="tile" draggable="true" data-i="${i}"><img src="${esc(src(im, 500))}" alt=""><span class="no">${i + 1}</span>
-    <span class="tb"><button data-l="${i}">&larr;</button><button data-r="${i}">&rarr;</button><button data-x="${i}">&times;</button></span></div>`).join('');
+    <span class="tb"><button data-l="${i}">&larr;</button><button data-r="${i}">&rarr;</button><button data-x="${i}">&times;</button></span>
+    <span class="pl">${im.plan
+      ? `<input data-pll="${i}" value="${esc(im.plan_label || '')}" placeholder="Osnova" title="Naziv crteža (npr. Prizemlje)"><button data-plx="${i}" title="Ukloni osnovu">osnova &times;</button>`
+      : `<button data-pla="${i}" title="Crtež (osnova, presek) koji stoji iza ovog rendera">+ osnova</button>`}</span></div>`).join('');
+  // osnova: crtez iza rendera; obradjuje se bez znaka i skice
+  g.querySelectorAll('[data-pla]').forEach((b) => (b.onclick = (ev) => {
+    ev.stopPropagation();
+    const inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'image/*';
+    inp.onchange = () => ingest([inp.files[0]], (entry) => { E.gallery[+b.dataset.pla].plan = entry; renderGallery(); }, { plain: true });
+    inp.click();
+  }));
+  g.querySelectorAll('[data-plx]').forEach((b) => (b.onclick = (ev) => { ev.stopPropagation(); const im = E.gallery[+b.dataset.plx]; delete im.plan; delete im.plan_label; renderGallery(); }));
+  g.querySelectorAll('[data-pll]').forEach((inp) => {
+    inp.onclick = (ev) => ev.stopPropagation();
+    inp.oninput = () => { const im = E.gallery[+inp.dataset.pll]; if (inp.value.trim()) im.plan_label = inp.value.trim(); else delete im.plan_label; };
+  });
   g.querySelectorAll('[data-x]').forEach((b) => (b.onclick = () => { E.gallery.splice(+b.dataset.x, 1); renderGallery(); }));
   g.querySelectorAll('[data-l]').forEach((b) => (b.onclick = () => { const i = +b.dataset.l; if (i > 0) { [E.gallery[i - 1], E.gallery[i]] = [E.gallery[i], E.gallery[i - 1]]; renderGallery(); } }));
   g.querySelectorAll('[data-r]').forEach((b) => (b.onclick = () => { const i = +b.dataset.r; if (i < E.gallery.length - 1) { [E.gallery[i + 1], E.gallery[i]] = [E.gallery[i], E.gallery[i + 1]]; renderGallery(); } }));

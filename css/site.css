@@ -295,6 +295,22 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 .pgal figure { cursor: zoom-in; }
 .pgal figure:nth-child(3n+1) { grid-column: 1 / -1; }
 .pgal .frame { aspect-ratio: var(--ar, 3 / 2); }
+/* osnova iza rendera (js: initGallery): crtez na papiru ispod slike; misem se otkriva kao brisanje (clip-path),
+   na dodir se prebacuje; dugmad Render / Osnova / ceo ekran su uvek tu */
+.pfig { position: relative; cursor: ew-resize; touch-action: pan-y; }
+.pfig__plan { position: absolute; inset: 0; z-index: 2; background: #f7f5f0; display: grid; place-items: center; clip-path: inset(0 0 0 var(--x, 100%)); transition: clip-path .9s var(--ease); }
+.pfig.is-live .pfig__plan { transition: none; }
+.pfig__plan img { width: auto; height: 92%; max-height: 92%; max-width: 94%; object-fit: contain; }
+.pfig__edge { position: absolute; z-index: 3; top: 0; bottom: 0; left: var(--x, 100%); width: 1px; background: #fff; mix-blend-mode: difference; opacity: 0; transition: opacity .3s; pointer-events: none; }
+.pfig.is-live .pfig__edge { opacity: 1; }
+.pfig__cap { position: absolute; z-index: 3; right: 14px; bottom: 18px; color: #171614; opacity: 0; transition: opacity .4s; pointer-events: none; }
+.pfig.is-plan .pfig__cap { opacity: 1; }
+.pfig__tag { position: absolute; z-index: 4; left: 14px; bottom: 14px; display: inline-flex; padding: 2px; border: 1px solid rgba(255, 255, 255, .55); border-radius: 999px; background: rgba(20, 19, 17, .45); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: #fff; transition: background .4s, border-color .4s, color .4s; }
+.pfig__tag button { padding: .5em 1em; border-radius: 999px; font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
+.pfig__tag button[aria-pressed="true"] { background: #fff; color: #171614; }
+.pfig__tag button:focus-visible { outline: 1px solid currentColor; outline-offset: 2px; }
+.pfig.is-plan .pfig__tag { border-color: rgba(23, 22, 20, .3); background: rgba(243, 241, 236, .6); color: #171614; }
+.pfig.is-plan .pfig__tag button[aria-pressed="true"] { background: #171614; color: #f3f1ec; }
 /* tamna galerija za projekte sa tamnim ili toplim vizualizacijama */
 .pgal--dark { background: var(--ink); padding-top: clamp(56px, 9vh, 110px); margin-top: clamp(40px, 8vh, 100px); }
 .pgal--dark .frame { background: var(--ink); }
@@ -457,6 +473,7 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   .pinfo__side { margin-bottom: 2rem; }
   .pgal { grid-template-columns: 1fr; }
   .pgal figure:nth-child(n) { grid-column: 1 / -1; }
+  .pfig__cap { display: none; }
   .pnext__text, .pnext .frame { grid-column: 1 / -1; }
   .pnext .frame { margin-top: 1.6rem; }
   .wide { height: clamp(200px, 36vh, 320px); }

@@ -328,8 +328,20 @@ function gallery(p, lang, depth) {
     const alt = g.alt || (lang === 'sr' ? `${altOf(p, lang)}, QBC Architects, prikaz ${i + 1} od ${n}` : `${altOf(p, lang)}, by QBC Architects, view ${i + 1} of ${n}`);
     // pregled preko celog ekrana: kopija sa znakom (-full), a za stare slike bez nje najveca verzija
     const full = g.full ? `${depth}images/${encFile(g.full)}` : imgUrl(g, depth, 2000);
-    return `<figure data-full="${full}"><div class="frame" data-ip${ar}>` +
-      img(g, { root: depth, sizes: '(max-width: 900px) 100vw, 60vw', alt, want: 1600 }) + `</div></figure>`;
+    const render = `<div class="frame" data-ip${ar}>` + img(g, { root: depth, sizes: '(max-width: 900px) 100vw, 60vw', alt, want: 1600 }) + `</div>`;
+    if (!g.plan) return `<figure data-full="${full}">${render}</figure>`;
+    // osnova iza rendera: crtez na papiru, pokazivac ga otkriva, dodir ili dugme prebacuje (css .pfig, js initGallery)
+    const sr = lang === 'sr';
+    const label = g.plan_label || (sr ? 'Osnova' : 'Plan');
+    const planFull = g.plan.full ? `${depth}images/${encFile(g.plan.full)}` : imgUrl(g.plan, depth, 2000);
+    const planAlt = sr ? `${altOf(p, lang)}, ${label.toLowerCase()}` : `${altOf(p, lang)}, ${label.toLowerCase()}`;
+    return `<figure class="pfig" data-full="${full}" data-plan-full="${planFull}" data-plan-alt="${esc(planAlt)}">${render}` +
+      `<div class="pfig__plan" aria-hidden="true">${img(g.plan, { root: depth, sizes: '(max-width: 900px) 100vw, 60vw', alt: '', want: 1600 })}</div>` +
+      `<span class="pfig__edge" aria-hidden="true"></span><span class="pfig__cap label">${esc(label)}</span>` +
+      `<span class="pfig__tag label" role="group" aria-label="${sr ? 'Prikaz' : 'Show'}">` +
+      `<button type="button" data-show="render" aria-pressed="true">Render</button>` +
+      `<button type="button" data-show="plan" aria-pressed="false">${esc(label)}</button>` +
+      `<button type="button" data-show="zoom" aria-label="${sr ? 'Ceo ekran' : 'Full screen'}">⤢</button></span></figure>`;
   }).join('');
 }
 

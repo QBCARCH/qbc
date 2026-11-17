@@ -175,7 +175,7 @@ function heroCredit(p, base) {
 // Naslovna slika se bira pri svakom otvaranju: mala skripta na mestu slike odmah (dok se HTML cita) napravi <img>,
 // pa pregledac ne ceka site.js. Bira se medju glavnim slikama projekata, nikad ista kao prosli put; novi projekat
 // (promo_days dana) dolazi cesce. Uz sliku idu njena skica (is-sketch, data-sketch) i potpis (data-s, -t, -y za site.js).
-const HERO_JS = "(function(P){var s=document.currentScript,m=s.parentNode,h=m.parentNode,n=Date.now(),L,r=Math.random;" +
+const HERO_JS = "(function(P){var s=document.currentScript,m=s.parentNode,h=m.closest('.hero')||m.parentNode,n=Date.now(),L,r=Math.random;" +
   "try{L=localStorage.getItem('qbc-hero')}catch(e){}" +
   "var f=P.p.filter(function(p){var t=Date.parse(p.a);return p.a&&t<=n+864e5&&(n-t)/864e5<=P.d&&p.s!==L})[0];" +
   "var o=P.p.filter(function(p){return p.s!==L});if(!o.length)o=P.p;" +
@@ -185,7 +185,7 @@ const HERO_JS = "(function(P){var s=document.currentScript,m=s.parentNode,h=m.pa
   "var big=k.w.filter(function(w){return w>=2000})[0],i=document.createElement('img');" +
   "i.src=big?e(B+'-p-'+big+X):e(k.f);i.srcset=ss.join(', ');i.sizes='100vw';i.width=k.W;i.height=k.H;i.alt=k.t;i.setAttribute('fetchpriority','high');" +
   "m.insertBefore(i,s);h.setAttribute('data-s',k.s);h.setAttribute('data-t',k.c);h.setAttribute('data-y',k.y);" +
-  "try{if(k.k&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!sessionStorage.getItem('qbc-sketch')){h.setAttribute('data-sketch',e(k.k));h.classList.add('is-sketch')}}catch(e){}})";
+  "try{if(k.k&&!matchMedia('(prefers-reduced-motion: reduce)').matches){h.setAttribute('data-sketch',e(k.k));h.classList.add('is-sketch')}}catch(e){}})";
 function heroPicker(projects, def, promoDays, root, lang) {
   const p = projects.filter((pr) => pr.hero && pr.hero.file && pr.hero.w && pr.hero.h && pr.hero.w / pr.hero.h >= 1.3).map((pr) => ({
     s: pr.slug, c: pr.title, t: altOf(pr, lang), y: pr.year, a: pr.added || '', f: pr.hero.file, W: pr.hero.w, H: pr.hero.h,
@@ -244,6 +244,20 @@ function worksGrid(projects, lang, base, root) {
     `<div class="frame" data-ip>${img(cover(p), { root, sizes: '(max-width: 900px) 100vw, 50vw', alt: altOf(p, lang), want: 1600 })}</div>` +
     `<div class="wcard__meta"><h2 class="wcard__title">${esc(p.title)}</h2><span class="label">${esc(p.year)}</span></div>` +
     (tr(p, 'type', lang) ? `<p class="wcard__type">${esc(tr(p, 'type', lang))}</p>` : '') + `</a>`).join('');
+}
+
+// naslov "Naziv, Mesto": mesto posle poslednjeg zareza ide kurzivom (serifni akcenat)
+function accentTitle(title) {
+  const i = String(title).lastIndexOf(',');
+  if (i < 0) return esc(title);
+  return `${esc(title.slice(0, i + 1))} <span class="it">${esc(title.slice(i + 1).trim())}</span>`;
+}
+// pocetna: traka projekata koja klizi bocno dok se stranica spusta (css .reel, js initReel)
+function worksReel(projects, lang, base, root) {
+  return projects.map((p, i) =>
+    `<a class="card" href="${base}work/${p.slug}.html">` +
+    `<div class="card__img frame">${img(cover(p), { root, sizes: '(max-width: 760px) 78vw, 66vw', alt: altOf(p, lang), want: 1600 })}</div>` +
+    `<div class="card__meta"><span class="card__n label">${num(i)}</span><h3 class="card__t">${accentTitle(p.title)}</h3><span class="card__y label">${esc(p.year)}</span></div></a>`).join('');
 }
 
 function worksIndex(projects, lang, base) {
@@ -440,6 +454,8 @@ export function buildSite(data, sources, { all = false } = {}) {
       HERO_IMG: heroPicker(projects, homeHero, data.promo_days ?? 21, lang === 'en' ? '' : '../', lang),
       HERO_CREDIT: heroCredit(homeHero, ''),
       HOME_WORKS: worksGrid(projects.slice(0, data.home_count ?? 4), lang, '', lang === 'en' ? '' : '../'),
+      HOME_REEL: worksReel(projects.slice(0, data.home_count ?? 6), lang, '', lang === 'en' ? '' : '../'),
+      HOME_COUNT: num((data.home_count ?? 6) - 1),
     });
     const ow = lang === 'en'
       ? ['Portfolio | Architecture and Interior Projects by QBC Architects', 'Selected houses, villas, apartments, hospitality and healthcare interiors by QBC Architects, Belgrade, in Serbia and Montenegro.']

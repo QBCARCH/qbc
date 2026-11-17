@@ -9,6 +9,9 @@
 /* 1. tokeni ---------------------------------------------------------------- */
 @font-face { font-family: "Geist"; src: url("../fonts/Geist.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: "Geist Mono"; src: url("../fonts/GeistMono.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+/* serifni akcenat (kurziv) za nazive mesta i pojedine reci; dva fajla: osnovna latinica i prosirena (č, ć, ž) */
+@font-face { font-family: "Instrument Serif"; font-style: italic; src: url("../fonts/InstrumentSerif-Italic.woff2") format("woff2"); font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Instrument Serif"; font-style: italic; src: url("../fonts/InstrumentSerif-Italic-ext.woff2") format("woff2"); font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 
 :root {
   --bg: #f5f3ef;
@@ -21,6 +24,7 @@
   --ink-mute: rgba(241, 238, 232, .7);
   --sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
   --pad: clamp(20px, 4vw, 64px);
   --gap: clamp(14px, 2vw, 32px);
   --ease: cubic-bezier(.25, .46, .2, 1);
@@ -49,6 +53,7 @@ ul, ol { list-style: none; }
 /* 3. tipografija ------------------------------------------------------------ */
 .label { font-family: var(--mono); font-size: .72rem; font-weight: 400; letter-spacing: .06em; text-transform: uppercase; line-height: 1.5; }
 .mute { color: var(--mute); }
+.it { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: 0; }
 .display { font-weight: 300; font-size: clamp(2.6rem, 6.6vw, 6.8rem); line-height: 1; letter-spacing: -.035em; }
 .h1 { font-weight: 300; font-size: clamp(2.2rem, 4.6vw, 4.6rem); line-height: 1.04; letter-spacing: -.03em; }
 .h2 { font-weight: 300; font-size: clamp(1.7rem, 3vw, 3rem); line-height: 1.12; letter-spacing: -.025em; }
@@ -142,47 +147,62 @@ ul, ol { list-style: none; }
 .footer__col a:hover { color: var(--accent); }
 
 /* 6. pocetna ---------------------------------------------------------------- */
-.hero { position: relative; height: 100svh; min-height: 560px; overflow: hidden; color: #fff; isolation: isolate; background: #1c1b19; }
-.hero__media { position: absolute; inset: -6% 0; transform: translate3d(0, var(--ty, 0px), 0); will-change: transform; }
+/* Naslovna: skica olovkom koju citalac "docrtava" skrolom, pa se ispod nje pojavi slika (js: initSketch).
+   .hero je visoka staza (220svh) kada ima skicu (is-sketch), a .hero__stage je zalepljen ekran unutar nje.
+   Bez skice (projekat bez skice, smanjeno kretanje, bez JS-a) naslovna je obicna slika preko ekrana. */
+.hero { position: relative; height: 100svh; min-height: 560px; color: #fff; background: #1c1b19; }
+.hero.is-sketch { height: 220svh; color: var(--fg); background: var(--bg); }
+.hero__stage { position: sticky; top: 0; height: 100svh; min-height: 560px; overflow: hidden; isolation: isolate; }
+.hero.is-sketch .hero__stage { background: var(--bg); }
+.hero__media { position: absolute; inset: 0; z-index: 1; }
 .hero__media img { width: 100%; height: 100%; object-fit: cover; }
-.hero::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0, 0, 0, .22), transparent 26%, transparent 58%, rgba(0, 0, 0, .42)); pointer-events: none; }
-.hero__content { position: absolute; inset: auto 0 0 0; z-index: 2; padding: 0 var(--pad) clamp(24px, 4.5vh, 48px); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); align-items: end; }
-.hero__title { grid-column: 1 / span 8; font-weight: 300; font-size: clamp(2.2rem, 4.6vw, 5rem); line-height: 1.04; letter-spacing: -.03em; }
-.hero__title .ln { display: block; white-space: nowrap; }
-.hero__title i { font-style: normal; opacity: .5; font-weight: 200; }
-/* naslov: mirno pojavljivanje red po red, slova se ne pomeraju */
-.js .hero__title .ln { clip-path: inset(0 0 100% 0); transform: translateY(.18em); animation: rise 1.6s cubic-bezier(.2, .7, .1, 1) both; }
-.js .hero__title .ln:nth-child(2) { animation-delay: .14s; }
-.js .hero__title .ln:nth-child(3) { animation-delay: .28s; }
-@keyframes rise { to { clip-path: inset(-10% 0 -10% 0); transform: none; } }
-.hero__scroll { grid-column: 1 / -1; margin-top: clamp(22px, 3.6vh, 40px); padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .4); display: grid; grid-template-columns: 1.2fr 1fr .7fr auto; align-items: start; gap: 2rem; }
-.hero__scroll p { max-width: 36ch; }
-.hero__credit { display: block; margin-top: .4rem; }
-/* skica na naslovnoj (js: initSketch): papir sa olovkom preko slike, pa se papir pretopi, a linije za njim;
-   tekst i senka slike se vrate kad se pojavi slika. Slika se sve vreme ucitava ispod, pa se ne usporava. */
-.hero__sketch { position: absolute; inset: 0; background-color: transparent; visibility: hidden; }
-.hero__sketch svg { display: block; width: 100%; height: 100%; transition: opacity 1.4s var(--ease) .7s; }
+.hero__media::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(0, 0, 0, .22), transparent 26%, transparent 58%, rgba(0, 0, 0, .42)); pointer-events: none; }
+.is-sketch .hero__media img, .is-sketch .hero__media::after { opacity: var(--render, 0); }
+.hero__sketch { position: absolute; inset: 0; z-index: 2; display: none; opacity: var(--paper, 1); pointer-events: none; }
+.is-sketch .hero__sketch { display: block; }
+.hero__sketch svg { display: block; width: 100%; height: 100%; }
 .hero__sketch path { fill: none; stroke: #34322e; stroke-linecap: round; stroke-linejoin: round; }
-.hero.is-sketch .hero__sketch { visibility: visible; background-color: var(--bg); }
-.hero.sketch-done .hero__sketch { background-color: rgba(245, 243, 239, 0); transition: background-color 1.4s var(--ease); }
-.hero.sketch-done .hero__sketch svg { opacity: 0; }
-.hero__content, .hero::after { transition: opacity 1.4s var(--ease); }
-.hero.is-sketch:not(.sketch-done) .hero__content, .hero.is-sketch:not(.sketch-done)::after { opacity: 0; }
+.hero__content { position: absolute; inset: auto 0 0 0; z-index: 3; padding: 0 var(--pad) clamp(24px, 4.5vh, 48px); display: grid; gap: clamp(18px, 3vh, 34px); transition: color .6s var(--ease); }
+.hero.is-sketch.is-render { color: #fff; }
+.hero__title { font-weight: 300; font-size: clamp(2.4rem, 7vw, 7.2rem); line-height: .98; letter-spacing: -.035em; max-width: 12ch; text-wrap: balance; }
+.hero__title .it { font-size: 1.06em; letter-spacing: -.01em; }
+.hero__scroll { padding-top: 16px; border-top: 1px solid currentColor; display: grid; grid-template-columns: 1.4fr 1fr auto auto; align-items: start; gap: 2rem; opacity: .9; }
+.hero__scroll p { max-width: 40ch; }
 .hero__credit:hover { text-decoration: underline; text-underline-offset: 4px; }
-.hero__time time { font-variant-numeric: tabular-nums; }
+/* merac skica, render: linija koja se puni sa skrolom */
+.hero__meter { display: flex; align-items: center; gap: .8em; }
+.hero__meter b { display: block; width: 110px; height: 1px; background: currentColor; opacity: .35; position: relative; }
+.hero__meter b::after { content: ""; position: absolute; left: 0; top: -1px; height: 3px; width: calc(var(--p, 0) * 100%); background: currentColor; }
+.hero:not(.is-sketch) .hero__meter { display: none; }
 
-/* tamna traka: recenica i brojke */
-.band { background: var(--ink); color: var(--ink-fg); padding-block: clamp(96px, 18vh, 230px) clamp(56px, 10vh, 120px); }
-.band__stmt { font-weight: 300; font-size: clamp(2rem, 5.4vw, 5.6rem); line-height: 1.08; letter-spacing: -.035em; max-width: 20ch; margin-bottom: clamp(70px, 14vh, 170px); }
-.band__stmt .w { opacity: .22; transition: opacity .5s var(--ease); }
-.band__stmt .w.is-lit { opacity: 1; }
+/* traka projekata: zalepljen ekran, projekti klize bocno dok se stranica spusta (js: initReel) */
+.reel { position: relative; height: 420svh; background: var(--ink); color: var(--ink-fg); }
+.reel__stage { position: sticky; top: 0; height: 100svh; overflow: hidden; display: grid; grid-template-rows: auto 1fr auto; }
+.reel__head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; padding: calc(var(--navh) + 18px) var(--pad) 0; }
+.reel__head .label { color: var(--ink-mute); }
+.reel__track { display: flex; gap: clamp(18px, 3vw, 48px); align-items: center; padding: 0 var(--pad); will-change: transform; }
+.card { flex: 0 0 auto; width: min(66vw, 78svh); display: grid; gap: 14px; }
+.card__img { aspect-ratio: 3 / 2; background: #1d1c19; }
+.card__img img { transition: scale 1.6s var(--ease); }
+.card:hover .card__img img { scale: 1.03; }
+.card__meta { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: baseline; }
+.card__n, .card__y, .card__t .it { color: var(--ink-mute); }
+.card__t { font-weight: 300; font-size: clamp(1.3rem, 2.4vw, 2.3rem); letter-spacing: -.025em; line-height: 1.05; }
+.card--end { width: min(60vw, 520px); gap: 1.4rem; padding-right: var(--pad); }
+.card--end p { font-weight: 300; font-size: clamp(1.6rem, 3vw, 3rem); line-height: 1.08; letter-spacing: -.03em; }
+.card--end .btn--round { width: max-content; border-color: rgba(255, 255, 255, .4); }
+.card--end .btn--round:hover { background: var(--ink-fg); color: var(--ink); border-color: var(--ink-fg); }
+.reel__foot { display: flex; justify-content: space-between; gap: 1rem; padding: 0 var(--pad) clamp(18px, 3vh, 32px); color: var(--ink-mute); }
+.reel__bar { flex: 1; align-self: center; height: 1px; background: rgba(255, 255, 255, .18); position: relative; margin: 0 1.5rem; }
+.reel__bar::after { content: ""; position: absolute; left: 0; top: -1px; height: 3px; width: calc(var(--p, 0) * 100%); background: var(--ink-fg); }
+
 .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); padding-block: clamp(40px, 9vh, 110px) clamp(50px, 11vh, 130px); }
-.band .proof { padding-block: 0; }
 .proof__item { display: grid; gap: clamp(10px, 1.6vh, 18px); padding-top: clamp(18px, 3vh, 34px); border-top: 1px solid var(--line); align-content: start; }
-.band .proof__item { border-top-color: rgba(255, 255, 255, .18); }
 .proof__item b { font-weight: 300; font-size: clamp(4rem, 10.5vw, 10rem); line-height: .95; letter-spacing: -.055em; font-variant-numeric: tabular-nums; }
 .proof__item b i { font-style: normal; color: var(--mute); margin-left: .02em; }
-.band .proof__item b i, .band .proof .label { color: var(--ink-mute); }
+/* brojke ispod teksta o studiju: manje, mirnije */
+.proof--quiet { padding-block: clamp(28px, 5vh, 56px) 0; }
+.proof--quiet .proof__item b { font-size: clamp(2.6rem, 5vw, 4.8rem); font-weight: 200; }
 
 .studio { align-items: start; }
 .studio__label { grid-column: 1 / span 3; }
@@ -413,9 +433,10 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   .nav__name { letter-spacing: .18em; }
   .menu { grid-template-columns: 1fr; }
   .menu__side { display: none; }
-  .hero__title { grid-column: 1 / -1; }
   .hero__scroll { grid-template-columns: 1fr auto; row-gap: .6rem; }
-  .hero__scroll p:first-child, .hero__time { display: none; }
+  .hero__scroll p:first-child { display: none; }
+  .reel { height: 360svh; }
+  .card, .card--end { width: 78vw; }
   .studio__label, .studio__text { grid-column: 1 / -1; }
   .studio__label { margin-bottom: 1.4rem; }
   .studio__meta { grid-template-columns: 1fr; }
@@ -464,6 +485,9 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   .nav__links { display: none; }
   .nav__menu { display: inline-flex; }
   .proof { grid-template-columns: 1fr; row-gap: 36px; }
+  .proof--quiet { grid-template-columns: 1fr 1fr; row-gap: 24px; }
+  .hero__scroll { grid-template-columns: 1fr; }
+  .hero__meter b { width: 80px; }
   .beliefs { grid-template-columns: 1fr; }
   .faq__item summary { grid-template-columns: 2.4rem 1fr 1.4rem; }
   .faq__a { padding-left: calc(2.4rem + var(--gap)); padding-right: 0; }
@@ -477,5 +501,11 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   @view-transition { navigation: none; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
   .js [data-reveal] { opacity: 1; transform: none; }
-  .js .hero__title .ln { clip-path: none; transform: none; }
+  .hero.is-sketch { height: 100svh; }
+  .hero__sketch { display: none !important; }
+  .is-sketch .hero__media img, .is-sketch .hero__media::after { opacity: 1; }
+  .reel { height: auto; }
+  .reel__stage { position: relative; height: auto; overflow: visible; }
+  .reel__track { flex-wrap: wrap; padding-block: 2rem; transform: none !important; }
+  .card, .card--end { width: min(100%, 560px); }
 }

@@ -33,7 +33,7 @@ Pri prvom otvaranju sajta u poseti preko naslovne slike se olovkom iscrta skica 
 
 ## Redosled i brisanje
 
-Na listi projekata dugmad **Gore / Dole** menjaju redosled na sajtu (prva 4 su na početnoj), **Obriši** uklanja projekat i njegove slike. Izmene se objavljuju dugmetom na dnu ekrana.
+Na listi projekata dugmad **Gore / Dole** menjaju redosled na sajtu (prvih 6 su u traci na početnoj), **Obriši** uklanja projekat i njegove slike. Izmene se objavljuju dugmetom na dnu ekrana.
 
 ## Kako ovo radi
 

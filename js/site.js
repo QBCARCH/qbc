@@ -23,7 +23,7 @@
   /* jedan, jednak i blag parallax: slika se krece sporije od okvira */
   const initParallax = () => {
     if (reduce) return;
-    const hero = $('.hero__media, .phero__media');
+    const hero = $('.phero__media');
     const frames = $$('[data-ip]').map((el) => ({ el, im: $('img', el) })).filter((f) => f.im);
     let y = scrollY, target = y, vh = innerHeight, raf = 0;
     const tops = new Map();
@@ -55,13 +55,13 @@
   const initNav = () => {
     const nav = $('.nav'), brand = $('.nav__brand');
     if (!nav || !brand) return;
-    const darks = $$('.hero, .phero, .band, .inq, .pgal--dark');
+    const darks = $$('.hero, .phero, .reel, .inq, .pgal--dark');
     let last = scrollY, raf = 0;
     // dok se na naslovnoj crta skica (svetao papir), zaglavlje je tamno
     const tone = () => {
       raf = 0;
       const b = brand.getBoundingClientRect(), y = b.top + b.height / 2;
-      root.classList.toggle('on-dark', darks.some((el) => { if (el.classList.contains('is-sketch') && !el.classList.contains('sketch-done')) return false; const r = el.getBoundingClientRect(); return r.top <= y && r.bottom >= y; }));
+      root.classList.toggle('on-dark', darks.some((el) => { if (el.classList.contains('is-sketch') && !el.classList.contains('is-render')) return false; const r = el.getBoundingClientRect(); return r.top <= y && r.bottom >= y; }));
     };
     tone();
     addEventListener('scroll', () => {
@@ -258,25 +258,14 @@
     paint();
   };
 
-  /* skica na naslovnoj: pri prvom otvaranju u poseti olovka iscrta konture zgrade, pa se crtez pretopi u sliku.
-     Potezi su napravljeni unapred (admin/sketch-lib.js); ovde se samo crtaju, ljudskim ritmom: kratak zastoj
-     pre poteza, brze na pravim delovima, sporije i sa zastojem na uglovima, mirno prenosenje ruke izmedju poteza.
-     Skrol, klik ili taster odmah prikazuju sliku. */
+  /* skica na naslovnoj: potezi su napravljeni unapred (admin/sketch-lib.js); ovde ih skrol "docrtava".
+     .hero je staza od 220svh: do 62% puta olovka crta, od 58% do 88% se ispod pojavljuje slika,
+     a linije se povuku do 98%. Na vrhu stranice je vec iscrtan pocetak (14%), da papir nikad nije prazan. */
   const initSketch = () => {
     const hero = $('.hero.is-sketch[data-sketch]'), host = hero && $('.hero__sketch', hero);
     if (!hero || !host) return;
-    safe(() => sessionStorage.setItem('qbc-sketch', '1'));
-    const DRAW_MS = 7000, ANG = .45, DWELL = 30, TURN = 55, AIR = 1.4, ease = 'cubic-bezier(.45, 0, .5, 1)';
-    let done = false, anims = [], timer = 0;
-    const finish = () => {
-      if (done) return; done = true; clearTimeout(timer);
-      ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach((ev) => removeEventListener(ev, finish));
-      hero.classList.add('sketch-done');
-      setTimeout(() => { anims.forEach((a) => a.cancel()); hero.classList.remove('is-sketch', 'sketch-done'); host.textContent = ''; dispatchEvent(new Event('resize')); }, 2600);
-      dispatchEvent(new Event('resize'));
-    };
-    ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach((ev) => addEventListener(ev, finish, { passive: true }));
-    timer = setTimeout(finish, 2500); // ako skica ne stigne na vreme, odmah slika
+    const stage = $('[data-stage]', hero), meter = $('[data-meter]', hero);
+    const names = root.lang === 'sr' ? ['Skica', 'Model', 'Render'] : ['Sketch', 'Model', 'Render'];
     let seed = 7;
     const rnd = () => ((seed = Math.imul(seed ^ (seed >>> 15), 2246822507) + 0x9e3779b9 >>> 0) / 4294967296);
     // drhtava olovka: tacke na ~6 px, blagi talas popreko, zaobljeno (Catmull-Rom), mali produzetak na krajevima
@@ -305,51 +294,60 @@
       }
       return d;
     };
-    // plan poteza u "pikselima puta": zastoj na pocetku, ubrzanje i usporenje izmedju uglova, zastoj na uglu
-    const plan = (s, prev) => {
-      const kf = [{ t: 0, f: 0 }, { t: DWELL, f: 0 }], segL = [];
-      for (let j = 0; j < s.length - 1; j++) segL.push(Math.hypot(s[j + 1][0] - s[j][0], s[j + 1][1] - s[j][1]));
-      const L = segL.reduce((a, b) => a + b, 0) || 1;
-      let t = DWELL, run = 0, sum = 0;
-      for (let j = 0; j < segL.length; j++) {
-        run += segL[j]; sum += segL[j];
-        let turn = 0;
-        if (j < segL.length - 1) {
-          const a = Math.atan2(s[j + 1][1] - s[j][1], s[j + 1][0] - s[j][0]), b = Math.atan2(s[j + 2][1] - s[j + 1][1], s[j + 2][0] - s[j + 1][0]);
-          turn = Math.abs(((b - a + Math.PI * 3) % (Math.PI * 2)) - Math.PI);
-        }
-        if (turn > ANG || j === segL.length - 1) {
-          t += run; kf.push({ t, f: sum / L }); run = 0;
-          if (turn > ANG) { t += TURN * (turn / Math.PI); kf.push({ t, f: sum / L }); }
-        }
-      }
-      const air = prev ? Math.hypot(s[0][0] - prev[prev.length - 1][0], s[0][1] - prev[prev.length - 1][1]) / AIR + 40 : 0;
-      return { kf, dur: t, air };
+    const paths = [];
+    let total = 0, raf = 0, wasRender = false;
+    const prog = () => { const r = hero.getBoundingClientRect(); return clamp(-r.top / (r.height - innerHeight)); };
+    const paint = () => {
+      raf = 0;
+      const p = prog(), draw = clamp(p / .62) * total;
+      paths.forEach(({ el, len, at }) => { el.style.strokeDashoffset = len * (1 - clamp((draw - at) / len)); });
+      const r = clamp((p - .58) / .3);
+      hero.style.setProperty('--render', r.toFixed(3));
+      hero.style.setProperty('--paper', (1 - clamp((p - .8) / .18)).toFixed(3));
+      // kada se pojavi slika, zaglavlje menja ton (initNav slusa resize)
+      if (hero.classList.toggle('is-render', r > .55) !== wasRender) { wasRender = !wasRender; dispatchEvent(new Event('resize')); }
+      if (meter) meter.style.setProperty('--p', p.toFixed(3));
+      if (stage) stage.textContent = names[p < .6 ? 0 : p < .88 ? 1 : 2];
     };
+    const kick = () => { if (!raf) raf = requestAnimationFrame(paint); };
     fetch(hero.dataset.sketch).then((r) => r.json()).then(({ w, h, s }) => {
-      if (done) return;
-      clearTimeout(timer);
       const NS = 'http://www.w3.org/2000/svg', svg = D.createElementNS(NS, 'svg');
       svg.setAttribute('viewBox', `0 0 ${w} ${h}`); svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
       const st = s.map((f) => { const p = []; for (let i = 0; i < f.length; i += 2) p.push([f[i], f[i + 1]]); return p; }).filter((p) => p.length > 1);
-      const paths = st.map((p) => {
+      st.forEach((p) => {
         const el = D.createElementNS(NS, 'path');
         el.setAttribute('d', pencil(p)); el.setAttribute('stroke-width', (.85 + rnd() * .4).toFixed(2)); el.style.opacity = (.62 + rnd() * .3).toFixed(2);
-        svg.appendChild(el); return el;
+        svg.appendChild(el);
       });
       host.appendChild(svg);
-      const plans = st.map((p, i) => plan(p, st[i - 1]));
-      const k = DRAW_MS / (plans.reduce((a, p) => a + p.dur + p.air, 0) || 1);
-      let at = 0;
-      paths.forEach((el, i) => {
-        const len = el.getTotalLength(), { kf, dur, air } = plans[i];
-        at += air * k;
-        el.style.strokeDasharray = len; el.style.strokeDashoffset = len;
-        anims.push(el.animate(kf.map((x) => ({ offset: x.t / dur, strokeDashoffset: len * (1 - x.f), easing: ease })), { duration: Math.max(80, dur * k), delay: at, fill: 'forwards' }));
-        at += dur * k;
-      });
-      timer = setTimeout(finish, at + 400);
-    }).catch(finish);
+      $$('path', svg).forEach((el) => { const len = el.getTotalLength(); el.style.strokeDasharray = len; el.style.strokeDashoffset = len; paths.push({ el, len, at: total }); total += len; });
+      // na samom vrhu je vec iscrtano prvih 14%, da stranica ne pocinje praznim papirom
+      if (prog() === 0) { const d = total * .14; paths.forEach(({ el, len, at }) => { el.style.strokeDashoffset = len * (1 - clamp((d - at) / len)); }); }
+      else paint();
+      addEventListener('scroll', kick, { passive: true });
+      addEventListener('resize', kick);
+    }).catch(() => { hero.classList.remove('is-sketch'); });
+  };
+
+  /* traka projekata na pocetnoj: zalepljen ekran, kartice klize ulevo srazmerno spustanju kroz .reel */
+  const initReel = () => {
+    const reel = $('.reel'), track = reel && $('[data-track]', reel);
+    if (!reel || !track || reduce) return;
+    const bar = $('[data-bar]', reel), count = $('[data-count]', reel), cards = $$('.card:not(.card--end)', track);
+    const pad = (n) => String(n).padStart(2, '0');
+    let raf = 0;
+    const paint = () => {
+      raf = 0;
+      const r = reel.getBoundingClientRect(), p = clamp(-r.top / (r.height - innerHeight)), max = Math.max(0, track.scrollWidth - innerWidth);
+      track.style.transform = `translate3d(${(-max * p).toFixed(1)}px,0,0)`;
+      if (bar) bar.style.setProperty('--p', p.toFixed(3));
+      if (count && cards.length) count.textContent = `${pad(Math.min(cards.length, Math.floor(p * cards.length * 1.08) + 1))} / ${pad(cards.length)}`;
+    };
+    const kick = () => { if (!raf) raf = requestAnimationFrame(paint); };
+    addEventListener('scroll', kick, { passive: true });
+    addEventListener('resize', kick);
+    addEventListener('load', kick);
+    paint();
   };
 
   /* potpis naslovne slike: sliku je izabrala mala skripta na mestu slike (tools/build-core.js, HERO_JS) */
@@ -361,7 +359,7 @@
   };
 
   const boot = () => {
-    initCredit(); initSketch(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
+    initCredit(); initSketch(); initReel(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initLightbox(); initForm(); initCount(); initWords();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

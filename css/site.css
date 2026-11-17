@@ -22,6 +22,12 @@
   --ink: #121110;               /* tamne trake (pocetna, upit, tamna galerija) */
   --ink-fg: #f1eee8;
   --ink-mute: rgba(241, 238, 232, .7);
+  --frame: #e4e1da;             /* podloga slike dok se ucitava */
+  --glass: rgba(245, 243, 239, .86); /* traka navigacije i podnavigacije projekta */
+  --pencil: #34322e;            /* olovka skice na naslovnoj */
+  --hover: rgba(28, 27, 25, .03);
+  --grain: .05;                 /* jacina zrnaste teksture */
+  --logo: none;                 /* znak je taman; u tamnom rezimu se obrce */
   --sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
@@ -30,11 +36,35 @@
   --ease: cubic-bezier(.25, .46, .2, 1);
   --navh: 70px;
   --navh-s: 46px;
+  color-scheme: light;
+}
+/* tamni rezim prati sistem (bez prekidaca): papir postaje tamno siv, tamne trake jos dublje,
+   akcenat svetliji da se vidi na tamnom; slike i papir osnove ostaju isti */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151412;
+    --fg: #ece8e1;
+    --mute: #9a958b;
+    --line: rgba(236, 232, 225, .14);
+    --accent: #c4ae95;
+    --ink: #0c0b0a;
+    --frame: #1f1d1a;
+    --glass: rgba(21, 20, 18, .84);
+    --pencil: #d8d3c9;
+    --hover: rgba(236, 232, 225, .04);
+    --grain: .08;
+    --logo: invert(1);
+    color-scheme: dark;
+  }
 }
 
 /* 2. osnova ---------------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; background: var(--bg); }
+/* fina zrnasta tekstura preko cele stranice (SVG sum, nepomicna); ne hvata klik */
+body::after { content: ""; position: fixed; inset: 0; z-index: 9000; pointer-events: none; opacity: var(--grain); mix-blend-mode: multiply;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") 0 0 / 180px 180px; }
+@media (prefers-color-scheme: dark) { body::after { mix-blend-mode: screen; } }
 body {
   margin: 0; background: transparent; color: var(--fg);
   font-family: var(--sans); font-weight: 350; font-size: 1.0625rem; line-height: 1.72;
@@ -78,7 +108,7 @@ ul, ol { list-style: none; }
 .btn--round:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
 
 /* okvir slike; slika je sa svake strane 2px veca od okvira, da na ivicama nema svetlih tracica */
-.frame { position: relative; overflow: hidden; background: #e4e1da; }
+.frame { position: relative; overflow: hidden; background: var(--frame); }
 .frame > img { width: 100%; height: 100%; object-fit: cover; }
 .frame:not([data-ip]) > img { margin: -2px; width: calc(100% + 4px); height: calc(100% + 4px); max-width: none; }
 [data-ip] > img { position: absolute; left: -2px; top: -4%; width: calc(100% + 4px); max-width: none; height: 108%; transform: translate3d(0, var(--ty, 0px), 0); will-change: transform; }
@@ -95,14 +125,14 @@ ul, ol { list-style: none; }
 /* Navigacija: znak i naziv su uvek vidljivi. Pri spustanju se traka skupi, a linkovi se sklone.
    Ton prati pozadinu ispod znaka (js: on-dark): preko slike i tamnih traka belo, preko svetlih delova crno. */
 .nav { position: fixed; inset: 0 0 auto 0; z-index: 50; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 22px var(--pad); transition: padding .6s var(--ease); pointer-events: none; }
-.nav::before { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(245, 243, 239, .86); -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); transition: opacity .5s var(--ease), transform .6s var(--ease); }
+.nav::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--glass); -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); transition: opacity .5s var(--ease), transform .6s var(--ease); }
 .on-dark .nav::before { opacity: 0; }
 .nav.is-hidden { padding-block: 10px; }
 .nav > * { pointer-events: auto; }
 .nav__links, .nav__menu { transition: opacity .4s var(--ease), transform .6s var(--ease); }
 .nav.is-hidden .nav__links { opacity: 0; transform: translateY(-14px); pointer-events: none; visibility: hidden; transition: opacity .4s var(--ease), transform .6s var(--ease), visibility 0s .4s; }
 .nav__brand { display: inline-flex; align-items: center; gap: 12px; justify-self: start; }
-.nav__brand img { width: 26px; height: 26px; transition: filter .4s; }
+.nav__brand img { width: 26px; height: 26px; transition: filter .4s; filter: var(--logo); }
 .nav__text { color: var(--fg); transition: color .4s; }
 .on-dark .nav__text { color: #fff; }
 .on-dark .nav__brand img { filter: invert(1); }
@@ -161,7 +191,7 @@ ul, ol { list-style: none; }
 .hero__sketch { position: absolute; inset: 0; z-index: 2; display: none; opacity: var(--paper, 1); pointer-events: none; }
 .is-sketch .hero__sketch { display: block; }
 .hero__sketch svg { display: block; width: 100%; height: 100%; }
-.hero__sketch path { fill: none; stroke: #34322e; stroke-linecap: round; stroke-linejoin: round; }
+.hero__sketch path { fill: none; stroke: var(--pencil); stroke-linecap: round; stroke-linejoin: round; }
 .hero__content { position: absolute; inset: auto 0 0 0; z-index: 3; padding: 0 var(--pad) clamp(24px, 4.5vh, 48px); display: grid; gap: clamp(18px, 3vh, 34px); transition: color .6s var(--ease); }
 .hero.is-sketch.is-render { color: #fff; }
 .hero__title { font-weight: 300; font-size: clamp(2.4rem, 7vw, 7.2rem); line-height: .98; letter-spacing: -.035em; max-width: 12ch; text-wrap: balance; }
@@ -258,7 +288,7 @@ ul, ol { list-style: none; }
 .windex { display: none; padding: 0 var(--pad) clamp(72px, 12vh, 150px); }
 .windex__row { display: grid; grid-template-columns: 3rem 1fr 22rem 5rem; gap: var(--gap); align-items: baseline; padding-block: 1.1rem; border-top: 1px solid var(--line); transition: background .4s, padding .5s var(--ease); }
 .windex__row:last-child { border-bottom: 1px solid var(--line); }
-.windex__row:hover { background: rgba(28, 27, 25, .03); }
+.windex__row:hover { background: var(--hover); }
 .windex__title { font-weight: 300; font-size: clamp(1.2rem, 2.2vw, 2rem); letter-spacing: -.02em; }
 .windex__year { text-align: right; }
 .view-index .wgrid { display: none; }
@@ -272,7 +302,7 @@ ul, ol { list-style: none; }
 .phero__title { max-width: 18ch; font-size: clamp(2rem, 4.6vw, 4.6rem); }
 
 /* lepljiva traka sa podnavigacijom projekta */
-.psub { position: sticky; top: 0; z-index: 45; background: rgba(245, 243, 239, .88); -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); border-bottom: 1px solid var(--line); transition: top .6s var(--ease); }
+.psub { position: sticky; top: 0; z-index: 45; background: var(--glass); -webkit-backdrop-filter: saturate(1.4) blur(16px); backdrop-filter: saturate(1.4) blur(16px); border-bottom: 1px solid var(--line); transition: top .6s var(--ease); }
 body:has(.nav:not(.is-hidden)) .psub { top: var(--navh); }
 .psub__in { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding: 14px var(--pad); transition: padding .6s var(--ease); }
 /* kada se traka skupi, traka projekta staje odmah ispod nje */

@@ -65,7 +65,7 @@ Poznato bezopasno: konzola javlja `InvalidStateError: Transition was aborted ...
 
 ## Šta je dogovoreno, a nije urađeno (predlog „2027“, novembar 2026)
 
-- B3 radi, ali ima samo jedan primer (Villa BC 3721, prizemlje isečeno iz kompozicije). Vlasnik treba da izveze osnove iz Revita (PNG/PDF kao slika, bela podloga, bez zaglavlja, ≥2000 px) i doda ih u adminu, bar po jednu za prvu sliku svakog projekta.
+- B3 radi, ali ima samo jedan primer (Villa BC 3721, prizemlje isečeno iz kompozicije). Vlasnik treba da izveze osnove iz Rhino-a (PNG/PDF kao slika, bela podloga, bez zaglavlja, ≥2000 px) i doda ih u adminu, bar po jednu za prvu sliku svakog projekta.
 - B5 je urađen (tamni režim po sistemu, zrnasta tekstura `body::after`); nema prekidača na sajtu, prati samo sistem.
 - Naziv osnove (`plan_label`) je jedno polje, isti tekst na EN i SR; ako zatreba prevod, dodati `plan_label_sr` u admin i `gallery()`.
 - B6 je urađen: slika sa liste prelazi u veliku sliku projekta i nazad (`view-transition-name: hero`; napred `initHeroLink`, nazad mala skripta u `src/partials/head.html` na `pagereveal`, jer mora pre prvog crtanja), kursor „View / Pogledaj“ nad karticama i slika uz pokazivač u Index prikazu (`initPointer`, `data-img` na redovima). Samo miš; dodir i smanjeno kretanje to ne vide. Pravilo: na jednoj stranici samo jedan element sme imati ime `hero`, inače pregledač preskoči prelaz.

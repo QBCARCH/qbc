@@ -8,7 +8,7 @@
 
 export const STANDARD_SERVICES = [
   '1. Conceptual & Schematic Design',
-  '2. Design Development & BIM Modeling',
+  '2. Design Development & 3D Modeling',
   '3. Construction Documents & Engineering',
   '4. Construction Administration & Oversight',
   '5. Interior Architecture & Custom Detailing',
@@ -46,11 +46,13 @@ const fingerprint = (...texts) => {
 // Ostale stranice (o nama, usluge, kontakt, privatnost) se grade samo lokalno, sa opcijom all.
 export const STATIC_SOURCES = [
   'src/pages/about.html',
+  'src/pages/method.html',
   'src/pages/services.html',
   'src/pages/contact.html',
   'src/pages/privacy-policy.html',
   'src/pages/404.html',
   'src/pages/sr/about.html',
+  'src/pages/sr/method.html',
   'src/pages/sr/services.html',
   'src/pages/sr/contact.html',
   'src/pages/sr/privacy-policy.html',
@@ -59,19 +61,22 @@ export const STATIC_SOURCES = [
 // naslovi i opisi po jeziku; 404 postoji samo na engleskom
 const STATIC_PAGES = [
   { out: 'about.html', src: 'about', key: 'about',
-    en: ['About Us | QBC Architects, Architecture Studio in Belgrade', 'Founded in 2010 by architects Slavoljub and Vladica Ljubić. A Belgrade studio with BIM workflows and first-hand knowledge of the Serbian permitting system.'],
-    sr: ['O nama | QBC Architects, arhitektonski studio u Beogradu', 'Osnovali su ga 2010. arhitekte Slavoljub i Vladica Ljubić. Beogradski studio sa BIM načinom rada i iskustvom iz prve ruke u srpskom sistemu izdavanja dozvola.'] },
+    en: ['About Us | QBCARCHITECTS, Architecture Studio in Belgrade', 'Founded in 2010 by architects Slavoljub and Vladica Ljubić. A Belgrade studio where every project starts with a pattern study and is resolved in a precise 3D model.'],
+    sr: ['O nama | QBCARCHITECTS, arhitektonski studio u Beogradu', 'Osnovali su ga 2010. arhitekte Slavoljub i Vladica Ljubić. Beogradski studio u kome svaki projekat počinje od paterna i razrađuje se u preciznom 3D modelu.'] },
+  { out: 'method.html', src: 'method', key: 'method',
+    en: ['Method: Patterns Before Form | QBCARCHITECTS', 'How QBCARCHITECTS designs: a pattern study of the site and the brief before any form, shown step by step on the Event Center in Trnava.'],
+    sr: ['Metod: paterni pre forme | QBCARCHITECTS', 'Kako projektuje QBCARCHITECTS: paterni lokacije i zadatka pre forme, korak po korak na primeru centra za događaje u Trnavi.'] },
   { out: 'services.html', src: 'services', key: 'services',
-    en: ['Architecture & Interior Design Services in Belgrade | QBC Architects', 'Architecture, interior design and visualisation by QBC Architects, Belgrade: concept and BIM design, permit documentation and architectural supervision.'],
-    sr: ['Usluge arhitekture i dizajna enterijera u Beogradu | QBC Architects', 'Arhitektura, dizajn enterijera i vizualizacija, QBC Architects, Beograd: koncept i BIM projektovanje, dokumentacija za dozvole i arhitektonski nadzor.'] },
+    en: ['Architecture & Interior Design Services in Belgrade | QBCARCHITECTS', 'Architecture, interior design and visualisation by QBCARCHITECTS, Belgrade: pattern-based concept, 3D design development, permit documentation and architectural supervision.'],
+    sr: ['Usluge arhitekture i dizajna enterijera u Beogradu | QBCARCHITECTS', 'Arhitektura, dizajn enterijera i vizualizacija, QBCARCHITECTS, Beograd: koncept zasnovan na paternima, razrada u 3D modelu, IDR, PGD i PZI, arhitektonski nadzor.'] },
   { out: 'contact.html', src: 'contact', key: 'contact',
-    en: ['Contact QBC Architects | Start Your Project in Belgrade', 'Tell us about your site, brief and timeline. QBC Architects, Belgrade, replies personally to every inquiry.'],
-    sr: ['Kontakt | QBC Architects, započnite projekat u Beogradu', 'Recite nam o parceli, zadatku i rokovima. QBC Architects iz Beograda lično odgovara na svaki upit.'] },
+    en: ['Contact QBCARCHITECTS | Start Your Project in Belgrade', 'Tell us about your site, brief and timeline. QBCARCHITECTS, Belgrade, replies personally to every inquiry.'],
+    sr: ['Kontakt | QBCARCHITECTS, započnite projekat u Beogradu', 'Recite nam o parceli, zadatku i rokovima. QBCARCHITECTS iz Beograda lično odgovara na svaki upit.'] },
   { out: 'privacy-policy.html', src: 'privacy-policy', key: 'privacy',
-    en: ['Privacy Policy | QBC Architects', 'Read the privacy policy of QBC Architects. We are committed to protecting your personal information and ensuring transparency in our digital operations.'],
-    sr: ['Politika privatnosti | QBC Architects', 'Politika privatnosti QBC Architects. Čuvamo vaše lične podatke i transparentni smo u digitalnom poslovanju.'] },
+    en: ['Privacy Policy | QBCARCHITECTS', 'How QBCARCHITECTS collects and uses the details you send through this website, and how to ask us to correct or delete them.'],
+    sr: ['Politika privatnosti | QBCARCHITECTS', 'Kako QBCARCHITECTS prikuplja i koristi podatke koje pošaljete preko sajta i kako možete da tražite njihovu ispravku ili brisanje.'] },
 ];
-const NOT_FOUND = { out: '404.html', src: '404', key: 'none', root: '/', title: 'Page not found | QBC Architects', desc: 'The page you are looking for does not exist.' };
+const NOT_FOUND = { out: '404.html', src: '404', key: 'none', root: '/', title: 'Page not found | QBCARCHITECTS', desc: 'The page you are looking for does not exist.' };
 
 // ---------------------------------------------------------------- jezici
 // en je osnova (koren sajta), sr je pod /sr/. Svaki jezik ima svoje sablone, delove i tekstove.
@@ -87,7 +92,7 @@ const L = {
 };
 const SVC_SR = {
   'Conceptual & Schematic Design': 'Idejno rešenje i koncept',
-  'Design Development & BIM Modeling': 'Razrada projekta i BIM modelovanje',
+  'Design Development & 3D Modeling': 'Razrada projekta i 3D modelovanje',
   'Construction Documents & Engineering': 'Tehnička dokumentacija i inženjering',
   'Construction Administration & Oversight': 'Arhitektonski nadzor',
   'Interior Architecture & Custom Detailing': 'Enterijer i detalji po meri',
@@ -202,7 +207,7 @@ const ogUrl = (im) => 'https://www.qbc.rs/' + (im.og ? `images/${encFile(im.og)}
 // lastmod samo kada je datum stvarno poznat (datum dodavanja projekta); inace ga izostavljamo.
 // Svaka adresa ima i alternativu na drugom jeziku (hreflang), kako trazilice povezuju en i sr.
 function sitemap(projects) {
-  const pages = ['index.html', 'our-work.html', 'about.html', 'services.html', 'contact.html', 'privacy-policy.html']
+  const pages = ['index.html', 'our-work.html', 'method.html', 'about.html', 'services.html', 'contact.html', 'privacy-policy.html']
     .map((u) => [u, '']).concat(projects.map((p) => [`work/${p.slug}.html`, /^\d{4}-\d{2}-\d{2}$/.test(p.added || '') ? p.added : '']));
   const url = (lang, u) => 'https://www.qbc.rs/' + (u === 'index.html' ? PRE[lang] : PRE[lang] + u);
   const rows = [];
@@ -238,9 +243,14 @@ const ratio = (im) => (im && im.w && im.h ? Math.min(2.4, Math.max(0.6, im.w / i
 const altOf = (p, lang) => [p.title, tr(p, 'location', lang)].filter(Boolean).join(', ');
 const dataQ = (p, lang) => esc([p.title, p.year, tr(p, 'location', lang), tr(p, 'type', lang), ...(p.services || []).map((x) => svcName(x, lang))].filter(Boolean).join(' ').toLowerCase());
 
+// filteri na listi radova: vrsta (arhitektura / enterijer) i stanje (izvedeno / u izgradnji / projekat), iz engleskih polja
+const catOf = (p) => (/interior/i.test(p.type || '') ? 'int' : 'arch');
+const stOf = (p) => { const s = String(p.status || '').toLowerCase(); return s.startsWith('completed') ? 'built' : s.includes('under construction') ? 'build' : 'design'; };
+const dataF = (p) => `data-cat="${catOf(p)}" data-st="${stOf(p)}"`;
+
 function worksGrid(projects, lang, base, root) {
   return projects.map((p, i) =>
-    `<a class="wcard" style="--ar:${ratio(cover(p))}" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}">` +
+    `<a class="wcard" style="--ar:${ratio(cover(p))}" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}" ${dataF(p)}>` +
     `<div class="frame" data-ip>${img(cover(p), { root, sizes: '(max-width: 900px) 100vw, 50vw', alt: altOf(p, lang), want: 1600 })}</div>` +
     `<div class="wcard__meta"><h2 class="wcard__title">${esc(p.title)}</h2><span class="label">${esc(p.year)}</span></div>` +
     (tr(p, 'type', lang) ? `<p class="wcard__type">${esc(tr(p, 'type', lang))}</p>` : '') + `</a>`).join('');
@@ -265,7 +275,7 @@ function worksIndex(projects, lang, base, root) {
   return projects.map((p, i) => {
     const first = svcName((p.services || [])[0] || '', lang);
     const more = (p.services || []).length > 1 ? ` +${p.services.length - 1}` : '';
-    return `<a class="windex__row" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}" data-img="${imgUrl(cover(p), root, 800)}">` +
+    return `<a class="windex__row" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}" ${dataF(p)} data-img="${imgUrl(cover(p), root, 800)}">` +
       `<span class="label">${num(i)}</span><span class="windex__title">${esc(p.title)}</span>` +
       `<span class="windex__svc label mute">${esc(first)}${more}</span><span class="windex__year label">${esc(p.year)}</span></a>`;
   }).join('');
@@ -326,7 +336,7 @@ function gallery(p, lang, depth) {
   const n = (p.gallery || []).length;
   return (p.gallery || []).map((g, i) => {
     const ar = g.w && g.h ? ` style="--ar:${g.w} / ${g.h}"` : '';
-    const alt = g.alt || (lang === 'sr' ? `${altOf(p, lang)}, QBC Architects, prikaz ${i + 1} od ${n}` : `${altOf(p, lang)}, by QBC Architects, view ${i + 1} of ${n}`);
+    const alt = g.alt || (lang === 'sr' ? `${altOf(p, lang)}, QBCARCHITECTS, prikaz ${i + 1} od ${n}` : `${altOf(p, lang)}, by QBCARCHITECTS, view ${i + 1} of ${n}`);
     // pregled preko celog ekrana: kopija sa znakom (-full), a za stare slike bez nje najveca verzija
     const full = g.full ? `${depth}images/${encFile(g.full)}` : imgUrl(g, depth, 2000);
     const render = `<div class="frame" data-ip${ar}>` + img(g, { root: depth, sizes: '(max-width: 900px) 100vw, 60vw', alt, want: 1600 }) + `</div>`;
@@ -384,12 +394,12 @@ function metaDesc(p, lang = 'en') {
 function orgLd(lang, services) {
   const catalog = services.phases.map((ph) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: ph.title, description: ph.text } }));
   return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': ['Architect', 'ProfessionalService'], '@id': 'https://www.qbc.rs/#studio',
-    name: 'QBC Architects', alternateName: 'QBCarchitects', url: 'https://www.qbc.rs/', logo: 'https://www.qbc.rs/assets/logo.png',
+    name: 'QBCARCHITECTS', alternateName: 'QBC Architects', url: 'https://www.qbc.rs/', logo: 'https://www.qbc.rs/assets/logo.png',
     email: 'office@qbc.rs', telephone: '+38163411066', foundingDate: '2010', slogan: 'Architecture, interiors and visualisation',
     founder: [{ '@type': 'Person', name: 'Slavoljub Ljubić', jobTitle: 'Architect', sameAs: ['https://www.linkedin.com/in/slavoljubic/'] }, { '@type': 'Person', name: 'Vladica Ljubić', jobTitle: 'Architect' }],
     address: { '@type': 'PostalAddress', addressLocality: 'Belgrade', addressCountry: 'RS' },
     areaServed: [{ '@type': 'Country', name: 'Serbia' }, { '@type': 'Country', name: 'Montenegro' }, { '@type': 'Place', name: 'Europe' }],
-    availableLanguage: ['en', 'sr'], knowsAbout: ['Architecture', 'Interior design', 'Architectural visualisation', 'BIM', 'Autodesk Revit', 'Building permits in Serbia'],
+    availableLanguage: ['en', 'sr'], knowsAbout: ['Architecture', 'Interior design', 'Architectural visualisation', 'Pattern-based design', 'Rhino 3D modeling', 'Feasibility studies', 'Building permits in Serbia'],
     hasOfferCatalog: { '@type': 'OfferCatalog', name: lang === 'sr' ? 'Usluge' : 'Services', itemListElement: catalog },
     sameAs: ['https://www.instagram.com/qbcarchitects/', 'https://www.behance.net/qbcarchitects', 'https://www.pinterest.com/qbcarchitects'] })}</script>`;
 }
@@ -460,8 +470,8 @@ export function buildSite(data, sources, { all = false } = {}) {
     };
 
     const home = lang === 'en'
-      ? ['QBC Architects | Architecture & Interior Design Studio in Belgrade, Serbia', 'Belgrade architecture and interior design studio since 2010. Houses, apartments and hospitality spaces, from concept and BIM to permits and site supervision.']
-      : ['QBC Architects | Arhitektonski studio i dizajn enterijera, Beograd', 'Arhitektonski studio iz Beograda od 2010. Kuće, stanovi i ugostiteljski prostori, od koncepta i BIM modela do dozvola i arhitektonskog nadzora.'];
+      ? ['QBCARCHITECTS | Architecture & Interior Design Studio in Belgrade, Serbia', 'Belgrade architecture and interior design studio since 2010. Houses, apartments, clinics and hospitality spaces, designed from patterns, resolved in 3D and supervised on site.']
+      : ['QBCARCHITECTS | Arhitektonski studio i dizajn enterijera, Beograd', 'Arhitektonski studio iz Beograda od 2010. Kuće, stanovi, klinike i ugostiteljski prostori, projektovani od paterna, razrađeni u 3D modelu i nadzirani na gradilištu.'];
     out[`${pre}index.html`] = render('index', sources, {
       ...site('index.html'), key: 'home', TITLE: home[0], DESC: home[1],
       HERO_IMG: heroPicker(projects, homeHero, data.promo_days ?? 21, lang === 'en' ? '' : '../', lang),
@@ -471,8 +481,8 @@ export function buildSite(data, sources, { all = false } = {}) {
       HOME_COUNT: num((data.home_count ?? 6) - 1),
     });
     const ow = lang === 'en'
-      ? ['Portfolio | Architecture and Interior Projects by QBC Architects', 'Selected houses, villas, apartments, hospitality and healthcare interiors by QBC Architects, Belgrade, in Serbia and Montenegro.']
-      : ['Portfolio | Projekti arhitekture i enterijera, QBC Architects', 'Izbor kuća, vila, stanova, ugostiteljskih i zdravstvenih enterijera studija QBC Architects iz Beograda, u Srbiji i Crnoj Gori.'];
+      ? ['Portfolio | Architecture and Interior Projects by QBCARCHITECTS', 'Selected houses, villas, apartments, hospitality and healthcare interiors by QBCARCHITECTS, Belgrade, in Serbia and Montenegro.']
+      : ['Portfolio | Projekti arhitekture i enterijera, QBCARCHITECTS', 'Izbor kuća, vila, stanova, ugostiteljskih i zdravstvenih enterijera studija QBCARCHITECTS iz Beograda, u Srbiji i Crnoj Gori.'];
     out[`${pre}our-work.html`] = render('our-work', sources, {
       ...site('our-work.html'), key: 'works', TITLE: ow[0], DESC: ow[1],
       WORKS_GRID: worksGrid(projects, lang, '', lang === 'en' ? '' : '../'), WORKS_INDEX: worksIndex(projects, lang, '', lang === 'en' ? '' : '../'),
@@ -481,7 +491,7 @@ export function buildSite(data, sources, { all = false } = {}) {
       const depth = lang === 'en' ? '../' : '../../';
       out[`${pre}work/${p.slug}.html`] = render('work', sources, {
         ...site(`work/${p.slug}.html`, 1), key: 'works',
-        TITLE: lang === 'en' ? `${p.title} | QBC Architects` : `${p.title} | QBC Architects`,
+        TITLE: lang === 'en' ? `${p.title} | QBCARCHITECTS` : `${p.title} | QBCARCHITECTS`,
         DESC: esc(metaDesc(p, lang)), OG_IMAGE: ogUrl(p.hero), LD: projectLd(p, lang),
         TITLE_TEXT: esc(p.title), YEAR: esc(p.year), FACTS: facts(p, lang),
         LOC_YEAR: esc([tr(p, 'location', lang), p.year].filter(Boolean).join(', ')),

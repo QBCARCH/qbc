@@ -9,12 +9,12 @@
    "year": "2026",
    "services": [
     "1. Conceptual & Schematic Design",
-    "2. Design Development & BIM Modeling",
+    "2. Design Development & 3D Modeling",
     "3. Construction Documents & Engineering",
-    "4. Construction Administration & Oversight",
-    "5. Interior Architecture & Custom Detailing"
+    "5. Interior Architecture & Custom Detailing",
+    "7. Architectural Visualisation"
    ],
-   "description": "<p>Designed by QBC Architects, this event center stands in the middle of an orchard near Trnava, close to Topola, with two small guest houses for overnight stays beside it. When no event is taking place, it works as a restaurant. The architecture balances contemporary hospitality design with the authentic character of the Šumadija landscape.</p><p>The concept is built on clean structural lines and an open spatial flow, free of unnecessary partitions. Large glazed surfaces dissolve the boundary between interior and surroundings, so nature becomes part of every occasion, from weddings and celebrations to business gatherings and family events.</p><p>The result is an elegant venue that relies on simplicity, light and a connection to place rather than on decoration.</p>",
+   "description": "<p>An event center in the middle of an orchard in Trnava, near Topola. When there is no event, it works as a restaurant, and two small guest houses let guests stay overnight. The design is entirely by QBCARCHITECTS.</p><p>The plot runs along an internal road and falls about three metres towards a lake. We laid the building out as one line along the road: parking and arrival at the upper end, then the pool, services and kitchen, and the hall with its terrace at the lake end, where the view and the quiet are. The guest houses stand apart, on the higher part of the plot, away from the music.</p><p>Where the ground drops, the hall rises a full storey above the terrain, with the basement beneath it. Along the line the roofs change height, from 7.05 to 3.50 metres: a pitched hall in dark metal and a concrete box, joined by a low glazed link. The building permit is in progress.</p>",
    "cover": {
     "file": "1a137178ecc3c2c3c_Trnava-5.webp",
     "widths": [
@@ -209,24 +209,24 @@
     }
    ],
    "location": "Trnava, Topola, Serbia",
-   "area": "450m2",
-   "status": "Under construction",
+   "area": "450 m²",
+   "status": "Building permit in progress",
    "credit": "Rendered by QBCARCHITECTS",
    "added": "2026-10-13",
    "type": "Event venue and restaurant",
    "sr": {
     "type": "Centar za događaje i restoran",
-    "description": "<p>Centar za događaje, delo QBC Architects, nalazi se usred voćnjaka u Trnavi kod Topole, a pored njega su dve male kuće za noćenje. Kada nema događaja, radi kao restoran. Arhitektura spaja savremeno ugostiteljsko projektovanje sa autentičnim karakterom šumadijskog pejzaža.</p><p>Koncept počiva na čistim konstruktivnim linijama i otvorenom toku prostora, bez nepotrebnih pregrada. Velike staklene površine brišu granicu između enterijera i okoline, pa priroda postaje deo svake prilike, od venčanja i proslava do poslovnih skupova i porodičnih okupljanja.</p><p>Rezultat je elegantan prostor koji se oslanja na jednostavnost, svetlost i vezu sa mestom, a ne na dekoraciju.</p>",
+    "description": "<p>Centar za događaje usred voćnjaka u Trnavi kod Topole. Kada nema događaja, radi kao restoran, a dve male kuće omogućavaju gostima da prenoće. Projekat je u celosti delo studija QBCARCHITECTS.</p><p>Parcela se pruža uz interni put i pada oko tri metra prema jezeru. Objekat smo postavili kao jednu liniju uz put: parking i dolazak na gornjem kraju, zatim bazen, servis i kuhinja, a sala sa terasom na kraju prema jezeru, gde su pogled i mir. Kuće za goste stoje odvojeno, na višem delu parcele, dalje od muzike.</p><p>Gde teren pada, sala se diže celu etažu iznad terena, sa podrumom ispod. Duž linije krovovi menjaju visinu, od 7,05 do 3,50 metara: sala pod kosim krovom u tamnom limu i betonska kutija, spojene niskom staklenom vezom. Objekat je u postupku dobijanja građevinske dozvole.</p>",
     "location": "Trnava, Topola, Srbija",
-    "status": "U izgradnji"
+    "status": "U postupku dobijanja građevinske dozvole"
    }
   },
   {
    "slug": "villa-dve-koracica-kosmaj",
-   "title": "Villa Dve Koracica, Kosmaj",
+   "title": "Villa Dve Koraćica, Kosmaj",
    "services": [
     "1. Conceptual & Schematic Design",
-    "2. Design Development & BIM Modeling",
+    "2. Design Development & 3D Modeling",
     "3. Construction Documents & Engineering"
    ],
    "year": "2026",
@@ -397,21 +397,21 @@
     }
    ],
    "location": "Koraćica, Kosmaj, Serbia",
-   "status": "Under construction",
+   "status": "Building permit issued, construction to start",
    "type": "Residential, villas",
    "sr": {
     "type": "Stanovanje, vile",
     "description": "<p>Dve samostalno projektovane prizemne vile stoje u mirnom pejzažu Koraćice, u podnožju Kosmaja. Postavljene su tako da prate blago nagnut teren i otvaraju se ka pogledu na okolnu šumu. Objekti zauzimaju nešto više od 20% parcele, pa zelenilo ostaje glavna odlika imanja.</p><p>Obe kuće imaju čiste linije, ravne krovove i toplu paletu materijala: dekorativni silikatni malter u kombinaciji sa ventilisanom fasadom od sibirskog ariša. Unutra su rasporedi otvoreni i svetli, sa dnevnim zonama pod tri metra visokim plafonima koje se otvaraju ka velikim terasama i privatnim bazenima.</p><p>Kuće su građene kao montažni sistem od drvene konstrukcije, sa dobrim toplotnim i zvučnim performansama, podnim grejanjem i instalacionim prostorima u suterenu.</p>",
     "location": "Koraćica, Kosmaj, Srbija",
-    "status": "U izgradnji"
+    "status": "Građevinska dozvola pribavljena, čeka se početak radova"
    }
   },
   {
    "slug": "villas-divcibare-srb",
-   "title": "Villa Duo, Divcibare",
+   "title": "Villa Duo, Divčibare",
    "services": [
     "1. Conceptual & Schematic Design",
-    "2. Design Development & BIM Modeling",
+    "2. Design Development & 3D Modeling",
     "3. Construction Documents & Engineering",
     "4. Construction Administration & Oversight",
     "5. Interior Architecture & Custom Detailing"
@@ -837,7 +837,7 @@
    "type": "Residential, villas",
    "sr": {
     "type": "Stanovanje, vile",
-    "description": "<p>Na planinskoj parceli na Divčibarama, porodična kuća i kuća za goste nude savremeno tumačenje tradicionalnog planinskog utočišta. Sibirski ariš i antracit čelik daju objektima toplinu i oštru savremenu siluetu, i mirno ih smeštaju među okolna stabla.</p><p>Glavna kuća je organizovana oko dnevne svetlosti i otvorenog prostora: plafoni visine tri metra, dnevna zona u središtu sa kaminom i SPA i vellness zona na nižem nivou koja se otvara ka spoljnoj terasi. Kuća za goste sledi isti pristup, sa otvorenom osnovom, sopstvenom saunom i galerijom za spavanje.</p><p>Oba objekta su dobro izolovana, sa podnim grejanjem na toplotne pumpe i integrisanim sistemom pametne kuće.</p>",
+    "description": "<p>Na planinskoj parceli na Divčibarama, porodična kuća i kuća za goste nude savremeno tumačenje tradicionalnog planinskog utočišta. Sibirski ariš i čelik u boji antracita daju objektima toplinu i oštru savremenu siluetu, i mirno ih smeštaju među okolna stabla.</p><p>Glavna kuća je organizovana oko dnevne svetlosti i otvorenog prostora: plafoni visine tri metra, dnevna zona u središtu sa kaminom i spa i velnes zona na nižem nivou koja se otvara ka spoljnoj terasi. Kuća za goste sledi isti pristup, sa otvorenom osnovom, sopstvenom saunom i galerijom za spavanje.</p><p>Oba objekta su dobro izolovana, sa podnim grejanjem na toplotne pumpe i integrisanim sistemom pametne kuće.</p>",
     "location": "Divčibare, Srbija",
     "status": "U izgradnji"
    }
@@ -846,10 +846,9 @@
    "slug": "liman-2-ulcinj-mne",
    "title": "Liman 2, Ulcinj",
    "services": [
-    "4. Construction Administration & Oversight",
-    "3. Construction Documents & Engineering",
-    "2. Design Development & BIM Modeling",
-    "1. Conceptual & Schematic Design"
+    "1. Conceptual & Schematic Design",
+    "2. Design Development & 3D Modeling",
+    "3. Construction Documents & Engineering"
    ],
    "year": "2019",
    "cover": {
@@ -1075,17 +1074,215 @@
    "sr": {
     "type": "Stambeno-poslovni objekat",
     "description": "<p>Ovaj stambeno-poslovni objekat, iznad plaže Liman 2 u Ulcinju na crnogorskom primorju, prati strmu, šumovitu padinu umesto da se s njom bori. Zapremina je razlomljena u kaskadne terase, pa se stanovi spuštaju niz brdo i svaki dobija sopstvenu otvorenu terasu sa zelenilom i pogledom na more.</p><p>Paleta materijala potiče iz jadranske tradicije: zidovi od lokalnog kamena, beli malterisani volumeni, drvene grilje i ozelenjeni parapeti. Gledan sa plaže, objekat se čita kao deo padine, a ne kao jedinstven blok.</p>",
-    "location": "Ulcinj, Crna Gora"
-   }
+    "location": "Ulcinj, Crna Gora",
+    "status": "Projekat završen, objekat nije izveden"
+   },
+   "status": "Design completed, not built"
+  },
+  {
+   "slug": "private-villa-bc-3721",
+   "title": "Private Villa BC 3721",
+   "services": [
+    "1. Conceptual & Schematic Design",
+    "2. Design Development & 3D Modeling",
+    "3. Construction Documents & Engineering",
+    "4. Construction Administration & Oversight"
+   ],
+   "year": "2024",
+   "cover": {
+    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1754,
+    "h": 1240,
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
+    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
+    "wm": true,
+    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
+   },
+   "thumb": {
+    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1754,
+    "h": 1240,
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
+    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
+    "wm": true,
+    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
+   },
+   "hero": {
+    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1754,
+    "h": 1240,
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
+    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
+    "wm": true,
+    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
+   },
+   "description": "<p>A single-storey family house in a rural setting, made of two volumes in the shape of the traditional gabled house. The white rendered wing holds the private rooms, while the dark timber-clad wing holds the living area and opens to a large covered terrace under a deep gable frame lined with wood.</p><p>The two wings meet at a stone-clad entrance, which separates the day and night zones and frames a small courtyard. Simple forms and natural materials make the house feel at home in the landscape while giving it a clearly contemporary character.</p>",
+   "gallery": [
+    {
+     "file": "672a1b66c51068306917e55c_Image5-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66c51068306917e55c_Image5-enhanced (Large)-og.jpg",
+     "full": "672a1b66c51068306917e55c_Image5-enhanced (Large)-full.webp",
+     "wm": true,
+     "plan": {
+      "file": "6afbb104a1b2c3_osnova-bc-3721.jpg",
+      "widths": [
+       500
+      ],
+      "w": 700,
+      "h": 630,
+      "full": "6afbb104a1b2c3_osnova-bc-3721.jpg",
+      "wm": false
+     },
+     "plan_label": "Ground floor"
+    },
+    {
+     "file": "672a1b668cbb8379eb716617_Image9-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-og.jpg",
+     "full": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b6651adb46944e044a7_Image24-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-og.jpg",
+     "full": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-og.jpg",
+     "full": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b66d346501810784814_Image6-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66d346501810784814_Image6-enhanced (Large)-og.jpg",
+     "full": "672a1b66d346501810784814_Image6-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b67de171f51707390db_Image7-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b67de171f51707390db_Image7-enhanced (Large)-og.jpg",
+     "full": "672a1b67de171f51707390db_Image7-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-og.jpg",
+     "full": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b6709da67d01caf7827_Image11-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-og.jpg",
+     "full": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b663f1d66fa04335876_Image13-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-og.jpg",
+     "full": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-full.webp",
+     "wm": true
+    }
+   ],
+   "type": "Residential, house",
+   "sr": {
+    "type": "Stanovanje, kuća",
+    "description": "<p>Prizemna porodična kuća u ruralnom okruženju, sastavljena od dva volumena u obliku tradicionalne kuće sa dvovodnim krovom. Belo malterisano krilo sadrži privatne prostorije, a tamno krilo obloženo drvetom dnevnu zonu i otvara se ka velikoj natkrivenoj terasi pod dubokim drvenim zabatom.</p><p>Dva krila se susreću na ulazu obloženom kamenom, koji razdvaja dnevnu i noćnu zonu i uokviruje malo dvorište. Jednostavne forme i prirodni materijali čine da kuća pripada pejzažu, a opet ima jasno savremen karakter.</p>",
+    "status": "U izgradnji"
+   },
+   "status": "Under construction"
   },
   {
    "slug": "apartment-pb-23-mb",
    "title": "Apartment PB/23 MB",
    "services": [
-    "4. Construction Administration & Oversight",
+    "1. Conceptual & Schematic Design",
+    "2. Design Development & 3D Modeling",
     "3. Construction Documents & Engineering",
-    "2. Design Development & BIM Modeling",
-    "1. Conceptual & Schematic Design"
+    "4. Construction Administration & Oversight",
+    "5. Interior Architecture & Custom Detailing"
    ],
    "year": "2024",
    "cover": {
@@ -1350,17 +1547,20 @@
    "type": "Residential interior",
    "sr": {
     "type": "Enterijer stana",
-    "description": "<p>Kompaktan stan oblikovan toplom, suzdržanom paletom hrasta, peska i tamnoplave boje. Dnevna soba, trpezarija i kuhinja dele jedan otvoren prostor, dok ugrađena stolarija, radna niša i spavaća soba sa skrivenim ormarima čuvaju efikasnost osnove.</p><p>Mekana dnevna svetlost, slojevito osvetljenje i nekoliko skulpturalnih predmeta daju enterijeru mir i karakter.</p>"
+    "description": "<p>Kompaktan stan oblikovan toplom, suzdržanom paletom hrasta, peska i tamnoplave boje. Dnevna soba, trpezarija i kuhinja dele jedan otvoren prostor, dok ugrađena stolarija, radna niša i spavaća soba sa skrivenim ormarima čuvaju efikasnost osnove.</p><p>Mekana dnevna svetlost, slojevito osvetljenje i nekoliko skulpturalnih predmeta daju enterijeru mir i karakter.</p>",
+    "status": "Izvedeno"
    },
-   "dark": true
+   "dark": true,
+   "status": "Completed"
   },
   {
    "slug": "clinic-ztb",
    "title": "Clinic ZTB",
    "services": [
-    "4. Construction Administration & Oversight",
+    "2. Design Development & 3D Modeling",
     "3. Construction Documents & Engineering",
-    "2. Design Development & BIM Modeling"
+    "4. Construction Administration & Oversight",
+    "5. Interior Architecture & Custom Detailing"
    ],
    "year": "2024",
    "cover": {
@@ -1748,18 +1948,21 @@
    "type": "Healthcare interior",
    "sr": {
     "type": "Enterijer zdravstvene ustanove",
-    "description": "<p>Enterijer privatne klinike na Zlatiboru, osmišljen kao miran prostor nalik hotelskom, a ne kao klinički. Recepcija i čekaonica kombinuju mekano tapacirano sedenje, orahove stolove i biljke sa velikom botaničkom zidnom obradom iza stakla, tako da je prvi utisak toplina, a ne hodnici i bele pločice.</p><p>Ordinacije nastavljaju istu paletu toplih kamenih površina, drveta i mesinga. Ugrađeni pultovi sa mesinganim lavaboima, skriveni ormari i meko privesno osvetljenje čine prostorije praktičnim za svakodnevni rad, dok sanitarni čvorovi dobijaju snažniji karakter tamnim mermerom i šarenom tapetom.</p>",
-    "location": "Zlatibor, Srbija"
-   }
+    "description": "<p>Enterijer privatne klinike na Zlatiboru, osmišljen kao miran prostor nalik hotelskom, a ne kao klinički. Recepcija i čekaonica kombinuju mekano tapacirano sedenje, orahove stolove i biljke sa velikom botaničkom zidnom obradom iza stakla, tako da je prvi utisak toplina, a ne hodnici i bele pločice.</p><p>Ordinacije nastavljaju istu paletu toplih kamenih površina, drveta i mesinga. Ugrađeni pultovi sa mesinganim lavaboima, skriveni ormari i meko svetlo visećih svetiljki čine prostorije praktičnim za svakodnevni rad, dok sanitarni čvorovi dobijaju snažniji karakter tamnim mermerom i tapetom sa šarom.</p>",
+    "location": "Zlatibor, Srbija",
+    "status": "Izvedeno"
+   },
+   "status": "Completed"
   },
   {
    "slug": "caffe-spass-belgrade",
    "title": "Caffe Spass, Belgrade",
    "services": [
     "1. Conceptual & Schematic Design",
-    "2. Design Development & BIM Modeling",
+    "2. Design Development & 3D Modeling",
     "3. Construction Documents & Engineering",
-    "4. Construction Administration & Oversight"
+    "4. Construction Administration & Oversight",
+    "5. Interior Architecture & Custom Detailing"
    ],
    "year": "2024",
    "cover": {
@@ -1960,18 +2163,21 @@
    "type": "Hospitality interior",
    "sr": {
     "type": "Ugostiteljski enterijer",
-    "description": "<p>Caffe Spass zauzima prostor dvostruke visine u Ulici kralja Petra u Beogradu. Zadržali smo sirovu konstrukciju od čeličnih stubova, golog betona i kasetiranog plafona, a naspram nje postavili smelu paletu crvene, crne i bele, sa mezaninom koji se nadvija nad glavnom salom.</p><p>Šarene pločice, grafički šank, skulpturalne figure i linijsko osvetljenje čine živahan prostor snažnog identiteta.</p>",
-    "location": "Beograd, Srbija"
+    "description": "<p>Caffe Spass zauzima prostor dvostruke visine u Ulici kralja Petra u Beogradu. Zadržali smo sirovu konstrukciju od čeličnih stubova, golog betona i kasetiranog plafona, a naspram nje postavili smelu paletu crvene, crne i bele, sa mezaninom koji se nadvija nad glavnom salom.</p><p>Pločice sa šarom, grafički šank, skulpturalne figure i linijsko osvetljenje čine živahan prostor snažnog identiteta.</p>",
+    "location": "Beograd, Srbija",
+    "status": "Izvedeno"
    },
-   "dark": true
+   "dark": true,
+   "status": "Completed"
   },
   {
    "slug": "apartment-sakura-2-24",
    "title": "Apartment Sakura 2/24",
    "services": [
-    "4. Construction Administration & Oversight",
+    "2. Design Development & 3D Modeling",
     "3. Construction Documents & Engineering",
-    "2. Design Development & BIM Modeling"
+    "4. Construction Administration & Oversight",
+    "5. Interior Architecture & Custom Detailing"
    ],
    "year": "2023",
    "cover": {
@@ -2117,16 +2323,19 @@
    "sr": {
     "type": "Enterijer stana",
     "description": "<p>Ovaj beogradski stan ide u svetlom, toplom pravcu. Teksturisani malterisani zidovi, svetli hrast i duga mermerna klupa određuju dnevnu sobu, u kojoj žljebljeni drveni klizni panel skriva televizor i pretvara zid sa medijima u biblioteku kada je ekran isključen.</p><p>Kuhinja sa ostrvom smeštena je u blago osvetljenoj niši, a spavaća soba ponavlja paletu maltera i drveta uz zid uzglavlja do plafona. Cilj je bio miran, prirodan enterijer u kome se lako živi svakog dana.</p>",
-    "location": "Beograd, Srbija"
-   }
+    "location": "Beograd, Srbija",
+    "status": "Izvedeno"
+   },
+   "status": "Completed"
   },
   {
    "slug": "apartment-sakura-1-24",
    "title": "Apartment Sakura 1/24",
    "services": [
-    "4. Construction Administration & Oversight",
+    "2. Design Development & 3D Modeling",
     "3. Construction Documents & Engineering",
-    "2. Design Development & BIM Modeling"
+    "4. Construction Administration & Oversight",
+    "5. Interior Architecture & Custom Detailing"
    ],
    "year": "2023",
    "cover": {
@@ -2301,210 +2510,20 @@
    "type": "Residential interior",
    "sr": {
     "type": "Enterijer stana",
-    "description": "<p>Kompaktan beogradski stan osmišljen oko jednog otvorenog dnevnog prostora. Dnevnu sobu, kuhinju i barski deo za doručak povezuju neprekidne hrastove površine i tamna grafitna paleta, uz tanku metalnu policu koja razdvaja zone, a ne zatvara ih.</p><p>Odlaganje je ugrađeno u stolariju od zida do zida, kuhinja je u drvenoj niši sa barom za doručak, a spavaća soba zadržava iste mirne tonove sa tapaciranim zidom uzglavlja. Stan deluje većim od svoje površine jer svaki element za odlaganje ima svoje mesto u stolariji.</p>",
-    "location": "Beograd, Srbija"
-   }
-  },
-  {
-   "slug": "private-villa-bc-3721",
-   "title": "Private Villa BC 3721",
-   "services": [
-    "4. Construction Administration & Oversight",
-    "3. Construction Documents & Engineering",
-    "2. Design Development & BIM Modeling",
-    "1. Conceptual & Schematic Design"
-   ],
-   "year": "2024",
-   "cover": {
-    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
-    "widths": [
-     500,
-     800,
-     1080,
-     1600
-    ],
-    "w": 1754,
-    "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
-    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
-    "wm": true,
-    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
+    "description": "<p>Kompaktan beogradski stan osmišljen oko jednog otvorenog dnevnog prostora. Dnevnu sobu, kuhinju i šank za doručak povezuju neprekidne hrastove površine i tamna grafitna paleta, uz tanku metalnu policu koja razdvaja zone, a ne zatvara ih.</p><p>Odlaganje je ugrađeno u stolariju od zida do zida, kuhinja je u drvenoj niši sa šankom za doručak, a spavaća soba zadržava iste mirne tonove sa tapaciranim zidom uzglavlja. Stan deluje većim od svoje površine jer svaki element za odlaganje ima svoje mesto u stolariji.</p>",
+    "location": "Beograd, Srbija",
+    "status": "Izvedeno"
    },
-   "thumb": {
-    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
-    "widths": [
-     500,
-     800,
-     1080,
-     1600
-    ],
-    "w": 1754,
-    "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
-    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
-    "wm": true,
-    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
-   },
-   "hero": {
-    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
-    "widths": [
-     500,
-     800,
-     1080,
-     1600
-    ],
-    "w": 1754,
-    "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
-    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
-    "wm": true,
-    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
-   },
-   "description": "<p>A single-storey family house in a rural setting, made of two volumes in the shape of the traditional gabled house. The white rendered wing holds the private rooms, while the dark timber-clad wing holds the living area and opens to a large covered terrace under a deep gable frame lined with wood.</p><p>The two wings meet at a stone-clad entrance, which separates the day and night zones and frames a small courtyard. Simple forms and natural materials make the house feel at home in the landscape while giving it a clearly contemporary character.</p>",
-   "gallery": [
-    {
-     "file": "672a1b66c51068306917e55c_Image5-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66c51068306917e55c_Image5-enhanced (Large)-og.jpg",
-     "full": "672a1b66c51068306917e55c_Image5-enhanced (Large)-full.webp",
-     "wm": true,
-     "plan": {
-      "file": "6afbb104a1b2c3_osnova-bc-3721.jpg",
-      "widths": [
-       500
-      ],
-      "w": 700,
-      "h": 630,
-      "full": "6afbb104a1b2c3_osnova-bc-3721.jpg",
-      "wm": false
-     },
-     "plan_label": "Ground floor"
-    },
-    {
-     "file": "672a1b668cbb8379eb716617_Image9-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-og.jpg",
-     "full": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b6651adb46944e044a7_Image24-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-og.jpg",
-     "full": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-og.jpg",
-     "full": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b66d346501810784814_Image6-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66d346501810784814_Image6-enhanced (Large)-og.jpg",
-     "full": "672a1b66d346501810784814_Image6-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b67de171f51707390db_Image7-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b67de171f51707390db_Image7-enhanced (Large)-og.jpg",
-     "full": "672a1b67de171f51707390db_Image7-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-og.jpg",
-     "full": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b6709da67d01caf7827_Image11-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-og.jpg",
-     "full": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b663f1d66fa04335876_Image13-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-og.jpg",
-     "full": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-full.webp",
-     "wm": true
-    }
-   ],
-   "type": "Residential, house",
-   "sr": {
-    "type": "Stanovanje, kuća",
-    "description": "<p>Prizemna porodična kuća u ruralnom okruženju, sastavljena od dva volumena u obliku tradicionalne kuće sa dvovodnim krovom. Bela malterisana ala sadrži privatne prostorije, a tamna ala obložena drvetom dnevnu zonu i otvara se ka velikoj natkrivenoj terasi pod dubokim drvenim zabatom.</p><p>Dve ale se susreću na ulazu obloženom kamenom, koji razdvaja dnevnu i noćnu zonu i uokviruje malo dvorište. Jednostavne forme i prirodni materijali čine da kuća pripada pejzažu, a opet ima jasno savremen karakter.</p>"
-   }
+   "status": "Completed"
   },
   {
    "slug": "belgrade-waterfront-apartment-2-b-64",
    "title": "Belgrade Waterfront Apartment 2/B/64",
    "services": [
     "1. Conceptual & Schematic Design",
-    "2. Design Development & BIM Modeling",
-    "3. Construction Documents & Engineering"
+    "2. Design Development & 3D Modeling",
+    "3. Construction Documents & Engineering",
+    "5. Interior Architecture & Custom Detailing"
    ],
    "year": "2024",
    "cover": {
@@ -2840,15 +2859,18 @@
    "sr": {
     "type": "Enterijer stana",
     "description": "<p>Prefinjen stan u Beogradu na vodi, projektovan u mirnoj paleti tamnog oraha, bele i kamena. Dnevni boravak, trpezarija i kuhinja čine jedan otvoren prostor, oko koga se grupišu ostrvo sa mermernom pločom i mekana modularna sofa.</p><p>Žljebljena i lučna stolarija, ugradno osvetljenje i pažljivo odabrani predmeti daju dubinu i osećaj mira.</p>",
-    "location": "Beograd, Srbija"
-   }
+    "location": "Beograd, Srbija",
+    "status": "Izvedeno"
+   },
+   "status": "Completed"
   },
   {
    "slug": "apartment-km-4-18",
    "title": "Apartment KM 4/18",
    "services": [
+    "3. Construction Documents & Engineering",
     "4. Construction Administration & Oversight",
-    "3. Construction Documents & Engineering"
+    "5. Interior Architecture & Custom Detailing"
    ],
    "year": "2024",
    "cover": {
@@ -3248,8 +3270,10 @@
    "sr": {
     "type": "Enterijer stana",
     "description": "<p>Porodični stan u Beogradu koji čuva karakter klasičnog gradskog enterijera, sa parketom u riblju kost i plafonskim rozetama, i uparuje ga sa čistom savremenom stolarijom. Dnevna zona je jedna velika prostorija: dnevni boravak sa klavirom i bibliotekom do plafona, veliki trpezarijski sto i kuhinjsko ostrvo od svetlog kamena.</p><p>U noćnoj zoni staklene pregrade u tankim crnim ramovima razdvajaju spavaću sobu, garderober i malu radnu sobu bez gubitka dnevnog svetla. Kupatila dodaju toplinu stolarijom boje terakote, pločicama sličnim kamenu i crnim armaturama.</p>",
-    "location": "Beograd, Srbija"
-   }
+    "location": "Beograd, Srbija",
+    "status": "Izvedeno"
+   },
+   "status": "Completed"
   }
  ],
  "hero_slug": "villa-dve-koracica-kosmaj",

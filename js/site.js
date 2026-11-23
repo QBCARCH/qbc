@@ -145,17 +145,25 @@
       safe(() => sessionStorage.setItem('qbc-view', v));
     };
     btns.forEach((b) => b.addEventListener('click', () => set(b.dataset.view)));
+    // pretraga i filteri (vrsta, stanje) rade zajedno: projekat ostaje ako prolazi sve uslove
     const input = $('[data-search]', host), empty = $('[data-empty]', host);
-    if (input) input.addEventListener('input', () => {
-      const q = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    const f = { cat: '', st: '' };
+    const apply = () => {
+      const q = input ? input.value.trim().toLowerCase().split(/\s+/).filter(Boolean) : [];
       let n = 0;
       $$('[data-q]', host).forEach((el) => {
-        const ok = q.every((t) => el.dataset.q.includes(t));
+        const ok = q.every((t) => el.dataset.q.includes(t)) && (!f.cat || el.dataset.cat === f.cat) && (!f.st || el.dataset.st === f.st);
         el.classList.toggle('is-filtered', !ok);
         if (ok && el.classList.contains('wcard')) n++;
       });
       if (empty) empty.hidden = n > 0;
-    });
+    };
+    if (input) input.addEventListener('input', apply);
+    $$('[data-f]', host).forEach((b) => b.addEventListener('click', () => {
+      f[b.dataset.f] = b.dataset.v;
+      $$(`[data-f="${b.dataset.f}"]`, host).forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      apply();
+    }));
     const saved = safe(() => sessionStorage.getItem('qbc-view'));
     if (saved === 'index') set('index');
   };

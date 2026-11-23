@@ -271,6 +271,8 @@ ul, ol { list-style: none; }
 .switch { display: inline-flex; gap: 1.4rem; }
 .switch button { font: 400 .74rem var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--mute); padding-block: .3em; border-bottom: 1px solid transparent; transition: color .3s, border-color .3s; }
 .switch button[aria-pressed="true"] { color: var(--fg); border-color: var(--fg); }
+/* filteri vrste i stanja ispod uvoda liste radova */
+.wfilter { display: flex; flex-wrap: wrap; gap: 1rem 3rem; margin-top: clamp(20px, 3vh, 32px); }
 .empty { padding-bottom: 2rem; }
 .is-filtered { display: none !important; }
 
@@ -379,6 +381,35 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 .approach__num { grid-column: 1 / span 1; }
 .approach__title { grid-column: 4 / span 3; }
 .approach__text { grid-column: 8 / span 5; }
+
+/* metod: koraci primera (tekst levo, skica ili slika desno), skice se docrtavaju kad udju u ekran */
+.mcase__intro { max-width: 60ch; color: var(--mute); }
+.mstep { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); align-items: center; padding-block: clamp(28px, 6vh, 72px); border-top: 1px solid var(--line); }
+.mstep:first-of-type { margin-top: clamp(30px, 6vh, 70px); }
+.mstep__txt { grid-column: 1 / span 4; display: grid; gap: .8rem; align-content: start; }
+.mstep__txt .body { color: var(--mute); }
+.mstep__fig { grid-column: 6 / span 7; display: block; }
+.mstep__fig.frame { aspect-ratio: 1366 / 768; }
+.msk__svg { width: 100%; height: auto; display: block; overflow: visible; }
+.msk__svg path, .msk__svg rect, .msk__svg circle { fill: none; stroke: var(--pencil); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.msk__svg .msk__thin { stroke-width: .9; opacity: .55; }
+.msk__svg .msk__water { stroke-width: 1.1; stroke-dasharray: .02 .015; opacity: .7; }
+.msk__svg .msk__acc { stroke: var(--accent); stroke-width: 2.2; }
+.msk__svg .msk__bold { stroke-width: 4; opacity: .5; }
+.msk__svg .msk__faint { opacity: .35; }
+.msk__svg text { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; fill: var(--mute); stroke: none; }
+.msk__svg .msk__acct { fill: var(--accent); }
+.js .msk [pathLength] { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 2.2s var(--ease) .2s; }
+.js .msk .msk__water[pathLength] { stroke-dasharray: .02 .015; stroke-dashoffset: 0; }
+.js .msk circle[stroke-dasharray] { stroke-dashoffset: 0; }
+.js .msk.is-in [pathLength] { stroke-dashoffset: 0; }
+.mcase__note { margin-top: clamp(20px, 4vh, 40px); }
+.mdocs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.mdoc { margin: 0; display: grid; gap: .8rem; align-content: start; }
+.mdoc--site { grid-row: span 2; }
+.mdoc .msk__svg { overflow: hidden; }
+.mdoc .msk__svg text { font-size: 16px; }
+.mdoc--site .msk__svg { max-height: 78vh; }
 
 /* 9. usluge ------------------------------------------------------------------ */
 .shero { padding: clamp(140px, 22vh, 240px) var(--pad) clamp(36px, 6vh, 72px); }
@@ -494,6 +525,11 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   .nav__name { letter-spacing: .18em; }
   .menu { grid-template-columns: 1fr; }
   .menu__side { display: none; }
+  .mstep { row-gap: 1.4rem; }
+  .mstep__txt, .mstep__fig { grid-column: 1 / -1; }
+  .mdocs { grid-template-columns: 1fr; }
+  .mdoc--site { grid-row: auto; }
+  .msk__svg text { font-size: 19px; letter-spacing: .04em; }
   .hero__scroll { grid-template-columns: 1fr auto; row-gap: .6rem; }
   .hero__scroll p:first-child { display: none; }
   .reel { height: 360svh; }
@@ -508,6 +544,7 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   .footer__cols { grid-template-columns: 1fr 1fr; row-gap: 1.8rem; }
   .wgrid { grid-template-columns: 1fr; }
   .switch { display: none; }
+  .wfilter .switch { display: inline-flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
   .tools { width: 100%; }
   .search input { width: 100%; }
   .view-index .wgrid { display: grid; }
@@ -563,6 +600,7 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   @view-transition { navigation: none; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
   .js [data-reveal] { opacity: 1; transform: none; }
+  .js .msk [pathLength] { stroke-dashoffset: 0; }
   .hero.is-sketch { height: 100svh; }
   .hero__sketch { display: none !important; }
   .is-sketch .hero__media img, .is-sketch .hero__media::after { opacity: 1; }

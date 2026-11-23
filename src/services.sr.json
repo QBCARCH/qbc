@@ -1,75 +1,75 @@
 {
- "intro": "Pružamo usluge arhitekture, dizajna enterijera i vizualizacije, od prve ideje do završenog objekta. Jedan studio vodi projekat kroz dizajn, BIM koordinaciju, dozvole i nadzor, pa se ništa ne gubi između faza. Van Srbije radimo zajedno sa vašim lokalnim arhitektom.",
+ "intro": "Radimo arhitekturu, dizajn enterijera i vizualizaciju, od prve ideje do nadzora na gradilištu. Jedan studio vodi projekat kroz projektovanje, dozvole i gradnju, pa se ništa ne gubi između faza. Van Srbije radimo zajedno sa vašim lokalnim arhitektom.",
  "phases": [
   {
    "title": "Idejno rešenje i koncept",
-   "text": "Vaš zadatak pretvaramo u jasnu prostornu strategiju. Ova faza obuhvata analizu lokacije, pregled urbanističkih uslova i prva arhitektonska rešenja, sa fokusom na raspored, volumen i odnose među prostorima.",
+   "text": "Vaš zadatak pretvaramo u jasnu prostornu strategiju, počevši od paterna lokacije i načina na koji će se objekat koristiti. Ova faza obuhvata analizu lokacije, urbanističke uslove i prva rešenja: raspored, volumen i odnose među prostorima.",
    "items": [
     {
      "title": "Analiza lokacije",
-     "text": "Procena topografije, uslova okoline i urbanističkih propisa, kao osnova za najbolju strategiju projekta."
+     "text": "Topografija, orijentacija, pogledi, prilaz i planska pravila koja važe za parcelu."
     },
     {
-     "title": "Prostorni program",
-     "text": "Definisanje funkcionalnih zahteva i efikasnih rasporeda za sve prostore projekta."
+     "title": "Paterni",
+     "text": "Odnosi svetla, kretanja, privatnosti i okupljanja koji se ponavljaju i na koje projekat mora da odgovori."
     },
     {
-     "title": "Volumen i oblik",
-     "text": "Rani 3D modeli kojima istražujemo odnose volumena i utvrđujemo arhitektonski identitet."
+     "title": "Volumen i forma",
+     "text": "Rani 3D modeli kojima proveravamo volumene na lokaciji, i forma koja proizlazi iz paterna."
     }
    ]
   },
   {
-   "title": "Razrada projekta i BIM modelovanje",
-   "text": "Projekat razrađujemo u informacionom modelu zgrade. Biraju se materijali, konstrukcija i instalacije se usklađuju u modelu, a kolizije se rešavaju na ekranu, pre nego što stignu na gradilište.",
+   "title": "Razrada projekta i 3D modelovanje",
+   "text": "Projekat razrađujemo u preciznom 3D modelu u Rhino-u. Biraju se materijali, a konstrukcija i instalacije usklađuju se sa projektantima drugih struka, pa se spojevi rešavaju u modelu pre nego što stignu na gradilište.",
    "items": [
     {
-     "title": "Napredna 3D integracija",
-     "text": "Pametan BIM model usklađuje arhitekturu, konstrukciju i instalacije."
+     "title": "3D model kao osnova",
+     "text": "Svaka mera se proverava u 3D-u, a osnove, preseci i izgledi uzimaju se iz modela."
+    },
+    {
+     "title": "Usklađivanje sa strukama",
+     "text": "Konstrukcija i instalacije proveravaju se u odnosu na arhitekturu u svakom koraku."
     },
     {
      "title": "Specifikacija materijala",
-     "text": "Izbor završnih obrada i sistema koji ispunjavaju estetske ciljeve, a poštuju konstruktivna i budžetska ograničenja."
-    },
-    {
-     "title": "Rano otkrivanje kolizija",
-     "text": "Prepoznavanje i rešavanje sukoba između struka pre početka izgradnje."
+     "text": "Obrade i sistemi birani prema izgledu, ceni i načinu ugradnje."
     }
    ]
   },
   {
    "title": "Arhitektonska vizualizacija",
-   "text": "Fotorealistične slike, od prvih studija volumena do konačnog izbora materijala. Vizualizacije se prave iz istog BIM modela kao i crteži, pa je ono što odobrite upravo ono što se dokumentuje.",
+   "text": "Fotorealistične slike, od prvih studija volumena do konačnog izbora materijala. Vizualizacije nastaju iz istog 3D modela kao i crteži, pa je ono što odobrite upravo ono što se dokumentuje.",
    "items": [
     {
      "title": "Idejne vizualizacije",
-     "text": "Rane slike kojima proveravamo volumen, svetlost i atmosferu pre nego što se rešenje utvrdi."
+     "text": "Rane slike kojima proveravamo volumen, svetlo i atmosferu pre nego što se rešenje utvrdi."
     },
     {
      "title": "Studije materijala i enterijera",
-     "text": "Detaljni prikazi obrada, nameštaja i osvetljenja, da se odluke donose sa sigurnošću."
+     "text": "Krupni prikazi obrada, nameštaja i osvetljenja, da se odluke donose sa sigurnošću."
     },
     {
      "title": "Prezentacione slike",
-     "text": "Slike visoke rezolucije za investitore, prijave i prodaju."
+     "text": "Slike visoke rezolucije za investitore, zahteve za dozvole i prodaju."
     }
    ]
   },
   {
    "title": "Tehnička dokumentacija i inženjering",
-   "text": "Izrađujemo detaljnu tehničku dokumentaciju: crteže, specifikacije i tabele po kojima izvođači mogu da daju cenu i grade. Pažljiva razrada znači tačnije ponude, manje izmena na gradilištu i dokumentaciju koja ispunjava važeće propise.",
+   "text": "Crteži, specifikacije i tabele po kojima izvođači mogu da daju cenu i grade. Pažljivo razrađeni detalji znače tačnije ponude, manje izmena na gradilištu i dokumentaciju koja ispunjava važeće propise.",
    "items": [
     {
-     "title": "Detaljni arhitektonski crteži",
-     "text": "Precizne osnove, preseci i izgledi potrebni za tačne ponude izvođača."
+     "title": "Arhitektonski crteži",
+     "text": "Osnove, preseci i izgledi sa merama i napomenama koje su izvođaču potrebne za ponudu."
     },
     {
-     "title": "Detalji po meri",
-     "text": "Specijalni tehnički crteži za složene konstruktivne spojeve, termički omotač i hidroizolaciju."
+     "title": "Detalji",
+     "text": "Crteži spojeva, termičkog omotača i hidroizolacije, gde počinje većina problema na gradilištu."
     },
     {
      "title": "Dokumentacija za dozvole",
-     "text": "Priprema dokumentacije koja ispunjava važeće propise i podržava postupak izdavanja dozvola, u Srbiji preko sistema CEOP."
+     "text": "IDR, PGD i PZI u skladu sa važećim propisima, sa predajom kroz sistem CEOP."
     }
    ]
   },
@@ -93,37 +93,37 @@
   },
   {
    "title": "Enterijer i detalji po meri",
-   "text": "Arhitektonsku ideju prenosimo u enterijer: stolarija po meri, osvetljenje i izbor materijala, da zgrada i njen enterijer deluju kao jedna celina.",
+   "text": "Arhitektonsku ideju prenosimo u enterijer: stolarija po meri, osvetljenje i izbor materijala, da objekat i njegov enterijer deluju kao jedna celina.",
    "items": [
     {
      "title": "Stolarija po meri",
-     "text": "Projektovanje ormara i ugradnih elemenata prilagođenih geometriji svakog prostora."
+     "text": "Ormari i ugradni elementi crtani prema geometriji svakog prostora."
     },
     {
-     "title": "Dizajn osvetljenja",
-     "text": "Integrisani planovi osvetljenja koji podržavaju način korišćenja svakog prostora."
+     "title": "Osvetljenje",
+     "text": "Plan osvetljenja koji prati način korišćenja prostora, danju i noću."
     },
     {
-     "title": "Izbor materijala",
-     "text": "Biranje završnih obrada, opreme i okova koji slede arhitektonsku ideju."
+     "title": "Materijali i okovi",
+     "text": "Završne obrade, oprema i okovi koji slede arhitektonsku ideju."
     }
    ]
   },
   {
    "title": "Studije izvodljivosti i master planiranje",
-   "text": "Za razvojne projekte velikih razmera pružamo strateško master planiranje i analizu izvodljivosti. Procenjujemo potencijal lokacije, razmatramo regulatorna ograničenja i razvijamo dugoročne prostorne strategije koje povećavaju vrednost zemljišta i vode buduće faze razvoja.",
+   "text": "Za veće lokacije proveravamo šta može da se izgradi pre nego što projektovanje počne: koliko površine dozvoljavaju planska pravila, kako se ona raspoređuje na zemljištu i kojim redom može da se gradi. Sopstveni alati zasnovani na paternima omogućavaju nam da u ovoj fazi uporedimo mnogo varijanti, sa površinama i indeksima jednu pored druge.",
    "items": [
     {
-     "title": "Procena potencijala lokacije",
-     "text": "Procena fizičkih ograničenja i regulatornog okvira radi utvrđivanja maksimalnog kapaciteta parcele."
+     "title": "Kapacitet lokacije",
+     "text": "Najveća površina za gradnju po planskim pravilima i ograničenja koja je umanjuju."
     },
     {
-     "title": "Analiza iskorišćenosti i gustine",
-     "text": "Obračun površina za gradnju i optimizacija prostorne raspodele, da projekat bude finansijski održiv."
+     "title": "Varijante i gustina",
+     "text": "Više rasporeda sa površinama i indeksima, da investitor može da ih uporedi kroz brojke."
     },
     {
-     "title": "Dugoročno fazno planiranje",
-     "text": "Raspodela velikih razvoja na logične etape radi optimizacije ulaganja i upravljanja rizikom."
+     "title": "Fazna gradnja",
+     "text": "Veliki razvoj podeljen na etape koje mogu da se finansiraju i grade jedna za drugom."
     }
    ]
   }

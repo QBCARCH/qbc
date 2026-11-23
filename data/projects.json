@@ -442,6 +442,886 @@
    ]
   },
   {
+   "slug": "villa-basketball-court-boston-usa",
+   "title": "Villa with Basketball Court, Boston",
+   "year": "2023",
+   "services": [
+    "1. Conceptual & Schematic Design",
+    "5. Interior Architecture & Custom Detailing",
+    "7. Architectural Visualisation"
+   ],
+   "description": "<p>A private villa near Boston built around a full-size basketball court. Next to the court hall and below it are a gym, a boxing and MMA room, a pool with a spa, a games room with a restaurant kitchen, a garage and apartments. We worked on it from the first volume studies in November 2022 to the final renders in June 2023.</p><p>The building is two gabled volumes in dark timber on a stone base that steps down with the slope. The court hall takes the long ridge, and its glazed gable end faces the parking. The pool opens to a terrace on the garden side, and the roofs of the lower floors are used as balconies.</p><p>Every room has its own palette. The court is dark paneling with a pale wood floor and the city name set into it. The gym is warm wood and brick with amber light coves. The games room and restaurant combine grey upholstery with red backlit shelves and a bonsai in the middle of the room. The apartments are quieter, with marble bathrooms and bedrooms under the roof pitch.</p>",
+   "cover": {
+    "file": "usa-sparks-ext-02.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 2000,
+    "h": 1125,
+    "full": "usa-sparks-ext-02-full.webp",
+    "wm": false,
+    "part": "Building",
+    "part_sr": "Objekat",
+    "sketch": "usa-sparks-ext-02-sketch.json",
+    "og": "usa-sparks-ext-02-og.jpg"
+   },
+   "thumb": {
+    "file": "usa-sparks-ext-02.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 2000,
+    "h": 1125,
+    "full": "usa-sparks-ext-02-full.webp",
+    "wm": false,
+    "part": "Building",
+    "part_sr": "Objekat",
+    "sketch": "usa-sparks-ext-02-sketch.json",
+    "og": "usa-sparks-ext-02-og.jpg"
+   },
+   "hero": {
+    "file": "usa-sparks-ext-02.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 2000,
+    "h": 1125,
+    "full": "usa-sparks-ext-02-full.webp",
+    "wm": false,
+    "part": "Building",
+    "part_sr": "Objekat",
+    "sketch": "usa-sparks-ext-02-sketch.json",
+    "og": "usa-sparks-ext-02-og.jpg"
+   },
+   "gallery": [
+    {
+     "file": "usa-sparks-ext-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-02-full.webp",
+     "wm": false,
+     "part": "Building",
+     "part_sr": "Objekat",
+     "sketch": "usa-sparks-ext-02-sketch.json",
+     "og": "usa-sparks-ext-02-og.jpg"
+    },
+    {
+     "file": "usa-sparks-ext-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-ext-04.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-04-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-ext-05.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-05-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-ext-06.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-06-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-ext-07.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-07-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-ext-08.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-08-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-ext-09.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-09-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-ext-10.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-10-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-court-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-court-01-full.webp",
+     "wm": false,
+     "part": "Interior",
+     "part_sr": "Enterijer",
+     "room": "Basketball court",
+     "room_sr": "Košarkaška hala"
+    },
+    {
+     "file": "usa-sparks-court-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-court-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-court-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-court-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-court-04.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-court-04-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-court-05.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-court-05-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-court-06.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-court-06-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-court-07.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-court-07-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-court-08.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-court-08-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-01-full.webp",
+     "wm": false,
+     "room": "Games room and restaurant",
+     "room_sr": "Igraonica i restoran"
+    },
+    {
+     "file": "usa-sparks-games-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-04.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-04-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-05.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-05-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-06.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-06-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-07.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-07-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-08.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-08-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-09.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-09-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-10.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-10-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-11.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-11-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-12.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-12-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-gym-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-gym-01-full.webp",
+     "wm": false,
+     "room": "Gym",
+     "room_sr": "Teretana"
+    },
+    {
+     "file": "usa-sparks-gym-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-gym-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-gym-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-gym-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-gym-04.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-gym-04-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-gym-05.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-gym-05-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-gym-06.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-gym-06-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-gym-07.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-gym-07-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt1-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt1-01-full.webp",
+     "wm": false,
+     "room": "Apartment, bedroom suite",
+     "room_sr": "Apartman, spavaća soba"
+    },
+    {
+     "file": "usa-sparks-apt1-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt1-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt1-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt1-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt1-04.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt1-04-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt1-05.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt1-05-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt1-06.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt1-06-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt1-07.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt1-07-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt4-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-01-full.webp",
+     "wm": false,
+     "room": "Apartment, duplex",
+     "room_sr": "Apartman, dupleks"
+    },
+    {
+     "file": "usa-sparks-apt4-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt4-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt4-04.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-04-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt4-05.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-05-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt4-06.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-06-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt4-07.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-07-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt4-08.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-08-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt4-09.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-09-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt4-10.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-10-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt4-11.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt4-11-full.webp",
+     "wm": false
+    }
+   ],
+   "location": "Boston, USA",
+   "area": "3,300 m²",
+   "status": "Concept design, 2023",
+   "credit": "Renders by QBCARCHITECTS, 2023",
+   "added": "2026-11-24",
+   "type": "Villa with sports facilities",
+   "sr": {
+    "type": "Vila sa sportskim sadržajima",
+    "location": "Boston, SAD",
+    "status": "Idejno rešenje, 2023",
+    "description": "<p>Privatna vila kod Bostona izgrađena oko košarkaškog terena pune veličine. Uz halu i ispod nje su teretana, prostorija za boks i MMA, bazen sa spa zonom, igraonica sa kuhinjom restorana, garaža i apartmani. Radili smo na njoj od prvih studija volumena u novembru 2022. do završnih rendera u junu 2023.</p><p>Objekat čine dva dvovodna volumena u tamnom drvetu na kamenom postolju koje prati pad terena. Hala sa terenom dobija dugi sleme, a njen ostakljeni zabat okrenut je parkingu. Bazen se otvara na terasu sa strane bašte, a krovovi nižih etaža koriste se kao balkoni.</p><p>Svaka prostorija ima svoju paletu. Teren je tamna oplata sa svetlim drvenim podom u koji je upisano ime grada. Teretana je toplo drvo i cigla sa jantarnim svetlosnim kovertama. Igraonica i restoran spajaju sivu tapaciriju sa crvenim rafovima sa pozadinskim osvetljenjem i bonsaijem usred prostorije. Apartmani su mirniji, sa kupatilima u mermeru i spavaćim sobama pod kosinom krova.</p>"
+   },
+   "drawings": [
+    {
+     "title": "Floor plans",
+     "title_sr": "Osnove",
+     "items": [
+      {
+       "label": "Level -1: pool, changing rooms, apartments",
+       "label_sr": "Nivo -1: bazen, garderobe, apartmani",
+       "image": {
+        "file": "skica-sparks-lvl-1.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1136,
+        "full": "skica-sparks-lvl-1-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-sparks-lvl-1-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1136,
+        "full": "skica-sparks-lvl-1-sr-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Level 0: basketball court, games room, dining",
+       "label_sr": "Nivo 0: košarkaški teren, igraonica, restoran",
+       "image": {
+        "file": "skica-sparks-lvl0.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1136,
+        "full": "skica-sparks-lvl0-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-sparks-lvl0-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1136,
+        "full": "skica-sparks-lvl0-sr-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Level 1: court void and apartments",
+       "label_sr": "Nivo 1: otvor iznad terena i apartmani",
+       "image": {
+        "file": "skica-sparks-lvl1.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1136,
+        "full": "skica-sparks-lvl1-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-sparks-lvl1-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1136,
+        "full": "skica-sparks-lvl1-sr-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
    "slug": "villa-dve-koracica-kosmaj",
    "title": "Villa Dve Koraćica, Kosmaj",
    "services": [

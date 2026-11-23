@@ -331,6 +331,18 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 .pgal { padding: 0 var(--pad) clamp(72px, 12vh, 150px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); scroll-margin-top: 130px; }
 .pgal figure { cursor: zoom-in; }
 .pgal figure:nth-child(3n+1) { grid-column: 1 / -1; }
+/* podeljena galerija (Objekat / Enterijer, prostorije): svaka grupa je svoja mreza */
+.pgal:has(.pgal__set) { display: block; }
+.pgal__set { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.pgal__part { margin: clamp(56px, 9vh, 110px) 0 clamp(20px, 3vh, 36px); font-weight: 400; line-height: 1; }
+.pgal__part:first-of-type { margin-top: 0; }
+.pgal__part, .pgal__room { scroll-margin-top: 130px; }
+.pgal__room { margin: clamp(36px, 6vh, 72px) 0 clamp(14px, 2vh, 22px); color: var(--mute); }
+.pgal__nav { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; margin-bottom: clamp(28px, 5vh, 56px); padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.pgal__nav a { color: var(--mute); }
+.pgal__nav a.pgal__navp { color: inherit; }
+.pgal__nav a:hover { color: inherit; }
+.pgal__set figure:nth-child(3n+1) { grid-column: 1 / -1; }
 .pgal .frame { aspect-ratio: var(--ar, 3 / 2); }
 /* osnova iza rendera (js: initGallery): crtez na papiru ispod slike; misem se otkriva kao brisanje (clip-path),
    na dodir se prebacuje; dugmad Render / Osnova / ceo ekran su uvek tu */
@@ -573,6 +585,7 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   .pinfo__side { margin-bottom: 2rem; }
   .pgal { grid-template-columns: 1fr; }
   .pgal figure:nth-child(n) { grid-column: 1 / -1; }
+  .pgal__set { grid-template-columns: 1fr; }
   .pfig__cap { display: none; }
   .pnext__text, .pnext .frame { grid-column: 1 / -1; }
   .pnext .frame { margin-top: 1.6rem; }

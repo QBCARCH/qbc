@@ -2001,7 +2001,8 @@
     "h": 1125,
     "og": "kafe-frankfurt-bar-front-og.jpg",
     "full": "kafe-frankfurt-bar-front-full.webp",
-    "wm": false
+    "wm": false,
+    "sketch": "kafe-frankfurt-bar-front-sketch.json"
    },
    "thumb": {
     "file": "kafe-frankfurt-bar-front.webp",
@@ -2014,7 +2015,8 @@
     "h": 1125,
     "og": "kafe-frankfurt-bar-front-og.jpg",
     "full": "kafe-frankfurt-bar-front-full.webp",
-    "wm": false
+    "wm": false,
+    "sketch": "kafe-frankfurt-bar-front-sketch.json"
    },
    "hero": {
     "file": "kafe-frankfurt-bar-front.webp",
@@ -2027,7 +2029,8 @@
     "h": 1125,
     "og": "kafe-frankfurt-bar-front-og.jpg",
     "full": "kafe-frankfurt-bar-front-full.webp",
-    "wm": false
+    "wm": false,
+    "sketch": "kafe-frankfurt-bar-front-sketch.json"
    },
    "gallery": [
     {
@@ -2041,7 +2044,8 @@
      "h": 1125,
      "og": "kafe-frankfurt-bar-front-og.jpg",
      "full": "kafe-frankfurt-bar-front-full.webp",
-     "wm": false
+     "wm": false,
+     "sketch": "kafe-frankfurt-bar-front-sketch.json"
     },
     {
      "file": "kafe-frankfurt-bar-long.webp",
@@ -2229,57 +2233,61 @@
    ],
    "description": "<p>A restoration masterplan for the town of Koroba in Papua New Guinea, issued in May 2018. The plan stays inside the existing town boundary and builds on its administrative zone. It places new buildings in 26 numbered locations, from a general hospital and doctors' houses to a school, a college, a police station with barracks, a market square, a bus (PMV) station and a lodge for visitors.</p><p>The sports area has a 16,500 m² open field with an outdoor rugby pitch and stands, a 1,720 m² indoor court and 123 parking places. The regional college sits on the old airstrip, along the proposed main road towards Tari, and is meant to specialise in agriculture.</p><p>The administrative zone sits near the main transit route and is tied to the hospital, the sports field, the cultural buildings, the markets and the new commercial area, so daily errands can be done in one walk. The hospital zone has its own fenced plot with an entrance and 30 parking places, and the doctors' houses stand next to it. The market and commercial zone is a tight urban form beside the PMV station. The school lies at the north-west edge, with outdoor classrooms and garden plots next to an agro industry, so children learn farming from an early age. Wide green areas stay between all of it, to keep the rural calm that Koroba is known for.</p>",
    "cover": {
-    "file": "koroba-aerial.webp",
+    "file": "koroba-aerial-hires.webp",
     "widths": [
      500,
      800,
      1080
     ],
-    "w": 1132,
-    "h": 708,
-    "og": "koroba-aerial-og.jpg",
-    "full": "koroba-aerial-full.webp",
-    "wm": false
+    "w": 2000,
+    "h": 1392,
+    "og": "koroba-aerial-hires-og.jpg",
+    "full": "koroba-aerial-hires-full.webp",
+    "wm": false,
+    "sketch": "koroba-aerial-hires-sketch.json"
    },
    "thumb": {
-    "file": "koroba-aerial.webp",
+    "file": "koroba-aerial-hires.webp",
     "widths": [
      500,
      800,
      1080
     ],
-    "w": 1132,
-    "h": 708,
-    "og": "koroba-aerial-og.jpg",
-    "full": "koroba-aerial-full.webp",
-    "wm": false
+    "w": 2000,
+    "h": 1392,
+    "og": "koroba-aerial-hires-og.jpg",
+    "full": "koroba-aerial-hires-full.webp",
+    "wm": false,
+    "sketch": "koroba-aerial-hires-sketch.json"
    },
    "hero": {
-    "file": "koroba-aerial.webp",
+    "file": "koroba-aerial-hires.webp",
     "widths": [
      500,
      800,
      1080
     ],
-    "w": 1132,
-    "h": 708,
-    "og": "koroba-aerial-og.jpg",
-    "full": "koroba-aerial-full.webp",
-    "wm": false
+    "w": 2000,
+    "h": 1392,
+    "og": "koroba-aerial-hires-og.jpg",
+    "full": "koroba-aerial-hires-full.webp",
+    "wm": false,
+    "sketch": "koroba-aerial-hires-sketch.json"
    },
    "gallery": [
     {
-     "file": "koroba-aerial.webp",
+     "file": "koroba-aerial-hires.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1132,
-     "h": 708,
-     "og": "koroba-aerial-og.jpg",
-     "full": "koroba-aerial-full.webp",
-     "wm": false
+     "w": 2000,
+     "h": 1392,
+     "og": "koroba-aerial-hires-og.jpg",
+     "full": "koroba-aerial-hires-full.webp",
+     "wm": false,
+     "sketch": "koroba-aerial-hires-sketch.json"
     },
     {
      "file": "koroba-masterplan.webp",

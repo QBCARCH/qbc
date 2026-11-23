@@ -335,12 +335,13 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 /* osnova iza rendera (js: initGallery): crtez na papiru ispod slike; misem se otkriva kao brisanje (clip-path),
    na dodir se prebacuje; dugmad Render / Osnova / ceo ekran su uvek tu */
 .pfig { position: relative; cursor: ew-resize; touch-action: pan-y; }
-.pfig__plan { position: absolute; inset: 0; z-index: 2; background: #f7f5f0; display: grid; place-items: center; clip-path: inset(0 0 0 var(--x, 100%)); transition: clip-path .9s var(--ease); }
+.pfig__plan { position: absolute; inset: 0; z-index: 2; background: var(--bg); display: grid; place-items: center; clip-path: inset(0 0 0 var(--x, 100%)); transition: clip-path .9s var(--ease); }
 .pfig.is-live .pfig__plan { transition: none; }
-.pfig__plan img { width: auto; height: 92%; max-height: 92%; max-width: 94%; object-fit: contain; }
+.pfig__plan img { mix-blend-mode: multiply; width: auto; height: 92%; max-height: 92%; max-width: 94%; object-fit: contain; }
+@media (prefers-color-scheme: dark) { .pdraw__fig img, .pfig__plan img { filter: invert(.9); mix-blend-mode: screen; } }
 .pfig__edge { position: absolute; z-index: 3; top: 0; bottom: 0; left: var(--x, 100%); width: 1px; background: #fff; mix-blend-mode: difference; opacity: 0; transition: opacity .3s; pointer-events: none; }
 .pfig.is-live .pfig__edge { opacity: 1; }
-.pfig__cap { position: absolute; z-index: 3; right: 14px; bottom: 18px; color: #171614; opacity: 0; transition: opacity .4s; pointer-events: none; }
+.pfig__cap { position: absolute; z-index: 3; right: 14px; bottom: 18px; color: var(--fg); opacity: 0; transition: opacity .4s; pointer-events: none; }
 .pfig.is-plan .pfig__cap { opacity: 1; }
 .pfig__tag { position: absolute; z-index: 4; left: 14px; bottom: 14px; display: inline-flex; padding: 2px; border: 1px solid rgba(255, 255, 255, .55); border-radius: 999px; background: rgba(20, 19, 17, .45); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: #fff; transition: background .4s, border-color .4s, color .4s; }
 .pfig__tag button { padding: .5em 1em; border-radius: 999px; font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
@@ -366,9 +367,9 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 .pdraw__tabs button { padding: .55em 1em; border: 1px solid var(--line, currentColor); border-radius: 999px; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; cursor: pointer; transition: background .3s, color .3s; }
 .pdraw__tabs button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
 .pdraw__tabs button:focus-visible { outline: 1px solid currentColor; outline-offset: 2px; }
-.pdraw__stage { background: #f7f5f0; padding: clamp(.8rem, 3vw, 2.5rem); display: grid; place-items: center; min-height: 40vh; }
+.pdraw__stage { padding: clamp(.4rem, 2vw, 1.5rem) 0; display: grid; place-items: center; min-height: 40vh; }
 .pdraw__fig { margin: 0; width: 100%; }
-.pdraw__fig img { display: block; width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
+.pdraw__fig img { mix-blend-mode: multiply; display: block; width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
 
 /* 8. o nama ----------------------------------------------------------------- */
 .ahero { padding: clamp(140px, 22vh, 240px) var(--pad) clamp(36px, 6vh, 72px); }

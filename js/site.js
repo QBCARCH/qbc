@@ -224,6 +224,8 @@
   const initDrawings = () => {
     $$('[data-draw]').forEach((g) => {
       const btns = $$('.pdraw__tabs button', g), figs = $$('.pdraw__fig', g);
+      // ostali kadrovi se ucitavaju u pozadini cim se stranica smiri, da dugme ne ceka mrezu
+      setTimeout(() => $$('img', g).forEach((im) => { im.loading = 'eager'; }), 2500);
       btns.forEach((b) => b.addEventListener('click', () => {
         const n = +b.dataset.i;
         figs.forEach((f, k) => { f.hidden = k !== n; });

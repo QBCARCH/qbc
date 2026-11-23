@@ -2227,7 +2227,7 @@
     "6. Feasibility Studies & Master Planning",
     "7. Architectural Visualisation"
    ],
-   "description": "<p>A restoration masterplan for the town of Koroba in Papua New Guinea, issued in May 2018. The plan stays inside the existing town boundary and builds on its administrative zone. It places new buildings in 26 numbered locations, from a general hospital and doctors' houses to a school, a college, a police station with barracks, a market square, a bus (PMV) station and a lodge for visitors.</p><p>The administrative zone sits near the main transit route and is tied to the hospital, the sports field, the cultural buildings, the markets and the new commercial area, so daily errands can be done in one walk. The hospital zone has its own fenced plot with an entrance and 30 parking places, and the doctors' houses stand next to it. The market and commercial zone is a tight urban form beside the PMV station. The school lies at the north-west edge, with outdoor classrooms and garden plots next to an agro industry, so children learn farming from an early age. Wide green areas stay between all of it, to keep the rural calm that Koroba is known for.</p>",
+   "description": "<p>A restoration masterplan for the town of Koroba in Papua New Guinea, issued in May 2018. The plan stays inside the existing town boundary and builds on its administrative zone. It places new buildings in 26 numbered locations, from a general hospital and doctors' houses to a school, a college, a police station with barracks, a market square, a bus (PMV) station and a lodge for visitors.</p><p>The sports area has a 16,500 m² open field with an outdoor rugby pitch and stands, a 1,720 m² indoor court and 123 parking places. The regional college sits on the old airstrip, along the proposed main road towards Tari, and is meant to specialise in agriculture.</p><p>The administrative zone sits near the main transit route and is tied to the hospital, the sports field, the cultural buildings, the markets and the new commercial area, so daily errands can be done in one walk. The hospital zone has its own fenced plot with an entrance and 30 parking places, and the doctors' houses stand next to it. The market and commercial zone is a tight urban form beside the PMV station. The school lies at the north-west edge, with outdoor classrooms and garden plots next to an agro industry, so children learn farming from an early age. Wide green areas stay between all of it, to keep the rural calm that Koroba is known for.</p>",
    "cover": {
     "file": "koroba-aerial.webp",
     "widths": [
@@ -2282,6 +2282,20 @@
      "wm": false
     },
     {
+     "file": "koroba-masterplan.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2380,
+     "h": 1660,
+     "og": "koroba-masterplan-og.jpg",
+     "full": "koroba-masterplan-full.webp",
+     "wm": false
+    },
+    {
      "file": "koroba-legend.webp",
      "widths": [
       500,
@@ -2308,25 +2322,132 @@
      "wm": false
     },
     {
-     "file": "koroba-hospital.webp",
+     "file": "koroba-zoning.webp",
      "widths": [
-      500
+      500,
+      800,
+      1080,
+      1600
      ],
-     "w": 672,
-     "h": 472,
-     "og": "koroba-hospital-og.jpg",
-     "full": "koroba-hospital-full.webp",
+     "w": 2380,
+     "h": 1660,
+     "og": "koroba-zoning-og.jpg",
+     "full": "koroba-zoning-full.webp",
      "wm": false
     },
     {
-     "file": "koroba-admin.webp",
+     "file": "koroba-parcels.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1392,
+     "h": 1660,
+     "og": "koroba-parcels-og.jpg",
+     "full": "koroba-parcels-full.webp",
+     "wm": false
+    },
+    {
+     "file": "koroba-hospital-plan.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1369,
+     "h": 952,
+     "og": "koroba-hospital-plan-og.jpg",
+     "full": "koroba-hospital-plan-full.webp",
+     "wm": false
+    },
+    {
+     "file": "koroba-hospital-render.webp",
      "widths": [
       500
      ],
-     "w": 546,
-     "h": 370,
-     "og": "koroba-admin-og.jpg",
-     "full": "koroba-admin-full.webp",
+     "w": 655,
+     "h": 619,
+     "og": "koroba-hospital-render-og.jpg",
+     "full": "koroba-hospital-render-full.webp",
+     "wm": false
+    },
+    {
+     "file": "koroba-admin-plan.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2380,
+     "h": 1660,
+     "og": "koroba-admin-plan-og.jpg",
+     "full": "koroba-admin-plan-full.webp",
+     "wm": false
+    },
+    {
+     "file": "koroba-sports-plan.webp",
+     "widths": [
+      500,
+      800
+     ],
+     "w": 905,
+     "h": 958,
+     "og": "koroba-sports-plan-og.jpg",
+     "full": "koroba-sports-plan-full.webp",
+     "wm": false
+    },
+    {
+     "file": "koroba-sports-aerial.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1371,
+     "h": 956,
+     "og": "koroba-sports-aerial-og.jpg",
+     "full": "koroba-sports-aerial-full.webp",
+     "wm": false
+    },
+    {
+     "file": "koroba-school-plan.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1116,
+     "h": 1613,
+     "og": "koroba-school-plan-og.jpg",
+     "full": "koroba-school-plan-full.webp",
+     "wm": false
+    },
+    {
+     "file": "koroba-school-render.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1084,
+     "h": 966,
+     "og": "koroba-school-render-og.jpg",
+     "full": "koroba-school-render-full.webp",
+     "wm": false
+    },
+    {
+     "file": "koroba-college-plan.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1276,
+     "h": 1204,
+     "og": "koroba-college-plan-og.jpg",
+     "full": "koroba-college-plan-full.webp",
      "wm": false
     },
     {
@@ -2338,17 +2459,6 @@
      "h": 720,
      "og": "koroba-market-og.jpg",
      "full": "koroba-market-full.webp",
-     "wm": false
-    },
-    {
-     "file": "koroba-school-render.webp",
-     "widths": [
-      500
-     ],
-     "w": 530,
-     "h": 470,
-     "og": "koroba-school-render-og.jpg",
-     "full": "koroba-school-render-full.webp",
      "wm": false
     }
    ],
@@ -2388,12 +2498,12 @@
    ],
    "location": "Koroba, Papua New Guinea",
    "status": "Masterplan, May 2018",
-   "credit": "Images from the Koroba Restoration Masterplan, May 2018",
+   "credit": "Masterplan by QBCARCHITECTS, May 2018",
    "added": "2026-11-23",
    "type": "Town masterplan",
    "sr": {
     "type": "Master plan varoši",
-    "description": "<p>Master plan za obnovu varoši Koroba u Papui Novoj Gvineji, izdat maja 2018. Plan ostaje unutar postojeće granice varoši i nadovezuje se na njenu upravnu zonu. Novi objekti raspoređeni su na 26 označenih lokacija: od opšte bolnice i kuća za lekare, preko škole, koledža i policijske stanice sa barakama, do trga sa tržnicom, autobuske (PMV) stanice i smeštaja za posetioce.</p><p>Upravna zona je blizu glavnog tranzitnog puta i povezana je sa bolnicom, sportskim terenom, kulturnim objektima, pijacama i novom poslovnom zonom, pa se svakodnevni poslovi obave u jednoj šetnji. Bolnička zona ima svoju ograđenu parcelu sa ulazom i 30 parking mesta, a kuće za lekare su pored nje. Zona tržnice i trgovine je gusto tkivo pored PMV stanice. Škola je na severozapadnoj ivici, sa učionicama na otvorenom i baštenskim parcelama uz agro industriju, da deca od malih nogu uče poljoprivredu. Između svega ostaju široke zelene površine, da Koroba zadrži seosku tišinu po kojoj je poznata.</p>",
+    "description": "<p>Master plan za obnovu varoši Koroba u Papui Novoj Gvineji, izdat maja 2018. Plan ostaje unutar postojeće granice varoši i nadovezuje se na njenu upravnu zonu. Novi objekti raspoređeni su na 26 označenih lokacija: od opšte bolnice i kuća za lekare, preko škole, koledža i policijske stanice sa barakama, do trga sa tržnicom, autobuske (PMV) stanice i smeštaja za posetioce.</p><p>Sportska zona ima otvoren teren od 16.500 m² sa ragbi igralištem i tribinama, zatvoren teren od 1.720 m² i 123 parking mesta. Regionalni koledž je na mestu stare piste, uz predloženi glavni put prema Tariju, i treba da se specijalizuje za poljoprivredu.</p><p>Upravna zona je blizu glavnog tranzitnog puta i povezana je sa bolnicom, sportskim terenom, kulturnim objektima, pijacama i novom poslovnom zonom, pa se svakodnevni poslovi obave u jednoj šetnji. Bolnička zona ima svoju ograđenu parcelu sa ulazom i 30 parking mesta, a kuće za lekare su pored nje. Zona tržnice i trgovine je gusto tkivo pored PMV stanice. Škola je na severozapadnoj ivici, sa učionicama na otvorenom i baštenskim parcelama uz agro industriju, da deca od malih nogu uče poljoprivredu. Između svega ostaju široke zelene površine, da Koroba zadrži seosku tišinu po kojoj je poznata.</p>",
     "location": "Koroba, Papua Nova Gvineja",
     "status": "Master plan, maj 2018"
    }

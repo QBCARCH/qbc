@@ -338,7 +338,7 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 .pfig__plan { position: absolute; inset: 0; z-index: 2; background: var(--bg); display: grid; place-items: center; clip-path: inset(0 0 0 var(--x, 100%)); transition: clip-path .9s var(--ease); }
 .pfig.is-live .pfig__plan { transition: none; }
 .pfig__plan img { width: auto; height: 92%; max-height: 92%; max-width: 94%; object-fit: contain; }
-@media (prefers-color-scheme: dark) { .pdraw__fig img, .pfig__plan img { filter: invert(.9); } }
+@media (prefers-color-scheme: dark) { .pdraw__fig img, .pfig__plan img { filter: invert(.9) hue-rotate(180deg); } }
 .pfig__edge { position: absolute; z-index: 3; top: 0; bottom: 0; left: var(--x, 100%); width: 1px; background: #fff; mix-blend-mode: difference; opacity: 0; transition: opacity .3s; pointer-events: none; }
 .pfig.is-live .pfig__edge { opacity: 1; }
 .pfig__cap { position: absolute; z-index: 3; right: 14px; bottom: 18px; color: var(--fg); opacity: 0; transition: opacity .4s; pointer-events: none; }

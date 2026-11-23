@@ -300,18 +300,29 @@
      "wm": true,
      "sketch": "6aa293afab9b9e93867394a1_1 - 1-sketch.json",
      "plan": {
-      "file": "osnova-koracica-kuca1.webp",
+      "file": "skica-koracica-kuca1.webp",
       "widths": [
        800,
        1600
       ],
       "w": 2400,
-      "h": 972,
-      "full": "osnova-koracica-kuca1-full.webp",
+      "h": 1280,
+      "full": "skica-koracica-kuca1-full.webp",
       "wm": false
      },
      "plan_label": "House 1",
-     "plan_label_sr": "Kuća 1"
+     "plan_label_sr": "Kuća 1",
+     "plan_sr": {
+      "file": "skica-koracica-kuca1-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1280,
+      "full": "skica-koracica-kuca1-sr-full.webp",
+      "wm": false
+     }
     },
     {
      "file": "6aa293c23696e0bf733acb88_1 - 2.webp",
@@ -352,18 +363,29 @@
      "full": "6aa28ef657107ef3884e9da8_2 - 1-full.webp",
      "wm": true,
      "plan": {
-      "file": "osnova-koracica-kuca2.webp",
+      "file": "skica-koracica-kuca2.webp",
       "widths": [
        800,
        1600
       ],
-      "w": 1781,
-      "h": 1227,
-      "full": "osnova-koracica-kuca2-full.webp",
+      "w": 2400,
+      "h": 1530,
+      "full": "skica-koracica-kuca2-full.webp",
       "wm": false
      },
      "plan_label": "House 2",
-     "plan_label_sr": "Kuća 2"
+     "plan_label_sr": "Kuća 2",
+     "plan_sr": {
+      "file": "skica-koracica-kuca2-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1530,
+      "full": "skica-koracica-kuca2-sr-full.webp",
+      "wm": false
+     }
     },
     {
      "file": "6aa28f052c30d80d8e512281_2 - 2.webp",
@@ -452,14 +474,25 @@
        "label": "House 1, ground floor",
        "label_sr": "Kuća 1, prizemlje",
        "image": {
-        "file": "osnova-koracica-kuca1.webp",
+        "file": "skica-koracica-kuca1.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 972,
-        "full": "osnova-koracica-kuca1-full.webp",
+        "h": 1280,
+        "full": "skica-koracica-kuca1-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-koracica-kuca1-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1280,
+        "full": "skica-koracica-kuca1-sr-full.webp",
         "wm": false
        }
       },
@@ -467,14 +500,25 @@
        "label": "House 2, ground floor",
        "label_sr": "Kuća 2, prizemlje",
        "image": {
-        "file": "osnova-koracica-kuca2.webp",
+        "file": "skica-koracica-kuca2.webp",
         "widths": [
          800,
          1600
         ],
-        "w": 1781,
-        "h": 1227,
-        "full": "osnova-koracica-kuca2-full.webp",
+        "w": 2400,
+        "h": 1530,
+        "full": "skica-koracica-kuca2-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-koracica-kuca2-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1530,
+        "full": "skica-koracica-kuca2-sr-full.webp",
         "wm": false
        }
       }
@@ -943,12 +987,12 @@
    },
    "drawings": [
     {
-     "title": "Plans",
-     "title_sr": "Osnove",
+     "title": "Main house: plans",
+     "title_sr": "Velika kuća: osnove",
      "items": [
       {
-       "label": "Main house, basement",
-       "label_sr": "Porodična kuća, podrum",
+       "label": "Basement",
+       "label_sr": "Podrum",
        "image": {
         "file": "divcibare-crtez-1.webp",
         "widths": [
@@ -962,8 +1006,8 @@
        }
       },
       {
-       "label": "Main house, ground floor",
-       "label_sr": "Porodična kuća, prizemlje",
+       "label": "Ground floor",
+       "label_sr": "Prizemlje",
        "image": {
         "file": "divcibare-crtez-2.webp",
         "widths": [
@@ -977,8 +1021,8 @@
        }
       },
       {
-       "label": "Main house, attic",
-       "label_sr": "Porodična kuća, potkrovlje",
+       "label": "Attic",
+       "label_sr": "Potkrovlje",
        "image": {
         "file": "divcibare-crtez-3.webp",
         "widths": [
@@ -992,44 +1036,44 @@
        }
       },
       {
-       "label": "Guest house, ground floor",
-       "label_sr": "Kuća za goste, prizemlje",
+       "label": "Roof structure",
+       "label_sr": "Krovna konstrukcija",
        "image": {
-        "file": "divcibare-crtez-15.webp",
+        "file": "divcibare-crtez-4.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 1647,
-        "full": "divcibare-crtez-15-full.webp",
+        "h": 2708,
+        "full": "divcibare-crtez-4-full.webp",
         "wm": false
        }
       },
       {
-       "label": "Guest house, gallery",
-       "label_sr": "Kuća za goste, galerija",
+       "label": "Roof",
+       "label_sr": "Krov",
        "image": {
-        "file": "divcibare-crtez-16.webp",
+        "file": "divcibare-crtez-5.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 1438,
-        "full": "divcibare-crtez-16-full.webp",
+        "h": 2703,
+        "full": "divcibare-crtez-5-full.webp",
         "wm": false
        }
       }
      ]
     },
     {
-     "title": "Sections",
-     "title_sr": "Preseci",
+     "title": "Main house: sections",
+     "title_sr": "Velika kuća: preseci",
      "items": [
       {
-       "label": "Main house, section 1-1",
-       "label_sr": "Porodična kuća, presek 1-1",
+       "label": "Section 1-1",
+       "label_sr": "Presek 1-1",
        "image": {
         "file": "divcibare-crtez-6.webp",
         "widths": [
@@ -1043,8 +1087,8 @@
        }
       },
       {
-       "label": "Main house, section 2-2",
-       "label_sr": "Porodična kuća, presek 2-2",
+       "label": "Section 2-2",
+       "label_sr": "Presek 2-2",
        "image": {
         "file": "divcibare-crtez-7.webp",
         "widths": [
@@ -1058,8 +1102,8 @@
        }
       },
       {
-       "label": "Main house, section 3-3",
-       "label_sr": "Porodična kuća, presek 3-3",
+       "label": "Section 3-3",
+       "label_sr": "Presek 3-3",
        "image": {
         "file": "divcibare-crtez-8.webp",
         "widths": [
@@ -1073,8 +1117,8 @@
        }
       },
       {
-       "label": "Main house, section 4-4",
-       "label_sr": "Porodična kuća, presek 4-4",
+       "label": "Section 4-4",
+       "label_sr": "Presek 4-4",
        "image": {
         "file": "divcibare-crtez-9.webp",
         "widths": [
@@ -1088,8 +1132,8 @@
        }
       },
       {
-       "label": "Main house, section 5-5",
-       "label_sr": "Porodična kuća, presek 5-5",
+       "label": "Section 5-5",
+       "label_sr": "Presek 5-5",
        "image": {
         "file": "divcibare-crtez-10.webp",
         "widths": [
@@ -1101,10 +1145,82 @@
         "full": "divcibare-crtez-10-full.webp",
         "wm": false
        }
+      }
+     ]
+    },
+    {
+     "title": "Guest house: plans",
+     "title_sr": "Kuća za goste: osnove",
+     "items": [
+      {
+       "label": "Ground floor",
+       "label_sr": "Prizemlje",
+       "image": {
+        "file": "divcibare-crtez-15.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1647,
+        "full": "divcibare-crtez-15-full.webp",
+        "wm": false
+       }
       },
       {
-       "label": "Guest house, section 1-1",
-       "label_sr": "Kuća za goste, presek 1-1",
+       "label": "Gallery",
+       "label_sr": "Galerija",
+       "image": {
+        "file": "divcibare-crtez-16.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1438,
+        "full": "divcibare-crtez-16-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Roof structure",
+       "label_sr": "Krovna konstrukcija",
+       "image": {
+        "file": "divcibare-crtez-17.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2866,
+        "full": "divcibare-crtez-17-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Roof",
+       "label_sr": "Krov",
+       "image": {
+        "file": "divcibare-crtez-18.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2866,
+        "full": "divcibare-crtez-18-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    },
+    {
+     "title": "Guest house: sections",
+     "title_sr": "Kuća za goste: preseci",
+     "items": [
+      {
+       "label": "Section 1-1",
+       "label_sr": "Presek 1-1",
        "image": {
         "file": "divcibare-crtez-19.webp",
         "widths": [
@@ -1114,6 +1230,21 @@
         "w": 2400,
         "h": 701,
         "full": "divcibare-crtez-19-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Section 2-2",
+       "label_sr": "Presek 2-2",
+       "image": {
+        "file": "divcibare-crtez-20.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1109,
+        "full": "divcibare-crtez-20-full.webp",
         "wm": false
        }
       }

@@ -332,7 +332,7 @@ function faqLd(items) {
     mainEntity: items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }).replace(/</g, '\\u003c')}</script>`;
 }
 
-function gallery(p, lang, depth) {
+function galleryFigs(p, lang, depth) {
   const n = (p.gallery || []).length;
   return (p.gallery || []).map((g, i) => {
     const ar = g.w && g.h ? ` style="--ar:${g.w} / ${g.h}"` : '';
@@ -354,7 +354,33 @@ function gallery(p, lang, depth) {
       `<button type="button" data-show="render" aria-pressed="true">Render</button>` +
       `<button type="button" data-show="plan" aria-pressed="false">${esc(label)}</button>` +
       `<button type="button" data-show="zoom" aria-label="${sr ? 'Ceo ekran' : 'Full screen'}">⤢</button></span></figure>`;
-  }).join('');
+  });
+}
+
+// galerija: obicna lista slika, ili (kad slika ima part/room) podeljena na delove (npr. Objekat / Enterijer) i prostorije.
+// Prva slika dela ili prostorije nosi part/part_sr, room/room_sr; sve do sledeceg naslova pripada njoj. Svaka grupa je svoja mreza,
+// pa pravilo "svaka treca slika preko cele sirine" krece ispocetka u svakoj prostoriji (css .pgal__set).
+function gallery(p, lang, depth) {
+  const figs = galleryFigs(p, lang, depth), items = p.gallery || [], sr = lang === 'sr';
+  if (!items.some((g) => g.part || g.room)) return figs.join('');
+  const groups = [];
+  items.forEach((g, i) => {
+    const part = (sr && g.part_sr) || g.part, room = (sr && g.room_sr) || g.room;
+    if (!groups.length || part || room) groups.push({ part: part || '', room: room || '', figs: [] });
+    groups[groups.length - 1].figs.push(figs[i]);
+  });
+  let out = '', pi = 0, ri = 0, nav = '';
+  groups.forEach((g) => {
+    if (g.part) { pi++; nav += `<a href="#part-${pi}" class="pgal__navp">${esc(g.part)}</a>`; }
+    if (g.room) { ri++; nav += `<a href="#room-${ri}">${esc(g.room)}</a>`; }
+  });
+  pi = 0; ri = 0;
+  groups.forEach((g) => {
+    if (g.part) { pi++; out += `<h2 class="pgal__part display" id="part-${pi}">${esc(g.part)}</h2>`; }
+    if (g.room) { ri++; out += `<h3 class="pgal__room label" id="room-${ri}">${esc(g.room)}</h3>`; }
+    out += `<div class="pgal__set">${g.figs.join('')}</div>`;
+  });
+  return `<nav class="pgal__nav label" aria-label="${sr ? 'Sadržaj galerije' : 'Gallery contents'}">${nav}</nav>${out}`;
 }
 
 // crtezi uz projekat (osnove po nivoima, preseci): p.drawings = [{title, title_sr, items:[{label, label_sr, image}]}].

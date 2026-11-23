@@ -14,7 +14,7 @@
     "5. Interior Architecture & Custom Detailing",
     "7. Architectural Visualisation"
    ],
-   "description": "<p>An event center in the middle of an orchard in Trnava, near Topola. When there is no event, it works as a restaurant, and two small guest houses beside it let guests stay overnight. The design is entirely by QBCARCHITECTS.</p><p>The project started from the orchard, not from a building type. We studied how guests arrive, where they wait, where they want a view of the trees and where a celebration needs to spill outside. The hall is laid out around those patterns: one open space without unnecessary partitions, large glazed walls towards the orchard, and a cantilevered terrace that carries the event out over the grass.</p><p>The building is in the permit stage.</p>",
+   "description": "<p>An event center in the middle of an orchard in Trnava, near Topola. When there is no event, it works as a restaurant, and two small guest houses let guests stay overnight. The design is entirely by QBCARCHITECTS.</p><p>The plot runs along an internal road and falls about three metres towards a lake. We laid the building out as one line along the road: parking and arrival at the upper end, then the pool, services and kitchen, and the hall with its terrace at the lake end, where the view and the quiet are. The guest houses stand apart, on the higher part of the plot, away from the music.</p><p>Where the ground drops, the hall rises a full storey above the terrain, with the basement beneath it. Along the line the roofs change height, from 7.05 to 3.50 metres: a pitched hall in dark metal and a concrete box, joined by a low glazed link. The building permit is in progress.</p>",
    "cover": {
     "file": "1a137178ecc3c2c3c_Trnava-5.webp",
     "widths": [
@@ -216,7 +216,7 @@
    "type": "Event venue and restaurant",
    "sr": {
     "type": "Centar za događaje i restoran",
-    "description": "<p>Centar za događaje usred voćnjaka u Trnavi kod Topole. Kada nema događaja, radi kao restoran, a dve male kuće pored njega omogućavaju gostima da prenoće. Projekat je u celosti delo studija QBCARCHITECTS.</p><p>Projekat je počeo od voćnjaka, a ne od tipa objekta. Proučavali smo kako gosti dolaze, gde čekaju, odakle žele pogled na stabla i gde proslava treba da se prelije napolje. Sala je raspoređena prema tim paternima: jedan otvoren prostor bez nepotrebnih pregrada, velike staklene površine prema voćnjaku i konzolna terasa koja događaj iznosi iznad travnjaka.</p><p>Objekat je u postupku dobijanja građevinske dozvole.</p>",
+    "description": "<p>Centar za događaje usred voćnjaka u Trnavi kod Topole. Kada nema događaja, radi kao restoran, a dve male kuće omogućavaju gostima da prenoće. Projekat je u celosti delo studija QBCARCHITECTS.</p><p>Parcela se pruža uz interni put i pada oko tri metra prema jezeru. Objekat smo postavili kao jednu liniju uz put: parking i dolazak na gornjem kraju, zatim bazen, servis i kuhinja, a sala sa terasom na kraju prema jezeru, gde su pogled i mir. Kuće za goste stoje odvojeno, na višem delu parcele, dalje od muzike.</p><p>Gde teren pada, sala se diže celu etažu iznad terena, sa podrumom ispod. Duž linije krovovi menjaju visinu, od 7,05 do 3,50 metara: sala pod kosim krovom u tamnom limu i betonska kutija, spojene niskom staklenom vezom. Objekat je u postupku dobijanja građevinske dozvole.</p>",
     "location": "Trnava, Topola, Srbija",
     "status": "U postupku dobijanja građevinske dozvole"
    }
@@ -1078,6 +1078,201 @@
     "status": "Projekat završen, objekat nije izveden"
    },
    "status": "Design completed, not built"
+  },
+  {
+   "slug": "private-villa-bc-3721",
+   "title": "Private Villa BC 3721",
+   "services": [
+    "1. Conceptual & Schematic Design",
+    "2. Design Development & 3D Modeling",
+    "3. Construction Documents & Engineering",
+    "4. Construction Administration & Oversight"
+   ],
+   "year": "2024",
+   "cover": {
+    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1754,
+    "h": 1240,
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
+    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
+    "wm": true,
+    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
+   },
+   "thumb": {
+    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1754,
+    "h": 1240,
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
+    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
+    "wm": true,
+    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
+   },
+   "hero": {
+    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "widths": [
+     500,
+     800,
+     1080,
+     1600
+    ],
+    "w": 1754,
+    "h": 1240,
+    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
+    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
+    "wm": true,
+    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
+   },
+   "description": "<p>A single-storey family house in a rural setting, made of two volumes in the shape of the traditional gabled house. The white rendered wing holds the private rooms, while the dark timber-clad wing holds the living area and opens to a large covered terrace under a deep gable frame lined with wood.</p><p>The two wings meet at a stone-clad entrance, which separates the day and night zones and frames a small courtyard. Simple forms and natural materials make the house feel at home in the landscape while giving it a clearly contemporary character.</p>",
+   "gallery": [
+    {
+     "file": "672a1b66c51068306917e55c_Image5-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66c51068306917e55c_Image5-enhanced (Large)-og.jpg",
+     "full": "672a1b66c51068306917e55c_Image5-enhanced (Large)-full.webp",
+     "wm": true,
+     "plan": {
+      "file": "6afbb104a1b2c3_osnova-bc-3721.jpg",
+      "widths": [
+       500
+      ],
+      "w": 700,
+      "h": 630,
+      "full": "6afbb104a1b2c3_osnova-bc-3721.jpg",
+      "wm": false
+     },
+     "plan_label": "Ground floor"
+    },
+    {
+     "file": "672a1b668cbb8379eb716617_Image9-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-og.jpg",
+     "full": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b6651adb46944e044a7_Image24-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-og.jpg",
+     "full": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-og.jpg",
+     "full": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b66d346501810784814_Image6-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66d346501810784814_Image6-enhanced (Large)-og.jpg",
+     "full": "672a1b66d346501810784814_Image6-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b67de171f51707390db_Image7-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b67de171f51707390db_Image7-enhanced (Large)-og.jpg",
+     "full": "672a1b67de171f51707390db_Image7-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-og.jpg",
+     "full": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b6709da67d01caf7827_Image11-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-og.jpg",
+     "full": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-full.webp",
+     "wm": true
+    },
+    {
+     "file": "672a1b663f1d66fa04335876_Image13-enhanced (Large).webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1920,
+     "h": 1080,
+     "og": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-og.jpg",
+     "full": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-full.webp",
+     "wm": true
+    }
+   ],
+   "type": "Residential, house",
+   "sr": {
+    "type": "Stanovanje, kuća",
+    "description": "<p>Prizemna porodična kuća u ruralnom okruženju, sastavljena od dva volumena u obliku tradicionalne kuće sa dvovodnim krovom. Belo malterisano krilo sadrži privatne prostorije, a tamno krilo obloženo drvetom dnevnu zonu i otvara se ka velikoj natkrivenoj terasi pod dubokim drvenim zabatom.</p><p>Dva krila se susreću na ulazu obloženom kamenom, koji razdvaja dnevnu i noćnu zonu i uokviruje malo dvorište. Jednostavne forme i prirodni materijali čine da kuća pripada pejzažu, a opet ima jasno savremen karakter.</p>",
+    "status": "U izgradnji"
+   },
+   "status": "Under construction"
   },
   {
    "slug": "apartment-pb-23-mb",
@@ -2320,201 +2515,6 @@
     "status": "Izvedeno"
    },
    "status": "Completed"
-  },
-  {
-   "slug": "private-villa-bc-3721",
-   "title": "Private Villa BC 3721",
-   "services": [
-    "1. Conceptual & Schematic Design",
-    "2. Design Development & 3D Modeling",
-    "3. Construction Documents & Engineering",
-    "4. Construction Administration & Oversight"
-   ],
-   "year": "2024",
-   "cover": {
-    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
-    "widths": [
-     500,
-     800,
-     1080,
-     1600
-    ],
-    "w": 1754,
-    "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
-    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
-    "wm": true,
-    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
-   },
-   "thumb": {
-    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
-    "widths": [
-     500,
-     800,
-     1080,
-     1600
-    ],
-    "w": 1754,
-    "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
-    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
-    "wm": true,
-    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
-   },
-   "hero": {
-    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
-    "widths": [
-     500,
-     800,
-     1080,
-     1600
-    ],
-    "w": 1754,
-    "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
-    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
-    "wm": true,
-    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
-   },
-   "description": "<p>A single-storey family house in a rural setting, made of two volumes in the shape of the traditional gabled house. The white rendered wing holds the private rooms, while the dark timber-clad wing holds the living area and opens to a large covered terrace under a deep gable frame lined with wood.</p><p>The two wings meet at a stone-clad entrance, which separates the day and night zones and frames a small courtyard. Simple forms and natural materials make the house feel at home in the landscape while giving it a clearly contemporary character.</p>",
-   "gallery": [
-    {
-     "file": "672a1b66c51068306917e55c_Image5-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66c51068306917e55c_Image5-enhanced (Large)-og.jpg",
-     "full": "672a1b66c51068306917e55c_Image5-enhanced (Large)-full.webp",
-     "wm": true,
-     "plan": {
-      "file": "6afbb104a1b2c3_osnova-bc-3721.jpg",
-      "widths": [
-       500
-      ],
-      "w": 700,
-      "h": 630,
-      "full": "6afbb104a1b2c3_osnova-bc-3721.jpg",
-      "wm": false
-     },
-     "plan_label": "Ground floor"
-    },
-    {
-     "file": "672a1b668cbb8379eb716617_Image9-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-og.jpg",
-     "full": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b6651adb46944e044a7_Image24-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-og.jpg",
-     "full": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-og.jpg",
-     "full": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b66d346501810784814_Image6-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66d346501810784814_Image6-enhanced (Large)-og.jpg",
-     "full": "672a1b66d346501810784814_Image6-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b67de171f51707390db_Image7-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b67de171f51707390db_Image7-enhanced (Large)-og.jpg",
-     "full": "672a1b67de171f51707390db_Image7-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-og.jpg",
-     "full": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b6709da67d01caf7827_Image11-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-og.jpg",
-     "full": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b663f1d66fa04335876_Image13-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-og.jpg",
-     "full": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-full.webp",
-     "wm": true
-    }
-   ],
-   "type": "Residential, house",
-   "sr": {
-    "type": "Stanovanje, kuća",
-    "description": "<p>Prizemna porodična kuća u ruralnom okruženju, sastavljena od dva volumena u obliku tradicionalne kuće sa dvovodnim krovom. Belo malterisano krilo sadrži privatne prostorije, a tamno krilo obloženo drvetom dnevnu zonu i otvara se ka velikoj natkrivenoj terasi pod dubokim drvenim zabatom.</p><p>Dva krila se susreću na ulazu obloženom kamenom, koji razdvaja dnevnu i noćnu zonu i uokviruje malo dvorište. Jednostavne forme i prirodni materijali čine da kuća pripada pejzažu, a opet ima jasno savremen karakter.</p>",
-    "status": "U izgradnji"
-   },
-   "status": "Under construction"
   },
   {
    "slug": "belgrade-waterfront-apartment-2-b-64",

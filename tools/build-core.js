@@ -46,11 +46,13 @@ const fingerprint = (...texts) => {
 // Ostale stranice (o nama, usluge, kontakt, privatnost) se grade samo lokalno, sa opcijom all.
 export const STATIC_SOURCES = [
   'src/pages/about.html',
+  'src/pages/method.html',
   'src/pages/services.html',
   'src/pages/contact.html',
   'src/pages/privacy-policy.html',
   'src/pages/404.html',
   'src/pages/sr/about.html',
+  'src/pages/sr/method.html',
   'src/pages/sr/services.html',
   'src/pages/sr/contact.html',
   'src/pages/sr/privacy-policy.html',
@@ -61,6 +63,9 @@ const STATIC_PAGES = [
   { out: 'about.html', src: 'about', key: 'about',
     en: ['About Us | QBCARCHITECTS, Architecture Studio in Belgrade', 'Founded in 2010 by architects Slavoljub and Vladica Ljubić. A Belgrade studio where every project starts with a pattern study and is resolved in a precise 3D model.'],
     sr: ['O nama | QBCARCHITECTS, arhitektonski studio u Beogradu', 'Osnovali su ga 2010. arhitekte Slavoljub i Vladica Ljubić. Beogradski studio u kome svaki projekat počinje od paterna i razrađuje se u preciznom 3D modelu.'] },
+  { out: 'method.html', src: 'method', key: 'method',
+    en: ['Method: Patterns Before Form | QBCARCHITECTS', 'How QBCARCHITECTS designs: a pattern study of the site and the brief before any form, shown step by step on the Event Center in Trnava.'],
+    sr: ['Metod: paterni pre forme | QBCARCHITECTS', 'Kako projektuje QBCARCHITECTS: paterni lokacije i zadatka pre forme, korak po korak na primeru centra za događaje u Trnavi.'] },
   { out: 'services.html', src: 'services', key: 'services',
     en: ['Architecture & Interior Design Services in Belgrade | QBCARCHITECTS', 'Architecture, interior design and visualisation by QBCARCHITECTS, Belgrade: pattern-based concept, 3D design development, permit documentation and architectural supervision.'],
     sr: ['Usluge arhitekture i dizajna enterijera u Beogradu | QBCARCHITECTS', 'Arhitektura, dizajn enterijera i vizualizacija, QBCARCHITECTS, Beograd: koncept zasnovan na paternima, razrada u 3D modelu, IDR, PGD i PZI, arhitektonski nadzor.'] },
@@ -202,7 +207,7 @@ const ogUrl = (im) => 'https://www.qbc.rs/' + (im.og ? `images/${encFile(im.og)}
 // lastmod samo kada je datum stvarno poznat (datum dodavanja projekta); inace ga izostavljamo.
 // Svaka adresa ima i alternativu na drugom jeziku (hreflang), kako trazilice povezuju en i sr.
 function sitemap(projects) {
-  const pages = ['index.html', 'our-work.html', 'about.html', 'services.html', 'contact.html', 'privacy-policy.html']
+  const pages = ['index.html', 'our-work.html', 'method.html', 'about.html', 'services.html', 'contact.html', 'privacy-policy.html']
     .map((u) => [u, '']).concat(projects.map((p) => [`work/${p.slug}.html`, /^\d{4}-\d{2}-\d{2}$/.test(p.added || '') ? p.added : '']));
   const url = (lang, u) => 'https://www.qbc.rs/' + (u === 'index.html' ? PRE[lang] : PRE[lang] + u);
   const rows = [];
@@ -238,9 +243,14 @@ const ratio = (im) => (im && im.w && im.h ? Math.min(2.4, Math.max(0.6, im.w / i
 const altOf = (p, lang) => [p.title, tr(p, 'location', lang)].filter(Boolean).join(', ');
 const dataQ = (p, lang) => esc([p.title, p.year, tr(p, 'location', lang), tr(p, 'type', lang), ...(p.services || []).map((x) => svcName(x, lang))].filter(Boolean).join(' ').toLowerCase());
 
+// filteri na listi radova: vrsta (arhitektura / enterijer) i stanje (izvedeno / u izgradnji / projekat), iz engleskih polja
+const catOf = (p) => (/interior/i.test(p.type || '') ? 'int' : 'arch');
+const stOf = (p) => { const s = String(p.status || '').toLowerCase(); return s.startsWith('completed') ? 'built' : s.includes('under construction') ? 'build' : 'design'; };
+const dataF = (p) => `data-cat="${catOf(p)}" data-st="${stOf(p)}"`;
+
 function worksGrid(projects, lang, base, root) {
   return projects.map((p, i) =>
-    `<a class="wcard" style="--ar:${ratio(cover(p))}" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}">` +
+    `<a class="wcard" style="--ar:${ratio(cover(p))}" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}" ${dataF(p)}>` +
     `<div class="frame" data-ip>${img(cover(p), { root, sizes: '(max-width: 900px) 100vw, 50vw', alt: altOf(p, lang), want: 1600 })}</div>` +
     `<div class="wcard__meta"><h2 class="wcard__title">${esc(p.title)}</h2><span class="label">${esc(p.year)}</span></div>` +
     (tr(p, 'type', lang) ? `<p class="wcard__type">${esc(tr(p, 'type', lang))}</p>` : '') + `</a>`).join('');
@@ -265,7 +275,7 @@ function worksIndex(projects, lang, base, root) {
   return projects.map((p, i) => {
     const first = svcName((p.services || [])[0] || '', lang);
     const more = (p.services || []).length > 1 ? ` +${p.services.length - 1}` : '';
-    return `<a class="windex__row" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}" data-img="${imgUrl(cover(p), root, 800)}">` +
+    return `<a class="windex__row" href="${base}work/${p.slug}.html" data-q="${dataQ(p, lang)}" ${dataF(p)} data-img="${imgUrl(cover(p), root, 800)}">` +
       `<span class="label">${num(i)}</span><span class="windex__title">${esc(p.title)}</span>` +
       `<span class="windex__svc label mute">${esc(first)}${more}</span><span class="windex__year label">${esc(p.year)}</span></a>`;
   }).join('');

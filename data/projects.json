@@ -1752,6 +1752,38 @@
    "status": "Design completed, not built",
    "drawings": [
     {
+     "title": "Concept sketch",
+     "title_sr": "Skica koncepta",
+     "items": [
+      {
+       "label": "Typical floor, long wing",
+       "label_sr": "Tipičan sprat, dugo krilo",
+       "image": {
+        "file": "skica-liman-o1.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1443,
+        "full": "skica-liman-o1-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-liman-o1-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1443,
+        "full": "skica-liman-o1-sr-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    },
+    {
      "title": "Plans",
      "title_sr": "Osnove",
      "items": [

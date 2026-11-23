@@ -802,30 +802,7 @@
      "h": 2160,
      "og": "6aa2849c5c8798acaa9f90fa_Image28-og.jpg",
      "full": "6aa2849c5c8798acaa9f90fa_Image28-full.webp",
-     "wm": true,
-     "plan": {
-      "file": "skica-div-g37.webp",
-      "widths": [
-       800,
-       1600
-      ],
-      "w": 2400,
-      "h": 1526,
-      "full": "skica-div-g37-full.webp",
-      "wm": false
-     },
-     "plan_label": "Plan",
-     "plan_sr": {
-      "file": "skica-div-g37-sr.webp",
-      "widths": [
-       800,
-       1600
-      ],
-      "w": 2400,
-      "h": 1526,
-      "full": "skica-div-g37-sr-full.webp",
-      "wm": false
-     }
+     "wm": true
     },
     {
      "file": "6aa2849d6100db41fc671a38_Image27_000.webp",
@@ -961,7 +938,30 @@
      "h": 2160,
      "og": "6aa2849def8e3ac275e76443_Image79-og.jpg",
      "full": "6aa2849def8e3ac275e76443_Image79-full.webp",
-     "wm": true
+     "wm": true,
+     "plan": {
+      "file": "skica-div-g37.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1526,
+      "full": "skica-div-g37-full.webp",
+      "wm": false
+     },
+     "plan_sr": {
+      "file": "skica-div-g37-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1526,
+      "full": "skica-div-g37-sr-full.webp",
+      "wm": false
+     },
+     "plan_label": "Plan"
     },
     {
      "file": "6aa2849d5bad1f633cb71d29_Image77.webp",

@@ -359,6 +359,17 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 .pnext__title { font-weight: 300; font-size: clamp(2rem, 4.4vw, 4.4rem); line-height: 1.04; letter-spacing: -.035em; transition: color .4s; }
 .pnext:hover .pnext__title { color: var(--accent); }
 
+/* crtezi projekta: red dugmadi (nivoi, preseci) i jedan crtez na papiru */
+.pdraw { margin-top: clamp(2.5rem, 6vw, 5rem); }
+.pdraw__head { display: flex; flex-wrap: wrap; gap: .8rem 2rem; align-items: baseline; justify-content: space-between; margin-bottom: 1rem; }
+.pdraw__tabs { display: flex; flex-wrap: wrap; gap: .4rem; }
+.pdraw__tabs button { padding: .55em 1em; border: 1px solid var(--line, currentColor); border-radius: 999px; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; cursor: pointer; transition: background .3s, color .3s; }
+.pdraw__tabs button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.pdraw__tabs button:focus-visible { outline: 1px solid currentColor; outline-offset: 2px; }
+.pdraw__stage { background: #f7f5f0; padding: clamp(.8rem, 3vw, 2.5rem); display: grid; place-items: center; min-height: 40vh; }
+.pdraw__fig { margin: 0; width: 100%; }
+.pdraw__fig img { display: block; width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
+
 /* 8. o nama ----------------------------------------------------------------- */
 .ahero { padding: clamp(140px, 22vh, 240px) var(--pad) clamp(36px, 6vh, 72px); }
 .ahero__sub { margin-top: clamp(24px, 4vh, 48px); display: flex; justify-content: space-between; gap: 2rem; align-items: flex-end; flex-wrap: wrap; }

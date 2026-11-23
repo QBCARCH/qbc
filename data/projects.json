@@ -1780,6 +1780,32 @@
         "full": "skica-liman-o1-sr-full.webp",
         "wm": false
        }
+      },
+      {
+       "label": "Typical floor, angled wing",
+       "label_sr": "Tipičan sprat, krilo pod uglom",
+       "image": {
+        "file": "skica-liman-o2.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2550,
+        "full": "skica-liman-o2-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-liman-o2-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2550,
+        "full": "skica-liman-o2-sr-full.webp",
+        "wm": false
+       }
       }
      ]
     },

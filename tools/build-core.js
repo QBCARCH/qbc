@@ -343,7 +343,7 @@ function gallery(p, lang, depth) {
     if (!g.plan) return `<figure data-full="${full}">${render}</figure>`;
     // osnova iza rendera: crtez na papiru, pokazivac ga otkriva, dodir ili dugme prebacuje (css .pfig, js initGallery)
     const sr = lang === 'sr';
-    const label = g.plan_label || (sr ? 'Osnova' : 'Plan');
+    const label = (sr && g.plan_label_sr) || g.plan_label || (sr ? 'Osnova' : 'Plan');
     const planFull = g.plan.full ? `${depth}images/${encFile(g.plan.full)}` : imgUrl(g.plan, depth, 2000);
     const planAlt = sr ? `${altOf(p, lang)}, ${label.toLowerCase()}` : `${altOf(p, lang)}, ${label.toLowerCase()}`;
     return `<figure class="pfig" data-full="${full}" data-plan-full="${planFull}" data-plan-alt="${esc(planAlt)}">${render}` +

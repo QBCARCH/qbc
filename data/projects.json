@@ -57,6 +57,31 @@
    },
    "gallery": [
     {
+     "file": "1a13717f690306a34_Trnava-4.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1366,
+     "h": 768,
+     "og": "1a13717f690306a34_Trnava-4-og.jpg",
+     "full": "1a13717f690306a34_Trnava-4-full.webp",
+     "wm": true,
+     "plan": {
+      "file": "osnova-trnava.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 576,
+      "full": "osnova-trnava-full.webp",
+      "wm": false
+     },
+     "plan_label": "Plan"
+    },
+    {
      "file": "1a13717eab7f3df89_Trnava-1.webp",
      "widths": [
       500,
@@ -94,31 +119,6 @@
      "og": "1a13717f6640d0ef4_Trnava-3-og.jpg",
      "full": "1a13717f6640d0ef4_Trnava-3-full.webp",
      "wm": true
-    },
-    {
-     "file": "1a13717f690306a34_Trnava-4.webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1366,
-     "h": 768,
-     "og": "1a13717f690306a34_Trnava-4-og.jpg",
-     "full": "1a13717f690306a34_Trnava-4-full.webp",
-     "wm": true,
-     "plan": {
-      "file": "osnova-trnava.webp",
-      "widths": [
-       800,
-       1600
-      ],
-      "w": 2400,
-      "h": 576,
-      "full": "osnova-trnava-full.webp",
-      "wm": false
-     },
-     "plan_label": "Plan"
     },
     {
      "file": "1a13717f6a78cb17a_Trnava-5.webp",
@@ -300,17 +300,18 @@
      "wm": true,
      "sketch": "6aa293afab9b9e93867394a1_1 - 1-sketch.json",
      "plan": {
-      "file": "osnova-koracica.webp",
+      "file": "osnova-koracica-kuca1.webp",
       "widths": [
        800,
        1600
       ],
       "w": 2400,
-      "h": 2319,
-      "full": "osnova-koracica-full.webp",
+      "h": 972,
+      "full": "osnova-koracica-kuca1-full.webp",
       "wm": false
      },
-     "plan_label": "Plan"
+     "plan_label": "House 1",
+     "plan_label_sr": "Kuća 1"
     },
     {
      "file": "6aa293c23696e0bf733acb88_1 - 2.webp",
@@ -349,7 +350,20 @@
      "h": 961,
      "og": "6aa28ef657107ef3884e9da8_2 - 1-og.jpg",
      "full": "6aa28ef657107ef3884e9da8_2 - 1-full.webp",
-     "wm": true
+     "wm": true,
+     "plan": {
+      "file": "osnova-koracica-kuca2.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 1781,
+      "h": 1227,
+      "full": "osnova-koracica-kuca2-full.webp",
+      "wm": false
+     },
+     "plan_label": "House 2",
+     "plan_label_sr": "Kuća 2"
     },
     {
      "file": "6aa28f052c30d80d8e512281_2 - 2.webp",
@@ -428,7 +442,45 @@
     "description": "<p>Dve samostalno projektovane prizemne vile stoje u mirnom pejzažu Koraćice, u podnožju Kosmaja. Postavljene su tako da prate blago nagnut teren i otvaraju se ka pogledu na okolnu šumu. Objekti zauzimaju nešto više od 20% parcele, pa zelenilo ostaje glavna odlika imanja.</p><p>Obe kuće imaju čiste linije, ravne krovove i toplu paletu materijala: dekorativni silikatni malter u kombinaciji sa ventilisanom fasadom od sibirskog ariša. Unutra su rasporedi otvoreni i svetli, sa dnevnim zonama pod tri metra visokim plafonima koje se otvaraju ka velikim terasama i privatnim bazenima.</p><p>Kuće su građene kao montažni sistem od drvene konstrukcije, sa dobrim toplotnim i zvučnim performansama, podnim grejanjem i instalacionim prostorima u suterenu.</p>",
     "location": "Koraćica, Kosmaj, Srbija",
     "status": "Građevinska dozvola pribavljena, čeka se početak radova"
-   }
+   },
+   "drawings": [
+    {
+     "title": "Plans",
+     "title_sr": "Osnove",
+     "items": [
+      {
+       "label": "House 1, ground floor",
+       "label_sr": "Kuća 1, prizemlje",
+       "image": {
+        "file": "osnova-koracica-kuca1.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 972,
+        "full": "osnova-koracica-kuca1-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "House 2, ground floor",
+       "label_sr": "Kuća 2, prizemlje",
+       "image": {
+        "file": "osnova-koracica-kuca2.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 1781,
+        "h": 1227,
+        "full": "osnova-koracica-kuca2-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    }
+   ]
   },
   {
    "slug": "villas-divcibare-srb",
@@ -512,7 +564,19 @@
      "h": 2160,
      "og": "6aa2849bbd2b340604672c09_Image69-og.jpg",
      "full": "6aa2849bbd2b340604672c09_Image69-full.webp",
-     "wm": true
+     "wm": true,
+     "plan": {
+      "file": "divcibare-crtez-2.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 2170,
+      "full": "divcibare-crtez-2-full.webp",
+      "wm": false
+     },
+     "plan_label": "Plan"
     },
     {
      "file": "6aa2849bf09a69f4dcc80c30_Image70.webp",
@@ -683,7 +747,19 @@
      "h": 2160,
      "og": "6aa2849c5c8798acaa9f90fa_Image28-og.jpg",
      "full": "6aa2849c5c8798acaa9f90fa_Image28-full.webp",
-     "wm": true
+     "wm": true,
+     "plan": {
+      "file": "divcibare-crtez-15.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1647,
+      "full": "divcibare-crtez-15-full.webp",
+      "wm": false
+     },
+     "plan_label": "Plan"
     },
     {
      "file": "6aa2849d6100db41fc671a38_Image27_000.webp",
@@ -864,7 +940,186 @@
     "description": "<p>Na planinskoj parceli na Divčibarama, porodična kuća i kuća za goste nude savremeno tumačenje tradicionalnog planinskog utočišta. Sibirski ariš i čelik u boji antracita daju objektima toplinu i oštru savremenu siluetu, i mirno ih smeštaju među okolna stabla.</p><p>Glavna kuća je organizovana oko dnevne svetlosti i otvorenog prostora: plafoni visine tri metra, dnevna zona u središtu sa kaminom i spa i velnes zona na nižem nivou koja se otvara ka spoljnoj terasi. Kuća za goste sledi isti pristup, sa otvorenom osnovom, sopstvenom saunom i galerijom za spavanje.</p><p>Oba objekta su dobro izolovana, sa podnim grejanjem na toplotne pumpe i integrisanim sistemom pametne kuće.</p>",
     "location": "Divčibare, Srbija",
     "status": "U izgradnji"
-   }
+   },
+   "drawings": [
+    {
+     "title": "Plans",
+     "title_sr": "Osnove",
+     "items": [
+      {
+       "label": "Main house, basement",
+       "label_sr": "Porodična kuća, podrum",
+       "image": {
+        "file": "divcibare-crtez-1.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1952,
+        "full": "divcibare-crtez-1-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Main house, ground floor",
+       "label_sr": "Porodična kuća, prizemlje",
+       "image": {
+        "file": "divcibare-crtez-2.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2170,
+        "full": "divcibare-crtez-2-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Main house, attic",
+       "label_sr": "Porodična kuća, potkrovlje",
+       "image": {
+        "file": "divcibare-crtez-3.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2979,
+        "full": "divcibare-crtez-3-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Guest house, ground floor",
+       "label_sr": "Kuća za goste, prizemlje",
+       "image": {
+        "file": "divcibare-crtez-15.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1647,
+        "full": "divcibare-crtez-15-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Guest house, gallery",
+       "label_sr": "Kuća za goste, galerija",
+       "image": {
+        "file": "divcibare-crtez-16.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1438,
+        "full": "divcibare-crtez-16-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    },
+    {
+     "title": "Sections",
+     "title_sr": "Preseci",
+     "items": [
+      {
+       "label": "Main house, section 1-1",
+       "label_sr": "Porodična kuća, presek 1-1",
+       "image": {
+        "file": "divcibare-crtez-6.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1856,
+        "full": "divcibare-crtez-6-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Main house, section 2-2",
+       "label_sr": "Porodična kuća, presek 2-2",
+       "image": {
+        "file": "divcibare-crtez-7.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 824,
+        "full": "divcibare-crtez-7-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Main house, section 3-3",
+       "label_sr": "Porodična kuća, presek 3-3",
+       "image": {
+        "file": "divcibare-crtez-8.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1256,
+        "full": "divcibare-crtez-8-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Main house, section 4-4",
+       "label_sr": "Porodična kuća, presek 4-4",
+       "image": {
+        "file": "divcibare-crtez-9.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1995,
+        "full": "divcibare-crtez-9-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Main house, section 5-5",
+       "label_sr": "Porodična kuća, presek 5-5",
+       "image": {
+        "file": "divcibare-crtez-10.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 3713,
+        "full": "divcibare-crtez-10-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Guest house, section 1-1",
+       "label_sr": "Kuća za goste, presek 1-1",
+       "image": {
+        "file": "divcibare-crtez-19.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 701,
+        "full": "divcibare-crtez-19-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    }
+   ]
   },
   {
    "slug": "liman-2-ulcinj-mne",

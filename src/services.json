@@ -1,45 +1,45 @@
 {
- "intro": "We provide architectural, interior design and visualisation services, from the first concept to the finished building. One studio carries the project through design, BIM coordination, permits and supervision, so nothing gets lost between phases. Outside Serbia we work together with your local architect of record.",
+ "intro": "We provide architecture, interior design and visualisation, from the first concept to supervision on site. One studio carries the project through design, permits and construction, so nothing gets lost between phases. Outside Serbia we work together with your local architect of record.",
  "phases": [
   {
    "title": "Conceptual & Schematic Design",
-   "text": "We turn your brief into a clear spatial strategy. This phase covers site analysis, a review of planning conditions and the first architectural concepts, with a focus on layout, massing and the relationships between spaces.",
+   "text": "We turn your brief into a clear spatial strategy, starting with a pattern study of the site and of the way the building will be used. This phase covers site analysis, the planning conditions and the first concepts: layout, massing and the relationships between spaces.",
    "items": [
     {
-     "title": "Site Context Analysis",
-     "text": "Evaluating topography, environmental conditions, and zoning regulations to inform the optimal design strategy."
+     "title": "Site Analysis",
+     "text": "Topography, orientation, views, access and the planning rules that apply to the plot."
     },
     {
-     "title": "Spatial Programming",
-     "text": "Defining functional requirements and establishing highly efficient layouts for all project spaces."
+     "title": "Pattern Study",
+     "text": "The recurring relationships of light, movement, privacy and gathering that the design has to answer."
     },
     {
-     "title": "Massing and Form Generation",
-     "text": "Developing early 3D models to explore volumetric relationships and establish the architectural identity."
+     "title": "Massing and Form",
+     "text": "Early 3D models that test the volumes on the site, and the form that follows from the patterns."
     }
    ]
   },
   {
-   "title": "Design Development & BIM Modeling",
-   "text": "We refine the design in a Building Information Model. Materials are selected, structure and building services are coordinated in the model, and clashes are resolved on screen before they can reach the construction site.",
+   "title": "Design Development & 3D Modeling",
+   "text": "We develop the design in a precise 3D model in Rhino. Materials are chosen, and structure and building services are coordinated with the engineers, so junctions are resolved in the model before they reach the site.",
    "items": [
     {
-     "title": "Advanced 3D Integration",
-     "text": "Utilizing intelligent Building Information Modeling (BIM) to coordinate architecture, structure, and MEP systems."
+     "title": "3D Model as Reference",
+     "text": "Every dimension is checked in 3D, and plans, sections and elevations are taken from the model."
+    },
+    {
+     "title": "Coordination with Engineers",
+     "text": "Structure and building services are checked against the architecture at each step."
     },
     {
      "title": "Material Specification",
-     "text": "Selecting finishes and systems that meet aesthetic goals while satisfying structural and budgetary constraints."
-    },
-    {
-     "title": "Proactive Clash Detection",
-     "text": "Identifying and resolving spatial conflicts between engineering disciplines before construction begins."
+     "text": "Finishes and systems chosen for how they look, what they cost and how they will be built."
     }
    ]
   },
   {
    "title": "Architectural Visualisation",
-   "text": "Photorealistic images, from first massing studies to final material choices. Renders are built from the same BIM model as the drawings, so what you approve is what gets documented.",
+   "text": "Photorealistic images, from the first massing studies to the final choice of materials. Renders are made from the same 3D model as the drawings, so what you approve is what gets documented.",
    "items": [
     {
      "title": "Concept Visuals",
@@ -51,25 +51,25 @@
     },
     {
      "title": "Presentation Imagery",
-     "text": "High-resolution images for investors, planning submissions and sales."
+     "text": "High-resolution images for investors, permit submissions and sales."
     }
    ]
   },
   {
    "title": "Construction Documents & Engineering",
-   "text": "We produce detailed construction documentation: drawings, specifications and schedules that contractors can price and build from. Careful detailing means more accurate bids, fewer variations on site and documents that meet the applicable building codes.",
+   "text": "Drawings, specifications and schedules that contractors can price and build from. Careful detailing means more accurate bids, fewer changes on site and documents that meet the applicable building codes.",
    "items": [
     {
-     "title": "Detailed Arch. Drawings",
-     "text": "Producing precise floor plans, sections, and elevations required for accurate contractor bidding."
+     "title": "Architectural Drawings",
+     "text": "Plans, sections and elevations with the dimensions and notes a contractor needs to price the work."
     },
     {
-     "title": "Custom Construction Details",
-     "text": "Developing specialized technical drawings for complex structural junctions, thermal envelopes, and waterproofing."
+     "title": "Construction Details",
+     "text": "Drawings of junctions, the thermal envelope and waterproofing, where most problems on site begin."
     },
     {
      "title": "Permit Documentation",
-     "text": "Preparing documentation that meets the applicable building codes and supports the permit process, in Serbia through the CEOP e-permit system."
+     "text": "Documents that meet the applicable codes. In Serbia: IDR, PGD and PZI, submitted through the CEOP e-permit system."
     }
    ]
   },
@@ -83,47 +83,47 @@
     },
     {
      "title": "Submittal Review",
-     "text": "Reviewing shop drawings and material samples against the specification."
+     "text": "Shop drawings and material samples checked against the specification."
     },
     {
      "title": "Design Queries and Changes",
-     "text": "Answering contractors' technical questions and assessing proposed changes against the approved design."
+     "text": "Answers to contractors' technical questions, and proposed changes assessed against the approved design."
     }
    ]
   },
   {
    "title": "Interior Architecture & Custom Detailing",
-   "text": "We carry the architectural idea into the interior: custom joinery, lighting and the selection of materials, so that the building and its interior read as one.",
+   "text": "We carry the architectural idea into the interior: custom joinery, lighting and the choice of materials, so that the building and its interior read as one.",
    "items": [
     {
-     "title": "Bespoke Millwork Design",
-     "text": "Designing custom cabinetry and built-in elements tailored to the geometry of each space."
+     "title": "Custom Joinery",
+     "text": "Cabinetry and built-in elements drawn to the geometry of each space."
     },
     {
      "title": "Lighting Design",
-     "text": "Integrated lighting plans that support how each space is used."
+     "text": "Lighting plans that follow how each space is used, by day and at night."
     },
     {
-     "title": "Material Curation",
-     "text": "Selecting interior finishes, fixtures and hardware that follow the architectural idea."
+     "title": "Materials and Hardware",
+     "text": "Interior finishes, fixtures and hardware that follow the architectural idea."
     }
    ]
   },
   {
    "title": "Feasibility Studies & Master Planning",
-   "text": "For large-scale developments, we provide strategic master planning and feasibility analysis. We evaluate site potential, assess regulatory constraints, and develop long-term spatial strategies that maximize land value and guide future phases of development.",
+   "text": "For larger sites we test what can be built before design begins: how much floor area the planning rules allow, how it can be placed on the land and in which order it can be built. Our pattern-based tools let us compare many variants at this stage, with their areas and indices side by side.",
    "items": [
     {
-     "title": "Site Potential Evaluation",
-     "text": "Assessing physical constraints and regulatory frameworks to determine the maximum development capacity of a plot."
+     "title": "Site Capacity",
+     "text": "The maximum buildable area under the planning rules, and the constraints that limit it."
     },
     {
-     "title": "Yield and Density Analysis",
-     "text": "Calculating buildable areas and optimizing spatial distribution to ensure the project is financially viable."
+     "title": "Variants and Density",
+     "text": "Several layouts with their areas and indices, so the investor can compare them by the numbers."
     },
     {
-     "title": "Long-Term Phasing Strategies",
-     "text": "Structuring large-scale developments into logical stages to optimize capital investment and manage risk."
+     "title": "Phasing",
+     "text": "A large development divided into stages that can be financed and built one after another."
     }
    ]
   }

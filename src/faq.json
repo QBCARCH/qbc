@@ -5,6 +5,10 @@
    "a": "Yes. Concept design, interior design and architectural visualisation can be done fully remotely, with video meetings in English. For a building outside Serbia we work together with your local architect of record, who handles the permit in that country. For projects in Serbia we handle the whole process."
   },
   {
+   "q": "What do you mean by patterns?",
+   "a": "Patterns are relationships that repeat in good buildings and places: how light enters, how people arrive, where they gather and where they withdraw, how a building meets the ground. We study them for each site before we draw a form. The method comes from our own research, and we are developing it into our own design software."
+  },
+  {
    "q": "What do you need to start a project?",
    "a": "The location of the plot or the property, any documents you already have for it, a short description of what you need, a rough budget and your target timeline. If you do not have all of it yet, send what you have and we will help you complete the brief."
   },
@@ -29,14 +33,18 @@
    "a": "Yes. Apartments, restaurants, cafes and clinics are a regular part of our work. We design the layout, custom joinery, lighting and materials, and prepare drawings and renders that a contractor can use."
   },
   {
-   "q": "Which software and workflow do you use?",
-   "a": "We work in Autodesk Revit. One BIM model drives the plans, sections, schedules and renders, and it is coordinated with structure and building services so that clashes are found on screen, before construction."
+   "q": "Which software do you use?",
+   "a": "We model in Rhino. Every building is checked in a precise 3D model, the plans, sections and elevations are taken from it and finished as technical drawings, and the renders come from the same model. Alongside that we develop our own pattern-based design tools."
   }
  ],
  "sr": [
   {
    "q": "Da li radite sa klijentima van Srbije?",
    "a": "Da. Idejno rešenje, dizajn enterijera i arhitektonska vizualizacija mogu se raditi potpuno na daljinu, uz video sastanke na engleskom jeziku. Za objekat van Srbije sarađujemo sa vašim lokalnim arhitektom koji vodi dozvolu u toj državi. Za projekte u Srbiji vodimo ceo postupak."
+  },
+  {
+   "q": "Šta podrazumevate pod paternima?",
+   "a": "Paterni su odnosi koji se ponavljaju u dobrim objektima i mestima: kako ulazi svetlo, kako se prilazi, gde se ljudi okupljaju a gde se povlače, kako objekat dodiruje tlo. Za svaku lokaciju ih proučavamo pre nego što nacrtamo formu. Metod potiče iz našeg sopstvenog istraživanja, a od njega razvijamo i sopstveni softver za projektovanje."
   },
   {
    "q": "Šta vam je potrebno da biste počeli projekat?",
@@ -59,12 +67,12 @@
    "a": "Da, na našim projektima. Nakon dobijanja građevinske dozvole klijenti nas mogu angažovati za arhitektonski nadzor: obilaske gradilišta, pregled dokumentacije izvođača i odgovore na tehnička pitanja. Mi smo arhitekte, a ne izvođač, pa ne gradimo."
   },
   {
-   "q": "Da li radite samo enterijere?",
-   "a": "Da, i to. Stanovi, restorani, kafei i klinike redovan su deo našeg rada. Projektujemo raspored, stolariju po meri, osvetljenje i materijale, a pripremamo crteže i vizualizacije koje izvođač može da koristi."
+   "q": "Da li radite i samo enterijer?",
+   "a": "Da. Stanovi, restorani, kafei i klinike redovan su deo našeg rada. Projektujemo raspored, stolariju po meri, osvetljenje i materijale, a pripremamo crteže i vizualizacije po kojima izvođač može da radi."
   },
   {
-   "q": "Koje softvere i način rada koristite?",
-   "a": "Radimo u programu Autodesk Revit. Jedan BIM model daje osnove, preseke, specifikacije i vizualizacije, a usklađen je sa konstrukcijom i instalacijama, pa se kolizije otkrivaju na ekranu, pre izgradnje."
+   "q": "Koje programe koristite?",
+   "a": "Modelujemo u Rhino-u. Svaki objekat proveravamo u preciznom 3D modelu, iz njega uzimamo osnove, preseke i izglede koje dorađujemo kao tehničke crteže, a vizualizacije nastaju iz istog modela. Uz to razvijamo sopstvene alate za projektovanje zasnovano na paternima."
   }
  ]
 }

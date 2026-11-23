@@ -1982,6 +1982,243 @@
    ]
   },
   {
+   "slug": "cafe-frankfurt-ger",
+   "title": "Cafe, Frankfurt am Main",
+   "year": "2024",
+   "services": [
+    "5. Interior Architecture & Custom Detailing",
+    "7. Architectural Visualisation"
+   ],
+   "description": "<p>A narrow cafe in Frankfurt am Main, designed in May 2024 for LM Mitic GmbH. The space is a long room about nine metres deep and just over two metres wide, with a second, wider room behind it and a WC off the side.</p><p>The bar runs along the glazed end. Its front is pink brick, the wall behind it is stainless steel and fluted metal, and the stools are blue. Along the long wall there is an oak bench with steel tables in front of it, so the width of the room is shared between guests and the passage to the bar.</p><p>The renders show the interior. The layout sketch and the notes sketch are drawn over the CAD plan of the room (1:50); the furniture positions in them are a concept reading of the renders.</p>",
+   "cover": {
+    "file": "kafe-frankfurt-bar-front.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 2000,
+    "h": 1125,
+    "og": "kafe-frankfurt-bar-front-og.jpg",
+    "full": "kafe-frankfurt-bar-front-full.webp",
+    "wm": false
+   },
+   "thumb": {
+    "file": "kafe-frankfurt-bar-front.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 2000,
+    "h": 1125,
+    "og": "kafe-frankfurt-bar-front-og.jpg",
+    "full": "kafe-frankfurt-bar-front-full.webp",
+    "wm": false
+   },
+   "hero": {
+    "file": "kafe-frankfurt-bar-front.webp",
+    "widths": [
+     500,
+     800,
+     1080
+    ],
+    "w": 2000,
+    "h": 1125,
+    "og": "kafe-frankfurt-bar-front-og.jpg",
+    "full": "kafe-frankfurt-bar-front-full.webp",
+    "wm": false
+   },
+   "gallery": [
+    {
+     "file": "kafe-frankfurt-bar-front.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 2000,
+     "h": 1125,
+     "og": "kafe-frankfurt-bar-front-og.jpg",
+     "full": "kafe-frankfurt-bar-front-full.webp",
+     "wm": false
+    },
+    {
+     "file": "kafe-frankfurt-bar-long.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 2000,
+     "h": 1125,
+     "og": "kafe-frankfurt-bar-long-og.jpg",
+     "full": "kafe-frankfurt-bar-long-full.webp",
+     "wm": false,
+     "plan": {
+      "file": "skica-kafe-osnova.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 912,
+      "full": "skica-kafe-osnova-full.webp",
+      "wm": false
+     },
+     "plan_sr": {
+      "file": "skica-kafe-osnova-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 912,
+      "full": "skica-kafe-osnova-sr-full.webp",
+      "wm": false
+     },
+     "plan_label": "Layout sketch",
+     "plan_label_sr": "Skica rasporeda"
+    },
+    {
+     "file": "kafe-frankfurt-bar-glass.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 2000,
+     "h": 1125,
+     "og": "kafe-frankfurt-bar-glass-og.jpg",
+     "full": "kafe-frankfurt-bar-glass-full.webp",
+     "wm": false
+    },
+    {
+     "file": "kafe-frankfurt-seating-row.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 2000,
+     "h": 1125,
+     "og": "kafe-frankfurt-seating-row-og.jpg",
+     "full": "kafe-frankfurt-seating-row-full.webp",
+     "wm": false
+    },
+    {
+     "file": "kafe-frankfurt-corridor.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 2000,
+     "h": 1125,
+     "og": "kafe-frankfurt-corridor-og.jpg",
+     "full": "kafe-frankfurt-corridor-full.webp",
+     "wm": false
+    },
+    {
+     "file": "kafe-frankfurt-curtain-niche.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1598,
+     "h": 2000,
+     "og": "kafe-frankfurt-curtain-niche-og.jpg",
+     "full": "kafe-frankfurt-curtain-niche-full.webp",
+     "wm": false
+    },
+    {
+     "file": "kafe-frankfurt-seating-portrait.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1598,
+     "h": 2000,
+     "og": "kafe-frankfurt-seating-portrait-og.jpg",
+     "full": "kafe-frankfurt-seating-portrait-full.webp",
+     "wm": false
+    }
+   ],
+   "drawings": [
+    {
+     "title": "Sketches",
+     "title_sr": "Skice",
+     "items": [
+      {
+       "label": "Layout",
+       "label_sr": "Raspored",
+       "image": {
+        "file": "skica-kafe-osnova.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 912,
+        "full": "skica-kafe-osnova-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-kafe-osnova-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 912,
+        "full": "skica-kafe-osnova-sr-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Materials",
+       "label_sr": "Materijali",
+       "image": {
+        "file": "skica-kafe-beleske.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 843,
+        "full": "skica-kafe-beleske-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-kafe-beleske-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 843,
+        "full": "skica-kafe-beleske-sr-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    }
+   ],
+   "location": "Frankfurt am Main, Germany",
+   "status": "Interior design, May 2024",
+   "credit": "Interior renders, May 2024",
+   "added": "2026-11-23",
+   "type": "Cafe interior",
+   "sr": {
+    "type": "Enterijer kafea",
+    "location": "Frankfurt na Majni, Nemačka",
+    "status": "Enterijer, maj 2024",
+    "description": "<p>Uzani kafe u Frankfurtu na Majni, projektovan u maju 2024. za LM Mitic GmbH. Prostor je dugačka prostorija dubine oko devet metara i širine nešto preko dva, a iza nje je šira prostorija, uz bok je WC.</p><p>Šank ide uz stakleni kraj. Front šanka je od roze cigle, zid iza njega od nerđajućeg čelika i rebrastog lima, a stolice su plave. Duž dugog zida je hrastova klupa sa čeličnim stolovima ispred, pa se širina prostorije deli između gostiju i prolaza do šanka.</p><p>Renderi prikazuju enterijer. Skica rasporeda i skica sa beleškama crtane su preko CAD osnove prostorije (1:50); položaj nameštaja na njima je koncept, čitan sa rendera.</p>"
+   }
+  },
+  {
    "slug": "koroba-restoration-masterplan-png",
    "title": "Koroba Restoration Masterplan",
    "year": "2018",

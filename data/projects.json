@@ -397,13 +397,13 @@
     }
    ],
    "location": "Koraćica, Kosmaj, Serbia",
-   "status": "Under construction",
+   "status": "Building permit issued, construction to start",
    "type": "Residential, villas",
    "sr": {
     "type": "Stanovanje, vile",
     "description": "<p>Dve samostalno projektovane prizemne vile stoje u mirnom pejzažu Koraćice, u podnožju Kosmaja. Postavljene su tako da prate blago nagnut teren i otvaraju se ka pogledu na okolnu šumu. Objekti zauzimaju nešto više od 20% parcele, pa zelenilo ostaje glavna odlika imanja.</p><p>Obe kuće imaju čiste linije, ravne krovove i toplu paletu materijala: dekorativni silikatni malter u kombinaciji sa ventilisanom fasadom od sibirskog ariša. Unutra su rasporedi otvoreni i svetli, sa dnevnim zonama pod tri metra visokim plafonima koje se otvaraju ka velikim terasama i privatnim bazenima.</p><p>Kuće su građene kao montažni sistem od drvene konstrukcije, sa dobrim toplotnim i zvučnim performansama, podnim grejanjem i instalacionim prostorima u suterenu.</p>",
     "location": "Koraćica, Kosmaj, Srbija",
-    "status": "U izgradnji"
+    "status": "Građevinska dozvola pribavljena, čeka se početak radova"
    }
   },
   {
@@ -848,8 +848,7 @@
    "services": [
     "1. Conceptual & Schematic Design",
     "2. Design Development & 3D Modeling",
-    "3. Construction Documents & Engineering",
-    "4. Construction Administration & Oversight"
+    "3. Construction Documents & Engineering"
    ],
    "year": "2019",
    "cover": {
@@ -1075,8 +1074,10 @@
    "sr": {
     "type": "Stambeno-poslovni objekat",
     "description": "<p>Ovaj stambeno-poslovni objekat, iznad plaže Liman 2 u Ulcinju na crnogorskom primorju, prati strmu, šumovitu padinu umesto da se s njom bori. Zapremina je razlomljena u kaskadne terase, pa se stanovi spuštaju niz brdo i svaki dobija sopstvenu otvorenu terasu sa zelenilom i pogledom na more.</p><p>Paleta materijala potiče iz jadranske tradicije: zidovi od lokalnog kamena, beli malterisani volumeni, drvene grilje i ozelenjeni parapeti. Gledan sa plaže, objekat se čita kao deo padine, a ne kao jedinstven blok.</p>",
-    "location": "Ulcinj, Crna Gora"
-   }
+    "location": "Ulcinj, Crna Gora",
+    "status": "Projekat završen, objekat nije izveden"
+   },
+   "status": "Design completed, not built"
   },
   {
    "slug": "apartment-pb-23-mb",
@@ -2510,8 +2511,10 @@
    "type": "Residential, house",
    "sr": {
     "type": "Stanovanje, kuća",
-    "description": "<p>Prizemna porodična kuća u ruralnom okruženju, sastavljena od dva volumena u obliku tradicionalne kuće sa dvovodnim krovom. Belo malterisano krilo sadrži privatne prostorije, a tamno krilo obloženo drvetom dnevnu zonu i otvara se ka velikoj natkrivenoj terasi pod dubokim drvenim zabatom.</p><p>Dva krila se susreću na ulazu obloženom kamenom, koji razdvaja dnevnu i noćnu zonu i uokviruje malo dvorište. Jednostavne forme i prirodni materijali čine da kuća pripada pejzažu, a opet ima jasno savremen karakter.</p>"
-   }
+    "description": "<p>Prizemna porodična kuća u ruralnom okruženju, sastavljena od dva volumena u obliku tradicionalne kuće sa dvovodnim krovom. Belo malterisano krilo sadrži privatne prostorije, a tamno krilo obloženo drvetom dnevnu zonu i otvara se ka velikoj natkrivenoj terasi pod dubokim drvenim zabatom.</p><p>Dva krila se susreću na ulazu obloženom kamenom, koji razdvaja dnevnu i noćnu zonu i uokviruje malo dvorište. Jednostavne forme i prirodni materijali čine da kuća pripada pejzažu, a opet ima jasno savremen karakter.</p>",
+    "status": "U izgradnji"
+   },
+   "status": "Under construction"
   },
   {
    "slug": "belgrade-waterfront-apartment-2-b-64",

@@ -344,10 +344,11 @@ function gallery(p, lang, depth) {
     // osnova iza rendera: crtez na papiru, pokazivac ga otkriva, dodir ili dugme prebacuje (css .pfig, js initGallery)
     const sr = lang === 'sr';
     const label = (sr && g.plan_label_sr) || g.plan_label || (sr ? 'Osnova' : 'Plan');
-    const planFull = g.plan.full ? `${depth}images/${encFile(g.plan.full)}` : imgUrl(g.plan, depth, 2000);
+    const plan = (sr && g.plan_sr) || g.plan;
+    const planFull = plan.full ? `${depth}images/${encFile(plan.full)}` : imgUrl(plan, depth, 2000);
     const planAlt = sr ? `${altOf(p, lang)}, ${label.toLowerCase()}` : `${altOf(p, lang)}, ${label.toLowerCase()}`;
     return `<figure class="pfig" data-full="${full}" data-plan-full="${planFull}" data-plan-alt="${esc(planAlt)}">${render}` +
-      `<div class="pfig__plan" aria-hidden="true">${img(g.plan, { root: depth, sizes: '(max-width: 900px) 100vw, 60vw', alt: '', want: 1600 })}</div>` +
+      `<div class="pfig__plan" aria-hidden="true">${img(plan, { root: depth, sizes: '(max-width: 900px) 100vw, 60vw', alt: '', want: 1600 })}</div>` +
       `<span class="pfig__edge" aria-hidden="true"></span><span class="pfig__cap label">${esc(label)}</span>` +
       `<span class="pfig__tag label" role="group" aria-label="${sr ? 'Prikaz' : 'Show'}">` +
       `<button type="button" data-show="render" aria-pressed="true">Render</button>` +
@@ -364,7 +365,7 @@ function drawingsHtml(p, lang, depth) {
     const title = (sr && d.title_sr) || d.title;
     const lab = (it) => (sr && it.label_sr) || it.label;
     const tabs = d.items.map((it, i) => `<button type="button" data-i="${i}" aria-pressed="${i === 0}">${esc(lab(it))}</button>`).join('');
-    const figs = d.items.map((it, i) => `<figure class="pdraw__fig"${i ? ' hidden' : ''}>${img(it.image, { root: depth, sizes: '(max-width: 900px) 100vw, 80vw', alt: `${altOf(p, lang)}, ${lab(it)}`, want: 1600 })}</figure>`).join('');
+    const figs = d.items.map((it, i) => `<figure class="pdraw__fig"${i ? ' hidden' : ''}>${img((sr && it.image_sr) || it.image, { root: depth, sizes: '(max-width: 900px) 100vw, 80vw', alt: `${altOf(p, lang)}, ${lab(it)}`, want: 1600 })}</figure>`).join('');
     return `<section class="pdraw wrap" data-draw><div class="pdraw__head"><h2 class="label mute">${esc(title)}</h2><div class="pdraw__tabs label" role="group" aria-label="${esc(title)}">${tabs}</div></div><div class="pdraw__stage">${figs}</div></section>`;
   }).join('');
 }

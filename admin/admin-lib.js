@@ -94,7 +94,7 @@ function explainError(status, msg) {
 // ---------------------------------------------------------------- pomocne funkcije za podatke
 export function allImages(p) {
   const g = p.gallery || [];
-  return [p.cover, p.thumb, p.hero, ...g, ...g.map((im) => im && im.plan), ...(p.drawings || []).flatMap((d) => (d.items || []).map((it) => it.image))].filter(Boolean);
+  return [p.cover, p.thumb, p.hero, ...g, ...g.map((im) => im && im.plan), ...g.map((im) => im && im.plan_sr), ...(p.drawings || []).flatMap((d) => (d.items || []).flatMap((it) => [it.image, it.image_sr]))].filter(Boolean);
 }
 export function imagePaths(im) {
   const dot = im.file.lastIndexOf('.');

@@ -300,18 +300,29 @@
      "wm": true,
      "sketch": "6aa293afab9b9e93867394a1_1 - 1-sketch.json",
      "plan": {
-      "file": "osnova-koracica-kuca1.webp",
+      "file": "skica-koracica-kuca1.webp",
       "widths": [
        800,
        1600
       ],
       "w": 2400,
-      "h": 972,
-      "full": "osnova-koracica-kuca1-full.webp",
+      "h": 1280,
+      "full": "skica-koracica-kuca1-full.webp",
       "wm": false
      },
      "plan_label": "House 1",
-     "plan_label_sr": "Kuća 1"
+     "plan_label_sr": "Kuća 1",
+     "plan_sr": {
+      "file": "skica-koracica-kuca1-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1280,
+      "full": "skica-koracica-kuca1-sr-full.webp",
+      "wm": false
+     }
     },
     {
      "file": "6aa293c23696e0bf733acb88_1 - 2.webp",
@@ -352,18 +363,29 @@
      "full": "6aa28ef657107ef3884e9da8_2 - 1-full.webp",
      "wm": true,
      "plan": {
-      "file": "osnova-koracica-kuca2.webp",
+      "file": "skica-koracica-kuca2.webp",
       "widths": [
        800,
        1600
       ],
-      "w": 1781,
-      "h": 1227,
-      "full": "osnova-koracica-kuca2-full.webp",
+      "w": 2400,
+      "h": 1530,
+      "full": "skica-koracica-kuca2-full.webp",
       "wm": false
      },
      "plan_label": "House 2",
-     "plan_label_sr": "Kuća 2"
+     "plan_label_sr": "Kuća 2",
+     "plan_sr": {
+      "file": "skica-koracica-kuca2-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1530,
+      "full": "skica-koracica-kuca2-sr-full.webp",
+      "wm": false
+     }
     },
     {
      "file": "6aa28f052c30d80d8e512281_2 - 2.webp",
@@ -452,14 +474,25 @@
        "label": "House 1, ground floor",
        "label_sr": "Kuća 1, prizemlje",
        "image": {
-        "file": "osnova-koracica-kuca1.webp",
+        "file": "skica-koracica-kuca1.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 972,
-        "full": "osnova-koracica-kuca1-full.webp",
+        "h": 1280,
+        "full": "skica-koracica-kuca1-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-koracica-kuca1-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1280,
+        "full": "skica-koracica-kuca1-sr-full.webp",
         "wm": false
        }
       },
@@ -467,14 +500,25 @@
        "label": "House 2, ground floor",
        "label_sr": "Kuća 2, prizemlje",
        "image": {
-        "file": "osnova-koracica-kuca2.webp",
+        "file": "skica-koracica-kuca2.webp",
         "widths": [
          800,
          1600
         ],
-        "w": 1781,
-        "h": 1227,
-        "full": "osnova-koracica-kuca2-full.webp",
+        "w": 2400,
+        "h": 1530,
+        "full": "skica-koracica-kuca2-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-koracica-kuca2-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1530,
+        "full": "skica-koracica-kuca2-sr-full.webp",
         "wm": false
        }
       }

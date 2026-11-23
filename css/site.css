@@ -367,7 +367,7 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 .pdraw__tabs button { padding: .55em 1em; border: 1px solid var(--line, currentColor); border-radius: 999px; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; cursor: pointer; transition: background .3s, color .3s; }
 .pdraw__tabs button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
 .pdraw__tabs button:focus-visible { outline: 1px solid currentColor; outline-offset: 2px; }
-.pdraw__stage { padding: clamp(.4rem, 2vw, 1.5rem) 0; display: grid; place-items: center; min-height: 40vh; }
+.pdraw__stage { padding: clamp(.4rem, 2vw, 1.5rem) 0; display: grid; place-items: center; }
 .pdraw__fig { margin: 0; width: 100%; }
 .pdraw__fig img { display: block; width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
 
@@ -533,6 +533,12 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 /* 13. responsive -------------------------------------------------------------- */
 @media (max-width: 900px) {
   body { font-size: 1rem; }
+  .pdraw__stage { overflow-x: auto; place-items: start; -webkit-overflow-scrolling: touch; }
+  .pdraw__head { display: block; }
+  .pdraw__tabs { flex-wrap: nowrap; overflow-x: auto; margin: .8rem calc(var(--pad) * -1) 0; padding: 0 var(--pad) .4rem; scrollbar-width: none; }
+  .pdraw__tabs button { white-space: nowrap; flex: none; }
+  .pdraw__fig { width: 780px; max-width: none; }
+  .pdraw__fig img { max-height: none; }
   .nav__links { gap: .8rem; }
   .nav__name { letter-spacing: .18em; }
   .menu { grid-template-columns: 1fr; }

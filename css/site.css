@@ -407,8 +407,9 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
 .mdocs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
 .mdoc { margin: 0; display: grid; gap: .8rem; align-content: start; }
 .mdoc--site { grid-row: span 2; }
-.mdoc__img { background: #fff; padding: clamp(10px, 2vw, 28px); }
-.mdoc__img img { width: 100%; height: auto; display: block; }
+.mdoc .msk__svg { overflow: hidden; }
+.mdoc .msk__svg text { font-size: 16px; }
+.mdoc--site .msk__svg { max-height: 78vh; }
 
 /* 9. usluge ------------------------------------------------------------------ */
 .shero { padding: clamp(140px, 22vh, 240px) var(--pad) clamp(36px, 6vh, 72px); }

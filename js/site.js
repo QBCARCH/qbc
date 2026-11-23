@@ -219,6 +219,19 @@
     D.addEventListener('mouseleave', () => { cur.classList.remove('is-on'); peek.classList.remove('is-on'); });
   };
 
+  /* crtezi projekta (osnove po nivoima, preseci): dugme otkriva svoj kadar, ostali su skriveni.
+     Dugmad imaju aria-pressed; bez JS-a vidi se samo prvi crtez. */
+  const initDrawings = () => {
+    $$('[data-draw]').forEach((g) => {
+      const btns = $$('.pdraw__tabs button', g), figs = $$('.pdraw__fig', g);
+      btns.forEach((b) => b.addEventListener('click', () => {
+        const n = +b.dataset.i;
+        figs.forEach((f, k) => { f.hidden = k !== n; });
+        btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      }));
+    });
+  };
+
   /* galerija projekta: pregled preko celog ekrana i, gde postoji, osnova iza rendera.
      Pokazivac (mis) otkriva crtez kao brisanje; dodir prebacuje render/osnova; dugmad rade svuda.
      U pregledu preko celog ekrana osnova je svoj kadar odmah posle svog rendera. */
@@ -457,7 +470,7 @@
   };
 
   const boot = () => {
-    initCredit(); initSketch(); initReel(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initHeroLink(); initPointer(); initGallery(); initForm(); initCount(); initWords();
+    initCredit(); initSketch(); initReel(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initHeroLink(); initPointer(); initGallery(); initDrawings(); initForm(); initCount(); initWords();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

@@ -356,6 +356,19 @@ function gallery(p, lang, depth) {
   }).join('');
 }
 
+// crtezi uz projekat (osnove po nivoima, preseci): p.drawings = [{title, title_sr, items:[{label, label_sr, image}]}].
+// Svaka grupa je red dugmadi i jedna slika; prikaz menja initDrawings u js/site.js. Skriveni kadrovi se ne ucitavaju dok ih niko ne otvori.
+function drawingsHtml(p, lang, depth) {
+  const sr = lang === 'sr';
+  return (p.drawings || []).filter((d) => (d.items || []).length).map((d, gi) => {
+    const title = (sr && d.title_sr) || d.title;
+    const lab = (it) => (sr && it.label_sr) || it.label;
+    const tabs = d.items.map((it, i) => `<button type="button" data-i="${i}" aria-pressed="${i === 0}">${esc(lab(it))}</button>`).join('');
+    const figs = d.items.map((it, i) => `<figure class="pdraw__fig"${i ? ' hidden' : ''}>${img(it.image, { root: depth, sizes: '(max-width: 900px) 100vw, 80vw', alt: `${altOf(p, lang)}, ${lab(it)}`, want: 1600 })}</figure>`).join('');
+    return `<section class="pdraw wrap" data-draw><div class="pdraw__head"><h2 class="label mute">${esc(title)}</h2><div class="pdraw__tabs label" role="group" aria-label="${esc(title)}">${tabs}</div></div><div class="pdraw__stage">${figs}</div></section>`;
+  }).join('');
+}
+
 function nextProject(p, projects, lang, depth) {
   if (projects.length < 2) return '';
   const nx = projects[(projects.findIndex((x) => x.slug === p.slug) + 1) % projects.length];
@@ -496,7 +509,7 @@ export function buildSite(data, sources, { all = false } = {}) {
         TITLE_TEXT: esc(p.title), YEAR: esc(p.year), FACTS: facts(p, lang),
         LOC_YEAR: esc([tr(p, 'location', lang), p.year].filter(Boolean).join(', ')),
         HERO_IMG: img(p.hero, { root: depth, sizes: '100vw', alt: altOf(p, lang), eager: true, want: 2000 }),
-        GAL_CLASS: p.dark ? ' pgal--dark' : '', DESCRIPTION: cleanRich(tr(p, 'description', lang)), GALLERY: gallery(p, lang, depth),
+        GAL_CLASS: p.dark ? ' pgal--dark' : '', DESCRIPTION: cleanRich(tr(p, 'description', lang)), GALLERY: gallery(p, lang, depth), DRAWINGS: drawingsHtml(p, lang, depth),
         NEXT: nextProject(p, projects, lang, depth), PREV: prevProject(p, projects, lang),
       });
     }

@@ -106,7 +106,19 @@
      "h": 768,
      "og": "1a13717f690306a34_Trnava-4-og.jpg",
      "full": "1a13717f690306a34_Trnava-4-full.webp",
-     "wm": true
+     "wm": true,
+     "plan": {
+      "file": "osnova-trnava.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 576,
+      "full": "osnova-trnava-full.webp",
+      "wm": false
+     },
+     "plan_label": "Plan"
     },
     {
      "file": "1a13717f6a78cb17a_Trnava-5.webp",
@@ -286,7 +298,19 @@
      "og": "6aa293afab9b9e93867394a1_1 - 1-og.jpg",
      "full": "6aa293afab9b9e93867394a1_1 - 1-full.webp",
      "wm": true,
-     "sketch": "6aa293afab9b9e93867394a1_1 - 1-sketch.json"
+     "sketch": "6aa293afab9b9e93867394a1_1 - 1-sketch.json",
+     "plan": {
+      "file": "osnova-koracica.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 2319,
+      "full": "osnova-koracica-full.webp",
+      "wm": false
+     },
+     "plan_label": "Plan"
     },
     {
      "file": "6aa293c23696e0bf733acb88_1 - 2.webp",
@@ -920,7 +944,19 @@
      "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg",
      "full": "673bbefbe7256b1a41b06244_Image2_013-full.webp",
      "wm": true,
-     "sketch": "673bbefbe7256b1a41b06244_Image2_013-sketch.json"
+     "sketch": "673bbefbe7256b1a41b06244_Image2_013-sketch.json",
+     "plan": {
+      "file": "liman-osnova-7.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1157,
+      "full": "liman-osnova-7-full.webp",
+      "wm": false
+     },
+     "plan_label": "Plan"
     },
     {
      "file": "673bbf06d092c27300025bbf_Image2_014.webp",
@@ -1077,7 +1113,201 @@
     "location": "Ulcinj, Crna Gora",
     "status": "Projekat završen, objekat nije izveden"
    },
-   "status": "Design completed, not built"
+   "status": "Design completed, not built",
+   "drawings": [
+    {
+     "title": "Plans",
+     "title_sr": "Osnove",
+     "items": [
+      {
+       "label": "O1 Basement · O2 Basement -2",
+       "label_sr": "O1 Podrum · O2 Podrum -2",
+       "image": {
+        "file": "liman-osnova-5.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1162,
+        "full": "liman-osnova-5-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "O1 Lower ground · O2 Basement -1",
+       "label_sr": "O1 Suteren 1 · O2 Podrum -1",
+       "image": {
+        "file": "liman-osnova-6.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1179,
+        "full": "liman-osnova-6-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "O1 Ground floor · O2 Lower ground 2",
+       "label_sr": "O1 Prizemlje · O2 Suteren 2",
+       "image": {
+        "file": "liman-osnova-7.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1157,
+        "full": "liman-osnova-7-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "O1 Floor 1 · O2 Lower ground 1",
+       "label_sr": "O1 Sprat 1 · O2 Suteren 1",
+       "image": {
+        "file": "liman-osnova-9.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1188,
+        "full": "liman-osnova-9-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "O1 Floor 2 · O2 Ground floor",
+       "label_sr": "O1 Sprat 2 · O2 Prizemlje",
+       "image": {
+        "file": "liman-osnova-10.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1097,
+        "full": "liman-osnova-10-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "O1 Floor 3 · O2 Floor 1",
+       "label_sr": "O1 Sprat 3 · O2 Sprat 1",
+       "image": {
+        "file": "liman-osnova-11.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1198,
+        "full": "liman-osnova-11-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "O1 Roof · O2 Floor 2",
+       "label_sr": "O1 Krov · O2 Sprat 2",
+       "image": {
+        "file": "liman-osnova-12.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1169,
+        "full": "liman-osnova-12-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "O1 Roof · O2 Floor 3",
+       "label_sr": "O1 Krov · O2 Sprat 3",
+       "image": {
+        "file": "liman-osnova-13.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2007,
+        "full": "liman-osnova-13-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    },
+    {
+     "title": "Sections",
+     "title_sr": "Preseci",
+     "items": [
+      {
+       "label": "Section 1-1",
+       "label_sr": "Presek 1-1",
+       "image": {
+        "file": "liman-presek-1.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 1945,
+        "h": 1032,
+        "full": "liman-presek-1-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Section 2-2",
+       "label_sr": "Presek 2-2",
+       "image": {
+        "file": "liman-presek-2.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 1690,
+        "h": 1032,
+        "full": "liman-presek-2-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Section 3-3",
+       "label_sr": "Presek 3-3",
+       "image": {
+        "file": "liman-presek-3.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 1741,
+        "h": 1051,
+        "full": "liman-presek-3-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Section 4-4",
+       "label_sr": "Presek 4-4",
+       "image": {
+        "file": "liman-presek-4.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 1771,
+        "h": 1168,
+        "full": "liman-presek-4-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    }
+   ]
   },
   {
    "slug": "private-villa-bc-3721",

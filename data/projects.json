@@ -610,17 +610,28 @@
      "full": "6aa2849bbd2b340604672c09_Image69-full.webp",
      "wm": true,
      "plan": {
-      "file": "divcibare-crtez-2.webp",
+      "file": "skica-div-p25.webp",
       "widths": [
        800,
        1600
       ],
       "w": 2400,
-      "h": 2170,
-      "full": "divcibare-crtez-2-full.webp",
+      "h": 2927,
+      "full": "skica-div-p25-full.webp",
       "wm": false
      },
-     "plan_label": "Plan"
+     "plan_label": "Plan",
+     "plan_sr": {
+      "file": "skica-div-p25-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 2927,
+      "full": "skica-div-p25-sr-full.webp",
+      "wm": false
+     }
     },
     {
      "file": "6aa2849bf09a69f4dcc80c30_Image70.webp",
@@ -793,17 +804,28 @@
      "full": "6aa2849c5c8798acaa9f90fa_Image28-full.webp",
      "wm": true,
      "plan": {
-      "file": "divcibare-crtez-15.webp",
+      "file": "skica-div-g37.webp",
       "widths": [
        800,
        1600
       ],
       "w": 2400,
-      "h": 1647,
-      "full": "divcibare-crtez-15-full.webp",
+      "h": 1526,
+      "full": "skica-div-g37-full.webp",
       "wm": false
      },
-     "plan_label": "Plan"
+     "plan_label": "Plan",
+     "plan_sr": {
+      "file": "skica-div-g37-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1526,
+      "full": "skica-div-g37-sr-full.webp",
+      "wm": false
+     }
     },
     {
      "file": "6aa2849d6100db41fc671a38_Image27_000.webp",
@@ -991,32 +1013,54 @@
      "title_sr": "Velika kuća: osnove",
      "items": [
       {
-       "label": "Basement",
-       "label_sr": "Podrum",
+       "label": "Lower ground floor",
+       "label_sr": "Nisko prizemlje",
        "image": {
-        "file": "divcibare-crtez-1.webp",
+        "file": "skica-div-p24.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 1952,
-        "full": "divcibare-crtez-1-full.webp",
+        "h": 2793,
+        "full": "skica-div-p24-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-div-p24-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2793,
+        "full": "skica-div-p24-sr-full.webp",
         "wm": false
        }
       },
       {
-       "label": "Ground floor",
-       "label_sr": "Prizemlje",
+       "label": "Upper ground floor",
+       "label_sr": "Visoko prizemlje",
        "image": {
-        "file": "divcibare-crtez-2.webp",
+        "file": "skica-div-p25.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 2170,
-        "full": "divcibare-crtez-2-full.webp",
+        "h": 2927,
+        "full": "skica-div-p25-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-div-p25-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2927,
+        "full": "skica-div-p25-sr-full.webp",
         "wm": false
        }
       },
@@ -1024,44 +1068,25 @@
        "label": "Attic",
        "label_sr": "Potkrovlje",
        "image": {
-        "file": "divcibare-crtez-3.webp",
+        "file": "skica-div-p26.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 2979,
-        "full": "divcibare-crtez-3-full.webp",
+        "h": 3197,
+        "full": "skica-div-p26-full.webp",
         "wm": false
-       }
-      },
-      {
-       "label": "Roof structure",
-       "label_sr": "Krovna konstrukcija",
-       "image": {
-        "file": "divcibare-crtez-4.webp",
+       },
+       "image_sr": {
+        "file": "skica-div-p26-sr.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 2708,
-        "full": "divcibare-crtez-4-full.webp",
-        "wm": false
-       }
-      },
-      {
-       "label": "Roof",
-       "label_sr": "Krov",
-       "image": {
-        "file": "divcibare-crtez-5.webp",
-        "widths": [
-         800,
-         1600
-        ],
-        "w": 2400,
-        "h": 2703,
-        "full": "divcibare-crtez-5-full.webp",
+        "h": 3197,
+        "full": "skica-div-p26-sr-full.webp",
         "wm": false
        }
       }
@@ -1075,14 +1100,25 @@
        "label": "Section 1-1",
        "label_sr": "Presek 1-1",
        "image": {
-        "file": "divcibare-crtez-6.webp",
+        "file": "skica-div-s29.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 1856,
-        "full": "divcibare-crtez-6-full.webp",
+        "h": 1824,
+        "full": "skica-div-s29-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-div-s29-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1824,
+        "full": "skica-div-s29-sr-full.webp",
         "wm": false
        }
       },
@@ -1090,14 +1126,25 @@
        "label": "Section 2-2",
        "label_sr": "Presek 2-2",
        "image": {
-        "file": "divcibare-crtez-7.webp",
+        "file": "skica-div-s30.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 824,
-        "full": "divcibare-crtez-7-full.webp",
+        "h": 2347,
+        "full": "skica-div-s30-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-div-s30-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2347,
+        "full": "skica-div-s30-sr-full.webp",
         "wm": false
        }
       },
@@ -1105,44 +1152,25 @@
        "label": "Section 3-3",
        "label_sr": "Presek 3-3",
        "image": {
-        "file": "divcibare-crtez-8.webp",
+        "file": "skica-div-s31.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 1256,
-        "full": "divcibare-crtez-8-full.webp",
+        "h": 2546,
+        "full": "skica-div-s31-full.webp",
         "wm": false
-       }
-      },
-      {
-       "label": "Section 4-4",
-       "label_sr": "Presek 4-4",
-       "image": {
-        "file": "divcibare-crtez-9.webp",
+       },
+       "image_sr": {
+        "file": "skica-div-s31-sr.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 1995,
-        "full": "divcibare-crtez-9-full.webp",
-        "wm": false
-       }
-      },
-      {
-       "label": "Section 5-5",
-       "label_sr": "Presek 5-5",
-       "image": {
-        "file": "divcibare-crtez-10.webp",
-        "widths": [
-         800,
-         1600
-        ],
-        "w": 2400,
-        "h": 3713,
-        "full": "divcibare-crtez-10-full.webp",
+        "h": 2546,
+        "full": "skica-div-s31-sr-full.webp",
         "wm": false
        }
       }
@@ -1156,14 +1184,25 @@
        "label": "Ground floor",
        "label_sr": "Prizemlje",
        "image": {
-        "file": "divcibare-crtez-15.webp",
+        "file": "skica-div-g37.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 1647,
-        "full": "divcibare-crtez-15-full.webp",
+        "h": 1526,
+        "full": "skica-div-g37-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-div-g37-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1526,
+        "full": "skica-div-g37-sr-full.webp",
         "wm": false
        }
       },
@@ -1171,44 +1210,25 @@
        "label": "Gallery",
        "label_sr": "Galerija",
        "image": {
-        "file": "divcibare-crtez-16.webp",
+        "file": "skica-div-g38.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 1438,
-        "full": "divcibare-crtez-16-full.webp",
+        "h": 1535,
+        "full": "skica-div-g38-full.webp",
         "wm": false
-       }
-      },
-      {
-       "label": "Roof structure",
-       "label_sr": "Krovna konstrukcija",
-       "image": {
-        "file": "divcibare-crtez-17.webp",
+       },
+       "image_sr": {
+        "file": "skica-div-g38-sr.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 2866,
-        "full": "divcibare-crtez-17-full.webp",
-        "wm": false
-       }
-      },
-      {
-       "label": "Roof",
-       "label_sr": "Krov",
-       "image": {
-        "file": "divcibare-crtez-18.webp",
-        "widths": [
-         800,
-         1600
-        ],
-        "w": 2400,
-        "h": 2866,
-        "full": "divcibare-crtez-18-full.webp",
+        "h": 1535,
+        "full": "skica-div-g38-sr-full.webp",
         "wm": false
        }
       }
@@ -1222,14 +1242,25 @@
        "label": "Section 1-1",
        "label_sr": "Presek 1-1",
        "image": {
-        "file": "divcibare-crtez-19.webp",
+        "file": "skica-div-s41a.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 701,
-        "full": "divcibare-crtez-19-full.webp",
+        "h": 2585,
+        "full": "skica-div-s41a-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-div-s41a-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2585,
+        "full": "skica-div-s41a-sr-full.webp",
         "wm": false
        }
       },
@@ -1237,14 +1268,25 @@
        "label": "Section 2-2",
        "label_sr": "Presek 2-2",
        "image": {
-        "file": "divcibare-crtez-20.webp",
+        "file": "skica-div-s41b.webp",
         "widths": [
          800,
          1600
         ],
         "w": 2400,
-        "h": 1109,
-        "full": "divcibare-crtez-20-full.webp",
+        "h": 1574,
+        "full": "skica-div-s41b-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-div-s41b-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1574,
+        "full": "skica-div-s41b-sr-full.webp",
         "wm": false
        }
       }

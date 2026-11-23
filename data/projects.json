@@ -69,17 +69,29 @@
      "full": "1a13717f690306a34_Trnava-4-full.webp",
      "wm": true,
      "plan": {
-      "file": "osnova-trnava.webp",
+      "file": "skica-trnava-prizemlje.webp",
       "widths": [
        800,
        1600
       ],
       "w": 2400,
-      "h": 576,
-      "full": "osnova-trnava-full.webp",
+      "h": 944,
+      "full": "skica-trnava-prizemlje-full.webp",
       "wm": false
      },
-     "plan_label": "Plan"
+     "plan_label": "Ground floor concept",
+     "plan_sr": {
+      "file": "skica-trnava-prizemlje-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 944,
+      "full": "skica-trnava-prizemlje-sr-full.webp",
+      "wm": false
+     },
+     "plan_label_sr": "Koncept prizemlja"
     },
     {
      "file": "1a13717eab7f3df89_Trnava-1.webp",
@@ -231,7 +243,203 @@
     "description": "<p>Centar za događaje usred voćnjaka u Trnavi kod Topole. Kada nema događaja, radi kao restoran, a dve male kuće omogućavaju gostima da prenoće. Projekat je u celosti delo studija QBCARCHITECTS.</p><p>Parcela se pruža uz interni put i pada oko tri metra prema jezeru. Objekat smo postavili kao jednu liniju uz put: parking i dolazak na gornjem kraju, zatim bazen, servis i kuhinja, a sala sa terasom na kraju prema jezeru, gde su pogled i mir. Kuće za goste stoje odvojeno, na višem delu parcele, dalje od muzike.</p><p>Gde teren pada, sala se diže celu etažu iznad terena, sa podrumom ispod. Duž linije krovovi menjaju visinu, od 7,05 do 3,50 metara: sala pod kosim krovom u tamnom limu i betonska kutija, spojene niskom staklenom vezom. Objekat je u postupku dobijanja građevinske dozvole.</p>",
     "location": "Trnava, Topola, Srbija",
     "status": "U postupku dobijanja građevinske dozvole"
-   }
+   },
+   "drawings": [
+    {
+     "title": "Plans",
+     "title_sr": "Osnove",
+     "items": [
+      {
+       "label": "Ground floor",
+       "label_sr": "Prizemlje",
+       "image": {
+        "file": "skica-trnava-prizemlje.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 944,
+        "full": "skica-trnava-prizemlje-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-trnava-prizemlje-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 944,
+        "full": "skica-trnava-prizemlje-sr-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Basement",
+       "label_sr": "Podrum",
+       "image": {
+        "file": "skica-trnava-podrum.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1159,
+        "full": "skica-trnava-podrum-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-trnava-podrum-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1159,
+        "full": "skica-trnava-podrum-sr-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    },
+    {
+     "title": "Sections",
+     "title_sr": "Preseci",
+     "items": [
+      {
+       "label": "Section 1-1",
+       "label_sr": "Presek 1-1",
+       "image": {
+        "file": "skica-trnava-s11.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 3058,
+        "full": "skica-trnava-s11-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-trnava-s11-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 3058,
+        "full": "skica-trnava-s11-sr-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Section 2-2",
+       "label_sr": "Presek 2-2",
+       "image": {
+        "file": "skica-trnava-s22.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2781,
+        "full": "skica-trnava-s22-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-trnava-s22-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2781,
+        "full": "skica-trnava-s22-sr-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Section 3-3",
+       "label_sr": "Presek 3-3",
+       "image": {
+        "file": "skica-trnava-s33.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2340,
+        "full": "skica-trnava-s33-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-trnava-s33-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 2340,
+        "full": "skica-trnava-s33-sr-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Section 4-4",
+       "label_sr": "Presek 4-4",
+       "image": {
+        "file": "skica-trnava-s44.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1925,
+        "full": "skica-trnava-s44-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-trnava-s44-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 1925,
+        "full": "skica-trnava-s44-sr-full.webp",
+        "wm": false
+       }
+      },
+      {
+       "label": "Section 5-5",
+       "label_sr": "Presek 5-5",
+       "image": {
+        "file": "skica-trnava-s55.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 970,
+        "full": "skica-trnava-s55-full.webp",
+        "wm": false
+       },
+       "image_sr": {
+        "file": "skica-trnava-s55-sr.webp",
+        "widths": [
+         800,
+         1600
+        ],
+        "w": 2400,
+        "h": 970,
+        "full": "skica-trnava-s55-sr-full.webp",
+        "wm": false
+       }
+      }
+     ]
+    }
+   ]
   },
   {
    "slug": "villa-dve-koracica-kosmaj",

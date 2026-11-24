@@ -3484,16 +3484,29 @@
      "full": "bc3721-01-full.webp",
      "wm": false,
      "plan": {
-      "file": "6afbb104a1b2c3_osnova-bc-3721.jpg",
+      "file": "skica-bc3721-osnova.webp",
       "widths": [
-       500
+       800,
+       1600
       ],
-      "w": 700,
-      "h": 630,
-      "full": "6afbb104a1b2c3_osnova-bc-3721.jpg",
+      "w": 2400,
+      "h": 2903,
+      "full": "skica-bc3721-osnova-full.webp",
       "wm": false
      },
-     "plan_label": "Ground floor"
+     "plan_label": "Ground floor",
+     "plan_sr": {
+      "file": "skica-bc3721-osnova-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 2903,
+      "full": "skica-bc3721-osnova-sr-full.webp",
+      "wm": false
+     },
+     "plan_label_sr": "Prizemlje"
     },
     {
      "file": "bc3721-02.webp",

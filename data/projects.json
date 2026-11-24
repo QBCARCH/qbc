@@ -2429,51 +2429,113 @@
    ],
    "year": "2019",
    "cover": {
-    "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
+    "file": "liman-01.webp",
     "widths": [
      500,
      800,
      1080
     ],
-    "w": 1920,
-    "h": 1080,
-    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg",
-    "full": "673bbefbe7256b1a41b06244_Image2_013-full.webp",
-    "wm": true,
-    "sketch": "673bbefbe7256b1a41b06244_Image2_013-sketch.json"
+    "w": 1376,
+    "h": 768,
+    "full": "liman-01-full.webp",
+    "wm": false,
+    "og": "liman-01-og.jpg",
+    "sketch": "liman-01-sketch.json"
    },
    "thumb": {
-    "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
+    "file": "liman-01.webp",
     "widths": [
      500,
      800,
      1080
     ],
-    "w": 1920,
-    "h": 1080,
-    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg",
-    "full": "673bbefbe7256b1a41b06244_Image2_013-full.webp",
-    "wm": true,
-    "sketch": "673bbefbe7256b1a41b06244_Image2_013-sketch.json"
+    "w": 1376,
+    "h": 768,
+    "full": "liman-01-full.webp",
+    "wm": false,
+    "og": "liman-01-og.jpg",
+    "sketch": "liman-01-sketch.json"
    },
    "hero": {
-    "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
+    "file": "liman-01.webp",
     "widths": [
      500,
      800,
      1080
     ],
-    "w": 1920,
-    "h": 1080,
-    "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg",
-    "full": "673bbefbe7256b1a41b06244_Image2_013-full.webp",
-    "wm": true,
-    "sketch": "673bbefbe7256b1a41b06244_Image2_013-sketch.json"
+    "w": 1376,
+    "h": 768,
+    "full": "liman-01-full.webp",
+    "wm": false,
+    "og": "liman-01-og.jpg",
+    "sketch": "liman-01-sketch.json"
    },
    "description": "<p>Located above Liman 2 beach in Ulcinj, on the Montenegrin coast, this residential and commercial building follows the steep, wooded slope instead of fighting it. The volume is broken into cascading terraces, so the apartments step down the hill and each one gets its own open terrace with planting and a view of the sea.</p><p>The material palette comes from the Adriatic tradition: local stone walls, white rendered volumes, timber shutters and planted parapets. Seen from the beach, the building reads as part of the hillside rather than as a single block.</p>",
    "gallery": [
     {
-     "file": "673bbf0a0fe95df33293962b_Image1_000.webp",
+     "file": "liman-01.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "liman-01-full.webp",
+     "wm": false,
+     "og": "liman-01-og.jpg",
+     "sketch": "liman-01-sketch.json"
+    },
+    {
+     "file": "liman-02.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "liman-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "liman-03.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "liman-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "liman-04.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "liman-04-full.webp",
+     "wm": false
+    },
+    {
+     "file": "liman-05.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "liman-05-full.webp",
+     "wm": false
+    },
+    {
+     "file": "liman-06.webp",
      "widths": [
       500,
       800,
@@ -2481,217 +2543,140 @@
      ],
      "w": 1920,
      "h": 1080,
-     "og": "673bbf0a0fe95df33293962b_Image1_000-og.jpg",
-     "full": "673bbf0a0fe95df33293962b_Image1_000-full.webp",
-     "wm": true
+     "full": "liman-06-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbefbe7256b1a41b06244_Image2_013.webp",
+     "file": "liman-07.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbefbe7256b1a41b06244_Image2_013-og.jpg",
-     "full": "673bbefbe7256b1a41b06244_Image2_013-full.webp",
-     "wm": true,
-     "sketch": "673bbefbe7256b1a41b06244_Image2_013-sketch.json"
+     "w": 1376,
+     "h": 768,
+     "full": "liman-07-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbf06d092c27300025bbf_Image2_014.webp",
+     "file": "liman-08.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf06d092c27300025bbf_Image2_014-og.jpg",
-     "full": "673bbf06d092c27300025bbf_Image2_014-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "liman-08-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbf0627d2a1529df6e7eb_Image2_015.webp",
+     "file": "liman-09.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf0627d2a1529df6e7eb_Image2_015-og.jpg",
-     "full": "673bbf0627d2a1529df6e7eb_Image2_015-full.webp",
-     "wm": true,
-     "plan": {
-      "file": "skica-liman-o2.webp",
-      "widths": [
-       800,
-       1600
-      ],
-      "w": 2400,
-      "h": 2550,
-      "full": "skica-liman-o2-full.webp",
-      "wm": false
-     },
-     "plan_sr": {
-      "file": "skica-liman-o2-sr.webp",
-      "widths": [
-       800,
-       1600
-      ],
-      "w": 2400,
-      "h": 2550,
-      "full": "skica-liman-o2-sr-full.webp",
-      "wm": false
-     },
-     "plan_label": "Angled wing, typical floor",
-     "plan_label_sr": "Krilo pod uglom, tipičan sprat"
+     "w": 1376,
+     "h": 768,
+     "full": "liman-09-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbf06cb0313130f59801c_Image2_016.webp",
+     "file": "liman-10.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf06cb0313130f59801c_Image2_016-og.jpg",
-     "full": "673bbf06cb0313130f59801c_Image2_016-full.webp",
-     "wm": true,
-     "plan": {
-      "file": "skica-liman-o1.webp",
-      "widths": [
-       800,
-       1600
-      ],
-      "w": 2400,
-      "h": 1443,
-      "full": "skica-liman-o1-full.webp",
-      "wm": false
-     },
-     "plan_sr": {
-      "file": "skica-liman-o1-sr.webp",
-      "widths": [
-       800,
-       1600
-      ],
-      "w": 2400,
-      "h": 1443,
-      "full": "skica-liman-o1-sr-full.webp",
-      "wm": false
-     },
-     "plan_label": "Long wing, typical floor",
-     "plan_label_sr": "Dugo krilo, tipičan sprat"
+     "w": 1376,
+     "h": 768,
+     "full": "liman-10-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbf06878268e7b7d335ba_Image2_017.webp",
+     "file": "liman-11.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf06878268e7b7d335ba_Image2_017-og.jpg",
-     "full": "673bbf06878268e7b7d335ba_Image2_017-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "liman-11-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbf0ab78adccbd83b2838_Image2_018.webp",
+     "file": "liman-12.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf0ab78adccbd83b2838_Image2_018-og.jpg",
-     "full": "673bbf0ab78adccbd83b2838_Image2_018-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "liman-12-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbf06eeaca39b59efd1f0_Image2_019.webp",
+     "file": "liman-13.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf06eeaca39b59efd1f0_Image2_019-og.jpg",
-     "full": "673bbf06eeaca39b59efd1f0_Image2_019-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "liman-13-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbf05d092c27300025afb_Image2.webp",
+     "file": "liman-14.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf05d092c27300025afb_Image2-og.jpg",
-     "full": "673bbf05d092c27300025afb_Image2-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "liman-14-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbf05d15c21428d2e6706_Image2_020.webp",
+     "file": "liman-15.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf05d15c21428d2e6706_Image2_020-og.jpg",
-     "full": "673bbf05d15c21428d2e6706_Image2_020-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "liman-15-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbf0a7d7d92d0f12f6af2_Image2_022.webp",
+     "file": "liman-16.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf0a7d7d92d0f12f6af2_Image2_022-og.jpg",
-     "full": "673bbf0a7d7d92d0f12f6af2_Image2_022-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "liman-16-full.webp",
+     "wm": false
     },
     {
-     "file": "673bbf066685a101ebb6908c_Image2_024.webp",
+     "file": "liman-17.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf066685a101ebb6908c_Image2_024-og.jpg",
-     "full": "673bbf066685a101ebb6908c_Image2_024-full.webp",
-     "wm": true
-    },
-    {
-     "file": "673bbf068bcb205827a5fe75_Image2_023.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "673bbf068bcb205827a5fe75_Image2_023-og.jpg",
-     "full": "673bbf068bcb205827a5fe75_Image2_023-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "liman-17-full.webp",
+     "wm": false
     }
    ],
    "location": "Ulcinj, Montenegro",

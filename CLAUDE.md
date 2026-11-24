@@ -48,6 +48,16 @@ Poznato bezopasno: konzola javlja `InvalidStateError: Transition was aborted ...
 - Osnova iza rendera (B3): slika u galeriji može imati `plan` (objekat slike) i `plan_label`. Tada figure dobija klasu `pfig`: miš otkriva crtež kao brisanje, dodir prebacuje, dugmad Render / naziv / ⤢. U lightbox-u je osnova svoj kadar (`initGallery`). U adminu: dugme „+ osnova“ na svakoj slici galerije; crtež se obrađuje bez znaka i skice (`processImage(file, { plain: true })`).
 - Tamna galerija: `p.dark = true` daje `.pgal--dark`.
 
+## Beleske olovkom preko naslovne projekta (novembar 2026)
+
+- Na vrhu stranice projekta preko `hero` slike docrtavaju se "arhitektove beleske": ose, kote, nivo, kratke beleske uz vertikalnu liniju, sitni detalji. Tekst je uvek na srpskoj cirilici (font Andric, `fonts/Andric.woff2`) i na SR i na EN stranici. Pravi ih Claude gledajuci render, ne vlasnik.
+- Podaci su u `data/projects.json`, polje `annot` projekta (lista zapisa). Build ih upisuje u `.phero__annot[data-annot]` (`annotHtml` u build-core), `initAnnot` u `js/site.js` ih crta (drhtanje linije feTurbulence, docrtavanje posle ucitavanja, uz smanjeno kretanje odmah sve; zapisi koje bi `slice` odsekao se izbacuju).
+- Koordinate su u prostoru sirine 1366 (visina = 1366 * h / w slike). Zapis: `["axis",x,y1,y2,"А",boja]`, `["note",x,y1,y2,["red1","red2"],boja,"r"|"l"]` (linija sa tackom u y1, tekst kod y2), `["noterot",x,y1,y2,"tekst",boja]`, `["dimv",x,y1,y2,"~ 3,6",boja]`, `["dimh",x1,x2,y,"~ 3,6",boja]`, `["level",x,y,"± 0,00",boja]`, `["line",[[x,y],..],boja,amp,over]`, `["box",x1,y1,x2,y2,boja]`, `["text",x,y,["red"],boja,{"rot":0,"anchor":"start"}]`, `["dash",x1,y1,x2,y2,boja]`, `["circ",x,y,r,boja]`. Boja je `"ink"` (plavo mastilo, preko svetlog) ili `"chalk"` (bela olovka, preko tamnog: trava, lisce, tamna fasada).
+- Pisanje: `tools/beleske-lib.py` (klasa `A(w, h)`) prima piksele originalne slike i sam pretvara u prostor 1366; metode `axis, note, noterot, dimv, dimh, level, box, line, text, dash, circ, stack, seam, slats`. Rezultat `a.o` ide u `p["annot"]`, pa `json.dumps(d, ensure_ascii=False, indent=1)` bez novog reda na kraju.
+- Sigurna zona (1440x900 i 1920x1080 odsecaju ivice i parallax pomera sliku): x od ~180 do ~1190, y od ~106 do ~600 (levo dole je naslov, do ~665 sa desne strane), svi brojevi u prostoru 1366 za sliku 16:9. Zaglavlje pokriva gornjih ~90 px ekrana.
+- Mere na kotama (`~ 3,6`) su procena sa rendera; tacne brojeve upisuje vlasnik ili ih izbaciti. Ne izmisljati materijale i sisteme koji se na renderu ne vide.
+- Svaki novi projekat dobija `annot` za svoju `hero` sliku (Claude je pravi pri dodavanju). Ako vlasnik u adminu zameni hero sliku, `annot` treba ponovo napraviti. Admin ne dira polje `annot` (cuva ga pri snimanju).
+
 ## Slike i podaci
 
 - `data/projects.json`: `{version, home_count, last_work_count, hero_slug, promo_days, projects: [...]}`. Projekat: `slug, title ("Naziv, Mesto"), year, services[], description (HTML), type, location, area, status, credit, added, dark, cover, thumb, hero, gallery[]`; srpski prevodi su u objektu `sr` sa istim ključevima (`p.sr.description`, `p.sr.type`...; `tr(p, k, lang)` u build-core). Slika: `{file, widths[], w, h, og, full, wm, sketch?}`; slika galerije uz to može imati `plan` (ista struktura) i `plan_label`.

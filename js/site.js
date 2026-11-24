@@ -471,8 +471,86 @@
     credit.textContent = `${hero.dataset.t} / ${hero.dataset.y} ↗`;
   };
 
+  /* beleske olovkom preko naslovne slike projekta: podaci su u data/projects.json (polje annot), build ih upisuje u
+     .phero__annot[data-annot]. Ovde se kratki zapisi (osa, kota, beleska...) razlazu u poteze, prave SVG sa blagim
+     drhtanjem linije (feTurbulence) i docrtavaju jedan za drugim posle ucitavanja. Koordinate su u prostoru
+     sirine 1366 (data-h je visina u istom prostoru); SVG ima "slice" kao object-fit: cover. Uz smanjeno kretanje
+     je sve odmah iscrtano. Tekst je isti na srpskom i engleskom (cirilica, font Andric). */
+  const initAnnot = () => {
+    const host = $('.phero__annot[data-annot]');
+    if (!host) return;
+    let spec; try { spec = JSON.parse(host.dataset.annot); } catch (e) { return; }
+    const NS = 'http://www.w3.org/2000/svg', W = 1366, H = +host.dataset.h || 768;
+    let s = 7; const rnd = () => { s = (s * 16807) % 2147483647; return (s - 1) / 2147483646; };
+    const L = (pts, c = 'ink', amp = 1.6, over = true) => ({ k: 'p', pts, c, amp, over });
+    const T = (x, y, lines, c = 'ink', o = {}) => ({ k: 't', x, y, lines, c, rot: o.rot || 0, anchor: o.anchor || 'start' });
+    const circ = (cx, cy, r, c) => { const p = []; for (let a = 0; a <= 370; a += 30) p.push([cx + r * Math.cos(a * Math.PI / 180), cy + r * Math.sin(a * Math.PI / 180)]); return L(p, c, .8, false); };
+    const dash = (x1, y1, x2, y2, c) => { const n = Math.hypot(x2 - x1, y2 - y1), ux = (x2 - x1) / n, uy = (y2 - y1) / n, segs = []; for (let d = 0; d < n; d += 22) { const e = Math.min(d + 14, n); segs.push([[x1 + ux * d, y1 + uy * d], [x1 + ux * e, y1 + uy * e]]); } return { k: 'd', segs, c }; };
+    const ex = {
+      axis: (x, y1, y2, t, c) => [dash(x, y1, x, y2, c), circ(x, y1 - 14, 12, c), T(x, y1 - 8, [t], c, { anchor: 'middle' })],
+      dimv: (x, y1, y2, t, c) => [L([[x, y1], [x, y2]], c, .8), L([[x - 5, y1 + 5], [x + 5, y1 - 5]], c, .4), L([[x - 5, y2 + 5], [x + 5, y2 - 5]], c, .4), T(x - 6, (y1 + y2) / 2 + 14, [t], c, { rot: -90, anchor: 'middle' })],
+      dimh: (x1, x2, y, t, c) => [L([[x1, y], [x2, y]], c, .8), L([[x1 - 5, y + 5], [x1 + 5, y - 5]], c, .4), L([[x2 - 5, y + 5], [x2 + 5, y - 5]], c, .4), T((x1 + x2) / 2, y - 7, [t], c, { anchor: 'middle' })],
+      level: (x, y, t, c) => [L([[x - 9, y - 12], [x + 9, y - 12], [x, y], [x - 9, y - 12]], c, .4, false), L([[x - 14, y], [x + 44, y]], c, .6), T(x + 16, y - 5, [t], c)],
+      note: (x, y1, y2, lines, c, side) => [L([[x, y1], [x, y2]], c, 1.8), { k: 'dot', x, y: y1, c }, T(side === 'l' ? x - 7 : x + 7, y2 + 14, lines, c, { anchor: side === 'l' ? 'end' : 'start' })],
+      noterot: (x, y1, y2, t, c) => [L([[x, y1], [x, y2]], c, 1.8), { k: 'dot', x, y: y1, c }, T(x - 6, y1 - 8, [t], c, { rot: -90 })],
+      line: (pts, c, amp, over) => [L(pts, c, amp ?? .7, !!over)],
+      box: (x1, y1, x2, y2, c) => [L([[x1, y1], [x2, y1], [x2, y2], [x1, y2], [x1, y1]], c, .8, false)],
+      text: (x, y, lines, c, o) => [T(x, y, lines, c, o || {})],
+      dash: (x1, y1, x2, y2, c) => [dash(x1, y1, x2, y2, c)],
+      circ: (x, y, r, c) => [circ(x, y, r, c)],
+    };
+    const list = [];
+    spec.forEach((a) => { const f = ex[a[0]]; if (!f) return; const args = a.slice(1); list.push(...f(...args).map((e) => (e.c = e.c || 'ink', e))); });
+    const svg = D.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('preserveAspectRatio', 'xMidYMid slice'); svg.setAttribute('aria-hidden', 'true');
+    const mk = (n, at) => { const e = D.createElementNS(NS, n); for (const k in at) e.setAttribute(k, at[k]); return e; };
+    const defs = mk('defs', {}), fl = mk('filter', { id: 'penf', x: '-5%', y: '-5%', width: '110%', height: '110%' });
+    fl.append(mk('feTurbulence', { type: 'fractalNoise', baseFrequency: '.045', numOctaves: '2', seed: '5', result: 'n' }), mk('feDisplacementMap', { in: 'SourceGraphic', in2: 'n', scale: '1.7' }));
+    defs.appendChild(fl); svg.appendChild(defs);
+    const g = mk('g', { filter: 'url(#penf)' }); svg.appendChild(g);
+    const wob = (pts, amp) => { const o = []; for (let i = 0; i < pts.length - 1; i++) { const [x1, y1] = pts[i], [x2, y2] = pts[i + 1], n = Math.max(1, Math.round(Math.hypot(x2 - x1, y2 - y1) / 40)); for (let k = 0; k < n; k++) { const t = k / n; o.push([x1 + (x2 - x1) * t + (rnd() - .5) * amp, y1 + (y2 - y1) * t + (rnd() - .5) * amp]); } } o.push(pts[pts.length - 1]); return o; };
+    const dOf = (p) => 'M' + p.map((q) => q[0].toFixed(1) + ' ' + q[1].toFixed(1)).join(' L');
+    const items = [];
+    list.forEach((el) => {
+      const grp = mk('g', { class: el.c }); g.appendChild(grp);
+      if (el.k === 'p') {
+        let pts = el.pts.map((p) => [p[0], p[1]]);
+        if (el.over) { const a = pts[0], b = pts[1], d = Math.hypot(b[0] - a[0], b[1] - a[1]) || 1, e = rnd() * 3; pts[0] = [a[0] - (b[0] - a[0]) / d * e, a[1] - (b[1] - a[1]) / d * e]; }
+        const p = mk('path', { class: 'ln', d: dOf(wob(pts, el.amp)) }); grp.appendChild(p); items.push({ p });
+      } else if (el.k === 'd') {
+        const p = mk('path', { class: 'ln', d: el.segs.map((q) => dOf(wob(q, 1.4))).join(' ') }); p.style.opacity = .8; grp.appendChild(p); items.push({ p });
+      } else if (el.k === 'dot') {
+        const c = mk('circle', { cx: el.x, cy: el.y, r: 2.1, class: 'dot' }); grp.appendChild(c); items.push({ t: c });
+      } else {
+        const t = mk('text', { class: 'tx', x: el.x, y: el.y, 'text-anchor': el.anchor });
+        t.setAttribute('transform', `rotate(${el.rot || ((rnd() - .5) * 3).toFixed(2)} ${el.x} ${el.y})`);
+        el.lines.forEach((l, i) => { const sp = mk('tspan', { x: el.x, dy: i ? 21 : 0 }); sp.textContent = l; t.appendChild(sp); });
+        grp.appendChild(t); items.push({ t });
+      }
+    });
+    host.appendChild(svg);
+    /* sve sto bi "slice" odsekao (uski ekran, drugi odnos strana) se izbacuje, da ne ostanu poluseckani zapisi */
+    const hb = host.getBoundingClientRect();
+    if (hb.width && hb.height) {
+      const sc = Math.max(hb.width / W, hb.height / H), vx = hb.width / sc, vy = hb.height / sc, x0 = (W - vx) / 2, y0 = (H - vy) / 2;
+      for (let i = items.length - 1; i >= 0; i--) {
+        const grp = (items[i].p || items[i].t).parentNode, b = grp.getBBox();
+        if (b.x < x0 + 6 || b.x + b.width > x0 + vx - 6 || b.y < y0 + 6 || b.y + b.height > y0 + vy - 6) { grp.remove(); items.splice(i, 1); }
+      }
+    }
+    items.forEach((it) => { if (it.p) { const n = it.p.getTotalLength(); it.p.style.strokeDasharray = n; it.p.style.strokeDashoffset = reduce ? 0 : n; it.n = n; } else it.t.style.opacity = reduce ? 1 : 0; });
+    if (reduce) return;
+    const N = items.length || 1;
+    const start = () => items.forEach((it, i) => {
+      const e = it.p || it.t, delay = 900 + i * (3200 / N);
+      e.style.transition = `${it.p ? 'stroke-dashoffset' : 'opacity'} ${it.p ? 0.8 : 0.5}s ease-out ${delay}ms`;
+      requestAnimationFrame(() => requestAnimationFrame(() => { if (it.p) it.p.style.strokeDashoffset = 0; else it.t.style.opacity = 1; }));
+    });
+    start();
+  };
+
   const boot = () => {
-    initCredit(); initSketch(); initReel(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initHeroLink(); initPointer(); initGallery(); initDrawings(); initForm(); initCount(); initWords();
+    initCredit(); initAnnot(); initSketch(); initReel(); initReveal(); initParallax(); initNav(); initProgress(); initKeys(); initMenu(); initClocks(); initWorks(); initHeroLink(); initPointer(); initGallery(); initDrawings(); initForm(); initCount(); initWords();
   };
   if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', boot); else boot();
 })();

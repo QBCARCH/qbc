@@ -452,274 +452,254 @@
    ],
    "description": "<p>Celtics Event Center in Boston is built around a full-size basketball court. Next to the court hall and below it are a gym, a boxing and MMA room, a pool with a spa, a games room with a restaurant kitchen, a garage and apartments. We worked on it from the first volume studies in November 2022 to the final renders in June 2023.</p><p>The building is two gabled volumes in dark timber on a stone base that steps down with the slope. The court hall takes the long ridge, and its glazed gable end faces the parking. The pool opens to a terrace on the garden side, and the roofs of the lower floors are used as balconies.</p><p>Every room has its own palette. The court is dark paneling with a pale wood floor and the city name set into it. The gym is warm wood and brick with amber light coves. The games room and restaurant combine grey upholstery with red backlit shelves and a bonsai in the middle of the room. The apartments are quieter, with marble bathrooms and bedrooms under the roof pitch.</p>",
    "cover": {
-    "file": "usa-sparks-ex-08.webp",
+    "file": "usa-sparks-ob-026.webp",
     "widths": [
      500,
      800,
-     1080,
-     1600
+     1080
     ],
-    "w": 2000,
-    "h": 1125,
-    "full": "usa-sparks-ex-08-full.webp",
+    "w": 1376,
+    "h": 768,
+    "full": "usa-sparks-ob-026-full.webp",
     "wm": false,
-    "og": "usa-sparks-ex-08-og.jpg",
-    "sketch": "usa-sparks-ex-08-sketch.json"
+    "og": "usa-sparks-ob-026-og.jpg",
+    "sketch": "usa-sparks-ob-026-sketch.json"
    },
    "thumb": {
-    "file": "usa-sparks-ex-08.webp",
+    "file": "usa-sparks-ob-026.webp",
     "widths": [
      500,
      800,
-     1080,
-     1600
+     1080
     ],
-    "w": 2000,
-    "h": 1125,
-    "full": "usa-sparks-ex-08-full.webp",
+    "w": 1376,
+    "h": 768,
+    "full": "usa-sparks-ob-026-full.webp",
     "wm": false,
-    "og": "usa-sparks-ex-08-og.jpg",
-    "sketch": "usa-sparks-ex-08-sketch.json"
+    "og": "usa-sparks-ob-026-og.jpg",
+    "sketch": "usa-sparks-ob-026-sketch.json"
    },
    "hero": {
-    "file": "usa-sparks-ex-08.webp",
+    "file": "usa-sparks-ob-026.webp",
     "widths": [
      500,
      800,
-     1080,
-     1600
+     1080
     ],
-    "w": 2000,
-    "h": 1125,
-    "full": "usa-sparks-ex-08-full.webp",
+    "w": 1376,
+    "h": 768,
+    "full": "usa-sparks-ob-026-full.webp",
     "wm": false,
-    "og": "usa-sparks-ex-08-og.jpg",
-    "sketch": "usa-sparks-ex-08-sketch.json"
+    "og": "usa-sparks-ob-026-og.jpg",
+    "sketch": "usa-sparks-ob-026-sketch.json"
    },
    "gallery": [
     {
-     "file": "usa-sparks-ex-08.webp",
+     "file": "usa-sparks-ob-026.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-08-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-026-full.webp",
      "wm": false,
-     "og": "usa-sparks-ex-08-og.jpg",
-     "sketch": "usa-sparks-ex-08-sketch.json",
+     "og": "usa-sparks-ob-026-og.jpg",
+     "sketch": "usa-sparks-ob-026-sketch.json",
      "part": "Building",
      "part_sr": "Objekat"
     },
     {
-     "file": "usa-sparks-ex-01.webp",
+     "file": "usa-sparks-ob-004.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-004-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-03.webp",
+     "file": "usa-sparks-ob-007.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-03-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-007-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-05.webp",
+     "file": "usa-sparks-ob-027.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-05-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-027-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-09.webp",
+     "file": "usa-sparks-ob-029.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-09-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-029-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-07.webp",
+     "file": "usa-sparks-ob-030.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-07-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-030-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-06.webp",
+     "file": "usa-sparks-ob-031.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-06-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-031-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-02.webp",
+     "file": "usa-sparks-ob-032.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-02-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-032-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-10.webp",
+     "file": "usa-sparks-ob-053.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-10-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-053-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-11.webp",
+     "file": "usa-sparks-ob-056.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-11-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-056-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-12.webp",
+     "file": "usa-sparks-ob-165.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-12-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-165-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-13.webp",
+     "file": "usa-sparks-ob-170.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-13-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-170-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-14.webp",
+     "file": "usa-sparks-ob-176.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-14-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-176-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-15.webp",
+     "file": "usa-sparks-ob-181.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-15-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-181-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-04.webp",
+     "file": "usa-sparks-ob-183.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-ex-04-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-183-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-16.webp",
+     "file": "usa-sparks-ob-062.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 921,
-     "full": "usa-sparks-ex-16-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-062-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ex-17.webp",
+     "file": "usa-sparks-ob-063.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 946,
-     "full": "usa-sparks-ex-17-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-ob-063-full.webp",
      "wm": false
     },
     {

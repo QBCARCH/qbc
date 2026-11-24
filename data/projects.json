@@ -2484,7 +2484,31 @@
      "full": "liman-01-full.webp",
      "wm": false,
      "og": "liman-01-og.jpg",
-     "sketch": "liman-01-sketch.json"
+     "sketch": "liman-01-sketch.json",
+     "plan": {
+      "file": "skica-liman-o1.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1443,
+      "full": "skica-liman-o1-full.webp",
+      "wm": false
+     },
+     "plan_sr": {
+      "file": "skica-liman-o1-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 1443,
+      "full": "skica-liman-o1-sr-full.webp",
+      "wm": false
+     },
+     "plan_label": "Long wing, typical floor",
+     "plan_label_sr": "Dugo krilo, tipičan sprat"
     },
     {
      "file": "liman-02.webp",
@@ -2496,7 +2520,31 @@
      "w": 1376,
      "h": 768,
      "full": "liman-02-full.webp",
-     "wm": false
+     "wm": false,
+     "plan": {
+      "file": "skica-liman-o2.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 2550,
+      "full": "skica-liman-o2-full.webp",
+      "wm": false
+     },
+     "plan_sr": {
+      "file": "skica-liman-o2-sr.webp",
+      "widths": [
+       800,
+       1600
+      ],
+      "w": 2400,
+      "h": 2550,
+      "full": "skica-liman-o2-sr-full.webp",
+      "wm": false
+     },
+     "plan_label": "Angled wing, typical floor",
+     "plan_label_sr": "Krilo pod uglom, tipičan sprat"
     },
     {
      "file": "liman-03.webp",

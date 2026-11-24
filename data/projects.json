@@ -703,16 +703,15 @@
      "wm": false
     },
     {
-     "file": "usa-sparks-court-01.webp",
+     "file": "usa-sparks-in-sala-court-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-court-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-sala-court-01-full.webp",
      "wm": false,
      "room": "Basketball court",
      "room_sr": "Košarkaška hala",
@@ -720,626 +719,543 @@
      "part_sr": "Enterijer"
     },
     {
-     "file": "usa-sparks-court-05.webp",
+     "file": "usa-sparks-in-sala-court-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-court-05-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-sala-court-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-court-02.webp",
+     "file": "usa-sparks-in-sala-court-03.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-court-02-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-sala-court-03-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-court-03.webp",
+     "file": "usa-sparks-in-sala-court-05.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-court-03-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-sala-court-05-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-court-04.webp",
+     "file": "usa-sparks-in-sala-court-04.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-court-04-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-sala-court-04-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-court-06.webp",
+     "file": "usa-sparks-in-court-06.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-court-06-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-court-06-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mliv-01.webp",
+     "file": "usa-sparks-in-master-dnevni-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-dnevni-01-full.webp",
      "wm": false,
      "room": "Master apartment, living room",
      "room_sr": "Master apartman, dnevni boravak"
     },
     {
-     "file": "usa-sparks-mliv-02.webp",
+     "file": "usa-sparks-in-master-dnevni-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-02-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-dnevni-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mliv-03.webp",
+     "file": "usa-sparks-in-master-dnevni-03.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-03-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-dnevni-03-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mliv-04.webp",
+     "file": "usa-sparks-in-master-dnevni-04.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-04-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-dnevni-04-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mliv-05.webp",
+     "file": "usa-sparks-in-master-dnevni-07.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-05-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-dnevni-07-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mliv-06.webp",
+     "file": "usa-sparks-in-master-dnevni-08.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-06-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-dnevni-08-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mliv-07.webp",
+     "file": "usa-sparks-in-master-dnevni-09.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-07-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-dnevni-09-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mliv-08.webp",
+     "file": "usa-sparks-in-master-dnevni-10.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-08-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-dnevni-10-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mliv-09.webp",
+     "file": "usa-sparks-in-master-dnevni-11.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-09-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-dnevni-11-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mliv-10.webp",
+     "file": "usa-sparks-in-master-spavaca-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-10-full.webp",
-     "wm": false
-    },
-    {
-     "file": "usa-sparks-mliv-11.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mliv-11-full.webp",
-     "wm": false
-    },
-    {
-     "file": "usa-sparks-mbed-01.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mbed-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-spavaca-01-full.webp",
      "wm": false,
      "room": "Master apartment, bedroom",
      "room_sr": "Master apartman, spavaća soba"
     },
     {
-     "file": "usa-sparks-mbed-02.webp",
+     "file": "usa-sparks-in-master-spavaca-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mbed-02-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-spavaca-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mbed-03.webp",
+     "file": "usa-sparks-in-master-spavaca-03.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mbed-03-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-spavaca-03-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mbath-01.webp",
+     "file": "usa-sparks-in-master-kupatilo-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mbath-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-kupatilo-01-full.webp",
      "wm": false,
      "room": "Master apartment, bathrooms",
      "room_sr": "Master apartman, kupatila"
     },
     {
-     "file": "usa-sparks-mbath-02.webp",
+     "file": "usa-sparks-in-master-kupatilo-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mbath-02-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-kupatilo-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mbath-03.webp",
+     "file": "usa-sparks-in-master-kupatilo-03.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mbath-03-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-kupatilo-03-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-mbath-04.webp",
+     "file": "usa-sparks-in-master-kupatilo-04.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-mbath-04-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-master-kupatilo-04-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-games-01.webp",
+     "file": "usa-sparks-in-games-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-games-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-games-01-full.webp",
      "wm": false,
      "room": "Games room and restaurant",
      "room_sr": "Igraonica i restoran"
     },
     {
-     "file": "usa-sparks-games-05.webp",
+     "file": "usa-sparks-in-games-05.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-games-05-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-games-05-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-games-06.webp",
+     "file": "usa-sparks-in-games-06.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1124,
-     "full": "usa-sparks-games-06-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-games-06-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-games-02.webp",
+     "file": "usa-sparks-in-games-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-games-02-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-games-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-games-04.webp",
+     "file": "usa-sparks-in-games-04.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-games-04-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-games-04-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-games-08.webp",
+     "file": "usa-sparks-in-restoran-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-games-08-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-restoran-01-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-games-07.webp",
+     "file": "usa-sparks-in-restoran-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-games-07-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-restoran-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-pool-01.webp",
+     "file": "usa-sparks-in-bazen-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-pool-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-bazen-01-full.webp",
      "wm": false,
      "room": "Spa zone and gym",
      "room_sr": "Spa zona i teretana"
     },
     {
-     "file": "usa-sparks-pool-02.webp",
+     "file": "usa-sparks-in-bazen-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-pool-02-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-bazen-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-sauna-01.webp",
+     "file": "usa-sparks-in-sauna-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-sauna-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-sauna-01-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-sauna-02.webp",
+     "file": "usa-sparks-in-sauna-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-sauna-02-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-sauna-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-sauna-03.webp",
+     "file": "usa-sparks-in-sauna-03.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-sauna-03-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-sauna-03-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-gym-01.webp",
+     "file": "usa-sparks-in-teretana-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-gym-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-teretana-01-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-gym-02.webp",
+     "file": "usa-sparks-in-teretana-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-gym-02-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-teretana-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-gym-03.webp",
+     "file": "usa-sparks-in-teretana-03.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-gym-03-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-teretana-03-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-gym-04.webp",
+     "file": "usa-sparks-in-teretana-04.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-gym-04-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-teretana-04-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-apt1-01.webp",
+     "file": "usa-sparks-in-apartman1-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-apt1-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-apartman1-01-full.webp",
      "wm": false,
      "room": "Other apartments",
      "room_sr": "Ostali apartmani"
     },
     {
-     "file": "usa-sparks-apt1-02.webp",
+     "file": "usa-sparks-in-apartman1-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-apt1-02-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-apartman1-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-apt1-04.webp",
+     "file": "usa-sparks-in-apartman1-03-kupatilo.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-apt1-04-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-apartman1-03-kupatilo-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-apt1-03.webp",
+     "file": "usa-sparks-in-apartman1-05-kupatilo.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-apt1-03-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-apartman1-05-kupatilo-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-apt1-05.webp",
+     "file": "usa-sparks-in-apartman4-01.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-apt1-05-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-apartman4-01-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-apt4-01.webp",
+     "file": "usa-sparks-in-apartman4-02.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-apt4-01-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-apartman4-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-apt4-02.webp",
+     "file": "usa-sparks-in-apartman4-03.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600
+      1080
      ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-apt4-02-full.webp",
-     "wm": false
-    },
-    {
-     "file": "usa-sparks-apt4-03.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-apt4-03-full.webp",
+     "w": 1376,
+     "h": 768,
+     "full": "usa-sparks-in-apartman4-03-full.webp",
      "wm": false
     }
    ],

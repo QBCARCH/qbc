@@ -173,6 +173,12 @@ function pickHero(projects, def, promoDays, now = Date.now()) {
   }).sort((a, b) => Date.parse(b.added) - Date.parse(a.added))[0];
   return fresh || def;
 }
+// Beleske olovkom preko naslovne slike projekta (p.annot, vidi CLAUDE.md); prazno ako ih projekat nema.
+function annotHtml(p) {
+  const h = p.hero || p.cover;
+  if (!p.annot || !p.annot.length || !h || !h.w || !h.h) return '';
+  return `<div class="phero__annot" data-h="${Math.round((1366 * h.h) / h.w)}" data-annot="${esc(JSON.stringify(p.annot))}" aria-hidden="true"></div>`;
+}
 function heroCredit(p, base) {
   return `<a class="hero__credit" href="${base}work/${p.slug}.html">${esc(p.title)} / ${esc(p.year)} ↗</a>`;
 }
@@ -535,7 +541,7 @@ export function buildSite(data, sources, { all = false } = {}) {
         DESC: esc(metaDesc(p, lang)), OG_IMAGE: ogUrl(p.hero), LD: projectLd(p, lang),
         TITLE_TEXT: esc(p.title), YEAR: esc(p.year), FACTS: facts(p, lang),
         LOC_YEAR: esc([tr(p, 'location', lang), p.year].filter(Boolean).join(', ')),
-        HERO_IMG: img(p.hero, { root: depth, sizes: '100vw', alt: altOf(p, lang), eager: true, want: 2000 }),
+        HERO_IMG: img(p.hero, { root: depth, sizes: '100vw', alt: altOf(p, lang), eager: true, want: 2000 }) + annotHtml(p),
         GAL_CLASS: p.dark ? ' pgal--dark' : '', DESCRIPTION: cleanRich(tr(p, 'description', lang)), GALLERY: gallery(p, lang, depth), DRAWINGS: drawingsHtml(p, lang, depth),
         NEXT: nextProject(p, projects, lang, depth), PREV: prevProject(p, projects, lang),
       });

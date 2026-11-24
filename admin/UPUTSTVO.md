@@ -25,6 +25,10 @@ Slike se automatski pretvaraju u WebP i smanjuju u više veličina (500 do 3200 
 
 Ako je slika uža od 2400 px, admin te upozori: preko celog ekrana takva slika deluje mekano. Ako istu sliku dodaš dvaput, admin je preskoči.
 
+## Beleške olovkom na naslovnoj slici projekta
+
+Na vrhu stranice projekta preko velike slike docrtavaju se kratke beleške, ose i kote, kao da je arhitekta skicirao preko rendera. Admin tu ništa ne menja i čuva ih pri svakom snimanju. Beleške za novi projekat pravi Claude kad se projekat doda. Ako zameniš veliku sliku projekta, javi Claude-u da beleške napravi iznova, jer su vezane za tu sliku.
+
 ## Slike na početnoj
 
 Velika slika na vrhu bira se pri svakom otvaranju stranice, među glavnim slikama projekata, i nikad nije ista kao prošli put. Prvih 21 dan posle dodavanja novi projekat se pojavljuje češće. Izbor pravi mala skripta na samom mestu slike, pa se stranica i dalje brzo otvara.

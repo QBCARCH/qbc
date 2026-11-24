@@ -1663,7 +1663,7 @@
    ],
    "year": "2025",
    "cover": {
-    "file": "divcibare-01a.webp",
+    "file": "divcibare-02b.webp",
     "widths": [
      500,
      800,
@@ -1671,13 +1671,13 @@
     ],
     "w": 1376,
     "h": 768,
-    "full": "divcibare-01a-full.webp",
+    "full": "divcibare-02b-full.webp",
     "wm": false,
-    "og": "divcibare-01a-og.jpg",
-    "sketch": "divcibare-01a-sketch.json"
+    "og": "divcibare-02b-og.jpg",
+    "sketch": "divcibare-02b-sketch.json"
    },
    "thumb": {
-    "file": "divcibare-01a.webp",
+    "file": "divcibare-02b.webp",
     "widths": [
      500,
      800,
@@ -1685,13 +1685,13 @@
     ],
     "w": 1376,
     "h": 768,
-    "full": "divcibare-01a-full.webp",
+    "full": "divcibare-02b-full.webp",
     "wm": false,
-    "og": "divcibare-01a-og.jpg",
-    "sketch": "divcibare-01a-sketch.json"
+    "og": "divcibare-02b-og.jpg",
+    "sketch": "divcibare-02b-sketch.json"
    },
    "hero": {
-    "file": "divcibare-01a.webp",
+    "file": "divcibare-02b.webp",
     "widths": [
      500,
      800,
@@ -1699,15 +1699,15 @@
     ],
     "w": 1376,
     "h": 768,
-    "full": "divcibare-01a-full.webp",
+    "full": "divcibare-02b-full.webp",
     "wm": false,
-    "og": "divcibare-01a-og.jpg",
-    "sketch": "divcibare-01a-sketch.json"
+    "og": "divcibare-02b-og.jpg",
+    "sketch": "divcibare-02b-sketch.json"
    },
    "description": "<p>On a mountain site in Divčibare, a family house and a guest house offer a contemporary interpretation of the traditional mountain retreat. Siberian larch and anthracite steel give the buildings warmth and a sharp modern outline, and place them calmly among the surrounding trees.</p><p>The main house is organised around daylight and open space: three-metre ceilings, a living area centred on a fireplace, and a lower-level SPA and wellness zone that opens onto an outdoor terrace. The guest house follows the same approach, with an open-plan layout, its own sauna and a sleeping gallery.</p><p>Both buildings are well insulated, with underfloor heating powered by heat pumps and an integrated smart home system.</p>",
    "gallery": [
     {
-     "file": "divcibare-01a.webp",
+     "file": "divcibare-01b.webp",
      "widths": [
       500,
       800,
@@ -1715,7 +1715,7 @@
      ],
      "w": 1376,
      "h": 768,
-     "full": "divcibare-01a-full.webp",
+     "full": "divcibare-01b-full.webp",
      "wm": false,
      "plan": {
       "file": "skica-div-p25.webp",
@@ -1741,18 +1741,6 @@
      },
      "plan_label": "Upper ground floor",
      "plan_label_sr": "Visoko prizemlje"
-    },
-    {
-     "file": "divcibare-01b.webp",
-     "widths": [
-      500,
-      800,
-      1080
-     ],
-     "w": 1376,
-     "h": 768,
-     "full": "divcibare-01b-full.webp",
-     "wm": false
     },
     {
      "file": "divcibare-02a.webp",

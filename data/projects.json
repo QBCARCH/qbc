@@ -442,17 +442,17 @@
    ]
   },
   {
-   "slug": "villa-basketball-court-boston-usa",
-   "title": "Villa with Basketball Court, Boston",
+   "slug": "celtics-event-center-boston-usa",
+   "title": "Celtics Event Center, Boston",
    "year": "2023",
    "services": [
     "1. Conceptual & Schematic Design",
     "5. Interior Architecture & Custom Detailing",
     "7. Architectural Visualisation"
    ],
-   "description": "<p>A private villa near Boston built around a full-size basketball court. Next to the court hall and below it are a gym, a boxing and MMA room, a pool with a spa, a games room with a restaurant kitchen, a garage and apartments. We worked on it from the first volume studies in November 2022 to the final renders in June 2023.</p><p>The building is two gabled volumes in dark timber on a stone base that steps down with the slope. The court hall takes the long ridge, and its glazed gable end faces the parking. The pool opens to a terrace on the garden side, and the roofs of the lower floors are used as balconies.</p><p>Every room has its own palette. The court is dark paneling with a pale wood floor and the city name set into it. The gym is warm wood and brick with amber light coves. The games room and restaurant combine grey upholstery with red backlit shelves and a bonsai in the middle of the room. The apartments are quieter, with marble bathrooms and bedrooms under the roof pitch.</p>",
+   "description": "<p>Celtics Event Center in Boston is built around a full-size basketball court. Next to the court hall and below it are a gym, a boxing and MMA room, a pool with a spa, a games room with a restaurant kitchen, a garage and apartments. We worked on it from the first volume studies in November 2022 to the final renders in June 2023.</p><p>The building is two gabled volumes in dark timber on a stone base that steps down with the slope. The court hall takes the long ridge, and its glazed gable end faces the parking. The pool opens to a terrace on the garden side, and the roofs of the lower floors are used as balconies.</p><p>Every room has its own palette. The court is dark paneling with a pale wood floor and the city name set into it. The gym is warm wood and brick with amber light coves. The games room and restaurant combine grey upholstery with red backlit shelves and a bonsai in the middle of the room. The apartments are quieter, with marble bathrooms and bedrooms under the roof pitch.</p>",
    "cover": {
-    "file": "usa-sparks-ext-02.webp",
+    "file": "usa-sparks-day-01.webp",
     "widths": [
      500,
      800,
@@ -461,15 +461,13 @@
     ],
     "w": 2000,
     "h": 1125,
-    "full": "usa-sparks-ext-02-full.webp",
+    "full": "usa-sparks-day-01-full.webp",
     "wm": false,
-    "part": "Building",
-    "part_sr": "Objekat",
-    "sketch": "usa-sparks-ext-02-sketch.json",
-    "og": "usa-sparks-ext-02-og.jpg"
+    "og": "usa-sparks-day-01-og.jpg",
+    "sketch": "usa-sparks-day-01-sketch.json"
    },
    "thumb": {
-    "file": "usa-sparks-ext-02.webp",
+    "file": "usa-sparks-day-01.webp",
     "widths": [
      500,
      800,
@@ -478,15 +476,13 @@
     ],
     "w": 2000,
     "h": 1125,
-    "full": "usa-sparks-ext-02-full.webp",
+    "full": "usa-sparks-day-01-full.webp",
     "wm": false,
-    "part": "Building",
-    "part_sr": "Objekat",
-    "sketch": "usa-sparks-ext-02-sketch.json",
-    "og": "usa-sparks-ext-02-og.jpg"
+    "og": "usa-sparks-day-01-og.jpg",
+    "sketch": "usa-sparks-day-01-sketch.json"
    },
    "hero": {
-    "file": "usa-sparks-ext-02.webp",
+    "file": "usa-sparks-day-01.webp",
     "widths": [
      500,
      800,
@@ -495,16 +491,14 @@
     ],
     "w": 2000,
     "h": 1125,
-    "full": "usa-sparks-ext-02-full.webp",
+    "full": "usa-sparks-day-01-full.webp",
     "wm": false,
-    "part": "Building",
-    "part_sr": "Objekat",
-    "sketch": "usa-sparks-ext-02-sketch.json",
-    "og": "usa-sparks-ext-02-og.jpg"
+    "og": "usa-sparks-day-01-og.jpg",
+    "sketch": "usa-sparks-day-01-sketch.json"
    },
    "gallery": [
     {
-     "file": "usa-sparks-ext-02.webp",
+     "file": "usa-sparks-day-01.webp",
      "widths": [
       500,
       800,
@@ -513,15 +507,15 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-ext-02-full.webp",
+     "full": "usa-sparks-day-01-full.webp",
      "wm": false,
+     "og": "usa-sparks-day-01-og.jpg",
      "part": "Building",
      "part_sr": "Objekat",
-     "sketch": "usa-sparks-ext-02-sketch.json",
-     "og": "usa-sparks-ext-02-og.jpg"
+     "sketch": "usa-sparks-day-01-sketch.json"
     },
     {
-     "file": "usa-sparks-ext-03.webp",
+     "file": "usa-sparks-day-02.webp",
      "widths": [
       500,
       800,
@@ -530,11 +524,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-ext-03-full.webp",
+     "full": "usa-sparks-day-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ext-04.webp",
+     "file": "usa-sparks-day-03.webp",
      "widths": [
       500,
       800,
@@ -543,11 +537,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-ext-04-full.webp",
+     "full": "usa-sparks-day-03-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ext-05.webp",
+     "file": "usa-sparks-day-04.webp",
      "widths": [
       500,
       800,
@@ -556,11 +550,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-ext-05-full.webp",
+     "full": "usa-sparks-day-04-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ext-06.webp",
+     "file": "usa-sparks-day-05.webp",
      "widths": [
       500,
       800,
@@ -569,11 +563,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-ext-06-full.webp",
+     "full": "usa-sparks-day-05-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ext-07.webp",
+     "file": "usa-sparks-day-06.webp",
      "widths": [
       500,
       800,
@@ -582,11 +576,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-ext-07-full.webp",
+     "full": "usa-sparks-day-06-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ext-08.webp",
+     "file": "usa-sparks-day-07.webp",
      "widths": [
       500,
       800,
@@ -595,11 +589,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-ext-08-full.webp",
+     "full": "usa-sparks-day-07-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ext-09.webp",
+     "file": "usa-sparks-day-08.webp",
      "widths": [
       500,
       800,
@@ -608,11 +602,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-ext-09-full.webp",
+     "full": "usa-sparks-day-08-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-ext-10.webp",
+     "file": "usa-sparks-day-09.webp",
      "widths": [
       500,
       800,
@@ -621,7 +615,87 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-ext-10-full.webp",
+     "full": "usa-sparks-day-09-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-day-10.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-day-10-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-day-11.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-day-11-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-day-12.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-day-12-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-day-13.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-day-13-full.webp",
+     "wm": false,
+     "room": "Cutaway views",
+     "room_sr": "Preseci kroz objekat"
+    },
+    {
+     "file": "usa-sparks-day-14.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-day-14-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-day-15.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-day-15-full.webp",
      "wm": false
     },
     {
@@ -1227,12 +1301,12 @@
    "status": "Concept design, 2023",
    "credit": "Renders by QBCARCHITECTS, 2023",
    "added": "2026-11-24",
-   "type": "Villa with sports facilities",
+   "type": "Event center with basketball court and apartments",
    "sr": {
-    "type": "Vila sa sportskim sadržajima",
+    "type": "Event centar sa košarkaškim terenom i apartmanima",
     "location": "Boston, SAD",
     "status": "Idejno rešenje, 2023",
-    "description": "<p>Privatna vila kod Bostona izgrađena oko košarkaškog terena pune veličine. Uz halu i ispod nje su teretana, prostorija za boks i MMA, bazen sa spa zonom, igraonica sa kuhinjom restorana, garaža i apartmani. Radili smo na njoj od prvih studija volumena u novembru 2022. do završnih rendera u junu 2023.</p><p>Objekat čine dva dvovodna volumena u tamnom drvetu na kamenom postolju koje prati pad terena. Hala sa terenom dobija dugi sleme, a njen ostakljeni zabat okrenut je parkingu. Bazen se otvara na terasu sa strane bašte, a krovovi nižih etaža koriste se kao balkoni.</p><p>Svaka prostorija ima svoju paletu. Teren je tamna oplata sa svetlim drvenim podom u koji je upisano ime grada. Teretana je toplo drvo i cigla sa jantarnim svetlosnim kovertama. Igraonica i restoran spajaju sivu tapaciriju sa crvenim rafovima sa pozadinskim osvetljenjem i bonsaijem usred prostorije. Apartmani su mirniji, sa kupatilima u mermeru i spavaćim sobama pod kosinom krova.</p>"
+    "description": "<p>Celtics Event Center u Bostonu izgrađen je oko košarkaškog terena pune veličine. Uz halu i ispod nje su teretana, prostorija za boks i MMA, bazen sa spa zonom, igraonica sa kuhinjom restorana, garaža i apartmani. Radili smo na njoj od prvih studija volumena u novembru 2022. do završnih rendera u junu 2023.</p><p>Objekat čine dva dvovodna volumena u tamnom drvetu na kamenom postolju koje prati pad terena. Hala sa terenom dobija dugi sleme, a njen ostakljeni zabat okrenut je parkingu. Bazen se otvara na terasu sa strane bašte, a krovovi nižih etaža koriste se kao balkoni.</p><p>Svaka prostorija ima svoju paletu. Teren je tamna oplata sa svetlim drvenim podom u koji je upisano ime grada. Teretana je toplo drvo i cigla sa jantarnim svetlosnim kovertama. Igraonica i restoran spajaju sivu tapaciriju sa crvenim rafovima sa pozadinskim osvetljenjem i bonsaijem usred prostorije. Apartmani su mirniji, sa kupatilima u mermeru i spavaćim sobama pod kosinom krova.</p>"
    },
    "drawings": [
     {

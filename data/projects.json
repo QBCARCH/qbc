@@ -1739,7 +1739,8 @@
       "full": "skica-div-p25-sr-full.webp",
       "wm": false
      },
-     "plan_label": "Plan"
+     "plan_label": "Upper ground floor",
+     "plan_label_sr": "Visoko prizemlje"
     },
     {
      "file": "divcibare-01b.webp",
@@ -1954,7 +1955,8 @@
       "full": "skica-div-g37-sr-full.webp",
       "wm": false
      },
-     "plan_label": "Plan"
+     "plan_label": "Ground floor",
+     "plan_label_sr": "Prizemlje"
     },
     {
      "file": "divcibare-10b.webp",

@@ -3444,64 +3444,60 @@
    ],
    "year": "2024",
    "cover": {
-    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "file": "bc3721-cover.webp",
     "widths": [
      500,
      800,
-     1080,
-     1600
+     1080
     ],
-    "w": 1754,
-    "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
-    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
-    "wm": true,
-    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
+    "w": 1376,
+    "h": 768,
+    "full": "bc3721-cover-full.webp",
+    "wm": false,
+    "og": "bc3721-cover-og.jpg",
+    "sketch": "bc3721-cover-sketch.json"
    },
    "thumb": {
-    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "file": "bc3721-cover.webp",
     "widths": [
      500,
      800,
-     1080,
-     1600
+     1080
     ],
-    "w": 1754,
-    "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
-    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
-    "wm": true,
-    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
+    "w": 1376,
+    "h": 768,
+    "full": "bc3721-cover-full.webp",
+    "wm": false,
+    "og": "bc3721-cover-og.jpg",
+    "sketch": "bc3721-cover-sketch.json"
    },
    "hero": {
-    "file": "6720d06eb4b3d3f71950baf1_OSNOVA-01.webp",
+    "file": "bc3721-cover.webp",
     "widths": [
      500,
      800,
-     1080,
-     1600
+     1080
     ],
-    "w": 1754,
-    "h": 1240,
-    "og": "6720d06eb4b3d3f71950baf1_OSNOVA-01-og.jpg",
-    "full": "6720d06eb4b3d3f71950baf1_OSNOVA-01-full.webp",
-    "wm": true,
-    "sketch": "6720d06eb4b3d3f71950baf1_OSNOVA-01-sketch.json"
+    "w": 1376,
+    "h": 768,
+    "full": "bc3721-cover-full.webp",
+    "wm": false,
+    "og": "bc3721-cover-og.jpg",
+    "sketch": "bc3721-cover-sketch.json"
    },
    "description": "<p>A single-storey family house in a rural setting, made of two volumes in the shape of the traditional gabled house. The white rendered wing holds the private rooms, while the dark timber-clad wing holds the living area and opens to a large covered terrace under a deep gable frame lined with wood.</p><p>The two wings meet at a stone-clad entrance, which separates the day and night zones and frames a small courtyard. Simple forms and natural materials make the house feel at home in the landscape while giving it a clearly contemporary character.</p>",
    "gallery": [
     {
-     "file": "672a1b66c51068306917e55c_Image5-enhanced (Large).webp",
+     "file": "bc3721-01.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66c51068306917e55c_Image5-enhanced (Large)-og.jpg",
-     "full": "672a1b66c51068306917e55c_Image5-enhanced (Large)-full.webp",
-     "wm": true,
+     "w": 1376,
+     "h": 768,
+     "full": "bc3721-01-full.webp",
+     "wm": false,
      "plan": {
       "file": "6afbb104a1b2c3_osnova-bc-3721.jpg",
       "widths": [
@@ -3515,109 +3511,100 @@
      "plan_label": "Ground floor"
     },
     {
-     "file": "672a1b668cbb8379eb716617_Image9-enhanced (Large).webp",
+     "file": "bc3721-02.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-og.jpg",
-     "full": "672a1b668cbb8379eb716617_Image9-enhanced (Large)-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "bc3721-02-full.webp",
+     "wm": false
     },
     {
-     "file": "672a1b6651adb46944e044a7_Image24-enhanced (Large).webp",
+     "file": "bc3721-03.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-og.jpg",
-     "full": "672a1b6651adb46944e044a7_Image24-enhanced (Large)-full.webp",
-     "wm": true
+     "w": 1200,
+     "h": 896,
+     "full": "bc3721-03-full.webp",
+     "wm": false
     },
     {
-     "file": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large).webp",
+     "file": "bc3721-04.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-og.jpg",
-     "full": "672a1b66e07b4e41fdc13e66_Image17-enhanced (Large)-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "bc3721-04-full.webp",
+     "wm": false
     },
     {
-     "file": "672a1b66d346501810784814_Image6-enhanced (Large).webp",
+     "file": "bc3721-05.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66d346501810784814_Image6-enhanced (Large)-og.jpg",
-     "full": "672a1b66d346501810784814_Image6-enhanced (Large)-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "bc3721-05-full.webp",
+     "wm": false
     },
     {
-     "file": "672a1b67de171f51707390db_Image7-enhanced (Large).webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b67de171f51707390db_Image7-enhanced (Large)-og.jpg",
-     "full": "672a1b67de171f51707390db_Image7-enhanced (Large)-full.webp",
-     "wm": true
-    },
-    {
-     "file": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large).webp",
+     "file": "bc3721-06.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-og.jpg",
-     "full": "672a1b66546bba8f15cfe9b1_Image10-enhanced (Large)-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "bc3721-06-full.webp",
+     "wm": false
     },
     {
-     "file": "672a1b6709da67d01caf7827_Image11-enhanced (Large).webp",
+     "file": "bc3721-07.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-og.jpg",
-     "full": "672a1b6709da67d01caf7827_Image11-enhanced (Large)-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "bc3721-07-full.webp",
+     "wm": false
     },
     {
-     "file": "672a1b663f1d66fa04335876_Image13-enhanced (Large).webp",
+     "file": "bc3721-08.webp",
      "widths": [
       500,
       800,
       1080
      ],
-     "w": 1920,
-     "h": 1080,
-     "og": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-og.jpg",
-     "full": "672a1b663f1d66fa04335876_Image13-enhanced (Large)-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "bc3721-08-full.webp",
+     "wm": false
+    },
+    {
+     "file": "bc3721-09.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "bc3721-09-full.webp",
+     "wm": false
     }
    ],
    "type": "Residential, house",

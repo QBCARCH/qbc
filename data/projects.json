@@ -703,47 +703,6 @@
      "wm": false
     },
     {
-     "file": "usa-sparks-day-13.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-day-13-full.webp",
-     "wm": false,
-     "room": "Cutaway views",
-     "room_sr": "Preseci kroz objekat"
-    },
-    {
-     "file": "usa-sparks-day-14.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-day-14-full.webp",
-     "wm": false
-    },
-    {
-     "file": "usa-sparks-day-15.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-day-15-full.webp",
-     "wm": false
-    },
-    {
      "file": "usa-sparks-court-01.webp",
      "widths": [
       500,

@@ -510,9 +510,9 @@
      "full": "usa-sparks-day-01-full.webp",
      "wm": false,
      "og": "usa-sparks-day-01-og.jpg",
+     "sketch": "usa-sparks-day-01-sketch.json",
      "part": "Building",
-     "part_sr": "Objekat",
-     "sketch": "usa-sparks-day-01-sketch.json"
+     "part_sr": "Objekat"
     },
     {
      "file": "usa-sparks-day-02.webp",
@@ -658,6 +658,32 @@
      "wm": false
     },
     {
+     "file": "usa-sparks-ext-sunset.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-sunset-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-ext-top.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-ext-top-full.webp",
+     "wm": false
+    },
+    {
      "file": "usa-sparks-day-13.webp",
      "widths": [
       500,
@@ -768,6 +794,259 @@
      "wm": false
     },
     {
+     "file": "usa-sparks-court-06.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-court-06-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mliv-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-01-full.webp",
+     "wm": false,
+     "room": "Master apartment, living room",
+     "room_sr": "Master apartman, dnevni boravak"
+    },
+    {
+     "file": "usa-sparks-mliv-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mliv-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mliv-04.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-04-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mliv-05.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-05-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mliv-06.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-06-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mliv-07.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-07-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mliv-08.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-08-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mliv-09.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-09-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mliv-10.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-10-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mliv-11.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mliv-11-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mbed-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mbed-01-full.webp",
+     "wm": false,
+     "room": "Master apartment, bedroom",
+     "room_sr": "Master apartman, spavaća soba"
+    },
+    {
+     "file": "usa-sparks-mbed-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mbed-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mbed-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mbed-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mbath-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mbath-01-full.webp",
+     "wm": false,
+     "room": "Master apartment, bathrooms",
+     "room_sr": "Master apartman, kupatila"
+    },
+    {
+     "file": "usa-sparks-mbath-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mbath-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mbath-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mbath-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-mbath-04.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-mbath-04-full.webp",
+     "wm": false
+    },
+    {
      "file": "usa-sparks-games-01.webp",
      "widths": [
       500,
@@ -783,6 +1062,32 @@
      "room_sr": "Igraonica i restoran"
     },
     {
+     "file": "usa-sparks-games-05.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-games-05-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-games-06.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1124,
+     "full": "usa-sparks-games-06-full.webp",
+     "wm": false
+    },
+    {
      "file": "usa-sparks-games-02.webp",
      "widths": [
       500,
@@ -793,19 +1098,6 @@
      "w": 2000,
      "h": 1125,
      "full": "usa-sparks-games-02-full.webp",
-     "wm": false
-    },
-    {
-     "file": "usa-sparks-games-03.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-games-03-full.webp",
      "wm": false
     },
     {
@@ -822,7 +1114,7 @@
      "wm": false
     },
     {
-     "file": "usa-sparks-gym-01.webp",
+     "file": "usa-sparks-games-08.webp",
      "widths": [
       500,
       800,
@@ -831,26 +1123,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-gym-01-full.webp",
-     "wm": false,
-     "room": "Gym",
-     "room_sr": "Teretana"
-    },
-    {
-     "file": "usa-sparks-gym-02.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-gym-02-full.webp",
+     "full": "usa-sparks-games-08-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-gym-03.webp",
+     "file": "usa-sparks-games-07.webp",
      "widths": [
       500,
       800,
@@ -859,7 +1136,7 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-gym-03-full.webp",
+     "full": "usa-sparks-games-07-full.webp",
      "wm": false
     },
     {
@@ -874,8 +1151,8 @@
      "h": 1125,
      "full": "usa-sparks-pool-01-full.webp",
      "wm": false,
-     "room": "Pool and sauna",
-     "room_sr": "Bazen i sauna"
+     "room": "Spa zone and gym",
+     "room_sr": "Spa zona i teretana"
     },
     {
      "file": "usa-sparks-pool-02.webp",
@@ -930,7 +1207,7 @@
      "wm": false
     },
     {
-     "file": "usa-sparks-master-01.webp",
+     "file": "usa-sparks-gym-01.webp",
      "widths": [
       500,
       800,
@@ -939,26 +1216,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-master-01-full.webp",
-     "wm": false,
-     "room": "Master bedroom",
-     "room_sr": "Master spavaća soba"
-    },
-    {
-     "file": "usa-sparks-master-02.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-master-02-full.webp",
+     "full": "usa-sparks-gym-01-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-master-03.webp",
+     "file": "usa-sparks-gym-02.webp",
      "widths": [
       500,
       800,
@@ -967,11 +1229,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-master-03-full.webp",
+     "full": "usa-sparks-gym-02-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-bath-01.webp",
+     "file": "usa-sparks-gym-03.webp",
      "widths": [
       500,
       800,
@@ -980,26 +1242,11 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-bath-01-full.webp",
-     "wm": false,
-     "room": "Bathrooms",
-     "room_sr": "Kupatila"
-    },
-    {
-     "file": "usa-sparks-bath-02.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600
-     ],
-     "w": 2000,
-     "h": 1125,
-     "full": "usa-sparks-bath-02-full.webp",
+     "full": "usa-sparks-gym-03-full.webp",
      "wm": false
     },
     {
-     "file": "usa-sparks-apt1-03.webp",
+     "file": "usa-sparks-gym-04.webp",
      "widths": [
       500,
       800,
@@ -1008,7 +1255,7 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-apt1-03-full.webp",
+     "full": "usa-sparks-gym-04-full.webp",
      "wm": false
     },
     {
@@ -1023,8 +1270,8 @@
      "h": 1125,
      "full": "usa-sparks-apt1-01-full.webp",
      "wm": false,
-     "room": "Apartment, bedroom suite",
-     "room_sr": "Apartman, spavaća soba"
+     "room": "Other apartments",
+     "room_sr": "Ostali apartmani"
     },
     {
      "file": "usa-sparks-apt1-02.webp",
@@ -1053,6 +1300,32 @@
      "wm": false
     },
     {
+     "file": "usa-sparks-apt1-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt1-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt1-05.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt1-05-full.webp",
+     "wm": false
+    },
+    {
      "file": "usa-sparks-apt4-01.webp",
      "widths": [
       500,
@@ -1063,9 +1336,7 @@
      "w": 2000,
      "h": 1125,
      "full": "usa-sparks-apt4-01-full.webp",
-     "wm": false,
-     "room": "Apartment, duplex",
-     "room_sr": "Apartman, dupleks"
+     "wm": false
     },
     {
      "file": "usa-sparks-apt4-02.webp",

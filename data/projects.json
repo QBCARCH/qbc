@@ -710,10 +710,23 @@
      "h": 1125,
      "full": "usa-sparks-court-01-full.webp",
      "wm": false,
-     "part": "Interior",
-     "part_sr": "Enterijer",
      "room": "Basketball court",
-     "room_sr": "Košarkaška hala"
+     "room_sr": "Košarkaška hala",
+     "part": "Interior",
+     "part_sr": "Enterijer"
+    },
+    {
+     "file": "usa-sparks-court-05.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-court-05-full.webp",
+     "wm": false
     },
     {
      "file": "usa-sparks-court-02.webp",
@@ -850,6 +863,155 @@
      "wm": false
     },
     {
+     "file": "usa-sparks-pool-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-pool-01-full.webp",
+     "wm": false,
+     "room": "Pool and sauna",
+     "room_sr": "Bazen i sauna"
+    },
+    {
+     "file": "usa-sparks-pool-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-pool-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-sauna-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-sauna-01-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-sauna-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-sauna-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-sauna-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-sauna-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-master-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-master-01-full.webp",
+     "wm": false,
+     "room": "Master bedroom",
+     "room_sr": "Master spavaća soba"
+    },
+    {
+     "file": "usa-sparks-master-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-master-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-master-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-master-03-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-bath-01.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-bath-01-full.webp",
+     "wm": false,
+     "room": "Bathrooms",
+     "room_sr": "Kupatila"
+    },
+    {
+     "file": "usa-sparks-bath-02.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-bath-02-full.webp",
+     "wm": false
+    },
+    {
+     "file": "usa-sparks-apt1-03.webp",
+     "widths": [
+      500,
+      800,
+      1080,
+      1600
+     ],
+     "w": 2000,
+     "h": 1125,
+     "full": "usa-sparks-apt1-03-full.webp",
+     "wm": false
+    },
+    {
      "file": "usa-sparks-apt1-01.webp",
      "widths": [
       500,
@@ -878,7 +1040,7 @@
      "wm": false
     },
     {
-     "file": "usa-sparks-apt1-03.webp",
+     "file": "usa-sparks-apt1-04.webp",
      "widths": [
       500,
       800,
@@ -887,7 +1049,7 @@
      ],
      "w": 2000,
      "h": 1125,
-     "full": "usa-sparks-apt1-03-full.webp",
+     "full": "usa-sparks-apt1-04-full.webp",
      "wm": false
     },
     {

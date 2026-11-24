@@ -1663,77 +1663,60 @@
    ],
    "year": "2025",
    "cover": {
-    "file": "6aa2845f582915882762379c_Image73.webp",
+    "file": "divcibare-01a.webp",
     "widths": [
      500,
      800,
-     1080,
-     1600,
-     2000,
-     2600,
-     3200
+     1080
     ],
-    "w": 3840,
-    "h": 2160,
-    "og": "6aa2845f582915882762379c_Image73-og.jpg",
-    "full": "6aa2845f582915882762379c_Image73-full.webp",
-    "wm": true,
-    "sketch": "6aa2845f582915882762379c_Image73-sketch.json"
+    "w": 1376,
+    "h": 768,
+    "full": "divcibare-01a-full.webp",
+    "wm": false,
+    "og": "divcibare-01a-og.jpg",
+    "sketch": "divcibare-01a-sketch.json"
    },
    "thumb": {
-    "file": "6aa2845f582915882762379c_Image73.webp",
+    "file": "divcibare-01a.webp",
     "widths": [
      500,
      800,
-     1080,
-     1600,
-     2000,
-     2600,
-     3200
+     1080
     ],
-    "w": 3840,
-    "h": 2160,
-    "og": "6aa2845f582915882762379c_Image73-og.jpg",
-    "full": "6aa2845f582915882762379c_Image73-full.webp",
-    "wm": true,
-    "sketch": "6aa2845f582915882762379c_Image73-sketch.json"
+    "w": 1376,
+    "h": 768,
+    "full": "divcibare-01a-full.webp",
+    "wm": false,
+    "og": "divcibare-01a-og.jpg",
+    "sketch": "divcibare-01a-sketch.json"
    },
    "hero": {
-    "file": "6aa2845f582915882762379c_Image73.webp",
+    "file": "divcibare-01a.webp",
     "widths": [
      500,
      800,
-     1080,
-     1600,
-     2000,
-     2600,
-     3200
+     1080
     ],
-    "w": 3840,
-    "h": 2160,
-    "og": "6aa2845f582915882762379c_Image73-og.jpg",
-    "full": "6aa2845f582915882762379c_Image73-full.webp",
-    "wm": true,
-    "sketch": "6aa2845f582915882762379c_Image73-sketch.json"
+    "w": 1376,
+    "h": 768,
+    "full": "divcibare-01a-full.webp",
+    "wm": false,
+    "og": "divcibare-01a-og.jpg",
+    "sketch": "divcibare-01a-sketch.json"
    },
    "description": "<p>On a mountain site in Divčibare, a family house and a guest house offer a contemporary interpretation of the traditional mountain retreat. Siberian larch and anthracite steel give the buildings warmth and a sharp modern outline, and place them calmly among the surrounding trees.</p><p>The main house is organised around daylight and open space: three-metre ceilings, a living area centred on a fireplace, and a lower-level SPA and wellness zone that opens onto an outdoor terrace. The guest house follows the same approach, with an open-plan layout, its own sauna and a sleeping gallery.</p><p>Both buildings are well insulated, with underfloor heating powered by heat pumps and an integrated smart home system.</p>",
    "gallery": [
     {
-     "file": "6aa2849bbd2b340604672c09_Image69.webp",
+     "file": "divcibare-01a.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849bbd2b340604672c09_Image69-og.jpg",
-     "full": "6aa2849bbd2b340604672c09_Image69-full.webp",
-     "wm": true,
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-01a-full.webp",
+     "wm": false,
      "plan": {
       "file": "skica-div-p25.webp",
       "widths": [
@@ -1745,7 +1728,6 @@
       "full": "skica-div-p25-full.webp",
       "wm": false
      },
-     "plan_label": "Plan",
      "plan_sr": {
       "file": "skica-div-p25-sr.webp",
       "widths": [
@@ -1756,314 +1738,200 @@
       "h": 2927,
       "full": "skica-div-p25-sr-full.webp",
       "wm": false
-     }
+     },
+     "plan_label": "Plan"
     },
     {
-     "file": "6aa2849bf09a69f4dcc80c30_Image70.webp",
+     "file": "divcibare-01b.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849bf09a69f4dcc80c30_Image70-og.jpg",
-     "full": "6aa2849bf09a69f4dcc80c30_Image70-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-01b-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849e93cb646794f4d35a_Image71.webp",
+     "file": "divcibare-02a.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849e93cb646794f4d35a_Image71-og.jpg",
-     "full": "6aa2849e93cb646794f4d35a_Image71-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-02a-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2845f582915882762379c_Image73.webp",
+     "file": "divcibare-02b.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2845f582915882762379c_Image73-og.jpg",
-     "full": "6aa2845f582915882762379c_Image73-full.webp",
-     "wm": true,
-     "sketch": "6aa2845f582915882762379c_Image73-sketch.json"
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-02b-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849c0cfb37f0ee439bb7_Image72.webp",
+     "file": "divcibare-03a.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849c0cfb37f0ee439bb7_Image72-og.jpg",
-     "full": "6aa2849c0cfb37f0ee439bb7_Image72-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-03a-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2852a6100db41fc677e3c_Image89.webp",
+     "file": "divcibare-03b.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2852a6100db41fc677e3c_Image89-og.jpg",
-     "full": "6aa2852a6100db41fc677e3c_Image89-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-03b-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849c2672b1868d16331a_Image21.webp",
+     "file": "divcibare-04.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849c2672b1868d16331a_Image21-og.jpg",
-     "full": "6aa2849c2672b1868d16331a_Image21-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-04-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849d5eee4c05ba3e547d_Image85_000.webp",
+     "file": "divcibare-05a.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849d5eee4c05ba3e547d_Image85_000-og.jpg",
-     "full": "6aa2849d5eee4c05ba3e547d_Image85_000-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-05a-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849d0487e53474bfbe83_Image25.webp",
+     "file": "divcibare-05b.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849d0487e53474bfbe83_Image25-og.jpg",
-     "full": "6aa2849d0487e53474bfbe83_Image25-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-05b-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849d5eee4c05ba3e5482_Image82.webp",
+     "file": "divcibare-06.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849d5eee4c05ba3e5482_Image82-og.jpg",
-     "full": "6aa2849d5eee4c05ba3e5482_Image82-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-06-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849c5c8798acaa9f90fa_Image28.webp",
+     "file": "divcibare-07a.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849c5c8798acaa9f90fa_Image28-og.jpg",
-     "full": "6aa2849c5c8798acaa9f90fa_Image28-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-07a-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849d6100db41fc671a38_Image27_000.webp",
+     "file": "divcibare-07b.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849d6100db41fc671a38_Image27_000-og.jpg",
-     "full": "6aa2849d6100db41fc671a38_Image27_000-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-07b-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849d220840992be694d1_Image18.webp",
+     "file": "divcibare-08a.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849d220840992be694d1_Image18-og.jpg",
-     "full": "6aa2849d220840992be694d1_Image18-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-08a-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849e7b983d21eae27803_Image19.webp",
+     "file": "divcibare-08b.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849e7b983d21eae27803_Image19-og.jpg",
-     "full": "6aa2849e7b983d21eae27803_Image19-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-08b-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849e091ae5d0a7712d1c_Image74.webp",
+     "file": "divcibare-09a.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849e091ae5d0a7712d1c_Image74-og.jpg",
-     "full": "6aa2849e091ae5d0a7712d1c_Image74-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-09a-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849c5bad1f633cb71c67_Image80.webp",
+     "file": "divcibare-09b.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849c5bad1f633cb71c67_Image80-og.jpg",
-     "full": "6aa2849c5bad1f633cb71c67_Image80-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-09b-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849bf09a69f4dcc80c17_Image16.webp",
+     "file": "divcibare-10a.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849bf09a69f4dcc80c17_Image16-og.jpg",
-     "full": "6aa2849bf09a69f4dcc80c17_Image16-full.webp",
-     "wm": true
-    },
-    {
-     "file": "6aa2849ef09a69f4dcc80d8e_Image27.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
-     ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849ef09a69f4dcc80d8e_Image27-og.jpg",
-     "full": "6aa2849ef09a69f4dcc80d8e_Image27-full.webp",
-     "wm": true
-    },
-    {
-     "file": "6aa2849def8e3ac275e76443_Image79.webp",
-     "widths": [
-      500,
-      800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
-     ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849def8e3ac275e76443_Image79-og.jpg",
-     "full": "6aa2849def8e3ac275e76443_Image79-full.webp",
-     "wm": true,
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-10a-full.webp",
+     "wm": false,
      "plan": {
       "file": "skica-div-g37.webp",
       "widths": [
@@ -2089,38 +1957,328 @@
      "plan_label": "Plan"
     },
     {
-     "file": "6aa2849d5bad1f633cb71d29_Image77.webp",
+     "file": "divcibare-10b.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849d5bad1f633cb71d29_Image77-og.jpg",
-     "full": "6aa2849d5bad1f633cb71d29_Image77-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-10b-full.webp",
+     "wm": false
     },
     {
-     "file": "6aa2849ed42b40dc0a892a6e_Image76.webp",
+     "file": "divcibare-11a.webp",
      "widths": [
       500,
       800,
-      1080,
-      1600,
-      2000,
-      2600,
-      3200
+      1080
      ],
-     "w": 3840,
-     "h": 2160,
-     "og": "6aa2849ed42b40dc0a892a6e_Image76-og.jpg",
-     "full": "6aa2849ed42b40dc0a892a6e_Image76-full.webp",
-     "wm": true
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-11a-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-11b.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-11b-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-12a.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-12a-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-12b.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-12b-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-13a.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-13a-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-13b.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-13b-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-14a.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-14a-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-14b.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-14b-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-15a.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-15a-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-15b.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-15b-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-16a.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-16a-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-16b.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-16b-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-17a.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-17a-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-17b.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-17b-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-18.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-18-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-19a.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-19a-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-19b.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-19b-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-20a.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-20a-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-20b.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-20b-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-21a.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-21a-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-21b.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-21b-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-detalj-1.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-detalj-1-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-detalj-2.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-detalj-2-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-detalj-3.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-detalj-3-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-detalj-4.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-detalj-4-full.webp",
+     "wm": false
+    },
+    {
+     "file": "divcibare-detalj-5.webp",
+     "widths": [
+      500,
+      800,
+      1080
+     ],
+     "w": 1376,
+     "h": 768,
+     "full": "divcibare-detalj-5-full.webp",
+     "wm": false
     }
    ],
    "location": "Divčibare, Serbia",

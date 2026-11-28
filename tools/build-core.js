@@ -274,7 +274,8 @@ function worksReel(projects, lang, base, root) {
   return projects.map((p, i) =>
     `<a class="card" href="${base}work/${p.slug}.html">` +
     `<div class="card__img frame">${img(cover(p), { root, sizes: '(max-width: 760px) 78vw, 66vw', alt: altOf(p, lang), want: 1600 })}</div>` +
-    `<div class="card__meta"><span class="card__n label">${num(i)}</span><h3 class="card__t">${accentTitle(p.title)}</h3><span class="card__y label">${esc(p.year)}</span></div></a>`).join('');
+    `<div class="card__meta"><span class="card__n label">${num(i)}</span><h3 class="card__t">${accentTitle(p.title)}</h3><span class="card__y label">${esc(p.year)}</span>` +
+    (tr(p, 'status', lang) ? `<span class="card__s label">${esc([tr(p, 'type', lang), tr(p, 'status', lang)].filter(Boolean).join(' · '))}</span>` : '') + `</div></a>`).join('');
 }
 
 // data-img: mala slika projekta koja prati pokazivac nad redom (js: initPointer)

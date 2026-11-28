@@ -440,8 +440,8 @@
       });
       host.appendChild(svg);
       $$('path', svg).forEach((el) => { const len = el.getTotalLength(); el.style.strokeDasharray = len; el.style.strokeDashoffset = len; paths.push({ el, len, at: total }); total += len; });
-      // na samom vrhu je vec iscrtano prvih 14%, da stranica ne pocinje praznim papirom
-      if (prog() === 0) { const d = total * .14; paths.forEach(({ el, len, at }) => { el.style.strokeDashoffset = len * (1 - clamp((d - at) / len)); }); }
+      // na samom vrhu je vec iscrtano prvih 45%, da stranica ne pocinje praznim papirom
+      if (prog() === 0) { const d = total * .45; paths.forEach(({ el, len, at }) => { el.style.strokeDashoffset = len * (1 - clamp((d - at) / len)); }); }
       else paint();
       addEventListener('scroll', kick, { passive: true });
       addEventListener('resize', kick);

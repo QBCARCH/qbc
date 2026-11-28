@@ -247,7 +247,7 @@ function projectLd(p, lang) {
 const ratio = (im) => (im && im.w && im.h ? Math.min(2.4, Math.max(0.6, im.w / im.h)) : 1.5).toFixed(3);
 
 // opisni alt tekst: naslov i mesto, da slika znaci nesto i trazilicama i citacima ekrana
-const altOf = (p, lang) => [p.title, tr(p, 'location', lang)].filter(Boolean).join(', ');
+const altOf = (p, lang) => [p.title, ...String(tr(p, 'location', lang) || '').split(',').map((x) => x.trim()).filter((x) => x && !String(p.title).includes(x))].join(', ');
 const dataQ = (p, lang) => esc([p.title, p.year, tr(p, 'location', lang), tr(p, 'type', lang), ...(p.services || []).map((x) => svcName(x, lang))].filter(Boolean).join(' ').toLowerCase());
 
 // filteri na listi radova: vrsta (arhitektura / enterijer) i stanje (izvedeno / u izgradnji / projekat), iz engleskih polja
@@ -274,7 +274,8 @@ function worksReel(projects, lang, base, root) {
   return projects.map((p, i) =>
     `<a class="card" href="${base}work/${p.slug}.html">` +
     `<div class="card__img frame">${img(cover(p), { root, sizes: '(max-width: 760px) 78vw, 66vw', alt: altOf(p, lang), want: 1600 })}</div>` +
-    `<div class="card__meta"><span class="card__n label">${num(i)}</span><h3 class="card__t">${accentTitle(p.title)}</h3><span class="card__y label">${esc(p.year)}</span></div></a>`).join('');
+    `<div class="card__meta"><span class="card__n label">${num(i)}</span><h3 class="card__t">${accentTitle(p.title)}</h3><span class="card__y label">${esc(p.year)}</span>` +
+    (tr(p, 'status', lang) ? `<span class="card__s label">${esc([tr(p, 'type', lang), tr(p, 'status', lang)].filter(Boolean).join(' · '))}</span>` : '') + `</div></a>`).join('');
 }
 
 // data-img: mala slika projekta koja prati pokazivac nad redom (js: initPointer)
@@ -403,6 +404,18 @@ function drawingsHtml(p, lang, depth) {
   }).join('');
 }
 
+// pocetna: primer metoda, osnova prizemlja projekta u Trnavi (p.drawings); bez crteza ostaje samo link
+function homeCase(projects, lang, root) {
+  const sr = lang === 'sr';
+  const p = projects.find((x) => x.slug === 'trnava-25-51-1');
+  const it = p && p.drawings && p.drawings[0] && (p.drawings[0].items || [])[0];
+  const link = `<p><a class="btn" href="method.html#case"><span>${sr ? 'Pogledajte primer: Trnava' : 'See the example: Trnava'}</span><span class="btn__arrow" aria-hidden="true">→</span></a></p>`;
+  if (!it) return link;
+  const im = (sr && it.image_sr) || it.image;
+  const cap = sr ? 'Centar za događaje, Trnava. Osnova prizemlja nastala iz paterna mesta.' : 'Event Center, Trnava. The ground floor drawn from the patterns of the place.';
+  return `<figure class="pdraw__fig home-case">${img(im, { root, sizes: '(max-width: 900px) 100vw, 66vw', alt: cap, want: 1600 })}<figcaption class="label mute">${cap}</figcaption></figure>${link}`;
+}
+
 function nextProject(p, projects, lang, depth) {
   if (projects.length < 2) return '';
   const nx = projects[(projects.findIndex((x) => x.slug === p.slug) + 1) % projects.length];
@@ -523,13 +536,14 @@ export function buildSite(data, sources, { all = false } = {}) {
       ...site('index.html'), key: 'home', TITLE: home[0], DESC: home[1],
       HERO_IMG: heroPicker(projects, homeHero, data.promo_days ?? 21, lang === 'en' ? '' : '../', lang),
       HERO_CREDIT: heroCredit(homeHero, ''),
+      HOME_CASE: homeCase(projects, lang, lang === 'en' ? '' : '../'),
       HOME_WORKS: worksGrid(projects.slice(0, data.home_count ?? 4), lang, '', lang === 'en' ? '' : '../'),
       HOME_REEL: worksReel(projects.slice(0, data.home_count ?? 6), lang, '', lang === 'en' ? '' : '../'),
       HOME_COUNT: num((data.home_count ?? 6) - 1),
     });
     const ow = lang === 'en'
-      ? ['Portfolio | Architecture and Interior Projects by QBCARCHITECTS', 'Selected houses, villas, apartments, hospitality and healthcare interiors by QBCARCHITECTS, Belgrade, in Serbia and Montenegro.']
-      : ['Portfolio | Projekti arhitekture i enterijera, QBCARCHITECTS', 'Izbor kuća, vila, stanova, ugostiteljskih i zdravstvenih enterijera studija QBCARCHITECTS iz Beograda, u Srbiji i Crnoj Gori.'];
+      ? ['Portfolio | Architecture and Interior Projects by QBCARCHITECTS', 'Selected houses, villas, apartments, hospitality and healthcare interiors by QBCARCHITECTS, Belgrade, in Serbia and abroad.']
+      : ['Portfolio | Projekti arhitekture i enterijera, QBCARCHITECTS', 'Izbor kuća, vila, stanova, ugostiteljskih i zdravstvenih enterijera studija QBCARCHITECTS iz Beograda, u Srbiji i inostranstvu.'];
     out[`${pre}our-work.html`] = render('our-work', sources, {
       ...site('our-work.html'), key: 'works', TITLE: ow[0], DESC: ow[1],
       WORKS_GRID: worksGrid(projects, lang, '', lang === 'en' ? '' : '../'), WORKS_INDEX: worksIndex(projects, lang, '', lang === 'en' ? '' : '../'),
@@ -561,6 +575,12 @@ export function buildSite(data, sources, { all = false } = {}) {
       LANG: 'en', LOCALE: 'en_US', ROOT: '/', BASE: '/', OG_IMAGE: ogDefault, ASSET_V, LD: '', ORG_LD: orgLd('en', JSON.parse(sources['src/services.json'])), CTA: L.en.cta,
       INQUIRY: '', PATH: '404.html', LANG_URL: '/sr/', HREFLANG: '', key: 'none', TITLE: esc(NOT_FOUND.title), DESC: esc(NOT_FOUND.desc),
     });
+  }
+  // preimenovan projekat (p.old_slugs): stara adresa preusmerava na novu
+  for (const p of projects) for (const old of p.old_slugs || []) for (const pre of ['', 'sr/']) {
+    out[`${pre}work/${old}.html`] = `<!doctype html>\n<html lang="${pre ? 'sr' : 'en'}"><head><meta charset="utf-8"><meta name="robots" content="noindex">` +
+      `<meta http-equiv="refresh" content="0; url=${p.slug}.html"><link rel="canonical" href="https://www.qbc.rs/${pre}work/${p.slug}.html">` +
+      `<title>QBCARCHITECTS</title></head><body><a href="${p.slug}.html">${esc(p.title)}</a></body></html>\n`;
   }
   out['sitemap.xml'] = sitemap(projects);
   out['robots.txt'] = 'User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: https://www.qbc.rs/sitemap.xml\n';

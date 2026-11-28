@@ -179,7 +179,7 @@ ul, ol { list-style: none; }
 .footer__beliefs { display: grid; gap: .3rem; color: var(--mute); }
 .footer__cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: var(--gap); padding-top: 22px; border-top: 1px solid var(--line); }
 .footer__col h4 { font: 400 .72rem var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--mute); margin-bottom: .8rem; }
-.footer__col a, .footer__col span { display: block; width: max-content; padding-block: .1rem; transition: color .3s; }
+.footer__col a, .footer__col span { display: block; width: max-content; padding-block: .45rem; transition: color .3s; }
 .footer__col a:hover { color: var(--accent); }
 
 /* 6. pocetna ---------------------------------------------------------------- */
@@ -187,7 +187,7 @@ ul, ol { list-style: none; }
    .hero je visoka staza (220svh) kada ima skicu (is-sketch), a .hero__stage je zalepljen ekran unutar nje.
    Bez skice (projekat bez skice, smanjeno kretanje, bez JS-a) naslovna je obicna slika preko ekrana. */
 .hero { position: relative; height: 100svh; min-height: 560px; color: #fff; background: #1c1b19; }
-.hero.is-sketch { height: 220svh; color: var(--fg); background: var(--bg); }
+.hero.is-sketch { height: 180svh; color: var(--fg); background: var(--bg); }
 .hero__stage { position: sticky; top: 0; height: 100svh; min-height: 560px; overflow: hidden; isolation: isolate; }
 .hero.is-sketch .hero__stage { background: var(--bg); }
 .hero__media { position: absolute; inset: 0; z-index: 1; }
@@ -196,6 +196,8 @@ ul, ol { list-style: none; }
 .is-sketch .hero__media img, .is-sketch .hero__media::after { opacity: var(--render, 0); }
 .hero__sketch { position: absolute; inset: 0; z-index: 2; display: none; opacity: var(--paper, 1); pointer-events: none; }
 .is-sketch .hero__sketch { display: block; }
+/* linije skice blede pri dnu, da ne seku naslov i dugmad */
+.is-sketch .hero__sketch { -webkit-mask-image: linear-gradient(180deg, #000 48%, rgba(0, 0, 0, .12) 68%, transparent 84%); mask-image: linear-gradient(180deg, #000 48%, rgba(0, 0, 0, .12) 68%, transparent 84%); }
 .hero__sketch svg { display: block; width: 100%; height: 100%; }
 .hero__sketch path { fill: none; stroke: var(--pencil); stroke-linecap: round; stroke-linejoin: round; }
 .hero__content { position: absolute; inset: auto 0 0 0; z-index: 3; padding: 0 var(--pad) clamp(24px, 4.5vh, 48px); display: grid; gap: clamp(18px, 3vh, 34px); transition: color .6s var(--ease); }
@@ -259,6 +261,28 @@ ul, ol { list-style: none; }
 .beliefs { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
 .beliefs li { padding-top: 1rem; border-top: 1px solid var(--line); font-size: 1.33rem; line-height: 1.5; }
 .beliefs li span { display: block; color: var(--mute); margin-bottom: .6rem; font-size: .9rem; }
+
+/* dugmad na naslovnoj: jedno puno, jedno obrubljeno; boja prati tekst, pa rade i preko skice i preko slike */
+.hero__cta { display: flex; flex-wrap: wrap; gap: .8rem; }
+.btn--hero, .btn--ghost { padding: 1em 1.6em; border: 1px solid currentColor; border-radius: 999px; transition: background-color .4s var(--ease), color .4s var(--ease); }
+.btn--hero::after, .btn--ghost::after { display: none; }
+.btn--hero { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+.hero.is-render .btn--hero, .hero:not(.is-sketch) .btn--hero { background: #fff; border-color: #fff; color: #171614; }
+.btn--hero:hover { opacity: .88; }
+.btn--ghost:hover { background: rgba(127, 127, 127, .18); }
+/* "kako radimo": naslov i cetiri pravila uz tekst o studiju */
+.how { display: grid; gap: 1.2rem; padding-top: clamp(40px, 7vh, 80px); border-top: 1px solid var(--line); }
+.how .beliefs { grid-template-columns: 1fr 1fr; margin-top: .6rem; }
+.how .beliefs li { font-size: 1.02rem; }
+.how .beliefs li strong { display: block; margin-bottom: .3rem; font-weight: 450; font-size: 1.18rem; }
+.home-case { margin: clamp(20px, 4vh, 40px) 0 .4rem; display: grid; gap: .8rem; }
+.home-case img { display: block; width: 100%; height: auto; }
+.pdraw + .pgal { margin-top: clamp(48px, 9vh, 110px); }
+/* usluge na pocetnoj: samo nazivi, detalji su na stranici usluga */
+.home-svc .svc__items { display: none; }
+.home-svc .svc__row { grid-template-columns: 4rem 1fr; padding-block: clamp(14px, 2vh, 20px); }
+/* stanje projekta ispod naslova u traci radova */
+.card__s { grid-column: 2 / -1; color: var(--ink-mute); }
 
 /* 7. projekti ----------------------------------------------------------------- */
 .phead { padding: clamp(140px, 22vh, 240px) var(--pad) clamp(36px, 6vh, 72px); }
@@ -572,7 +596,7 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   .mstep__txt, .mstep__fig { grid-column: 1 / -1; }
   .mdocs { grid-template-columns: 1fr; }
   .mdoc--site { grid-row: auto; }
-  .msk__svg text { font-size: 19px; letter-spacing: .04em; }
+  .msk__svg text, .mdoc .msk__svg text { font-size: 24px; letter-spacing: 0; }
   .hero__scroll { grid-template-columns: 1fr auto; row-gap: .6rem; }
   .hero__scroll p:first-child { display: none; }
   .reel { height: 360svh; }
@@ -630,6 +654,7 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   .proof { grid-template-columns: 1fr; row-gap: 36px; }
   .proof--quiet { grid-template-columns: 1fr 1fr; row-gap: 24px; }
   .hero__scroll { grid-template-columns: 1fr; }
+  .how .beliefs { grid-template-columns: 1fr; }
   .hero__meter b { width: 80px; }
   .beliefs { grid-template-columns: 1fr; }
   .faq__item summary { grid-template-columns: 2.4rem 1fr 1.4rem; }

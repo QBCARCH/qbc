@@ -620,15 +620,18 @@
    ]
   },
   {
-   "slug": "celtics-event-center-boston-usa",
-   "title": "Celtics Event Center, York",
+   "slug": "j1-event-center-york",
+   "old_slugs": [
+    "celtics-event-center-boston-usa"
+   ],
+   "title": "J1 Event Center, York",
    "year": "2023",
    "services": [
     "1. Conceptual & Schematic Design",
     "5. Interior Architecture & Custom Detailing",
     "7. Architectural Visualisation"
    ],
-   "description": "<p>Celtics Event Center in York, Massachusetts, is built around a full-size basketball court. Next to the court hall and below it are a gym, a boxing and MMA room, a pool with a spa, a games room with a restaurant kitchen, a garage and apartments. We worked on it from the first volume studies in November 2022 to the final renders in June 2023.</p><p>The building is two gabled volumes in dark timber on a stone base that steps down with the slope. The court hall takes the long ridge, and its glazed gable end faces the parking. The pool opens to a terrace on the garden side, and the roofs of the lower floors are used as balconies.</p><p>Every room has its own palette. The court is dark paneling with a pale wood floor and the city name set into it. The gym is warm wood and brick with amber light coves. The games room and restaurant combine grey upholstery with red backlit shelves and a bonsai in the middle of the room. The apartments are quieter, with marble bathrooms and bedrooms under the roof pitch.</p>",
+   "description": "<p>J1 Event Center in York, Massachusetts, is built around a full-size basketball court. Next to the court hall and below it are a gym, a boxing and MMA room, a pool with a spa, a games room with a restaurant kitchen, a garage and apartments. We worked on it from the first volume studies in November 2022 to the final renders in June 2023.</p><p>The building is two gabled volumes in dark timber on a stone base that steps down with the slope. The court hall takes the long ridge, and its glazed gable end faces the parking. The pool opens to a terrace on the garden side, and the roofs of the lower floors are used as balconies.</p><p>Every room has its own palette. The court is dark paneling with a pale wood floor and the city name set into it. The gym is warm wood and brick with amber light coves. The games room and restaurant combine grey upholstery with red backlit shelves and a bonsai in the middle of the room. The apartments are quieter, with marble bathrooms and bedrooms under the roof pitch.</p>",
    "cover": {
     "file": "usa-sparks-ob-026.webp",
     "widths": [
@@ -1447,7 +1450,7 @@
     "type": "Event centar sa košarkaškim terenom i apartmanima",
     "location": "York, Masačusets, SAD",
     "status": "Idejno rešenje, 2023",
-    "description": "<p>Celtics Event Center u mestu York (Masačusets) izgrađen je oko košarkaškog terena pune veličine. Uz halu i ispod nje su teretana, prostorija za boks i MMA, bazen sa spa zonom, igraonica sa kuhinjom restorana, garaža i apartmani. Radili smo na njoj od prvih studija volumena u novembru 2022. do završnih rendera u junu 2023.</p><p>Objekat čine dva dvovodna volumena u tamnom drvetu na kamenom postolju koje prati pad terena. Hala sa terenom dobija dugi sleme, a njen ostakljeni zabat okrenut je parkingu. Bazen se otvara na terasu sa strane bašte, a krovovi nižih etaža koriste se kao balkoni.</p><p>Svaka prostorija ima svoju paletu. Teren je tamna oplata sa svetlim drvenim podom u koji je upisano ime grada. Teretana je toplo drvo i cigla sa jantarnim svetlosnim kovertama. Igraonica i restoran spajaju sivu tapaciriju sa crvenim rafovima sa pozadinskim osvetljenjem i bonsaijem usred prostorije. Apartmani su mirniji, sa kupatilima u mermeru i spavaćim sobama pod kosinom krova.</p>"
+    "description": "<p>J1 Event Center u mestu York (Masačusets) izgrađen je oko košarkaškog terena pune veličine. Uz halu i ispod nje su teretana, prostorija za boks i MMA, bazen sa spa zonom, igraonica sa kuhinjom restorana, garaža i apartmani. Radili smo na njoj od prvih studija volumena u novembru 2022. do završnih rendera u junu 2023.</p><p>Objekat čine dva dvovodna volumena u tamnom drvetu na kamenom postolju koje prati pad terena. Hala sa terenom dobija dugi sleme, a njen ostakljeni zabat okrenut je parkingu. Bazen se otvara na terasu sa strane bašte, a krovovi nižih etaža koriste se kao balkoni.</p><p>Svaka prostorija ima svoju paletu. Teren je tamna oplata sa svetlim drvenim podom u koji je upisano ime grada. Teretana je toplo drvo i cigla sa jantarnim svetlosnim kovertama. Igraonica i restoran spajaju sivu tapaciriju sa crvenim rafovima sa pozadinskim osvetljenjem i bonsaijem usred prostorije. Apartmani su mirniji, sa kupatilima u mermeru i spavaćim sobama pod kosinom krova.</p>"
    },
    "drawings": [
     {

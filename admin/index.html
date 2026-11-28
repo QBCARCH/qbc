@@ -375,6 +375,11 @@ function onSave() {
   if (E.type) p.type = E.type;
   if (E.sr) p.sr = E.sr;
   if (E.dark) p.dark = E.dark;
+  if (E.drawings) p.drawings = E.drawings;
+  if (E.old_slugs) p.old_slugs = E.old_slugs;
+  // beleske preko naslovne vaze samo dok je naslovna slika ista (koordinate su vezane za nju)
+  const prev = E._index === null ? null : S.data.projects[E._index];
+  if (E.annot && prev && prev.hero && p.hero && prev.hero.file === p.hero.file) p.annot = E.annot;
   const before = clone(S.data);
   if (E._index === null) S.data.projects.unshift(p); else S.data.projects[E._index] = p;
   // samo slike koje se i koriste

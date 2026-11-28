@@ -273,7 +273,11 @@ ul, ol { list-style: none; }
 /* "kako radimo": naslov i cetiri pravila uz tekst o studiju */
 .how { display: grid; gap: 1.2rem; padding-top: clamp(40px, 7vh, 80px); border-top: 1px solid var(--line); }
 .how .beliefs { grid-template-columns: 1fr 1fr; margin-top: .6rem; }
-.how .beliefs li { font-size: 1.12rem; }
+.how .beliefs li { font-size: 1.02rem; }
+.how .beliefs li strong { display: block; margin-bottom: .3rem; font-weight: 450; font-size: 1.18rem; }
+.home-case { margin: clamp(20px, 4vh, 40px) 0 .4rem; display: grid; gap: .8rem; }
+.home-case img { display: block; width: 100%; height: auto; }
+.pdraw + .pgal { margin-top: clamp(48px, 9vh, 110px); }
 /* usluge na pocetnoj: samo nazivi, detalji su na stranici usluga */
 .home-svc .svc__items { display: none; }
 .home-svc .svc__row { grid-template-columns: 4rem 1fr; padding-block: clamp(14px, 2vh, 20px); }
@@ -592,7 +596,7 @@ body:has(.nav.is-hidden) .psub { top: var(--navh-s); }
   .mstep__txt, .mstep__fig { grid-column: 1 / -1; }
   .mdocs { grid-template-columns: 1fr; }
   .mdoc--site { grid-row: auto; }
-  .msk__svg text { font-size: 19px; letter-spacing: .04em; }
+  .msk__svg text, .mdoc .msk__svg text { font-size: 24px; letter-spacing: 0; }
   .hero__scroll { grid-template-columns: 1fr auto; row-gap: .6rem; }
   .hero__scroll p:first-child { display: none; }
   .reel { height: 360svh; }

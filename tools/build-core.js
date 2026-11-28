@@ -184,6 +184,7 @@ const HERO_JS = "(function(P){var s=document.currentScript,m=s.parentNode,h=m.cl
   "var ss=k.w.map(function(w){return e(B+'-p-'+w+X)+' '+w+'w'});ss.push(e(k.f)+' '+k.W+'w');" +
   "var big=k.w.filter(function(w){return w>=2000})[0],i=document.createElement('img');" +
   "i.src=big?e(B+'-p-'+big+X):e(k.f);i.srcset=ss.join(', ');i.sizes='100vw';i.width=k.W;i.height=k.H;i.alt=k.t;i.setAttribute('fetchpriority','high');" +
+  "i.onerror=function(){if(!i.dataset.fb){i.dataset.fb=1;i.removeAttribute('srcset');i.src=e(P.fb)}};" +
   "m.insertBefore(i,s);h.setAttribute('data-s',k.s);h.setAttribute('data-t',k.c);h.setAttribute('data-y',k.y);" +
   "try{if(k.k&&!matchMedia('(prefers-reduced-motion: reduce)').matches){h.setAttribute('data-sketch',e(k.k));h.classList.add('is-sketch')}}catch(e){}})";
 function heroPicker(projects, def, promoDays, root, lang) {
@@ -191,7 +192,7 @@ function heroPicker(projects, def, promoDays, root, lang) {
     s: pr.slug, c: pr.title, t: altOf(pr, lang), y: pr.year, a: pr.added || '', f: pr.hero.file, W: pr.hero.w, H: pr.hero.h,
     w: (pr.hero.widths || []).filter((w) => w < pr.hero.w), ...(pr.hero.sketch ? { k: pr.hero.sketch } : {}),
   }));
-  const pool = JSON.stringify({ r: root, d: promoDays, p }).replace(/</g, '\\u003c');
+  const pool = JSON.stringify({ r: root, d: promoDays, p, fb: def.hero.file }).replace(/</g, '\\u003c');
   return `<script>${HERO_JS}(${pool})</script>` +
     `<noscript>${img(def.hero, { root, sizes: '100vw', alt: altOf(def, lang), eager: true, want: 2000 })}</noscript>`;
 }

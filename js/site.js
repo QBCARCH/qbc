@@ -264,7 +264,13 @@
     const close = () => { lb.classList.remove('is-open'); D.body.classList.remove('is-locked'); };
     const fine = matchMedia('(pointer: fine)').matches && !reduce;
     figs.forEach((f) => {
-      if (!f.classList.contains('pfig')) { f.addEventListener('click', () => open(at.get(f))); return; }
+      if (!f.classList.contains('pfig')) {
+        // slika bez osnove je dugme: fokus tastaturom, Enter ili Space otvaraju pregled
+        f.tabIndex = 0; f.setAttribute('role', 'button'); f.setAttribute('aria-label', `${$('img', f).alt}, ${at.get(f) + 1} / ${figs.length}`);
+        f.addEventListener('click', () => open(at.get(f)));
+        f.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(at.get(f)); } });
+        return;
+      }
       const btns = $$('[data-show]', f);
       let mode = 'render';
       const set = (m) => {
